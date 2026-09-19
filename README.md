@@ -54,7 +54,7 @@ The first three candidates deliberately test different kinds of reuse:
 
 - **Rezon ↔ Project Runner:** can epistemic reasoning remain independent while delegating mechanical execution?
 - **HC Brain ↔ Transcendence:** can duplicated base implementation be replaced by exact base + overlay reconstruction without destroying provenance or experimental independence?
-- **Project Lantern ↔ two consumers:** can evidence custody/interchange be reused without creating a global truth database?
+- **Private evidence-custody system ↔ two consumers:** can evidence custody/interchange be reused without creating a global truth database?
 
 They are the first experiments, not the complete scope.
 
