@@ -1,0 +1,27 @@
+name: Discovery current validation
+
+on:
+  push:
+    branches:
+      - "work/discovery-lifecycle-gate-current-v4-20260919"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate current Discovery source
+        run: python tools/validate_discovery.py
+      - name: Lifecycle hostile tests
+        run: python -m unittest discover -s tests -v
+      - name: Compile
+        run: python -m compileall -q tools tests
+      - name: Diff check
+        run: git diff --check
