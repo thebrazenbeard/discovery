@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import importlib.util
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -114,6 +115,22 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
             "proven candidate lacks independent evidence: synthetic.json",
             failures,
         )
+
+    def test_schema_exact_subject_pattern_accepts_branch_ref_and_rejects_whitespace(self):
+        schema = json.loads(
+            (ROOT / "schemas" / "discovery_candidate_v1.schema.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        pattern = schema["allOf"][0]["then"]["properties"]["consumers"]["items"][
+            "properties"
+        ]["ref"]["pattern"]
+        compiled = re.compile(pattern)
+        self.assertIsNotNone(compiled.fullmatch("main@" + "a" * 40))
+        self.assertIsNotNone(
+            compiled.fullmatch("science/demography-v1@" + "b" * 40)
+        )
+        self.assertIsNone(compiled.fullmatch("bad ref@" + "c" * 40))
 
     def test_schema_has_active_and_proven_gates(self):
         schema = json.loads(
