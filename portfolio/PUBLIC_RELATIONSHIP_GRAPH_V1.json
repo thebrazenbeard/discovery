@@ -7,19 +7,131 @@
     "all_names_sha256": "43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd"
   },
   "nodes": [
-    {"id": "discovery", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["META_EVALUATOR"], "notes": ["Discovery itself remains subject to hostile review."]},
-    {"id": "driftguard", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["RUNTIME_CONTROL_CANDIDATE"], "notes": []},
-    {"id": "hc-brain", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["COGNITIVE_BASE_CANDIDATE"], "notes": []},
-    {"id": "mosaic", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["EXPERIMENT_SYSTEM"], "notes": []},
-    {"id": "on-theo", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["DOMAIN_NEGATIVE_CONTROL", "EVIDENCE_DISCIPLINE"], "notes": []},
-    {"id": "project-runner", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["EXECUTION_ORCHESTRATION"], "notes": []},
-    {"id": "rezon", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["EPISTEMIC_REASONING"], "notes": []},
-    {"id": "roots", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["PROVENANCE"], "notes": []},
-    {"id": "testament", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["DOMAIN_NEGATIVE_CONTROL", "EVIDENCE_GRAPH"], "notes": []},
-    {"id": "transcendence", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["COGNITIVE_OVERLAY_CANDIDATE"], "notes": []},
-    {"id": "wip", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["CRASH_RECOVERY", "EFFECT_RECONCILIATION"], "notes": []},
-    {"id": "world-zero", "kind": "REPOSITORY", "privacy": "PUBLIC", "labels": ["EXPERIMENT_SYSTEM", "SYSTEMS_SIMULATION"], "notes": []},
-    {"id": "private-cohort", "kind": "OPAQUE_PRIVATE_COHORT", "privacy": "PRIVATE_OPAQUE", "labels": ["45_PRIVATE_REPOSITORIES"], "notes": ["Node intentionally hides private repository identities."]}
+    {
+      "id": "discovery",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "META_EVALUATOR"
+      ],
+      "notes": [
+        "Discovery itself remains subject to hostile review."
+      ]
+    },
+    {
+      "id": "driftguard",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "RUNTIME_CONTROL_CANDIDATE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "hc-brain",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_BASE_CANDIDATE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "mosaic",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EXPERIMENT_SYSTEM"
+      ],
+      "notes": []
+    },
+    {
+      "id": "on-theo",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "DOMAIN_NEGATIVE_CONTROL",
+        "EVIDENCE_DISCIPLINE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "project-runner",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EXECUTION_ORCHESTRATION"
+      ],
+      "notes": []
+    },
+    {
+      "id": "rezon",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EPISTEMIC_REASONING"
+      ],
+      "notes": []
+    },
+    {
+      "id": "roots",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "PROVENANCE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "testament",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "DOMAIN_NEGATIVE_CONTROL",
+        "EVIDENCE_GRAPH"
+      ],
+      "notes": []
+    },
+    {
+      "id": "transcendence",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_OVERLAY_CANDIDATE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "wip",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "CRASH_RECOVERY",
+        "EFFECT_RECONCILIATION"
+      ],
+      "notes": []
+    },
+    {
+      "id": "world-zero",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EXPERIMENT_SYSTEM",
+        "SYSTEMS_SIMULATION"
+      ],
+      "notes": []
+    },
+    {
+      "id": "private-cohort",
+      "kind": "OPAQUE_PRIVATE_COHORT",
+      "privacy": "PRIVATE_OPAQUE",
+      "labels": [
+        "45_PRIVATE_REPOSITORIES"
+      ],
+      "notes": [
+        "Node intentionally hides private repository identities."
+      ]
+    }
   ],
   "edges": [
     {
@@ -30,14 +142,16 @@
       "scope": "epistemic reasoning/admission versus durable mechanical execution",
       "evidence_state": "HYPOTHESIS",
       "source_refs": [
-        "thebrazenbeard/rezon:active-source-to-refresh-before-experiment",
+        "thebrazenbeard/rezon:main@e3d7a41eccb49a9f403ef66f511faef677ceec1b",
         "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8"
       ],
       "falsifiers": [
         "Runner must understand Rezon-specific truth/admission semantics.",
         "Rezon cannot retain a viable non-Runner execution path."
       ],
-      "notes": ["Exact Rezon experiment head must be refreshed before execution."]
+      "notes": [
+        "Rezon has active stacked source candidates; this graph edge is intentionally bound to current main until an experiment selects one exact candidate."
+      ]
     },
     {
       "edge_id": "RUNNER_WIP_OVERLAP",
@@ -45,7 +159,7 @@
       "to": "wip",
       "relation": "OVERLAPPING_MECHANIC",
       "scope": "optimistic concurrency, exact effect/work identity, verification, and recovery boundaries",
-      "evidence_state": "OBSERVED",
+      "evidence_state": "EXPERIMENTING",
       "source_refs": [
         "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8",
         "thebrazenbeard/wip:main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
@@ -54,7 +168,10 @@
         "Field/state mapping shows only superficial vocabulary overlap.",
         "A shared contract requires either orchestration-specific or workspace-specific semantics."
       ],
-      "notes": ["Candidate RUNNER_WIP_EXECUTION_INTEGRITY_V1 derives from this edge."]
+      "notes": [
+        "Exact schema comparison narrowed the proposed shared surface to effect precondition/ambiguity/readback/reconciliation mechanics.",
+        "Runner scheduling, leases/fencing, budgets, and WIP workspace/checkpoint lifecycle remain outside the common envelope."
+      ]
     },
     {
       "edge_id": "HC_TRANSCENDENCE_BASE_OVERLAY",
@@ -64,14 +181,16 @@
       "scope": "duplicated HC implementation versus Transcendence-specific research overlay",
       "evidence_state": "HYPOTHESIS",
       "source_refs": [
-        "thebrazenbeard/hc-brain:exact-head-to-refresh-before-remeasurement",
-        "thebrazenbeard/transcendence:exact-head-to-refresh-before-remeasurement"
+        "thebrazenbeard/hc-brain:main@618245b54fb923c7a204892c6953ab6d1c5dac57",
+        "thebrazenbeard/transcendence:main@68e7a794d6134e8319121404f31062288dc8d6a3"
       ],
       "falsifiers": [
         "Pinned HC base plus overlay cannot reconstruct the target tree exactly.",
         "Independent modification of the copied base is materially required by the experiment."
       ],
-      "notes": ["Old byte-overlap counts are not treated as current truth."]
+      "notes": [
+        "Old byte-overlap counts are not treated as current truth."
+      ]
     },
     {
       "edge_id": "WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS",
@@ -81,14 +200,16 @@
       "scope": "reproducible experiment manifests, deterministic runs, holdouts, receipts, and result custody",
       "evidence_state": "HYPOTHESIS",
       "source_refs": [
-        "thebrazenbeard/world-zero:main@currentness-refresh-required",
-        "thebrazenbeard/mosaic:main@currentness-refresh-required"
+        "thebrazenbeard/world-zero:science/demography-older-mortality-mass-normalization-v1-20260919@9be13e8e34772a90a812815b074bf21bb89e972a",
+        "thebrazenbeard/mosaic:one/mosaic-p1-protocol-harness-v1-20260918@96fd911e5a6a9b2069a88ae20d0dfa4f6bbad01f"
       ],
       "falsifiers": [
         "Shared harness mechanics would encode either project's scientific hypothesis or evaluator.",
         "The two experiment lifecycles do not share enough mechanics to remove real code."
       ],
-      "notes": ["Scientific validity criteria must remain project-owned."]
+      "notes": [
+        "Bound to active experiment/harness candidate heads rather than main because the question concerns current experiment mechanics."
+      ]
     },
     {
       "edge_id": "ONTHEO_TESTAMENT_NEGATIVE_CONTROL",
@@ -98,14 +219,16 @@
       "scope": "test whether generic evidence/provenance abstractions preserve distinct domain source classes and inference rules",
       "evidence_state": "HYPOTHESIS",
       "source_refs": [
-        "thebrazenbeard/on-theo:main@currentness-refresh-required",
-        "thebrazenbeard/testament:main@currentness-refresh-required"
+        "thebrazenbeard/on-theo:research/hostile-powers-transmission-map-v1-20260919@940a9b3bbefd8790ad5ced58c88d249f08fbf16f",
+        "thebrazenbeard/testament:foundation/testament-v1@c3871a554f9dc9dcdf3e49d3c70fc2d8492e4681"
       ],
       "falsifiers": [
         "The negative-control pair does not materially exercise different evidence semantics.",
         "A proposed generic evidence layer changes either project's domain-specific interpretation rules."
       ],
-      "notes": ["Success means a shared mechanic can be used without harmonizing domain meaning."]
+      "notes": [
+        "Success means a shared mechanic can be used without harmonizing domain meaning."
+      ]
     }
   ]
 }

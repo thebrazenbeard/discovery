@@ -2,8 +2,8 @@
   "schema_version": "DISCOVERY_CANDIDATE_V1",
   "candidate_id": "RUNNER_WIP_EXECUTION_INTEGRITY_V1",
   "title": "Extract shared execution-integrity mechanics without merging orchestration and recovery semantics",
-  "status": "HYPOTHESIS",
-  "claim": "Project Runner and WIP appear to implement materially overlapping mechanical invariants around exact work/effect identity, optimistic concurrency, verification, and recovery. A narrow shared integrity contract may reduce duplicated machinery while Project Runner retains orchestration semantics and WIP retains crash-recovery/workspace semantics.",
+  "status": "EXPERIMENTING",
+  "claim": "Project Runner and WIP do not support one shared execution/recovery state machine. Exact schema comparison supports a narrower hypothesis: a neutral effect-integrity envelope may be reusable for target/precondition binding, post-effect ambiguity, readback evidence, and reconcile-before-retry while Runner retains orchestration/lease/budget semantics and WIP retains workspace/checkpoint/recovery semantics.",
   "consumers": [
     {
       "repo": "thebrazenbeard/project-runner",
@@ -22,8 +22,11 @@
     "A shared contract may define mechanical fields/states but may not make either repository authoritative over the other."
   ],
   "promotion_evidence": [
-    "Project Runner main documents generation CAS, fenced leases, expected-state mutation checks, post-write readback, and independent completion evidence.",
-    "WIP main documents HEAD generation optimistic concurrency plus PREPARED -> ATTEMPTED -> VERIFIED/FAILED/AMBIGUOUS effect journaling and reconcile-before-retry behavior."
+    "Project Runner work-unit schema blob 65fd4f1af1812c280cbec0726a55b61b6ff02e76 defines execution status independently from WIP operation events.",
+    "Project Runner GitHub backend blob 833915398626c091a5df1dcc96504a7a12e7325f binds expected head/blob preconditions and post-write readback.",
+    "Project Runner verification blob e4f0453404013cbfe26882ea4805ae2fb3ce25aa uses VERIFYING, COMPLETE, OUTCOME_UNKNOWN, and SUPERSEDED after backend execution.",
+    "WIP operation-event schema blob 66f9b5103e9ecc114feb9cb8fa6cebdc34082c2d defines PREPARED, ATTEMPTED, VERIFIED, FAILED, AMBIGUOUS, and RECONCILED with expected precondition and effect receipt.",
+    "WIP HEAD schema blob 7f94e4ea2358926fb3f2bf248cd3cb7600e246cd provides generation concurrency independently of Runner lease fencing."
   ],
   "rejection_conditions": [
     "The proposed common contract requires Project Runner-specific scheduling semantics.",
@@ -33,15 +36,16 @@
     "Either project loses a viable standalone path."
   ],
   "hostile_review": {
-    "status": "NOT_RUN",
+    "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "The overlap may be conceptual rather than implementation-level; extracting a library too early could duplicate both systems a third time.",
-      "Project Runner's lease/fence semantics and WIP's operation-journal semantics solve different failure windows even when they use similar words.",
-      "The first experiment should compare exact field/state mappings before any shared code is written."
+      "The initial 'execution integrity' label was too broad: lease/fencing and workspace recovery solve different failure domains.",
+      "A generic library is still premature; the current evidence supports only an interchange envelope experiment.",
+      "The envelope must preserve source-native state and permit standalone operation or it will become semantic compression."
     ]
   },
   "notes": [
-    "This candidate was generated after the full portfolio census rather than being one of the original hand-picked seed experiments.",
-    "Active Project Runner M6 work exists beyond main; exact experiment heads must be refreshed before implementation."
+    "Census-derived candidate.",
+    "Experiment result so far: PARTIAL_SUPPORT_NARROWED; full shared state machine rejected, small effect-integrity envelope remains live.",
+    "See experiments/RUNNER_WIP_EFFECT_INTEGRITY_V1.md and schemas/effect_attempt_envelope_v0.schema.json."
   ]
 }

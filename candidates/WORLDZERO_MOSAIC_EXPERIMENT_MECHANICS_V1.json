@@ -1,0 +1,42 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS_V1",
+  "title": "Share experiment plumbing without sharing scientific evaluators",
+  "status": "HYPOTHESIS",
+  "claim": "World Zero and Mosaic may share narrow deterministic experiment mechanics such as exact run subjects, manifests, seeded configuration, receipts, and artifact custody while keeping hypotheses, domain state, outcome measures, and validity criteria independent.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/world-zero",
+      "role": "systems-science experiment consumer",
+      "ref": "science/demography-older-mortality-mass-normalization-v1-20260919@9be13e8e34772a90a812815b074bf21bb89e972a"
+    },
+    {
+      "repo": "thebrazenbeard/mosaic",
+      "role": "continuity/specialist experiment consumer",
+      "ref": "one/mosaic-p1-protocol-harness-v1-20260918@96fd911e5a6a9b2069a88ae20d0dfa4f6bbad01f"
+    }
+  ],
+  "preserved_boundaries": [
+    "World Zero owns its scientific model, domain variables, calibration/holdout logic, and scientific claims.",
+    "Mosaic owns its continuity/specialist hypothesis, accelerator/runtime assumptions, and success criteria.",
+    "Shared mechanics may record and replay experiments but cannot determine scientific validity."
+  ],
+  "promotion_evidence": [],
+  "rejection_conditions": [
+    "A common harness requires either project's domain ontology or evaluator.",
+    "The adapter layer is larger than the duplicated experiment plumbing removed.",
+    "Shared result types encourage one project's validity criteria to leak into the other.",
+    "Either project can no longer execute independently."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "Both projects being 'experiments' is not enough evidence of reusable implementation.",
+      "Determinism and receipts may already be cheap enough locally that sharing adds coupling without meaningful savings."
+    ]
+  },
+  "notes": [
+    "This candidate is bound to active experiment/harness candidate heads, not default branches.",
+    "First experiment should inventory exact run-manifest/receipt fields before proposing code."
+  ]
+}
