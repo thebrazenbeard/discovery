@@ -26,6 +26,31 @@ class DiscoveryCandidateValidationTests(unittest.TestCase):
                 candidate = json.loads(path.read_text(encoding="utf-8"))
                 self.assertEqual([], module.validate_candidate(candidate))
 
+    def test_schema_contains_active_and_proven_lifecycle_gates(self):
+        schema = json.loads(
+            (ROOT / "schemas" / "discovery_candidate_v1.schema.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        gates = schema.get("allOf", [])
+        self.assertEqual(2, len(gates))
+        active = gates[0]["then"]["properties"]
+        self.assertEqual(1, active["promotion_evidence"]["minItems"])
+        self.assertEqual(
+            ["FAIL", "PASS_WITH_LIMITS", "PASS"],
+            active["hostile_review"]["properties"]["status"]["enum"],
+        )
+        proven = gates[1]["then"]["properties"]
+        self.assertEqual(2, proven["promotion_evidence"]["minItems"])
+        self.assertEqual(
+            "PASS",
+            proven["hostile_review"]["properties"]["status"]["const"],
+        )
+        self.assertEqual(
+            0,
+            proven["hostile_review"]["properties"]["critical_objections"]["maxItems"],
+        )
+
     def test_proven_reusable_cannot_be_self_promoted_without_evidence(self):
         candidate = load_candidate("REZON_RUNNER_BOUNDARY_V1.json")
         candidate["status"] = "PROVEN_REUSABLE"
