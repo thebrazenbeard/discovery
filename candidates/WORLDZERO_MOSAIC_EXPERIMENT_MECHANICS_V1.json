@@ -2,8 +2,8 @@
   "schema_version": "DISCOVERY_CANDIDATE_V1",
   "candidate_id": "WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS_V1",
   "title": "Share experiment plumbing without sharing scientific evaluators",
-  "status": "HYPOTHESIS",
-  "claim": "World Zero and Mosaic may share narrow deterministic experiment mechanics such as exact run subjects, manifests, seeded configuration, receipts, and artifact custody while keeping hypotheses, domain state, outcome measures, and validity criteria independent.",
+  "status": "PROJECT_SPECIFIC",
+  "claim": "The exact World Zero and Mosaic subjects do not justify a shared experiment harness. They share high-level discipline—predeclared controls, deterministic execution, explicit metrics, receipts, and claim ceilings—but their executable contracts currently encode materially different scientific/continuity semantics. Keep both harnesses project-specific; only a weaker generic receipt-pattern hypothesis remains for future multi-consumer testing.",
   "consumers": [
     {
       "repo": "thebrazenbeard/world-zero",
@@ -21,7 +21,12 @@
     "Mosaic owns its continuity/specialist hypothesis, accelerator/runtime assumptions, and success criteria.",
     "Shared mechanics may record and replay experiments but cannot determine scientific validity."
   ],
-  "promotion_evidence": [],
+  "promotion_evidence": [
+    "World Zero RUN_RECEIPT_V1 blob 88a039e32e3cbcb4e26aa9a95cc2f0d817ca1423 binds scientific subject identity, source commit/tree, dataset/parameter/region/scenario/observation digests, calibration and holdout partitions, comparison protocol digest, solver identity, seed, tolerance, timestep, environment fingerprint, and optional result digest.",
+    "World Zero comparison protocol blob c0580445f322fb3b91ad0619eb30502414803d55 freezes subjects, calibration/holdout partitions, metrics, decision rules, missing-subject policy, and confirmatory-versus-exploratory status.",
+    "Mosaic harness blob ab880ada80dd238751f7aec918cd0cafb5e85ce9 instead executes four continuity conditions over revisioned state events and emits continuity-specific accuracy, stale-error, correction-burden, payload-size, unload/latency/repeatability gates, and an explicit P1 claim ceiling.",
+    "Mosaic test blob ebf4851bacfbbab71b7a6ad664ef232123fd91bd verifies the harness cannot self-award P1 and that ordinary retrieval receives no special disadvantage."
+  ],
   "rejection_conditions": [
     "A common harness requires either project's domain ontology or evaluator.",
     "The adapter layer is larger than the duplicated experiment plumbing removed.",
@@ -29,14 +34,17 @@
     "Either project can no longer execute independently."
   ],
   "hostile_review": {
-    "status": "NOT_RUN",
+    "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "Both projects being 'experiments' is not enough evidence of reusable implementation.",
-      "Determinism and receipts may already be cheap enough locally that sharing adds coupling without meaningful savings."
+      "Calling both systems 'experiment harnesses' hides that World Zero's receipt is a scientific-subject/execution identity contract while Mosaic's current receipt is a continuity benchmark result object.",
+      "A shared harness would either be so generic that it deletes no meaningful code or would import one project's domain semantics into the other.",
+      "The reusable-looking residue—exact source subject, execution environment, result evidence, and claim ceiling—should not be extracted from only this pair; require a third independent consumer."
     ]
   },
   "notes": [
-    "This candidate is bound to active experiment/harness candidate heads, not default branches.",
-    "First experiment should inventory exact run-manifest/receipt fields before proposing code."
+    "Pairwise experiment result: PROJECT_SPECIFIC for executable harnesses.",
+    "No shared code or shared harness schema is proposed from this pair.",
+    "A generic experiment-receipt pattern remains NEEDS_MORE_EVIDENCE and should be tested against a third independent consumer before candidate creation.",
+    "See experiments/WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS_V1.md."
   ]
 }

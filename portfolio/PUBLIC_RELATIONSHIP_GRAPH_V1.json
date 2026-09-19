@@ -193,22 +193,22 @@
       ]
     },
     {
-      "edge_id": "WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS",
+      "edge_id": "WORLDZERO_MOSAIC_HARNESS_SEPARATION",
       "from": "world-zero",
       "to": "mosaic",
-      "relation": "NEEDS_MORE_EVIDENCE",
-      "scope": "reproducible experiment manifests, deterministic runs, holdouts, receipts, and result custody",
-      "evidence_state": "HYPOTHESIS",
+      "relation": "MUST_REMAIN_SEPARATE",
+      "scope": "executable experiment harness, evaluator, domain subject identity, and qualification semantics",
+      "evidence_state": "SUPPORTED",
       "source_refs": [
         "thebrazenbeard/world-zero:science/demography-older-mortality-mass-normalization-v1-20260919@9be13e8e34772a90a812815b074bf21bb89e972a",
         "thebrazenbeard/mosaic:one/mosaic-p1-protocol-harness-v1-20260918@96fd911e5a6a9b2069a88ae20d0dfa4f6bbad01f"
       ],
       "falsifiers": [
-        "Shared harness mechanics would encode either project's scientific hypothesis or evaluator.",
-        "The two experiment lifecycles do not share enough mechanics to remove real code."
+        "A future exact comparison demonstrates a substantial identical mechanical core whose extraction removes more implementation than its adapters add.",
+        "A third independent consumer demonstrates the same harness contract without importing World Zero or Mosaic domain semantics."
       ],
       "notes": [
-        "Bound to active experiment/harness candidate heads rather than main because the question concerns current experiment mechanics."
+        "Current exact comparison supports project-specific executable harnesses."
       ]
     },
     {
@@ -228,6 +228,26 @@
       ],
       "notes": [
         "Success means a shared mechanic can be used without harmonizing domain meaning."
+      ]
+    },
+    {
+      "edge_id": "WORLDZERO_MOSAIC_RECEIPT_PATTERN",
+      "from": "world-zero",
+      "to": "mosaic",
+      "relation": "NEEDS_MORE_EVIDENCE",
+      "scope": "abstract experiment receipt pattern: exact subject, execution identity/context, result evidence, and explicit claim ceiling",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/world-zero:science/demography-older-mortality-mass-normalization-v1-20260919@9be13e8e34772a90a812815b074bf21bb89e972a",
+        "thebrazenbeard/mosaic:one/mosaic-p1-protocol-harness-v1-20260918@96fd911e5a6a9b2069a88ae20d0dfa4f6bbad01f"
+      ],
+      "falsifiers": [
+        "A third independent consumer does not share the same minimal receipt needs.",
+        "Normalizing the receipt loses source-native claim ceilings or provenance.",
+        "The generic wrapper removes no real translation, validation, or custody code."
+      ],
+      "notes": [
+        "Do not create a shared component from this pair alone."
       ]
     }
   ]
