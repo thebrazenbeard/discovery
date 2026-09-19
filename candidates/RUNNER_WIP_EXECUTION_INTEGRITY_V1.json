@@ -1,0 +1,47 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "RUNNER_WIP_EXECUTION_INTEGRITY_V1",
+  "title": "Extract shared execution-integrity mechanics without merging orchestration and recovery semantics",
+  "status": "HYPOTHESIS",
+  "claim": "Project Runner and WIP appear to implement materially overlapping mechanical invariants around exact work/effect identity, optimistic concurrency, verification, and recovery. A narrow shared integrity contract may reduce duplicated machinery while Project Runner retains orchestration semantics and WIP retains crash-recovery/workspace semantics.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/project-runner",
+      "role": "durable orchestration and exact-subject execution",
+      "ref": "main@bc05812b560b4fcde3a362e72fba04c626cafac8"
+    },
+    {
+      "repo": "thebrazenbeard/wip",
+      "role": "crash recovery and ambiguous-effect reconciliation",
+      "ref": "main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+    }
+  ],
+  "preserved_boundaries": [
+    "Project Runner remains owner of work graph, dispatch, budgets, backend capability, target authority, leases, and completion semantics.",
+    "WIP remains owner of workspace recovery cadence, checkpoint history, continuation surfaces, and ambiguous-effect recovery workflow.",
+    "A shared contract may define mechanical fields/states but may not make either repository authoritative over the other."
+  ],
+  "promotion_evidence": [
+    "Project Runner main documents generation CAS, fenced leases, expected-state mutation checks, post-write readback, and independent completion evidence.",
+    "WIP main documents HEAD generation optimistic concurrency plus PREPARED -> ATTEMPTED -> VERIFIED/FAILED/AMBIGUOUS effect journaling and reconcile-before-retry behavior."
+  ],
+  "rejection_conditions": [
+    "The proposed common contract requires Project Runner-specific scheduling semantics.",
+    "The proposed common contract requires WIP-specific workspace/checkpoint lifecycle semantics.",
+    "Adapters needed to share the contract exceed the duplicated implementation removed.",
+    "A common state vocabulary creates ambiguity between execution completion and recovery reconciliation.",
+    "Either project loses a viable standalone path."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "The overlap may be conceptual rather than implementation-level; extracting a library too early could duplicate both systems a third time.",
+      "Project Runner's lease/fence semantics and WIP's operation-journal semantics solve different failure windows even when they use similar words.",
+      "The first experiment should compare exact field/state mappings before any shared code is written."
+    ]
+  },
+  "notes": [
+    "This candidate was generated after the full portfolio census rather than being one of the original hand-picked seed experiments.",
+    "Active Project Runner M6 work exists beyond main; exact experiment heads must be refreshed before implementation."
+  ]
+}
