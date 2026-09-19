@@ -1,0 +1,40 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "HC_TRANSCENDENCE_OVERLAY_V1",
+  "title": "Reconstruct Transcendence as exact HC base plus overlay",
+  "status": "HYPOTHESIS",
+  "claim": "Where Transcendence duplicates HC Brain implementation, exact base-plus-overlay reconstruction may preserve Transcendence-specific research while eliminating copied base maintenance.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/hc-brain",
+      "role": "candidate base implementation",
+      "ref": null
+    },
+    {
+      "repo": "thebrazenbeard/transcendence",
+      "role": "candidate downstream overlay",
+      "ref": null
+    }
+  ],
+  "preserved_boundaries": [
+    "Transcendence-specific BCI, continuity, and experimental material remains independently owned.",
+    "Historical provenance is not rewritten.",
+    "No duplicated file is removed until exact reconstruction is demonstrated."
+  ],
+  "promotion_evidence": [],
+  "rejection_conditions": [
+    "An exact historical/candidate Transcendence tree cannot be reconstructed from a pinned HC base plus overlay.",
+    "The overlay would inherit HC assumptions that Transcendence must be able to modify independently.",
+    "The dependency materially increases failure or migration risk."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "Copied code may be intentional experimental isolation rather than accidental duplication.",
+      "A base dependency can silently constrain future divergent research."
+    ]
+  },
+  "notes": [
+    "Measure exact byte-identical overlap again at experiment time; do not carry old counts forward as current truth."
+  ]
+}

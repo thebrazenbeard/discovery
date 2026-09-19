@@ -1,0 +1,41 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "REZON_RUNNER_BOUNDARY_V1",
+  "title": "Separate epistemic reasoning from mechanical execution",
+  "status": "HYPOTHESIS",
+  "claim": "Rezon can delegate bounded mechanical work to Project Runner without transferring epistemic admission, visibility, provenance, or semantic authority to Runner.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/rezon",
+      "role": "epistemic reasoning and admission",
+      "ref": null
+    },
+    {
+      "repo": "thebrazenbeard/project-runner",
+      "role": "durable mechanical execution",
+      "ref": null
+    }
+  ],
+  "preserved_boundaries": [
+    "Rezon remains owner of epistemic semantics.",
+    "Runner receives only bounded executable work and mechanical success criteria.",
+    "Runner completion cannot imply Rezon admission or truth."
+  ],
+  "promotion_evidence": [],
+  "rejection_conditions": [
+    "Runner must understand Rezon-specific truth/admission semantics to execute work.",
+    "Rezon becomes dependent on Runner for local reasoning that should remain standalone.",
+    "Mechanical success can be mistaken for epistemic success.",
+    "Failure of Runner prevents Rezon from retaining a viable fallback execution path."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "The proposed boundary may merely move complexity into adapters.",
+      "A common execution substrate may become de facto authority through operational dependence."
+    ]
+  },
+  "notes": [
+    "First experiment should be nondestructive and reversible."
+  ]
+}

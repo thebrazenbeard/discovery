@@ -1,0 +1,41 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "LANTERN_EVIDENCE_INTERCHANGE_V1",
+  "title": "Reusable evidence custody and interchange without a global truth database",
+  "status": "HYPOTHESIS",
+  "claim": "Project Lantern may provide narrow reusable evidence-record and custody mechanics to independent projects while each project retains its own database, semantics, privacy boundary, and authority.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/project-lantern",
+      "role": "candidate evidence custody/interchange implementation",
+      "ref": null
+    },
+    {
+      "repo": "TBD_FIRST_REAL_CONSUMER",
+      "role": "independent consumer one",
+      "ref": null
+    }
+  ],
+  "preserved_boundaries": [
+    "No single global evidence database.",
+    "Lantern records do not decide project-specific truth or authority.",
+    "Projects retain independent retention/privacy policies."
+  ],
+  "promotion_evidence": [],
+  "rejection_conditions": [
+    "Consumers must adopt Lantern-specific domain semantics rather than neutral custody mechanics.",
+    "Lantern becomes a mandatory single point of failure.",
+    "Interchange loses project-specific provenance or privacy constraints.",
+    "A second materially independent real consumer cannot be demonstrated."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "A common evidence format can become a hidden common ontology.",
+      "Operational convenience may pressure projects into centralizing state."
+    ]
+  },
+  "notes": [
+    "The first task is to make Lantern itself a truthful, installable package before judging reuse."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/thebrazenbeard/discovery/schemas/discovery_candidate_v1.schema.json",
+  "title": "Discovery Candidate V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "title",
+    "status",
+    "claim",
+    "consumers",
+    "preserved_boundaries",
+    "promotion_evidence",
+    "rejection_conditions",
+    "hostile_review"
+  ],
+  "properties": {
+    "schema_version": { "const": "DISCOVERY_CANDIDATE_V1" },
+    "candidate_id": { "type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]+$" },
+    "title": { "type": "string", "minLength": 1 },
+    "status": {
+      "enum": [
+        "OBSERVED",
+        "HYPOTHESIS",
+        "EXPERIMENTING",
+        "PROVEN_REUSABLE",
+        "PROJECT_SPECIFIC",
+        "REJECTED",
+        "SUPERSEDED"
+      ]
+    },
+    "claim": { "type": "string", "minLength": 1 },
+    "consumers": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["repo", "role"],
+        "properties": {
+          "repo": { "type": "string", "minLength": 1 },
+          "role": { "type": "string", "minLength": 1 },
+          "ref": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "preserved_boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "promotion_evidence": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "rejection_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "hostile_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "critical_objections"],
+      "properties": {
+        "status": { "enum": ["NOT_RUN", "FAIL", "PASS_WITH_LIMITS", "PASS"] },
+        "critical_objections": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}
