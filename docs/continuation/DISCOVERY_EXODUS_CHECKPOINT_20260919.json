@@ -1,0 +1,107 @@
+{
+  "schema": "DISCOVERY_EXODUS_CHECKPOINT_V1",
+  "status": "STARTING_SNAPSHOT — FRESHNESS REQUIRED BEFORE EFFECT",
+  "retired_chat_dependency": false,
+  "project": {
+    "repository": "thebrazenbeard/discovery",
+    "branch": "vera/discovery-shared-substrate-v1",
+    "pr": 1,
+    "source_parent_head": "5e151202b77620848876f887c953c0d477018ff7",
+    "source_parent_tree": "df335ecbfd8b7d7439a0ebbc0df315cacf0ebc11",
+    "main_head": "96e6f8e9c776047f9068c897eab0406324187166"
+  },
+  "validation": {
+    "workflow": "Discovery validation",
+    "run_id": 35475656670,
+    "subject_commit": "5e151202b77620848876f887c953c0d477018ff7",
+    "conclusion": "success",
+    "structural_validator": "tools/validate_discovery.py",
+    "reconstruction_doc": "docs/EXODUS_RECONSTRUCTION_V1.md"
+  },
+  "portfolio": {
+    "observed_repository_count": 57,
+    "public_count": 12,
+    "private_count": 45,
+    "all_names_sha256": "43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd",
+    "private_names_not_published": true
+  },
+  "experiment_state": {
+    "runner_wip": {
+      "status": "EXPERIMENTING_PARTIAL_SUPPORT_NARROWED",
+      "decision": "Reject broad shared state machine; continue only tiny effect-attempt interchange hypothesis.",
+      "experiment": "experiments/RUNNER_WIP_EFFECT_INTEGRITY_V1.md",
+      "schema": "schemas/effect_attempt_envelope_v0.schema.json"
+    },
+    "world_zero_mosaic": {
+      "status": "PROJECT_SPECIFIC_PAIRWISE_SHARED_HARNESS_REJECTED",
+      "decision": "Keep executable harnesses separate; generic receipt pattern requires third independent consumer.",
+      "experiment": "experiments/WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS_V1.md"
+    },
+    "hc_transcendence": {
+      "status": "HYPOTHESIS",
+      "decision": "Refresh exact heads and test exact base+overlay reconstruction before any deduplication."
+    },
+    "rezon_runner": {
+      "status": "HYPOTHESIS",
+      "decision": "Select exact current Rezon subject and test reasoning/execution boundary without authority transfer."
+    }
+  },
+  "stacked_prs": [
+    {
+      "pr": 2,
+      "head": "4b7055d4e5f266775ec70a9617f6825919a401f9",
+      "recorded_base_sha": "1f8133db7f35279769de37c14d37a94b58469a8e",
+      "action": "REFRESH_BASE_AND_REVIEW_BEFORE_USE"
+    },
+    {
+      "pr": 3,
+      "head": "017054003fd3dd447ad2d4804b811e64c6a8db18",
+      "recorded_base_sha": "1f8133db7f35279769de37c14d37a94b58469a8e",
+      "action": "REFRESH_BASE_AND_REVIEW_BEFORE_USE"
+    },
+    {
+      "pr": 4,
+      "head": "43b6dc183dd19520bfa9050cb4bf291c4a635333",
+      "recorded_base_sha": "c188bc261fae554b5fb4cbc691e566395cdb58c9",
+      "action": "REFRESH_BASE_AND_REVIEW_BEFORE_USE"
+    },
+    {
+      "pr": 5,
+      "head": "dcd12cfafdc8304d4f7544346aaad3d8c743e662",
+      "recorded_base_sha": "50f9ece809bb07c27785a4bc83568d1b75629dd3",
+      "action": "REFRESH_BASE_AND_REVIEW_BEFORE_USE"
+    }
+  ],
+  "privacy": {
+    "issue": 6,
+    "hold_doc": "docs/PRIVACY_HOLD_PRIVATE_IDENTIFIER_V1.md",
+    "status": "UNRESOLVED_HISTORICAL_PUBLIC_FILENAME_EXPOSURE",
+    "protected_remediation_required": true
+  },
+  "communication": {
+    "repository": "thebrazenbeard/chat-communication-bus",
+    "route": "bus/vera-v2",
+    "topology_path": "architecture/contracts/RADAR_TOPOLOGY_V1.json",
+    "topology_blob": "69e505031d4e53dcb853578dac23817649af1918",
+    "chat_url_required": false
+  },
+  "future_interface": {
+    "primary": "Vera",
+    "engineering_delegation": "BT2 Coordinator when appropriate",
+    "control_plane_delegation": "Vera Control Plane Coordinator when installation/provider/governance becomes material"
+  },
+  "authority": {
+    "protected_effects_not_authorized": [
+      "merge",
+      "canonical promotion",
+      "deployment",
+      "installation",
+      "provider mutation",
+      "credential or permission changes",
+      "destructive deletion or history rewrite",
+      "visibility change",
+      "public release beyond existing public source candidate"
+    ]
+  },
+  "next_directive": "Fresh-check PR #1 and stacked PRs #2-#5; preserve the green Discovery validator; choose the next evidence-producing experiment by current collision/evidence state, preferring exact HC↔Transcendence reconstruction or a third-consumer receipt-pattern test; do not build shared code until the relevant candidate earns it."
+}
