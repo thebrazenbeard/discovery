@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/thebrazenbeard/discovery/schemas/portfolio_relationship_graph_v1.schema.json",
+  "title": "Discovery Portfolio Relationship Graph V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "status", "inventory_binding", "nodes", "edges"],
+  "properties": {
+    "schema_version": {"const": "DISCOVERY_RELATIONSHIP_GRAPH_V1"},
+    "status": {"type": "string", "minLength": 1},
+    "inventory_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_date", "total_count", "all_names_sha256"],
+      "properties": {
+        "observed_date": {"type": "string", "minLength": 1},
+        "total_count": {"type": "integer", "minimum": 1},
+        "all_names_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "privacy", "labels"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["REPOSITORY", "OPAQUE_PRIVATE_COHORT"]},
+          "privacy": {"enum": ["PUBLIC", "PRIVATE_OPAQUE"]},
+          "labels": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "notes": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edge_id", "from", "to", "relation", "scope", "evidence_state",
+          "source_refs", "falsifiers"
+        ],
+        "properties": {
+          "edge_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]+$"},
+          "from": {"type": "string", "minLength": 1},
+          "to": {"type": "string", "minLength": 1},
+          "relation": {
+            "enum": [
+              "OVERLAPPING_MECHANIC",
+              "DUPLICATED_IMPLEMENTATION",
+              "COMPLEMENTARY_BOUNDARY",
+              "POTENTIAL_BASE_OVERLAY",
+              "PROVIDER_CONSUMER",
+              "MUST_REMAIN_SEPARATE",
+              "NEGATIVE_CONTROL",
+              "HISTORICAL_REFERENCE",
+              "NEEDS_MORE_EVIDENCE"
+            ]
+          },
+          "scope": {"type": "string", "minLength": 1},
+          "evidence_state": {
+            "enum": [
+              "OBSERVED",
+              "HYPOTHESIS",
+              "EXPERIMENTING",
+              "SUPPORTED",
+              "REJECTED",
+              "SUPERSEDED"
+            ]
+          },
+          "source_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "falsifiers": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "notes": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
