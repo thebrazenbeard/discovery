@@ -1,9 +1,9 @@
 {
   "schema_version": "DISCOVERY_CANDIDATE_V1",
   "candidate_id": "RUNNER_WIP_EXECUTION_INTEGRITY_V1",
-  "title": "Extract shared execution-integrity mechanics without merging orchestration and recovery semantics",
+  "title": "Test a narrow effect-integrity interchange across Runner, WIP, and DriftGuard",
   "status": "EXPERIMENTING",
-  "claim": "Project Runner and WIP do not support one shared execution/recovery state machine. Exact schema comparison supports a narrower hypothesis: a neutral effect-integrity envelope may be reusable for target/precondition binding, post-effect ambiguity, readback evidence, and reconcile-before-retry while Runner retains orchestration/lease/budget semantics and WIP retains workspace/checkpoint/recovery semantics.",
+  "claim": "Project Runner, WIP, and DriftGuard do not support one shared execution/recovery/control state machine. Exact source experiments support a narrower hypothesis: a neutral effect-attempt envelope can preserve target/precondition binding, post-effect uncertainty, receipts/readback, and source-native state while each consumer retains its own authority, completion, recovery, and retry semantics.",
   "consumers": [
     {
       "repo": "thebrazenbeard/project-runner",
@@ -14,38 +14,52 @@
       "repo": "thebrazenbeard/wip",
       "role": "crash recovery and ambiguous-effect reconciliation",
       "ref": "main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+    },
+    {
+      "repo": "thebrazenbeard/driftguard",
+      "role": "behavioral reload decision and downstream acknowledgement tracking without claiming behavioral recovery",
+      "ref": "work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca"
     }
   ],
   "preserved_boundaries": [
     "Project Runner remains owner of work graph, dispatch, budgets, backend capability, target authority, leases, and completion semantics.",
     "WIP remains owner of workspace recovery cadence, checkpoint history, continuation surfaces, and ambiguous-effect recovery workflow.",
-    "A shared contract may define mechanical fields/states but may not make either repository authoritative over the other."
+    "A shared contract may define mechanical fields/states but may not make either repository authoritative over the other.",
+    "DriftGuard remains owner of drift evidence admission, reload decisions, acknowledgement acceptance, restore-anchor advancement, and behavioral-recovery claim ceilings; a caller acknowledgement may not be normalized into verified recovery."
   ],
   "promotion_evidence": [
     "Project Runner work-unit schema blob 65fd4f1af1812c280cbec0726a55b61b6ff02e76 defines execution status independently from WIP operation events.",
     "Project Runner GitHub backend blob 833915398626c091a5df1dcc96504a7a12e7325f binds expected head/blob preconditions and post-write readback.",
     "Project Runner verification blob e4f0453404013cbfe26882ea4805ae2fb3ce25aa uses VERIFYING, COMPLETE, OUTCOME_UNKNOWN, and SUPERSEDED after backend execution.",
     "WIP operation-event schema blob 66f9b5103e9ecc114feb9cb8fa6cebdc34082c2d defines PREPARED, ATTEMPTED, VERIFIED, FAILED, AMBIGUOUS, and RECONCILED with expected precondition and effect receipt.",
-    "WIP HEAD schema blob 7f94e4ea2358926fb3f2bf248cd3cb7600e246cd provides generation concurrency independently of Runner lease fencing."
+    "WIP HEAD schema blob 7f94e4ea2358926fb3f2bf248cd3cb7600e246cd provides generation concurrency independently of Runner lease fencing.",
+    "DriftGuard R4 adapter blob 2904452b0f14a444c28a616e2e8963bab0f05ac6 maps native reload-required evaluations to PRE_EFFECT and accepted reload acknowledgements only to POST_EFFECT_UNVERIFIED.",
+    "DriftGuard adapter regression blob 2e205d299d440e8d9531246b3eb8fc94fe03cf48 proves the adapter cannot promote acknowledgement to POST_EFFECT_VERIFIED and does not mutate the native ledger.",
+    "DriftGuard exact-head hosted run 35510133549 passed the adapter and full native suite on both Ubuntu and Windows."
   ],
   "rejection_conditions": [
     "The proposed common contract requires Project Runner-specific scheduling semantics.",
     "The proposed common contract requires WIP-specific workspace/checkpoint lifecycle semantics.",
     "Adapters needed to share the contract exceed the duplicated implementation removed.",
     "A common state vocabulary creates ambiguity between execution completion and recovery reconciliation.",
-    "Either project loses a viable standalone path."
+    "Either project loses a viable standalone path.",
+    "Supporting DriftGuard requires mapping an accepted reload acknowledgement to POST_EFFECT_VERIFIED or otherwise claiming behavioral recovery not established by the native source.",
+    "The neutral envelope becomes an input to DriftGuard decision, acknowledgement, retry, or restore-anchor logic.",
+    "A third consumer can serialize into the envelope but no duplicated translation, recovery, or custody implementation is actually removed."
   ],
   "hostile_review": {
     "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "The initial 'execution integrity' label was too broad: lease/fencing and workspace recovery solve different failure domains.",
-      "A generic library is still premature; the current evidence supports only an interchange envelope experiment.",
-      "The envelope must preserve source-native state and permit standalone operation or it will become semantic compression."
+      "The original broad execution-integrity hypothesis remains rejected; three consumers still have materially different state machines and authority semantics.",
+      "DriftGuard proves the envelope can preserve an intermediate acknowledgement state without laundering it into verified recovery, but this is interoperability evidence rather than measured reuse value.",
+      "A generic shared library remains premature because no experiment yet measures code/operational burden removed relative to the adapters introduced.",
+      "The envelope must remain non-authoritative for retry, completion, behavioral recovery, scheduling, workspace recovery, and target authority."
     ]
   },
   "notes": [
-    "Census-derived candidate.",
-    "Experiment result so far: PARTIAL_SUPPORT_NARROWED; full shared state machine rejected, small effect-integrity envelope remains live.",
+    "Census-derived candidate, now exercised by three public consumers.",
+    "Experiment result: THREE_CONSUMER_INTEROPERABILITY_SUPPORTED / BROAD_SHARED_STATE_MACHINE_REJECTED / REUSE_VALUE_UNMEASURED.",
+    "The Discovery V0 effect envelope schema remains byte-identical; DriftGuard required no schema extension.",
     "See experiments/RUNNER_WIP_EFFECT_INTEGRITY_V1.md and schemas/effect_attempt_envelope_v0.schema.json."
   ]
 }
