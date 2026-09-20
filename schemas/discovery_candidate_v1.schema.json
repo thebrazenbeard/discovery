@@ -173,7 +173,7 @@
                     "properties": {
                       "repo": {
                         "type": "string",
-                        "pattern": "^PRIVATE_OPAQUE_[A-Z0-9][A-Z0-9_-]+$"
+                        "pattern": "^PRIVATE_OPAQUE_[0-9a-f]{16}$"
                       },
                       "ref": {
                         "type": "null"
@@ -265,6 +265,7 @@
       "additionalProperties": false,
       "required": [
         "schema",
+        "commitment_scheme",
         "consumer_commitment_sha256",
         "subject_commitment_sha256",
         "receipt_sha256",
@@ -295,6 +296,9 @@
         },
         "status": {
           "const": "EXACT_PRIVATE_SUBJECT_ATTESTED"
+        },
+        "commitment_scheme": {
+          "const": "SHA256_PRIVATE_NONCE_CANONICAL_V1"
         }
       }
     }
