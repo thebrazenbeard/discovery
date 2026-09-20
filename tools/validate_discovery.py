@@ -43,9 +43,10 @@ EXACT_SUBJECT_REF = re.compile(
 )
 PLACEHOLDER_REPO_PREFIXES = ("TBD", "UNKNOWN", "PLACEHOLDER")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
-PRIVATE_OPAQUE_REPO = re.compile(r"^PRIVATE_OPAQUE_[A-Z0-9][A-Z0-9_-]+$")
+PRIVATE_OPAQUE_REPO = re.compile(r"^PRIVATE_OPAQUE_[0-9a-f]{16}$")
 PRIVATE_ATTESTATION_FIELDS = {
     "schema",
+    "commitment_scheme",
     "consumer_commitment_sha256",
     "subject_commitment_sha256",
     "receipt_sha256",
@@ -78,6 +79,10 @@ def _validate_private_attestation(
         errors.append(
             f"private consumer attestation schema mismatch: {filename}:{index}"
         )
+    if value.get("commitment_scheme") != "SHA256_PRIVATE_NONCE_CANONICAL_V1":
+        errors.append(
+            f"private consumer commitment scheme invalid: {filename}:{index}"
+        )
     consumer_commitment = value.get("consumer_commitment_sha256")
     subject_commitment = value.get("subject_commitment_sha256")
     receipt = value.get("receipt_sha256")
@@ -89,6 +94,12 @@ def _validate_private_attestation(
         if not isinstance(digest, str) or not SHA256.fullmatch(digest):
             errors.append(
                 f"private consumer {label} commitment invalid: {filename}:{index}"
+            )
+    digest_values = [consumer_commitment, subject_commitment, receipt]
+    if all(isinstance(item, str) and SHA256.fullmatch(item) for item in digest_values):
+        if len(set(digest_values)) != 3:
+            errors.append(
+                f"private consumer commitments must be domain-separated: {filename}:{index}"
             )
     if value.get("verifier_class") not in PRIVATE_VERIFIER_CLASSES:
         errors.append(
@@ -158,6 +169,11 @@ def _validate_candidate_lifecycle(candidate: dict, *, filename: str) -> list[str
                 )
                 errors.extend(attestation_errors)
                 if commitment is not None:
+                    expected_handle = f"PRIVATE_OPAQUE_{commitment[:16]}"
+                    if repo != expected_handle:
+                        errors.append(
+                            f"private consumer handle commitment mismatch: {filename}:{index}"
+                        )
                     consumer_keys.append(f"private:{commitment}")
             elif attestation is not None:
                 attestation_errors, commitment = _validate_private_attestation(
@@ -167,6 +183,11 @@ def _validate_candidate_lifecycle(candidate: dict, *, filename: str) -> list[str
                 )
                 errors.extend(attestation_errors)
                 if commitment is not None:
+                    expected_handle = f"PRIVATE_OPAQUE_{commitment[:16]}"
+                    if repo != expected_handle:
+                        errors.append(
+                            f"private consumer handle commitment mismatch: {filename}:{index}"
+                        )
                     consumer_keys.append(f"private:{commitment}")
             elif _nonempty_string(repo):
                 consumer_keys.append(f"private-hypothesis:{repo.strip()}")
