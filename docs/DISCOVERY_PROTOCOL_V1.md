@@ -28,8 +28,9 @@ Discovery is public while much of the portfolio is private. Exactness must not f
 
 For an active `EXPERIMENTING` candidate, a private consumer may therefore appear as `visibility=PRIVATE_OPAQUE` with:
 
-- a public-safe opaque handle rather than the repository name;
+- a public-safe handle derived from the first 16 hex characters of the consumer commitment rather than a human-selected label;
 - no raw repository ref;
+- an explicit `SHA256_PRIVATE_NONCE_CANONICAL_V1` commitment scheme using private high-entropy nonce material;
 - a 256-bit consumer commitment;
 - a 256-bit exact-subject commitment;
 - a 256-bit private verification-receipt digest;
