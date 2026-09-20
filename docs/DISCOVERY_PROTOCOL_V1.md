@@ -1,7 +1,7 @@
 # Discovery Protocol V1
 
-Status: INITIAL SOURCE CANDIDATE  
-Scope: portfolio architecture discovery  
+Status: INITIAL SOURCE CANDIDATE
+Scope: portfolio architecture discovery
 Non-goal: creation of a mandatory portfolio operating system
 
 ## 1. Purpose
