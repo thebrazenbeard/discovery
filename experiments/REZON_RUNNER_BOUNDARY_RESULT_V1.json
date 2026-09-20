@@ -1,0 +1,70 @@
+{
+  "schema": "DISCOVERY_REZON_RUNNER_BOUNDARY_RESULT_V1",
+  "status": "MECHANICAL_INTEROP_PASS_EPISTEMIC_AUTHORITY_RETAINED",
+  "rezon": {
+    "repository": "thebrazenbeard/rezon",
+    "pull_request": 79,
+    "exact_head": "8289914ec500a1392b10fe1a3774dee166e73b40",
+    "exporter_path": "src/rezon/interop.py",
+    "exporter_git_blob_sha1": "e365fd637904d4402891839ab1e187e50694e96b",
+    "regression_git_blob_sha1": "6ae902177bc5d41fd1c3c34ce1e810d5ce3809c1",
+    "fresh_local_exact_source": {
+      "python": "3.12",
+      "focused_tests": "10/10 PASS",
+      "full_tests": "275/275 PASS",
+      "package_install": false
+    },
+    "hosted_ci": "NOT_PRESENT_ON_EXACT_FINAL_HEAD"
+  },
+  "real_fixture": {
+    "evidence_digest": "98bca73ae71697601cd7c9c10e2067cd8fef83aa58e7bad2f1fec59c18508c48",
+    "source_generated_sha256_windows_crlf": "86266b74d807e3fb98fec13a5f8ccd2d05ff509b27bd3beb7e2abfe61e4952b5",
+    "persisted_fixture_sha256_lf": "71a05e32974cfadd20272073f154ef2f083daeaa0ac63f54cd85b43e2eb1db28",
+    "transport_normalization": "CRLF_TO_LF_ONLY",
+    "effect_state": "plan",
+    "execution_count": 1
+  },
+  "runner": {
+    "repository": "thebrazenbeard/project-runner",
+    "pull_request": 26,
+    "exact_head": "4de0f6148b3d7d04ccdb4e0057435fa0d904590a",
+    "verifier_git_blob_sha1": "d7827dec743e69fff7f981d91d7a86f6cd4a4839",
+    "fixture_binding_git_blob_sha1": "51637955fa0557bb55a3bc725cd2d4d01c9047b3",
+    "regression_git_blob_sha1": "697594a36f6246938063550c3c58938269cc97d7",
+    "hosted_run_id": 35517367117,
+    "hosted_result": "SUCCESS",
+    "tests": "222/222 PASS",
+    "registry_validation": "15 projects / 12 workers PASS",
+    "recursive_restart_proof": "PASS"
+  },
+  "established": [
+    "REAL_REZON_EXPORT_CAN_CROSS_PROJECT_BOUNDARY",
+    "RUNNER_CAN_VERIFY_EXPORTED_SCHEMA_AND_MECHANICAL_BINDINGS_WITHOUT_IMPORTING_REZON",
+    "RUNNER_CLAIM_RESULT_IS_NON_PROMOTIONAL",
+    "REZON_CLAIM_DISPOSITIONS_CAN_REMAIN_OPAQUE_TO_RUNNER",
+    "REZON_REMAINS_STANDALONE"
+  ],
+  "not_established": [
+    "REZON_TRUTH",
+    "REZON_ADMISSION",
+    "REZON_QUALIFICATION",
+    "REZON_AUTHORITY",
+    "RUNNER_AUTHORITY_OVER_REZON",
+    "EXTERNAL_EFFECT_AUTHORIZATION",
+    "REAL_FAILURE_PATH_INTEROP",
+    "NET_MAINTENANCE_REDUCTION",
+    "PROVEN_REUSABLE"
+  ],
+  "failed_predecessor_provenance": [
+    {
+      "head": "41ffcde85ba49c86d7f70375b694011e64151c49",
+      "failure": "fixture persisted LF bytes did not match Windows CRLF source-generated file hash"
+    },
+    {
+      "head": "d000cfd39f1cf74c7a911cf08928f0d29ab4d6aa",
+      "failure": "malformed Python regression contained literal escaped newline sequences"
+    }
+  ],
+  "next_falsifier": "Generate a real Rezon failure-path PLAN export from exact source and verify it through the same independent Runner verifier while preserving failure semantics and non-promotional claim ceiling.",
+  "claim_ceiling": "EXPERIMENTING_REAL_MECHANICAL_INTEROP_NOT_EPISTEMIC_DELEGATION_NOT_PROVEN_REUSABLE"
+}
