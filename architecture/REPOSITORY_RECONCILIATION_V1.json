@@ -8,7 +8,8 @@
   },
   "proposed_candidate": {
     "sha_at_branch_creation": "250644f34bc7f0e16dc078487905ecfb8e537f02",
-    "branch": "bt2/discovery-canonical-main-candidate-v1-20260920"
+    "branch": "bt2/discovery-canonical-main-candidate-v1-20260920",
+    "current_exact_head": "f6cb708be5c60bf5085d43bb397b4b05cff164cc"
   },
   "ancestry": {
     "current_stack": [
@@ -82,7 +83,15 @@
         "conclusion": "success",
         "subject": "250644f34bc7f0e16dc078487905ecfb8e537f02"
       }
-    ]
+    ],
+    "local_bt2_execution": {
+      "subject": "f6cb708be5c60bf5085d43bb397b4b05cff164cc",
+      "validate_discovery": "PASS",
+      "unit_tests": "57/57 PASS",
+      "compileall": "PASS",
+      "diff_check_against_main": "PASS",
+      "initial_defect_repaired": "Two inherited trailing-whitespace lines in docs/DISCOVERY_PROTOCOL_V1.md"
+    }
   },
   "proposed_pr_dispositions": {
     "1": "CURRENT_STACK_DEPENDENCY",
@@ -107,7 +116,6 @@
     "PR18 remains preserved as failed/divergent evidence and should not be represented as having merged."
   ],
   "unresolved": [
-    "Independent BT2 local execution on consolidation head pending.",
     "Privacy issue #6 remains active and must not be erased by canonicalization.",
     "No protected merge/closure effect is authorized."
   ]
