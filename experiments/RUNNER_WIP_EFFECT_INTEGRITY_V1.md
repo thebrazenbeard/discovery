@@ -1,4 +1,4 @@
-# Runner ↔ WIP Effect Integrity Experiment V1
+# Runner ↔ WIP ↔ DriftGuard Effect Integrity Experiment V1
 
 Status: **EXPERIMENTING / PARTIAL SUPPORT / HYPOTHESIS NARROWED**
 
@@ -136,3 +136,55 @@ The original “shared execution-integrity subsystem” hypothesis was too broad
 A small effect-attempt interchange envelope remains plausible. No shared library is justified yet.
 
 > **HOSTILE REVIEWER:** A common envelope can still become schema theater: two systems can serialize into the same shape without eliminating a single line of duplicated implementation. Promotion requires a real consumer workflow where the envelope removes translation or recovery code while preserving both native state machines.
+
+## Third-consumer test — DriftGuard
+
+Exact DriftGuard subject:
+
+- native R4 base: `one/driftguard-r4-windows-eol-v1-20260919@e815c75ffccf469d9d1c09d58c0050798c8e4f53`;
+- consumer adapter: `work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca`;
+- adapter Git blob: `2904452b0f14a444c28a616e2e8963bab0f05ac6`;
+- regression Git blob: `2e205d299d440e8d9531246b3eb8fc94fe03cf48`;
+- hosted run `35510133549`: SUCCESS on Ubuntu and Windows.
+
+DriftGuard is a materially different semantic test because it distinguishes:
+
+1. reload decision;
+2. accepted downstream reload acknowledgement;
+3. behavioral evidence that recovery actually occurred.
+
+Its native V1 source implements the first two and explicitly says acknowledgement is a caller assertion, not behavioral proof.
+
+The unchanged V0 envelope handles this without importing DriftGuard semantics:
+
+- committed reload-required evaluation → `PRE_EFFECT`;
+- accepted reload acknowledgement → `POST_EFFECT_UNVERIFIED`;
+- there is deliberately no DriftGuard adapter path to `POST_EFFECT_VERIFIED`.
+
+That mapping is important. Treating acknowledgement as `POST_EFFECT_VERIFIED` would be a semantic-laundering failure and would reject the abstraction.
+
+The adapter is dependency-free and one-way. DriftGuard does not import Discovery and does not consume the envelope for decisions, retry, acknowledgement, or recovery.
+
+## V0 schema stability
+
+The third consumer required **no change** to `schemas/effect_attempt_envelope_v0.schema.json`.
+
+Bound V0 Git blob remains `b5d85ba31a33ad7192fd4a08934628a72e593312`.
+
+This is stronger evidence than adding a DriftGuard-specific field to the shared shape.
+
+## Three-consumer result
+
+Current result:
+
+**THREE_CONSUMER_INTEROPERABILITY_SUPPORTED / BROAD_SHARED_STATE_MACHINE_REJECTED / REUSE_VALUE_UNMEASURED.**
+
+The narrow envelope now survives three different source-native state machines without becoming authoritative over them.
+
+That still does not justify a shared library.
+
+The remaining central hostile objection is economic/operational rather than syntactic:
+
+> Does extracting this envelope actually remove duplicated translation, validation, recovery, or custody work across real workflows, or does it merely add adapters and schema ceremony?
+
+Until an experiment measures a net reduction while preserving standalone operation, the candidate remains `EXPERIMENTING`, not `PROVEN_REUSABLE`.
