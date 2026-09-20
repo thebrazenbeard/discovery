@@ -93,6 +93,10 @@
       "receipt_failure_count": 1,
       "trace_failure_count": 1,
       "source_versions": []
-    }
+    },
+    "persisted_git_blob_sha1": "9753f65bc715592900b4cde1d2c7c97017ad5d7e",
+    "persisted_file_sha256": "6d0b7ac94faadabf1d7de6b0bd0168e9920fcb9c9bf5d5b4fa530085aa0024be",
+    "persisted_file_bytes": 1667,
+    "persistence_normalization": "JSON_WHITESPACE_REFORMAT_ONLY_EVIDENCE_DIGEST_PRESERVED"
   }
 }
