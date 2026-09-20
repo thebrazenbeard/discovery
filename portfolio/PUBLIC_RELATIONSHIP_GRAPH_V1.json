@@ -139,18 +139,23 @@
       "from": "rezon",
       "to": "project-runner",
       "relation": "COMPLEMENTARY_BOUNDARY",
-      "scope": "epistemic reasoning/admission versus durable mechanical execution",
-      "evidence_state": "HYPOTHESIS",
+      "scope": "Rezon-owned epistemic execution and admission with Project Runner independently verifying exported run-evidence structure; no semantic or authority transfer",
+      "evidence_state": "EXPERIMENTING",
       "source_refs": [
-        "thebrazenbeard/rezon:main@e3d7a41eccb49a9f403ef66f511faef677ceec1b",
-        "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8"
+        "thebrazenbeard/rezon:radar/r51-failure-summary-binding-20260919@8289914ec500a1392b10fe1a3774dee166e73b40",
+        "thebrazenbeard/project-runner:work/discovery-rezon-evidence-verifier-v1-20260920@4de0f6148b3d7d04ccdb4e0057435fa0d904590a"
       ],
       "falsifiers": [
-        "Runner must understand Rezon-specific truth/admission semantics.",
-        "Rezon cannot retain a viable non-Runner execution path."
+        "Runner must interpret Rezon accepted/rejected/unresolved claims or admission semantics to verify evidence.",
+        "Runner structural PASS is treated as Rezon truth, qualification, or external-effect authorization.",
+        "A real Rezon failure-path export cannot be mechanically preserved through the same boundary.",
+        "Rezon loses viable standalone evidence export/validation without Runner."
       ],
       "notes": [
-        "Rezon has active stacked source candidates; this graph edge is intentionally bound to current main until an experiment selects one exact candidate."
+        "Real Rezon R51 deterministic evidence export consumed by independent Runner verifier.",
+        "Runner exact hosted workflow 35517367117: 222/222 tests PASS plus registry/restart validation.",
+        "Rezon exact R51 locally rechecked under Python 3.12: 10/10 focused and 275/275 full PASS; no hosted exact-head CI is claimed.",
+        "Current experiment is mechanical evidence verification only; it does not delegate Rezon reasoning or admission."
       ]
     },
     {
