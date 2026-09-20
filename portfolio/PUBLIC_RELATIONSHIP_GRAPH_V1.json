@@ -289,6 +289,46 @@
       "notes": [
         "Opaque private evidence is insufficient for PROVEN_REUSABLE under V1."
       ]
+    },
+    {
+      "edge_id": "DRIFTGUARD_RUNNER_EFFECT_INTEGRITY",
+      "from": "driftguard",
+      "to": "project-runner",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "effect decision/precondition, post-effect uncertainty, receipt/readback, and separation of decision from verified effect",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
+        "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8"
+      ],
+      "falsifiers": [
+        "Neutral phase mapping requires DriftGuard behavioral-recovery semantics or Runner scheduling/lease semantics.",
+        "Accepted DriftGuard acknowledgement must be mislabeled as verified effect to fit the shared envelope.",
+        "Either project must consume Discovery at runtime."
+      ],
+      "notes": [
+        "DriftGuard adapter preserves acknowledgement as POST_EFFECT_UNVERIFIED and uses DOMAIN_DECIDES."
+      ]
+    },
+    {
+      "edge_id": "DRIFTGUARD_WIP_EFFECT_INTEGRITY",
+      "from": "driftguard",
+      "to": "wip",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "source-native effect attempt/acknowledgement states mapped to neutral unverified/verified/reconciled effect phases",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
+        "thebrazenbeard/wip:main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+      ],
+      "falsifiers": [
+        "Mapping collapses WIP ambiguity/reconciliation semantics or DriftGuard acknowledgement/recovery semantics.",
+        "The common envelope becomes authoritative for retry or completion.",
+        "Adapter burden exceeds duplicated interchange logic removed."
+      ],
+      "notes": [
+        "This edge is evidence for the triadic candidate, not a claim that DriftGuard and WIP share one state machine."
+      ]
     }
   ]
 }
