@@ -42,6 +42,63 @@ EXACT_SUBJECT_REF = re.compile(
     r"^(?:[0-9a-f]{40}|[^@\s]+@[0-9a-f]{40})$"
 )
 PLACEHOLDER_REPO_PREFIXES = ("TBD", "UNKNOWN", "PLACEHOLDER")
+SHA256 = re.compile(r"^[0-9a-f]{64}$")
+PRIVATE_OPAQUE_REPO = re.compile(r"^PRIVATE_OPAQUE_[A-Z0-9][A-Z0-9_-]+$")
+PRIVATE_ATTESTATION_FIELDS = {
+    "schema",
+    "consumer_commitment_sha256",
+    "subject_commitment_sha256",
+    "receipt_sha256",
+    "verifier_class",
+    "status",
+}
+PRIVATE_VERIFIER_CLASSES = {
+    "PRIVATE_OWNER_REGISTRY",
+    "INDEPENDENT_PRIVATE_REVIEWER",
+}
+
+
+def _validate_private_attestation(
+    value,
+    *,
+    filename: str,
+    index: int,
+) -> tuple[list[str], str | None]:
+    errors: list[str] = []
+    if not isinstance(value, dict):
+        return (
+            [f"private consumer attestation invalid: {filename}:{index}"],
+            None,
+        )
+    if set(value) != PRIVATE_ATTESTATION_FIELDS:
+        errors.append(
+            f"private consumer attestation fields mismatch: {filename}:{index}"
+        )
+    if value.get("schema") != "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1":
+        errors.append(
+            f"private consumer attestation schema mismatch: {filename}:{index}"
+        )
+    consumer_commitment = value.get("consumer_commitment_sha256")
+    subject_commitment = value.get("subject_commitment_sha256")
+    receipt = value.get("receipt_sha256")
+    for label, digest in (
+        ("consumer", consumer_commitment),
+        ("subject", subject_commitment),
+        ("receipt", receipt),
+    ):
+        if not isinstance(digest, str) or not SHA256.fullmatch(digest):
+            errors.append(
+                f"private consumer {label} commitment invalid: {filename}:{index}"
+            )
+    if value.get("verifier_class") not in PRIVATE_VERIFIER_CLASSES:
+        errors.append(
+            f"private consumer verifier class invalid: {filename}:{index}"
+        )
+    if value.get("status") != "EXACT_PRIVATE_SUBJECT_ATTESTED":
+        errors.append(
+            f"private consumer attestation status invalid: {filename}:{index}"
+        )
+    return errors, consumer_commitment if not errors else None
 
 
 def _nonempty_string(value) -> bool:
@@ -58,7 +115,8 @@ def _validate_candidate_lifecycle(candidate: dict, *, filename: str) -> list[str
     if not isinstance(consumers, list) or len(consumers) < 2:
         return [f"candidate needs at least two consumers: {filename}"]
 
-    repos: list[str] = []
+    consumer_keys: list[str] = []
+    private_consumer_count = 0
     active = status in {"EXPERIMENTING", "PROVEN_REUSABLE"}
     for index, consumer in enumerate(consumers):
         if not isinstance(consumer, dict):
@@ -67,26 +125,72 @@ def _validate_candidate_lifecycle(candidate: dict, *, filename: str) -> list[str
         repo = consumer.get("repo")
         role = consumer.get("role")
         ref = consumer.get("ref")
+        visibility = consumer.get("visibility", "PUBLIC")
         if not _nonempty_string(repo):
             errors.append(f"candidate consumer repo invalid: {filename}:{index}")
-        else:
-            repos.append(repo.strip())
         if not _nonempty_string(role):
             errors.append(f"candidate consumer role invalid: {filename}:{index}")
-        if active:
+        if visibility not in {"PUBLIC", "PRIVATE_OPAQUE"}:
+            errors.append(
+                f"candidate consumer visibility invalid: {filename}:{index}"
+            )
+            continue
+
+        if visibility == "PRIVATE_OPAQUE":
+            private_consumer_count += 1
             if (
-                not _nonempty_string(repo)
-                or repo.strip().upper().startswith(PLACEHOLDER_REPO_PREFIXES)
+                not isinstance(repo, str)
+                or not PRIVATE_OPAQUE_REPO.fullmatch(repo)
             ):
                 errors.append(
-                    f"active candidate consumer is placeholder: {filename}:{index}"
+                    f"private consumer public handle invalid: {filename}:{index}"
                 )
-            if not isinstance(ref, str) or not EXACT_SUBJECT_REF.fullmatch(ref):
+            if ref is not None:
                 errors.append(
-                    f"active candidate consumer ref not exact: {filename}:{index}"
+                    f"private consumer raw ref forbidden: {filename}:{index}"
                 )
+            attestation = consumer.get("private_attestation")
+            if active:
+                attestation_errors, commitment = _validate_private_attestation(
+                    attestation,
+                    filename=filename,
+                    index=index,
+                )
+                errors.extend(attestation_errors)
+                if commitment is not None:
+                    consumer_keys.append(f"private:{commitment}")
+            elif attestation is not None:
+                attestation_errors, commitment = _validate_private_attestation(
+                    attestation,
+                    filename=filename,
+                    index=index,
+                )
+                errors.extend(attestation_errors)
+                if commitment is not None:
+                    consumer_keys.append(f"private:{commitment}")
+            elif _nonempty_string(repo):
+                consumer_keys.append(f"private-hypothesis:{repo.strip()}")
+        else:
+            if "private_attestation" in consumer:
+                errors.append(
+                    f"public consumer may not carry private attestation: {filename}:{index}"
+                )
+            if _nonempty_string(repo):
+                consumer_keys.append(f"public:{repo.strip()}")
+            if active:
+                if (
+                    not _nonempty_string(repo)
+                    or repo.strip().upper().startswith(PLACEHOLDER_REPO_PREFIXES)
+                ):
+                    errors.append(
+                        f"active candidate consumer is placeholder: {filename}:{index}"
+                    )
+                if not isinstance(ref, str) or not EXACT_SUBJECT_REF.fullmatch(ref):
+                    errors.append(
+                        f"active candidate consumer ref not exact: {filename}:{index}"
+                    )
 
-    if active and len(set(repos)) < 2:
+    if active and len(set(consumer_keys)) < 2:
         errors.append(f"active candidate consumers not distinct: {filename}")
 
     promotion_evidence = candidate.get("promotion_evidence")
@@ -117,6 +221,10 @@ def _validate_candidate_lifecycle(candidate: dict, *, filename: str) -> list[str
             errors.append(f"active candidate lacks hostile review: {filename}")
 
     if status == "PROVEN_REUSABLE":
+        if private_consumer_count:
+            errors.append(
+                f"proven candidate cannot rely on opaque private consumer: {filename}"
+            )
         if len(promotion_evidence) < 2:
             errors.append(f"proven candidate lacks independent evidence: {filename}")
         if hostile_status != "PASS":
