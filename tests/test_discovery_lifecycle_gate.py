@@ -70,6 +70,119 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
             failures,
         )
 
+    def test_experimenting_accepts_digest_bound_private_opaque_consumer(self):
+        candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
+        candidate["consumers"][1] = {
+            "repo": "PRIVATE_OPAQUE_ALPHA",
+            "role": "private experimental consumer",
+            "ref": None,
+            "visibility": "PRIVATE_OPAQUE",
+            "private_attestation": {
+                "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "consumer_commitment_sha256": "1" * 64,
+                "subject_commitment_sha256": "2" * 64,
+                "receipt_sha256": "3" * 64,
+                "verifier_class": "PRIVATE_OWNER_REGISTRY",
+                "status": "EXACT_PRIVATE_SUBJECT_ATTESTED",
+            },
+        }
+        self.assertEqual(
+            [],
+            validator._validate_candidate_lifecycle(
+                candidate,
+                filename="synthetic-private.json",
+            ),
+        )
+
+    def test_active_private_consumer_rejects_raw_ref_and_malformed_attestation(self):
+        candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
+        candidate["consumers"][1] = {
+            "repo": "PRIVATE_OPAQUE_ALPHA",
+            "role": "private experimental consumer",
+            "ref": "main@" + "a" * 40,
+            "visibility": "PRIVATE_OPAQUE",
+            "private_attestation": {
+                "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "consumer_commitment_sha256": "not-a-digest",
+                "subject_commitment_sha256": "2" * 64,
+                "receipt_sha256": "3" * 64,
+                "verifier_class": "PRIVATE_OWNER_REGISTRY",
+                "status": "EXACT_PRIVATE_SUBJECT_ATTESTED",
+            },
+        }
+        failures = validator._validate_candidate_lifecycle(
+            candidate,
+            filename="synthetic-private.json",
+        )
+        self.assertIn(
+            "private consumer raw ref forbidden: synthetic-private.json:1",
+            failures,
+        )
+        self.assertIn(
+            "private consumer consumer commitment invalid: synthetic-private.json:1",
+            failures,
+        )
+
+    def test_private_consumer_distinctness_uses_consumer_commitment(self):
+        candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
+        attestation = {
+            "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+            "consumer_commitment_sha256": "1" * 64,
+            "subject_commitment_sha256": "2" * 64,
+            "receipt_sha256": "3" * 64,
+            "verifier_class": "PRIVATE_OWNER_REGISTRY",
+            "status": "EXACT_PRIVATE_SUBJECT_ATTESTED",
+        }
+        candidate["consumers"] = [
+            {
+                "repo": "PRIVATE_OPAQUE_ALPHA",
+                "role": "private consumer one",
+                "ref": None,
+                "visibility": "PRIVATE_OPAQUE",
+                "private_attestation": copy.deepcopy(attestation),
+            },
+            {
+                "repo": "PRIVATE_OPAQUE_BETA",
+                "role": "private consumer two",
+                "ref": None,
+                "visibility": "PRIVATE_OPAQUE",
+                "private_attestation": copy.deepcopy(attestation),
+            },
+        ]
+        failures = validator._validate_candidate_lifecycle(
+            candidate,
+            filename="synthetic-private.json",
+        )
+        self.assertIn(
+            "active candidate consumers not distinct: synthetic-private.json",
+            failures,
+        )
+
+    def test_proven_reusable_rejects_opaque_private_consumer_for_now(self):
+        candidate = proven_candidate()
+        candidate["consumers"][1] = {
+            "repo": "PRIVATE_OPAQUE_ALPHA",
+            "role": "private experimental consumer",
+            "ref": None,
+            "visibility": "PRIVATE_OPAQUE",
+            "private_attestation": {
+                "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "consumer_commitment_sha256": "1" * 64,
+                "subject_commitment_sha256": "2" * 64,
+                "receipt_sha256": "3" * 64,
+                "verifier_class": "INDEPENDENT_PRIVATE_REVIEWER",
+                "status": "EXACT_PRIVATE_SUBJECT_ATTESTED",
+            },
+        }
+        failures = validator._validate_candidate_lifecycle(
+            candidate,
+            filename="synthetic-private.json",
+        )
+        self.assertIn(
+            "proven candidate cannot rely on opaque private consumer: synthetic-private.json",
+            failures,
+        )
+
     def test_experimenting_may_carry_pass_with_limits_and_objections(self):
         candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
         failures = validator._validate_candidate_lifecycle(
@@ -122,9 +235,10 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
                 encoding="utf-8"
             )
         )
-        pattern = schema["allOf"][0]["then"]["properties"]["consumers"]["items"][
-            "properties"
-        ]["ref"]["pattern"]
+        active_item = schema["allOf"][0]["then"]["properties"]["consumers"]["items"][
+            "allOf"
+        ][0]
+        pattern = active_item["else"]["properties"]["ref"]["pattern"]
         compiled = re.compile(pattern)
         self.assertIsNotNone(compiled.fullmatch("main@" + "a" * 40))
         self.assertIsNotNone(
@@ -144,6 +258,7 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
         self.assertEqual(1, active["promotion_evidence"]["minItems"])
         proven = gates[1]["then"]["properties"]
         self.assertEqual(2, proven["promotion_evidence"]["minItems"])
+        self.assertIn("not", proven["consumers"])
         self.assertEqual(
             "PASS",
             proven["hostile_review"]["properties"]["status"]["const"],
