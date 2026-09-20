@@ -1,0 +1,36 @@
+{
+  "schema": "DISCOVERY_EFFECT_ENVELOPE_SCHEMA_THEATER_RESULT_V1",
+  "status": "PARTIAL_FALSIFICATION_SCHEMA_THEATER",
+  "contract_git_blob_sha1": "b5d85ba31a33ad7192fd4a08934628a72e593312",
+  "exact_observer_subject": "work/discovery-effect-observer-v1-20260920@1869424dcd8d9d53e725e1a30d5339c07903830e",
+  "observer_git_blob_sha1": "67dd00cc1c96120151ffa4eb38dc9d3893802ada",
+  "regression_git_blob_sha1": "b484631b1e78bdc62d23ba388a54e89f7668d19e",
+  "hosted_runs": [
+    {
+      "id": 35512241403,
+      "name": "Discovery validation",
+      "conclusion": "SUCCESS"
+    },
+    {
+      "id": 35512241220,
+      "name": "Discovery composed lifecycle validation",
+      "conclusion": "SUCCESS"
+    }
+  ],
+  "established": [
+    "THREE_EXACT_PRODUCERS_HAVE_BOUNDED_HOSTED_PASS",
+    "ONE_DOWNSTREAM_OBSERVER_HAS_NO_CURRENT_PRODUCER_SPECIFIC_PARSING",
+    "UNKNOWN_FOURTH_SOURCE_REQUIRES_NO_OBSERVER_REGISTRATION_OR_CODE_CHANGE",
+    "SOURCE_STATE_REMAINS_OPAQUE_TO_OBSERVER",
+    "NORMALIZED_PHASE_AND_RETRY_DISPOSITION_SUPPORT_GENERIC_REPORTING"
+  ],
+  "not_established": [
+    "NET_PORTFOLIO_MAINTENANCE_REDUCTION",
+    "PROVEN_REUSABLE",
+    "SHARED_RUNTIME_LIBRARY_JUSTIFIED",
+    "PRODUCER_NATIVE_ORDERING_ELIMINATED",
+    "PRODUCER_AUTHORITY_OR_RETRY_SEMANTICS_NORMALIZED"
+  ],
+  "next_falsifier": "Measure adapter/schema maintenance introduced versus source-specific consumer parsing removed across a second independent observer or operational workflow.",
+  "claim_ceiling": "EXPERIMENTING_DOWNSTREAM_PARSER_REUSE_DEMONSTRATED_NOT_PROVEN_REUSABLE"
+}
