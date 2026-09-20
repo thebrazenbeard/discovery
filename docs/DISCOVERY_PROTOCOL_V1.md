@@ -22,6 +22,23 @@ A source project's semantics, authority model, scientific hypothesis, privacy bo
 
 Discovery may record that two projects implement similar mechanics. It may not infer that they therefore mean the same thing.
 
+## 2.1 Private consumer attestations
+
+Discovery is public while much of the portfolio is private. Exactness must not force publication of private repository identities or refs.
+
+For an active `EXPERIMENTING` candidate, a private consumer may therefore appear as `visibility=PRIVATE_OPAQUE` with:
+
+- a public-safe opaque handle rather than the repository name;
+- no raw repository ref;
+- a 256-bit consumer commitment;
+- a 256-bit exact-subject commitment;
+- a 256-bit private verification-receipt digest;
+- an attestation class and exact attested status.
+
+The public validator can prove the attestation's shape, distinctness, and commitment continuity. It cannot independently inspect the hidden repository merely because a digest exists. Therefore opaque private consumers are sufficient to participate in an experiment, but **not sufficient for `PROVEN_REUSABLE` promotion** in V1. A later independently verifiable privacy-preserving mechanism must earn that stronger claim.
+
+This rule preserves both requirements: private projects remain private, and Discovery does not weaken exact-subject discipline into undocumented trust.
+
 ## 3. Candidate lifecycle
 
 ### OBSERVED
