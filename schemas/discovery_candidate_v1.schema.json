@@ -67,6 +67,15 @@
               "string",
               "null"
             ]
+          },
+          "visibility": {
+            "enum": [
+              "PUBLIC",
+              "PRIVATE_OPAQUE"
+            ]
+          },
+          "private_attestation": {
+            "$ref": "#/$defs/privateSubjectAttestation"
           }
         }
       }
@@ -144,14 +153,48 @@
         "properties": {
           "consumers": {
             "items": {
-              "properties": {
-                "ref": {
-                  "type": "string",
-                  "pattern": "^(?:[0-9a-f]{40}|[^@\\s]+@[0-9a-f]{40})$"
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "visibility": {
+                        "const": "PRIVATE_OPAQUE"
+                      }
+                    },
+                    "required": [
+                      "visibility"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "ref",
+                      "private_attestation"
+                    ],
+                    "properties": {
+                      "repo": {
+                        "type": "string",
+                        "pattern": "^PRIVATE_OPAQUE_[A-Z0-9][A-Z0-9_-]+$"
+                      },
+                      "ref": {
+                        "type": "null"
+                      },
+                      "private_attestation": {
+                        "$ref": "#/$defs/privateSubjectAttestation"
+                      }
+                    }
+                  },
+                  "else": {
+                    "required": [
+                      "ref"
+                    ],
+                    "properties": {
+                      "ref": {
+                        "type": "string",
+                        "pattern": "^(?:[0-9a-f]{40}|[^@\\s]+@[0-9a-f]{40})$"
+                      }
+                    }
+                  }
                 }
-              },
-              "required": [
-                "ref"
               ]
             }
           },
@@ -197,9 +240,63 @@
                 "maxItems": 0
               }
             }
+          },
+          "consumers": {
+            "not": {
+              "contains": {
+                "properties": {
+                  "visibility": {
+                    "const": "PRIVATE_OPAQUE"
+                  }
+                },
+                "required": [
+                  "visibility"
+                ]
+              }
+            }
           }
         }
       }
     }
-  ]
+  ],
+  "$defs": {
+    "privateSubjectAttestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "consumer_commitment_sha256",
+        "subject_commitment_sha256",
+        "receipt_sha256",
+        "verifier_class",
+        "status"
+      ],
+      "properties": {
+        "schema": {
+          "const": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1"
+        },
+        "consumer_commitment_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "subject_commitment_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "receipt_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "verifier_class": {
+          "enum": [
+            "PRIVATE_OWNER_REGISTRY",
+            "INDEPENDENT_PRIVATE_REVIEWER"
+          ]
+        },
+        "status": {
+          "const": "EXACT_PRIVATE_SUBJECT_ATTESTED"
+        }
+      }
+    }
+  }
 }
