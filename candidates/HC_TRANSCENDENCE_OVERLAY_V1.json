@@ -2,39 +2,53 @@
   "schema_version": "DISCOVERY_CANDIDATE_V1",
   "candidate_id": "HC_TRANSCENDENCE_OVERLAY_V1",
   "title": "Reconstruct Transcendence as exact HC base plus overlay",
-  "status": "HYPOTHESIS",
-  "claim": "Where Transcendence duplicates HC Brain implementation, exact base-plus-overlay reconstruction may preserve Transcendence-specific research while eliminating copied base maintenance.",
+  "status": "EXPERIMENTING",
+  "claim": "The current Transcendence frontier is largely an exact byte subset of HC-Brain plus an explicit Transcendence overlay. A pinned HC tree plus adds/overwrites/deletions is being tested for exact Git-tree reconstruction; no moving-base inheritance or dependency adoption is implied.",
   "consumers": [
     {
       "repo": "thebrazenbeard/hc-brain",
-      "role": "candidate base implementation",
-      "ref": null
+      "role": "pinned candidate base bytes only; no downstream semantic authority",
+      "ref": "noah/kinesis-runtime-v1@5929da3e8904e23e484df0deac920a008ec33d52"
     },
     {
       "repo": "thebrazenbeard/transcendence",
-      "role": "candidate downstream overlay",
-      "ref": null
+      "role": "exact target and independently owned research overlay",
+      "ref": "one/transcendence-integrity-manifest-runtime-parity-v1-20260919@be3785c83dbe89b0d4236b43eda97a277eb6baad"
     }
   ],
   "preserved_boundaries": [
-    "Transcendence-specific BCI, continuity, and experimental material remains independently owned.",
+    "Transcendence-specific BCI, continuity, human-state archive, privacy, threat-model, and experimental material remains independently owned.",
     "Historical provenance is not rewritten.",
-    "No duplicated file is removed until exact reconstruction is demonstrated."
+    "No duplicated file is removed and no repository dependency is created by the experiment.",
+    "The HC base is an exact pinned byte subject, not a moving branch or semantic authority.",
+    "HC-only paths are explicit deletions; later HC cognitive/runtime features do not silently enter Transcendence."
   ],
-  "promotion_evidence": [],
+  "promotion_evidence": [
+    "Stable main↔main comparison: 255 of 263 Transcendence files are identical at the same paths, accounting for 1,718,257 of 1,802,005 target bytes (95.352510121%).",
+    "Current HC PR #22 ↔ Transcendence PR #7 comparison: 254 of 288 Transcendence files are identical at the same paths, accounting for 1,706,224 of 1,992,586 target bytes (85.628625314%).",
+    "Current exact overlay payload is 34 files / 286,362 bytes (14.371374686% of target bytes), plus 39 explicit deletions.",
+    "Complete path/mode/blob snapshots and an executable recursive Git-tree reconstruction validator are staged in this exact Discovery successor."
+  ],
   "rejection_conditions": [
-    "An exact historical/candidate Transcendence tree cannot be reconstructed from a pinned HC base plus overlay.",
-    "The overlay would inherit HC assumptions that Transcendence must be able to modify independently.",
-    "The dependency materially increases failure or migration risk."
+    "The exact HC base plus overlay fails to reconstruct target tree 112a44d8042556b87f19b3dac05ec34a5ea2f796.",
+    "A base-upgrade simulation shows that preserving Transcendence semantics requires importing excluded HC features or large recurring conflict repair.",
+    "The dependency materially increases failure, migration, or qualification risk.",
+    "Transcendence must independently modify a large fraction of currently shared HC bytes often enough that the pinned-base model creates more maintenance than it removes."
   ],
   "hostile_review": {
-    "status": "NOT_RUN",
+    "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "Copied code may be intentional experimental isolation rather than accidental duplication.",
-      "A base dependency can silently constrain future divergent research."
+      "High byte overlap does not prove a shared dependency is operationally cheaper; upgrade/rebase burden is still unmeasured.",
+      "The 39-file deletion set shows real intentional divergence and makes moving-base inheritance unsafe.",
+      "Nine same-path overrides include reference-kernel implementation/tests, so some copied base behavior is intentionally modified rather than passive duplication.",
+      "Exact reconstruction proves source factorization only. It grants HC no authority over Transcendence semantics and does not authorize repository rewrites."
     ]
   },
   "notes": [
-    "Measure exact byte-identical overlap again at experiment time; do not carry old counts forward as current truth."
+    "Current source experiment binds HC PR #22 exact head 5929da3e8904e23e484df0deac920a008ec33d52 and Transcendence PR #7 exact head be3785c83dbe89b0d4236b43eda97a277eb6baad.",
+    "Measured current identical byte share: 85.628625314%.",
+    "Measured current overlay payload share: 14.371374686%.",
+    "Exact reconstruction must pass before any base-plus-overlay claim is promoted beyond EXPERIMENTING.",
+    "After reconstruction, the next falsifier is a later-HC-base upgrade simulation; do not adopt a dependency merely from overlap."
   ]
 }
