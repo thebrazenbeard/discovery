@@ -1,0 +1,64 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "PORTFOLIO_CENSUS_DRIFT_INPUT_V1",
+  "title": "Reuse an exact privacy-safe portfolio census as non-authoritative drift input",
+  "status": "EXPERIMENTING",
+  "claim": "Discovery's exact public-safe repository census may be reusable as a narrow drift/currentness input across independent consumers when each consumer verifies the exact artifact bytes and preserves its own runtime registry, scheduling semantics, authority model, and private inventory.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/project-runner",
+      "role": "public orchestration consumer validating exact census bytes before using count/digest as drift input",
+      "ref": "work/discovery-census-consumer-v1-20260920@b763c707abacc7dfe30dc451b2b42354a30e3621"
+    },
+    {
+      "repo": "PRIVATE_OPAQUE_f306bde2474eb046",
+      "role": "private runtime/source-registry consumer of the same census digest",
+      "ref": null,
+      "visibility": "PRIVATE_OPAQUE",
+      "private_attestation": {
+        "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+        "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
+        "consumer_commitment_sha256": "f306bde2474eb04685b774c84de90b2377706df0a08b0a1c4ab9cb488cada6ef",
+        "subject_commitment_sha256": "08855041acd5674d1b651080f1b971ae80e99e3e7125ae43b68692562e37cbf2",
+        "receipt_sha256": "1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969",
+        "verifier_class": "PRIVATE_OWNER_REGISTRY",
+        "status": "EXACT_PRIVATE_SUBJECT_ATTESTED"
+      }
+    }
+  ],
+  "preserved_boundaries": [
+    "Discovery remains an observational meta-layer and does not become either consumer's runtime registry or portfolio authority.",
+    "Project Runner retains its own project registry, scheduling state, capabilities, target authority, and private external-registry rules.",
+    "The private consumer retains its private source identity, exact ref, classification semantics, control state, and provider/runtime authority outside this public repository.",
+    "A census count or name digest can detect repository-set drift but cannot decide whether any repository is current, schedulable, coupled, writable, authoritative, or semantically compatible.",
+    "Either consumer must remain able to replace or ignore Discovery's census without losing its project-owned semantics or authority."
+  ],
+  "promotion_evidence": [
+    "Discovery census subject vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea, blob 34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df, records 57 repositories and all-name digest 43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd.",
+    "Discovery exact-head workflow run 35475731990 passed structural validation on the bound census source.",
+    "Project Runner consumer head b763c707abacc7dfe30dc451b2b42354a30e3621 validates the exact Discovery Git blob bytes and hosted workflow run 35509678751 executed successfully.",
+    "Private consumer attestation receipt digest 1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969 binds an exact private subject to the same census digest without publishing the private identity/ref."
+  ],
+  "rejection_conditions": [
+    "Either consumer begins treating the Discovery census as its runtime registry, scheduling authority, target authority, or semantic source of truth.",
+    "A repository-set change cannot be detected without manually rewriting consumer-specific logic rather than refreshing one exact census binding.",
+    "The consumer adapters add more operational burden than the duplicated inventory-currentness work they remove.",
+    "A consumer cannot operate correctly when Discovery is unavailable after it has already obtained a verified census artifact.",
+    "The private attestation mechanism leaks or permits inference of the hidden consumer identity/ref.",
+    "A later exact experiment shows the two consumers need materially different census semantics rather than the same narrow count/digest/currentness invariant."
+  ],
+  "hostile_review": {
+    "status": "PASS_WITH_LIMITS",
+    "critical_objections": [
+      "The private consumer is digest-attested but not publicly independently verifiable; it cannot support PROVEN_REUSABLE under the current privacy mechanism.",
+      "The census proves repository-set observation only. It says nothing about project classification, currentness, schedulability, authority, or runtime activation.",
+      "Both consumers currently bind one Discovery-produced artifact, so Discovery could become accidental operational gravity if they require live availability instead of treating verified bytes as replaceable input.",
+      "Measured maintenance reduction has not yet been established; this experiment proves interoperable consumption, not net portfolio savings."
+    ]
+  },
+  "notes": [
+    "First real public+private consumer experiment for Discovery's portfolio census/drift mechanism.",
+    "Private consumer identity/ref remain outside this public repository; only the V1 public attestation surface is included.",
+    "PROVEN_REUSABLE remains fail-closed while any consumer is PRIVATE_OPAQUE."
+  ]
+}
