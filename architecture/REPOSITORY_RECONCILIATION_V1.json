@@ -9,7 +9,9 @@
   "proposed_candidate": {
     "sha_at_branch_creation": "250644f34bc7f0e16dc078487905ecfb8e537f02",
     "branch": "bt2/discovery-canonical-main-candidate-v1-20260920",
-    "current_exact_head": "f6cb708be5c60bf5085d43bb397b4b05cff164cc"
+    "qualified_pre_manifest_head": "f6cb708be5c60bf5085d43bb397b4b05cff164cc",
+    "current_exact_head": "EXTERNAL_GIT_READ_REQUIRED",
+    "head_binding_rule": "A committed manifest cannot truthfully self-bind its own eventual commit SHA; bind review/currentness to the live PR ref and external exact-head evidence."
   },
   "ancestry": {
     "current_stack": [
