@@ -7,13 +7,13 @@
   "consumers": [
     {
       "repo": "thebrazenbeard/project-runner",
-      "role": "durable orchestration and exact-subject execution",
-      "ref": "main@bc05812b560b4fcde3a362e72fba04c626cafac8"
+      "role": "current M6 producer of neutral GitHub mutation effect envelopes",
+      "ref": "work/discovery-effect-envelope-producer-v1-20260920@a32dc6987145c826d9ff3afe4b21eb95b1801ba9"
     },
     {
       "repo": "thebrazenbeard/wip",
-      "role": "crash recovery and ambiguous-effect reconciliation",
-      "ref": "main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+      "role": "operation-journal producer of neutral effect envelopes",
+      "ref": "work/discovery-effect-envelope-consumer-v1-20260920@b53075e44b35704ff8e20cbcf87888359f8a80ee"
     },
     {
       "repo": "thebrazenbeard/driftguard",
@@ -35,7 +35,10 @@
     "WIP HEAD schema blob 7f94e4ea2358926fb3f2bf248cd3cb7600e246cd provides generation concurrency independently of Runner lease fencing.",
     "DriftGuard R4 adapter blob 2904452b0f14a444c28a616e2e8963bab0f05ac6 maps native reload-required evaluations to PRE_EFFECT and accepted reload acknowledgements only to POST_EFFECT_UNVERIFIED.",
     "DriftGuard adapter regression blob 2e205d299d440e8d9531246b3eb8fc94fe03cf48 proves the adapter cannot promote acknowledgement to POST_EFFECT_VERIFIED and does not mutate the native ledger.",
-    "DriftGuard exact-head hosted run 35510133549 passed the adapter and full native suite on both Ubuntu and Windows."
+    "DriftGuard exact-head hosted run 35510133549 passed the adapter and full native suite on both Ubuntu and Windows.",
+    "Project Runner producer head a32dc6987145c826d9ff3afe4b21eb95b1801ba9, adapter blob 8ae6ea3810326df09e5baacf5d4727a432a6d8c9, passed hosted workflow run 35512057107.",
+    "WIP producer head b53075e44b35704ff8e20cbcf87888359f8a80ee, adapter blob fb7cd88bfe38b2c0de78133e75f28b2ac9bbf4cd, passed hosted workflow run 35511962748.",
+    "DriftGuard producer head 976f50ca391560d16ebcdcfe478df28b1cd1efca, adapter blob 2904452b0f14a444c28a616e2e8963bab0f05ac6, passed hosted workflow run 35510133549 on Ubuntu and Windows."
   ],
   "rejection_conditions": [
     "The proposed common contract requires Project Runner-specific scheduling semantics.",
@@ -57,9 +60,10 @@
     ]
   },
   "notes": [
-    "Census-derived candidate, now exercised by three public consumers.",
-    "Experiment result: THREE_CONSUMER_INTEROPERABILITY_SUPPORTED / BROAD_SHARED_STATE_MACHINE_REJECTED / REUSE_VALUE_UNMEASURED.",
-    "The Discovery V0 effect envelope schema remains byte-identical; DriftGuard required no schema extension.",
-    "See experiments/RUNNER_WIP_EFFECT_INTEGRITY_V1.md and schemas/effect_attempt_envelope_v0.schema.json."
+    "Census-derived candidate, now exercised by three exact public producer branches.",
+    "All three producers have exact-head hosted PASS at their bounded adapter scopes.",
+    "Discovery source-agnostic observer experiment is the current schema-theater falsifier.",
+    "Broad shared state machine remains rejected; net portfolio maintenance value remains unmeasured.",
+    "See experiments/RUNNER_WIP_EFFECT_INTEGRITY_V1.md, experiments/EFFECT_ENVELOPE_SCHEMA_THEATER_TEST_V1.md, and schemas/effect_attempt_envelope_v0.schema.json."
   ]
 }
