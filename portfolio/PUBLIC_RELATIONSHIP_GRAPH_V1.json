@@ -185,14 +185,17 @@
         "thebrazenbeard/transcendence:one/transcendence-integrity-manifest-runtime-parity-v1-20260919@be3785c83dbe89b0d4236b43eda97a277eb6baad"
       ],
       "falsifiers": [
-        "Exact pinned HC tree plus overlay cannot reconstruct the exact Transcendence target tree.",
-        "A later HC-base upgrade imports excluded HC semantics or requires enough conflict repair to erase the maintenance benefit.",
-        "Transcendence requires independent modification of currently shared bytes at a rate incompatible with a stable base dependency."
+        "A forward-observed HC upgrade changing inherited shared bytes creates large recurring override or qualification burden.",
+        "Transcendence future work requires frequent intentional forks of currently shared HC paths.",
+        "Pinned-base dependency or deletion-manifest mechanics increase maintenance/risk more than copied-base synchronization removes."
       ],
       "notes": [
-        "Current frontier comparison: 254 identical same-path files / 85.628625314% of Transcendence target bytes.",
-        "Current overlay payload: 34 files / 286,362 bytes / 14.371374686% of target bytes plus 39 explicit deletions.",
-        "Exact source reconstruction is being tested; dependency adoption remains unauthorized and unproven."
+        "Exact pinned HC PR #22 + explicit overlay reconstructs Transcendence PR #7 exact Git tree; Discovery PR #15 hosted PASS.",
+        "Current target overlap: 254 identical same-path files / 85.628625314% of target bytes; overlay payload 34 files / 286,362 bytes / 14.371374686%, plus 39 deletes.",
+        "HC main→PR22 simulation changes 8 of 73 current overlay instructions; payload bytes unchanged; two new HC motor-control paths are explicitly excluded.",
+        "Ten selected real HC shared-path transitions yield nine immediate overlay removals and one transient override that converges on the next real HC change.",
+        "Selection is conditioned on paths shared today and does not establish future conflict rate or original HC import lineage.",
+        "Dependency adoption remains unproven; moving-base inheritance remains rejected."
       ]
     },
     {
