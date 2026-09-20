@@ -3,7 +3,7 @@
   "candidate_id": "RUNNER_WIP_EXECUTION_INTEGRITY_V1",
   "title": "Test a narrow effect-integrity interchange across Runner, WIP, and DriftGuard",
   "status": "EXPERIMENTING",
-  "claim": "Project Runner, WIP, and DriftGuard do not support one shared execution/recovery/control state machine. Exact source experiments support a narrower hypothesis: a neutral effect-attempt envelope can preserve target/precondition binding, post-effect uncertainty, receipts/readback, and source-native state while each consumer retains its own authority, completion, recovery, and retry semantics.",
+  "claim": "Project Runner, WIP, and DriftGuard retain distinct native execution/recovery/control state machines, but exact producer experiments plus one source-agnostic Discovery observer now show that a neutral effect-attempt envelope can eliminate downstream source-specific parsing for normalized phase/retry reporting while preserving target/precondition binding, post-effect uncertainty, receipts, and native authority boundaries.",
   "consumers": [
     {
       "repo": "thebrazenbeard/project-runner",
@@ -38,7 +38,10 @@
     "DriftGuard exact-head hosted run 35510133549 passed the adapter and full native suite on both Ubuntu and Windows.",
     "Project Runner producer head a32dc6987145c826d9ff3afe4b21eb95b1801ba9, adapter blob 8ae6ea3810326df09e5baacf5d4727a432a6d8c9, passed hosted workflow run 35512057107.",
     "WIP producer head b53075e44b35704ff8e20cbcf87888359f8a80ee, adapter blob fb7cd88bfe38b2c0de78133e75f28b2ac9bbf4cd, passed hosted workflow run 35511962748.",
-    "DriftGuard producer head 976f50ca391560d16ebcdcfe478df28b1cd1efca, adapter blob 2904452b0f14a444c28a616e2e8963bab0f05ac6, passed hosted workflow run 35510133549 on Ubuntu and Windows."
+    "DriftGuard producer head 976f50ca391560d16ebcdcfe478df28b1cd1efca, adapter blob 2904452b0f14a444c28a616e2e8963bab0f05ac6, passed hosted workflow run 35510133549 on Ubuntu and Windows.",
+    "Discovery observer blob 67dd00cc1c96120151ffa4eb38dc9d3893802ada derives the V0 contract from the schema and contains no current producer-specific parser branches.",
+    "Discovery observer regression blob b484631b1e78bdc62d23ba388a54e89f7668d19e proves the same observer accepts Project Runner, WIP, DriftGuard, and an unknown future source without registration/code changes.",
+    "Discovery observer exact source head 1869424dcd8d9d53e725e1a30d5339c07903830e passed Discovery validation run 35512241403 and composed lifecycle run 35512241220."
   ],
   "rejection_conditions": [
     "The proposed common contract requires Project Runner-specific scheduling semantics.",
@@ -53,17 +56,18 @@
   "hostile_review": {
     "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "The original broad execution-integrity hypothesis remains rejected; three consumers still have materially different state machines and authority semantics.",
-      "DriftGuard proves the envelope can preserve an intermediate acknowledgement state without laundering it into verified recovery, but this is interoperability evidence rather than measured reuse value.",
-      "A generic shared library remains premature because no experiment yet measures code/operational burden removed relative to the adapters introduced.",
-      "The envelope must remain non-authoritative for retry, completion, behavioral recovery, scheduling, workspace recovery, and target authority."
+      "The broad shared execution/recovery/control state-machine hypothesis remains rejected; source-native authority and lifecycle semantics are intentionally not normalized.",
+      "One downstream observer now eliminates source-specific parsing, but the producers still own latest-event selection and native evidence construction.",
+      "Three producer adapters add maintenance surface; net portfolio maintenance reduction has not been measured against the parsing they replace.",
+      "A shared runtime library remains premature. The current evidence supports an interchange contract and one generic observer, not mandatory runtime coupling.",
+      "Future schema evolution could reintroduce adapter churn; compatibility cost needs a separate measurement before PROVEN_REUSABLE."
     ]
   },
   "notes": [
-    "Census-derived candidate, now exercised by three exact public producer branches.",
-    "All three producers have exact-head hosted PASS at their bounded adapter scopes.",
-    "Discovery source-agnostic observer experiment is the current schema-theater falsifier.",
-    "Broad shared state machine remains rejected; net portfolio maintenance value remains unmeasured.",
-    "See experiments/RUNNER_WIP_EFFECT_INTEGRITY_V1.md, experiments/EFFECT_ENVELOPE_SCHEMA_THEATER_TEST_V1.md, and schemas/effect_attempt_envelope_v0.schema.json."
+    "Three exact producer branches have hosted PASS at their bounded adapter scopes.",
+    "One exact Discovery observer has hosted PASS with no current-producer-specific parsing and accepts an unknown fourth source without code changes.",
+    "Current result: DOWNSTREAM_SOURCE_SPECIFIC_PARSING_ELIMINATED_FOR_ONE_OBSERVER / THREE_CONSUMER_INTEROPERABILITY_SUPPORTED.",
+    "Broad shared state machine remains rejected; producer-owned latest selection remains required; net portfolio maintenance value remains unmeasured.",
+    "Candidate remains EXPERIMENTING. PROVEN_REUSABLE is not justified."
   ]
 }
