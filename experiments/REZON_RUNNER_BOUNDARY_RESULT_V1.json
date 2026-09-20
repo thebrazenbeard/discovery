@@ -42,7 +42,10 @@
     "RUNNER_CAN_VERIFY_EXPORTED_SCHEMA_AND_MECHANICAL_BINDINGS_WITHOUT_IMPORTING_REZON",
     "RUNNER_CLAIM_RESULT_IS_NON_PROMOTIONAL",
     "REZON_CLAIM_DISPOSITIONS_CAN_REMAIN_OPAQUE_TO_RUNNER",
-    "REZON_REMAINS_STANDALONE"
+    "REZON_REMAINS_STANDALONE",
+    "REAL_FAILURE_PATH_INTEROP",
+    "RUNNER_PRESERVES_REZON_FAILURE_MECHANICALLY_WITHOUT_EPISTEMIC_PROMOTION",
+    "REZON_FAILURE_EXPORT_REMAINS_PLAN_ONLY"
   ],
   "not_established": [
     "REZON_TRUTH",
@@ -51,7 +54,6 @@
     "REZON_AUTHORITY",
     "RUNNER_AUTHORITY_OVER_REZON",
     "EXTERNAL_EFFECT_AUTHORIZATION",
-    "REAL_FAILURE_PATH_INTEROP",
     "NET_MAINTENANCE_REDUCTION",
     "PROVEN_REUSABLE"
   ],
@@ -65,6 +67,32 @@
       "failure": "malformed Python regression contained literal escaped newline sequences"
     }
   ],
-  "next_falsifier": "Generate a real Rezon failure-path PLAN export from exact source and verify it through the same independent Runner verifier while preserving failure semantics and non-promotional claim ceiling.",
-  "claim_ceiling": "EXPERIMENTING_REAL_MECHANICAL_INTEROP_NOT_EPISTEMIC_DELEGATION_NOT_PROVEN_REUSABLE"
+  "next_falsifier": "Measure whether this boundary removes real duplicated outer-orchestrator verification work or creates net adapter/fixture maintenance cost; do not promote reuse without an organic second consumer or measurable deleted duplication.",
+  "claim_ceiling": "EXPERIMENTING_REAL_SUCCESS_AND_FAILURE_MECHANICAL_INTEROP_NOT_EPISTEMIC_DELEGATION_NOT_PROVEN_REUSABLE",
+  "failure_path_fixture": {
+    "path": "experiments/fixtures/rezon_run_evidence_v1_failure.json",
+    "generation_subject": "thebrazenbeard/rezon@8289914ec500a1392b10fe1a3774dee166e73b40",
+    "generation_method": "DIRECT_EXACT_SOURCE_EXECUTION_PYTHON_3_11_9_NO_PACKAGE_INSTALL",
+    "evidence_digest": "2f16bda0e304620772e5c8c8368ba7de190e77b879b5862d4b53d973db28cf53",
+    "local_file_sha256": "861cfd8aca9203e7e13fc12975c524bcc8887bcc62b96517bd7cde2ef31d3c98",
+    "local_file_bytes": 1692,
+    "effect_state": "plan",
+    "receipt_failures": [
+      "contract_violation"
+    ],
+    "trace_failures": [
+      "contract_violation"
+    ],
+    "accepted_claim_ids": [],
+    "rejected_claim_ids": [],
+    "claim_disposition_complete": false,
+    "runner_verification": {
+      "subject": "thebrazenbeard/project-runner@4de0f6148b3d7d04ccdb4e0057435fa0d904590a",
+      "status": "STRUCTURALLY_VALID_NON_PROMOTIONAL",
+      "execution_count": 1,
+      "receipt_failure_count": 1,
+      "trace_failure_count": 1,
+      "source_versions": []
+    }
+  }
 }
