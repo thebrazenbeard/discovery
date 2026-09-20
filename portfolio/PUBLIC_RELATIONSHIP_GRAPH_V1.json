@@ -249,6 +249,46 @@
       "notes": [
         "Do not create a shared component from this pair alone."
       ]
+    },
+    {
+      "edge_id": "DISCOVERY_CENSUS_PROJECT_RUNNER_CONSUMER",
+      "from": "discovery",
+      "to": "project-runner",
+      "relation": "PROVIDER_CONSUMER",
+      "scope": "exact privacy-safe repository census bytes used only as portfolio drift/currentness input",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
+        "thebrazenbeard/project-runner:work/discovery-census-consumer-v1-20260920@b763c707abacc7dfe30dc451b2b42354a30e3621"
+      ],
+      "falsifiers": [
+        "Project Runner must import Discovery scheduling, authority, or project semantics to consume the census.",
+        "Project Runner requires live Discovery availability after exact census bytes have been obtained.",
+        "The binding fails to detect a changed census artifact or accepts altered bytes."
+      ],
+      "notes": [
+        "Hosted Project Runner workflow run 35509678751 succeeded on the exact consumer source."
+      ]
+    },
+    {
+      "edge_id": "DISCOVERY_CENSUS_PRIVATE_OPAQUE_CONSUMER",
+      "from": "discovery",
+      "to": "private-cohort",
+      "relation": "PROVIDER_CONSUMER",
+      "scope": "same exact census digest consumed by one opaque private runtime/source-registry subject without publishing its identity",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
+        "private-attestation:sha256:1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969"
+      ],
+      "falsifiers": [
+        "The public attestation leaks or permits practical inference of the hidden repository identity/ref.",
+        "The hidden consumer requires Discovery to own its runtime/control semantics.",
+        "The private receipt cannot be reverified in its governed private domain."
+      ],
+      "notes": [
+        "Opaque private evidence is insufficient for PROVEN_REUSABLE under V1."
+      ]
     }
   ]
 }
