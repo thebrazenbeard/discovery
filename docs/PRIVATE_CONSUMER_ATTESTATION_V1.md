@@ -15,9 +15,10 @@ The wrong repair would be to weaken exactness.
 An active private consumer is represented publicly by:
 
 - `visibility: PRIVATE_OPAQUE`;
-- an opaque handle matching `PRIVATE_OPAQUE_[A-Z0-9_-]+`;
+- an opaque handle `PRIVATE_OPAQUE_<first-16-hex-of-consumer-commitment>`, mechanically derived rather than human-named;
 - `ref: null`;
 - `private_attestation.schema = DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1`;
+- `commitment_scheme: SHA256_PRIVATE_NONCE_CANONICAL_V1`;
 - `consumer_commitment_sha256`: commitment to stable private consumer identity;
 - `subject_commitment_sha256`: commitment to the exact private source subject;
 - `receipt_sha256`: digest of the private verification receipt;
@@ -25,6 +26,8 @@ An active private consumer is represented publicly by:
 - `status: EXACT_PRIVATE_SUBJECT_ATTESTED`.
 
 The public repository does not contain the private preimages.
+
+The commitment preimages MUST be domain-separated canonical private records containing at least 128 bits of high-entropy nonce material retained only in the private governed domain. Direct unsalted hashes such as `SHA256(repository_name)` or `SHA256(repository@ref)` are forbidden because the portfolio is small enough for dictionary attacks. Consumer, subject, and receipt commitments must be distinct digests.
 
 ## What the public validator can and cannot establish
 
