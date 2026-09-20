@@ -73,12 +73,13 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
     def test_experimenting_accepts_digest_bound_private_opaque_consumer(self):
         candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
         candidate["consumers"][1] = {
-            "repo": "PRIVATE_OPAQUE_ALPHA",
+            "repo": "PRIVATE_OPAQUE_1111111111111111",
             "role": "private experimental consumer",
             "ref": None,
             "visibility": "PRIVATE_OPAQUE",
             "private_attestation": {
                 "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
                 "consumer_commitment_sha256": "1" * 64,
                 "subject_commitment_sha256": "2" * 64,
                 "receipt_sha256": "3" * 64,
@@ -97,12 +98,13 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
     def test_active_private_consumer_rejects_raw_ref_and_malformed_attestation(self):
         candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
         candidate["consumers"][1] = {
-            "repo": "PRIVATE_OPAQUE_ALPHA",
+            "repo": "PRIVATE_OPAQUE_1111111111111111",
             "role": "private experimental consumer",
             "ref": "main@" + "a" * 40,
             "visibility": "PRIVATE_OPAQUE",
             "private_attestation": {
                 "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
                 "consumer_commitment_sha256": "not-a-digest",
                 "subject_commitment_sha256": "2" * 64,
                 "receipt_sha256": "3" * 64,
@@ -127,6 +129,7 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
         candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
         attestation = {
             "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+            "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
             "consumer_commitment_sha256": "1" * 64,
             "subject_commitment_sha256": "2" * 64,
             "receipt_sha256": "3" * 64,
@@ -135,14 +138,14 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
         }
         candidate["consumers"] = [
             {
-                "repo": "PRIVATE_OPAQUE_ALPHA",
+                "repo": "PRIVATE_OPAQUE_1111111111111111",
                 "role": "private consumer one",
                 "ref": None,
                 "visibility": "PRIVATE_OPAQUE",
                 "private_attestation": copy.deepcopy(attestation),
             },
             {
-                "repo": "PRIVATE_OPAQUE_BETA",
+                "repo": "PRIVATE_OPAQUE_1111111111111111",
                 "role": "private consumer two",
                 "ref": None,
                 "visibility": "PRIVATE_OPAQUE",
@@ -158,15 +161,68 @@ class DiscoveryLifecycleGateTests(unittest.TestCase):
             failures,
         )
 
-    def test_proven_reusable_rejects_opaque_private_consumer_for_now(self):
-        candidate = proven_candidate()
+    def test_private_handle_must_match_consumer_commitment_prefix(self):
+        candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
         candidate["consumers"][1] = {
-            "repo": "PRIVATE_OPAQUE_ALPHA",
+            "repo": "PRIVATE_OPAQUE_2222222222222222",
             "role": "private experimental consumer",
             "ref": None,
             "visibility": "PRIVATE_OPAQUE",
             "private_attestation": {
                 "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
+                "consumer_commitment_sha256": "1" * 64,
+                "subject_commitment_sha256": "2" * 64,
+                "receipt_sha256": "3" * 64,
+                "verifier_class": "PRIVATE_OWNER_REGISTRY",
+                "status": "EXACT_PRIVATE_SUBJECT_ATTESTED",
+            },
+        }
+        failures = validator._validate_candidate_lifecycle(
+            candidate,
+            filename="synthetic-private.json",
+        )
+        self.assertIn(
+            "private consumer handle commitment mismatch: synthetic-private.json:1",
+            failures,
+        )
+
+    def test_private_attestation_rejects_non_domain_separated_commitments(self):
+        candidate = load_candidate("RUNNER_WIP_EXECUTION_INTEGRITY_V1.json")
+        candidate["consumers"][1] = {
+            "repo": "PRIVATE_OPAQUE_1111111111111111",
+            "role": "private experimental consumer",
+            "ref": None,
+            "visibility": "PRIVATE_OPAQUE",
+            "private_attestation": {
+                "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
+                "consumer_commitment_sha256": "1" * 64,
+                "subject_commitment_sha256": "1" * 64,
+                "receipt_sha256": "3" * 64,
+                "verifier_class": "PRIVATE_OWNER_REGISTRY",
+                "status": "EXACT_PRIVATE_SUBJECT_ATTESTED",
+            },
+        }
+        failures = validator._validate_candidate_lifecycle(
+            candidate,
+            filename="synthetic-private.json",
+        )
+        self.assertIn(
+            "private consumer commitments must be domain-separated: synthetic-private.json:1",
+            failures,
+        )
+
+    def test_proven_reusable_rejects_opaque_private_consumer_for_now(self):
+        candidate = proven_candidate()
+        candidate["consumers"][1] = {
+            "repo": "PRIVATE_OPAQUE_1111111111111111",
+            "role": "private experimental consumer",
+            "ref": None,
+            "visibility": "PRIVATE_OPAQUE",
+            "private_attestation": {
+                "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+                "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
                 "consumer_commitment_sha256": "1" * 64,
                 "subject_commitment_sha256": "2" * 64,
                 "receipt_sha256": "3" * 64,
