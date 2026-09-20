@@ -3,7 +3,7 @@
   "candidate_id": "RUNNER_WIP_EXECUTION_INTEGRITY_V1",
   "title": "Test a narrow effect-integrity interchange across Runner, WIP, and DriftGuard",
   "status": "EXPERIMENTING",
-  "claim": "Project Runner, WIP, and DriftGuard retain distinct native execution/recovery/control state machines. Exact producer experiments and two source-agnostic downstream observers show that the V0 envelope can eliminate producer-specific parsing for normalized phase/retry views, but maintenance accounting does not yet show positive net reuse value.",
+  "claim": "The V0 effect envelope has demonstrated three-producer interoperability and two source-agnostic observers, but measured maintenance value remains unproven and a portfolio search found no valid pre-existing downstream source-specific effect parser whose code can currently be removed without invading native authority or a different semantic domain.",
   "consumers": [
     {
       "repo": "thebrazenbeard/project-runner",
@@ -57,18 +57,18 @@
     "status": "PASS_WITH_LIMITS",
     "critical_objections": [
       "The broad shared execution/recovery/control state-machine hypothesis remains rejected.",
-      "Two observers demonstrate source-agnostic parsing, but producer-native latest selection, evidence construction, authority, and recovery semantics remain outside the contract.",
-      "Measured introduced surface is 1,095 core physical lines plus 804 test lines when counting three adapters, two observers, canonical schema, and one private exact schema copy.",
-      "Actual pre-existing source-specific parser LOC deleted is zero; six producer-specific integrations are avoided future work, not demonstrated code removal.",
-      "Positive net maintenance reduction is therefore not established and a shared runtime library remains unjustified."
+      "Two observers demonstrate source-agnostic parsing, but actual pre-existing parser LOC removed remains zero.",
+      "The search for a real existing parser replacement target found only native authority paths or different semantic domains such as provider currentness/projection reconciliation.",
+      "Replacing Project Runner recovery or BT2 BugOps native state with V0 would improperly promote an interchange vocabulary into execution/retry/closure authority.",
+      "Further centralization has no current evidence basis; the experiment should remain dormant until an organic downstream parser can be measurably replaced."
     ]
   },
   "notes": [
     "Three exact producer branches have hosted PASS at their bounded adapter scopes.",
-    "Public Discovery observer has exact-head hosted PASS with no current-producer-specific parsing.",
-    "A second independent private observer is present under a privacy-safe attestation; source behavior check PASS, hosted CI NOT_EXECUTED.",
-    "Current result: TWO_OBSERVER_SOURCE_AGNOSTIC_PARSING_DEMONSTRATED / ECONOMIC_REUSE_VALUE_UNPROVEN.",
-    "Measured burden: 1,095 core physical lines + 804 test lines; actual parser LOC deleted: 0; producer-specific integrations avoided: 6.",
-    "Candidate remains EXPERIMENTING. PROVEN_REUSABLE and shared-runtime-library promotion are not justified."
+    "Two independent source-agnostic observers have been demonstrated; the second remains source-pass / hosted-not-executed.",
+    "Measured burden remains 1,095 core physical lines + 804 test lines, with zero actual pre-existing parser LOC deleted.",
+    "NO_CURRENT_EXISTING_PARSER_REPLACEMENT_TARGET_FOUND.",
+    "Current disposition: STOP_EFFECT_ENVELOPE_CENTRALIZATION_PENDING_ORGANIC_REPLACEMENT_TARGET.",
+    "Candidate remains EXPERIMENTING; PROVEN_REUSABLE and shared-runtime-library promotion remain unjustified."
   ]
 }
