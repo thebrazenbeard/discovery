@@ -1,0 +1,114 @@
+{
+  "schema": "DISCOVERY_REPOSITORY_RECONCILIATION_V1",
+  "status": "DRAFT_CANONICALIZATION_CANDIDATE_NO_MERGE_AUTHORITY",
+  "generated_date": "2026-09-20",
+  "current_main": {
+    "sha": "96e6f8e9c776047f9068c897eab0406324187166",
+    "meaning": "initial commit only"
+  },
+  "proposed_candidate": {
+    "sha_at_branch_creation": "250644f34bc7f0e16dc078487905ecfb8e537f02",
+    "branch": "bt2/discovery-canonical-main-candidate-v1-20260920"
+  },
+  "ancestry": {
+    "current_stack": [
+      1,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "superseded_or_historical": [
+      {
+        "pr": 2,
+        "classification": "SUPERSEDED_BY_8",
+        "reason": "older lifecycle validator branch based on stale PR1 head"
+      },
+      {
+        "pr": 3,
+        "classification": "SUPERSEDED_BY_8",
+        "reason": "parallel lifecycle hardening based on stale PR1 head; composition absorbed by current-base successor"
+      },
+      {
+        "pr": 7,
+        "classification": "SUPERSEDED_BY_8",
+        "reason": "lifecycle gate source branch; PR8 explicitly composes reviewed gate onto current PR1 source"
+      },
+      {
+        "pr": 18,
+        "classification": "FAILED_PRESERVED_EVIDENCE_SUPERSEDED_BY_17_CURRENT",
+        "reason": "diverged from old PR17 head 28810a2; current PR17 integrates failure-path evidence. PR18 result artifact still says REAL_FAILURE_PATH_INTEROP not established while candidate prose claims it."
+      }
+    ]
+  },
+  "exact_evidence": {
+    "main_to_pr17": {
+      "status": "ahead",
+      "ahead_by": 79,
+      "behind_by": 0
+    },
+    "pr8_to_pr17": {
+      "status": "ahead",
+      "ahead_by": 64,
+      "behind_by": 0
+    },
+    "pr1_to_pr17": {
+      "status": "ahead",
+      "ahead_by": 69,
+      "behind_by": 0
+    },
+    "pr18_to_pr17": {
+      "status": "diverged",
+      "merge_base": "28810a2e63edb40af25f977fb0595c6a88458a75",
+      "pr17_ahead_by": 7,
+      "pr17_behind_by": 5
+    },
+    "hosted_ci": [
+      {
+        "run_id": 35520628840,
+        "name": "Discovery validation",
+        "conclusion": "success",
+        "subject": "250644f34bc7f0e16dc078487905ecfb8e537f02"
+      },
+      {
+        "run_id": 35520628866,
+        "name": "Discovery composed lifecycle validation",
+        "conclusion": "success",
+        "subject": "250644f34bc7f0e16dc078487905ecfb8e537f02"
+      }
+    ]
+  },
+  "proposed_pr_dispositions": {
+    "1": "CURRENT_STACK_DEPENDENCY",
+    "2": "SUPERSEDED_BY_8",
+    "3": "SUPERSEDED_BY_8",
+    "7": "SUPERSEDED_BY_8",
+    "8": "CURRENT_STACK_DEPENDENCY",
+    "9": "CURRENT_STACK_DEPENDENCY",
+    "10": "CURRENT_STACK_DEPENDENCY",
+    "11": "CURRENT_STACK_DEPENDENCY",
+    "12": "CURRENT_STACK_DEPENDENCY",
+    "13": "CURRENT_STACK_DEPENDENCY",
+    "14": "CURRENT_STACK_DEPENDENCY",
+    "15": "CURRENT_STACK_DEPENDENCY",
+    "16": "CURRENT_STACK_DEPENDENCY",
+    "17": "CURRENT_CANDIDATE",
+    "18": "FAILED_PRESERVED_EVIDENCE_SUPERSEDED_BY_17_CURRENT"
+  },
+  "canonicalization_effect_if_authorized_later": [
+    "Merge one consolidation subject instead of individually merging the historical stack.",
+    "After exact canonical verification, older stack PRs become closure candidates with explicit supersession pointers.",
+    "PR18 remains preserved as failed/divergent evidence and should not be represented as having merged."
+  ],
+  "unresolved": [
+    "Independent BT2 local execution on consolidation head pending.",
+    "Privacy issue #6 remains active and must not be erased by canonicalization.",
+    "No protected merge/closure effect is authorized."
+  ]
+}
