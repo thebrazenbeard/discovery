@@ -143,19 +143,19 @@
       "evidence_state": "EXPERIMENTING",
       "source_refs": [
         "thebrazenbeard/rezon:radar/r51-failure-summary-binding-20260919@8289914ec500a1392b10fe1a3774dee166e73b40",
-        "thebrazenbeard/project-runner:work/discovery-rezon-evidence-verifier-v1-20260920@4de0f6148b3d7d04ccdb4e0057435fa0d904590a"
+        "thebrazenbeard/project-runner:work/discovery-rezon-failure-evidence-v1-20260920@b48e2a19fa9e26eac233d1813ee04346e96b68a7"
       ],
       "falsifiers": [
-        "Runner must interpret Rezon accepted/rejected/unresolved claims or admission semantics to verify evidence.",
-        "Runner structural PASS is treated as Rezon truth, qualification, or external-effect authorization.",
-        "A real Rezon failure-path export cannot be mechanically preserved through the same boundary.",
+        "Runner must interpret Rezon accepted/rejected/unresolved claims or failure meanings to verify evidence.",
+        "Runner structural PASS is treated as Rezon truth, qualification, completion, or external-effect authorization.",
+        "A future Rezon schema revision cannot remain mechanically versioned without importing domain semantics into Runner.",
         "Rezon loses viable standalone evidence export/validation without Runner."
       ],
       "notes": [
-        "Real Rezon R51 deterministic evidence export consumed by independent Runner verifier.",
-        "Runner exact hosted workflow 35517367117: 222/222 tests PASS plus registry/restart validation.",
-        "Rezon exact R51 locally rechecked under Python 3.12: 10/10 focused and 275/275 full PASS; no hosted exact-head CI is claimed.",
-        "Current experiment is mechanical evidence verification only; it does not delegate Rezon reasoning or admission."
+        "Real Rezon R51 success and contract-violation failure exports both pass one unchanged independent Runner verifier.",
+        "Runner failure-path exact hosted run 35517665284: 228/228 tests PASS plus registry/restart validation.",
+        "Production verifier blob d7827dec743e69fff7f981d91d7a86f6cd4a4839 is unchanged across both experiments.",
+        "Boundary remains mechanical verification only; Rezon epistemic and failure semantics remain source-owned."
       ]
     },
     {
