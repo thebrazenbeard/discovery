@@ -1,0 +1,51 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "RUNNER_WIP_EXECUTION_INTEGRITY_V1",
+  "title": "Extract shared execution-integrity mechanics without merging orchestration and recovery semantics",
+  "status": "EXPERIMENTING",
+  "claim": "Project Runner and WIP do not support one shared execution/recovery state machine. Exact schema comparison supports a narrower hypothesis: a neutral effect-integrity envelope may be reusable for target/precondition binding, post-effect ambiguity, readback evidence, and reconcile-before-retry while Runner retains orchestration/lease/budget semantics and WIP retains workspace/checkpoint/recovery semantics.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/project-runner",
+      "role": "durable orchestration and exact-subject execution",
+      "ref": "main@bc05812b560b4fcde3a362e72fba04c626cafac8"
+    },
+    {
+      "repo": "thebrazenbeard/wip",
+      "role": "crash recovery and ambiguous-effect reconciliation",
+      "ref": "main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+    }
+  ],
+  "preserved_boundaries": [
+    "Project Runner remains owner of work graph, dispatch, budgets, backend capability, target authority, leases, and completion semantics.",
+    "WIP remains owner of workspace recovery cadence, checkpoint history, continuation surfaces, and ambiguous-effect recovery workflow.",
+    "A shared contract may define mechanical fields/states but may not make either repository authoritative over the other."
+  ],
+  "promotion_evidence": [
+    "Project Runner work-unit schema blob 65fd4f1af1812c280cbec0726a55b61b6ff02e76 defines execution status independently from WIP operation events.",
+    "Project Runner GitHub backend blob 833915398626c091a5df1dcc96504a7a12e7325f binds expected head/blob preconditions and post-write readback.",
+    "Project Runner verification blob e4f0453404013cbfe26882ea4805ae2fb3ce25aa uses VERIFYING, COMPLETE, OUTCOME_UNKNOWN, and SUPERSEDED after backend execution.",
+    "WIP operation-event schema blob 66f9b5103e9ecc114feb9cb8fa6cebdc34082c2d defines PREPARED, ATTEMPTED, VERIFIED, FAILED, AMBIGUOUS, and RECONCILED with expected precondition and effect receipt.",
+    "WIP HEAD schema blob 7f94e4ea2358926fb3f2bf248cd3cb7600e246cd provides generation concurrency independently of Runner lease fencing."
+  ],
+  "rejection_conditions": [
+    "The proposed common contract requires Project Runner-specific scheduling semantics.",
+    "The proposed common contract requires WIP-specific workspace/checkpoint lifecycle semantics.",
+    "Adapters needed to share the contract exceed the duplicated implementation removed.",
+    "A common state vocabulary creates ambiguity between execution completion and recovery reconciliation.",
+    "Either project loses a viable standalone path."
+  ],
+  "hostile_review": {
+    "status": "PASS_WITH_LIMITS",
+    "critical_objections": [
+      "The initial 'execution integrity' label was too broad: lease/fencing and workspace recovery solve different failure domains.",
+      "A generic library is still premature; the current evidence supports only an interchange envelope experiment.",
+      "The envelope must preserve source-native state and permit standalone operation or it will become semantic compression."
+    ]
+  },
+  "notes": [
+    "Census-derived candidate.",
+    "Experiment result so far: PARTIAL_SUPPORT_NARROWED; full shared state machine rejected, small effect-integrity envelope remains live.",
+    "See experiments/RUNNER_WIP_EFFECT_INTEGRITY_V1.md and schemas/effect_attempt_envelope_v0.schema.json."
+  ]
+}

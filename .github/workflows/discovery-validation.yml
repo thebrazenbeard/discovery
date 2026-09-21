@@ -1,0 +1,41 @@
+name: Discovery validation
+
+on:
+  pull_request:
+    paths:
+      - "candidates/**"
+      - "docs/**"
+      - "portfolio/**"
+      - "schemas/**"
+      - "tools/**"
+      - "tests/**"
+      - ".github/workflows/discovery-validation.yml"
+  push:
+    branches:
+      - "vera/discovery-shared-substrate-v1"
+    paths:
+      - "candidates/**"
+      - "docs/**"
+      - "portfolio/**"
+      - "schemas/**"
+      - "tools/**"
+      - "tests/**"
+      - ".github/workflows/discovery-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+      - name: Validate Discovery source
+        run: python tools/validate_discovery.py
+      - name: Run Discovery regressions
+        run: python -m unittest discover -s tests -v
+      - name: Compile Discovery Python
+        run: python -m compileall -q tools tests

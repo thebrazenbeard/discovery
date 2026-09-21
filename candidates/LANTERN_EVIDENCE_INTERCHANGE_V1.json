@@ -1,12 +1,12 @@
 {
   "schema_version": "DISCOVERY_CANDIDATE_V1",
-  "candidate_id": "LANTERN_EVIDENCE_INTERCHANGE_V1",
+  "candidate_id": "EVIDENCE_CUSTODY_INTERCHANGE_V1",
   "title": "Reusable evidence custody and interchange without a global truth database",
   "status": "HYPOTHESIS",
-  "claim": "Project Lantern may provide narrow reusable evidence-record and custody mechanics to independent projects while each project retains its own database, semantics, privacy boundary, and authority.",
+  "claim": "A private portfolio evidence-custody implementation may provide narrow reusable evidence-record and custody mechanics to independent projects while each project retains its own database, semantics, privacy boundary, and authority.",
   "consumers": [
     {
-      "repo": "thebrazenbeard/project-lantern",
+      "repo": "PRIVATE_EVIDENCE_CUSTODY_SYSTEM",
       "role": "candidate evidence custody/interchange implementation",
       "ref": null
     },
@@ -36,6 +36,7 @@
     ]
   },
   "notes": [
-    "The first task is to make Lantern itself a truthful, installable package before judging reuse."
+    "The private implementation identity is intentionally not published by this public repository.",
+    "The first task is to make the candidate custody implementation a truthful, installable package before judging reuse."
   ]
 }
