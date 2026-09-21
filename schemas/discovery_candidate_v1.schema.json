@@ -130,10 +130,7 @@
       "if": {
         "properties": {
           "status": {
-            "enum": [
-              "EXPERIMENTING",
-              "PROVEN_REUSABLE"
-            ]
+            "const": "PROVEN_REUSABLE"
           }
         },
         "required": [
@@ -147,7 +144,7 @@
               "properties": {
                 "ref": {
                   "type": "string",
-                  "pattern": "^(?:[0-9a-f]{40}|[^@\\s]+@[0-9a-f]{40})$"
+                  "pattern": "^[0-9a-f]{40}$"
                 }
               },
               "required": [
@@ -156,42 +153,15 @@
             }
           },
           "promotion_evidence": {
-            "minItems": 1
-          },
-          "hostile_review": {
-            "properties": {
-              "status": {
-                "enum": [
-                  "FAIL",
-                  "PASS_WITH_LIMITS",
-                  "PASS"
-                ]
-              }
-            }
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "status": {
-            "const": "PROVEN_REUSABLE"
-          }
-        },
-        "required": [
-          "status"
-        ]
-      },
-      "then": {
-        "properties": {
-          "promotion_evidence": {
             "minItems": 2
           },
           "hostile_review": {
             "properties": {
               "status": {
-                "const": "PASS"
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_LIMITS"
+                ]
               },
               "critical_objections": {
                 "maxItems": 0
