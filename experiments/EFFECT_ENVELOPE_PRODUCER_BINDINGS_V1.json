@@ -1,0 +1,56 @@
+{
+  "schema": "DISCOVERY_EFFECT_PRODUCER_BINDINGS_V1",
+  "contract": {
+    "path": "schemas/effect_attempt_envelope_v0.schema.json",
+    "git_blob_sha1": "b5d85ba31a33ad7192fd4a08934628a72e593312",
+    "status": "EXPERIMENTAL_INTERCHANGE_ONLY_NOT_RUNTIME_AUTHORITY"
+  },
+  "producers": [
+    {
+      "producer_id": "project-runner",
+      "repository": "thebrazenbeard/project-runner",
+      "pull_request": 24,
+      "exact_ref": "work/discovery-effect-envelope-producer-v1-20260920@a32dc6987145c826d9ff3afe4b21eb95b1801ba9",
+      "adapter_path": "runner/discovery_effect.py",
+      "adapter_git_blob_sha1": "8ae6ea3810326df09e5baacf5d4727a432a6d8c9",
+      "regression_path": "tests/unit/test_discovery_effect.py",
+      "regression_git_blob_sha1": "e9452bf41833630c13e1e53ba5238e1979c28b31",
+      "hosted_run_id": 35512057107,
+      "hosted_conclusion": "SUCCESS",
+      "boundary": "NATIVE_COMPLETE_REQUIRED_FOR_POST_EFFECT_VERIFIED"
+    },
+    {
+      "producer_id": "wip",
+      "repository": "thebrazenbeard/wip",
+      "pull_request": 2,
+      "exact_ref": "work/discovery-effect-envelope-consumer-v1-20260920@b53075e44b35704ff8e20cbcf87888359f8a80ee",
+      "adapter_path": "tools/discovery_effect.py",
+      "adapter_git_blob_sha1": "fb7cd88bfe38b2c0de78133e75f28b2ac9bbf4cd",
+      "regression_path": "tests/test_discovery_effect.py",
+      "regression_git_blob_sha1": "0d69712378371b949b66b132861cc0c754723a93",
+      "hosted_run_id": 35511962748,
+      "hosted_conclusion": "SUCCESS",
+      "boundary": "WIP_NATIVE_EFFECT_RECEIPTS_AND_RECOVERY_SEMANTICS_REMAIN_AUTHORITATIVE"
+    },
+    {
+      "producer_id": "driftguard",
+      "repository": "thebrazenbeard/driftguard",
+      "pull_request": 4,
+      "exact_ref": "work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
+      "adapter_path": "src/driftguard/discovery_effect.py",
+      "adapter_git_blob_sha1": "2904452b0f14a444c28a616e2e8963bab0f05ac6",
+      "regression_path": "tests/test_discovery_effect_adapter.py",
+      "regression_git_blob_sha1": "2e205d299d440e8d9531246b3eb8fc94fe03cf48",
+      "hosted_run_id": 35510133549,
+      "hosted_conclusion": "SUCCESS_UBUNTU_AND_WINDOWS",
+      "boundary": "RELOAD_ACKNOWLEDGEMENT_REMAINS_POST_EFFECT_UNVERIFIED"
+    }
+  ],
+  "observer_contract": {
+    "latest_selection_owner": "PRODUCER",
+    "source_state_interpretation": "FORBIDDEN",
+    "source_system_branching": "FORBIDDEN",
+    "authority": "OBSERVATIONAL_ONLY"
+  },
+  "claim_ceiling": "THREE_EXACT_PRODUCERS_QUALIFIED_FOR_SOURCE_AGNOSTIC_OBSERVER_EXPERIMENT_NOT_PROVEN_REUSABLE"
+}

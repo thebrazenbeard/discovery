@@ -1,0 +1,130 @@
+{
+  "schema": "DISCOVERY_EFFECT_ENVELOPE_MAINTENANCE_ACCOUNTING_V1",
+  "status": "MEASURED_BURDEN / SECOND_OBSERVER_PRESENT / ECONOMIC_VALUE_NOT_ESTABLISHED",
+  "measured_at": "2026-09-20",
+  "contract": {
+    "path": "schemas/effect_attempt_envelope_v0.schema.json",
+    "git_blob_sha1": "b5d85ba31a33ad7192fd4a08934628a72e593312",
+    "physical_lines": 72
+  },
+  "producer_adapters": {
+    "count": 3,
+    "totals": {
+      "physical_lines": 501,
+      "nonblank_lines": 438,
+      "branch_lines": 49
+    },
+    "subjects": [
+      {
+        "producer": "project-runner",
+        "adapter_blob_sha1": "8ae6ea3810326df09e5baacf5d4727a432a6d8c9",
+        "physical_lines": 177,
+        "nonblank_lines": 154,
+        "branch_lines": 15,
+        "hosted_run_id": 35512057107,
+        "hosted_result": "SUCCESS"
+      },
+      {
+        "producer": "wip",
+        "adapter_blob_sha1": "fb7cd88bfe38b2c0de78133e75f28b2ac9bbf4cd",
+        "physical_lines": 138,
+        "nonblank_lines": 119,
+        "branch_lines": 24,
+        "hosted_run_id": 35511962748,
+        "hosted_result": "SUCCESS"
+      },
+      {
+        "producer": "driftguard",
+        "adapter_blob_sha1": "2904452b0f14a444c28a616e2e8963bab0f05ac6",
+        "physical_lines": 186,
+        "nonblank_lines": 165,
+        "branch_lines": 10,
+        "hosted_run_id": 35510133549,
+        "hosted_result": "SUCCESS_UBUNTU_AND_WINDOWS"
+      }
+    ]
+  },
+  "observers": {
+    "count": 2,
+    "totals": {
+      "physical_lines": 450,
+      "nonblank_lines": 384,
+      "branch_lines": 46
+    },
+    "public_discovery_observer": {
+      "implementation_blob_sha1": "67dd00cc1c96120151ffa4eb38dc9d3893802ada",
+      "regression_blob_sha1": "b484631b1e78bdc62d23ba388a54e89f7668d19e",
+      "physical_lines": 234,
+      "nonblank_lines": 199,
+      "branch_lines": 23,
+      "exact_head": "bf0fc4fb96e27a65da8d26293c29ebeeffc10b64",
+      "hosted_runs": [
+        {
+          "id": 35512300335,
+          "result": "SUCCESS"
+        },
+        {
+          "id": 35512300356,
+          "result": "SUCCESS"
+        }
+      ],
+      "source_specific_parser_branches": 0,
+      "unknown_future_source_without_registration": true
+    },
+    "private_second_observer": {
+      "public_attestation": {
+        "opaque_handle": "PRIVATE_OPAQUE_18f99857cf7f2beb",
+        "schema": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1",
+        "commitment_scheme": "SHA256_PRIVATE_NONCE_CANONICAL_V1",
+        "consumer_commitment_sha256": "18f99857cf7f2bebcbc94921c741784344d89e944bbcc8a8980a2ab7e7ba82ad",
+        "subject_commitment_sha256": "5ceed353b05144f9a754b747c9e34ff18829ac2de7aaf5b41f7493be10ecf31e",
+        "receipt_sha256": "ed2f5146620dfd5623b1caa805976afc414e2aad34aa7ac25510cee0a50b60e8",
+        "verifier_class": "PRIVATE_OWNER_REGISTRY",
+        "status": "EXACT_PRIVATE_SUBJECT_ATTESTED"
+      },
+      "physical_lines": 216,
+      "nonblank_lines": 185,
+      "branch_lines": 23,
+      "source_behavior_check": "PASS",
+      "hosted_ci": "NOT_EXECUTED",
+      "source_specific_parser_branches": 0,
+      "unknown_future_source_without_registration": true
+    }
+  },
+  "schema_distribution": {
+    "canonical_copies": 1,
+    "private_exact_vendored_copies": 1,
+    "private_copy_physical_lines": 72,
+    "private_copy_git_blob_sha1": "b5d85ba31a33ad7192fd4a08934628a72e593312",
+    "synchronization_burden": "PRESENT_ONE_PRIVATE_PINNED_COPY"
+  },
+  "tests": {
+    "files": 5,
+    "physical_lines": 804,
+    "nonblank_lines": 707,
+    "branch_lines": 9
+  },
+  "total_introduced_surface": {
+    "core_physical_lines_including_private_schema_copy": 1095,
+    "core_nonblank_lines_including_private_schema_copy": 966,
+    "core_branch_lines": 95,
+    "physical_lines_including_tests": 1899,
+    "nonblank_lines_including_tests": 1673,
+    "branch_lines_including_tests": 104
+  },
+  "measured_benefit": {
+    "actual_preexisting_source_specific_parser_lines_deleted": 0,
+    "actual_preexisting_source_specific_parser_files_deleted": 0,
+    "current_producer_specific_parser_integrations_avoided": 6,
+    "derivation": "3 qualified producer classes x 2 source-agnostic observers",
+    "future_unknown_producer_registration_changes_required_by_observers": 0,
+    "classification": "AVOIDED_FUTURE_INTEGRATION_SURFACE_NOT_ACTUAL_CODE_REMOVAL"
+  },
+  "economic_result": {
+    "positive_net_maintenance_reduction_established": false,
+    "reason": "The experiment proves two source-agnostic observers and six avoided producer-specific integrations, but it introduced 1,095 core physical lines plus 804 test lines and removed zero pre-existing parser lines. Avoided future work is real but not yet sufficient evidence of positive net maintenance value.",
+    "disposition": "REMAIN_EXPERIMENTING_DO_NOT_PROMOTE_PROVEN_REUSABLE",
+    "shared_runtime_library": "NOT_JUSTIFIED"
+  },
+  "claim_ceiling": "INTEROPERABILITY_AND_TWO_OBSERVER_PARSER_REUSE_DEMONSTRATED / ECONOMIC_REUSE_VALUE_UNPROVEN"
+}

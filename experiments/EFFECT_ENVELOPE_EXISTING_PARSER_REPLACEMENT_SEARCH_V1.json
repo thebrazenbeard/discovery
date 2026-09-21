@@ -1,0 +1,101 @@
+{
+  "schema": "DISCOVERY_EFFECT_EXISTING_PARSER_REPLACEMENT_SEARCH_V1",
+  "status": "NO_VALID_EXISTING_REPLACEMENT_TARGET_FOUND",
+  "observed_at": "2026-09-20",
+  "search_scope": {
+    "owner": "thebrazenbeard",
+    "repository_inventory_basis": "57-repository Discovery census plus current active Discovery/Vera/Project Runner work heads",
+    "current_default_heads": {
+      "chat-communication-bus": "aeab0f04fc9b4bd7c2945c9a53011c53fac809b4",
+      "bt2": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "project-runner": "bc05812b560b4fcde3a362e72fba04c626cafac8",
+      "vera": "b7b8dcd1440a3b7147bec2cc35972f083e20f44a"
+    },
+    "active_heads_examined": {
+      "project-runner-pr22": "bee7e720ba923ef38ce87fca4c9c2560163a9360",
+      "discovery-pr13": "26c57e60312abe13f3d82ed778a1286294c8920b"
+    },
+    "search_families": [
+      "native effect-state vocabulary consumers",
+      "OUTCOME_UNKNOWN / AMBIGUOUS / RECONCILED / acknowledgement consumers",
+      "source/provider/backend conditional parsing",
+      "operator/report/status/audit/recovery surfaces",
+      "GitHub/Supabase and multi-provider result interpretation"
+    ]
+  },
+  "admissibility_rule": {
+    "required": [
+      "PRE_EXISTING_BEFORE_DISCOVERY_V0_EXPERIMENT",
+      "DOWNSTREAM_OR_OBSERVATIONAL_NOT_NATIVE_EFFECT_AUTHORITY",
+      "SOURCE_SPECIFIC_EFFECT_OR_OUTCOME_PARSING_PRESENT",
+      "V0_CAN_REPLACE_PARSING_WITHOUT_LOSS_OF_NATIVE_SEMANTICS",
+      "ACTUAL_CODE_REMOVAL_CAN_BE_MEASURED"
+    ],
+    "rejection_if_any": [
+      "NATIVE_RETRY_OR_RECOVERY_AUTHORITY",
+      "NATIVE_COMPLETION_OR_VERIFICATION_AUTHORITY",
+      "DIFFERENT_SEMANTIC_DOMAIN_SUCH_AS_CURRENTNESS_OR_PROJECTION",
+      "NO_SOURCE_SPECIFIC_EFFECT_PARSER_PRESENT",
+      "REPLACEMENT_WOULD_CREATE_NEW_RUNTIME_DEPENDENCY_OR_AUTHORITY"
+    ]
+  },
+  "examined_candidates": [
+    {
+      "candidate": "Project Runner recovery",
+      "exact_subject": "work/exodus-current-m6-discovery-v1-20260919@bee7e720ba923ef38ce87fca4c9c2560163a9360",
+      "path": "runner/recovery.py",
+      "git_blob_sha1": "b03c1ab698fe7e6352870d6132e11b9bfa689bab",
+      "disposition": "REJECT_NATIVE_AUTHORITY",
+      "reason": "The phase branches decide recovery action, fence-sensitive terminalization, reconciliation, and retry eligibility. They are source-native execution authority, not downstream parsing."
+    },
+    {
+      "candidate": "BT2 BugOps operation lifecycle",
+      "exact_subject": "main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "paths": [
+        "database/migrations/0007_bugops_convergence_corrections_v1.sql",
+        "database/migrations/0008_bugops_report_runtime_qualification_fix_v1.sql",
+        "database/migrations/0009_bugops_nested_queue_result_qualification_v1.sql",
+        "database/migrations/0010_bugops_status_closure_scalar_fix_v1.sql"
+      ],
+      "git_blob_sha1s": [
+        "09babc9bf744ed0be2a76c725db02ee990e48113",
+        "2f16168a85c4ae6a810fe162c2a8b01040ce3846",
+        "4330e4368af07381a1523303c889929f19b4bdff",
+        "fd0a48c0eea08a71bf2da98602366b22c2d9567f"
+      ],
+      "disposition": "REJECT_NATIVE_AUTHORITY",
+      "reason": "PREPARED/ATTEMPTED/VERIFIED and closure branches are the canonical BT2 operation/bug state machine and mutate authoritative database state. V0 may observe them later but must not replace them."
+    },
+    {
+      "candidate": "Radar operator GitHub/provider reconciliation",
+      "exact_subject": "main@aeab0f04fc9b4bd7c2945c9a53011c53fac809b4",
+      "path": "src/radar/operator.py",
+      "git_blob_sha1": "baed08db2e7c875010f72c4b6db57d6b7878f392",
+      "disposition": "REJECT_DIFFERENT_SEMANTIC_DOMAIN",
+      "reason": "The operator delegates exact GitHub-versus-provider state comparison to the reconciler. That is projection/currentness reconciliation, not effect-outcome parsing."
+    },
+    {
+      "candidate": "Vera provider/currentness reconciliation and audit",
+      "exact_subject": "main@b7b8dcd1440a3b7147bec2cc35972f083e20f44a",
+      "disposition": "REJECT_DIFFERENT_SEMANTIC_DOMAIN",
+      "reason": "Cohesion reconciliation/audit compares evidence, revisions, receipts, authority, and provider projection currentness. It is generic provider evidence logic rather than producer-specific effect parsing; replacing it with V0 would collapse distinct evidence semantics."
+    }
+  ],
+  "literal_state_search_result": {
+    "cross_repository_consumers_of_current_three_producer_native_vocabularies": "NONE_FOUND_OUTSIDE_NATIVE_OR_EXPERIMENTAL_SURFACES",
+    "notes": [
+      "No valid pre-existing downstream consumer was found that branches on Project Runner, WIP, and/or DriftGuard native effect vocabularies and can be replaced by V0 without changing authority semantics.",
+      "Matches for OUTCOME_UNKNOWN, AMBIGUOUS, provider/source conditionals, and reconciliation predominantly belong to native execution, provider-currentness, transport, or evidence domains."
+    ]
+  },
+  "result": {
+    "actual_parser_replacement_target_exists": false,
+    "actual_removable_parser_lines_identified": 0,
+    "additional_centralization_authorized_by_evidence": false,
+    "disposition": "STOP_EFFECT_ENVELOPE_CENTRALIZATION_PENDING_ORGANIC_REPLACEMENT_TARGET",
+    "candidate_status": "EXPERIMENTING",
+    "proven_reusable": "NOT_ESTABLISHED",
+    "shared_runtime_library": "NOT_JUSTIFIED"
+  },
+  "next_trigger": "Reopen this frontier only when a real pre-existing downstream workflow contains source-specific effect/outcome parsing that V0 can replace with measurable deletion while preserving producer-native authority."
+}

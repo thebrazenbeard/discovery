@@ -1,0 +1,62 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "HC_TRANSCENDENCE_OVERLAY_V1",
+  "title": "Reconstruct Transcendence as exact HC base plus overlay",
+  "status": "EXPERIMENTING",
+  "claim": "Current Transcendence can be reconstructed exactly from a pinned HC base plus an explicit overlay. One real HC main→PR22 base upgrade has low overlay churn, and a bounded replay of ten real HC shared-path transitions shows mostly convergent behavior, but future maintenance economics and unbiased conflict rates remain unproven.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/hc-brain",
+      "role": "pinned candidate base bytes only; no downstream semantic authority",
+      "ref": "noah/kinesis-runtime-v1@5929da3e8904e23e484df0deac920a008ec33d52"
+    },
+    {
+      "repo": "thebrazenbeard/transcendence",
+      "role": "exact target and independently owned research overlay",
+      "ref": "one/transcendence-integrity-manifest-runtime-parity-v1-20260919@be3785c83dbe89b0d4236b43eda97a277eb6baad"
+    }
+  ],
+  "preserved_boundaries": [
+    "Transcendence-specific BCI, continuity, human-state archive, privacy, threat-model, and experimental material remains independently owned.",
+    "Historical provenance is not rewritten.",
+    "No duplicated file is removed and no repository dependency is created by the experiment.",
+    "The HC base is an exact pinned byte subject, not a moving branch or semantic authority.",
+    "HC-only paths are explicit deletions; later HC cognitive/runtime features do not silently enter Transcendence."
+  ],
+  "promotion_evidence": [
+    "Stable main↔main comparison: 255 of 263 Transcendence files are identical at the same paths, accounting for 1,718,257 of 1,802,005 target bytes (95.352510121%).",
+    "Current HC PR #22 ↔ Transcendence PR #7 comparison: 254 of 288 Transcendence files are identical at the same paths, accounting for 1,706,224 of 1,992,586 target bytes (85.628625314%).",
+    "Current exact overlay payload is 34 files / 286,362 bytes (14.371374686% of target bytes), plus 39 explicit deletions.",
+    "Complete path/mode/blob snapshots and an executable recursive Git-tree reconstruction validator are staged in this exact Discovery successor.",
+    "Discovery PR #15 exact head b1e915dc4cab9a2ef32c8dd4eff8d153a1fd82a5 passed hosted runs 35514694846 and 35514694861; recursive Git hashing proved exact pinned-base-plus-overlay reconstruction to Transcendence tree 112a44d8042556b87f19b3dac05ec34a5ea2f796.",
+    "HC main 618245b54fb923c7a204892c6953ab6d1c5dac57 → HC PR #22 5929da3e8904e23e484df0deac920a008ec33d52 changes 8 overlay instructions; payload stays 34 files / 286,362 bytes; two new motor-control paths become explicit deletions.",
+    "In the first real base-upgrade simulation, 65 of 73 current overlay instructions remain unchanged and no currently shared inherited Transcendence path is touched.",
+    "Ten selected real HC historical transitions on paths shared at the current frontier remove nine overlay instructions; one executed-dataflow transition creates a transient override that disappears on the next real HC modification."
+  ],
+  "rejection_conditions": [
+    "A future HC upgrade that changes currently inherited shared bytes produces large recurring override/review/qualification burden.",
+    "A forward-observed sequence shows Transcendence frequently diverges intentionally from HC on currently shared base paths.",
+    "The dependency materially increases failure, migration, qualification, or provenance risk.",
+    "A dependency implementation cannot preserve an exact pinned base, explicit deletion manifest, and standalone reconstructibility.",
+    "Transcendence loses the ability to fork or replace HC-derived mechanisms independently."
+  ],
+  "hostile_review": {
+    "status": "PASS_WITH_LIMITS",
+    "critical_objections": [
+      "The exact reconstruction result is strong source-factorization evidence, but a source factorization is not yet an adopted dependency.",
+      "The current main→PR22 upgrade is an easy case because none of the eight HC changes touch a path the fixed target currently inherits unchanged.",
+      "The ten-transition historical replay is conditioned on paths known to be shared today, producing survivorship/selection bias and no unbiased future conflict-rate estimate.",
+      "Transcendence provenance explicitly states the exact original upstream HC import commit is unknown; similarity and historical replay may not invent that lineage.",
+      "The 39-file deletion set and 9 same-path overrides prove intentional divergence; moving-base inheritance without exact pins would be unsafe.",
+      "Adoption remains unjustified until forward-observed base changes and review/qualification costs show sustained maintenance benefit."
+    ]
+  },
+  "notes": [
+    "EXACT_PINNED_BASE_PLUS_OVERLAY_RECONSTRUCTION is established at Discovery PR #15 exact head.",
+    "Current frontier: 85.628625314% of Transcendence target bytes are identical to HC; overlay payload is 14.371374686% plus explicit deletions.",
+    "First real base-upgrade result: LOW_CHURN_FIRST_UPGRADE; 8/73 current instructions change, payload bytes remain constant.",
+    "Historical replay: 10 real HC transitions selected from currently shared paths; 9 land directly on current target, one transient conflict converges on the next HC change.",
+    "Historical replay is compatibility evidence only, not an unbiased forecast and not original-import lineage proof.",
+    "Candidate remains EXPERIMENTING. Next evidence must be forward-observed maintenance/review cost rather than more retrospective cherry-picking."
+  ]
+}

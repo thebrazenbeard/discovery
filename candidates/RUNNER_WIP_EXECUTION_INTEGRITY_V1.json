@@ -1,0 +1,74 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "RUNNER_WIP_EXECUTION_INTEGRITY_V1",
+  "title": "Test a narrow effect-integrity interchange across Runner, WIP, and DriftGuard",
+  "status": "EXPERIMENTING",
+  "claim": "The V0 effect envelope has demonstrated three-producer interoperability and two source-agnostic observers, but measured maintenance value remains unproven and a portfolio search found no valid pre-existing downstream source-specific effect parser whose code can currently be removed without invading native authority or a different semantic domain.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/project-runner",
+      "role": "current M6 producer of neutral GitHub mutation effect envelopes",
+      "ref": "work/discovery-effect-envelope-producer-v1-20260920@a32dc6987145c826d9ff3afe4b21eb95b1801ba9"
+    },
+    {
+      "repo": "thebrazenbeard/wip",
+      "role": "operation-journal producer of neutral effect envelopes",
+      "ref": "work/discovery-effect-envelope-consumer-v1-20260920@b53075e44b35704ff8e20cbcf87888359f8a80ee"
+    },
+    {
+      "repo": "thebrazenbeard/driftguard",
+      "role": "behavioral reload decision and downstream acknowledgement tracking without claiming behavioral recovery",
+      "ref": "work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca"
+    }
+  ],
+  "preserved_boundaries": [
+    "Project Runner remains owner of work graph, dispatch, budgets, backend capability, target authority, leases, and completion semantics.",
+    "WIP remains owner of workspace recovery cadence, checkpoint history, continuation surfaces, and ambiguous-effect recovery workflow.",
+    "A shared contract may define mechanical fields/states but may not make either repository authoritative over the other.",
+    "DriftGuard remains owner of drift evidence admission, reload decisions, acknowledgement acceptance, restore-anchor advancement, and behavioral-recovery claim ceilings; a caller acknowledgement may not be normalized into verified recovery."
+  ],
+  "promotion_evidence": [
+    "Project Runner work-unit schema blob 65fd4f1af1812c280cbec0726a55b61b6ff02e76 defines execution status independently from WIP operation events.",
+    "Project Runner GitHub backend blob 833915398626c091a5df1dcc96504a7a12e7325f binds expected head/blob preconditions and post-write readback.",
+    "Project Runner verification blob e4f0453404013cbfe26882ea4805ae2fb3ce25aa uses VERIFYING, COMPLETE, OUTCOME_UNKNOWN, and SUPERSEDED after backend execution.",
+    "WIP operation-event schema blob 66f9b5103e9ecc114feb9cb8fa6cebdc34082c2d defines PREPARED, ATTEMPTED, VERIFIED, FAILED, AMBIGUOUS, and RECONCILED with expected precondition and effect receipt.",
+    "WIP HEAD schema blob 7f94e4ea2358926fb3f2bf248cd3cb7600e246cd provides generation concurrency independently of Runner lease fencing.",
+    "DriftGuard R4 adapter blob 2904452b0f14a444c28a616e2e8963bab0f05ac6 maps native reload-required evaluations to PRE_EFFECT and accepted reload acknowledgements only to POST_EFFECT_UNVERIFIED.",
+    "DriftGuard adapter regression blob 2e205d299d440e8d9531246b3eb8fc94fe03cf48 proves the adapter cannot promote acknowledgement to POST_EFFECT_VERIFIED and does not mutate the native ledger.",
+    "DriftGuard exact-head hosted run 35510133549 passed the adapter and full native suite on both Ubuntu and Windows.",
+    "Project Runner producer head a32dc6987145c826d9ff3afe4b21eb95b1801ba9, adapter blob 8ae6ea3810326df09e5baacf5d4727a432a6d8c9, passed hosted workflow run 35512057107.",
+    "WIP producer head b53075e44b35704ff8e20cbcf87888359f8a80ee, adapter blob fb7cd88bfe38b2c0de78133e75f28b2ac9bbf4cd, passed hosted workflow run 35511962748.",
+    "DriftGuard producer head 976f50ca391560d16ebcdcfe478df28b1cd1efca, adapter blob 2904452b0f14a444c28a616e2e8963bab0f05ac6, passed hosted workflow run 35510133549 on Ubuntu and Windows.",
+    "Discovery observer blob 67dd00cc1c96120151ffa4eb38dc9d3893802ada derives the V0 contract from the schema and contains no current producer-specific parser branches.",
+    "Discovery observer regression blob b484631b1e78bdc62d23ba388a54e89f7668d19e proves the same observer accepts Project Runner, WIP, DriftGuard, and an unknown future source without registration/code changes.",
+    "Discovery observer exact source head 1869424dcd8d9d53e725e1a30d5339c07903830e passed Discovery validation run 35512241403 and composed lifecycle run 35512241220."
+  ],
+  "rejection_conditions": [
+    "The proposed common contract requires Project Runner-specific scheduling semantics.",
+    "The proposed common contract requires WIP-specific workspace/checkpoint lifecycle semantics.",
+    "Adapters needed to share the contract exceed the duplicated implementation removed.",
+    "A common state vocabulary creates ambiguity between execution completion and recovery reconciliation.",
+    "Either project loses a viable standalone path.",
+    "Supporting DriftGuard requires mapping an accepted reload acknowledgement to POST_EFFECT_VERIFIED or otherwise claiming behavioral recovery not established by the native source.",
+    "The neutral envelope becomes an input to DriftGuard decision, acknowledgement, retry, or restore-anchor logic.",
+    "A third consumer can serialize into the envelope but no duplicated translation, recovery, or custody implementation is actually removed."
+  ],
+  "hostile_review": {
+    "status": "PASS_WITH_LIMITS",
+    "critical_objections": [
+      "The broad shared execution/recovery/control state-machine hypothesis remains rejected.",
+      "Two observers demonstrate source-agnostic parsing, but actual pre-existing parser LOC removed remains zero.",
+      "The search for a real existing parser replacement target found only native authority paths or different semantic domains such as provider currentness/projection reconciliation.",
+      "Replacing Project Runner recovery or BT2 BugOps native state with V0 would improperly promote an interchange vocabulary into execution/retry/closure authority.",
+      "Further centralization has no current evidence basis; the experiment should remain dormant until an organic downstream parser can be measurably replaced."
+    ]
+  },
+  "notes": [
+    "Three exact producer branches have hosted PASS at their bounded adapter scopes.",
+    "Two independent source-agnostic observers have been demonstrated; the second remains source-pass / hosted-not-executed.",
+    "Measured burden remains 1,095 core physical lines + 804 test lines, with zero actual pre-existing parser LOC deleted.",
+    "NO_CURRENT_EXISTING_PARSER_REPLACEMENT_TARGET_FOUND.",
+    "Current disposition: STOP_EFFECT_ENVELOPE_CENTRALIZATION_PENDING_ORGANIC_REPLACEMENT_TARGET.",
+    "Candidate remains EXPERIMENTING; PROVEN_REUSABLE and shared-runtime-library promotion remain unjustified."
+  ]
+}

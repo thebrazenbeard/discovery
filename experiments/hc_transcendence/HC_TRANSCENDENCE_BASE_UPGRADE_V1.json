@@ -1,0 +1,217 @@
+{
+  "schema": "DISCOVERY_HC_TRANSCENDENCE_BASE_UPGRADE_V1",
+  "status": "FIRST_REAL_BASE_UPGRADE_SIMULATION",
+  "old_base": {
+    "repository": "thebrazenbeard/hc-brain",
+    "commit": "618245b54fb923c7a204892c6953ab6d1c5dac57",
+    "tree": "623f272aa9060ad9e222a5cfaea801082bb5a562"
+  },
+  "new_base": {
+    "repository": "thebrazenbeard/hc-brain",
+    "commit": "5929da3e8904e23e484df0deac920a008ec33d52",
+    "tree": "e4c7fcedaa77cf5d2794491a99326db67740a272"
+  },
+  "fixed_target": {
+    "repository": "thebrazenbeard/transcendence",
+    "commit": "be3785c83dbe89b0d4236b43eda97a277eb6baad",
+    "tree": "112a44d8042556b87f19b3dac05ec34a5ea2f796"
+  },
+  "old_overlay": {
+    "delete_files": 37,
+    "overwrite_files": 9,
+    "add_files": 25,
+    "instruction_count": 71,
+    "payload_files": 34,
+    "payload_bytes": 286362
+  },
+  "new_overlay": {
+    "delete_files": 39,
+    "overwrite_files": 9,
+    "add_files": 25,
+    "instruction_count": 73,
+    "payload_files": 34,
+    "payload_bytes": 286362
+  },
+  "churn": {
+    "base_changed_paths": 8,
+    "overlay_instruction_changes": 8,
+    "unchanged_current_overlay_instructions": 65,
+    "current_overlay_instruction_churn_share": 0.1095890410958904,
+    "newly_required_deletions": 2,
+    "shared_target_paths_touched_by_base_upgrade": 0
+  },
+  "changed_overlay_instructions": [
+    {
+      "path": ".github/workflows/cognitive-core.yml",
+      "old_instruction": "DELETE:100644:d3ac14c888cfba1de2a50f7b798cde2b89ba4ebf",
+      "new_instruction": "DELETE:100644:9addfdddde7b12109d29d6ebfa3894b05a490111"
+    },
+    {
+      "path": "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+      "old_instruction": "DELETE:100644:0e8a29932afc8a57bb2a85e5b88888a9ca0d0462",
+      "new_instruction": "DELETE:100644:9fa854c8229cb3f30bc716842025d3ac11399fb2"
+    },
+    {
+      "path": "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+      "old_instruction": "DELETE:100644:fa5fca53780639a76dcb4bd930fb700c4aaa1a82",
+      "new_instruction": "DELETE:100644:ca3d4d2c53aec8859a5e3850d8590b38643f8206"
+    },
+    {
+      "path": "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+      "old_instruction": "OVERWRITE:100644:7fbb1524db43cb34316e1408bb78414b89904c94->100644:91f6112d782e6615505116b4349786e913f18a78",
+      "new_instruction": "OVERWRITE:100644:626781b45a059458d5920aef6ad57fcdc2f50c53->100644:91f6112d782e6615505116b4349786e913f18a78"
+    },
+    {
+      "path": "runtime/cognitive_core/README.md",
+      "old_instruction": "DELETE:100644:a629c00260aaa1f8309d2b0b6d60438b7583fa54",
+      "new_instruction": "DELETE:100644:87df4cae54fcee679f33076076ed2909d363b9ad"
+    },
+    {
+      "path": "runtime/cognitive_core/__init__.py",
+      "old_instruction": "DELETE:100644:1b8a0ee13e2ac688184af7a54701be171b763c21",
+      "new_instruction": "DELETE:100644:e6e9e0d577872881e22f17e758c9b61502f706ae"
+    },
+    {
+      "path": "runtime/cognitive_core/motor_control.py",
+      "old_instruction": null,
+      "new_instruction": "DELETE:100644:f3d58c26ad5c02727e6eed20727b90b4525383a1"
+    },
+    {
+      "path": "runtime/cognitive_core/test_motor_control.py",
+      "old_instruction": null,
+      "new_instruction": "DELETE:100644:5cae467494f1b6bfec6e928bbf73bb8e0f298ebc"
+    }
+  ],
+  "base_changed_paths": [
+    {
+      "path": ".github/workflows/cognitive-core.yml",
+      "old_base": {
+        "mode": "100644",
+        "sha": "d3ac14c888cfba1de2a50f7b798cde2b89ba4ebf",
+        "size": 1221
+      },
+      "new_base": {
+        "mode": "100644",
+        "sha": "9addfdddde7b12109d29d6ebfa3894b05a490111",
+        "size": 1273
+      },
+      "target": null,
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    },
+    {
+      "path": "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+      "old_base": {
+        "mode": "100644",
+        "sha": "0e8a29932afc8a57bb2a85e5b88888a9ca0d0462",
+        "size": 10931
+      },
+      "new_base": {
+        "mode": "100644",
+        "sha": "9fa854c8229cb3f30bc716842025d3ac11399fb2",
+        "size": 11214
+      },
+      "target": null,
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    },
+    {
+      "path": "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+      "old_base": {
+        "mode": "100644",
+        "sha": "fa5fca53780639a76dcb4bd930fb700c4aaa1a82",
+        "size": 3667
+      },
+      "new_base": {
+        "mode": "100644",
+        "sha": "ca3d4d2c53aec8859a5e3850d8590b38643f8206",
+        "size": 4088
+      },
+      "target": null,
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    },
+    {
+      "path": "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+      "old_base": {
+        "mode": "100644",
+        "sha": "7fbb1524db43cb34316e1408bb78414b89904c94",
+        "size": 5456
+      },
+      "new_base": {
+        "mode": "100644",
+        "sha": "626781b45a059458d5920aef6ad57fcdc2f50c53",
+        "size": 5896
+      },
+      "target": {
+        "mode": "100644",
+        "sha": "91f6112d782e6615505116b4349786e913f18a78",
+        "size": 1833
+      },
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    },
+    {
+      "path": "runtime/cognitive_core/README.md",
+      "old_base": {
+        "mode": "100644",
+        "sha": "a629c00260aaa1f8309d2b0b6d60438b7583fa54",
+        "size": 5733
+      },
+      "new_base": {
+        "mode": "100644",
+        "sha": "87df4cae54fcee679f33076076ed2909d363b9ad",
+        "size": 6267
+      },
+      "target": null,
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    },
+    {
+      "path": "runtime/cognitive_core/__init__.py",
+      "old_base": {
+        "mode": "100644",
+        "sha": "1b8a0ee13e2ac688184af7a54701be171b763c21",
+        "size": 2829
+      },
+      "new_base": {
+        "mode": "100644",
+        "sha": "e6e9e0d577872881e22f17e758c9b61502f706ae",
+        "size": 3202
+      },
+      "target": null,
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    },
+    {
+      "path": "runtime/cognitive_core/motor_control.py",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "sha": "f3d58c26ad5c02727e6eed20727b90b4525383a1",
+        "size": 11372
+      },
+      "target": null,
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    },
+    {
+      "path": "runtime/cognitive_core/test_motor_control.py",
+      "old_base": null,
+      "new_base": {
+        "mode": "100644",
+        "sha": "5cae467494f1b6bfec6e928bbf73bb8e0f298ebc",
+        "size": 7869
+      },
+      "target": null,
+      "target_inherits_old_base": false,
+      "target_inherits_new_base": false
+    }
+  ],
+  "interpretation": {
+    "result": "LOW_CHURN_FIRST_UPGRADE",
+    "reason": "The HC main→PR22 change alters only overlay preimages/exclusions. The Transcendence payload remains byte-identical and no target path that inherited HC bytes was changed by this particular base upgrade.",
+    "limitation": "This upgrade does not test conflict behavior when HC changes a byte that Transcendence currently inherits unchanged."
+  },
+  "claim_ceiling": "ONE_REAL_LOW_CHURN_BASE_UPGRADE_SIMULATION_NOT_LONGITUDINAL_MAINTENANCE_PROOF_NOT_DEPENDENCY_ADOPTION"
+}

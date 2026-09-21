@@ -1,0 +1,345 @@
+{
+  "schema_version": "DISCOVERY_RELATIONSHIP_GRAPH_V1",
+  "status": "PUBLIC_SAFE_INITIAL_GRAPH_HYPOTHESES",
+  "inventory_binding": {
+    "observed_date": "2026-09-19",
+    "total_count": 57,
+    "all_names_sha256": "43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd"
+  },
+  "nodes": [
+    {
+      "id": "discovery",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "META_EVALUATOR"
+      ],
+      "notes": [
+        "Discovery itself remains subject to hostile review."
+      ]
+    },
+    {
+      "id": "driftguard",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "RUNTIME_CONTROL_CANDIDATE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "hc-brain",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_BASE_CANDIDATE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "mosaic",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EXPERIMENT_SYSTEM"
+      ],
+      "notes": []
+    },
+    {
+      "id": "on-theo",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "DOMAIN_NEGATIVE_CONTROL",
+        "EVIDENCE_DISCIPLINE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "project-runner",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EXECUTION_ORCHESTRATION"
+      ],
+      "notes": []
+    },
+    {
+      "id": "rezon",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EPISTEMIC_REASONING"
+      ],
+      "notes": []
+    },
+    {
+      "id": "roots",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "PROVENANCE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "testament",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "DOMAIN_NEGATIVE_CONTROL",
+        "EVIDENCE_GRAPH"
+      ],
+      "notes": []
+    },
+    {
+      "id": "transcendence",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_OVERLAY_CANDIDATE"
+      ],
+      "notes": []
+    },
+    {
+      "id": "wip",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "CRASH_RECOVERY",
+        "EFFECT_RECONCILIATION"
+      ],
+      "notes": []
+    },
+    {
+      "id": "world-zero",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EXPERIMENT_SYSTEM",
+        "SYSTEMS_SIMULATION"
+      ],
+      "notes": []
+    },
+    {
+      "id": "private-cohort",
+      "kind": "OPAQUE_PRIVATE_COHORT",
+      "privacy": "PRIVATE_OPAQUE",
+      "labels": [
+        "45_PRIVATE_REPOSITORIES"
+      ],
+      "notes": [
+        "Node intentionally hides private repository identities."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "RUNNER_REZON_EXECUTION_BOUNDARY",
+      "from": "rezon",
+      "to": "project-runner",
+      "relation": "COMPLEMENTARY_BOUNDARY",
+      "scope": "Rezon-owned epistemic execution and admission with Project Runner independently verifying exported run-evidence structure; no semantic or authority transfer",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/rezon:radar/r51-failure-summary-binding-20260919@8289914ec500a1392b10fe1a3774dee166e73b40",
+        "thebrazenbeard/project-runner:work/discovery-rezon-evidence-verifier-v1-20260920@4de0f6148b3d7d04ccdb4e0057435fa0d904590a"
+      ],
+      "falsifiers": [
+        "Runner must interpret Rezon accepted/rejected/unresolved claims or admission semantics to verify evidence.",
+        "Runner structural PASS is treated as Rezon truth, qualification, or external-effect authorization.",
+        "A real Rezon failure-path export cannot be mechanically preserved through the same boundary.",
+        "Rezon loses viable standalone evidence export/validation without Runner."
+      ],
+      "notes": [
+        "Real Rezon R51 deterministic evidence export consumed by independent Runner verifier.",
+        "Runner exact hosted workflow 35517367117: 222/222 tests PASS plus registry/restart validation.",
+        "Rezon exact R51 locally rechecked under Python 3.12: 10/10 focused and 275/275 full PASS; no hosted exact-head CI is claimed.",
+        "Current experiment is mechanical evidence verification only; it does not delegate Rezon reasoning or admission."
+      ]
+    },
+    {
+      "edge_id": "RUNNER_WIP_OVERLAP",
+      "from": "project-runner",
+      "to": "wip",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "optimistic concurrency, exact effect/work identity, verification, and recovery boundaries",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8",
+        "thebrazenbeard/wip:main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+      ],
+      "falsifiers": [
+        "Field/state mapping shows only superficial vocabulary overlap.",
+        "A shared contract requires either orchestration-specific or workspace-specific semantics."
+      ],
+      "notes": [
+        "Exact schema comparison narrowed the proposed shared surface to effect precondition/ambiguity/readback/reconciliation mechanics.",
+        "Runner scheduling, leases/fencing, budgets, and WIP workspace/checkpoint lifecycle remain outside the common envelope."
+      ]
+    },
+    {
+      "edge_id": "HC_TRANSCENDENCE_BASE_OVERLAY",
+      "from": "hc-brain",
+      "to": "transcendence",
+      "relation": "POTENTIAL_BASE_OVERLAY",
+      "scope": "exact pinned HC source bytes plus explicit Transcendence additions/overwrites/deletions; no moving-base or authority inheritance",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/hc-brain:noah/kinesis-runtime-v1@5929da3e8904e23e484df0deac920a008ec33d52",
+        "thebrazenbeard/transcendence:one/transcendence-integrity-manifest-runtime-parity-v1-20260919@be3785c83dbe89b0d4236b43eda97a277eb6baad"
+      ],
+      "falsifiers": [
+        "A forward-observed HC upgrade changing inherited shared bytes creates large recurring override or qualification burden.",
+        "Transcendence future work requires frequent intentional forks of currently shared HC paths.",
+        "Pinned-base dependency or deletion-manifest mechanics increase maintenance/risk more than copied-base synchronization removes."
+      ],
+      "notes": [
+        "Exact pinned HC PR #22 + explicit overlay reconstructs Transcendence PR #7 exact Git tree; Discovery PR #15 hosted PASS.",
+        "Current target overlap: 254 identical same-path files / 85.628625314% of target bytes; overlay payload 34 files / 286,362 bytes / 14.371374686%, plus 39 deletes.",
+        "HC main→PR22 simulation changes 8 of 73 current overlay instructions; payload bytes unchanged; two new HC motor-control paths are explicitly excluded.",
+        "Ten selected real HC shared-path transitions yield nine immediate overlay removals and one transient override that converges on the next real HC change.",
+        "Selection is conditioned on paths shared today and does not establish future conflict rate or original HC import lineage.",
+        "Dependency adoption remains unproven; moving-base inheritance remains rejected."
+      ]
+    },
+    {
+      "edge_id": "WORLDZERO_MOSAIC_HARNESS_SEPARATION",
+      "from": "world-zero",
+      "to": "mosaic",
+      "relation": "MUST_REMAIN_SEPARATE",
+      "scope": "executable experiment harness, evaluator, domain subject identity, and qualification semantics",
+      "evidence_state": "SUPPORTED",
+      "source_refs": [
+        "thebrazenbeard/world-zero:science/demography-older-mortality-mass-normalization-v1-20260919@9be13e8e34772a90a812815b074bf21bb89e972a",
+        "thebrazenbeard/mosaic:one/mosaic-p1-protocol-harness-v1-20260918@96fd911e5a6a9b2069a88ae20d0dfa4f6bbad01f"
+      ],
+      "falsifiers": [
+        "A future exact comparison demonstrates a substantial identical mechanical core whose extraction removes more implementation than its adapters add.",
+        "A third independent consumer demonstrates the same harness contract without importing World Zero or Mosaic domain semantics."
+      ],
+      "notes": [
+        "Current exact comparison supports project-specific executable harnesses."
+      ]
+    },
+    {
+      "edge_id": "ONTHEO_TESTAMENT_NEGATIVE_CONTROL",
+      "from": "on-theo",
+      "to": "testament",
+      "relation": "NEGATIVE_CONTROL",
+      "scope": "test whether generic evidence/provenance abstractions preserve distinct domain source classes and inference rules",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/on-theo:research/hostile-powers-transmission-map-v1-20260919@940a9b3bbefd8790ad5ced58c88d249f08fbf16f",
+        "thebrazenbeard/testament:foundation/testament-v1@c3871a554f9dc9dcdf3e49d3c70fc2d8492e4681"
+      ],
+      "falsifiers": [
+        "The negative-control pair does not materially exercise different evidence semantics.",
+        "A proposed generic evidence layer changes either project's domain-specific interpretation rules."
+      ],
+      "notes": [
+        "Success means a shared mechanic can be used without harmonizing domain meaning."
+      ]
+    },
+    {
+      "edge_id": "WORLDZERO_MOSAIC_RECEIPT_PATTERN",
+      "from": "world-zero",
+      "to": "mosaic",
+      "relation": "NEEDS_MORE_EVIDENCE",
+      "scope": "abstract experiment receipt pattern: exact subject, execution identity/context, result evidence, and explicit claim ceiling",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/world-zero:science/demography-older-mortality-mass-normalization-v1-20260919@9be13e8e34772a90a812815b074bf21bb89e972a",
+        "thebrazenbeard/mosaic:one/mosaic-p1-protocol-harness-v1-20260918@96fd911e5a6a9b2069a88ae20d0dfa4f6bbad01f"
+      ],
+      "falsifiers": [
+        "A third independent consumer does not share the same minimal receipt needs.",
+        "Normalizing the receipt loses source-native claim ceilings or provenance.",
+        "The generic wrapper removes no real translation, validation, or custody code."
+      ],
+      "notes": [
+        "Do not create a shared component from this pair alone."
+      ]
+    },
+    {
+      "edge_id": "DISCOVERY_CENSUS_PROJECT_RUNNER_CONSUMER",
+      "from": "discovery",
+      "to": "project-runner",
+      "relation": "PROVIDER_CONSUMER",
+      "scope": "exact privacy-safe repository census bytes used only as portfolio drift/currentness input",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
+        "thebrazenbeard/project-runner:work/discovery-census-consumer-v1-20260920@b763c707abacc7dfe30dc451b2b42354a30e3621"
+      ],
+      "falsifiers": [
+        "Project Runner must import Discovery scheduling, authority, or project semantics to consume the census.",
+        "Project Runner requires live Discovery availability after exact census bytes have been obtained.",
+        "The binding fails to detect a changed census artifact or accepts altered bytes."
+      ],
+      "notes": [
+        "Hosted Project Runner workflow run 35509678751 succeeded on the exact consumer source."
+      ]
+    },
+    {
+      "edge_id": "DISCOVERY_CENSUS_PRIVATE_OPAQUE_CONSUMER",
+      "from": "discovery",
+      "to": "private-cohort",
+      "relation": "PROVIDER_CONSUMER",
+      "scope": "same exact census digest consumed by one opaque private runtime/source-registry subject without publishing its identity",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
+        "private-attestation:sha256:1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969"
+      ],
+      "falsifiers": [
+        "The public attestation leaks or permits practical inference of the hidden repository identity/ref.",
+        "The hidden consumer requires Discovery to own its runtime/control semantics.",
+        "The private receipt cannot be reverified in its governed private domain."
+      ],
+      "notes": [
+        "Opaque private evidence is insufficient for PROVEN_REUSABLE under V1."
+      ]
+    },
+    {
+      "edge_id": "DRIFTGUARD_RUNNER_EFFECT_INTEGRITY",
+      "from": "driftguard",
+      "to": "project-runner",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "effect decision/precondition, post-effect uncertainty, receipt/readback, and separation of decision from verified effect",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
+        "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8"
+      ],
+      "falsifiers": [
+        "Neutral phase mapping requires DriftGuard behavioral-recovery semantics or Runner scheduling/lease semantics.",
+        "Accepted DriftGuard acknowledgement must be mislabeled as verified effect to fit the shared envelope.",
+        "Either project must consume Discovery at runtime."
+      ],
+      "notes": [
+        "DriftGuard adapter preserves acknowledgement as POST_EFFECT_UNVERIFIED and uses DOMAIN_DECIDES."
+      ]
+    },
+    {
+      "edge_id": "DRIFTGUARD_WIP_EFFECT_INTEGRITY",
+      "from": "driftguard",
+      "to": "wip",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "source-native effect attempt/acknowledgement states mapped to neutral unverified/verified/reconciled effect phases",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
+        "thebrazenbeard/wip:main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+      ],
+      "falsifiers": [
+        "Mapping collapses WIP ambiguity/reconciliation semantics or DriftGuard acknowledgement/recovery semantics.",
+        "The common envelope becomes authoritative for retry or completion.",
+        "Adapter burden exceeds duplicated interchange logic removed."
+      ],
+      "notes": [
+        "This edge is evidence for the triadic candidate, not a claim that DriftGuard and WIP share one state machine."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "schema": "DISCOVERY_EXACT_BASE_OVERLAY_V1",
+  "candidate_id": "HC_TRANSCENDENCE_OVERLAY_V1",
+  "status": "EXPERIMENT_SOURCE_SUBJECT",
+  "base": {
+    "repository": "thebrazenbeard/hc-brain",
+    "commit": "5929da3e8904e23e484df0deac920a008ec33d52",
+    "tree": "e4c7fcedaa77cf5d2794491a99326db67740a272"
+  },
+  "target": {
+    "repository": "thebrazenbeard/transcendence",
+    "commit": "be3785c83dbe89b0d4236b43eda97a277eb6baad",
+    "tree": "112a44d8042556b87f19b3dac05ec34a5ea2f796"
+  },
+  "metrics": {
+    "base_files": 302,
+    "target_files": 288,
+    "target_bytes": 1992586,
+    "identical_same_path_files": 254,
+    "identical_same_path_bytes": 1706224,
+    "identical_byte_share_of_target": 0.8562862531403914,
+    "overwrite_files": 9,
+    "overwrite_bytes": 88334,
+    "add_files": 25,
+    "add_bytes": 198028,
+    "delete_files": 39,
+    "overlay_payload_files": 34,
+    "overlay_payload_bytes": 286362,
+    "overlay_payload_share_of_target": 0.14371374685960858
+  },
+  "overwrites": [
+    {
+      "path": ".github/workflows/reference-kernel.yml",
+      "base_mode": "100644",
+      "base_sha": "d6f680af07374b39115135de865c4a96b3c50cda",
+      "target_mode": "100644",
+      "target_sha": "7453e0acfcd1fbf80c7bed7c6c19709fbd4f33bc",
+      "target_size": 1322
+    },
+    {
+      "path": "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+      "base_mode": "100644",
+      "base_sha": "626781b45a059458d5920aef6ad57fcdc2f50c53",
+      "target_mode": "100644",
+      "target_sha": "91f6112d782e6615505116b4349786e913f18a78",
+      "target_size": 1833
+    },
+    {
+      "path": "README.md",
+      "base_mode": "100644",
+      "base_sha": "b545ddb85bccb2bd8efe7316efcb6a4ef6122308",
+      "target_mode": "100644",
+      "target_sha": "f9a20bd870766ea3b800a4e156948d8afc55aab8",
+      "target_size": 11162
+    },
+    {
+      "path": "runtime/reference_kernel/durable_kernel.py",
+      "base_mode": "100644",
+      "base_sha": "fee7ac6ceb0b26459323ec15e89cfb42e30e220b",
+      "target_mode": "100644",
+      "target_sha": "3564c5bc2fc2050ca57db0834f883350acf874a5",
+      "target_size": 27282
+    },
+    {
+      "path": "runtime/reference_kernel/hc_kernel.py",
+      "base_mode": "100644",
+      "base_sha": "a318a03f6bad104c3984a0e2afc7532c91a3ec78",
+      "target_mode": "100644",
+      "target_sha": "e48355da01482cc6ca709928214ad61c9998249e",
+      "target_size": 16292
+    },
+    {
+      "path": "runtime/reference_kernel/README.md",
+      "base_mode": "100644",
+      "base_sha": "1bd11f8ec1bf1d77f98d69054096f9e710fc6ba2",
+      "target_mode": "100644",
+      "target_sha": "2a5e56159c9386677f33f373c6350971b26ce084",
+      "target_size": 2738
+    },
+    {
+      "path": "runtime/reference_kernel/test_durable_kernel.py",
+      "base_mode": "100644",
+      "base_sha": "b98c03f412a216559e350911602b34c658eeab5a",
+      "target_mode": "100644",
+      "target_sha": "0f2f8940ab002a8bc9397f3c6eeeabcb704cd327",
+      "target_size": 13885
+    },
+    {
+      "path": "runtime/reference_kernel/test_hc_kernel.py",
+      "base_mode": "100644",
+      "base_sha": "1bdc52213b4796d2119147ccf7279f92760b5d46",
+      "target_mode": "100644",
+      "target_sha": "cbeed0a20ccbe2b8d31a25d0d57f40bc83952748",
+      "target_size": 10600
+    },
+    {
+      "path": "WARDEN.md",
+      "base_mode": "100644",
+      "base_sha": "4018be2085d1a97957f73c9ad0ab430f5794d0a5",
+      "target_mode": "100644",
+      "target_sha": "1657655c8e0cbc32467239785a182955e7eee3ff",
+      "target_size": 3220
+    }
+  ],
+  "adds": [
+    {
+      "path": ".github/workflows/test.yml",
+      "mode": "100644",
+      "sha": "3703c3c6a761db0cad797bbcde3e4deb5fd35515",
+      "size": 1026
+    },
+    {
+      "path": "docs/imported-hc/PROVENANCE.md",
+      "mode": "100644",
+      "sha": "f40b97660a54759a0313752b939fff4be180a7ef",
+      "size": 1753
+    },
+    {
+      "path": "docs/imported-hc/README_ORIGINAL.md",
+      "mode": "100644",
+      "sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e",
+      "size": 10259
+    },
+    {
+      "path": "docs/imported-hc/WARDEN_ORIGINAL.md",
+      "mode": "100644",
+      "sha": "4018be2085d1a97957f73c9ad0ab430f5794d0a5",
+      "size": 12033
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-17-consciousness-backup-population.md",
+      "mode": "100644",
+      "sha": "03835f47b44765151b3d3ef66722a0f2423fada3",
+      "size": 6631
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-17-hcsa-bci-continuity-core-v0.md",
+      "mode": "100644",
+      "sha": "b8c308b828cac77a646caf02179a04c0c0fdc98a",
+      "size": 3828
+    },
+    {
+      "path": "docs/superpowers/specs/2026-09-17-consciousness-backup-design.md",
+      "mode": "100644",
+      "sha": "560665b6db2d01d1d7c6bd772df4b86856745c8c",
+      "size": 25932
+    },
+    {
+      "path": "docs/superpowers/specs/2026-09-17-universal-open-bci-amendment.md",
+      "mode": "100644",
+      "sha": "3356c87b083d136a131a39ab47b0276650b3149f",
+      "size": 8097
+    },
+    {
+      "path": "docs/transcendence/ARCHITECTURE.md",
+      "mode": "100644",
+      "sha": "ba7cbbc3304845dc1530b1923965627f96465e1d",
+      "size": 7285
+    },
+    {
+      "path": "docs/transcendence/BCI_AND_CONTINUITY_MIGRATION.md",
+      "mode": "100644",
+      "sha": "ef7de4493bf85202e10a9a5d35cc75c8d6a22793",
+      "size": 3200
+    },
+    {
+      "path": "docs/transcendence/CAPTURE_LAYERS.md",
+      "mode": "100644",
+      "sha": "a92718ad7f995d20d238c85871ac57f52f04e9b8",
+      "size": 4510
+    },
+    {
+      "path": "docs/transcendence/CONTINUITY_BOUNDARIES.md",
+      "mode": "100644",
+      "sha": "07c240673e17b7215c9f006ebda0edea1dc29f41",
+      "size": 5852
+    },
+    {
+      "path": "docs/transcendence/HUMAN_COGNITIVE_STATE_ARCHIVE.md",
+      "mode": "100644",
+      "sha": "c56e3bc347f091b7f59d711742cd60bb006b5395",
+      "size": 5309
+    },
+    {
+      "path": "docs/transcendence/HUMAN_TO_HC_TRANSLATION.md",
+      "mode": "100644",
+      "sha": "2919864ae7cc64cd06e6abc5e457213c6bba589d",
+      "size": 3595
+    },
+    {
+      "path": "docs/transcendence/OPEN_COMMONS_AND_ACCESS_MODEL.md",
+      "mode": "100644",
+      "sha": "6126375cc50d898024793a80446b5cb2b5536f4d",
+      "size": 2543
+    },
+    {
+      "path": "docs/transcendence/RECONSTRUCTION_AND_QUALIFICATION.md",
+      "mode": "100644",
+      "sha": "72e963cc0c75f3dbbe79d2eebc2216a4c1acb147",
+      "size": 4297
+    },
+    {
+      "path": "docs/transcendence/RESEARCH_QUESTIONS.md",
+      "mode": "100644",
+      "sha": "c5e7b588f4eef4e35ffc9bf90b9adb8357b0a965",
+      "size": 4529
+    },
+    {
+      "path": "docs/transcendence/SOURCE_INDEX.md",
+      "mode": "100644",
+      "sha": "89b397619eaceb939d021238c6db7e04ea26f448",
+      "size": 4452
+    },
+    {
+      "path": "docs/transcendence/THREAT_MODEL.md",
+      "mode": "100644",
+      "sha": "dca40db40098204fbf9e2284fbe80cc404bccc17",
+      "size": 4295
+    },
+    {
+      "path": "runtime/transcendence_core/core.py",
+      "mode": "100644",
+      "sha": "6bf15927fd59f1b17ebd9e90ec3a78811887c040",
+      "size": 24814
+    },
+    {
+      "path": "runtime/transcendence_core/test_core.py",
+      "mode": "100644",
+      "sha": "c7ec2c10f668d9a8c26cbea22e54ad4f40348e7e",
+      "size": 37545
+    },
+    {
+      "path": "specs/transcendence/bci-adapter-v0.schema.json",
+      "mode": "100644",
+      "sha": "caaafe8fcd5135c3ca9a44d9593cbfca97702ced",
+      "size": 3939
+    },
+    {
+      "path": "specs/transcendence/continuity-lineage-v0.schema.json",
+      "mode": "100644",
+      "sha": "82480da0e2e6b9714bf17774596c14394247e5d9",
+      "size": 5159
+    },
+    {
+      "path": "specs/transcendence/hcsa-v0.schema.json",
+      "mode": "100644",
+      "sha": "c91c45ac6e77a619fd4d9b9b9556ed5fd40c6ee9",
+      "size": 6087
+    },
+    {
+      "path": "specs/transcendence/integrity-manifest-v0.schema.json",
+      "mode": "100644",
+      "sha": "dc8061b38f19e7de468aa5b03d80d06abd1b7aa5",
+      "size": 1058
+    }
+  ],
+  "deletes": [
+    {
+      "path": ".github/workflows/architecture-conformance.yml",
+      "mode": "100644",
+      "sha": "6e2c3503e36bbd2be0826785edddf0c972d17759",
+      "size": 1266
+    },
+    {
+      "path": ".github/workflows/cognitive-core.yml",
+      "mode": "100644",
+      "sha": "9addfdddde7b12109d29d6ebfa3894b05a490111",
+      "size": 1273
+    },
+    {
+      "path": "CURRENT.md",
+      "mode": "100644",
+      "sha": "f5ff3f9ffe8e55e5cf1fe122afee7978ae1ed113",
+      "size": 4436
+    },
+    {
+      "path": "docs/architecture/CAUSAL_AUTHORITY_RECOVERY_HARDENING_V2.md",
+      "mode": "100644",
+      "sha": "142202f1167d0c76aa35a0a43f651091920b97ea",
+      "size": 12610
+    },
+    {
+      "path": "docs/architecture/STATE_FAMILY_CONSISTENCY_AND_CAUSAL_FRONTIER.md",
+      "mode": "100644",
+      "sha": "281e3ccf1e18c38da893401b164f4896f79351b4",
+      "size": 8078
+    },
+    {
+      "path": "docs/qualification/HOSTILE_AUDIT_DISPOSITION_2026-09-15.md",
+      "mode": "100644",
+      "sha": "b8185e494d652e29478fe9fbd474dd43adaddccb",
+      "size": 6424
+    },
+    {
+      "path": "docs/research/VERA_HC_V2_DISTRIBUTED_CAUSAL_ARCHITECTURE_2026-09-17.md",
+      "mode": "100644",
+      "sha": "e4913e6d1080f01dc52bb0104228e6abcf80ca14",
+      "size": 9123
+    },
+    {
+      "path": "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+      "mode": "100644",
+      "sha": "9fa854c8229cb3f30bc716842025d3ac11399fb2",
+      "size": 11214
+    },
+    {
+      "path": "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-17.md",
+      "mode": "100644",
+      "sha": "2b70b25f02bd8ff5f993dbc5191671f6ba8e0e8b",
+      "size": 3460
+    },
+    {
+      "path": "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+      "mode": "100644",
+      "sha": "ca3d4d2c53aec8859a5e3850d8590b38643f8206",
+      "size": 4088
+    },
+    {
+      "path": "docs/runtime/NOAH_CURRENT_KNOWLEDGE_2026-09-15.md",
+      "mode": "100644",
+      "sha": "475e7240f4df33bee6f04f3a4e7ce94501dc8920",
+      "size": 15422
+    },
+    {
+      "path": "docs/runtime/NOAH_HANDOFF_2026-09-15.md",
+      "mode": "100644",
+      "sha": "4d1e26aec3f6784f83a64ecd6c1a019107cec778",
+      "size": 6761
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-17-hc-architecture-hardening-v2.md",
+      "mode": "100644",
+      "sha": "202390962526f589c65c5855b3ff7c3b138ed54d",
+      "size": 12009
+    },
+    {
+      "path": "homeostasis-interoception/REGULATORY_STATE_CONTRACT.md",
+      "mode": "100644",
+      "sha": "49fe6fa89b6cb4c8ad8971fa93d26dca648eeb4e",
+      "size": 2577
+    },
+    {
+      "path": "runtime/cognitive_core/__init__.py",
+      "mode": "100644",
+      "sha": "e6e9e0d577872881e22f17e758c9b61502f706ae",
+      "size": 3202
+    },
+    {
+      "path": "runtime/cognitive_core/cognitive_loop.py",
+      "mode": "100644",
+      "sha": "5a4c98c6f3aac0d375e9c56f5b4eebc56956d759",
+      "size": 24273
+    },
+    {
+      "path": "runtime/cognitive_core/deep_memory.py",
+      "mode": "100644",
+      "sha": "812010960f90c80f7cfbe1ced110c93c0a12fb00",
+      "size": 8995
+    },
+    {
+      "path": "runtime/cognitive_core/homeostasis_somatics.py",
+      "mode": "100644",
+      "sha": "8c84e6d4b8d7216ec972220f48d0384e132fa84a",
+      "size": 20028
+    },
+    {
+      "path": "runtime/cognitive_core/metacognition.py",
+      "mode": "100644",
+      "sha": "9eb8ba8d024fa63f193db94f614440c8d9db62c8",
+      "size": 6863
+    },
+    {
+      "path": "runtime/cognitive_core/motor_control.py",
+      "mode": "100644",
+      "sha": "f3d58c26ad5c02727e6eed20727b90b4525383a1",
+      "size": 11372
+    },
+    {
+      "path": "runtime/cognitive_core/README.md",
+      "mode": "100644",
+      "sha": "87df4cae54fcee679f33076076ed2909d363b9ad",
+      "size": 6267
+    },
+    {
+      "path": "runtime/cognitive_core/social_pragmatics.py",
+      "mode": "100644",
+      "sha": "7bcbb609d0d1debab87a32c3fd4fb6675257452c",
+      "size": 16177
+    },
+    {
+      "path": "runtime/cognitive_core/test_cognitive_loop.py",
+      "mode": "100644",
+      "sha": "b9c53d93b8524bb9263138a9b5e95e1aec8429d3",
+      "size": 14615
+    },
+    {
+      "path": "runtime/cognitive_core/test_deep_memory.py",
+      "mode": "100644",
+      "sha": "0d2a6017a3aa543a75491d07153641a63f70f120",
+      "size": 7415
+    },
+    {
+      "path": "runtime/cognitive_core/test_homeostasis_somatics.py",
+      "mode": "100644",
+      "sha": "73ffab4bbac208a2f829ef4516c2023122c47a44",
+      "size": 12538
+    },
+    {
+      "path": "runtime/cognitive_core/test_metacognition.py",
+      "mode": "100644",
+      "sha": "03256567f7e7b5c19823ffb74f64c479d66060d4",
+      "size": 4523
+    },
+    {
+      "path": "runtime/cognitive_core/test_motor_control.py",
+      "mode": "100644",
+      "sha": "5cae467494f1b6bfec6e928bbf73bb8e0f298ebc",
+      "size": 7869
+    },
+    {
+      "path": "runtime/cognitive_core/test_social_pragmatics.py",
+      "mode": "100644",
+      "sha": "60ce971ebc7f2f776042e43f681bee442712ffa2",
+      "size": 8258
+    },
+    {
+      "path": "runtime/cognitive_core/test_world_model.py",
+      "mode": "100644",
+      "sha": "9461b23a89f143734bf2f2180961b3c54b1d1147",
+      "size": 6680
+    },
+    {
+      "path": "runtime/cognitive_core/world_model.py",
+      "mode": "100644",
+      "sha": "8a591ecb0744c58541a9f89cbb7299542cc87b18",
+      "size": 15907
+    },
+    {
+      "path": "runtime/reference_kernel/governed_kernel_v2.py",
+      "mode": "100644",
+      "sha": "94f927c05f38f664370b672ed994b64029e64825",
+      "size": 13920
+    },
+    {
+      "path": "runtime/reference_kernel/test_four_adversarial_kernel_r2.py",
+      "mode": "100644",
+      "sha": "8c98c4cf6cefebe7f4fe5301e76422f178c91ae7",
+      "size": 25547
+    },
+    {
+      "path": "runtime/reference_kernel/test_four_adversarial_kernel.py",
+      "mode": "100644",
+      "sha": "e958abf3c4a6f6be0af8021d73f943f29cd25b19",
+      "size": 12366
+    },
+    {
+      "path": "runtime/reference_kernel/test_vera_adversarial_kernel_v2.py",
+      "mode": "100644",
+      "sha": "ff566e434d106c2f3b608f7246ef8b59e53e6768",
+      "size": 11929
+    },
+    {
+      "path": "specs/HC_REVIEW_RECEIPT_V1.yaml",
+      "mode": "100644",
+      "sha": "c1cdb9dc1354238f5faf7775fb8289075df280bd",
+      "size": 4639
+    },
+    {
+      "path": "specs/HC_STATE_FAMILY_CONSISTENCY_POLICY_V1.yaml",
+      "mode": "100644",
+      "sha": "2f41205b56ee5ac27d690e580d9e2d12a07a63ba",
+      "size": 4408
+    },
+    {
+      "path": "specs/HC_STATE_FAMILY_CONSISTENCY_REGISTRY_V1.yaml",
+      "mode": "100644",
+      "sha": "e3a74fccdd4e8298db5ce7ecd9b54fcf50ac56af",
+      "size": 9542
+    },
+    {
+      "path": "tests/test_validate_hc_architecture.py",
+      "mode": "100644",
+      "sha": "152e50965892a242772282928278ca5e609d2527",
+      "size": 14529
+    },
+    {
+      "path": "tools/validate_hc_architecture.py",
+      "mode": "100644",
+      "sha": "c6543c1d5be4f279a7e1cd4e1549adbde59e400d",
+      "size": 17276
+    }
+  ],
+  "reconstruction_rule": "START_EXACT_BASE_TREE_DELETE_LISTED_PATHS_THEN_APPLY_OVERWRITES_AND_ADDS_REQUIRE_EXACT_TARGET_TREE_SHA",
+  "authority_ceiling": "EXACT_SOURCE_RECONSTRUCTION_EXPERIMENT_ONLY_NOT_DEPENDENCY_ADOPTION_NOT_MERGE_NOT_RUNTIME_AUTHORITY"
+}
