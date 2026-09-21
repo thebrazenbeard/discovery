@@ -3,7 +3,7 @@
   "candidate_id": "REZON_RUNNER_BOUNDARY_V1",
   "title": "Separate epistemic reasoning from mechanical execution",
   "status": "EXPERIMENTING",
-  "claim": "A real Rezon R51 run-evidence export can be handed to Project Runner for bounded mechanical structural verification without transferring Rezon truth, admission, claim correctness, qualification, currentness, authority, or external-effect semantics to Runner.",
+  "claim": "Two real Rezon R51 run-evidence classes—a successful PLAN execution and a contract-violation PLAN failure—can be handed to one unchanged Project Runner verifier for bounded mechanical structural verification without transferring Rezon truth, admission, failure meaning, qualification, currentness, authority, or external-effect semantics to Runner.",
   "consumers": [
     {
       "repo": "thebrazenbeard/rezon",
@@ -13,7 +13,7 @@
     {
       "repo": "thebrazenbeard/project-runner",
       "role": "independent mechanical verifier of exported run-evidence structure only",
-      "ref": "work/discovery-rezon-evidence-verifier-v1-20260920@4de0f6148b3d7d04ccdb4e0057435fa0d904590a"
+      "ref": "work/discovery-rezon-failure-evidence-v1-20260920@b48e2a19fa9e26eac233d1813ee04346e96b68a7"
     }
   ],
   "preserved_boundaries": [
@@ -31,6 +31,10 @@
     "Project Runner PR #26 exact head 4de0f6148b3d7d04ccdb4e0057435fa0d904590a verifier blob d7827dec743e69fff7f981d91d7a86f6cd4a4839 independently validates schema/digest/receipt↔trace mechanical bindings.",
     "Project Runner hosted workflow 35517367117 passed 222/222 tests, registry validation (15 projects / 12 workers), and M6 recursive restart proof.",
     "Hostile regression proves Runner accepts opaque changes to Rezon accepted/rejected/unresolved claim IDs when the evidence is otherwise structurally valid and correctly rehashed, demonstrating non-interpretation of epistemic semantics.",
+    "Real Rezon failure-path evidence digest 516146d1f01291510e5b31e645520ed5434760ff953139d6aba71ea4cc37e752 carries contract_violation in both trace and receipt while remaining PLAN-only.",
+    "Project Runner PR #27 exact head b48e2a19fa9e26eac233d1813ee04346e96b68a7 passed hosted workflow 35517665284 with 228/228 tests, registry validation, and M6 recursive restart proof.",
+    "The Project Runner production verifier remained exact Git blob d7827dec743e69fff7f981d91d7a86f6cd4a4839 across successful and failure-path experiments.",
+    "Hostile failure-path regression proves an unknown future Rezon failure token is accepted when receipt/trace coverage remains consistent, so Runner verifies failure binding rather than failure ontology."
     "Real Rezon failure-path PLAN export from exact R51 source produced evidence digest 2f16bda0e304620772e5c8c8368ba7de190e77b879b5862d4b53d973db28cf53 with contract_violation preserved in both receipt and trace, no accepted/rejected claims, incomplete claim disposition, and an unresolved invalid-contract marker.",
     "The same Project Runner PR #26 verifier accepted that exact failure artifact only as STRUCTURALLY_VALID_NON_PROMOTIONAL with one receipt failure and one trace failure; no Rezon truth/admission/completion semantics were produced."
   ],
@@ -39,12 +43,25 @@
     "Runner's structurally-valid result is consumed as Rezon truth, admission, qualification, or external-effect authorization.",
     "Rezon cannot generate or validate the same run evidence without Project Runner.",
     "The adapter requires importing Rezon or duplicating enough Rezon semantics that mechanical verification ceases to be independent.",
-    "A real failure-path Rezon export cannot cross the same boundary without semantic promotion or loss.",
-    "The adapter and fixture-maintenance burden exceeds the duplicated outer-orchestrator verification work it removes."
+    "The adapter and fixture-maintenance burden exceeds the duplicated outer-orchestrator verification work it removes.",
+    "A future Rezon evidence-schema change forces Runner to interpret epistemic or failure semantics rather than versioned mechanical structure."
   ],
   "hostile_review": {
     "status": "PASS_WITH_LIMITS",
     "critical_objections": [
+      "The experiment now covers real success and real contract-violation PLAN exports through one unchanged Runner verifier, but still only one Rezon schema version and one outer orchestrator.",
+      "Rezon final R51 head has fresh local exact-source test evidence but no attached hosted CI run; this remains distinct from Runner hosted qualification.",
+      "Runner deliberately does not recompute Rezon's canonical producer-ID formula or interpret Rezon failure values; those are preserved semantic boundaries and verification ceilings.",
+      "Project Runner remains optional; the experiment does not establish maintenance savings or justify making Runner a mandatory Rezon dependency.",
+      "PROVEN_REUSABLE remains unjustified without a second materially independent outer consumer or measurable duplicated verification work removed."
+    ]
+  },
+  "notes": [
+    "Two real nondestructive REZON_RUNNER_BOUNDARY_V1 flows are now exercised: successful PLAN export and contract-violation PLAN export.",
+    "Result: REAL_SUCCESS_AND_FAILURE_PATH_MECHANICAL_INTEROP_WITH_UNCHANGED_VERIFIER.",
+    "Runner production verifier blob is unchanged across both flows: d7827dec743e69fff7f981d91d7a86f6cd4a4839.",
+    "Rezon failure taxonomy remains source-native and opaque to Runner; only coverage/binding is shared.",
+    "Candidate remains EXPERIMENTING. Pause further Rezon↔Runner expansion unless a second independent consumer or measurable maintenance benefit appears."
       "Success-path and real failure-path PLAN exports both cross the mechanical boundary, but this still does not establish net maintenance reduction, a second organic consumer, or reusable shared infrastructure.",
       "Rezon final head has fresh local exact-source test evidence but no attached hosted CI run; evidence classes must remain distinct.",
       "Runner independently checks cross-bindings but deliberately does not recompute Rezon's canonical producer-ID formula; that is a preserved authority boundary and also a verification ceiling.",

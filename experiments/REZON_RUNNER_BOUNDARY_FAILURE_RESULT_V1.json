@@ -1,0 +1,58 @@
+{
+  "schema": "DISCOVERY_REZON_RUNNER_FAILURE_PATH_RESULT_V1",
+  "status": "REAL_FAILURE_PATH_MECHANICAL_INTEROP_PASS",
+  "parent_experiment": {
+    "discovery_pr": 17,
+    "exact_head": "28810a2e63edb40af25f977fb0595c6a88458a75",
+    "result": "REAL_SUCCESS_PATH_MECHANICAL_INTEROP_PASS"
+  },
+  "rezon": {
+    "repository": "thebrazenbeard/rezon",
+    "exact_head": "8289914ec500a1392b10fe1a3774dee166e73b40",
+    "evidence_digest": "516146d1f01291510e5b31e645520ed5434760ff953139d6aba71ea4cc37e752",
+    "effect_state": "plan",
+    "receipt_failures": [
+      "contract_violation"
+    ],
+    "trace_failures": [
+      "contract_violation"
+    ],
+    "unresolved": [
+      "execution_result:invalid_contract:discovery-rezon-runner-failure-v1:exec:1:echo_hypothesis"
+    ],
+    "output_bindings": 0,
+    "producer_bindings": 0
+  },
+  "runner": {
+    "repository": "thebrazenbeard/project-runner",
+    "pull_request": 27,
+    "exact_head": "b48e2a19fa9e26eac233d1813ee04346e96b68a7",
+    "verifier_git_blob_sha1": "d7827dec743e69fff7f981d91d7a86f6cd4a4839",
+    "verifier_changed_from_success_path": false,
+    "hosted_run_id": 35517665284,
+    "hosted_result": "SUCCESS",
+    "tests": "228/228 PASS",
+    "registry_validation": "15 projects / 12 workers PASS",
+    "recursive_restart_proof": "PASS"
+  },
+  "established": [
+    "REAL_REZON_FAILURE_PATH_CROSSES_BOUNDARY",
+    "UNCHANGED_RUNNER_VERIFIER_ACCEPTS_STRUCTURALLY_VALID_FAILURE",
+    "RUNNER_CHECKS_FAILURE_COVERAGE_NOT_FAILURE_ONTOLOGY",
+    "REZON_UNRESOLVED_MARKERS_REMAIN_OPAQUE_TO_RUNNER",
+    "SUCCESS_AND_FAILURE_PATHS_SHARE_ONE_MECHANICAL_CONTRACT"
+  ],
+  "not_established": [
+    "SHARED_FAILURE_ONTOLOGY",
+    "REZON_TRUTH",
+    "REZON_ADMISSION",
+    "REZON_QUALIFICATION",
+    "RUNNER_COMPLETION_AUTHORITY_OVER_REZON",
+    "EXTERNAL_EFFECT_AUTHORIZATION",
+    "MANDATORY_RUNNER_DEPENDENCY",
+    "NET_MAINTENANCE_REDUCTION",
+    "PROVEN_REUSABLE"
+  ],
+  "disposition": "PAUSE_REZON_RUNNER_EXPANSION_PENDING_SECOND_INDEPENDENT_CONSUMER_OR_MEASURED_MAINTENANCE_BENEFIT",
+  "claim_ceiling": "EXPERIMENTING_SUCCESS_AND_FAILURE_MECHANICAL_INTEROP_NOT_EPISTEMIC_DELEGATION_NOT_PROVEN_REUSABLE"
+}
