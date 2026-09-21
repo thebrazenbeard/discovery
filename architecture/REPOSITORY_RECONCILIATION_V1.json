@@ -7,11 +7,14 @@
     "meaning": "initial commit only"
   },
   "proposed_candidate": {
+    "pr": 19,
     "sha_at_branch_creation": "250644f34bc7f0e16dc078487905ecfb8e537f02",
     "branch": "bt2/discovery-canonical-main-candidate-v1-20260920",
+    "base_main_sha": "96e6f8e9c776047f9068c897eab0406324187166",
     "qualified_pre_manifest_head": "f6cb708be5c60bf5085d43bb397b4b05cff164cc",
     "current_exact_head": "EXTERNAL_GIT_READ_REQUIRED",
-    "head_binding_rule": "A committed manifest cannot truthfully self-bind its own eventual commit SHA; bind review/currentness to the live PR ref and external exact-head evidence."
+    "head_binding_rule": "A committed manifest cannot truthfully self-bind its own eventual commit SHA; bind review/currentness to the live PR ref and external exact-head evidence.",
+    "source_lineage_terminal_pr": 17
   },
   "ancestry": {
     "current_stack": [
@@ -48,7 +51,8 @@
         "classification": "FAILED_PRESERVED_EVIDENCE_SUPERSEDED_BY_17_CURRENT",
         "reason": "diverged from old PR17 head 28810a2; current PR17 integrates failure-path evidence. PR18 result artifact still says REAL_FAILURE_PATH_INTEROP not established while candidate prose claims it."
       }
-    ]
+    ],
+    "current_stack_meaning": "SOURCE_LINEAGE_INHERITED_BY_CANONICALIZATION_WRAPPER_NOT_CURRENT_WRAPPER_IDENTITY"
   },
   "exact_evidence": {
     "main_to_pr17": {
@@ -109,8 +113,9 @@
     "14": "CURRENT_STACK_DEPENDENCY",
     "15": "CURRENT_STACK_DEPENDENCY",
     "16": "CURRENT_STACK_DEPENDENCY",
-    "17": "CURRENT_CANDIDATE",
-    "18": "FAILED_PRESERVED_EVIDENCE_SUPERSEDED_BY_17_CURRENT"
+    "17": "CURRENT_SOURCE_LINEAGE_TERMINAL",
+    "18": "FAILED_PRESERVED_EVIDENCE_SUPERSEDED_BY_17_CURRENT",
+    "19": "CURRENT_CANONICALIZATION_WRAPPER"
   },
   "canonicalization_effect_if_authorized_later": [
     "Merge one consolidation subject instead of individually merging the historical stack.",
