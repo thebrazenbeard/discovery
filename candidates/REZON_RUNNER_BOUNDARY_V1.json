@@ -35,6 +35,8 @@
     "Project Runner PR #27 exact head b48e2a19fa9e26eac233d1813ee04346e96b68a7 passed hosted workflow 35517665284 with 228/228 tests, registry validation, and M6 recursive restart proof.",
     "The Project Runner production verifier remained exact Git blob d7827dec743e69fff7f981d91d7a86f6cd4a4839 across successful and failure-path experiments.",
     "Hostile failure-path regression proves an unknown future Rezon failure token is accepted when receipt/trace coverage remains consistent, so Runner verifies failure binding rather than failure ontology."
+    "Real Rezon failure-path PLAN export from exact R51 source produced evidence digest 2f16bda0e304620772e5c8c8368ba7de190e77b879b5862d4b53d973db28cf53 with contract_violation preserved in both receipt and trace, no accepted/rejected claims, incomplete claim disposition, and an unresolved invalid-contract marker.",
+    "The same Project Runner PR #26 verifier accepted that exact failure artifact only as STRUCTURALLY_VALID_NON_PROMOTIONAL with one receipt failure and one trace failure; no Rezon truth/admission/completion semantics were produced."
   ],
   "rejection_conditions": [
     "Runner must understand Rezon-specific truth/admission semantics to verify the export.",
@@ -60,5 +62,19 @@
     "Runner production verifier blob is unchanged across both flows: d7827dec743e69fff7f981d91d7a86f6cd4a4839.",
     "Rezon failure taxonomy remains source-native and opaque to Runner; only coverage/binding is shared.",
     "Candidate remains EXPERIMENTING. Pause further Rezon↔Runner expansion unless a second independent consumer or measurable maintenance benefit appears."
+      "Success-path and real failure-path PLAN exports both cross the mechanical boundary, but this still does not establish net maintenance reduction, a second organic consumer, or reusable shared infrastructure.",
+      "Rezon final head has fresh local exact-source test evidence but no attached hosted CI run; evidence classes must remain distinct.",
+      "Runner independently checks cross-bindings but deliberately does not recompute Rezon's canonical producer-ID formula; that is a preserved authority boundary and also a verification ceiling.",
+      "Two predecessor Runner heads failed due fixture-transport provenance and malformed test-source issues before the final hosted PASS; those failures remain part of the evidence history.",
+      "This experiment does not yet establish net maintenance reduction or justify making Project Runner mandatory for Rezon."
+    ]
+  },
+  "notes": [
+    "First real nondestructive REZON_RUNNER_BOUNDARY_V1 experiment.",
+    "Result: REAL_REZON_EXPORT + INDEPENDENT_RUNNER_MECHANICAL_VERIFICATION / EPISTEMIC_AUTHORITY_RETAINED_BY_REZON.",
+    "Fixture generation required no package installation; Windows CRLF source bytes and GitHub LF persisted bytes are separately bound.",
+    "Candidate remains EXPERIMENTING; PROVEN_REUSABLE is not justified.",
+    "Failure-path falsifier PASS: contract_violation survived exact Rezon export and independent Runner structural verification without epistemic promotion.",
+    "Next falsifier: maintenance economics / organic second-consumer evidence. Do not centralize or make Runner mandatory merely because interoperability works."
   ]
 }

@@ -8,12 +8,16 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATE = ROOT / "candidates" / "REZON_RUNNER_BOUNDARY_V1.json"
 RESULT = ROOT / "experiments" / "REZON_RUNNER_BOUNDARY_RESULT_V1.json"
+FAILURE_FIXTURE = (
+    ROOT / "experiments" / "fixtures" / "rezon_run_evidence_v1_failure.json"
+)
 
 
 class RezonRunnerBoundaryDiscoveryTests(unittest.TestCase):
     def setUp(self):
         self.candidate = json.loads(CANDIDATE.read_text(encoding="utf-8"))
         self.result = json.loads(RESULT.read_text(encoding="utf-8"))
+        self.failure_fixture = json.loads(FAILURE_FIXTURE.read_text(encoding="utf-8"))
 
     def test_candidate_is_experimenting_not_proven_reusable(self):
         self.assertEqual(self.candidate["status"], "EXPERIMENTING")
@@ -81,6 +85,24 @@ class RezonRunnerBoundaryDiscoveryTests(unittest.TestCase):
                 "d000cfd39f1cf74c7a911cf08928f0d29ab4d6aa",
             },
         )
+
+    def test_real_failure_path_is_preserved_without_promotion(self):
+        fixture = self.failure_fixture
+        recorded = self.result["failure_path_fixture"]
+        self.assertEqual(fixture["evidence_digest"], recorded["evidence_digest"])
+        self.assertEqual(fixture["receipt"]["effect_state"], "plan")
+        self.assertEqual(fixture["receipt"]["failures"], ["contract_violation"])
+        self.assertEqual(fixture["executions"][0]["failures"], ["contract_violation"])
+        self.assertEqual(fixture["receipt"]["accepted_claim_ids"], [])
+        self.assertEqual(fixture["receipt"]["rejected_claim_ids"], [])
+        self.assertFalse(fixture["receipt"]["claim_disposition_complete"])
+        self.assertEqual(
+            recorded["runner_verification"]["status"],
+            "STRUCTURALLY_VALID_NON_PROMOTIONAL",
+        )
+        self.assertEqual(recorded["runner_verification"]["receipt_failure_count"], 1)
+        self.assertEqual(recorded["runner_verification"]["trace_failure_count"], 1)
+        self.assertNotIn("REAL_FAILURE_PATH_INTEROP", self.result["not_established"])
 
 
 if __name__ == "__main__":
