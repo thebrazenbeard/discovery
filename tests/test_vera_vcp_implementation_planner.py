@@ -63,24 +63,30 @@ class VeraVcpImplementationPlannerTests(unittest.TestCase):
         )
         self.assertEqual(0, result["source_actions_required"])
 
-    def test_active_candidate_mismatch_requires_reconciliation(self):
+    def test_active_candidate_role_difference_does_not_trigger_parallel_rewrite(self):
         repo = "thebrazenbeard/example"
         desired = implementation_map(subject(repo))
         candidate = registry(
             sources=[
                 {
                     "repository": repo,
-                    "runtime_role": "WRONG_ROLE",
-                    "activation_mode": "MECHANISM_RESEARCH_ONLY",
-                    "authority_ceiling": "test only",
+                    "runtime_role": "DIFFERENT_BOUNDED_ROLE",
+                    "activation_mode": "EVIDENCE_ONLY",
+                    "authority_ceiling": "candidate lane classification",
                     "availability_implies_activation": False,
                 }
             ]
         )
         result = planner.plan(desired, registry(), candidate)
+        action = result["actions"][0]
         self.assertEqual(
-            "RECONCILE_ACTIVE_CANDIDATE_SOURCE_ENTRY",
-            result["actions"][0]["disposition"],
+            "SATISFIED_BY_ACTIVE_CANDIDATE",
+            action["disposition"],
+        )
+        self.assertEqual(0, result["source_actions_required"])
+        self.assertEqual(
+            "DIFFERENT_BOUNDED_ROLE",
+            action["classification_difference"]["existing_runtime_role"],
         )
 
     def test_candidate_unbound_promotes_on_candidate_lane(self):
