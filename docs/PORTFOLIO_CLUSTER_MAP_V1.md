@@ -52,6 +52,10 @@ If that fails, deduplication is not justified.
 
 Private related repositories are included as additional overlap subjects or negative controls.
 
+The 2026-09-21 portfolio-wide default-head blob scan strengthens this family classification: across all 253 public-repository pairs, the only six pairs sharing any Git blob SHA are exactly the complete `bt2` / `god-brain` / `hc-brain` / `transcendence` clique. The other 247 public pairs share zero blob SHAs on that exact source cut.
+
+This isolates a real byte-identity cluster, but does not decide lineage direction or whether deduplication is beneficial.
+
 ## 5. Experiment mechanics
 
 Public anchors: `world-zero`, `mosaic`.
