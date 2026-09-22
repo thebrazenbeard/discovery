@@ -32,7 +32,11 @@
     "The God Brain/HC identical blobs account for 2,181,434 of 2,191,461 hc-brain blob bytes (99.54245136%).",
     "At exact main heads, bt2 and hc-brain share 188 paths; 178 same-path blobs are identical and 10 differ.",
     "The bt2/HC identical blobs account for 1,011,147 of 2,191,461 hc-brain blob bytes (46.14031461%); bt2 also has 329 unique blobs and hc-brain 112 unique blobs.",
-    "Full measurement method and exact subjects are recorded in experiments/COGNITIVE_PUBLIC_OVERLAP_REFRESH_V1.json."
+    "Full measurement method and exact subjects are recorded in experiments/COGNITIVE_PUBLIC_OVERLAP_REFRESH_V1.json.",
+    "Portfolio-wide default-head scan covers all 253 unordered pairs across the 23 public repositories; only six pairs share any Git blob SHA, and those six are exactly the complete bt2/god-brain/hc-brain/transcendence clique.",
+    "All 247 non-HC-family pairs share zero Git blob SHAs at the exact indexed default heads, reducing the likelihood that the measured HC overlap is ordinary repository-template noise.",
+    "God Brain ↔ Transcendence: 255 identical same-path blobs / 95.35251012% of the smaller repository byte surface.",
+    "bt2 ↔ Transcendence: 179 identical same-path blobs / 56.68164073% of the smaller repository byte surface."
   ],
   "rejection_conditions": [
     "Exact base-plus-overlay reconstruction cannot reproduce God Brain or bt2 target trees without importing project-specific authority or unrelated archives.",
@@ -51,6 +55,7 @@
   "notes": [
     "This candidate was generated from the live 2026-09-21 public census refresh rather than the prior seeded experiment queue.",
     "Next valid experiment: exact pinned-base-plus-overlay reconstruction for God Brain, followed by forward-change maintenance measurement.",
-    "bt2 requires provenance/lineage analysis before any reconstruction direction is chosen."
+    "bt2 requires provenance/lineage analysis before any reconstruction direction is chosen.",
+    "Full public byte-identity scan isolates a four-repository HC-family cluster, but branch-only/historical/semantic similarity remains outside that source cut."
   ]
 }
