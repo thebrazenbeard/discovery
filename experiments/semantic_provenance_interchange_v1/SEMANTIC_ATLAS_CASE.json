@@ -1,0 +1,90 @@
+{
+  "schema_version": "SEMANTIC_EVIDENCE_INTERCHANGE_V1",
+  "record_id": "SA_SEMANTIC_INTERFACE_FIDELITY_CURRENT_METHOD",
+  "record_mode": "OBSERVED_CURRENT_RECORD",
+  "project_subject": {
+    "repo": "thebrazenbeard/semanticatlas",
+    "exact_ref": "main@5669a727b870a490ecee748b2cd712a2fc4a54c5"
+  },
+  "proposition": {
+    "native_id": "PROP-b1cfd327-7276-4c12-9532-cff244332845",
+    "text": "Silent semantic translation contradicts semantic interface fidelity because an operational representation cannot preserve a governing semantic contract while unannounced reclassification changes that contract's meaning or requirement.",
+    "native_type": "candidate_proposition",
+    "native_status": "CURRENT_METHOD_PENDING_SCHEMA_MAPPING"
+  },
+  "source_bindings": [
+    {
+      "path": "research/staging/semantic_population_v0.2/candidate_propositions_v0.2_semantic_interface_fidelity_addendum.jsonl",
+      "blob_sha": "a963b50e88445e550f01d0b4049efc6a13baddce",
+      "native_record_ids": [
+        "PROP-b1cfd327-7276-4c12-9532-cff244332845"
+      ]
+    },
+    {
+      "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_semantic_interface_fidelity_addendum.jsonl",
+      "blob_sha": "7dc560a38c765e696de2ad86a0bde4444f84bb2f",
+      "native_record_ids": [
+        "VADJ-f895b498-bcab-4c12-b989-51fd32575561",
+        "VADJ-d1c6bb5c-49d3-4548-a2ad-ff1ce47f457c"
+      ]
+    },
+    {
+      "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_r8_exact_contract_recovery_addendum.jsonl",
+      "blob_sha": "ef8a7643d7afb9952087b6f9eb71b257edcf553f",
+      "native_record_ids": [
+        "EV-8996501b-749a-4c9a-890d-b66d1c543522",
+        "EV-a28828eb-dd66-4ec2-aba2-c73c5e4e6d75",
+        "EV-9dd6bf0a-7033-4557-82c6-bf5c265d21cd"
+      ]
+    }
+  ],
+  "evidence_bindings": [
+    {
+      "native_id": "EV-8996501b-749a-4c9a-890d-b66d1c543522",
+      "evidence_class": "NATIVE_CHAT_HISTORY_INDEPENDENT_ALIGNMENT_REVIEW",
+      "custody_status": "SEARCH_RESULT_SPAN_DIGEST_NOT_CAPTURED",
+      "source_path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_r8_exact_contract_recovery_addendum.jsonl",
+      "source_blob_sha": "ef8a7643d7afb9952087b6f9eb71b257edcf553f"
+    },
+    {
+      "native_id": "EV-a28828eb-dd66-4ec2-aba2-c73c5e4e6d75",
+      "evidence_class": "NATIVE_CHAT_HISTORY_WORKSTREAM_RETURN",
+      "custody_status": "SEARCH_RESULT_SPAN_DIGEST_NOT_CAPTURED",
+      "source_path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_r8_exact_contract_recovery_addendum.jsonl",
+      "source_blob_sha": "ef8a7643d7afb9952087b6f9eb71b257edcf553f"
+    },
+    {
+      "native_id": "EV-9dd6bf0a-7033-4557-82c6-bf5c265d21cd",
+      "evidence_class": "NATIVE_CHAT_HISTORY_INDEPENDENT_AUDIT",
+      "custody_status": "SEARCH_RESULT_SPAN_DIGEST_NOT_CAPTURED",
+      "source_path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_r8_exact_contract_recovery_addendum.jsonl",
+      "source_blob_sha": "ef8a7643d7afb9952087b6f9eb71b257edcf553f"
+    }
+  ],
+  "interpretation_state": {
+    "native_status": "DECIDED_PENDING_CANONICAL_SCHEMA_MAPPING",
+    "unresolved": false,
+    "surviving_alternatives": []
+  },
+  "currentness": {
+    "state": "CURRENT",
+    "observed_date": "2026-08-22",
+    "supersedes": []
+  },
+  "claim_ceiling": {
+    "native_label": "DECIDED_PENDING_CANONICAL_SCHEMA_MAPPING",
+    "text": "Current Semantic Atlas method in non-canonical research staging; semantic reclassification must be explicit and traceable. Historical evidence includes recovered spans whose direct artifact custody is incomplete."
+  },
+  "native_extension_refs": [
+    {
+      "path": "research/staging/semantic_population_v0.2/candidate_definitions_v0.2_semantic_interface_fidelity_addendum.jsonl",
+      "blob_sha": "0023fb08053736739cde2a25a36dfd894fa5cc95",
+      "purpose": "Project-native definition remains authoritative outside the interchange envelope."
+    },
+    {
+      "path": "research/staging/semantic_population_v0.2/candidate_nodes_v0.2_semantic_interface_fidelity_addendum.jsonl",
+      "blob_sha": "0ef86bb05bd49b40f79a4dbaf2acfc8112dbed5e",
+      "purpose": "Project-native node/semantic-key model remains authoritative outside the interchange envelope."
+    }
+  ]
+}
