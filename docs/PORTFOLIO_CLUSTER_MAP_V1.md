@@ -142,6 +142,16 @@ Default posture:
 
 The strongest immediate falsifier is to identify one minimal record/evaluation contract independently needed by at least two projects, then prove each project's native semantic model remains strictly richer and authoritative.
 
+First executed falsifier: `SEMANTIC_PROVENANCE_INTERCHANGE_EXPERIMENT_V1`.
+
+- Semantic Atlas contributes an observed current `SEMANTIC_INTERFACE_FIDELITY` method/adjudication with exact evidence bindings and custody limitations.
+- UNVTRSLR contributes C047 as a `DESIGN_REQUIREMENT` / specified control case with **zero empirical evidence bindings**, because its R2 harness is not built.
+- SPM can consume six evaluation dimensions structurally from the shared envelope without treating project-native statuses, ontology nodes, substrate semantics, or evaluator truth labels as shared meaning.
+
+Result: `PASS_WITH_LIMITS`.
+
+The candidate remains `HYPOTHESIS`. This experiment shows a narrow envelope can preserve the proposition/evidence/currentness/claim-ceiling distinctions for two materially different cases; it does not show favorable maintenance economics or production reuse.
+
 ## 11. 2026-09-21 public-surface refresh
 
 Visibility changes are not architectural promotion. They do, however, permit exact public-safe source binding where Discovery previously had to stay aggregate or opaque.
