@@ -3,7 +3,7 @@
   "candidate_id": "PORTFOLIO_CENSUS_DRIFT_INPUT_V1",
   "title": "Reuse an exact privacy-safe portfolio census as non-authoritative drift input",
   "status": "EXPERIMENTING",
-  "claim": "Discovery's exact public-safe repository census may be reusable as a narrow drift/currentness input across independent consumers when each consumer verifies the exact artifact bytes and preserves its own runtime registry, scheduling semantics, authority model, and private inventory.",
+  "claim": "Discovery's exact public-safe repository census remains a viable non-authoritative drift input, and the real 57→58 inventory transition demonstrates stale-input rejection by the public Project Runner consumer. However, synchronized refresh to the current Discovery census is not demonstrated: Project Runner quarantined the stale binding instead of rebinding, and the opaque consumer's refresh state is not publicly verifiable.",
   "consumers": [
     {
       "repo": "thebrazenbeard/project-runner",
@@ -37,7 +37,12 @@
     "Discovery census subject vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea, blob 34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df, records 57 repositories and all-name digest 43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd.",
     "Discovery exact-head workflow run 35475731990 passed structural validation on the bound census source.",
     "Project Runner consumer head b763c707abacc7dfe30dc451b2b42354a30e3621 validates the exact Discovery Git blob bytes and hosted workflow run 35509678751 executed successfully.",
-    "Private consumer attestation receipt digest 1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969 binds an exact private subject to the same census digest without publishing the private identity/ref."
+    "Private consumer attestation receipt digest 1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969 binds an exact private subject to the same census digest without publishing the private identity/ref.",
+    "Real provider transition: Discovery census moved from blob 34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df (57 total / 12 public / 45 private) to blob 1b46d74176f8d67f3c1bd53bfcf2f369b89e9d8d (58 total / 23 public / 35 private).",
+    "Project Runner PR #23 verifier deterministically rejects any census bytes whose Git blob does not equal its bound old blob; the new Discovery census therefore cannot pass the stale binding.",
+    "Project Runner PR #29 exact reconciliation classifies PR #23 as BLOCKED_STALE_EXTERNAL_CURRENTNESS and excludes it from the current minimal baseline.",
+    "Project Runner PR #29 did not bind the current Discovery 58-repository blob; its own 2026-09-20 visibility split was 14 public / 44 private, so same total count did not establish synchronized census currentness.",
+    "No new public-safe opaque-consumer attestation is present in this Discovery transition, and DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1 explicitly forbids treating the public commitment as proof of hidden refresh behavior."
   ],
   "rejection_conditions": [
     "Either consumer begins treating the Discovery census as its runtime registry, scheduling authority, target authority, or semantic source of truth.",
@@ -50,15 +55,20 @@
   "hostile_review": {
     "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "The private consumer is digest-attested but not publicly independently verifiable; it cannot support PROVEN_REUSABLE under the current privacy mechanism.",
-      "The census proves repository-set observation only. It says nothing about project classification, currentness, schedulability, authority, or runtime activation.",
-      "Both consumers currently bind one Discovery-produced artifact, so Discovery could become accidental operational gravity if they require live availability instead of treating verified bytes as replaceable input.",
-      "Measured maintenance reduction has not yet been established; this experiment proves interoperable consumption, not net portfolio savings."
+      "Stale rejection is demonstrated for the public consumer, but synchronized refresh is not; detection alone does not prove low maintenance cost.",
+      "Matching repository total does not prove matching census currentness when visibility split and digests differ.",
+      "The opaque consumer cannot support a public refresh claim under V1 attestation; no new public-safe refresh receipt is present.",
+      "The current Discovery all-name digest is externally supplied rather than source-recomputed, so consumers must preserve that evidence-class ceiling.",
+      "Discovery must not become live operational gravity merely because consumers use its census as a replaceable observational input."
     ]
   },
   "notes": [
     "First real public+private consumer experiment for Discovery's portfolio census/drift mechanism.",
     "Private consumer identity/ref remain outside this public repository; only the V1 public attestation surface is included.",
-    "PROVEN_REUSABLE remains fail-closed while any consumer is PRIVATE_OPAQUE."
+    "PROVEN_REUSABLE remains fail-closed while any consumer is PRIVATE_OPAQUE.",
+    "Real 57→58 drift transition executed: public stale rejection PASS; refresh to current Discovery census NOT_DEMONSTRATED.",
+    "Opaque-consumer stale rejection and refresh remain NOT_PUBLICLY_VERIFIABLE under V1 attestation.",
+    "Candidate remains EXPERIMENTING; PROVEN_REUSABLE remains false.",
+    "See experiments/PORTFOLIO_CENSUS_DRIFT_TRANSITION_V1.*."
   ]
 }
