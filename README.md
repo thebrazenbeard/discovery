@@ -78,3 +78,11 @@ The first exact remeasurement found:
 Those observations generated `HC_FAMILY_LINEAGE_V1` as a HYPOTHESIS, not a consolidation decision.
 
 The same intake exposes public anchors for previously opaque families including industrial diagnostics (`abil`), semantic grounding/provenance (`semanticatlas`, `spm`, `unvtrslr`), and Vera transport/runtime packaging (`vera-mesh`, `vera-synology`).
+
+The second-pass source review narrows those frontiers further:
+
+- `VERAMESH_SYNOLOGY_HANDOFF_V1` is now a HYPOTHESIS for a neutral source/build/install/runtime-currentness handoff; transport/session authority remains VeraMesh-owned and package/install authority remains Vera Synology-owned.
+- the public industrial handoff frontier remains held because no defensible second public industrial subject was found on the current cut;
+- `voss` remains `INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE` rather than being promoted from a role label alone.
+
+See `experiments/PUBLIC_INTAKE_SECOND_PASS_V1.*` for the source-bound dispositions.
