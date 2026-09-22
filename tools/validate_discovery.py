@@ -11,10 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 CENSUS = ROOT / "portfolio" / "PORTFOLIO_CENSUS_V1.json"
 GRAPH = ROOT / "portfolio" / "PUBLIC_RELATIONSHIP_GRAPH_V1.json"
 PUBLIC_INTAKE = ROOT / "portfolio" / "PUBLIC_SUBJECT_INTAKE_20260921_V1.json"
-PUBLIC_BLOB_SHARDS = (
+CANONICAL_PUBLIC_BLOB_SHARDS = (
     ROOT / "experiments" / "public_blob_index_v1" / "SHARD_A.json",
     ROOT / "experiments" / "public_blob_index_v1" / "SHARD_B.json",
 )
+PUBLIC_BLOB_SHARDS = CANONICAL_PUBLIC_BLOB_SHARDS
 PUBLIC_BLOB_SCAN = ROOT / "experiments" / "PUBLIC_BLOB_OVERLAP_SCAN_V1.json"
 TREE_BINDING_REPAIR = ROOT / "experiments" / "PUBLIC_TREE_BINDING_REPAIR_V1.json"
 HC_ANCESTRY = ROOT / "experiments" / "HC_COMMON_BRANCH_ANCESTRY_V1.json"
@@ -555,7 +556,7 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
             "path": path.relative_to(ROOT).as_posix(),
             "blob": _git_blob_sha1(path),
         }
-        for path in PUBLIC_BLOB_SHARDS
+        for path in CANONICAL_PUBLIC_BLOB_SHARDS
     ]
     if scan.get("source_shards") != expected_source_shards:
         errors.append("public blob scan source shard bindings mismatch")
