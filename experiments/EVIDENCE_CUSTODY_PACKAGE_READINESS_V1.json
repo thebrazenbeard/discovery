@@ -1,0 +1,66 @@
+{
+  "schema": "DISCOVERY_EVIDENCE_CUSTODY_PACKAGE_READINESS_V1",
+  "observed_date": "2026-09-22",
+  "source_visibility": "PRIVATE_OPAQUE",
+  "source_identity_published": false,
+  "source_evidence_class": "AUTHENTICATED_PRIVATE_GITHUB_SOURCE_REVIEW",
+  "public_replayability": "NOT_PUBLICLY_REPLAYABLE",
+  "current_main_package_state": {
+    "truthful_package_identity": false,
+    "stale_unrelated_package_metadata_present": true,
+    "stale_unrelated_cli_or_build_targets_present": true,
+    "reusable_distribution_ready": false
+  },
+  "active_package_repair": {
+    "source_metadata_truthful": true,
+    "package_identity_narrowed_to_custody_package": true,
+    "inherited_runtime_dependencies_removed": true,
+    "wheel_target_narrowed_to_actual_package": true,
+    "cli_surface_narrowed_to_actual_package": true,
+    "mypy_target_narrowed_to_actual_package": true,
+    "narrow_public_api_contract_present": true,
+    "custody_vs_domain_authority_boundary_explicit": true,
+    "package_ci_defined": true,
+    "consolidation_carries_same_package_blobs": true,
+    "merged_or_released": false
+  },
+  "qualification": {
+    "source_compile": "PASS",
+    "direct_import": "PASS",
+    "declared_public_api_symbols": "PASS",
+    "cli_help": "PASS",
+    "windows_test_collection": 103,
+    "windows_tests_passed": 47,
+    "windows_tests_failed": 56,
+    "windows_failure_classes": [
+      "checkout-line-ending-sensitive frozen benchmark receipt digest",
+      "POSIX no-follow filesystem primitive unavailable on Windows for export/import custody paths"
+    ],
+    "declared_python_floor": "3.11+",
+    "explicit_os_platform_ceiling_present": false,
+    "hosted_package_ci": "PRE_STEP_NO_EXECUTION",
+    "clean_install_qualification": "UNRESOLVED",
+    "wheel_sdist_build_qualification": "UNRESOLVED",
+    "general_installability": "NOT_ESTABLISHED"
+  },
+  "package_readiness_result": {
+    "disposition": "FIRST_TASK_NOT_CLOSED_SOURCE_REPAIR_PRESENT_PLATFORM_CONTRACT_BLOCKED",
+    "source_package_repair": "PASS_AT_SOURCE_SCOPE",
+    "cross_platform_contract": "FAIL_CURRENT_DECLARATION",
+    "installable_package_gate": "UNRESOLVED",
+    "reusable_interchange_evaluation_allowed": false
+  },
+  "next_valid_gate": [
+    "Either declare and qualify an explicit supported POSIX platform/filesystem ceiling, or implement and qualify equivalent safe Windows custody semantics.",
+    "Make frozen benchmark artifacts checkout-stable across supported environments.",
+    "Obtain executed clean install/test/lint/type/build/import/CLI package qualification on the resulting exact source subject.",
+    "Only after package readiness closes should Discovery bind a first materially independent real consumer."
+  ],
+  "claim_ceiling": [
+    "No private repository identity, exact ref, branch name, PR number, or source path is published by this artifact.",
+    "Private source-review evidence is not independently replayable from this public repository.",
+    "The package repair does not establish release, installation, deployment, provider state, global evidence-database authority, or downstream truth authority.",
+    "Windows failures are evidence that the declared package support contract is too broad; fail-closed POSIX-only behavior is not itself classified as a custody-security defect.",
+    "No first real independent consumer has been demonstrated."
+  ]
+}
