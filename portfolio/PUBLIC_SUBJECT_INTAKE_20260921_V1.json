@@ -1,6 +1,6 @@
 {
   "schema": "DISCOVERY_PUBLIC_SUBJECT_INTAKE_V1",
-  "observed_date": "2026-09-21",
+  "observed_date": "2026-09-22",
   "prior_public_cut": {
     "observed_date": "2026-09-19",
     "public_count": 12,
@@ -28,9 +28,9 @@
     "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
   },
   "current_public_cut": {
-    "observed_date": "2026-09-21",
-    "public_count": 23,
-    "public_names_sha256": "25fe6601b4c664490bfe4494d8650dca4804ff5607ff599ee5ec0981a2f177d7"
+    "observed_date": "2026-09-22",
+    "public_count": 24,
+    "public_names_sha256": "a35c5bb3e0b99e99592b2e9535db1e2bf9a8bfc2582f113ccc1547c3607ae86e"
   },
   "scope": "Repositories publicly nameable in the current census that were not named in the prior public census.",
   "authority_ceiling": "OBSERVED_CLASSIFICATION_INPUT_ONLY",
@@ -150,11 +150,22 @@
       "observed_role": "Forensic auditor/reviewer subject.",
       "disposition": "INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE",
       "next_question": "Revisit only when public source exposes an audit/review contract, receipt, exact-head binding, or implementation that can be compared mechanically."
+    },
+    {
+      "repo": "thebrazenbeard/WorkBridgeMCP",
+      "ref": "main@12bcbec3a4bda69e8b9361317feb8e9d9d47b6df",
+      "primary_families": [
+        "COORDINATION_TRANSPORT",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "observed_role": "Public workstation-bridge repository whose current main is a stub while PR #5 contains the qualified implementation candidate.",
+      "disposition": "RUNTIME_BRIDGE_CANDIDATE_NOT_CURRENT_RUNTIME",
+      "next_question": "Complete exact-head review/canonicalization of PR #5, then separately verify installation and MCP client/runtime registration before treating WorkBridge as consumed."
     }
   ],
   "anti_cherry_pick_result": {
-    "subjects_expected": 11,
-    "subjects_recorded": 11,
+    "subjects_expected": 12,
+    "subjects_recorded": 12,
     "rule": "Every repository newly nameable relative to the prior public census receives an explicit disposition; lack of immediate candidate generation is itself recorded."
   },
   "validation_ceiling": "Current public list/count/digest and the exact historical prior-public cut are source-validated. Private/all-name digests remain externally supplied commitments and this public artifact does not claim content-wide proof that no private name occurs anywhere."
