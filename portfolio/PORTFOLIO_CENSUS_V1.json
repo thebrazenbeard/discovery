@@ -1,36 +1,47 @@
 {
   "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1",
-  "observed_date": "2026-09-19",
+  "observed_date": "2026-09-21",
   "source": "GitHub accessible repository inventory for owner thebrazenbeard",
   "status": "OBSERVED_INVENTORY_NOT_ARCHITECTURAL_AUTHORITY",
   "counts": {
-    "total": 57,
-    "public": 12,
-    "private": 45
+    "total": 58,
+    "public": 23,
+    "private": 35
   },
   "public_repositories": [
+    "Attune",
+    "abil",
+    "bt2",
     "discovery",
     "driftguard",
+    "god-brain",
     "hc-brain",
     "mosaic",
+    "noema",
     "on-theo",
     "project-runner",
     "rezon",
     "roots",
+    "semanticatlas",
+    "spm",
     "testament",
     "transcendence",
+    "unvtrslr",
+    "vera-mesh",
+    "vera-synology",
+    "voss",
     "wip",
     "world-zero"
   ],
   "inventory_digests": {
     "algorithm": "SHA-256 over lexicographically sorted repository names, UTF-8, one name per line with trailing newline",
-    "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34",
-    "private_names_sha256": "11d06664d55b63998530eba7ab6047488e0fe384de6f444331f8b21b9d4df8df",
-    "all_names_sha256": "43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd"
+    "public_names_sha256": "25fe6601b4c664490bfe4494d8650dca4804ff5607ff599ee5ec0981a2f177d7",
+    "private_names_sha256": "bef511eac762ae94bc697b8a42311f48300d9b44c61830ef95b8d7b9e5069489",
+    "all_names_sha256": "c854d8891e87272f7bc1bb6530aedc339581a51a6be6026efb087c6be08e7a2d"
   },
   "privacy_rule": "Private repository names and private technical detail are intentionally not published by this public repository. Private repositories still participate in the analysis and aggregate counts.",
   "discovery_roles": {
-    "direct_architecture_subjects": 32,
+    "direct_architecture_subjects": 33,
     "boundary_or_negative_control_consumers": 22,
     "historical_or_reference_only": 2,
     "discovery_self": 1
@@ -42,5 +53,5 @@
     "discovery_self": "Discovery must also be reviewed for overreach and accidental framework gravity."
   },
   "completeness_rule": "A repository does not need to be a consolidation candidate to be included. Exclusion from a particular experiment must be explicit rather than inferred from absence.",
-  "refresh_rule": "Any change in repository count or any inventory digest invalidates claims that this exact census is current."
+  "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current."
 }
