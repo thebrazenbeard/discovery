@@ -3,7 +3,7 @@
   "candidate_id": "EVIDENCE_CUSTODY_INTERCHANGE_V1",
   "title": "Reusable evidence custody and interchange without a global truth database",
   "status": "HYPOTHESIS",
-  "claim": "A private portfolio evidence-custody implementation may provide narrow reusable evidence-record and custody mechanics to independent projects while each project retains its own database, semantics, privacy boundary, and authority.",
+  "claim": "A private portfolio evidence-custody implementation may still provide narrow reusable custody/provenance/interchange mechanics without becoming a global truth database, but reuse evaluation is premature. Authenticated private-source review shows the active package repair is truthful at source scope while general installability remains unqualified and the declared cross-platform support contract is currently too broad.",
   "consumers": [
     {
       "repo": "PRIVATE_EVIDENCE_CUSTODY_SYSTEM",
@@ -21,7 +21,12 @@
     "Lantern records do not decide project-specific truth or authority.",
     "Projects retain independent retention/privacy policies."
   ],
-  "promotion_evidence": [],
+  "promotion_evidence": [
+    "Authenticated private-source review confirms a bounded package repair removes stale unrelated package metadata, narrows the package/CLI/type-check surface to the custody implementation, removes inherited runtime dependencies, and defines a narrow public API with an explicit no-domain-authority boundary.",
+    "A later private consolidation subject carries the same package-repair blobs unchanged.",
+    "Independent portability review: source compile, direct import, declared public API symbols, and CLI help PASS, but Windows execution collected 103 tests with 47 PASS / 56 FAIL across checkout-line-ending and POSIX filesystem-primitive portability classes.",
+    "Hosted private package workflows are PRE_STEP_NO_EXECUTION, so clean install/test/lint/type/build/import/CLI qualification remains unresolved."
+  ],
   "rejection_conditions": [
     "Consumers must adopt Lantern-specific domain semantics rather than neutral custody mechanics.",
     "Lantern becomes a mandatory single point of failure.",
@@ -29,14 +34,20 @@
     "A second materially independent real consumer cannot be demonstrated."
   ],
   "hostile_review": {
-    "status": "NOT_RUN",
+    "status": "FAIL",
     "critical_objections": [
-      "A common evidence format can become a hidden common ontology.",
-      "Operational convenience may pressure projects into centralizing state."
+      "The package support contract is operationally broader than the environments in which major custody paths are qualified.",
+      "Fail-closed POSIX no-follow behavior is acceptable security posture, but without an explicit platform ceiling it makes the distribution contract misleading.",
+      "A line-ending-sensitive frozen benchmark receipt undermines checkout-stable package qualification.",
+      "Hosted package CI has not executed steps, so source metadata repair cannot be relabeled as clean package qualification.",
+      "No materially independent real consumer has been demonstrated; package readiness must close before reuse economics or semantic neutrality can be tested."
     ]
   },
   "notes": [
-    "The private implementation identity is intentionally not published by this public repository.",
-    "The first task is to make the candidate custody implementation a truthful, installable package before judging reuse."
+    "The private implementation identity remains intentionally unpublished by this public repository.",
+    "First package task result: SOURCE_REPAIR_PRESENT / PLATFORM_CONTRACT_BLOCKED / CLEAN_INSTALL_UNRESOLVED.",
+    "Candidate remains HYPOTHESIS; reuse evaluation is not yet allowed.",
+    "Next gate belongs to the private owner lane: either qualify an explicit POSIX platform/filesystem ceiling or implement equivalent safe Windows semantics, make frozen artifacts checkout-stable, and obtain executed clean package qualification.",
+    "See experiments/EVIDENCE_CUSTODY_PACKAGE_READINESS_V1.*."
   ]
 }
