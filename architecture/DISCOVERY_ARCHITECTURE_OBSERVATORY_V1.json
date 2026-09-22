@@ -1,0 +1,185 @@
+{
+  "schema": "DISCOVERY_ARCHITECTURE_OBSERVATORY_V1",
+  "status": "RESEARCH_ARCHITECTURE_HYPOTHESIS_NO_RUNTIME_AUTHORITY",
+  "parent_subject": "vera/discovery-federated-cohesion-falsifier-round-v1-20260922@0ead7c2e8752d447f6cc55cdbb921529317f9e0c",
+  "role": "PORTFOLIO_ARCHITECTURE_OBSERVATORY_AND_REUSE_LABORATORY",
+  "hard_invariants": [
+    "DELETE_DISCOVERY_DOES_NOT_BREAK_PROJECT_LOCAL_OPERATION",
+    "OBSERVATION_IS_NOT_AUTHORITY",
+    "CONFIDENCE_IS_NOT_EVIDENCE_CLASS",
+    "NO_SELF_CORROBORATION",
+    "FAIL_CLOSED_CURRENTNESS",
+    "NEGATIVE_CONTROLS_ARE_FIRST_CLASS",
+    "NO_AUTOMATIC_PROMOTION",
+    "NO_MANDATORY_DISCOVERY_RUNTIME",
+    "PRIVACY_BOUNDARIES_SURVIVE_OBSERVABILITY",
+    "REUSE_MUST_PAY_RENT"
+  ],
+  "planes": [
+    {
+      "id": "OBSERVE",
+      "runtime_authority": false,
+      "purpose": "Capture exact time-bound source observations and externally governed evidence."
+    },
+    {
+      "id": "DETECT",
+      "runtime_authority": false,
+      "purpose": "Generate bounded relationship and reuse-candidate signals from multiple detector classes."
+    },
+    {
+      "id": "FALSIFY",
+      "runtime_authority": false,
+      "purpose": "Record strongest opposition, alternative explanations, and rejection conditions before extraction."
+    },
+    {
+      "id": "EXPERIMENT",
+      "runtime_authority": false,
+      "purpose": "Measure real consumer integration, rollback, failure isolation, and maintenance economics."
+    },
+    {
+      "id": "IMPACT_RADAR",
+      "runtime_authority": false,
+      "purpose": "Invalidate stale evidence and surface possible sibling/dependent effects after subject movement."
+    }
+  ],
+  "detector_ladder": [
+    {
+      "id": "D0_EXACT_GIT_IDENTITY",
+      "evidence_class": "EXACT_MECHANICAL",
+      "max_claim_state": "OBSERVED",
+      "required_corroboration": "NONE_FOR_LITERAL_IDENTITY_ONLY",
+      "limitations": "Does not establish semantic equivalence, ownership, or reuse value."
+    },
+    {
+      "id": "D1_NORMALIZED_LEXICAL",
+      "evidence_class": "DERIVED_MECHANICAL",
+      "max_claim_state": "HYPOTHESIS",
+      "required_corroboration": "EXACT_SOURCE_BINDINGS_AND_INDEPENDENT_CHECK",
+      "limitations": "Normalization can erase meaningful distinctions."
+    },
+    {
+      "id": "D2_AST_STRUCTURE",
+      "evidence_class": "DERIVED_STRUCTURAL",
+      "max_claim_state": "HYPOTHESIS",
+      "required_corroboration": "EXACT_SOURCE_BINDINGS_AND_INDEPENDENT_CHECK",
+      "limitations": "Structural similarity does not prove equivalent semantics or provenance."
+    },
+    {
+      "id": "D3_INTERFACE_DEPENDENCY_WORKFLOW",
+      "evidence_class": "DERIVED_ARCHITECTURAL",
+      "max_claim_state": "HYPOTHESIS",
+      "required_corroboration": "EXACT_SOURCE_BINDINGS_AND_NATIVE_CONTRACT_REVIEW",
+      "limitations": "Similar interface shape may hide incompatible authority or lifecycle semantics."
+    },
+    {
+      "id": "D4_BEHAVIORAL",
+      "evidence_class": "EXECUTABLE_BEHAVIORAL",
+      "max_claim_state": "HYPOTHESIS",
+      "required_corroboration": "REPRODUCIBLE_EXECUTION_AND_NATIVE_BOUNDARY_REVIEW",
+      "limitations": "Matching observed behavior may be input-limited and does not prove implementation identity."
+    },
+    {
+      "id": "D5_SEMANTIC_LLM_NOMINATION",
+      "evidence_class": "INFERRED_SEMANTIC",
+      "max_claim_state": "HYPOTHESIS",
+      "required_corroboration": "NON_SELF_REFERENTIAL_EXTERNAL_OR_EXECUTABLE_EVIDENCE",
+      "limitations": "Broad-recall nomination only; vulnerable to false equivalence, benchmark shortcuts, and model overinterpretation."
+    }
+  ],
+  "promotion_rules": {
+    "detector_output_can_auto_promote": false,
+    "experimenting_requires": "REAL_BOUNDED_INTEGRATION_WITH_ROLLBACK_AND_HOSTILE_REVIEW",
+    "proven_reusable_requires": "AT_LEAST_TWO_MATERIALLY_INDEPENDENT_REAL_CONSUMERS_PLUS_MEASURED_NET_VALUE_AND_CLEAN_HOSTILE_REVIEW",
+    "interoperability_alone_is_reuse_value": false
+  },
+  "staleness_policy": {
+    "mode": "FAIL_CLOSED",
+    "subject_movement_effect": "DEPENDENT_CURRENT_CLAIMS_BECOME_STALE",
+    "historical_evidence_preserved": true,
+    "silent_currentness_transfer": false
+  },
+  "economics_required": [
+    "PREEXISTING_DUPLICATED_NON_DOMAIN_WORK",
+    "SHARED_IMPLEMENTATION_ADDED",
+    "ADAPTER_OR_VERIFIER_COST",
+    "TEST_AND_QUALIFICATION_COST",
+    "DEPENDENCY_EDGES_INTRODUCED",
+    "FAILURE_CLASS_PREVENTED",
+    "ROLLBACK_FALLBACK_COST",
+    "CHANGE_PROPAGATION_COST",
+    "LOCAL_OPERABILITY_WITHOUT_DISCOVERY"
+  ],
+  "hostile_review": {
+    "status": "PASS_WITH_BLOCKING_GUARDS",
+    "objections": [
+      {
+        "id": "HR-OBS-001",
+        "severity": "CRITICAL",
+        "challenge": "Discovery can become a de facto central authority even without formal runtime authority.",
+        "guard": "DELETE_DISCOVERY invariant and no project-local runtime dependency."
+      },
+      {
+        "id": "HR-OBS-002",
+        "severity": "HIGH",
+        "challenge": "Structural and semantic detectors can manufacture plausible false relationships.",
+        "guard": "D1-D5 ceilings at HYPOTHESIS plus exact bindings and independent corroboration."
+      },
+      {
+        "id": "HR-OBS-003",
+        "severity": "HIGH",
+        "challenge": "Graph staleness can create false confidence.",
+        "guard": "Fail-closed invalidation on exact subject movement."
+      },
+      {
+        "id": "HR-OBS-004",
+        "severity": "HIGH",
+        "challenge": "Reuse metrics can be gamed by counting deleted lines while ignoring complexity.",
+        "guard": "Multi-dimensional economics including adapters, tests, dependencies, rollback, blast radius, and propagation."
+      },
+      {
+        "id": "HR-OBS-005",
+        "severity": "HIGH",
+        "challenge": "Negative controls can become an excuse to preserve all duplication.",
+        "guard": "Repeated sibling fixes or recurring equivalent maintenance shift burden toward extraction experiments."
+      },
+      {
+        "id": "HR-OBS-006",
+        "severity": "CRITICAL",
+        "challenge": "Discovery-generated inference can recursively validate itself.",
+        "guard": "No self-corroboration; derived claims trace to external exact or executable evidence."
+      },
+      {
+        "id": "HR-OBS-007",
+        "severity": "HIGH",
+        "challenge": "The observatory may cost more to maintain than the duplication it studies.",
+        "guard": "Detector/plugin kill criterion when repeated portfolio value is not demonstrated."
+      }
+    ]
+  },
+  "initial_build_order": [
+    "SNAPSHOT_ENGINE",
+    "CURRENTNESS_INVALIDATION_ENGINE",
+    "DETECTOR_PLUGIN_CONTRACT",
+    "EVIDENCE_GRAPH_PROJECTION",
+    "IMPACT_RADAR",
+    "EXPERIMENT_ACCOUNTING",
+    "OPTIONAL_UI_SEARCH"
+  ],
+  "first_implementation_target": {
+    "id": "READ_ONLY_SNAPSHOT_CURRENTNESS_PIPELINE",
+    "reason": "Discovery currently validates snapshots more strongly than it produces them.",
+    "protected_effects": false,
+    "required_snapshot_fields": [
+      "repository",
+      "visibility_class",
+      "observed_ref",
+      "exact_commit",
+      "exact_tree_if_available",
+      "observed_at",
+      "acquisition_method",
+      "publication_policy",
+      "status"
+    ]
+  },
+  "claim_ceiling": "ARCHITECTURE_OBSERVATORY_HYPOTHESIS_READ_ONLY_DISCOVERY_FIRST_NO_RUNTIME_AUTHORITY_NO_AUTOMATIC_PROMOTION"
+}
