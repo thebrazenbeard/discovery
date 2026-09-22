@@ -18,6 +18,8 @@ Questions:
 
 Strong current hypothesis: Project Runner can own generic durable execution while WIP contributes recovery/effect-state semantics. This remains an experiment, not a declaration.
 
+The separate Rezon↔Runner boundary remains mechanically valid but is no longer well described as producer-agnostic. Current Project Runner PR #31 mirrors deterministic Rezon producer-ID construction and enforces generic claim-disposition restrictions to close real hostile counterexamples. That preserves epistemic authority separation, but it creates measurable producer-contract maintenance coupling. From the original Discovery verifier to the current successor, the line grew by 11 commits / 7 files / +445/-16 with no demonstrated second organic direct consumer or net code-removal benefit.
+
 ## 2. Evidence, provenance, and custody
 
 Public anchors: `roots`, `testament`, `on-theo`, `semanticatlas`, `voss`.
