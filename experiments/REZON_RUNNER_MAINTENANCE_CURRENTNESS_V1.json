@@ -1,0 +1,96 @@
+{
+  "schema": "DISCOVERY_REZON_RUNNER_MAINTENANCE_CURRENTNESS_V1",
+  "observed_date": "2026-09-22",
+  "exact_subjects": {
+    "rezon_producer": {
+      "repo": "thebrazenbeard/rezon",
+      "ref": "PR79@8289914ec500a1392b10fe1a3774dee166e73b40",
+      "exporter_blob": "e365fd637904d4402891839ab1e187e50694e96b"
+    },
+    "runner_original": {
+      "repo": "thebrazenbeard/project-runner",
+      "ref": "PR26@4de0f6148b3d7d04ccdb4e0057435fa0d904590a",
+      "verifier_blob": "d7827dec743e69fff7f981d91d7a86f6cd4a4839",
+      "verifier_lines": 314,
+      "primary_test_blob": "697594a36f6246938063550c3c58938269cc97d7",
+      "primary_test_lines": 132,
+      "hosted_run": "35517367117",
+      "hosted_tests": 222
+    },
+    "runner_current": {
+      "repo": "thebrazenbeard/project-runner",
+      "ref": "PR31@8e588bd1cb72808b4a611d2a0bcbaeba6cb10b15",
+      "verifier_blob": "d46b1c310c8cf51ae495822f5cefbec414fb6ba9",
+      "verifier_lines": 387,
+      "primary_test_blob": "60fc815015895cdd09ecd28297127bc06a2f2285",
+      "primary_test_lines": 212,
+      "failure_test_blob": "f007d87f43d80369008e6a2c4a1295e0a7623872",
+      "failure_test_lines": 105,
+      "boundary_doc_blob": "8c8c1ba8b8002d2ff78c27a8099886b76642e590",
+      "boundary_doc_lines": 74,
+      "failure_fixture_blob": "9e430e811836873b9b5a9bd5e372cc1a6beab41f",
+      "failure_binding_blob": "5a1bfe681745154683eb6628931b7506e41351d0",
+      "hosted_run": "35546042175",
+      "hosted_tests": 234,
+      "hostile_review": "PASS_WITH_CLAIM_CEILING"
+    }
+  },
+  "maintenance_delta": {
+    "commits_ahead_from_original_verifier": 11,
+    "changed_files": 7,
+    "additions": 445,
+    "deletions": 16,
+    "verifier_net_line_growth": 73,
+    "primary_test_net_line_growth": 80,
+    "added_failure_test_lines": 105,
+    "added_boundary_doc_lines": 74,
+    "added_failure_fixture_lines": 58,
+    "added_failure_binding_lines": 41
+  },
+  "boundary_changes": {
+    "original_discovery_claims_now_stale": [
+      "Runner does not reimplement Rezon's canonical producer-ID formula.",
+      "Runner treats accepted_claim_ids, rejected_claim_ids, unresolved, and claim_disposition_complete as opaque payload."
+    ],
+    "current_runner_behavior": [
+      "Runner mirrors Rezon's deterministic canonical producer-ID algorithm and rejects recomputation mismatch.",
+      "Runner requires generic run evidence accepted_claim_ids and rejected_claim_ids to be empty.",
+      "Runner requires claim_disposition_complete to be false.",
+      "Runner still does not decide truth, admission, qualification, completion, target authority, or external-effect authority.",
+      "Outer evidence_digest remains an unkeyed self-consistency hash and does not authenticate producer origin."
+    ]
+  },
+  "organic_second_consumer_search": {
+    "scope": [
+      "public default-branch GitHub code search for rezon.run-evidence.v1 and STRUCTURALLY_VALID_NON_PROMOTIONAL",
+      "active public PR search for Rezon evidence integration",
+      "current known Project Runner interoperability successors"
+    ],
+    "direct_second_parser_or_consumer_found": false,
+    "observations": [
+      "Project Runner remains the only identified direct verifier/consumer line.",
+      "Vera PR #181 references the hardened Project Runner/Rezon boundary as source evidence for a broader coherence contract but is not itself a second rezon.run-evidence.v1 parser.",
+      "No portfolio-wide absence claim is made for private repositories or unindexed branch contents."
+    ]
+  },
+  "result": {
+    "mechanical_boundary_still_demonstrated": true,
+    "producer_agnostic_boundary_demonstrated": false,
+    "epistemic_authority_transfered": false,
+    "net_maintenance_savings_demonstrated": false,
+    "organic_second_consumer_demonstrated": false,
+    "candidate_disposition": "EXPERIMENTING_NARROWED_CURRENT_SUCCESSOR_NO_REUSE_PROMOTION"
+  },
+  "interpretation": [
+    "The Rezon↔Runner boundary remains mechanically useful, but the verifier is now explicitly producer-contract-aware rather than producer-agnostic.",
+    "The current hardening is justified by real hostile findings—duplicate execution IDs and forged producer IDs—not ornamental complexity.",
+    "That same hardening demonstrates maintenance coupling: changes to producer invariants required Runner code/tests/fixtures/docs to evolve.",
+    "No second organic consumer or measured duplicated code removal currently offsets that coupling, so reusable shared-infrastructure promotion remains unsupported."
+  ],
+  "claim_ceiling": [
+    "Code/test growth is maintenance-burden evidence, not proof that the boundary is economically bad.",
+    "No claim that Project Runner imported Rezon truth/admission semantics; current exact-head hostile review explicitly preserves the structural-only ceiling.",
+    "No claim of portfolio-wide absence of another consumer; the negative search is bounded to inspected public/default/open-PR surfaces.",
+    "No merge, canonicalization, runtime registration, or dependency adoption follows."
+  ]
+}
