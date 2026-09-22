@@ -35,11 +35,13 @@
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
       "labels": [
-        "COGNITIVE_BASE_CANDIDATE",
-        "ROLE_DISCREPANCY_REQUIRES_REVIEW"
+        "BT2_CANONICAL_PLATFORM",
+        "SOURCE_PROVENANCE",
+        "HISTORICAL_HC_BOOTSTRAP_RESIDUE"
       ],
       "notes": [
-        "Current README describes a Hyperconnectome template while installed BT2 Project instructions assign this repository a Build Team Two source role; discrepancy is preserved, not resolved here."
+        "Source-history review shows bt2 was initialized from an HC-derived snapshot, but exact same-day migration artifacts explicitly establish the repository as the canonical Build Team Two platform target.",
+        "The unchanged Hyperconnectome root README is classified as bootstrap residue rather than current repository-role authority."
       ]
     },
     {
@@ -463,6 +465,28 @@
       ],
       "notes": [
         "This edge is evidence for the triadic candidate, not a claim that DriftGuard and WIP share one state machine."
+      ]
+    },
+    {
+      "edge_id": "BT2_HC_BOOTSTRAP_HISTORY",
+      "from": "bt2",
+      "to": "hc-brain",
+      "relation": "HISTORICAL_REFERENCE",
+      "scope": "initial HC-derived source bootstrap and unchanged README lineage; does not make bt2 a current HC cognitive-base repository",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+        "thebrazenbeard/bt2:initial@33ff114d59da533f183739026e0b0f328a9b6c6e",
+        "thebrazenbeard/hc-brain:main-history@8a343efdf9ff5a0fb2677cfb765f8cf2780f825c",
+        "thebrazenbeard/bt2:canonical-provenance@bfc201d24b4313ae54fefe5202d81fa4bfb64911"
+      ],
+      "falsifiers": [
+        "Later exact source evidence establishes that bt2 intentionally retained Hyperconnectome Brain as its active canonical semantic role after the canonical BT2 migration declarations.",
+        "The apparent README/tree lineage is shown to be unrelated to HC source despite exact blob/path evidence."
+      ],
+      "notes": [
+        "BT2 initial and current README blob SHA is 447c4cc24ea27660772cc0123b91592ae9c36f7e, identical to HC Brain README at 8a343efdf9ff5a0fb2677cfb765f8cf2780f825c.",
+        "Exact source-controlled BT2 migration artifacts later on 2026-09-10 name thebrazenbeard/bt2 as the canonical Build Team Two platform target."
       ]
     }
   ]
