@@ -38,7 +38,7 @@ def _load(path: Path) -> dict[str, Any]:
 
 
 def _render(payload: dict[str, Any]) -> str:
-    return json.dumps(payload, indent=2) + "\n"
+    return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
 
 
 def _git_blob_sha1_text(text: str) -> str:
