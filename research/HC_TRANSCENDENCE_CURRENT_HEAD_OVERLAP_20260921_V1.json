@@ -1,0 +1,61 @@
+{
+  "schema_version": "DISCOVERY_CURRENT_HEAD_OVERLAP_V1",
+  "finding_id": "HC_TRANSCENDENCE_CURRENT_HEAD_OVERLAP_20260921_V1",
+  "status": "OBSERVED_EXACT_TREE_REMEASUREMENT",
+  "subjects": {
+    "hc_brain": "thebrazenbeard/hc-brain@618245b54fb923c7a204892c6953ab6d1c5dac57",
+    "transcendence": "thebrazenbeard/transcendence@68e7a794d6134e8319121404f31062288dc8d6a3"
+  },
+  "method": {
+    "comparison": "recursive Git tree blob-path comparison",
+    "identity_rule": "same repository-relative path and identical Git blob SHA",
+    "scope_note": "Counts regular blob entries returned by recursive Git tree readback; no candidate promotion or runtime qualification is inferred."
+  },
+  "metrics": {
+    "hc_files": 300,
+    "hc_bytes": 2191461,
+    "transcendence_files": 263,
+    "transcendence_bytes": 1802005,
+    "shared_paths": 263,
+    "identical_shared_files": 255,
+    "identical_file_percent_of_transcendence": 96.958174905,
+    "identical_shared_bytes": 1718257,
+    "identical_byte_percent_of_transcendence": 95.352510121,
+    "divergent_shared_files": 8,
+    "divergent_target_bytes": 83748,
+    "divergent_byte_percent_of_transcendence": 4.647489879,
+    "only_hc_files": 37,
+    "only_hc_bytes": 366975,
+    "only_transcendence_files": 0,
+    "only_transcendence_bytes": 0
+  },
+  "divergent_paths": [
+    ".github/workflows/reference-kernel.yml",
+    "README.md",
+    "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+    "runtime/reference_kernel/README.md",
+    "runtime/reference_kernel/durable_kernel.py",
+    "runtime/reference_kernel/hc_kernel.py",
+    "runtime/reference_kernel/test_durable_kernel.py",
+    "runtime/reference_kernel/test_hc_kernel.py"
+  ],
+  "interpretation": {
+    "observed": [
+      "Every current Transcendence file path is present in current HC Brain.",
+      "255 of 263 Transcendence files are byte-identical to HC Brain at the same path.",
+      "Current divergence is concentrated in eight files, primarily the reference-kernel/runtime surface plus README/workflow status.",
+      "HC Brain has 37 additional files that would require explicit deletion/exclusion in an exact current-head base-plus-overlay reconstruction."
+    ],
+    "hypothesis": [
+      "The current heads appear more compressible as pinned HC base plus narrow Transcendence overrides/deletions than the older exact experiment subjects.",
+      "A new exact reconstruction experiment may require only eight target overrides plus a 37-path deletion/exclusion manifest, but this has not yet been executed or qualified."
+    ]
+  },
+  "claim_ceiling": "OBSERVED_CURRENT_HEAD_OVERLAP_ONLY",
+  "non_claims": [
+    "Does not establish that current Transcendence should depend on moving HC main.",
+    "Does not establish that current-head reconstruction has been executed successfully.",
+    "Does not supersede the historical exact experiment evidence already recorded in Discovery.",
+    "Does not authorize deduplication, migration, merge, deletion, or dependency adoption."
+  ]
+}
