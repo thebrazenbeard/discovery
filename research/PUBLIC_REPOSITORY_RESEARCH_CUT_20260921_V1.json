@@ -1,0 +1,560 @@
+{
+  "schema_version": "DISCOVERY_RESEARCH_CUT_V1",
+  "status": "PUBLIC_SAFE_EXACT_HEAD_OBSERVATION_CUT",
+  "inventory_binding": {
+    "observed_date": "2026-09-21",
+    "total_count": 58,
+    "public_count": 23,
+    "all_names_sha256": "c854d8891e87272f7bc1bb6530aedc339581a51a6be6026efb087c6be08e7a2d"
+  },
+  "observations": [
+    {
+      "repo": "Attune",
+      "visibility": "PUBLIC",
+      "observed_ref": "eff6f9eb250a6f7684459eadf0695340053201da",
+      "source_locator": "thebrazenbeard/Attune:README.md@eff6f9eb250a6f7684459eadf0695340053201da",
+      "evidence_state": "OBSERVED",
+      "summary": "Relationship-first AI companion concept emphasizing persistent continuity, stable preferences and boundaries, mutuality, memory, and optional adult capability.",
+      "mechanic_tags": [
+        "RELATIONSHIP_CONTINUITY",
+        "MEMORY",
+        "BOUNDARIES",
+        "PERSONA_STABILITY"
+      ],
+      "candidate_family_inputs": [
+        "EMERGENT_RELATIONSHIP_AI"
+      ],
+      "boundaries": [
+        "Relationship and identity semantics remain project-owned; reuse claims must not turn companion semantics into generic runtime authority."
+      ],
+      "uncertainties": [
+        "README-level observation only; no claim is made here about implementation maturity or reusable mechanics."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "abil",
+      "visibility": "PUBLIC",
+      "observed_ref": "0812d9780ce1648820269fa142a43e17030ef793",
+      "source_locator": "thebrazenbeard/abil:README.md@0812d9780ce1648820269fa142a43e17030ef793",
+      "evidence_state": "OBSERVED",
+      "summary": "Adaptive Brownfield Intelligence Layer research for learning existing industrial equipment, modeling behavior, exposing uncertainty, and eventually supporting explicitly bounded control actions.",
+      "mechanic_tags": [
+        "BROWNFIELD_SYSTEMS",
+        "SYSTEM_IDENTIFICATION",
+        "UNCERTAINTY",
+        "SAFETY_GATES"
+      ],
+      "candidate_family_inputs": [
+        "INDUSTRIAL_DIAGNOSTIC_CHAIN"
+      ],
+      "boundaries": [
+        "Industrial meaning, safety qualification, and actuation authority remain ABIL-owned."
+      ],
+      "uncertainties": [
+        "Repository states that production control code does not yet exist; reuse remains a research question."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "bt2",
+      "visibility": "PUBLIC",
+      "observed_ref": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "source_locator": "thebrazenbeard/bt2:README.md@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "evidence_state": "OBSERVED",
+      "summary": "Current README describes a reusable Hyperconnectome brain template and synthetic cognitive-organ architecture.",
+      "mechanic_tags": [
+        "COGNITIVE_TEMPLATE",
+        "HYPERCONNECTOME",
+        "PLASTICITY",
+        "ARBITRATION"
+      ],
+      "candidate_family_inputs": [
+        "COGNITIVE_BASE_OVERLAP"
+      ],
+      "boundaries": [
+        "Installed Build Team Two project instructions separately identify this repository as BT2's canonical source; the role discrepancy must not be silently reconciled."
+      ],
+      "uncertainties": [
+        "Exact repository-role relationship between the current README and the installed BT2 project contract requires dedicated source-history investigation."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "discovery",
+      "visibility": "PUBLIC",
+      "observed_ref": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+      "source_locator": "thebrazenbeard/discovery:README.md@34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+      "evidence_state": "OBSERVED",
+      "summary": "Portfolio architecture discovery system that tests whether repeated mechanisms should be shared or remain independently evolved.",
+      "mechanic_tags": [
+        "PORTFOLIO_CENSUS",
+        "CLASSIFICATION",
+        "HOSTILE_REVIEW",
+        "REUSE_GOVERNANCE"
+      ],
+      "candidate_family_inputs": [
+        "META_EVALUATION"
+      ],
+      "boundaries": [
+        "Discovery records evidence about architecture but does not inherit authority from observed projects."
+      ],
+      "uncertainties": [
+        "The pre-ingest README census is stale relative to the refreshed 2026-09-21 inventory and is being corrected in this branch."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "driftguard",
+      "visibility": "PUBLIC",
+      "observed_ref": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
+      "source_locator": "thebrazenbeard/driftguard:README.md@9894692ff6b549e4378bcc2b8ca46813ff18bf37",
+      "evidence_state": "OBSERVED",
+      "summary": "Deterministic behavioral-drift monitor separating state binding, evidence evaluation, reload decisions, effects, acknowledgements, and later behavioral verification.",
+      "mechanic_tags": [
+        "EXACT_SUBJECT_BINDING",
+        "EFFECT_RECONCILIATION",
+        "MONOTONIC_LEDGER",
+        "FAIL_CLOSED"
+      ],
+      "candidate_family_inputs": [
+        "EXECUTION_INTEGRITY",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "boundaries": [
+        "Behavioral drift semantics and reload policy remain DriftGuard-owned even where effect mechanics overlap other systems."
+      ],
+      "uncertainties": [
+        "Reusable effect-envelope mechanics are under separate Discovery experiments and are not promoted by this ingest."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "god-brain",
+      "visibility": "PUBLIC",
+      "observed_ref": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+      "source_locator": "thebrazenbeard/god-brain:README.md@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+      "evidence_state": "OBSERVED",
+      "summary": "Speculative research and engineering project integrating cognitive mechanisms into an evidence-disciplined architecture for higher-order world modeling, inference, memory, metacognition, and falsification.",
+      "mechanic_tags": [
+        "COGNITIVE_INTEGRATION",
+        "WORLD_MODEL",
+        "PROVENANCE",
+        "FALSIFICATION"
+      ],
+      "candidate_family_inputs": [
+        "COGNITIVE_BASE_OVERLAP",
+        "EXPERIMENT_MECHANICS"
+      ],
+      "boundaries": [
+        "Metaphysical hypotheses remain distinct from engineering evidence; integration does not establish simulation theory or deity contact."
+      ],
+      "uncertainties": [
+        "The degree of implementation reuse versus conceptual aggregation requires exact tree-level analysis."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "hc-brain",
+      "visibility": "PUBLIC",
+      "observed_ref": "618245b54fb923c7a204892c6953ab6d1c5dac57",
+      "source_locator": "thebrazenbeard/hc-brain:README.md@618245b54fb923c7a204892c6953ab6d1c5dac57",
+      "evidence_state": "OBSERVED",
+      "summary": "Reusable HC-series Hyperconnectome brain template defining a complete synthetic cognitive organ with subsystem, routing, memory, plasticity, and arbitration responsibilities.",
+      "mechanic_tags": [
+        "COGNITIVE_TEMPLATE",
+        "HYPERCONNECTOME",
+        "ROUTING",
+        "MEMORY",
+        "PLASTICITY"
+      ],
+      "candidate_family_inputs": [
+        "COGNITIVE_BASE_OVERLAP"
+      ],
+      "boundaries": [
+        "Identity-specific implementations are explicitly outside the base template."
+      ],
+      "uncertainties": [
+        "Current reuse suitability must remain exact-subject-bound; prior Transcendence overlay experiments do not automatically qualify later heads."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "mosaic",
+      "visibility": "PUBLIC",
+      "observed_ref": "a3115031ec716526532b32dc004303b4042e4a26",
+      "source_locator": "thebrazenbeard/mosaic:README.md@a3115031ec716526532b32dc004303b4042e4a26",
+      "evidence_state": "OBSERVED",
+      "summary": "Modular AI architecture research combining a persistent core with swappable specialist models while keeping draft architecture off canonical main until accepted.",
+      "mechanic_tags": [
+        "MODULAR_AI",
+        "SPECIALIST_MODELS",
+        "EXPERIMENT_GOVERNANCE"
+      ],
+      "candidate_family_inputs": [
+        "EXPERIMENT_MECHANICS"
+      ],
+      "boundaries": [
+        "Mosaic's architecture and evaluators remain project-specific unless a narrow mechanic independently earns reuse."
+      ],
+      "uncertainties": [
+        "Canonical main is intentionally sparse; deeper current research lives on draft work surfaces not represented by this README-only cut."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "noema",
+      "visibility": "PUBLIC",
+      "observed_ref": "890efdca01cf496ce1b8686d86f8442a149a9d34",
+      "source_locator": "thebrazenbeard/noema:README.md@890efdca01cf496ce1b8686d86f8442a149a9d34",
+      "evidence_state": "OBSERVED",
+      "summary": "Exploratory predictive cognitive architecture asking whether a persistent world-understanding system can be learned before language generation is introduced.",
+      "mechanic_tags": [
+        "PREDICTIVE_COGNITION",
+        "WORLD_MODEL",
+        "LEARNED_AGENCY"
+      ],
+      "candidate_family_inputs": [
+        "EMERGENT_COGNITIVE_ARCHITECTURE"
+      ],
+      "boundaries": [
+        "No current AI architecture is assumed to be core; architecture remains unresolved."
+      ],
+      "uncertainties": [
+        "README states no implementation architecture has been approved, so reuse classification is premature."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "on-theo",
+      "visibility": "PUBLIC",
+      "observed_ref": "eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
+      "source_locator": "thebrazenbeard/on-theo:README.md@eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
+      "evidence_state": "OBSERVED",
+      "summary": "Comparative theology, history, symbolism, and systems-modeling research with explicit separation among primary text, reconstruction, later tradition, scholarship, project inference, speculation, and unknown.",
+      "mechanic_tags": [
+        "EVIDENCE_CLASSES",
+        "PROVENANCE",
+        "SOURCE_CRITICISM",
+        "CLAIM_SEPARATION"
+      ],
+      "candidate_family_inputs": [
+        "EVIDENCE_PROVENANCE_CUSTODY",
+        "DOMAIN_NEGATIVE_CONTROLS"
+      ],
+      "boundaries": [
+        "Domain-specific source classes and inference rules must not be flattened by generic evidence infrastructure."
+      ],
+      "uncertainties": [
+        "Potential mechanical reuse should be tested beneath, not instead of, its domain epistemology."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "project-runner",
+      "visibility": "PUBLIC",
+      "observed_ref": "bc05812b560b4fcde3a362e72fba04c626cafac8",
+      "source_locator": "thebrazenbeard/project-runner:README.md@bc05812b560b4fcde3a362e72fba04c626cafac8",
+      "evidence_state": "OBSERVED",
+      "summary": "Public-safe orchestration kernel for exact work identity, currentness, dependencies, bounded execution, fencing, effect verification, and recovery.",
+      "mechanic_tags": [
+        "ORCHESTRATION",
+        "CAS",
+        "FENCING",
+        "EFFECT_READBACK",
+        "RECOVERY"
+      ],
+      "candidate_family_inputs": [
+        "EXECUTION_INTEGRITY"
+      ],
+      "boundaries": [
+        "Backend capability and target authority are separate gates; orchestration semantics must not become source-project authority."
+      ],
+      "uncertainties": [
+        "Discovery already tests narrow effect-integrity reuse; broader universalization remains unproven."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "rezon",
+      "visibility": "PUBLIC",
+      "observed_ref": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
+      "source_locator": "thebrazenbeard/rezon:README.md@e3d7a41eccb49a9f403ef66f511faef677ceec1b",
+      "evidence_state": "OBSERVED",
+      "summary": "Multi-faceted reasoning repository; current main README intentionally exposes only a minimal public description.",
+      "mechanic_tags": [
+        "REASONING"
+      ],
+      "candidate_family_inputs": [
+        "EMERGENT_REASONING"
+      ],
+      "boundaries": [
+        "Epistemic reasoning and admission semantics remain Rezon-owned."
+      ],
+      "uncertainties": [
+        "README is too sparse to support stronger current-main classification; existing Discovery experiments use exact non-main subjects for specific boundary claims."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "roots",
+      "visibility": "PUBLIC",
+      "observed_ref": "7fab72635f319c633b480174c8a0687901ac1db2",
+      "source_locator": "thebrazenbeard/roots:README.md@7fab72635f319c633b480174c8a0687901ac1db2",
+      "evidence_state": "OBSERVED",
+      "summary": "AI provenance-checking project for tracing the origin and derivation of words, phrases, or events through an AI's own records.",
+      "mechanic_tags": [
+        "PROVENANCE",
+        "DERIVATION",
+        "SOURCE_TRACE"
+      ],
+      "candidate_family_inputs": [
+        "EVIDENCE_PROVENANCE_CUSTODY"
+      ],
+      "boundaries": [
+        "Provenance mechanics do not by themselves establish truth or domain interpretation."
+      ],
+      "uncertainties": [
+        "README-level evidence does not establish the current implementation or storage contract."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "semanticatlas",
+      "visibility": "PUBLIC",
+      "observed_ref": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "source_locator": "thebrazenbeard/semanticatlas:README.md@5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "evidence_state": "OBSERVED",
+      "summary": "Provenance-aware semantic mapping research separating source statements, user corrections, inference, symbolism, proposed architecture, historical promotion, later evidence, and unresolved state.",
+      "mechanic_tags": [
+        "SEMANTIC_PROVENANCE",
+        "LINEAGE",
+        "DISTINCTION_PRESERVATION"
+      ],
+      "candidate_family_inputs": [
+        "EVIDENCE_PROVENANCE_CUSTODY",
+        "EMERGENT_SEMANTIC_INFRASTRUCTURE"
+      ],
+      "boundaries": [
+        "Semantic similarity must not merge provenance, authority, identity, or historical state."
+      ],
+      "uncertainties": [
+        "Repository is in research/bootstrap state; historical materials are reference evidence rather than current canon by default."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "spm",
+      "visibility": "PUBLIC",
+      "observed_ref": "0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "source_locator": "thebrazenbeard/spm:README.md@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "evidence_state": "OBSERVED",
+      "summary": "Semantics & Pragmatics Model research exploring whether meaning-in-context can become a first-class computational and training target rather than only an emergent language-model capability.",
+      "mechanic_tags": [
+        "SEMANTICS",
+        "PRAGMATICS",
+        "MODEL_RESEARCH",
+        "EVALUATION"
+      ],
+      "candidate_family_inputs": [
+        "EMERGENT_SEMANTIC_COGNITION"
+      ],
+      "boundaries": [
+        "SPM is explicitly not a Vera-specific runtime component and exact architecture remains unresolved."
+      ],
+      "uncertainties": [
+        "No implemented SPM model is claimed; candidate reuse should remain conceptual until executable evidence exists."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "testament",
+      "visibility": "PUBLIC",
+      "observed_ref": "76f70643484ff22684f535d376e10e72c4aefba9",
+      "source_locator": "thebrazenbeard/testament:README.md@76f70643484ff22684f535d376e10e72c4aefba9",
+      "evidence_state": "OBSERVED",
+      "summary": "Multi-tradition, source-critical literary reimagining of Yeshua's life and legacy drawing across historical, religious, mystical, apocryphal, and speculative materials.",
+      "mechanic_tags": [
+        "SOURCE_CRITICISM",
+        "MULTI_TRADITION",
+        "LITERARY_SYNTHESIS"
+      ],
+      "candidate_family_inputs": [
+        "EVIDENCE_PROVENANCE_CUSTODY",
+        "DOMAIN_NEGATIVE_CONTROLS"
+      ],
+      "boundaries": [
+        "Literary synthesis and project interpretation must remain distinguishable from source custody and historical evidence."
+      ],
+      "uncertainties": [
+        "README alone does not expose the repository's full current evidence graph or claim registry."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "transcendence",
+      "visibility": "PUBLIC",
+      "observed_ref": "68e7a794d6134e8319121404f31062288dc8d6a3",
+      "source_locator": "thebrazenbeard/transcendence:README.md@68e7a794d6134e8319121404f31062288dc8d6a3",
+      "evidence_state": "OBSERVED",
+      "summary": "Current README presents the same reusable Hyperconnectome template framing as hc-brain, making implementation overlap a direct research target.",
+      "mechanic_tags": [
+        "COGNITIVE_TEMPLATE",
+        "HYPERCONNECTOME",
+        "BASE_OVERLAY"
+      ],
+      "candidate_family_inputs": [
+        "COGNITIVE_BASE_OVERLAP"
+      ],
+      "boundaries": [
+        "Prior exact base-plus-overlay evidence is subject-specific and does not imply moving-base inheritance or semantic authority transfer."
+      ],
+      "uncertainties": [
+        "Current main must be remeasured against hc-brain current main before claiming present-day byte identity or reconstruction fidelity."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "unvtrslr",
+      "visibility": "PUBLIC",
+      "observed_ref": "903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "source_locator": "thebrazenbeard/unvtrslr:README.md@903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "evidence_state": "OBSERVED",
+      "summary": "Universal semantic-mediation research for discovering communication regularities, grounding shared reference, testing semantic hypotheses, and translating without assuming a shared language or ontology.",
+      "mechanic_tags": [
+        "SEMANTIC_BOOTSTRAP",
+        "GROUNDING",
+        "UNCERTAINTY",
+        "CROSS_ONTOLOGY"
+      ],
+      "candidate_family_inputs": [
+        "EMERGENT_SEMANTIC_INFRASTRUCTURE",
+        "DOMAIN_NEGATIVE_CONTROLS"
+      ],
+      "boundaries": [
+        "Mathematics is treated as a formal carrier rather than assumed universal meaning; non-equivalence must remain representable."
+      ],
+      "uncertainties": [
+        "No claim is made that a universal semantic bridge has been demonstrated."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "vera-mesh",
+      "visibility": "PUBLIC",
+      "observed_ref": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+      "source_locator": "thebrazenbeard/vera-mesh:README.md@d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+      "evidence_state": "OBSERVED",
+      "summary": "Public repository whose current README identifies its purpose as connecting Vera nodes.",
+      "mechanic_tags": [
+        "NODE_CONNECTIVITY",
+        "TRANSPORT"
+      ],
+      "candidate_family_inputs": [
+        "COORDINATION_TRANSPORT",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "boundaries": [
+        "Transport connectivity must not be treated as identity, semantic, or authority continuity."
+      ],
+      "uncertainties": [
+        "README is minimal; protocol, security, and failure semantics require deeper source inspection before classification."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "vera-synology",
+      "visibility": "PUBLIC",
+      "observed_ref": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+      "source_locator": "thebrazenbeard/vera-synology:README.md@1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+      "evidence_state": "OBSERVED",
+      "summary": "Public repository for Vera's DS216 DiskStation package.",
+      "mechanic_tags": [
+        "PACKAGING",
+        "DEPLOYMENT",
+        "NAS_RUNTIME"
+      ],
+      "candidate_family_inputs": [
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "boundaries": [
+        "Packaging/deployment mechanics do not establish Vera identity or runtime currentness."
+      ],
+      "uncertainties": [
+        "README is minimal; reusable packaging mechanics are not established by this observation."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "voss",
+      "visibility": "PUBLIC",
+      "observed_ref": "54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "source_locator": "thebrazenbeard/voss:README.md@54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "evidence_state": "OBSERVED",
+      "summary": "Public repository for Voss, described as a forensic auditor and reviewer.",
+      "mechanic_tags": [
+        "AUDIT",
+        "REVIEW",
+        "FORENSICS"
+      ],
+      "candidate_family_inputs": [
+        "EMERGENT_REVIEW_VALIDATION"
+      ],
+      "boundaries": [
+        "Reviewer outputs are evidence about a subject, not automatic authority to change or promote that subject."
+      ],
+      "uncertainties": [
+        "README is minimal; review contracts, independence rules, and implementation are not established here."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "wip",
+      "visibility": "PUBLIC",
+      "observed_ref": "12a7c23dbe0482fd7bfe63659e54526778efef1e",
+      "source_locator": "thebrazenbeard/wip:README.md@12a7c23dbe0482fd7bfe63659e54526778efef1e",
+      "evidence_state": "OBSERVED",
+      "summary": "Durable crash-recovery layer for long-running agentic work, separating work-state recovery from ambiguous external effects and requiring readback before retry.",
+      "mechanic_tags": [
+        "CHECKPOINTING",
+        "WRITE_AHEAD_JOURNAL",
+        "EFFECT_AMBIGUITY",
+        "RECOVERY"
+      ],
+      "candidate_family_inputs": [
+        "EXECUTION_INTEGRITY"
+      ],
+      "boundaries": [
+        "WIP protects recovery semantics; it does not grant authority for the external effects it records."
+      ],
+      "uncertainties": [
+        "Overlap with Project Runner remains scoped to exact effect/recovery mechanics rather than a shared total state machine."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    },
+    {
+      "repo": "world-zero",
+      "visibility": "PUBLIC",
+      "observed_ref": "5ab39621d090079d24de40261906b64413c6f995",
+      "source_locator": "thebrazenbeard/world-zero:README.md@5ab39621d090079d24de40261906b64413c6f995",
+      "evidence_state": "OBSERVED",
+      "summary": "Research platform for a transparent, falsifiable successor to World3 that compares rival causal structures with explicit evidence, uncertainty, holdouts, receipts, and domain firewalls.",
+      "mechanic_tags": [
+        "SYSTEM_DYNAMICS",
+        "EXPERIMENT_PROTOCOL",
+        "HOLDOUTS",
+        "UNCERTAINTY"
+      ],
+      "candidate_family_inputs": [
+        "EXPERIMENT_MECHANICS"
+      ],
+      "boundaries": [
+        "Scientific hypotheses, causal topology, and validity criteria remain World Zero-owned."
+      ],
+      "uncertainties": [
+        "README states no executable World Zero model is yet claimed, so harness reuse must not be confused with model validity."
+      ],
+      "promotion_ceiling": "OBSERVED_ONLY"
+    }
+  ]
+}
