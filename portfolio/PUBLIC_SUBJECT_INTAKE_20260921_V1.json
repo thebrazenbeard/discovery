@@ -22,8 +22,7 @@
       "repository": "thebrazenbeard/discovery",
       "commit": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
       "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
-      "blob_sha": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
-      "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1"
+      "blob": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df"
     },
     "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
   },
