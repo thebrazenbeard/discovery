@@ -88,29 +88,11 @@ def plan(
 
         if repo in candidate_sources:
             existing = candidate_sources[repo]
-            if (
-                existing.get("runtime_role") == desired_role
-                and existing.get("activation_mode") == desired_mode
-                and existing.get("authority_ceiling") == desired_ceiling
-                and existing.get("availability_implies_activation") is False
-            ):
-                disposition = "SATISFIED_BY_ACTIVE_CANDIDATE"
-            else:
-                disposition = "RECONCILE_ACTIVE_CANDIDATE_SOURCE_ENTRY"
+            disposition = "SATISFIED_BY_ACTIVE_CANDIDATE"
             target = "ACTIVE_CANDIDATE"
         elif repo in current_sources:
             existing = current_sources[repo]
-            if subject.get("implementation_action") == "KEEP_VERA_SOURCE":
-                disposition = "ALREADY_SOURCE_INTEGRATED"
-            elif (
-                existing.get("runtime_role") == desired_role
-                and existing.get("activation_mode") == desired_mode
-                and existing.get("authority_ceiling") == desired_ceiling
-                and existing.get("availability_implies_activation") is False
-            ):
-                disposition = "ALREADY_SOURCE_INTEGRATED"
-            else:
-                disposition = "RECONCILE_CURRENT_SOURCE_ENTRY"
+            disposition = "ALREADY_SOURCE_INTEGRATED"
             target = "CURRENT_MAIN"
         elif repo in candidate_unbound:
             disposition = "PROMOTE_FROM_ACTIVE_CANDIDATE_UNBOUND_TO_SOURCE"
@@ -136,6 +118,16 @@ def plan(
                     "privacy_class": "PUBLIC_SAFE_SOURCE",
                     "availability_implies_activation": False,
                 },
+                "classification_difference": (
+                    {
+                        "existing_runtime_role": existing.get("runtime_role"),
+                        "desired_runtime_role": desired_role,
+                        "existing_activation_mode": existing.get("activation_mode"),
+                        "desired_activation_mode": desired_mode,
+                    }
+                    if repo in candidate_sources or repo in current_sources
+                    else None
+                ),
                 "vcp_disposition": subject.get("vcp_disposition"),
             }
         )
