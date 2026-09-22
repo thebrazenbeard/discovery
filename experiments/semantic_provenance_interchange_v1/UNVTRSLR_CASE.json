@@ -1,0 +1,64 @@
+{
+  "schema_version": "SEMANTIC_EVIDENCE_INTERCHANGE_V1",
+  "record_id": "UNVTRSLR_C047_OPERATIONAL_SEMANTIC_SEPARATION",
+  "record_mode": "SPECIFIED_CONTROL_CASE",
+  "project_subject": {
+    "repo": "thebrazenbeard/unvtrslr",
+    "exact_ref": "main@903d79c6e47bb9f73bd7700edd35315777e9f5d1"
+  },
+  "proposition": {
+    "native_id": "C047",
+    "text": "Operational relation verification and semantic naming are non-monotonic, separable claims.",
+    "native_type": "claims_and_evidence_ledger_entry",
+    "native_status": "DESIGN_REQUIREMENT"
+  },
+  "source_bindings": [
+    {
+      "path": "research/CLAIMS_AND_EVIDENCE.md",
+      "blob_sha": "1ea0034acd74a28f6a08eb11ce0391c4d4082de5",
+      "native_record_ids": [
+        "C047"
+      ]
+    },
+    {
+      "path": "docs/R2_SEMANTIC_CLAIM_CONTROLS.md",
+      "blob_sha": "325a536bba0e00bdaf081582f416a179844504a2",
+      "native_record_ids": [
+        "OPERATIONAL_RELATION_VERIFIED_SEMANTIC_NAMING_UNRESOLVED",
+        "R2_SEMANTIC_CLAIM_CONTROLS_SPECIFIED / HARNESS_NOT_BUILT"
+      ]
+    },
+    {
+      "path": "specs/R1R2_EVALUATION_CONTRACT_V1.yaml",
+      "blob_sha": "f0bbfcc55566800d71719442d8e362f827373789",
+      "native_record_ids": [
+        "OPERATIONAL_GROUNDING_CERTIFICATE_V1"
+      ]
+    }
+  ],
+  "evidence_bindings": [],
+  "interpretation_state": {
+    "native_status": "OPERATIONAL_RELATION_VERIFIED_SEMANTIC_NAMING_UNRESOLVED",
+    "unresolved": true,
+    "surviving_alternatives": [
+      "The operational relation may remain real while a stronger semantic interpretation is unresolved, confounded, or unsupported.",
+      "A declared semantic rival may outperform NONE while an omitted structured nonsemantic rival remains viable."
+    ]
+  },
+  "currentness": {
+    "state": "CURRENT",
+    "observed_date": "2026-09-21",
+    "supersedes": []
+  },
+  "claim_ceiling": {
+    "native_label": "R2_SEMANTIC_CLAIM_CONTROLS_SPECIFIED / HARNESS_NOT_BUILT",
+    "text": "Design requirement and specified control case only. No R2 harness implementation or semantic qualification is established by this record."
+  },
+  "native_extension_refs": [
+    {
+      "path": "specs/R1R2_EVALUATION_CONTRACT_V1.yaml",
+      "blob_sha": "f0bbfcc55566800d71719442d8e362f827373789",
+      "purpose": "UNVTRSLR substrate, evaluator, control-suite, and certificate semantics remain project-owned."
+    }
+  ]
+}
