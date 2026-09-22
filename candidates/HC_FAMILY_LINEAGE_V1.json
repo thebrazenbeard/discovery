@@ -1,0 +1,56 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "HC_FAMILY_LINEAGE_V1",
+  "title": "Test explicit HC-family lineage/factorization across hc-brain, God Brain, and bt2",
+  "status": "HYPOTHESIS",
+  "claim": "The newly public HC-family repositories contain enough exact byte overlap to justify a bounded lineage/factorization experiment, but not enough evidence to choose a shared dependency or consolidation direction. God Brain is a near-exact HC snapshot at the measured heads; bt2 shares a substantial HC substrate while already carrying material divergence.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/hc-brain",
+      "role": "current public HC reference subject; no implied semantic authority over derivatives",
+      "ref": "main@618245b54fb923c7a204892c6953ab6d1c5dac57"
+    },
+    {
+      "repo": "thebrazenbeard/god-brain",
+      "role": "independent experimental derivative whose README explicitly states HC-template origin",
+      "ref": "main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5"
+    },
+    {
+      "repo": "thebrazenbeard/bt2",
+      "role": "public repository describing itself as a reusable HC-series template but materially diverged from hc-brain",
+      "ref": "main@30e81cadd94fae117a7f6875523c03251c7c9f6e"
+    }
+  ],
+  "preserved_boundaries": [
+    "Repository identity, authority, scientific purpose, and qualification remain project-owned.",
+    "God Brain's simulation/contact research question is not inherited by HC and HC semantics are not automatically authoritative over God Brain.",
+    "bt2 archive/training/qualification material must not be imported into hc-brain merely because some blobs are identical.",
+    "No moving-base dependency, repository merge, branch rewrite, or canonical-successor direction follows from static byte overlap."
+  ],
+  "promotion_evidence": [
+    "At exact main heads, God Brain and hc-brain each contain 300 blobs; 299 same-path blobs are identical and only README.md differs.",
+    "The God Brain/HC identical blobs account for 2,181,434 of 2,191,461 hc-brain blob bytes (99.54245136%).",
+    "At exact main heads, bt2 and hc-brain share 188 paths; 178 same-path blobs are identical and 10 differ.",
+    "The bt2/HC identical blobs account for 1,011,147 of 2,191,461 hc-brain blob bytes (46.14031461%); bt2 also has 329 unique blobs and hc-brain 112 unique blobs.",
+    "Full measurement method and exact subjects are recorded in experiments/COGNITIVE_PUBLIC_OVERLAP_REFRESH_V1.json."
+  ],
+  "rejection_conditions": [
+    "Exact base-plus-overlay reconstruction cannot reproduce God Brain or bt2 target trees without importing project-specific authority or unrelated archives.",
+    "Forward changes show that maintaining a shared base requires more review, adapter, qualification, or migration work than independent copies.",
+    "The apparent overlap is mostly historical snapshot provenance with no continuing maintenance duplication.",
+    "A factorized design would reduce either God Brain's or bt2's ability to diverge, falsify HC assumptions, or preserve independent research history."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "Static overlap is especially vulnerable to post-fork snapshot bias.",
+      "God Brain's near-total duplication may be transient and intentionally useful while the experiment establishes its own architecture.",
+      "bt2's much larger unique surface may make one shared base an attractive but misleading simplification."
+    ]
+  },
+  "notes": [
+    "This candidate was generated from the live 2026-09-21 public census refresh rather than the prior seeded experiment queue.",
+    "Next valid experiment: exact pinned-base-plus-overlay reconstruction for God Brain, followed by forward-change maintenance measurement.",
+    "bt2 requires provenance/lineage analysis before any reconstruction direction is chosen."
+  ]
+}
