@@ -165,13 +165,14 @@
       "observed_ref": "618245b54fb923c7a204892c6953ab6d1c5dac57",
       "source_locator": "thebrazenbeard/hc-brain:README.md@618245b54fb923c7a204892c6953ab6d1c5dac57",
       "evidence_state": "OBSERVED",
-      "summary": "Reusable HC-series Hyperconnectome brain template defining a complete synthetic cognitive organ with subsystem, routing, memory, plasticity, and arbitration responsibilities.",
+      "summary": "Reusable HC-series Hyperconnectome brain template. Exact current-head tree remeasurement against Transcendence finds 255/263 Transcendence files byte-identical at the same paths, with eight divergent shared files and 37 HC-only files.",
       "mechanic_tags": [
         "COGNITIVE_TEMPLATE",
         "HYPERCONNECTOME",
         "ROUTING",
         "MEMORY",
-        "PLASTICITY"
+        "PLASTICITY",
+        "CURRENT_HEAD_OVERLAP"
       ],
       "candidate_family_inputs": [
         "COGNITIVE_BASE_OVERLAP"
@@ -180,7 +181,7 @@
         "Identity-specific implementations are explicitly outside the base template."
       ],
       "uncertainties": [
-        "Current reuse suitability must remain exact-subject-bound; prior Transcendence overlay experiments do not automatically qualify later heads."
+        "Current-head overlap is directly measured, but exact base-plus-overlay reconstruction at these current heads has not yet been executed or qualified."
       ],
       "promotion_ceiling": "OBSERVED_ONLY"
     },
@@ -402,11 +403,12 @@
       "observed_ref": "68e7a794d6134e8319121404f31062288dc8d6a3",
       "source_locator": "thebrazenbeard/transcendence:README.md@68e7a794d6134e8319121404f31062288dc8d6a3",
       "evidence_state": "OBSERVED",
-      "summary": "Current README presents the same reusable Hyperconnectome template framing as hc-brain, making implementation overlap a direct research target.",
+      "summary": "Current Transcendence main is an exact path-subset of current HC Brain at the blob-tree level: all 263 file paths exist in HC, 255 are byte-identical, and eight differ.",
       "mechanic_tags": [
         "COGNITIVE_TEMPLATE",
         "HYPERCONNECTOME",
-        "BASE_OVERLAY"
+        "BASE_OVERLAY",
+        "CURRENT_HEAD_OVERLAP"
       ],
       "candidate_family_inputs": [
         "COGNITIVE_BASE_OVERLAP"
@@ -415,7 +417,7 @@
         "Prior exact base-plus-overlay evidence is subject-specific and does not imply moving-base inheritance or semantic authority transfer."
       ],
       "uncertainties": [
-        "Current main must be remeasured against hc-brain current main before claiming present-day byte identity or reconstruction fidelity."
+        "A fresh current-head reconstruction is suggested by the overlap but remains unexecuted; moving-base inheritance remains unproven and should not be inferred."
       ],
       "promotion_ceiling": "OBSERVED_ONLY"
     },
