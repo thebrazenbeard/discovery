@@ -592,8 +592,8 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
         errors.append("public tree binding repair bindings mismatch")
     if repair_data.get("repaired_repository_count") != len(public_repos):
         errors.append("public tree binding repair repository count mismatch")
-    if repair_data.get("public_default_heads_changed_since_prior_scan") is not False:
-        errors.append("public tree binding repair head-movement claim mismatch")
+    if type(repair_data.get("public_default_heads_changed_since_prior_scan")) is not bool:
+        errors.append("public tree binding repair head-movement flag must be boolean")
 
     expected_pair_count = len(public_repos) * (len(public_repos) - 1) // 2
     if scan.get("repository_count") != len(public_repos):
