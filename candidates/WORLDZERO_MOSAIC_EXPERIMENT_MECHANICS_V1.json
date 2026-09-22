@@ -3,7 +3,7 @@
   "candidate_id": "WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS_V1",
   "title": "Share experiment plumbing without sharing scientific evaluators",
   "status": "PROJECT_SPECIFIC",
-  "claim": "The exact World Zero and Mosaic subjects do not justify a shared experiment harness. They share high-level discipline—predeclared controls, deterministic execution, explicit metrics, receipts, and claim ceilings—but their executable contracts currently encode materially different scientific/continuity semantics. Keep both harnesses project-specific; only a weaker generic receipt-pattern hypothesis remains for future multi-consumer testing.",
+  "claim": "The exact World Zero, Mosaic, and DriftGuard subjects do not justify a shared experiment harness or generic receipt schema. The original World Zero↔Mosaic four-part receipt residue does not survive a materially independent DriftGuard implementation: repository-source subject identity, general execution context, and explicit claim-ceiling fields are not common across all three. Keep experiment/qualification receipts project-specific.",
   "consumers": [
     {
       "repo": "thebrazenbeard/world-zero",
@@ -25,7 +25,11 @@
     "World Zero RUN_RECEIPT_V1 blob 88a039e32e3cbcb4e26aa9a95cc2f0d817ca1423 binds scientific subject identity, source commit/tree, dataset/parameter/region/scenario/observation digests, calibration and holdout partitions, comparison protocol digest, solver identity, seed, tolerance, timestep, environment fingerprint, and optional result digest.",
     "World Zero comparison protocol blob c0580445f322fb3b91ad0619eb30502414803d55 freezes subjects, calibration/holdout partitions, metrics, decision rules, missing-subject policy, and confirmatory-versus-exploratory status.",
     "Mosaic harness blob ab880ada80dd238751f7aec918cd0cafb5e85ce9 instead executes four continuity conditions over revisioned state events and emits continuity-specific accuracy, stale-error, correction-burden, payload-size, unload/latency/repeatability gates, and an explicit P1 claim ceiling.",
-    "Mosaic test blob ebf4851bacfbbab71b7a6ad664ef232123fd91bd verifies the harness cannot self-award P1 and that ordinary retrieval receives no special disadvantage."
+    "Mosaic test blob ebf4851bacfbbab71b7a6ad664ef232123fd91bd verifies the harness cannot self-award P1 and that ordinary retrieval receives no special disadvantage.",
+    "Third-consumer falsifier binds DriftGuard main@9894692ff6b549e4378bcc2b8ca46813ff18bf37 and its DRIFTGUARD_RECOVERY_WINDOW_RECEIPT_V1 implementation blob af329f61d9eb9f094896a4eb14f1263d9f6c861a.",
+    "DriftGuard's receipt subject is state/session/ledger recovery-window identity, not repository-source experiment identity; its policy/turn/generation window is not a general execution-environment record.",
+    "Across World Zero, Mosaic, and DriftGuard, only result/evidence identity survives cleanly; exact repository source subject, general execution context, and explicit claim-ceiling receipt fields do not.",
+    "No common layer has deleted or replaced existing project-local code: demonstrated_code_deleted_or_replaced_by_common_layer = 0."
   ],
   "rejection_conditions": [
     "A common harness requires either project's domain ontology or evaluator.",
@@ -36,15 +40,18 @@
   "hostile_review": {
     "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "Calling both systems 'experiment harnesses' hides that World Zero's receipt is a scientific-subject/execution identity contract while Mosaic's current receipt is a continuity benchmark result object.",
-      "A shared harness would either be so generic that it deletes no meaningful code or would import one project's domain semantics into the other.",
-      "The reusable-looking residue—exact source subject, execution environment, result evidence, and claim ceiling—should not be extracted from only this pair; require a third independent consumer."
+      "Shrinking the common record to id/digest/status would be serialization, not meaningful shared experiment architecture.",
+      "DriftGuard's durable ledger-bound receipt cannot be normalized into a World Zero scientific run receipt without losing subject semantics.",
+      "Mosaic's synthetic continuity receipt lacks the general source/execution identity required by the prior residue.",
+      "No extraction has demonstrated real code deletion or reduced maintenance burden."
     ]
   },
   "notes": [
     "Pairwise experiment result: PROJECT_SPECIFIC for executable harnesses.",
     "No shared code or shared harness schema is proposed from this pair.",
-    "A generic experiment-receipt pattern remains NEEDS_MORE_EVIDENCE and should be tested against a third independent consumer before candidate creation.",
-    "See experiments/WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS_V1.md."
+    "See experiments/WORLDZERO_MOSAIC_EXPERIMENT_MECHANICS_V1.md.",
+    "Third materially independent consumer tested: DriftGuard. The prior four-part generic receipt residue failed the three-way intersection.",
+    "Disposition remains PROJECT_SPECIFIC / NO_EXTRACTION. No generic receipt candidate is created.",
+    "See experiments/EXPERIMENT_RECEIPT_THIRD_CONSUMER_V1.*."
   ]
 }
