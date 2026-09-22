@@ -48,7 +48,7 @@ The central experiment is exact reconstruction:
 
 `pinned base + explicit overlay -> identical target tree`
 
-If that fails, deduplication is not justified.
+That test now succeeds on the exact current main heads as well as the earlier historical subject. Current HC main tree `623f272aa9060ad9e222a5cfaea801082bb5a562` plus 37 explicit deletions and 8 same-path object overrides (0 additions) recomputes Transcendence main tree `c8d16282fa65b14962757539773a78803613bd6a` exactly. This proves current-head reconstructibility; it does not yet prove favorable forward maintenance economics.
 
 Private related repositories are included as additional overlap subjects or negative controls.
 
