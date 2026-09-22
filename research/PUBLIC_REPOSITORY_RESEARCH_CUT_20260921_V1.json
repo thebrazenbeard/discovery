@@ -60,23 +60,28 @@
       "repo": "bt2",
       "visibility": "PUBLIC",
       "observed_ref": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
-      "source_locator": "thebrazenbeard/bt2:README.md@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "source_locator": "thebrazenbeard/bt2:docs/migration/SOURCE_PROVENANCE_MANIFEST_V1.md@30e81cadd94fae117a7f6875523c03251c7c9f6e",
       "evidence_state": "OBSERVED",
-      "summary": "Current README describes a reusable Hyperconnectome brain template and synthetic cognitive-organ architecture.",
+      "summary": "Canonical Build Team Two platform repository whose initial 2026-09-10 tree was HC-derived; the unchanged Hyperconnectome root README is stale bootstrap residue rather than the best evidence of current repository role.",
       "mechanic_tags": [
-        "COGNITIVE_TEMPLATE",
-        "HYPERCONNECTOME",
-        "PLASTICITY",
-        "ARBITRATION"
+        "CANONICAL_PLATFORM",
+        "SOURCE_PROVENANCE",
+        "MIGRATION",
+        "LANTERN_RUNTIME",
+        "HISTORICAL_BOOTSTRAP_RESIDUE"
       ],
       "candidate_family_inputs": [
-        "COGNITIVE_BASE_OVERLAP"
+        "EMERGENT_PLATFORM_CONSOLIDATION",
+        "EVIDENCE_PROVENANCE_CUSTODY",
+        "EXECUTION_INTEGRITY"
       ],
       "boundaries": [
-        "Installed Build Team Two project instructions separately identify this repository as BT2's canonical source; the role discrepancy must not be silently reconciled."
+        "HC-derived bootstrap content remains historical/source evidence and is not silently deleted or reclassified as disposable.",
+        "Build Team Two platform authority and HC Brain cognitive-template semantics remain distinct despite shared historical source material."
       ],
       "uncertainties": [
-        "Exact repository-role relationship between the current README and the installed BT2 project contract requires dedicated source-history investigation."
+        "Source history does not state why the HC-derived snapshot was selected as the initial bt2 seed.",
+        "Whether HC-derived legacy files should remain, be archived, or be removed requires a separate dependency/provenance audit."
       ],
       "promotion_ceiling": "OBSERVED_ONLY"
     },
