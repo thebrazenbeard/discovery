@@ -1,0 +1,82 @@
+{
+  "schema": "DISCOVERY_PORTFOLIO_CENSUS_DRIFT_TRANSITION_V1",
+  "observed_date": "2026-09-22",
+  "old_provider": {
+    "repository": "thebrazenbeard/discovery",
+    "exact_ref": "vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
+    "census_blob": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
+    "observed_date": "2026-09-19",
+    "total": 57,
+    "public": 12,
+    "private": 45,
+    "all_names_sha256": "43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd"
+  },
+  "current_provider": {
+    "repository": "thebrazenbeard/discovery",
+    "exact_ref": "vera/discovery-live-census-public-intake-v1-20260921@56822c92c4cb3709bf742032f539206a0e398024",
+    "census_blob": "1b46d74176f8d67f3c1bd53bfcf2f369b89e9d8d",
+    "observed_date": "2026-09-21",
+    "total": 58,
+    "public": 23,
+    "private": 35,
+    "public_names_sha256": "25fe6601b4c664490bfe4494d8650dca4804ff5607ff599ee5ec0981a2f177d7",
+    "all_names_sha256": "c854d8891e87272f7bc1bb6530aedc339581a51a6be6026efb087c6be08e7a2d",
+    "all_names_digest_evidence_class": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED"
+  },
+  "public_consumer": {
+    "repository": "thebrazenbeard/project-runner",
+    "original_consumer_ref": "PR23@b763c707abacc7dfe30dc451b2b42354a30e3621",
+    "verifier_blob": "47da565e6964061920147337185fb2344ac28165",
+    "binding_blob": "6ce7f033c2e5467abfd1a89b560b5f78fbe20642",
+    "test_blob": "42101b1bc889c62f09793c5e98f3e307efc7bf70",
+    "bound_old_census_blob": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
+    "deterministic_stale_rejection": {
+      "result": "PASS",
+      "basis": [
+        "validate_discovery_census_bytes recomputes the Git blob SHA-1 of supplied bytes and rejects any blob not equal to the bound blob.",
+        "The current Discovery census blob 1b46d741... differs from the old bound blob 34cd2ab5....",
+        "The original hostile test already proves mutated census bytes fail the exact-blob binding."
+      ]
+    },
+    "current_estate_ref": "PR29@48c2074ce4f679c724036e14c5b6910e145c2492",
+    "reconciliation_blob": "df46158bdc469d47d5d54d32614c8104f8ee9d0c",
+    "reconciliation_doc_blob": "5721d4e6f6b38bb627a6484445251e171f61f0aa",
+    "current_estate_disposition": "PR23 = BLOCKED_STALE_EXTERNAL_CURRENTNESS",
+    "refreshed_to_current_discovery_census": false,
+    "notes": [
+      "Project Runner independently observed 58 total repositories and explicitly quarantined the 57-repository Discovery binding as stale.",
+      "Its 2026-09-20 estate cut still records a different visibility split (14 public / 44 private) than Discovery's later 2026-09-21 cut (23 public / 35 private), so count equality alone is not a synchronized-census refresh.",
+      "No Project Runner source subject inspected here binds the new Discovery blob 1b46d741... or current all-name digest c854d889...."
+    ]
+  },
+  "opaque_consumer": {
+    "handle": "PRIVATE_OPAQUE_f306bde2474eb046",
+    "prior_attestation_receipt_sha256": "1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969",
+    "prior_status": "EXACT_PRIVATE_SUBJECT_ATTESTED",
+    "current_refresh_status": "NOT_PUBLICLY_VERIFIABLE",
+    "new_public_safe_attestation_observed": false,
+    "evidence_ceiling": "DISCOVERY_PRIVATE_SUBJECT_ATTESTATION_V1 explicitly states the public artifact cannot establish that the private receipt is truthful or that the hidden source produced the claimed behavior."
+  },
+  "falsifier": {
+    "requirement": "On a repository-set change, both consumers reject the stale digest and refresh to the same new Discovery census without importing Discovery authority.",
+    "public_consumer_stale_rejection": "PASS",
+    "public_consumer_refresh": "NOT_DEMONSTRATED",
+    "opaque_consumer_stale_rejection": "NOT_PUBLICLY_VERIFIABLE",
+    "opaque_consumer_refresh": "NOT_PUBLICLY_VERIFIABLE",
+    "synchronized_two_consumer_refresh": "NOT_DEMONSTRATED",
+    "authority_boundary_preserved": true
+  },
+  "result": {
+    "disposition": "PARTIAL_FALSIFIER_STALE_REJECTION_PASS_REFRESH_UNRESOLVED",
+    "candidate_status": "EXPERIMENTING",
+    "proven_reusable": false,
+    "reason": "The real 57→58 inventory change demonstrates stale detection on the public consumer but not synchronized refresh across both consumers."
+  },
+  "claim_ceiling": [
+    "No claim that Project Runner consumed the current 58-repository Discovery artifact; it explicitly did not.",
+    "No claim about hidden private-consumer behavior beyond the existing public-safe attestation ceiling.",
+    "No claim that matching total count equals matching census currentness; visibility split and digests also moved.",
+    "No private repository identity, ref, nonce, or receipt preimage is published.",
+    "No merge, runtime-registry promotion, scheduling authority, or dependency adoption follows."
+  ]
+}
