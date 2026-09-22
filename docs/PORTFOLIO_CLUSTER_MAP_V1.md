@@ -44,7 +44,9 @@ A candidate abstraction must first prove itself in a real cross-project flow.
 
 Public anchors: `hc-brain`, `transcendence`, `god-brain`.
 
-The prior portfolio audit observed substantial same-path byte identity between HC Brain and Transcendence on exact historical subjects. Discovery must remeasure current heads rather than carrying an old count as current truth.
+Fresh current-head remeasurement at `hc-brain@618245b54fb923c7a204892c6953ab6d1c5dac57` and `transcendence@68e7a794d6134e8319121404f31062288dc8d6a3` finds that all 263 Transcendence file paths exist in HC Brain, 255 are byte-identical, eight differ, and HC Brain has 37 additional files. That is 96.958174905% identical by Transcendence file count and 95.352510121% by Transcendence bytes.
+
+This is an observed tree-overlap result, not a fresh reconstruction qualification. See `research/HC_TRANSCENDENCE_CURRENT_HEAD_OVERLAP_20260921_V1.json`.
 
 Source-history review removed `bt2` from this cluster as a current-role anchor. Its unchanged Hyperconnectome README is byte-identical to an HC Brain historical README and entered `bt2` at repository initialization, but same-day source-controlled migration artifacts explicitly establish `bt2` as the canonical Build Team Two platform target. Discovery therefore records the HC material as bootstrap ancestry, not current repository-role evidence.
 
@@ -146,7 +148,7 @@ Negative controls are first-class Discovery evidence. A project that **should no
 
 The refreshed cut makes these bounded next questions high-value:
 
-1. remeasure current `hc-brain` ↔ `transcendence` overlap at exact current heads;
+1. execute a fresh exact reconstruction of current `transcendence` from pinned current `hc-brain` plus explicit overrides/deletions;
 2. compare `semanticatlas`, `spm`, `unvtrslr`, and `rezon` for mechanical overlap without assuming semantic equivalence;
 3. test whether `voss` exposes reusable review-receipt mechanics or only project-specific review behavior;
 4. inspect `vera-mesh` protocol/security semantics before treating it as transport infrastructure;
