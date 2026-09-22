@@ -36,11 +36,13 @@
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
       "labels": [
-        "COGNITIVE_BASE_CANDIDATE",
-        "REUSABLE_HC_TEMPLATE"
+        "BT2_CANONICAL_PLATFORM",
+        "HC_DERIVED_BOOTSTRAP_ANCESTRY",
+        "SOURCE_PROVENANCE"
       ],
       "notes": [
-        "README describes this repository as the canonical reusable HC-series Hyperconnectome template."
+        "Exact source history establishes bt2 as the canonical Build Team Two platform target within hours of repository initialization.",
+        "The root Hyperconnectome README is unchanged from the HC-derived initial snapshot and is treated as bootstrap ancestry rather than current repository-role authority."
       ]
     },
     {
@@ -413,22 +415,23 @@
       "edge_id": "HC_BT2_PARTIAL_TEMPLATE_DUPLICATION",
       "from": "hc-brain",
       "to": "bt2",
-      "relation": "DUPLICATED_IMPLEMENTATION",
-      "scope": "Exact main-head HC-family overlap with substantial divergence: 178 same-path blobs are byte-identical and 10 same-path blobs differ.",
+      "relation": "HISTORICAL_REFERENCE",
+      "scope": "Exact current-head byte overlap retained from HC-derived bootstrap ancestry inside the canonical Build Team Two platform; overlap is provenance evidence, not an active HC-template dependency claim.",
       "evidence_state": "OBSERVED",
       "source_refs": [
         "thebrazenbeard/hc-brain:main@618245b54fb923c7a204892c6953ab6d1c5dac57",
         "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e"
       ],
       "falsifiers": [
-        "The identical blobs are dominated by incidental documentation or generated artifacts rather than reusable HC implementation.",
-        "A path-normalized or provenance-aware comparison shows the apparent overlap does not represent common maintained substrate.",
-        "Factorization would import bt2 archive/training history or project-specific authority into hc-brain."
+        "New exact source evidence shows current BT2 intentionally adopts HC semantic/template authority after the canonical BT2 platform declarations.",
+        "A dependency audit demonstrates the retained HC-derived bytes are actively maintained as a shared HC substrate rather than preserved/bootstrap material.",
+        "The exact overlap measurement itself fails on a fresh comparison of the bound heads."
       ],
       "notes": [
-        "Measured 178 identical same-path blobs, 10 changed same-path blobs, 329 bt2-only blobs, and 112 hc-brain-only blobs.",
+        "Measured overlap is preserved: 178 identical same-path blobs, 10 changed same-path blobs, 329 bt2-only blobs, and 112 hc-brain-only blobs.",
         "Identical same-path blobs account for 1,011,147 of 2,191,461 hc-brain bytes at the exact measured heads (46.14031461%).",
-        "The divergence is too large to infer a safe overlay or canonical successor relationship without a dedicated lineage/reconstruction experiment."
+        "BT2 initial/current README blob 447c4cc24ea27660772cc0123b91592ae9c36f7e is byte-identical to historical HC Brain README at 8a343efdf9ff5a0fb2677cfb765f8cf2780f825c.",
+        "BT2 source commits bfc201d24b4313ae54fefe5202d81fa4bfb64911, 68bcaa5096b1823df964c4572fc12c73aaa464f7c, and ff60e98c7a7bd92faf7f9bcb4f539909b43733d0 establish canonical BT2 platform migration/identity/consolidation semantics."
       ]
     },
     {
