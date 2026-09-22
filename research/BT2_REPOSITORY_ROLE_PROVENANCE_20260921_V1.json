@@ -1,0 +1,78 @@
+{
+  "schema_version": "DISCOVERY_SOURCE_PROVENANCE_FINDING_V1",
+  "finding_id": "BT2_REPOSITORY_ROLE_PROVENANCE_20260921_V1",
+  "status": "OBSERVED_SOURCE_HISTORY_WITH_BOUNDED_INFERENCE",
+  "subject": {
+    "repository": "thebrazenbeard/bt2",
+    "current_main": "30e81cadd94fae117a7f6875523c03251c7c9f6e"
+  },
+  "observed_evidence": [
+    {
+      "kind": "INITIAL_COMMIT",
+      "ref": "33ff114d59da533f183739026e0b0f328a9b6c6e",
+      "observed_at": "2026-09-10T09:42:09Z",
+      "fact": "BT2 repository initial commit."
+    },
+    {
+      "kind": "README_BLOB_IDENTITY",
+      "bt2_initial_ref": "33ff114d59da533f183739026e0b0f328a9b6c6e",
+      "bt2_current_ref": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "hc_reference_ref": "8a343efdf9ff5a0fb2677cfb765f8cf2780f825c",
+      "blob_sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e",
+      "fact": "BT2 initial README, BT2 current README, and HC Brain README at the 2026-09-09 reference ref are byte-identical."
+    },
+    {
+      "kind": "INITIAL_TREE_COMPARISON",
+      "bt2_ref": "33ff114d59da533f183739026e0b0f328a9b6c6e",
+      "hc_ref": "8a343efdf9ff5a0fb2677cfb765f8cf2780f825c",
+      "bt2_entries": 223,
+      "hc_entries": 128,
+      "exact_same_path_same_object_entries": 104,
+      "only_in_hc": 0,
+      "comparison_note": "The BT2 initial tree contains every path observed in the HC reference tree plus additional material, with some shared paths modified. This supports HC-derived bootstrap lineage but does not prove the precise copy mechanism."
+    },
+    {
+      "kind": "CANONICAL_BT2_PROVENANCE_DECLARATION",
+      "ref": "bfc201d24b4313ae54fefe5202d81fa4bfb64911",
+      "observed_at": "2026-09-10T13:05:38Z",
+      "fact": "Adds docs/migration/SOURCE_PROVENANCE_MANIFEST_V1.md naming thebrazenbeard/bt2 as the target repository for the canonical Build Team Two platform and WoWSQL project bt2-479e4ad9 as target backend."
+    },
+    {
+      "kind": "BT2_IDENTITY_MIGRATION",
+      "ref": "68bcaa5096b1823df964c4572fc12c73aaa464f7c",
+      "observed_at": "2026-09-10T13:36:07Z",
+      "fact": "Commit explicitly adds BT2 identity and recovery integrity migration."
+    },
+    {
+      "kind": "CANONICAL_CONSOLIDATION_CLASSIFICATION",
+      "ref": "ff60e98c7a7bd92faf7f9bcb4f539909b43733d0",
+      "observed_at": "2026-09-10T13:45:44Z",
+      "fact": "Classifies source content for canonical BT2 consolidation and describes the intended semantic BT2 repository destination map."
+    },
+    {
+      "kind": "CURRENT_LINEAGE",
+      "ref": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "fact": "Current main continues BT2/Lantern/WoWSQL runtime-contract work rather than HC architecture development."
+    }
+  ],
+  "inference": {
+    "classification": "STALE_HC_BOOTSTRAP_README_ON_CANONICAL_BT2_PLATFORM",
+    "rationale": [
+      "The HC-brain README entered bt2 at repository creation and remained unchanged through current main.",
+      "Within hours of repository creation, exact source-controlled artifacts explicitly named bt2 as the canonical Build Team Two consolidation target.",
+      "Subsequent main history is dominated by BT2 database, training, recovery, Lantern, and WoWSQL work.",
+      "Therefore the README is stronger evidence of bootstrap ancestry than of the repository's current semantic role."
+    ],
+    "confidence_wording": "strongly supported bounded inference, not a claim about the user's original intent when creating the repository"
+  },
+  "boundaries": [
+    "This finding does not delete, rewrite, or devalue HC-derived historical material present in bt2.",
+    "This finding does not assert that all HC-derived files are safe to remove.",
+    "This finding does not grant merge, migration, cleanup, retirement, or deployment authority.",
+    "HC Brain remains a distinct repository and source subject."
+  ],
+  "unresolved": [
+    "The available source history does not state why an HC-derived snapshot was chosen as the initial bt2 repository seed.",
+    "Whether HC-derived legacy files in bt2 should remain, be archived, or be removed requires a separate exact dependency and provenance audit."
+  ]
+}
