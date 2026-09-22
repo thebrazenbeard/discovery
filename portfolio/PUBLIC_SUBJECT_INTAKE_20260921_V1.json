@@ -17,11 +17,19 @@
       "transcendence",
       "wip",
       "world-zero"
-    ]
+    ],
+    "source_binding": {
+      "repository": "thebrazenbeard/discovery",
+      "commit": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+      "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
+      "blob": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
+      "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
+    }
   },
   "current_public_cut": {
     "observed_date": "2026-09-21",
-    "public_count": 23
+    "public_count": 23,
+    "public_names_sha256": "25fe6601b4c664490bfe4494d8650dca4804ff5607ff599ee5ec0981a2f177d7"
   },
   "scope": "Repositories publicly nameable in the current census that were not named in the prior public census.",
   "authority_ceiling": "OBSERVED_CLASSIFICATION_INPUT_ONLY",
