@@ -3,7 +3,7 @@
   "candidate_id": "VERAMESH_SYNOLOGY_HANDOFF_V1",
   "title": "Test a source/build/install/runtime-currentness handoff between VeraMesh and Vera Synology",
   "status": "HYPOTHESIS",
-  "claim": "VeraMesh and Vera Synology expose complementary but distinct mechanics that may support a narrow handoff contract: VeraMesh owns authenticated transport/session/current-route semantics, while Vera Synology owns deterministic package/source identity, install/migration state, and installed-versus-current-source readback. A reusable handoff is justified only if it preserves that authority separation and removes real duplicated currentness plumbing.",
+  "claim": "VeraMesh and Vera Synology expose complementary transport/session versus package/install mechanics, but the first native handoff falsifier found a provenance gap: Synology strongly cross-binds its package to its own exact source manifest, yet the native package identity path does not bind the exact VeraMesh producer repository/head. A reusable handoff therefore remains a missing-contract hypothesis, not an established interchange.",
   "consumers": [
     {
       "repo": "thebrazenbeard/vera-mesh",
@@ -28,7 +28,11 @@
     "VeraMesh mutation-ledger source at the same head separates read-only operations from mutation durability and blocks ambiguous mutation retry without same-session durable idempotency.",
     "Vera Synology PR #3 exact head 553e3a637833c5469f6b99fbc4d597755a0c9a5e contains deterministic SPK verification with artifact/source byte and mode cross-binding against SOURCE_MANIFEST.json.",
     "The Vera Synology stack explicitly records installed operational R6 separately from later R7/current PR source, proving that install/runtime state and source currentness are already distinct concerns.",
-    "The source-bound comparison is recorded in experiments/PUBLIC_INTAKE_SECOND_PASS_V1.json."
+    "The source-bound comparison is recorded in experiments/PUBLIC_INTAKE_SECOND_PASS_V1.json.",
+    "Experiment VERAMESH_SYNOLOGY_HANDOFF_EXPERIMENT_V1 confirms Synology SOURCE_MANIFEST + verify_spk source can validate local package/source byte, mode, path-set, and closed metadata identity without importing VeraPort session authority.",
+    "The same exact native package identity path does not bind the VeraMesh producer repository or exact producer head; Discovery can observe both refs externally, but that is not native Synology package validation.",
+    "The proposed neutral record keeps build=NOT_EXECUTED_BY_DISCOVERY, install=NOT_OBSERVED_BY_DISCOVERY, route=NOT_INFERRED, and live_effect=NOT_INFERRED; hostile tests reject promotion of any of those states.",
+    "Current experiment disposition is FAIL_CURRENT_NATIVE_CROSS_REPO_BINDING_MISSING."
   ],
   "rejection_conditions": [
     "The interchange must interpret VeraPort session/authority semantics inside the Synology packaging layer.",
@@ -40,14 +44,16 @@
   "hostile_review": {
     "status": "NOT_RUN",
     "critical_objections": [
-      "The projects may already be properly separated and need only documentation, not a reusable component.",
-      "Currentness vocabulary overlap does not prove duplicated implementation.",
-      "A shared handoff schema could become a shadow release authority if it begins deciding whether source or installed state is acceptable."
+      "The projects may already be correctly separated and require only an explicit provenance receipt, not a reusable shared component.",
+      "A Discovery-side cross-repo record cannot substitute for a producer binding that the package's own governed validation path can recover and verify.",
+      "Adding producer provenance to Synology could become shadow release authority if the field decides acceptability rather than merely binds identity.",
+      "Even a safe identity receipt has not yet shown duplicated maintenance reduction or a second independent consumer."
     ]
   },
   "notes": [
     "Candidate generated from the 2026-09-21 second-pass public intake.",
-    "Next experiment: define the smallest neutral handoff record that binds VeraMesh source identity and intended package payload identity, then prove Vera Synology can validate it without importing transport authority.",
-    "No merge, install, route, provider, credential, or runtime action follows."
+    "No merge, install, route, provider, credential, or runtime action follows.",
+    "First native handoff experiment failed the stronger end-to-end claim: current Synology validation proves local package/source identity but not the exact VeraMesh producer binding.",
+    "Next valid experiment: specify a non-authoritative producer-provenance receipt that binds exact producer source identity but cannot promote build/install/route/effect state; do not modify VeraMesh or Vera Synology without their owning lane/authority."
   ]
 }
