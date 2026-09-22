@@ -92,7 +92,8 @@
           "sha": "56bf2588cbbe5a8e20bc11f3d0d9b62eab8b380f",
           "size": 5487
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "abil": {
       "head": "0812d9780ce1648820269fa142a43e17030ef793",
@@ -133,7 +134,8 @@
           "sha": "5d643f7f799b7b2edbcdcfb40148cf9ebbbcec26",
           "size": 7955
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "bt2": {
       "head": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
@@ -2724,7 +2726,8 @@
           "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
           "size": 240
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "discovery": {
       "head": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
@@ -3050,7 +3053,8 @@
           "sha": "68c536367a6be57d662ff9c9434c45e78f25b20d",
           "size": 12031
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "driftguard": {
       "head": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
@@ -3236,7 +3240,8 @@
           "sha": "3d84ab0d441a9a82186e69a8a6aaefed2a81f054",
           "size": 11557
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "god-brain": {
       "head": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
@@ -4742,7 +4747,8 @@
           "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
           "size": 240
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "hc-brain": {
       "head": "618245b54fb923c7a204892c6953ab6d1c5dac57",
@@ -6248,7 +6254,8 @@
           "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
           "size": 240
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "mosaic": {
       "head": "a3115031ec716526532b32dc004303b4042e4a26",
@@ -6269,7 +6276,8 @@
           "sha": "bc2642e4271d1dcef5f96fe246e325df29352fae",
           "size": 643
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "noema": {
       "head": "890efdca01cf496ce1b8686d86f8442a149a9d34",
@@ -6740,7 +6748,8 @@
           "sha": "f28d1d981edfea56ad620775329690fab0574b5f",
           "size": 11877
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "on-theo": {
       "head": "eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
@@ -6771,7 +6780,8 @@
           "sha": "21e193a364feb8828c28df8f1a3706b06a77c7c1",
           "size": 3061
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "project-runner": {
       "head": "bc05812b560b4fcde3a362e72fba04c626cafac8",
@@ -7182,7 +7192,8 @@
           "sha": "0d917a3ad2a465ef49cc45add1def92008e50d06",
           "size": 526
         }
-      ]
+      ],
+      "default_branch": "main"
     },
     "rezon": {
       "head": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
@@ -7193,7 +7204,8 @@
           "sha": "e192b67735a93adde60589ffbf193b0058c5bbaa",
           "size": 37
         }
-      ]
+      ],
+      "default_branch": "main"
     }
   }
 }
