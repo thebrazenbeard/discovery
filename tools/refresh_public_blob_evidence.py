@@ -307,7 +307,17 @@ def render_artifacts_from_subjects(
         metrics = _pair_metrics(a, b, prepared, canonical_subjects)
         refreshed = copy.deepcopy(record)
         for field, value in metrics.items():
-            refreshed[field] = value
+            existing = record.get(field)
+            if (
+                isinstance(existing, (int, float))
+                and not isinstance(existing, bool)
+                and isinstance(value, (int, float))
+                and not isinstance(value, bool)
+                and existing == value
+            ):
+                refreshed[field] = existing
+            else:
+                refreshed[field] = value
         refreshed_pairs.append(refreshed)
 
     if observed_keys != expected_keys:
