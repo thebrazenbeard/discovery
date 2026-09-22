@@ -63,6 +63,11 @@ See:
 - [schemas/research_cut_v1.schema.json](schemas/research_cut_v1.schema.json)
 - [tools/validate_research_ingest.py](tools/validate_research_ingest.py)
 
+Current deeper findings:
+
+- [BT2 repository-role provenance](research/BT2_REPOSITORY_ROLE_PROVENANCE_20260921_V1.json) — resolves the stale Hyperconnectome README as HC-derived bootstrap residue on the canonical BT2 platform.
+- [HC ↔ Transcendence current-head overlap](research/HC_TRANSCENDENCE_CURRENT_HEAD_OVERLAP_20260921_V1.json) — exact tree remeasurement at current heads; observation only, not fresh reconstruction qualification.
+
 ## Initial experiments
 
 The seeded candidates deliberately test different kinds of reuse:
