@@ -115,7 +115,7 @@ class DiscoveryCurrentnessIntegrityTests(unittest.TestCase):
 
     def test_prior_cut_source_binding_is_exact(self):
         intake = copy.deepcopy(self.intake)
-        intake["prior_public_cut"]["source_binding"]["blob_sha"] = "0" * 40
+        intake["prior_public_cut"]["source_binding"]["blob"] = "0" * 40
         self.assertIn(
             "public subject intake prior source binding mismatch",
             self.currentness_errors(intake=intake),
