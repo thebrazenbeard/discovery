@@ -3,7 +3,7 @@
   "candidate_id": "REZON_RUNNER_BOUNDARY_V1",
   "title": "Separate epistemic reasoning from mechanical execution",
   "status": "EXPERIMENTING",
-  "claim": "A real Rezon R51 run-evidence export can be handed to Project Runner for bounded mechanical structural verification without transferring Rezon truth, admission, claim correctness, qualification, currentness, authority, or external-effect semantics to Runner.",
+  "claim": "A real Rezon R51 run-evidence export can be mechanically verified by Project Runner without transferring Rezon truth, admission, qualification, completion, target authority, or external-effect authority. Current hardening shows the verifier is producer-contract-aware rather than producer-agnostic: it now mirrors deterministic Rezon producer-ID construction and enforces generic claim-disposition restrictions. Reuse value remains unproven because maintenance coupling is measurable and no organic second consumer has been demonstrated.",
   "consumers": [
     {
       "repo": "thebrazenbeard/rezon",
@@ -12,17 +12,19 @@
     },
     {
       "repo": "thebrazenbeard/project-runner",
-      "role": "independent mechanical verifier of exported run-evidence structure only",
-      "ref": "work/discovery-rezon-evidence-verifier-v1-20260920@4de0f6148b3d7d04ccdb4e0057435fa0d904590a"
+      "role": "producer-contract-aware mechanical verifier of exported run-evidence structure only",
+      "ref": "bt2/rezon-evidence-contract-hardening-v1-20260920@8e588bd1cb72808b4a611d2a0bcbaeba6cb10b15"
     }
   ],
   "preserved_boundaries": [
     "Rezon remains owner of epistemic semantics, admission, claim correctness, qualification, and provenance meaning.",
     "Project Runner verifies only exact exported JSON structure and deterministic receipt↔trace bindings.",
-    "Runner treats accepted_claim_ids, rejected_claim_ids, unresolved, and claim_disposition_complete as opaque payload rather than truth/admission signals.",
     "Runner accepts only PLAN run evidence and cannot promote evidence into external-effect authorization.",
-    "Runner does not import Rezon and does not reimplement Rezon's canonical producer-ID formula.",
-    "Rezon remains executable and testable without Project Runner."
+    "Rezon remains executable and testable without Project Runner.",
+    "Runner may mirror deterministic producer-contract invariants needed for structural verification, but those mirrored invariants do not grant Rezon truth, admission, qualification, completion, or authority.",
+    "Current Runner verifies that generic run evidence carries no accepted/rejected claim dispositions and no completed claim-disposition assertion; it does not decide the semantic correctness of claim IDs.",
+    "Current Runner mirrors Rezon's deterministic producer-ID construction only to reject structurally forged producer bindings.",
+    "The outer evidence digest remains an unkeyed self-consistency hash; structural verification does not authenticate that an arbitrary object actually originated from Rezon."
   ],
   "promotion_evidence": [
     "Rezon R51 exact head 8289914ec500a1392b10fe1a3774dee166e73b40 exporter blob e365fd637904d4402891839ab1e187e50694e96b generated deterministic schema rezon.run-evidence.v1 evidence.",
@@ -32,10 +34,15 @@
     "Project Runner hosted workflow 35517367117 passed 222/222 tests, registry validation (15 projects / 12 workers), and M6 recursive restart proof.",
     "Hostile regression proves Runner accepts opaque changes to Rezon accepted/rejected/unresolved claim IDs when the evidence is otherwise structurally valid and correctly rehashed, demonstrating non-interpretation of epistemic semantics.",
     "Real Rezon failure-path PLAN export from exact R51 source produced evidence digest 2f16bda0e304620772e5c8c8368ba7de190e77b879b5862d4b53d973db28cf53 with contract_violation preserved in both receipt and trace, no accepted/rejected claims, incomplete claim disposition, and an unresolved invalid-contract marker.",
-    "The same Project Runner PR #26 verifier accepted that exact failure artifact only as STRUCTURALLY_VALID_NON_PROMOTIONAL with one receipt failure and one trace failure; no Rezon truth/admission/completion semantics were produced."
+    "The same Project Runner PR #26 verifier accepted that exact failure artifact only as STRUCTURALLY_VALID_NON_PROMOTIONAL with one receipt failure and one trace failure; no Rezon truth/admission/completion semantics were produced.",
+    "Project Runner PR #31 exact head 8e588bd1cb72808b4a611d2a0bcbaeba6cb10b15 supersedes the original verifier and has independent PASS_WITH_CLAIM_CEILING review against bound Rezon R51.",
+    "Current verifier blob d46b1c310c8cf51ae495822f5cefbec414fb6ba9 mirrors Rezon's deterministic canonical producer-ID formula and rejects forged recomputation mismatch.",
+    "Current hosted workflow 35546042175 executed 234/234 tests plus registry and M6 qualification successfully.",
+    "From original PR26 verifier to PR31 current successor: 11 commits, 7 changed files, +445/-16 lines; core verifier grows 314→387 lines and primary verifier tests 132→212 lines, with a new 105-line failure-path suite plus fixtures/docs.",
+    "Public/default and active-PR search found no demonstrated second direct parser/consumer of rezon.run-evidence.v1 beyond the Project Runner line; this is a bounded negative search, not a portfolio-wide absence proof."
   ],
   "rejection_conditions": [
-    "Runner must understand Rezon-specific truth/admission semantics to verify the export.",
+    "Runner must interpret Rezon truth/admission correctness, rather than merely mirror deterministic producer-contract structure, to verify the export.",
     "Runner's structurally-valid result is consumed as Rezon truth, admission, qualification, or external-effect authorization.",
     "Rezon cannot generate or validate the same run evidence without Project Runner.",
     "The adapter requires importing Rezon or duplicating enough Rezon semantics that mechanical verification ceases to be independent.",
@@ -45,11 +52,11 @@
   "hostile_review": {
     "status": "PASS_WITH_LIMITS",
     "critical_objections": [
-      "Success-path and real failure-path PLAN exports both cross the mechanical boundary, but this still does not establish net maintenance reduction, a second organic consumer, or reusable shared infrastructure.",
-      "Rezon final head has fresh local exact-source test evidence but no attached hosted CI run; evidence classes must remain distinct.",
-      "Runner independently checks cross-bindings but deliberately does not recompute Rezon's canonical producer-ID formula; that is a preserved authority boundary and also a verification ceiling.",
-      "Two predecessor Runner heads failed due fixture-transport provenance and malformed test-source issues before the final hosted PASS; those failures remain part of the evidence history.",
-      "This experiment does not yet establish net maintenance reduction or justify making Project Runner mandatory for Rezon."
+      "The current verifier is producer-contract-aware and therefore carries measurable coupling to Rezon; producer-agnostic reuse is not established.",
+      "Hardening added real value by closing duplicate-ID and forged-producer counterexamples, but it also grew code/tests/fixtures/docs without demonstrated duplicated code removal elsewhere.",
+      "No organic second direct consumer of rezon.run-evidence.v1 is demonstrated on the inspected public/default/open-PR surfaces.",
+      "An unkeyed canonical evidence digest proves self-consistency, not producer authenticity.",
+      "The candidate still demonstrates mechanical/epistemic separation, but that fact alone does not justify making Runner mandatory or promoting shared infrastructure."
     ]
   },
   "notes": [
@@ -58,6 +65,8 @@
     "Fixture generation required no package installation; Windows CRLF source bytes and GitHub LF persisted bytes are separately bound.",
     "Candidate remains EXPERIMENTING; PROVEN_REUSABLE is not justified.",
     "Failure-path falsifier PASS: contract_violation survived exact Rezon export and independent Runner structural verification without epistemic promotion.",
-    "Next falsifier: maintenance economics / organic second-consumer evidence. Do not centralize or make Runner mandatory merely because interoperability works."
+    "Current successor ingest: Project Runner PR #31 narrows the boundary from producer-agnostic structural checking to producer-contract-aware structural verification.",
+    "Maintenance coupling is now measured; net maintenance savings remain unproven.",
+    "Next falsifier remains organic second-consumer evidence or concrete code-deletion economics; do not centralize merely because the hardened verifier works."
   ]
 }
