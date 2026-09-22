@@ -1,8 +1,12 @@
 # Discovery
 
-Discovery exists to answer one question:
+Discovery exists to **discover useful capability across the portfolio and get it governably implemented into Vera and Vera Control Plane**.
 
-> **What should actually be shared across the portfolio, and what should remain independently evolved?**
+Its core loop is:
+
+`DISCOVER -> CLASSIFY -> IMPLEMENT -> VERIFY -> HAND OFF`
+
+Reuse/deduplication is one part of that mission, not the whole mission. Discovery must also identify valuable standalone capabilities, decide how they belong in Vera/VCP, prepare the concrete integration work, and verify source-level implementation without confusing source integration with installation or runtime activation.
 
 Repository sprawl is not automatically a defect. Duplication can provide evolutionary isolation, fault containment, independent falsification, and freedom to challenge assumptions.
 
@@ -29,7 +33,7 @@ A candidate may instead become `PROJECT_SPECIFIC`, `REJECTED`, or `SUPERSEDED`.
 
 `PROVEN_REUSABLE` is evidence of reuse suitability only. It grants no merge, deployment, installation, authority, or semantic promotion elsewhere.
 
-See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md).
+See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md) and [docs/DISCOVERY_VERA_VCP_IMPLEMENTATION_ENGINE_V1.md](docs/DISCOVERY_VERA_VCP_IMPLEMENTATION_ENGINE_V1.md).
 
 ## Portfolio census
 
