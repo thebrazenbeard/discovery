@@ -1,3 +1,4 @@
+import copy
 import importlib.util
 import pathlib
 import unittest
@@ -139,6 +140,47 @@ class DiscoveryGraphTests(unittest.TestCase):
             "opaque private edge has unsafe source ref: DISCOVERY_CENSUS_PRIVATE_OPAQUE_CONSUMER",
             errors,
         )
+
+
+    def test_hc_ancestry_contract_passes(self):
+        artifact = module.load(module.HC_ANCESTRY)
+        shards = [module.load(path) for path in module.HC_ANCESTRY_SHARDS]
+        self.assertEqual([], module._validate_hc_ancestry_contract(artifact, shards))
+
+    def test_hc_ancestry_summary_mutation_fails(self):
+        artifact = copy.deepcopy(module.load(module.HC_ANCESTRY))
+        shards = [module.load(path) for path in module.HC_ANCESTRY_SHARDS]
+        artifact["results"]["branch_count"] = 33
+        errors = module._validate_hc_ancestry_contract(artifact, shards)
+        self.assertIn("HC ancestry summary does not recompute", errors)
+
+    def test_hc_ancestry_record_mutation_fails(self):
+        artifact = copy.deepcopy(module.load(module.HC_ANCESTRY))
+        shards = [module.load(path) for path in module.HC_ANCESTRY_SHARDS]
+        artifact["records"][0]["same_tree_sha"] = False
+        errors = module._validate_hc_ancestry_contract(artifact, shards)
+        self.assertTrue(
+            any(error.startswith("HC ancestry record does not recompute:") for error in errors)
+        )
+
+    def test_hc_ancestry_shard_tree_mutation_fails_pattern(self):
+        artifact = module.load(module.HC_ANCESTRY)
+        shards = [copy.deepcopy(module.load(path)) for path in module.HC_ANCESTRY_SHARDS]
+        first_branch = next(iter(shards[0]["branches"]))
+        shards[0]["branches"][first_branch]["god-brain"]["tree_sha"] = "0" * 40
+        errors = module._validate_hc_ancestry_contract(artifact, shards)
+        self.assertTrue(
+            any(error.startswith("HC ancestry record does not recompute:") for error in errors)
+        )
+        self.assertIn("HC ancestry summary does not recompute", errors)
+
+    def test_hc_ancestry_main_in_shard_fails(self):
+        artifact = module.load(module.HC_ANCESTRY)
+        shards = [copy.deepcopy(module.load(path)) for path in module.HC_ANCESTRY_SHARDS]
+        exemplar = copy.deepcopy(next(iter(shards[0]["branches"].values())))
+        shards[0]["branches"]["main"] = exemplar
+        errors = module._validate_hc_ancestry_contract(artifact, shards)
+        self.assertIn("HC ancestry shards must exclude main", errors)
 
 
 if __name__ == "__main__":
