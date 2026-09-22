@@ -31,7 +31,12 @@
     "Semantic Atlas main explicitly requires semantic concepts/interpretations to preserve evidentiary lineage and to keep direct source, user statement, inference, symbolism, historical promotion, later evidence, and unresolved state distinct.",
     "UNVTRSLR main explicitly separates operational relation verification from semantic interpretation selection/confirmation and binds hypothesis provenance, rival adequacy, claim-discriminating evidence, surviving alternatives, and claim ceilings.",
     "SPM main independently lists provenance sensitivity, semantic scope fidelity, contradiction/ambiguity preservation, correction-state transition, and temporal/currentness sensitivity as evaluation dimensions.",
-    "Exact source refs and source blobs are recorded in experiments/SEMANTIC_GROUNDING_PROVENANCE_SURFACE_V1.json."
+    "Exact source refs and source blobs are recorded in experiments/SEMANTIC_GROUNDING_PROVENANCE_SURFACE_V1.json.",
+    "Executed source-bound two-case interchange at experiments/SEMANTIC_PROVENANCE_INTERCHANGE_EXPERIMENT_V1.json using Semantic Atlas main@5669a727... and UNVTRSLR main@903d79c6....",
+    "Semantic Atlas mapping preserves PROP-b1cfd327..., VADJ-f895b498..., three exact evidence IDs, custody limitations, and project-native definitions/nodes by exact extension refs without importing the Atlas ontology into shared fields.",
+    "UNVTRSLR C047 remains a DESIGN_REQUIREMENT / SPECIFIED_CONTROL_CASE with zero empirical evidence bindings because the R2 harness is not built; the interchange therefore does not launder a specification into evidence.",
+    "SPM main@0ab6e6cd... structurally consumes six evaluation dimensions from shared fields while the test forbids project-native status/ontology/substrate fields from acting as shared semantics.",
+    "Hostile mutation tests reject exact-ref drift, evidence-set drift, design-requirement laundering, invented UNVTRSLR empirical evidence, project-native-status import into SPM mapping, and self-promotion of the experiment result."
   ],
   "rejection_conditions": [
     "The minimal interchange needs project-specific ontology or evaluator fields to remain lossless.",
@@ -43,14 +48,16 @@
   "hostile_review": {
     "status": "NOT_RUN",
     "critical_objections": [
-      "Shared vocabulary is not evidence of shared implementation.",
-      "A provenance schema can quietly become a universal semantic ontology through field accretion.",
-      "SPM may need only tests and scores, making a shared semantic record unnecessary framework gravity."
+      "Two selected examples demonstrate representational compatibility, not portfolio-wide reuse or favorable maintenance economics.",
+      "Exact project-native extension refs may defer complexity rather than remove it; a future implementation must measure adapter size and duplicated plumbing actually removed.",
+      "SPM compatibility is structural evaluation-metadata compatibility only; no SPM model or prototype consumed the records.",
+      "A shared provenance envelope can become ontology creep through later field accretion even if V1 is narrow."
     ]
   },
   "notes": [
     "Candidate generated from the 2026-09-21 public-surface refresh.",
-    "Next valid experiment is one minimal record encoded losslessly from one real Semantic Atlas claim-control case and one real UNVTRSLR case, with SPM tested only afterward as an independent third consumer.",
-    "No runtime dependency, ontology merge, model integration, or PROVEN_REUSABLE claim follows."
+    "No runtime dependency, ontology merge, model integration, or PROVEN_REUSABLE claim follows.",
+    "First source-bound experiment result: PASS_WITH_LIMITS; candidate intentionally remains HYPOTHESIS pending independent review, broader cases, and implementation/maintenance economics.",
+    "Next valid experiment: encode at least one materially different additional case from Semantic Atlas and UNVTRSLR, then implement a minimal consumer adapter and measure shared plumbing removed versus adapter complexity."
   ]
 }
