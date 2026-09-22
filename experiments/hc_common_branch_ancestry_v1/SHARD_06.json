@@ -1,0 +1,147 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_ANCESTRY_SHARD_V1",
+  "shard": "06",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "research/hyperconnectome-evidence-v1": {
+      "hc-brain": {
+        "sha": "7cf41836dd3daf6e690ba1a8c39526b106b6a381",
+        "tree_sha": "fc7d341a8856ac0a83b826878d7dd4f52ba09f94",
+        "parents": [
+          "696d7e6aa39b2d2b6405f4383b0473f93349bbbd"
+        ],
+        "message": "Add development curiosity and learning-curriculum research",
+        "author_date": "2026-09-09T11:25:22Z",
+        "committer_date": "2026-09-09T11:25:22Z"
+      },
+      "transcendence": {
+        "sha": "121bab5ae8408b2369e79d9f6d50c03e7dc44ecc",
+        "tree_sha": "fc7d341a8856ac0a83b826878d7dd4f52ba09f94",
+        "parents": [],
+        "message": "Initialize research/hyperconnectome-evidence-v1",
+        "author_date": "2026-09-17T21:14:54Z",
+        "committer_date": "2026-09-17T21:14:54Z"
+      },
+      "god-brain": {
+        "sha": "1a999ae18aede0eabe28c0888c4503c019de34f4",
+        "tree_sha": "fc7d341a8856ac0a83b826878d7dd4f52ba09f94",
+        "parents": [],
+        "message": "Initialize research/hyperconnectome-evidence-v1",
+        "author_date": "2026-09-20T11:50:50Z",
+        "committer_date": "2026-09-20T11:50:50Z"
+      }
+    },
+    "research/hyperconnectome-foundations-20260909": {
+      "hc-brain": {
+        "sha": "fbf061b7304df70efdfd2bbf0c3d25891b6c3d2f",
+        "tree_sha": "129a07def88a8710c34c7b988fd9b6778235f090",
+        "parents": [
+          "b407e01b80f020f0812af2ffcef11760036b2851"
+        ],
+        "message": "docs: make temporal hypergraph architecture explicit",
+        "author_date": "2026-09-09T11:23:00Z",
+        "committer_date": "2026-09-09T11:23:00Z"
+      },
+      "transcendence": {
+        "sha": "76e3f93bb3f52b99cf8d5d6818e6a81acaad114f",
+        "tree_sha": "129a07def88a8710c34c7b988fd9b6778235f090",
+        "parents": [],
+        "message": "Initialize research/hyperconnectome-foundations-20260909",
+        "author_date": "2026-09-17T21:14:53Z",
+        "committer_date": "2026-09-17T21:14:53Z"
+      },
+      "god-brain": {
+        "sha": "8b52cded71b6b0d0614fa0a638df0526e566534e",
+        "tree_sha": "129a07def88a8710c34c7b988fd9b6778235f090",
+        "parents": [],
+        "message": "Initialize research/hyperconnectome-foundations-20260909",
+        "author_date": "2026-09-20T11:50:49Z",
+        "committer_date": "2026-09-20T11:50:49Z"
+      }
+    },
+    "research/nooplex-hc3-architecture-v1": {
+      "hc-brain": {
+        "sha": "74b1a1d3c9bdd518495057e3e58d3f6672250a48",
+        "tree_sha": "d807f4214ccb93df41862354f166cf5f30be1ed8",
+        "parents": [
+          "50d3f34c57bcfa2102fdacfcc6799419e110788e"
+        ],
+        "message": "Neutralize original architecture seed",
+        "author_date": "2026-09-09T10:16:58Z",
+        "committer_date": "2026-09-09T10:16:58Z"
+      },
+      "transcendence": {
+        "sha": "287730f19b9f2b012132d52335efdebf0d647991",
+        "tree_sha": "d807f4214ccb93df41862354f166cf5f30be1ed8",
+        "parents": [],
+        "message": "Initialize research/nooplex-hc3-architecture-v1",
+        "author_date": "2026-09-17T21:14:47Z",
+        "committer_date": "2026-09-17T21:14:47Z"
+      },
+      "god-brain": {
+        "sha": "9f6a5b4118861359f94d9c1de25301d2c9c18c88",
+        "tree_sha": "d807f4214ccb93df41862354f166cf5f30be1ed8",
+        "parents": [],
+        "message": "Initialize research/nooplex-hc3-architecture-v1",
+        "author_date": "2026-09-20T11:50:43Z",
+        "committer_date": "2026-09-20T11:50:43Z"
+      }
+    },
+    "review/pr4-reconciliation-v1": {
+      "hc-brain": {
+        "sha": "dd2f334be1a82d189b1b186839e49fab3b1976b3",
+        "tree_sha": "69268e0cc33048c1aa7e05824fedb99708c81b98",
+        "parents": [
+          "a54b83f66de22accacc8539dfe7956b88ad74384"
+        ],
+        "message": "Remap social cognition into canonical sociological root",
+        "author_date": "2026-09-09T12:13:37Z",
+        "committer_date": "2026-09-09T12:13:37Z"
+      },
+      "transcendence": {
+        "sha": "b99ce56d9c7b679b09cdac4c1d705aa7dd575543",
+        "tree_sha": "69268e0cc33048c1aa7e05824fedb99708c81b98",
+        "parents": [],
+        "message": "Initialize review/pr4-reconciliation-v1",
+        "author_date": "2026-09-17T21:14:59Z",
+        "committer_date": "2026-09-17T21:14:59Z"
+      },
+      "god-brain": {
+        "sha": "645b45ce0c0e62b72ec81acd3ce331c9069790ef",
+        "tree_sha": "69268e0cc33048c1aa7e05824fedb99708c81b98",
+        "parents": [],
+        "message": "Initialize review/pr4-reconciliation-v1",
+        "author_date": "2026-09-20T11:50:54Z",
+        "committer_date": "2026-09-20T11:50:54Z"
+      }
+    },
+    "review/pr4-reconciliation-v2": {
+      "hc-brain": {
+        "sha": "550f86962069b88d6024d8a72e719a1272eaadaf",
+        "tree_sha": "57bf68f43c6eafd8f543ab6b80634aeb4cafef53",
+        "parents": [
+          "ac1b40465bbb6946dbfd85ead915854680206ab7"
+        ],
+        "message": "Add deduplicated HC reference model candidate",
+        "author_date": "2026-09-09T12:23:43Z",
+        "committer_date": "2026-09-09T12:23:43Z"
+      },
+      "transcendence": {
+        "sha": "396ce64087389507482910b79f661f54b67bb371",
+        "tree_sha": "57bf68f43c6eafd8f543ab6b80634aeb4cafef53",
+        "parents": [],
+        "message": "Initialize review/pr4-reconciliation-v2",
+        "author_date": "2026-09-17T21:15:03Z",
+        "committer_date": "2026-09-17T21:15:03Z"
+      },
+      "god-brain": {
+        "sha": "449353d45baecc77cb6e6559cbe2627fadb330f7",
+        "tree_sha": "57bf68f43c6eafd8f543ab6b80634aeb4cafef53",
+        "parents": [],
+        "message": "Initialize review/pr4-reconciliation-v2",
+        "author_date": "2026-09-20T11:50:57Z",
+        "committer_date": "2026-09-20T11:50:57Z"
+      }
+    }
+  }
+}

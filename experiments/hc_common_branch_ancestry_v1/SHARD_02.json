@@ -1,0 +1,147 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_ANCESTRY_SHARD_V1",
+  "shard": "02",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "four/federated-modelgraph-scout-v1": {
+      "hc-brain": {
+        "sha": "8df0757a60e580e506d8276abba1a96e3e6d509a",
+        "tree_sha": "22212031eedbbe5e61663f4359e3753065d5dac5",
+        "parents": [
+          "4fba4dbff858e25a40bba7d3fdd717657ddeae4e"
+        ],
+        "message": "Research federated ancestry and model-graph semantics",
+        "author_date": "2026-09-09T22:51:10Z",
+        "committer_date": "2026-09-09T22:51:10Z"
+      },
+      "transcendence": {
+        "sha": "09a07fd7a3d5d3ed9b6c6786f55fb5ae3f65bf70",
+        "tree_sha": "22212031eedbbe5e61663f4359e3753065d5dac5",
+        "parents": [],
+        "message": "Initialize four/federated-modelgraph-scout-v1",
+        "author_date": "2026-09-17T21:15:19Z",
+        "committer_date": "2026-09-17T21:15:19Z"
+      },
+      "god-brain": {
+        "sha": "f4019dcd2d99ad3e8fd6c0c86de0f493f293dd1e",
+        "tree_sha": "22212031eedbbe5e61663f4359e3753065d5dac5",
+        "parents": [],
+        "message": "Initialize four/federated-modelgraph-scout-v1",
+        "author_date": "2026-09-20T11:51:13Z",
+        "committer_date": "2026-09-20T11:51:13Z"
+      }
+    },
+    "four/lineage-and-conformance-v2": {
+      "hc-brain": {
+        "sha": "6a9f455baf618e4047f2e259fad354dbb1d0ec3b",
+        "tree_sha": "db41696419a5178cd0f869e786212b06e437ecbc",
+        "parents": [
+          "4072834187457c2dbdfa0d28f5f5c87a1a1292da"
+        ],
+        "message": "Four: fail reference-kernel authority hardening rereview",
+        "author_date": "2026-09-11T12:24:10Z",
+        "committer_date": "2026-09-11T12:24:10Z"
+      },
+      "transcendence": {
+        "sha": "b6289b41d06de4ab073226745cf557dcaeb2e17b",
+        "tree_sha": "db41696419a5178cd0f869e786212b06e437ecbc",
+        "parents": [],
+        "message": "Initialize four/lineage-and-conformance-v2",
+        "author_date": "2026-09-17T21:15:21Z",
+        "committer_date": "2026-09-17T21:15:21Z"
+      },
+      "god-brain": {
+        "sha": "1af78a278002343151d7cb1625f681b715730a96",
+        "tree_sha": "db41696419a5178cd0f869e786212b06e437ecbc",
+        "parents": [],
+        "message": "Initialize four/lineage-and-conformance-v2",
+        "author_date": "2026-09-20T11:51:14Z",
+        "committer_date": "2026-09-20T11:51:14Z"
+      }
+    },
+    "four/network-neuroscience-deep-scout-v1": {
+      "hc-brain": {
+        "sha": "062f804808abe48362f6ebf56975837fc5c6ecc3",
+        "tree_sha": "a6aa108999138617d134e33b5e11a151a455e44d",
+        "parents": [
+          "b3402fcafa9175ca64351550235b500c474c1e70"
+        ],
+        "message": "Four: freeze protected-update commit-fence qualification contract",
+        "author_date": "2026-09-17T10:50:47Z",
+        "committer_date": "2026-09-17T10:50:47Z"
+      },
+      "transcendence": {
+        "sha": "f2338ad84427ae0fbf2cd543fc079e7e5f9b4a71",
+        "tree_sha": "a6aa108999138617d134e33b5e11a151a455e44d",
+        "parents": [],
+        "message": "Initialize four/network-neuroscience-deep-scout-v1",
+        "author_date": "2026-09-17T21:15:31Z",
+        "committer_date": "2026-09-17T21:15:31Z"
+      },
+      "god-brain": {
+        "sha": "49af5ff9a077e7f7c5f68acbd15d8de0696e3b43",
+        "tree_sha": "a6aa108999138617d134e33b5e11a151a455e44d",
+        "parents": [],
+        "message": "Initialize four/network-neuroscience-deep-scout-v1",
+        "author_date": "2026-09-20T11:51:23Z",
+        "committer_date": "2026-09-20T11:51:23Z"
+      }
+    },
+    "four/neuroglia-evidence-v1": {
+      "hc-brain": {
+        "sha": "0942969da4db04ec953ba5bd6759809e9210fd82",
+        "tree_sha": "9edf39228e763c59df2eca7d8cdcec9f4dd03559",
+        "parents": [
+          "035f213023eee668d28e6673d5505fdbf6584a93"
+        ],
+        "message": "Normalize neuroglia evidence and transfer disposition",
+        "author_date": "2026-09-09T22:21:13Z",
+        "committer_date": "2026-09-09T22:21:13Z"
+      },
+      "transcendence": {
+        "sha": "5f9b6a224bafb4fc15fd4145438ea323f0990c3d",
+        "tree_sha": "9edf39228e763c59df2eca7d8cdcec9f4dd03559",
+        "parents": [],
+        "message": "Initialize four/neuroglia-evidence-v1",
+        "author_date": "2026-09-17T21:15:13Z",
+        "committer_date": "2026-09-17T21:15:13Z"
+      },
+      "god-brain": {
+        "sha": "dab4ad278c69c7c93bd879828d97db44a9ab448f",
+        "tree_sha": "9edf39228e763c59df2eca7d8cdcec9f4dd03559",
+        "parents": [],
+        "message": "Initialize four/neuroglia-evidence-v1",
+        "author_date": "2026-09-20T11:51:07Z",
+        "committer_date": "2026-09-20T11:51:07Z"
+      }
+    },
+    "four/perception-speech-v1": {
+      "hc-brain": {
+        "sha": "9876422b3783df31bb86ef5bca92d9cbd3cc20df",
+        "tree_sha": "34c5834f2f4056d66200dc6fe09bc660246eef19",
+        "parents": [
+          "b88d63bab88e582777eabc7772eeb1b65d3f5ab1"
+        ],
+        "message": "Rebuild perceptual communication machine companion on current main",
+        "author_date": "2026-09-09T21:18:42Z",
+        "committer_date": "2026-09-09T21:18:42Z"
+      },
+      "transcendence": {
+        "sha": "c2e4b47abd54fa153bbc7f11781f9871a0cc2585",
+        "tree_sha": "34c5834f2f4056d66200dc6fe09bc660246eef19",
+        "parents": [],
+        "message": "Initialize four/perception-speech-v1",
+        "author_date": "2026-09-17T21:15:09Z",
+        "committer_date": "2026-09-17T21:15:09Z"
+      },
+      "god-brain": {
+        "sha": "d00a6e7d5b29ab1c3f2fb6cab49da9b616fe2728",
+        "tree_sha": "34c5834f2f4056d66200dc6fe09bc660246eef19",
+        "parents": [],
+        "message": "Initialize four/perception-speech-v1",
+        "author_date": "2026-09-20T11:51:03Z",
+        "committer_date": "2026-09-20T11:51:03Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_ANCESTRY_SHARD_V1",
+  "shard": "05",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "noah/reference-kernel-authority-hardening-v1": {
+      "hc-brain": {
+        "sha": "3d9df59b2ad8b10f2d46b4dfe67a309e2b02f207",
+        "tree_sha": "9def852eb9b7586d9b7242673b15faa5d161e306",
+        "parents": [
+          "3dad946c55ed7478d6a30a5af92f0b385ff6be5d"
+        ],
+        "message": "Current state checkpoint",
+        "author_date": "2026-09-15T11:28:38Z",
+        "committer_date": "2026-09-15T11:28:38Z"
+      },
+      "transcendence": {
+        "sha": "823be2d341621d3be9835d7ca10f7ac151327727",
+        "tree_sha": "9def852eb9b7586d9b7242673b15faa5d161e306",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-v1",
+        "author_date": "2026-09-17T21:15:28Z",
+        "committer_date": "2026-09-17T21:15:28Z"
+      },
+      "god-brain": {
+        "sha": "6b7eb18278f277700df40d6d544223c81e9ea4d6",
+        "tree_sha": "9def852eb9b7586d9b7242673b15faa5d161e306",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-v1",
+        "author_date": "2026-09-20T11:51:21Z",
+        "committer_date": "2026-09-20T11:51:21Z"
+      }
+    },
+    "noah/reference-kernel-authority-hardening-v1-candidate": {
+      "hc-brain": {
+        "sha": "25a5524e3b018f8ea1d7678ba0a58f78108be66f",
+        "tree_sha": "4e3adb6b6dce0fc3acfabd6149e7bdc14e9250f4",
+        "parents": [
+          "d48fc375deea874ebe7d1328ac91f055326fe2c3"
+        ],
+        "message": "Run Four R2 authority regressions in CI",
+        "author_date": "2026-09-13T23:18:57Z",
+        "committer_date": "2026-09-13T23:18:57Z"
+      },
+      "transcendence": {
+        "sha": "748c570b0fb6d154268d3cb76ac10c28860a7ffe",
+        "tree_sha": "4e3adb6b6dce0fc3acfabd6149e7bdc14e9250f4",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-v1-candidate",
+        "author_date": "2026-09-17T21:15:22Z",
+        "committer_date": "2026-09-17T21:15:22Z"
+      },
+      "god-brain": {
+        "sha": "eda0e279d0bc6fdb31be5eb91fa85cd8a10e1ebf",
+        "tree_sha": "4e3adb6b6dce0fc3acfabd6149e7bdc14e9250f4",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-v1-candidate",
+        "author_date": "2026-09-20T11:51:15Z",
+        "committer_date": "2026-09-20T11:51:15Z"
+      }
+    },
+    "noah/reference-kernel-lineage-hardening-r5-red": {
+      "hc-brain": {
+        "sha": "3d9df59b2ad8b10f2d46b4dfe67a309e2b02f207",
+        "tree_sha": "9def852eb9b7586d9b7242673b15faa5d161e306",
+        "parents": [
+          "3dad946c55ed7478d6a30a5af92f0b385ff6be5d"
+        ],
+        "message": "Current state checkpoint",
+        "author_date": "2026-09-15T11:28:38Z",
+        "committer_date": "2026-09-15T11:28:38Z"
+      },
+      "transcendence": {
+        "sha": "5f18a3ad2f7d59cd56965d686a6cab7c2ac96cd3",
+        "tree_sha": "9def852eb9b7586d9b7242673b15faa5d161e306",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-lineage-hardening-r5-red",
+        "author_date": "2026-09-17T21:15:29Z",
+        "committer_date": "2026-09-17T21:15:29Z"
+      },
+      "god-brain": {
+        "sha": "cc72dd74c78b7ff7897fc3b3dec401a089ff8c50",
+        "tree_sha": "9def852eb9b7586d9b7242673b15faa5d161e306",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-lineage-hardening-r5-red",
+        "author_date": "2026-09-20T11:51:22Z",
+        "committer_date": "2026-09-20T11:51:22Z"
+      }
+    },
+    "reconcile/pr4-foundations-v1": {
+      "hc-brain": {
+        "sha": "1f30449968e98196fa8f6a0a5f9bc07c3405adf8",
+        "tree_sha": "672a1b9aa264e4aa7cac3f53adb6f241ecf64f19",
+        "parents": [
+          "40edf5eb2b5e14f29295f78fd994d572e58b4369"
+        ],
+        "message": "cognition: reconcile imagination and simulation contract",
+        "author_date": "2026-09-09T12:19:05Z",
+        "committer_date": "2026-09-09T12:19:05Z"
+      },
+      "transcendence": {
+        "sha": "a963ffd3d5d39f31bf8fcd5e1dd5c3b8cbe25123",
+        "tree_sha": "672a1b9aa264e4aa7cac3f53adb6f241ecf64f19",
+        "parents": [],
+        "message": "Initialize reconcile/pr4-foundations-v1",
+        "author_date": "2026-09-17T21:15:01Z",
+        "committer_date": "2026-09-17T21:15:01Z"
+      },
+      "god-brain": {
+        "sha": "c33e9de6847ad57bb90d651d8db1ad5731729f7f",
+        "tree_sha": "672a1b9aa264e4aa7cac3f53adb6f241ecf64f19",
+        "parents": [],
+        "message": "Initialize reconcile/pr4-foundations-v1",
+        "author_date": "2026-09-20T11:50:55Z",
+        "committer_date": "2026-09-20T11:50:55Z"
+      }
+    },
+    "research/hc-1r-reference-architecture": {
+      "hc-brain": {
+        "sha": "8558824e8ef1e81b78b62b54ab0c917a79c79ee2",
+        "tree_sha": "d86232e746ad06ded7758caa1b664836650dbb08",
+        "parents": [
+          "306a28cc35e84a0d0daa3637d3c1708a267bf7ad"
+        ],
+        "message": "docs: scrub legacy identity framing from HC-1R branch",
+        "author_date": "2026-09-09T10:27:32Z",
+        "committer_date": "2026-09-09T10:27:32Z"
+      },
+      "transcendence": {
+        "sha": "8becfc2018b21be5d31692a5e2d14e51fe7b0137",
+        "tree_sha": "d86232e746ad06ded7758caa1b664836650dbb08",
+        "parents": [],
+        "message": "Initialize research/hc-1r-reference-architecture",
+        "author_date": "2026-09-17T21:14:52Z",
+        "committer_date": "2026-09-17T21:14:52Z"
+      },
+      "god-brain": {
+        "sha": "b5571d82de1c140fc11b56f9d9a7457bdacce703",
+        "tree_sha": "d86232e746ad06ded7758caa1b664836650dbb08",
+        "parents": [],
+        "message": "Initialize research/hc-1r-reference-architecture",
+        "author_date": "2026-09-20T11:50:47Z",
+        "committer_date": "2026-09-20T11:50:47Z"
+      }
+    }
+  }
+}

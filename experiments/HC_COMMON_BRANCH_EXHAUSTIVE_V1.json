@@ -1,0 +1,178 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_EXHAUSTIVE_V1",
+  "observed_date": "2026-09-21",
+  "source_artifacts": [
+    {
+      "path": "experiments/HC_BRANCH_TREE_SAMPLE_V1.json",
+      "blob": "acaafa71c44b16a8a822172092b4a4e897972fad"
+    },
+    {
+      "path": "experiments/hc_common_branch_exhaustive_v1/SHARD_01.json",
+      "blob": "827681183c35f9ae6105378ec25cde6ca38c2d2b"
+    },
+    {
+      "path": "experiments/hc_common_branch_exhaustive_v1/SHARD_02.json",
+      "blob": "8af6b6673a795e46f87bec49e1d00a5a018675b9"
+    },
+    {
+      "path": "experiments/hc_common_branch_exhaustive_v1/SHARD_03.json",
+      "blob": "1903b95d678f9ea5309abb39857516eb4119c78e"
+    },
+    {
+      "path": "experiments/hc_common_branch_exhaustive_v1/SHARD_04.json",
+      "blob": "9b931eb40685dafbade2df0b36fb79eef1cd9aeb"
+    },
+    {
+      "path": "experiments/hc_common_branch_exhaustive_v1/SHARD_05.json",
+      "blob": "32006a430b498b886ef18531cdec2fe6a6b0b7b4"
+    },
+    {
+      "path": "experiments/hc_common_branch_exhaustive_v1/SHARD_06.json",
+      "blob": "381ce0d536605eabb1e1e80d0b47a1678ce80b26"
+    }
+  ],
+  "scope": {
+    "repositories": [
+      "hc-brain",
+      "god-brain",
+      "transcendence"
+    ],
+    "common_live_branch_names": 35,
+    "pairwise_comparisons_per_branch": 3,
+    "total_pairwise_comparisons": 105,
+    "excludes": [
+      "branches not common to all three repositories",
+      "deleted/historical refs not currently under refs/heads",
+      "commit parent/history equivalence"
+    ]
+  },
+  "results": {
+    "branch_count": 35,
+    "pairwise_comparison_count": 105,
+    "exact_blob_path_sha_set_equal_count": 102,
+    "divergent_comparison_count": 3,
+    "non_main_branch_count": 34,
+    "non_main_pairwise_comparison_count": 102,
+    "non_main_exact_equal_count": 102,
+    "all_non_main_common_branches_exact_across_all_three": true,
+    "divergent_records": [
+      {
+        "branch": "main",
+        "pair": "hc_vs_god",
+        "common_paths": 300,
+        "identical_same_path_blobs": 299,
+        "changed_same_path_blobs": 1,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_bytes": 2181434,
+        "exact_blob_path_sha_set_equal": false,
+        "changed_paths": [
+          "README.md"
+        ],
+        "left_only_examples": [],
+        "right_only_examples": []
+      },
+      {
+        "branch": "main",
+        "pair": "hc_vs_transcendence",
+        "common_paths": 263,
+        "identical_same_path_blobs": 255,
+        "changed_same_path_blobs": 8,
+        "left_only_paths": 37,
+        "right_only_paths": 0,
+        "identical_bytes": 1718257,
+        "exact_blob_path_sha_set_equal": false,
+        "changed_paths": [
+          ".github/workflows/reference-kernel.yml",
+          "README.md",
+          "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+          "runtime/reference_kernel/README.md",
+          "runtime/reference_kernel/durable_kernel.py",
+          "runtime/reference_kernel/hc_kernel.py",
+          "runtime/reference_kernel/test_durable_kernel.py",
+          "runtime/reference_kernel/test_hc_kernel.py"
+        ],
+        "left_only_examples": [
+          ".github/workflows/architecture-conformance.yml",
+          ".github/workflows/cognitive-core.yml",
+          "CURRENT.md",
+          "docs/architecture/CAUSAL_AUTHORITY_RECOVERY_HARDENING_V2.md",
+          "docs/architecture/STATE_FAMILY_CONSISTENCY_AND_CAUSAL_FRONTIER.md",
+          "docs/qualification/HOSTILE_AUDIT_DISPOSITION_2026-09-15.md",
+          "docs/research/VERA_HC_V2_DISTRIBUTED_CAUSAL_ARCHITECTURE_2026-09-17.md",
+          "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+          "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-17.md",
+          "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+          "docs/runtime/NOAH_CURRENT_KNOWLEDGE_2026-09-15.md",
+          "docs/runtime/NOAH_HANDOFF_2026-09-15.md",
+          "docs/superpowers/plans/2026-09-17-hc-architecture-hardening-v2.md",
+          "homeostasis-interoception/REGULATORY_STATE_CONTRACT.md",
+          "runtime/cognitive_core/README.md",
+          "runtime/cognitive_core/__init__.py",
+          "runtime/cognitive_core/cognitive_loop.py",
+          "runtime/cognitive_core/deep_memory.py",
+          "runtime/cognitive_core/homeostasis_somatics.py",
+          "runtime/cognitive_core/metacognition.py"
+        ],
+        "right_only_examples": []
+      },
+      {
+        "branch": "main",
+        "pair": "god_vs_transcendence",
+        "common_paths": 263,
+        "identical_same_path_blobs": 255,
+        "changed_same_path_blobs": 8,
+        "left_only_paths": 37,
+        "right_only_paths": 0,
+        "identical_bytes": 1718257,
+        "exact_blob_path_sha_set_equal": false,
+        "changed_paths": [
+          ".github/workflows/reference-kernel.yml",
+          "README.md",
+          "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+          "runtime/reference_kernel/README.md",
+          "runtime/reference_kernel/durable_kernel.py",
+          "runtime/reference_kernel/hc_kernel.py",
+          "runtime/reference_kernel/test_durable_kernel.py",
+          "runtime/reference_kernel/test_hc_kernel.py"
+        ],
+        "left_only_examples": [
+          ".github/workflows/architecture-conformance.yml",
+          ".github/workflows/cognitive-core.yml",
+          "CURRENT.md",
+          "docs/architecture/CAUSAL_AUTHORITY_RECOVERY_HARDENING_V2.md",
+          "docs/architecture/STATE_FAMILY_CONSISTENCY_AND_CAUSAL_FRONTIER.md",
+          "docs/qualification/HOSTILE_AUDIT_DISPOSITION_2026-09-15.md",
+          "docs/research/VERA_HC_V2_DISTRIBUTED_CAUSAL_ARCHITECTURE_2026-09-17.md",
+          "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+          "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-17.md",
+          "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+          "docs/runtime/NOAH_CURRENT_KNOWLEDGE_2026-09-15.md",
+          "docs/runtime/NOAH_HANDOFF_2026-09-15.md",
+          "docs/superpowers/plans/2026-09-17-hc-architecture-hardening-v2.md",
+          "homeostasis-interoception/REGULATORY_STATE_CONTRACT.md",
+          "runtime/cognitive_core/README.md",
+          "runtime/cognitive_core/__init__.py",
+          "runtime/cognitive_core/cognitive_loop.py",
+          "runtime/cognitive_core/deep_memory.py",
+          "runtime/cognitive_core/homeostasis_somatics.py",
+          "runtime/cognitive_core/metacognition.py"
+        ],
+        "right_only_examples": []
+      }
+    ],
+    "bounded_result": "ALL_34_NON_MAIN_THREE_WAY_COMMON_BRANCHES_HAVE_IDENTICAL_BLOB_PATH_SHA_SETS_MAIN_IS_ONLY_LIVE_COMMON_BRANCH_CONTENT_DIVERGENCE"
+  },
+  "interpretation": [
+    "The shared branch namespace is not merely nominal: every non-main branch common to all three repositories preserves the same blob snapshot across all three at the observed live heads.",
+    "Distinct commit heads with identical blob snapshots imply repository-local commit/history identity around common content; exact ancestry/copy direction is not established by blob equality.",
+    "Main is the active divergence surface at this cut: HC and God Brain differ only in README.md, while Transcendence omits 37 HC/God paths and changes eight common paths relative to them.",
+    "bt2 remains structurally different in branch topology: it shares only main by branch name with the other HC-family repositories despite substantial main-blob overlap."
+  ],
+  "claim_ceiling": [
+    "No claim of identical commit DAGs or parent histories.",
+    "No claim of original repository, copy direction, or authorship.",
+    "No claim that deleted/historical branches behave the same.",
+    "No merge, deduplication, base-selection, or dependency direction follows automatically."
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_ANCESTRY_SHARD_V1",
+  "shard": "03",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "four/power-thermal-resource-v1": {
+      "hc-brain": {
+        "sha": "2edd9c11e682fc90808e7141255a450dae8fc782",
+        "tree_sha": "129cc6531db9e506349d3e572ef9c61d3acd1a77",
+        "parents": [
+          "b88d63bab88e582777eabc7772eeb1b65d3f5ab1"
+        ],
+        "message": "Rebuild resource-state machine companion on current main",
+        "author_date": "2026-09-09T21:20:52Z",
+        "committer_date": "2026-09-09T21:20:52Z"
+      },
+      "transcendence": {
+        "sha": "bb18a42be92dcb4591239dfe0e08465e9432d11c",
+        "tree_sha": "129cc6531db9e506349d3e572ef9c61d3acd1a77",
+        "parents": [],
+        "message": "Initialize four/power-thermal-resource-v1",
+        "author_date": "2026-09-17T21:15:11Z",
+        "committer_date": "2026-09-17T21:15:11Z"
+      },
+      "god-brain": {
+        "sha": "a9c993ed95d7589750b5fe81b43c1b82e06da35d",
+        "tree_sha": "129cc6531db9e506349d3e572ef9c61d3acd1a77",
+        "parents": [],
+        "message": "Initialize four/power-thermal-resource-v1",
+        "author_date": "2026-09-20T11:51:04Z",
+        "committer_date": "2026-09-20T11:51:04Z"
+      }
+    },
+    "four/rest-offline-maintenance-v1": {
+      "hc-brain": {
+        "sha": "70820399b2b253bb9276b83a3148d3e15307284d",
+        "tree_sha": "da971a93590fb7af5f711f63fdb41ee793670ead",
+        "parents": [
+          "c4cdba6515e773b594498d28f44f46048a5b6696"
+        ],
+        "message": "Narrow rest schema to engagement and maintenance orchestration",
+        "author_date": "2026-09-09T22:24:14Z",
+        "committer_date": "2026-09-09T22:24:14Z"
+      },
+      "transcendence": {
+        "sha": "e2d092954233ac842260b3c01c9fc93477f3edcd",
+        "tree_sha": "da971a93590fb7af5f711f63fdb41ee793670ead",
+        "parents": [],
+        "message": "Initialize four/rest-offline-maintenance-v1",
+        "author_date": "2026-09-17T21:15:15Z",
+        "committer_date": "2026-09-17T21:15:15Z"
+      },
+      "god-brain": {
+        "sha": "929e871f67db47fe8364c892a79cc1dce89b188a",
+        "tree_sha": "da971a93590fb7af5f711f63fdb41ee793670ead",
+        "parents": [],
+        "message": "Initialize four/rest-offline-maintenance-v1",
+        "author_date": "2026-09-20T11:51:08Z",
+        "committer_date": "2026-09-20T11:51:08Z"
+      }
+    },
+    "four/rest-offline-maintenance-v2": {
+      "hc-brain": {
+        "sha": "0ecb3a08d031e0093c4da226949f38a77710bb59",
+        "tree_sha": "54a208ce906e9f1e870a18c92e7169748cfcdda0",
+        "parents": [
+          "035f213023eee668d28e6673d5505fdbf6584a93"
+        ],
+        "message": "Narrow rest offline contract to engagement orchestration",
+        "author_date": "2026-09-09T22:24:49Z",
+        "committer_date": "2026-09-09T22:24:49Z"
+      },
+      "transcendence": {
+        "sha": "83789e095d2a8eb8b7abfd0dcad70de476707b50",
+        "tree_sha": "54a208ce906e9f1e870a18c92e7169748cfcdda0",
+        "parents": [],
+        "message": "Initialize four/rest-offline-maintenance-v2",
+        "author_date": "2026-09-17T21:15:16Z",
+        "committer_date": "2026-09-17T21:15:16Z"
+      },
+      "god-brain": {
+        "sha": "98de514e67b1a2d473843310cbc8cc0ba2fcd6de",
+        "tree_sha": "54a208ce906e9f1e870a18c92e7169748cfcdda0",
+        "parents": [],
+        "message": "Initialize four/rest-offline-maintenance-v2",
+        "author_date": "2026-09-20T11:51:10Z",
+        "committer_date": "2026-09-20T11:51:10Z"
+      }
+    },
+    "four/rest-offline-maintenance-v3": {
+      "hc-brain": {
+        "sha": "aaa7289088061afad4c74fc7d29390e0e4fd0013",
+        "tree_sha": "2c99d098a8a5cdf12ab5f43ca3d70cef2ee08d90",
+        "parents": [
+          "d74cb2965a2b6752a360da723c491e18f40b6c6a"
+        ],
+        "message": "Add narrowed rest and maintenance orchestration supplement",
+        "author_date": "2026-09-09T22:27:58Z",
+        "committer_date": "2026-09-09T22:27:58Z"
+      },
+      "transcendence": {
+        "sha": "003fbf4dc3abf86d2238b791b1f14476c0340617",
+        "tree_sha": "2c99d098a8a5cdf12ab5f43ca3d70cef2ee08d90",
+        "parents": [],
+        "message": "Initialize four/rest-offline-maintenance-v3",
+        "author_date": "2026-09-17T21:15:18Z",
+        "committer_date": "2026-09-17T21:15:18Z"
+      },
+      "god-brain": {
+        "sha": "59a97ab69b9959c84997a21ceae08a378929ab22",
+        "tree_sha": "2c99d098a8a5cdf12ab5f43ca3d70cef2ee08d90",
+        "parents": [],
+        "message": "Initialize four/rest-offline-maintenance-v3",
+        "author_date": "2026-09-20T11:51:11Z",
+        "committer_date": "2026-09-20T11:51:11Z"
+      }
+    },
+    "four/runtime-hyperconnectome-v1": {
+      "hc-brain": {
+        "sha": "9200b5e7b9f8b95e81c5124e0d949e134234ab8c",
+        "tree_sha": "315ffb3567fd6a8e639397c10f5f3d20bf19d8fe",
+        "parents": [
+          "1515d0ba57037c8080f1c46a64d1af0f0cdf03af",
+          "66e20f648bac71c9de980e8895a5894377fca385"
+        ],
+        "message": "docs: enforce identity-neutral hyperconnectome template",
+        "author_date": "2026-09-09T10:25:26Z",
+        "committer_date": "2026-09-09T10:25:26Z"
+      },
+      "transcendence": {
+        "sha": "9f807269a25543f416402a8558bbe1fa9c60a3d7",
+        "tree_sha": "315ffb3567fd6a8e639397c10f5f3d20bf19d8fe",
+        "parents": [],
+        "message": "Initialize four/runtime-hyperconnectome-v1",
+        "author_date": "2026-09-17T21:14:50Z",
+        "committer_date": "2026-09-17T21:14:50Z"
+      },
+      "god-brain": {
+        "sha": "5cc6395b5b1e49951c16f1c52ab41538fbc8ab67",
+        "tree_sha": "315ffb3567fd6a8e639397c10f5f3d20bf19d8fe",
+        "parents": [],
+        "message": "Initialize four/runtime-hyperconnectome-v1",
+        "author_date": "2026-09-20T11:50:46Z",
+        "committer_date": "2026-09-20T11:50:46Z"
+      }
+    }
+  }
+}

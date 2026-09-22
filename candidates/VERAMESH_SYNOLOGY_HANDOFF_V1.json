@@ -1,0 +1,53 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "VERAMESH_SYNOLOGY_HANDOFF_V1",
+  "title": "Test a source/build/install/runtime-currentness handoff between VeraMesh and Vera Synology",
+  "status": "HYPOTHESIS",
+  "claim": "VeraMesh and Vera Synology expose complementary but distinct mechanics that may support a narrow handoff contract: VeraMesh owns authenticated transport/session/current-route semantics, while Vera Synology owns deterministic package/source identity, install/migration state, and installed-versus-current-source readback. A reusable handoff is justified only if it preserves that authority separation and removes real duplicated currentness plumbing.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/vera-mesh",
+      "role": "transport/application-session source and route-currentness producer",
+      "ref": "9bffc57930587bf74a12657bbeaa913474ab5574"
+    },
+    {
+      "repo": "thebrazenbeard/vera-synology",
+      "role": "package/build/install/currentness consumer and deployment-specific custodian",
+      "ref": "553e3a637833c5469f6b99fbc4d597755a0c9a5e"
+    }
+  ],
+  "preserved_boundaries": [
+    "VeraMesh transport authentication, session identity, fencing, path health, mutation ambiguity, and route selection remain VeraMesh-owned.",
+    "Synology package metadata, deterministic artifact construction, DSM lifecycle, legacy-state migration, install state, and target-specific readback remain Vera Synology-owned.",
+    "A source artifact or manifest cannot imply installed state, current route, live effect, plugin registration, or package activation.",
+    "An installed package cannot silently promote stale transport source or older installed bytes into current repository truth.",
+    "No device, credential, provider, route, installation, or runtime effect authority is transferred through the interchange."
+  ],
+  "promotion_evidence": [
+    "VeraMesh PR #12 exact head 9bffc57930587bf74a12657bbeaa913474ab5574 explicitly separates SOURCE_CREATED, MCP_SERVER_RUNNING, PLUGIN_REGISTERED, CURRENT_ROUTE, READ_PASS, WRITE_PASS, and PROCESS_EXEC_PASS.",
+    "VeraMesh mutation-ledger source at the same head separates read-only operations from mutation durability and blocks ambiguous mutation retry without same-session durable idempotency.",
+    "Vera Synology PR #3 exact head 553e3a637833c5469f6b99fbc4d597755a0c9a5e contains deterministic SPK verification with artifact/source byte and mode cross-binding against SOURCE_MANIFEST.json.",
+    "The Vera Synology stack explicitly records installed operational R6 separately from later R7/current PR source, proving that install/runtime state and source currentness are already distinct concerns.",
+    "The source-bound comparison is recorded in experiments/PUBLIC_INTAKE_SECOND_PASS_V1.json."
+  ],
+  "rejection_conditions": [
+    "The interchange must interpret VeraPort session/authority semantics inside the Synology packaging layer.",
+    "The interchange must interpret DSM/package lifecycle semantics inside VeraMesh transport source.",
+    "A common currentness record cannot distinguish source identity, build artifact identity, installed artifact identity, runtime route/currentness, and live effect readback.",
+    "Adapters or duplicated validation needed for the handoff exceed the current project-local plumbing they would replace.",
+    "Either project becomes runtime-dependent on Discovery or on the other repository merely to remain operable."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "The projects may already be properly separated and need only documentation, not a reusable component.",
+      "Currentness vocabulary overlap does not prove duplicated implementation.",
+      "A shared handoff schema could become a shadow release authority if it begins deciding whether source or installed state is acceptable."
+    ]
+  },
+  "notes": [
+    "Candidate generated from the 2026-09-21 second-pass public intake.",
+    "Next experiment: define the smallest neutral handoff record that binds VeraMesh source identity and intended package payload identity, then prove Vera Synology can validate it without importing transport authority.",
+    "No merge, install, route, provider, credential, or runtime action follows."
+  ]
+}

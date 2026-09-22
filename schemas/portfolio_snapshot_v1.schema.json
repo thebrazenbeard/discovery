@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/thebrazenbeard/discovery/schemas/portfolio_snapshot_v1.schema.json",
+  "title": "Discovery Portfolio Snapshot V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "observed_at",
+    "source",
+    "counts",
+    "public_repositories",
+    "public_name_digest",
+    "private_inventory_commitment",
+    "all_inventory_commitment",
+    "privacy_rule",
+    "currentness_rule",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "schema": {"const": "DISCOVERY_PORTFOLIO_SNAPSHOT_V1"},
+    "status": {"const": "OBSERVED_READ_ONLY_NOT_ARCHITECTURAL_AUTHORITY"},
+    "observed_at": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "owner", "acquisition_method"],
+      "properties": {
+        "kind": {"const": "GITHUB_ACCESSIBLE_REPOSITORY_INVENTORY"},
+        "owner": {"type": "string", "minLength": 1},
+        "acquisition_method": {"type": "string", "minLength": 1}
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "public", "private"],
+      "properties": {
+        "total": {"type": "integer", "minimum": 0},
+        "public": {"type": "integer", "minimum": 0},
+        "private": {"type": "integer", "minimum": 0}
+      }
+    },
+    "public_repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "default_branch", "exact_commit", "exact_tree", "archived"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "default_branch": {"type": "string", "minLength": 1},
+          "exact_commit": {
+            "type": "string",
+            "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+          },
+          "exact_tree": {
+            "type": "string",
+            "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+          },
+          "archived": {"type": "boolean"}
+        }
+      }
+    },
+    "public_name_digest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scheme", "sha256", "publicly_recomputable"],
+      "properties": {
+        "scheme": {"const": "SHA256_SORTED_UTF8_NAMES_V1"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "publicly_recomputable": {"const": true}
+      }
+    },
+    "private_inventory_commitment": {"$ref": "#/$defs/commitment"},
+    "all_inventory_commitment": {"$ref": "#/$defs/commitment"},
+    "privacy_rule": {"type": "string", "minLength": 1},
+    "currentness_rule": {"type": "string", "minLength": 1},
+    "claim_ceiling": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "commitment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "key_id",
+        "hmac_sha256",
+        "count",
+        "publicly_recomputable"
+      ],
+      "properties": {
+        "scheme": {
+          "enum": ["HMAC_SHA256_PRIVATE_KEY_CANONICAL_V1", "NONE"]
+        },
+        "key_id": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{16}$"
+        },
+        "hmac_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "count": {"type": "integer", "minimum": 0},
+        "publicly_recomputable": {"const": false}
+      }
+    }
+  }
+}

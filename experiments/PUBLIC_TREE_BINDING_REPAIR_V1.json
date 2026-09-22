@@ -1,0 +1,120 @@
+{
+  "schema": "DISCOVERY_PUBLIC_TREE_BINDING_REPAIR_V1",
+  "status": "LIVE_SOURCE_REPAIR_EXACT_HEADS_UNCHANGED_TREE_BINDINGS_CORRECTED",
+  "observed_date": "2026-09-22",
+  "prior_subject": "vera/discovery-live-census-public-intake-v1-20260921@56822c92c4cb3709bf742032f539206a0e398024",
+  "live_inventory": {
+    "total": 58,
+    "public": 23,
+    "private": 35,
+    "public_set_changed": false
+  },
+  "finding": {
+    "id": "TREE-BINDING-001",
+    "severity": "HIGH",
+    "defect": "PUBLIC_BLOB_INDEX_TREE_SHA_FIELDS_ALIASED_HEAD_COMMIT_SHA",
+    "consequence": "The artifact claimed exact Git tree identity while the stored field carried commit identity. Existing overlap calculations used blob lists, so this defect does not by itself invalidate byte-overlap counts, but it invalidates any claim that the old tree_sha field was an exact tree binding.",
+    "root_cause_class": "SHAPE_VALIDATED_SEMANTICS_UNVERIFIED"
+  },
+  "repair": {
+    "public_default_heads_changed_since_prior_scan": false,
+    "repaired_repository_count": 23,
+    "bindings": {
+      "Attune": {
+        "head": "eff6f9eb250a6f7684459eadf0695340053201da",
+        "tree": "d877f1f9e53e71d03ea1268060610da983f57659"
+      },
+      "abil": {
+        "head": "0812d9780ce1648820269fa142a43e17030ef793",
+        "tree": "2824c2c4d2f4175288f26ad3e30a1e3d096136c9"
+      },
+      "bt2": {
+        "head": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
+        "tree": "6782a2d62afeab8cefb1a3bc39cc39ab617d637c"
+      },
+      "discovery": {
+        "head": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+        "tree": "f604fbf501150065e8e4345df432cc99fa8d9796"
+      },
+      "driftguard": {
+        "head": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
+        "tree": "3707ba40343f381a6bcf6fcb9e55a5d8f048d1c5"
+      },
+      "god-brain": {
+        "head": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+        "tree": "f08c2a94e6f564c48669c91a8bef689ede6c51dc"
+      },
+      "hc-brain": {
+        "head": "618245b54fb923c7a204892c6953ab6d1c5dac57",
+        "tree": "623f272aa9060ad9e222a5cfaea801082bb5a562"
+      },
+      "mosaic": {
+        "head": "a3115031ec716526532b32dc004303b4042e4a26",
+        "tree": "704bd189af1963e2149f0ab541f8f43c094e9067"
+      },
+      "noema": {
+        "head": "890efdca01cf496ce1b8686d86f8442a149a9d34",
+        "tree": "70a6ffe45df26c9eb5ccfe3210d6091daff7ccd2"
+      },
+      "on-theo": {
+        "head": "eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
+        "tree": "c99963ee2dd2c4ad2ca487f1be1894906d5fc265"
+      },
+      "project-runner": {
+        "head": "bc05812b560b4fcde3a362e72fba04c626cafac8",
+        "tree": "2c7b588b06c68f0a0ed63a79ed092b3132e462ca"
+      },
+      "rezon": {
+        "head": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
+        "tree": "8a4353736fbbabe5071b80b2ea1b16e39c7a1712"
+      },
+      "roots": {
+        "head": "7fab72635f319c633b480174c8a0687901ac1db2",
+        "tree": "e0f43a5f9539a1f85ab52ac6b2e5dcf4d4d96a40"
+      },
+      "semanticatlas": {
+        "head": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
+        "tree": "088e74b6e0e90960d6fe1407a6e50a6e99ef0c6f"
+      },
+      "spm": {
+        "head": "0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+        "tree": "7b04c7d8349b57113d4f5775e6a1f69e394ba1d3"
+      },
+      "testament": {
+        "head": "76f70643484ff22684f535d376e10e72c4aefba9",
+        "tree": "76727c7eb215b07a476fc6d8ca84babf77c7ed7c"
+      },
+      "transcendence": {
+        "head": "68e7a794d6134e8319121404f31062288dc8d6a3",
+        "tree": "c8d16282fa65b14962757539773a78803613bd6a"
+      },
+      "unvtrslr": {
+        "head": "903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+        "tree": "290d95bd131935cffc1dfae24a591593b2395540"
+      },
+      "vera-mesh": {
+        "head": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+        "tree": "aa1225db434ce6a21abf780a9fbe037dfb95b712"
+      },
+      "vera-synology": {
+        "head": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+        "tree": "f2232c4420f45cbcd5d725f9f4e8da74b12af475"
+      },
+      "voss": {
+        "head": "54478372002bb24c6df733092a32abbdd1fa8d3c",
+        "tree": "29a716ff48181319907a90749402eb57d1c1c4b0"
+      },
+      "wip": {
+        "head": "12a7c23dbe0482fd7bfe63659e54526778efef1e",
+        "tree": "e2527117c7d25f92d2e6aa7365ae8b3d3b9a3c08"
+      },
+      "world-zero": {
+        "head": "5ab39621d090079d24de40261906b64413c6f995",
+        "tree": "287092bfb9830e42c78a430fdfd8552fca07965d"
+      }
+    },
+    "validator_guard": "REJECT_TREE_SHA_EQUAL_TO_HEAD_COMMIT_SHA",
+    "regression_test": "tests/test_public_blob_tree_binding_integrity.py"
+  },
+  "claim_ceiling": "TREE_BINDING_FIELD_REPAIRED_FROM_LIVE_GITHUB_BRANCH_COMMIT_TREE_EVIDENCE_NO_NEW_LINEAGE_OR_REUSE_CLAIM"
+}

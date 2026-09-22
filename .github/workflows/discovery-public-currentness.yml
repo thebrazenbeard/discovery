@@ -1,0 +1,89 @@
+name: Discovery public currentness watch
+
+on:
+  pull_request:
+    paths:
+      - "architecture/**"
+      - "candidates/**"
+      - "docs/**"
+      - "experiments/**"
+      - "portfolio/**"
+      - "research/**"
+      - "schemas/**"
+      - "tools/check_public_currentness.py"
+      - "tools/trace_public_impact.py"
+      - "tools/refresh_public_blob_evidence.py"
+      - "tests/test_public_currentness_watch.py"
+      - "tests/test_public_impact_radar.py"
+      - "tests/test_public_blob_reproducer.py"
+      - ".github/workflows/discovery-public-currentness.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  public-currentness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+      - name: Compare live public portfolio with Discovery evidence
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set +e
+          python tools/check_public_currentness.py --output public-currentness.json
+          currentness_code=$?
+          set -e
+
+          if [[ -f public-currentness.json ]]; then
+            cat public-currentness.json
+            {
+              echo "### Discovery public currentness"
+              echo '~~~json'
+              cat public-currentness.json
+              echo '~~~'
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Public currentness acquisition failed before a report was written."               | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+
+          repro_code=0
+          if [[ "$currentness_code" -eq 0 ]]; then
+            set +e
+            python tools/refresh_public_blob_evidence.py --check               | tee public-blob-reproducibility.json
+            repro_code=${PIPESTATUS[0]}
+            set -e
+
+            {
+              echo
+              echo "### Discovery public blob evidence reproducibility"
+              echo '~~~json'
+              cat public-blob-reproducibility.json
+              echo '~~~'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          if [[ "$currentness_code" -eq 1 && -f public-currentness.json ]]; then
+            python tools/trace_public_impact.py               public-currentness.json               --output public-impact.json
+
+            cat public-impact.json
+            {
+              echo
+              echo "### Discovery stale-subject impact trace"
+              echo '~~~json'
+              cat public-impact.json
+              echo '~~~'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          if [[ "$currentness_code" -ne 0 ]]; then
+            exit "$currentness_code"
+          fi
+          exit "$repro_code"

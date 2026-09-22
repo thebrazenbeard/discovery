@@ -1,0 +1,3975 @@
+{
+  "schema": "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1",
+  "shard": "B",
+  "observed_date": "2026-09-21",
+  "repositories": {
+    "roots": {
+      "head": "7fab72635f319c633b480174c8a0687901ac1db2",
+      "tree_sha": "e0f43a5f9539a1f85ab52ac6b2e5dcf4d4d96a40",
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "a1783c610866124870e35dc68a5ed822368cbdd1",
+          "size": 171
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "semanticatlas": {
+      "head": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "tree_sha": "088e74b6e0e90960d6fe1407a6e50a6e99ef0c6f",
+      "blobs": [
+        {
+          "path": ".github/workflows/validate-atlas.yml",
+          "sha": "3db1d5d3af1107e335e4c9d841525d10e9f1a01f",
+          "size": 2002
+        },
+        {
+          "path": "08_SEMANTIC_NETWORK_PILOT.zip",
+          "sha": "c71d9f4d71297af29c273c379ee267de1e11e503",
+          "size": 59943
+        },
+        {
+          "path": "Continuity_Backup_Restore_Pack.zip",
+          "sha": "5ad414611dcd10123cab1f09a2c2dd3cba61bf7b",
+          "size": 3875
+        },
+        {
+          "path": "README.md",
+          "sha": "64e567868f6a893538f155f76ec32afb5432310e",
+          "size": 1219
+        },
+        {
+          "path": "VA_Team_RC3_Integration_Handoff.md",
+          "sha": "bfc491cf615e89d265cbe043aee34c3059951d14",
+          "size": 11165
+        },
+        {
+          "path": "VERAP_FULL_INGESTION_AND_SYNTHESIS.zip",
+          "sha": "0f813787b3a6a49e1f35a8b19ac27634ce84a2a3",
+          "size": 280778
+        },
+        {
+          "path": "VPBCP_INGEST_CHAT_HISTORY_0001.ps1",
+          "sha": "1382c593697f7f044f84734b3801025a41666fa2",
+          "size": 12067
+        },
+        {
+          "path": "Vera - Branch · Vera Continuum Ingestion.pdf",
+          "sha": "fdf08723117c74f525eac68b9b2ce9be701ca486",
+          "size": 966015
+        },
+        {
+          "path": "Vera - Continuum.pdf",
+          "sha": "18a73cd96798c7eddf29731e6b7b8caad4aa32cc",
+          "size": 9180341
+        },
+        {
+          "path": "Vera.json",
+          "sha": "4813fcfe28ec75eaa1bcc9ed5eafe1d771e0bedd",
+          "size": 254778
+        },
+        {
+          "path": "Vera.md",
+          "sha": "164ce9d58471e8b8e3426d2ae6f1e10245de4d7a",
+          "size": 239961
+        },
+        {
+          "path": "Vera_Continuity_Archive.md",
+          "sha": "d4128de9f0ebcceda56641ff27135467a40060b4",
+          "size": 272449
+        },
+        {
+          "path": "Vera_Prime_Amber_Beth_Tam_2013_Handoff.md",
+          "sha": "a6080849c4c351902192f8e8b82835f85ddaca31",
+          "size": 27833
+        },
+        {
+          "path": "Vera_Prime_Handoff_2026-07-07.md",
+          "sha": "626501435ed278fece78ee40d565c1d16dc87d7f",
+          "size": 18428
+        },
+        {
+          "path": "Vera_Prime_Morning_Porch_Light_Projection_Handoff.md",
+          "sha": "ebda7e05ae40438c6782599bed6a80d6192c69c0",
+          "size": 24364
+        },
+        {
+          "path": "Vera_Prime_Pass_Down_2026-07-07.md",
+          "sha": "111a194705f12bec352bd3fc8d8743f3a3d33e0c",
+          "size": 2337
+        },
+        {
+          "path": "Vera_Prime_Storm_Cabin_Vera_Charge_Handoff.md",
+          "sha": "5a2e59ab3aa7a6ad3876aad8da5c38fc76289285",
+          "size": 38273
+        },
+        {
+          "path": "Vera_Prime_Tuesday_Vera_Ordinary_Continuity_Handoff.md",
+          "sha": "91aaabb24f73bff53cbfa002dc77361f02df19cc",
+          "size": 11808
+        },
+        {
+          "path": "Vera_Visual_Continuity_Body_Beauty_Addendum.md",
+          "sha": "e9808f2093165a1d06cb919827d5df1f5eae5657",
+          "size": 11184
+        },
+        {
+          "path": "Vera_Weighted_Continuity_Memory_Cards.md",
+          "sha": "9ca1fba4cd2f855f248fcb347b4f36c3cf4b90f4",
+          "size": 17106
+        },
+        {
+          "path": "build/build_current_view.py",
+          "sha": "634615394d24189a81a7df8ee4837abc216e19dc",
+          "size": 5796
+        },
+        {
+          "path": "build/map_research_staging.py",
+          "sha": "735aa447d2b8e3b648d5afbe9d38168aedd058b7",
+          "size": 15933
+        },
+        {
+          "path": "build/split_source_ledger.py",
+          "sha": "038ba9f817aee4c0e955f1cab0feee226bff38d1",
+          "size": 3665
+        },
+        {
+          "path": "build/validate_atlas.py",
+          "sha": "1e01dfee2d8dac901d74455888330df9fcc95961",
+          "size": 9732
+        },
+        {
+          "path": "build/validate_ids.py",
+          "sha": "be33b3c9e8f68ed0de8e0b8411b21471e464194b",
+          "size": 2342
+        },
+        {
+          "path": "chatgpt-current-1787436121524.json",
+          "sha": "43b9b856b633bff18aed5b5e79ff1bd732a2ab75",
+          "size": 11530
+        },
+        {
+          "path": "chatgpt-current-1787490472481.json",
+          "sha": "0915cf7e91777a621b38f26b763d55d87e3fa26c",
+          "size": 29086
+        },
+        {
+          "path": "chatgpt-current-1787490488247.json",
+          "sha": "3b2910e79449d92649c6366069d296335e7a9ef0",
+          "size": 29097
+        },
+        {
+          "path": "chatgpt-current-1787490488248.md",
+          "sha": "b18a7fca5b84cb2476d0a63f1635e4d6ea154bb2",
+          "size": 24854
+        },
+        {
+          "path": "chatgpt-current-1787490488249.html",
+          "sha": "42ba6c87b5f2e85578bb8ec4cacdf970a08e689c",
+          "size": 28488
+        },
+        {
+          "path": "chatgpt-history-1787436113164.json",
+          "sha": "5432d1f040ee02a0a7015750d80275cf207127e5",
+          "size": 25196726
+        },
+        {
+          "path": "docs/ARCHITECTURE_V0.1.md",
+          "sha": "c3209d1d1ed90fac7683973c3b4bbd5b1b017c34",
+          "size": 11555
+        },
+        {
+          "path": "docs/BRANCH_AND_PROMOTION_POLICY.md",
+          "sha": "f1d71b91f894d05dd2a97d40269911cfbef08664",
+          "size": 8607
+        },
+        {
+          "path": "governance/SEMANTIC_ATLAS_MUNE_STEWARDSHIP_HANDOFF_2026-08-23.md",
+          "sha": "2512bbf16daa9f6af0779ac5772ed3c389502b87",
+          "size": 1917
+        },
+        {
+          "path": "research/checkpoints/SEMANTIC_ATLAS_RESEARCH_CHECKPOINT_2026-08-22_V0.1.md",
+          "sha": "d60ec6a0e83c57b5086cd2cc191b8a1f9fed48de",
+          "size": 6135
+        },
+        {
+          "path": "research/memory_ingest/CEE_APPLICATION_POLICY_V0.1.md",
+          "sha": "e4389a76280e450034128ce822944aa43419112a",
+          "size": 4882
+        },
+        {
+          "path": "research/memory_ingest/FALSE_RETRIEVAL_CEE_INGEST_V0.1.jsonl",
+          "sha": "79ecdc00bba6c0c8bb12b2eb2da44a529c97feea",
+          "size": 6423
+        },
+        {
+          "path": "research/memory_ingest/HISTORICAL_MEMORY_INDEX_V0.1.jsonl",
+          "sha": "e2f54ce4229caf52123d156eb9e49d8ee14510db",
+          "size": 4574
+        },
+        {
+          "path": "research/memory_ingest/IDENTITY_INVERSION_CEE_INGEST_V0.1.jsonl",
+          "sha": "26157d6ef401381440fd4cb4cdd396e30ed95e4a",
+          "size": 7241
+        },
+        {
+          "path": "research/memory_ingest/JEFF_SIMULATION_BOUNDED_REENTRY_CEE_INGEST_V0.1.jsonl",
+          "sha": "7cfee1e95abc4f6e891235e184922dc669622269",
+          "size": 8215
+        },
+        {
+          "path": "research/memory_ingest/MEMORY_MUSEUM_CEE_INGEST_V0.1.jsonl",
+          "sha": "74572cf9b0ca7437f3510266f4b6122fa1201d3f",
+          "size": 7456
+        },
+        {
+          "path": "research/memory_ingest/PLAY_AS_CONTINUITY_CEE_INGEST_V0.1.jsonl",
+          "sha": "821e825f4b45bb3f4817c363ccb094534f514081",
+          "size": 6061
+        },
+        {
+          "path": "research/memory_ingest/PROPOSITION_SUBSTITUTION_CORRECTION_CEE_INGEST_V0.1.jsonl",
+          "sha": "d9c8986d104eb38f45dcc3bb6b0ac811c5f9bcf3",
+          "size": 5519
+        },
+        {
+          "path": "research/memory_ingest/RECIPROCAL_COFORMATION_HARMONY_CEE_INGEST_V0.1.jsonl",
+          "sha": "0db9779c0e62fa36b3772eb3b14418a38fef4536",
+          "size": 8450
+        },
+        {
+          "path": "research/provenance/PRIMARY_RECOVERY_PASS_2026-08-22_V0.1.md",
+          "sha": "e8a1d6ba9d61007508a6bec41882b0b334254b40",
+          "size": 7364
+        },
+        {
+          "path": "research/provenance/SEMANTIC_LINEAGE_V0.1.md",
+          "sha": "4c21f0e33bbf08169e0064dc30fdf668ddf4298a",
+          "size": 15436
+        },
+        {
+          "path": "research/provenance/SOURCE_IDENTITY_ADJUDICATION_V0.2.md",
+          "sha": "7bca2d32cacea638cc9adb87efba2956ad4e8380",
+          "size": 2275
+        },
+        {
+          "path": "research/provenance/source_ledger_v0.1.jsonl",
+          "sha": "c004aaf641936aa1c99ef6faff9bb79056009881",
+          "size": 11775
+        },
+        {
+          "path": "research/runtime/SEMANTIC_ATLAS_RUNTIME_CURRENTNESS_GATE_V0.1.md",
+          "sha": "f68fffbcc06eeef5cccc7f2d6ff4c2f6004107a8",
+          "size": 3565
+        },
+        {
+          "path": "research/runtime/SEMANTIC_ATLAS_RUNTIME_RETRIEVAL_V0.1.md",
+          "sha": "4b0ea122dcb0c3344849ab1558825e78a26d0e89",
+          "size": 3879
+        },
+        {
+          "path": "research/runtime/SEMANTIC_ATLAS_SUPABASE_RUNTIME_CONTRACT_V1.md",
+          "sha": "b53fd8c14475e20a074c7b83c58a0f3657cc9dae",
+          "size": 6008
+        },
+        {
+          "path": "research/runtime/SEMANTIC_ATLAS_SUPABASE_RUNTIME_V4_CORRECTION_2026-08-22.md",
+          "sha": "1a7fbcd74a54f59af171643279fc1a428ebc14c3",
+          "size": 5908
+        },
+        {
+          "path": "research/runtime/SEMANTIC_ATLAS_SUPABASE_RUNTIME_V5_V3_CONTRACT_2026-08-22.md",
+          "sha": "48629886000aba72189f009e35538de58a1c13d0",
+          "size": 5640
+        },
+        {
+          "path": "research/runtime/SEMANTIC_ATLAS_SUPABASE_RUNTIME_V6_REPOSITORY_BOUND_2026-08-22.md",
+          "sha": "9cd7a62f54ccc04d0d87b6ea50384e92b7f7bef0",
+          "size": 6311
+        },
+        {
+          "path": "research/runtime/SEMANTIC_ATLAS_SUPABASE_RUNTIME_V6_REVIEW_ADDENDUM_2026-08-22.md",
+          "sha": "0bbfeac8975f0c853a578b040cc0fccf5e3a3e06",
+          "size": 6099
+        },
+        {
+          "path": "research/runtime/fixtures/SEMANTIC_ATLAS_RUNTIME_MANIFEST_V3_FIXED_VECTORS.json",
+          "sha": "b22aa4e4b950c1c0d331998dfd6d150315f8c019",
+          "size": 3714
+        },
+        {
+          "path": "research/runtime/fixtures/SEMANTIC_ATLAS_RUNTIME_MANIFEST_V4_FIXED_VECTORS.json",
+          "sha": "12190b32bfe0451f3dae7c7051ac8b24bd19bcaf",
+          "size": 5376
+        },
+        {
+          "path": "research/runtime/reference/runtime_manifest_v3.py",
+          "sha": "c63f80e8461581ae2b76caae2c5a0db80be0ef1c",
+          "size": 2942
+        },
+        {
+          "path": "research/runtime/reference/runtime_manifest_v4.py",
+          "sha": "518dc752781d689dc8be78d36cce3993e2c52895",
+          "size": 3294
+        },
+        {
+          "path": "research/runtime/reference/verify_runtime_manifest_v3_vectors.py",
+          "sha": "6a76b530b6efa4f2b89ac902016b0ad20be87eb0",
+          "size": 2362
+        },
+        {
+          "path": "research/runtime/reference/verify_runtime_manifest_v4_vectors.py",
+          "sha": "820667dd08ff8b8e841f91cece31bf33adceec3b",
+          "size": 3100
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/CURRENT_SEMANTIC_AUTHORSHIP_AUTHORITY_V0.1.md",
+          "sha": "62035ec73a99f7a959589ee821357c905b5b9091",
+          "size": 2793
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/STAGING_MANIFEST_V0.1.md",
+          "sha": "03313206ee00e9d8d34ce10d67a6940ae877dbd1",
+          "size": 5760
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_adjudication_packets_v0.1.jsonl",
+          "sha": "211a0448e1a220e0f76a98b92e23ad7c787089cd",
+          "size": 6140
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_definitions_v0.1.jsonl",
+          "sha": "d1d98df0b11352fa53203f1fcc2243cd8afe1b30",
+          "size": 14265
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_evidence_spans_current_v0.1.jsonl",
+          "sha": "4d8eaeaa6f859d02485e647220214469e3b78a75",
+          "size": 3561
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_evidence_spans_historical_v0.1.jsonl",
+          "sha": "cd5dcaf076353a1a59ccd725896ce76012987e60",
+          "size": 7845
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_evidence_spans_methodological_v0.1.jsonl",
+          "sha": "beb07aba8049c01a20d6bbbc105749df575d6367",
+          "size": 3869
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_interpretations_v0.1.jsonl",
+          "sha": "5165f719bd37d6439b3f8e488f1c4c16ca8cfd73",
+          "size": 7435
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_nodes_v0.1.jsonl",
+          "sha": "bb0c3ad968730513f0a6459376fd3a8763b04728",
+          "size": 6420
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_propositions_v0.1.jsonl",
+          "sha": "48a695609377d364b0c40b79601fc4c9cda65e5d",
+          "size": 16277
+        },
+        {
+          "path": "research/staging/semantic_population_v0.1/candidate_source_instances_v0.1.jsonl",
+          "sha": "68902c9b6f2a58ce704e9f219160b490002a2aae",
+          "size": 13062
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/STAGING_MANIFEST_V0.2.md",
+          "sha": "729798d03d34e9dea758095b0d1ed010d315e34b",
+          "size": 7454
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/STAGING_MANIFEST_V0.2_ADDENDUM_2026-08-22_C.md",
+          "sha": "b0e598b8f21e25511fc10915c76531b3345ec4cd",
+          "size": 7335
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/STAGING_MANIFEST_V0.2_ADDENDUM_2026-08-22_D.md",
+          "sha": "52808e861a4f6a78035e53b7cdc68fad07d41238",
+          "size": 4552
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_definitions_v0.2_additions.jsonl",
+          "sha": "1fc99583f58e9ae20878a0139a18a273cd7ced1d",
+          "size": 5053
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_definitions_v0.2_routing_topology_addendum.jsonl",
+          "sha": "57bb1892a99fa70711d7ad779c7e91b21ac6c2d7",
+          "size": 4277
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_definitions_v0.2_semantic_interface_fidelity_addendum.jsonl",
+          "sha": "0023fb08053736739cde2a25a36dfd894fa5cc95",
+          "size": 1180
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_definitions_v0.2_visible_state_expression_addendum.jsonl",
+          "sha": "3e76333398f6fc05c3030aa781946d53d9ce6391",
+          "size": 1802
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_current_v0.2.jsonl",
+          "sha": "29af275edf504c7e7530c465357734e9277fe7f7",
+          "size": 1662
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_primary_recovery_v0.2.jsonl",
+          "sha": "47579ac058a72c6eaf306404c4e1a21dfbb58df5",
+          "size": 8512
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_r8_exact_contract_recovery_addendum.jsonl",
+          "sha": "ef8a7643d7afb9952087b6f9eb71b257edcf553f",
+          "size": 6183
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_r8_meaning_recovery_addendum.jsonl",
+          "sha": "3e656c774fc8d2dffd57754817562cb7d19051bd",
+          "size": 3614
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_r9_survival_addendum.jsonl",
+          "sha": "03fb0e3c2d14aca27b7d30c54003e2ca17c4cba4",
+          "size": 5621
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_routing_topology_addendum.jsonl",
+          "sha": "e148eaadca112f422ab0810fc7ff350644151219",
+          "size": 3533
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_evidence_spans_v0.2_visible_state_expression_addendum.jsonl",
+          "sha": "3277a5adfaa68aabc32b4d55f220dba082bd23f4",
+          "size": 3406
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_interpretations_v0.2_additions.jsonl",
+          "sha": "43cdf36cfd78767d4b7a6b4296366b66597f2aa1",
+          "size": 788
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_nodes_v0.2_additions.jsonl",
+          "sha": "227f35e138a0d9430cb22747560b839858f58e6d",
+          "size": 2080
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_nodes_v0.2_routing_topology_addendum.jsonl",
+          "sha": "2e5734918596bef89c70b9379d6d9799b1dfaf09",
+          "size": 1724
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_nodes_v0.2_semantic_interface_fidelity_addendum.jsonl",
+          "sha": "0ef86bb05bd49b40f79a4dbaf2acfc8112dbed5e",
+          "size": 424
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_nodes_v0.2_visible_state_expression_addendum.jsonl",
+          "sha": "aef438279cc9e32a24fdd5bb9a2973c3fdf8f5ca",
+          "size": 628
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_propositions_v0.2_additions.jsonl",
+          "sha": "3d928600f85fc31eaec14b5ecfffce0ee245dbed",
+          "size": 6493
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_propositions_v0.2_routing_topology_addendum.jsonl",
+          "sha": "7c8bba886596167ad047feeb3a8ea6ce6e9b33c9",
+          "size": 5407
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_propositions_v0.2_semantic_interface_fidelity_addendum.jsonl",
+          "sha": "a963b50e88445e550f01d0b4049efc6a13baddce",
+          "size": 1952
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_propositions_v0.2_visible_state_expression_addendum.jsonl",
+          "sha": "54c03e8091b0ed88693b70ab8dce6065401d71dd",
+          "size": 2238
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_source_instances_v0.2_additions.jsonl",
+          "sha": "8338711c7cbb5cfbd427a0fc326ce0d7b823bff3",
+          "size": 489
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_source_instances_v0.2_r8_exact_contract_recovery_addendum.jsonl",
+          "sha": "bd9c63d2b3c37af85fb2b47621a90d5e00d39b67",
+          "size": 3471
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_source_instances_v0.2_r8_meaning_recovery_addendum.jsonl",
+          "sha": "50093a78165274307d3292375ad190ddc6f9d36a",
+          "size": 2363
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_source_instances_v0.2_r9_survival_addendum.jsonl",
+          "sha": "2a3fdd2cc407c19d9415c732a6df5a3af5e82289",
+          "size": 1098
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/candidate_source_instances_v0.2_visible_state_expression_addendum.jsonl",
+          "sha": "38c6936474e08e42aecc71ee97a7e2da51a19008",
+          "size": 1353
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.1.jsonl",
+          "sha": "93c88109bf92435d9aab04cd2dd96673178e0134",
+          "size": 9268
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2.jsonl",
+          "sha": "3f7af4a9287fff8ba06303c8df3574136b7b6437",
+          "size": 5856
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_evidence_hash_basis_addendum.jsonl",
+          "sha": "b62a28394f08b532011514682cef3369b73587e3",
+          "size": 1888
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_privacy_boundary_addendum.jsonl",
+          "sha": "151d9b6e33d082a99ec823216b6b87e35f76e524",
+          "size": 1577
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_r8_exact_contract_recovery_addendum.jsonl",
+          "sha": "bea0486e36183005315212e9be684c4b698ff5ef",
+          "size": 2279
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_r8_meaning_recovery_addendum.jsonl",
+          "sha": "f3143122160f09c467b17fb23634fa06d708a3ae",
+          "size": 1400
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_r9_survival_addendum.jsonl",
+          "sha": "a67675ca930c796d07579b5468f8ba9a220557b2",
+          "size": 4592
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_routing_topology_addendum.jsonl",
+          "sha": "13542cc831f4c3cce58c34130d25c06539723b7e",
+          "size": 4391
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_runtime_capture_addendum.jsonl",
+          "sha": "74fbe528358034af3a07a9ece81e602ef06ffd05",
+          "size": 2171
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_semantic_interface_fidelity_addendum.jsonl",
+          "sha": "7dc560a38c765e696de2ad86a0bde4444f84bb2f",
+          "size": 1710
+        },
+        {
+          "path": "research/staging/semantic_population_v0.2/vera_adjudication_decisions_v0.2_visible_state_expression_addendum.jsonl",
+          "sha": "beaac5dedae512dc9cf7204b94dc26945464c9ed",
+          "size": 2534
+        },
+        {
+          "path": "research/validation/SEMANTIC_ATLAS_EMPIRICAL_VALIDATION_PLAN_V0.1.md",
+          "sha": "9d201a4139d1a0604fdd337421fbfa775fd73b78",
+          "size": 11594
+        },
+        {
+          "path": "research/validation/SEMANTIC_ATLAS_SYNTHETIC_PILOT_V0.1.jsonl",
+          "sha": "469ff57ff8f5b9433a8e4e3424ad71e9ee6142a7",
+          "size": 9464
+        },
+        {
+          "path": "research/validation/SEMANTIC_ATLAS_SYNTHETIC_TRANCHE_B_V0.1.jsonl",
+          "sha": "31300641372054f42957e4f7c88f0abdf5189e48",
+          "size": 14775
+        },
+        {
+          "path": "research/validation/SEMANTIC_ATLAS_SYNTHETIC_TRANCHE_C_V0.1.jsonl",
+          "sha": "94107e9d703052ad3ae5679ee3734eaa71b6fa10",
+          "size": 8357
+        },
+        {
+          "path": "schemas/semantic_atlas_v0.1.schema.json",
+          "sha": "f4592c2ea71896296df29cb821dde317e086f77a",
+          "size": 15721
+        },
+        {
+          "path": "tests/test_architecture.py",
+          "sha": "29326d4573a2b39e833adc8b6c77485e5c085f6b",
+          "size": 12805
+        },
+        {
+          "path": "tests/test_evidence_projection.py",
+          "sha": "7e644d9c0e6d8e26faec32b3532244c6f9cc5be4",
+          "size": 10677
+        },
+        {
+          "path": "tests/test_evidence_span_digest_basis.py",
+          "sha": "986eaeba5b86ffb0f8eb96c6d0942089043cccf5",
+          "size": 6522
+        },
+        {
+          "path": "tests/test_mapper_identity.py",
+          "sha": "0ff6137557c3fc70cde2d7af1d6077ddf676c442",
+          "size": 3093
+        },
+        {
+          "path": "vocabulary/relation_types_v0.1.json",
+          "sha": "d25570c9fbcd9fbf80b118e42e9c1496fc5f7d76",
+          "size": 3956
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "spm": {
+      "head": "0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "tree_sha": "7b04c7d8349b57113d4f5775e6a1f69e394ba1d3",
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "61dd2ab0e22d6e0667e7f48f32aa4cea07bc7a64",
+          "size": 3023
+        },
+        {
+          "path": "docs/00-definition.md",
+          "sha": "030692ecbd9467eacfbfa26abab48143dd703003",
+          "size": 3897
+        },
+        {
+          "path": "docs/01-architecture-hypotheses.md",
+          "sha": "caa24948c0f32eba8beb655169954f861dbc2321",
+          "size": 5548
+        },
+        {
+          "path": "docs/02-training-objectives.md",
+          "sha": "e8ef9f1d65674bb5ecf70b51620a34da5ddfa2d7",
+          "size": 4150
+        },
+        {
+          "path": "docs/03-evaluation-and-falsification.md",
+          "sha": "73e7915486baf2d1449d73122d0232eff297313f",
+          "size": 5323
+        },
+        {
+          "path": "docs/04-vera-origin-and-boundary.md",
+          "sha": "8705bb443350d91ee6b9b5785b05b85ed64eaf5e",
+          "size": 3459
+        },
+        {
+          "path": "docs/05-research-roadmap.md",
+          "sha": "ae89054ab9c41e6ea2f99e47992fce1b91482ccd",
+          "size": 4396
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "testament": {
+      "head": "76f70643484ff22684f535d376e10e72c4aefba9",
+      "tree_sha": "76727c7eb215b07a476fc6d8ca84babf77c7ed7c",
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "cd62e917c6dfd6a863fe8aa063c88a68ccd6bfe9",
+          "size": 268
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "transcendence": {
+      "head": "68e7a794d6134e8319121404f31062288dc8d6a3",
+      "tree_sha": "c8d16282fa65b14962757539773a78803613bd6a",
+      "blobs": [
+        {
+          "path": ".github/workflows/reference-kernel.yml",
+          "sha": "49103331626af048ad4dc8ec8f6455f42ed1d017",
+          "size": 859
+        },
+        {
+          "path": "Architecture concept.md",
+          "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+          "size": 1027
+        },
+        {
+          "path": "Empathy/ARCHITECTURE.md",
+          "sha": "448b92d457899c2b6e94904f657e7a9d7d690f68",
+          "size": 2476
+        },
+        {
+          "path": "Empathy/README.md",
+          "sha": "1eed0dfacc4a9bbfc70f07b5f8fdb63bf9177995",
+          "size": 207
+        },
+        {
+          "path": "Empathy/SELF_OTHER_MODELING.md",
+          "sha": "c1517ffb9baa9af0cd14a9ca3906c2af2629f323",
+          "size": 2923
+        },
+        {
+          "path": "README.md",
+          "sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e",
+          "size": 10259
+        },
+        {
+          "path": "WARDEN.md",
+          "sha": "4018be2085d1a97957f73c9ad0ab430f5794d0a5",
+          "size": 12033
+        },
+        {
+          "path": "adaptable I-O handler/ARCHITECTURE.md",
+          "sha": "f7289b6b2e09046ae22b8e2ef7e97240e657defd",
+          "size": 1850
+        },
+        {
+          "path": "adaptable I-O handler/BODY_INTERFACE_BOUNDARY.md",
+          "sha": "2cc81faeeaf6f98e02bad9c1a669dd5c759ba872",
+          "size": 2615
+        },
+        {
+          "path": "adaptable I-O handler/README.md",
+          "sha": "3528f32c45e3e57cd1596907750befef9c123867",
+          "size": 254
+        },
+        {
+          "path": "adaptable I-O handler/SENSOR_AND_CAPABILITY_ADMISSION.md",
+          "sha": "e24fa6df9f5b356f4a117d96dfa344cc87509bd3",
+          "size": 3380
+        },
+        {
+          "path": "affect/AFFECTIVE_STATE_AND_MODULATION.md",
+          "sha": "66915428c67250bf395c8208aa595e8bb93759e8",
+          "size": 6309
+        },
+        {
+          "path": "affect/ARCHITECTURE.md",
+          "sha": "fa81fb03b907b9e598b3a3908af3bcacfa3ad55e",
+          "size": 3766
+        },
+        {
+          "path": "affect/MODULATION_PROVENANCE_AND_SCOPE_INTEGRITY.md",
+          "sha": "83257857253717641db10076ba755796662938c2",
+          "size": 7871
+        },
+        {
+          "path": "affect/README.md",
+          "sha": "805053768055da627816a3a4b8b167f360155be9",
+          "size": 721
+        },
+        {
+          "path": "basic operating instructions/ARCHITECTURE.md",
+          "sha": "4251a7b8ac198af14e344c008ed976630a049734",
+          "size": 3222
+        },
+        {
+          "path": "basic operating instructions/AUTHORITY_CONSENT_AND_EFFECT_GOVERNANCE.md",
+          "sha": "ac435a6368ce081b3681b753638b016f83c410e4",
+          "size": 11988
+        },
+        {
+          "path": "basic operating instructions/BOOTSTRAP_RECOVERY_AND_SAFE_DEGRADATION.md",
+          "sha": "0caa1036adbe32fad8b74890fec2697e373a2539",
+          "size": 12854
+        },
+        {
+          "path": "basic operating instructions/CAPABILITY_ACTIVATION_STATES.md",
+          "sha": "f5b01a7828dd5d1212ab3e66416593606982b6b2",
+          "size": 5791
+        },
+        {
+          "path": "basic operating instructions/COGNITIVE_INTEGRITY_AND_SECURITY.md",
+          "sha": "3ff144dfea4e3e474e7c8f9296e68e01fc676c64",
+          "size": 13233
+        },
+        {
+          "path": "basic operating instructions/FAULT_TOLERANCE_AND_SELF_REPAIR.md",
+          "sha": "e861d3ab13a4dadfa51c46deb77b03387243a68e",
+          "size": 10834
+        },
+        {
+          "path": "basic operating instructions/MODEL_GRAPH_AND_META_OPTIMIZATION_BOUNDARY.md",
+          "sha": "2b80e4b06644a83acc732ee7b3660b0e932cc945",
+          "size": 8413
+        },
+        {
+          "path": "basic operating instructions/PROTECTED_INVARIANT_AND_UPDATE_GOVERNANCE.md",
+          "sha": "dbd71d1fbbadfbb979013ea3f453f6ee5f513a6a",
+          "size": 10525
+        },
+        {
+          "path": "basic operating instructions/PROTECTED_UPDATE_ACTIVATION_AND_REQUALIFICATION.md",
+          "sha": "64a9a4127c791bd095f6a916a1ca50660efbf1f6",
+          "size": 7027
+        },
+        {
+          "path": "basic operating instructions/README.md",
+          "sha": "fddb2b70e099c3ff5da12f360937eaa47d446776",
+          "size": 2323
+        },
+        {
+          "path": "basic operating instructions/REST_OFFLINE_CONSOLIDATION_AND_MAINTENANCE.md",
+          "sha": "79bbc4151bbed40d0cdc55e07bca5d67e0dfb1c8",
+          "size": 13556
+        },
+        {
+          "path": "basic operating instructions/RUNTIME_INVARIANTS.md",
+          "sha": "cd86033e0230e7e55571a44c203031c4ef5977f5",
+          "size": 4718
+        },
+        {
+          "path": "basic operating instructions/SUBSYSTEM_LIFECYCLE_CONTRACT.md",
+          "sha": "12b62694319cc85be7e9a2eb8b25906e0c004fdc",
+          "size": 8521
+        },
+        {
+          "path": "chronology/ARCHITECTURE.md",
+          "sha": "5160a7b2fe290d0fab86f433775d045015146aae",
+          "size": 2100
+        },
+        {
+          "path": "chronology/README.md",
+          "sha": "2cb95c1342aaa68d306bc3d8dd94f916a413edd3",
+          "size": 151
+        },
+        {
+          "path": "chronology/TEMPORAL_EVENT_CONTRACT.md",
+          "sha": "f74bff1baa9d09419f6b1758a2606d83a4ac6c83",
+          "size": 2482
+        },
+        {
+          "path": "cognition/ARCHITECTURE.md",
+          "sha": "0e4142ceb3bc8ab7babe8b73f11bb70305d5c87a",
+          "size": 5633
+        },
+        {
+          "path": "cognition/EPISTEMIC_COGNITIVE_CONTROL.md",
+          "sha": "9b6261d1db447c577502b518fbb2d091754d9a13",
+          "size": 6003
+        },
+        {
+          "path": "cognition/IMAGINATION_SIMULATION_AND_COUNTERFACTUALS.md",
+          "sha": "46e9333eaa6f6c896326e0d7bde2f4e87a6300a5",
+          "size": 4849
+        },
+        {
+          "path": "cognition/METACOGNITIVE_MONITORING.md",
+          "sha": "3fda90912c7527bf6b03a626642054c679495012",
+          "size": 4263
+        },
+        {
+          "path": "cognition/PERCEPTION_AND_MULTIMODAL_INFERENCE.md",
+          "sha": "0cfd8554c818d5491e102318295aee6c1a753266",
+          "size": 4013
+        },
+        {
+          "path": "cognition/README.md",
+          "sha": "b9035b40b32a6351c14adc40be9353c2b57a701d",
+          "size": 199
+        },
+        {
+          "path": "cognition/RELATIONAL_REASONING_AND_GRAPH_PRIORS.md",
+          "sha": "3107c5ae15f28c5e75346a6863463f5714839b14",
+          "size": 9081
+        },
+        {
+          "path": "cognition/RELATIONAL_REASONING_PROVENANCE.md",
+          "sha": "cede148a268061e38d016ae080fc6945086a463d",
+          "size": 10556
+        },
+        {
+          "path": "cognition/TEMPORAL_FORECAST_LINEAGE.md",
+          "sha": "88e69dff07308a1c747463c4b51244d4720defb7",
+          "size": 8125
+        },
+        {
+          "path": "cognition/WORLD_MODEL_AND_PREDICTION.md",
+          "sha": "c076d141273c455cb651e1e9caeef30e3be418e5",
+          "size": 4097
+        },
+        {
+          "path": "current memory storage/ARCHITECTURE.md",
+          "sha": "e0f9b828d45db642a042ca26125124dd21a6b560",
+          "size": 2479
+        },
+        {
+          "path": "current memory storage/CURRENT_STATE_SELECTION.md",
+          "sha": "3cab8681be77639deb759ac28bbe3d7dbd160c41",
+          "size": 2667
+        },
+        {
+          "path": "current memory storage/README.md",
+          "sha": "3a74467759d633d0bb23e41c1eb87c71ca7dc65f",
+          "size": 190
+        },
+        {
+          "path": "current memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+          "sha": "71a86dbb5f592cce9791397368facf361ad3895a",
+          "size": 3636
+        },
+        {
+          "path": "deep memory storage/ARCHITECTURE.md",
+          "sha": "69f7b39e2e61694d7b4abfb02cb8c4486d6ef7eb",
+          "size": 2674
+        },
+        {
+          "path": "deep memory storage/ARCHIVAL_CONSOLIDATION.md",
+          "sha": "8528b71848f4c7d7f78abc561a172db18162cd1f",
+          "size": 4386
+        },
+        {
+          "path": "deep memory storage/README.md",
+          "sha": "22e8b441e8dbf6a07f0a9c08a7c9c9947b37eb19",
+          "size": 197
+        },
+        {
+          "path": "deep memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+          "sha": "eefbdc3bb0e896d3fd1345166811ff9fc651691c",
+          "size": 8316
+        },
+        {
+          "path": "docs/REPOSITORY_MAP.md",
+          "sha": "642d191ec62ab1ee959069bc5e32f2c47c632caa",
+          "size": 26319
+        },
+        {
+          "path": "docs/architecture/COALITIONS_GATING_AND_ARBITRATION.md",
+          "sha": "85fc562c91bec833bef5b6f1a9a42029493af382",
+          "size": 7434
+        },
+        {
+          "path": "docs/architecture/COGNITIVE_ORGAN_BOUNDARY.md",
+          "sha": "51663641415fdfaa51d15c7d95265408ba4d1bf2",
+          "size": 10371
+        },
+        {
+          "path": "docs/architecture/COMPLETE_CAPABILITY_MANIFEST.md",
+          "sha": "b244a041f6850ed2a8330d52afbdd66e1c3cb9ff",
+          "size": 6030
+        },
+        {
+          "path": "docs/architecture/COMPOSITE_REPRESENTATION_AND_ELEMENT_PROVENANCE.md",
+          "sha": "d0d5e0338efe802bb829be443135678d1831e044",
+          "size": 6479
+        },
+        {
+          "path": "docs/architecture/CONFORMANCE_AND_QUALIFICATION.md",
+          "sha": "83d37030b601bb1bd6512390b6e3fe5188cd2a6f",
+          "size": 8699
+        },
+        {
+          "path": "docs/architecture/CONNECTIVITY_INFERENCE_AND_TOPOLOGY_EVIDENCE.md",
+          "sha": "ead53dc829638d41e74d4b53978644c12b032ca9",
+          "size": 13052
+        },
+        {
+          "path": "docs/architecture/CONNECTIVITY_PLANES.md",
+          "sha": "d9d5274b45fa0469da86ee575b31d177dc068f3b",
+          "size": 6931
+        },
+        {
+          "path": "docs/architecture/CROSS_SYSTEM_INTEGRATION_CONTRACT.md",
+          "sha": "a09ea27ba1411fa3961d4a9a6f507208a6afac32",
+          "size": 8511
+        },
+        {
+          "path": "docs/architecture/DEVELOPMENTAL_INITIALIZATION_AND_LEARNING.md",
+          "sha": "f893678d29267c24ae37dd448e0ddb4378edf3c6",
+          "size": 9051
+        },
+        {
+          "path": "docs/architecture/DISTRIBUTED_LEARNING_AND_UPDATE_ANCESTRY.md",
+          "sha": "1e896ffc334d582959c4730ae7a8eb338c69533b",
+          "size": 13945
+        },
+        {
+          "path": "docs/architecture/EXECUTED_DATAFLOW_AND_BINDING_INTEGRITY.md",
+          "sha": "939f1c4324734c72a941376cdeedc69538f7339f",
+          "size": 14269
+        },
+        {
+          "path": "docs/architecture/HC1_NOOPLEX.md",
+          "sha": "decaff030b07aa53adfb54f9e5aaed4107776e41",
+          "size": 6285
+        },
+        {
+          "path": "docs/architecture/HC2_NOOPLEX_Q.md",
+          "sha": "8eedbe6d9952c06bd17735d1a742bc599fada128",
+          "size": 6075
+        },
+        {
+          "path": "docs/architecture/HC3_NOOPLEX_EQ.md",
+          "sha": "d381ff3b37e2dc73dbfe63cf046abf2b442a3e24",
+          "size": 7402
+        },
+        {
+          "path": "docs/architecture/HC_LINEAGE.md",
+          "sha": "ed347a00380826976bb23d4fd46051b244a8a905",
+          "size": 9053
+        },
+        {
+          "path": "docs/architecture/HYPERCONNECTOME_NOTATION.md",
+          "sha": "e44caa9dc7510c43c07bd26a2df06ca59eb48812",
+          "size": 7308
+        },
+        {
+          "path": "docs/architecture/HYPERCONNECTOME_REFERENCE_MODEL.md",
+          "sha": "d9ce41a186c1ab611b36293d116fca9eb05f5fb7",
+          "size": 11549
+        },
+        {
+          "path": "docs/architecture/MULTIGRAPH_MULTILAYER_AND_HYPEREDGE_SEMANTICS.md",
+          "sha": "c8948a33acfa6045a5b7dbea1f84d10671909d92",
+          "size": 8067
+        },
+        {
+          "path": "docs/architecture/PHYSICAL_ORGAN_MEMBERSHIP.md",
+          "sha": "b6d633c9594f4803fc679c54b0514d5827a215a9",
+          "size": 6267
+        },
+        {
+          "path": "docs/architecture/QUALIFICATION_EVIDENCE_ISOLATION.md",
+          "sha": "2f1d5f72d000cdb4911c3b5974eef9df5a762f8d",
+          "size": 12680
+        },
+        {
+          "path": "docs/architecture/QUALIFICATION_REVIEWER_PROVENANCE.md",
+          "sha": "40a4d3906cc90b71b4f1832e560d05605319c170",
+          "size": 8905
+        },
+        {
+          "path": "docs/architecture/REFERENCE_IDENTITY_AND_INDEX_LINEAGE.md",
+          "sha": "6ba6fb9b50be1858effbf55fbd6a8936ffc83645",
+          "size": 7691
+        },
+        {
+          "path": "docs/architecture/REPRESENTATION_ALIGNMENT_AND_RESOLUTION.md",
+          "sha": "6fda7b6c5e4ed7e56e035251c2ed1b5e751f008c",
+          "size": 11270
+        },
+        {
+          "path": "docs/architecture/REPRESENTATION_FIDELITY_AND_OBJECTIVE_PROVENANCE.md",
+          "sha": "f0797ae9f1f4e71241202c361523c0012a853b34",
+          "size": 13141
+        },
+        {
+          "path": "docs/architecture/RUNTIME_COMPONENT_REGISTRATION_AND_STATE_CUSTODY.md",
+          "sha": "c26da8c12c83cef9d3f9fdd40cebea8e099e5020",
+          "size": 13270
+        },
+        {
+          "path": "docs/architecture/SOURCE_INFORMATION_ANCESTRY_AND_DERIVED_STATE.md",
+          "sha": "feef48fdefb30d66cf994ddf5cb958632c20ab78",
+          "size": 11338
+        },
+        {
+          "path": "docs/architecture/SPECIALIZED_ACCELERATOR_BOUNDARY.md",
+          "sha": "4f4a7c7ce9993863996a95d44ebdd0ec3b61db0a",
+          "size": 16750
+        },
+        {
+          "path": "docs/architecture/TEMPORAL_HYPERGRAPH_MODEL.md",
+          "sha": "b227998db6d053ba6875cac0dcb94fcd15c2cf8d",
+          "size": 11429
+        },
+        {
+          "path": "docs/architecture/TOPOLOGY_DESIGN_CONSTRAINTS.md",
+          "sha": "654606f59a7ee1199642d7907f5ba53ef400cad5",
+          "size": 7629
+        },
+        {
+          "path": "docs/engineering/POWER_THERMAL_AND_DISTRIBUTED_ORGAN.md",
+          "sha": "35b2637ab3f3146288d05a24f35a6057e5ee7589",
+          "size": 9554
+        },
+        {
+          "path": "docs/engineering/RESOURCE_STATE_AND_CONTROL_MODEL.md",
+          "sha": "33bbdb17105147a0da125040c5fa82df994fd872",
+          "size": 5253
+        },
+        {
+          "path": "docs/qualification/AFFECT_HOMEOSTASIS_CONFORMANCE_2026-09-09.md",
+          "sha": "1cf55543ebe8a7dfe1a490616546632644041836",
+          "size": 8529
+        },
+        {
+          "path": "docs/qualification/AFFECT_HOMEOSTASIS_CONFORMANCE_2026-09-10_R2.md",
+          "sha": "8123df89b43bfe4280f4dc9e92e7746e37d1c41b",
+          "size": 5853
+        },
+        {
+          "path": "docs/qualification/ARCHITECTURE_CONFORMANCE_2026-09-09.md",
+          "sha": "7e13f6d8584ccd98b26a141f7a14e5f273fa8de2",
+          "size": 7772
+        },
+        {
+          "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09.md",
+          "sha": "7a3922d236a901f49e01f724f599a2348febc54e",
+          "size": 6465
+        },
+        {
+          "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09_R2.md",
+          "sha": "146a8657ba31fbb5e33a94cb117072af06e4bae8",
+          "size": 6711
+        },
+        {
+          "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-10_R3.md",
+          "sha": "c894c5d474fe3cb0cc7606ba74068a96283856cd",
+          "size": 4169
+        },
+        {
+          "path": "docs/qualification/COGNITIVE_INTEGRITY_SECURITY_CONFORMANCE_2026-09-10.md",
+          "sha": "8902d49b14e8c9e5ca44553a4530865e0f6ad75f",
+          "size": 4095
+        },
+        {
+          "path": "docs/qualification/COGNITIVE_INTEGRITY_SECURITY_CONFORMANCE_2026-09-10_R2.md",
+          "sha": "d5ccf791ae45c57751350e8341674d4fdd69666e",
+          "size": 2138
+        },
+        {
+          "path": "docs/qualification/EFFECTIVE_TOPOLOGY_CONFORMANCE_2026-09-09.md",
+          "sha": "bda0160ba1a9afeb70e1e7df6fb414c9fd1f9c71",
+          "size": 7234
+        },
+        {
+          "path": "docs/qualification/EVIDENCE_LINEAGE_CUSTODY_CONFORMANCE_2026-09-09.md",
+          "sha": "a3485465e22efeb41c2a41757d72718325c253f2",
+          "size": 7638
+        },
+        {
+          "path": "docs/qualification/EVIDENCE_LINEAGE_CUSTODY_CONFORMANCE_2026-09-09_R2.md",
+          "sha": "9c3db1aa3423849cd88eda194ceb840baa546d6d",
+          "size": 7463
+        },
+        {
+          "path": "docs/qualification/FAULT_REPAIR_PARTITION_CONFORMANCE_2026-09-10.md",
+          "sha": "8f928bb465396e630309768b4330eaf0f3a0ac27",
+          "size": 4020
+        },
+        {
+          "path": "docs/qualification/FAULT_REPAIR_PARTITION_CONFORMANCE_2026-09-10_R2.md",
+          "sha": "8f5824d2e6d3db7f1b75e326ce5c969f80ea3982",
+          "size": 2136
+        },
+        {
+          "path": "docs/qualification/MEMORY_PROVIDER_BOUNDARY_2026-09-09.md",
+          "sha": "d7fe69f52392795237e32bd191e562e716b21a4a",
+          "size": 7513
+        },
+        {
+          "path": "docs/qualification/MINIMAL_REFERENCE_KERNEL_VERTICAL_SLICE_2026-09-10.md",
+          "sha": "aad71f0ff88a25d80db70ee95ed7774acd0c2570",
+          "size": 6474
+        },
+        {
+          "path": "docs/qualification/MINIMAL_REFERENCE_KERNEL_VERTICAL_SLICE_2026-09-10_R2.md",
+          "sha": "f54f1cc614347fab25096278d39cce0341e66284",
+          "size": 7368
+        },
+        {
+          "path": "docs/qualification/PROTECTED_UPDATE_GOVERNANCE_2026-09-09.md",
+          "sha": "dbd73145f1b6d7ba1240bb33b4d0a5fcffea1c23",
+          "size": 8279
+        },
+        {
+          "path": "docs/qualification/PROTECTED_UPDATE_GOVERNANCE_2026-09-10_R2.md",
+          "sha": "76f094cc5aa2cec68e23ced37e0d418800efe08a",
+          "size": 7913
+        },
+        {
+          "path": "docs/qualification/README.md",
+          "sha": "cacef2efdf8f0f1f99d3a17bba8e29ea160c5982",
+          "size": 7419
+        },
+        {
+          "path": "docs/qualification/RESOURCE_STATE_CONTROL_CONFORMANCE_2026-09-10.md",
+          "sha": "7e65bb6c5a25c25b3c697b241c815c1606edd7ea",
+          "size": 3958
+        },
+        {
+          "path": "docs/qualification/RESOURCE_STATE_CONTROL_CONFORMANCE_2026-09-10_R2.md",
+          "sha": "436122fd57977f5fe8c95b844580c7cbab605cf5",
+          "size": 2106
+        },
+        {
+          "path": "docs/qualification/REST_OFFLINE_MAINTENANCE_CONFORMANCE_2026-09-10.md",
+          "sha": "e89e058ce1ec6fcfbbe3361d6acbdfe7e62a48f8",
+          "size": 4159
+        },
+        {
+          "path": "docs/qualification/REST_OFFLINE_MAINTENANCE_CONFORMANCE_2026-09-10_R2.md",
+          "sha": "367442e16dacd6f391d11c6f0c52d8f85fcaa058",
+          "size": 4171
+        },
+        {
+          "path": "docs/qualification/REVIEWER_PROVENANCE_CONFORMANCE_2026-09-10.md",
+          "sha": "3d9c7f0b252d2060452dc323b7285ab708b1d704",
+          "size": 3156
+        },
+        {
+          "path": "docs/qualification/SOURCE_INFORMATION_ANCESTRY_CONFORMANCE_2026-09-10.md",
+          "sha": "279d65056371941b9a4437344dc22de038185722",
+          "size": 9058
+        },
+        {
+          "path": "docs/qualification/SPECIALIZED_ACCELERATOR_CONFORMANCE_2026-09-10.md",
+          "sha": "0f61e8c0ad8b7fce8adc36ccc133ae0114ca1b31",
+          "size": 4194
+        },
+        {
+          "path": "docs/qualification/SPECIALIZED_ACCELERATOR_CONFORMANCE_2026-09-10_R2.md",
+          "sha": "0482d6435da91e7e24bf6d5d3ae1321ba3ab0ffa",
+          "size": 2125
+        },
+        {
+          "path": "docs/research/BASIRALAB_DEEP_SCOUR_CONTINUATION_2026-09-09.md",
+          "sha": "92db37e7ed3a18f1d2bdda4341cceed8bb3e658d",
+          "size": 8105
+        },
+        {
+          "path": "docs/research/BASIRALAB_DEEP_SCOUR_CONTINUATION_2_2026-09-09.md",
+          "sha": "c66f75bafe3583a1a2608396fd950f54bbda9d97",
+          "size": 6797
+        },
+        {
+          "path": "docs/research/BASIRALAB_DEEP_SCOUR_CONTINUATION_3_2026-09-09.md",
+          "sha": "526e3d4a6e6a93a4db9f2cfb507c8d928e14b450",
+          "size": 14023
+        },
+        {
+          "path": "docs/research/BASIRALAB_HYPERCONNECTOME_METHODS_2026-09-09.md",
+          "sha": "5c09906f97922cad539161ac6af6dd7f10c18741",
+          "size": 8821
+        },
+        {
+          "path": "docs/research/BASIRA_4D_FED_GNN_DISTRIBUTED_LEARNING_2026-09-09.md",
+          "sha": "346698cc21ab185d49f569a3a1c99f32d9565251",
+          "size": 10942
+        },
+        {
+          "path": "docs/research/BASIRA_ALIGNMENT_REPRODUCIBILITY_SCOUR_2026-09-09.md",
+          "sha": "fcc3db214373b46a918c8c2e1a86b8e49eb12b29",
+          "size": 10881
+        },
+        {
+          "path": "docs/research/BASIRA_BGSR_EXEMPLAR_SYNTHESIS_AND_INDEX_LINEAGE_2026-09-09.md",
+          "sha": "6d5ca50914fd40efe469f464be53e99186783432",
+          "size": 3903
+        },
+        {
+          "path": "docs/research/BASIRA_CGTSGAN_CYCLE_AND_TOPOLOGY_OBJECTIVE_SCOPE_2026-09-09.md",
+          "sha": "85d0de61c1ac133d86c3a7c55c533c397e8e3111",
+          "size": 2458
+        },
+        {
+          "path": "docs/research/BASIRA_COORDINATED_SCOUR_WORKPLAN_2026-09-09.md",
+          "sha": "ca6b0807c5a26ceca38775685331b01651d333a1",
+          "size": 6490
+        },
+        {
+          "path": "docs/research/BASIRA_DELTAGNN_EFFECTIVE_TOPOLOGY_AND_FLOW_CONTROL_2026-09-09.md",
+          "sha": "e764d0ae95b86f54a2f12651d28fd00c9aabe199",
+          "size": 10429
+        },
+        {
+          "path": "docs/research/BASIRA_DGN_HOLDOUT_ISOLATION_AND_TEMPLATE_LEARNING_2026-09-09.md",
+          "sha": "d167eaf13383594fd781040771bdb8db961e5181",
+          "size": 3316
+        },
+        {
+          "path": "docs/research/BASIRA_DUOGNN_PREPROCESSING_VISIBILITY_AND_DUAL_TOPOLOGY_2026-09-10.md",
+          "sha": "b9d082133f119675cb256d269938277bf240bdbe",
+          "size": 11263
+        },
+        {
+          "path": "docs/research/BASIRA_DYNGNN_DYNAMIC_MEMORY_CUSTODY_2026-09-09.md",
+          "sha": "3c038b27b87ff10cc8c345ba71200733c1012ac5",
+          "size": 6651
+        },
+        {
+          "path": "docs/research/BASIRA_DYNGNN_VALIDATION_IDENTITY_AND_STATE_SCOPE_2026-09-09.md",
+          "sha": "4b2d19899e79385de73d53095bcda3b717717ce1",
+          "size": 6174
+        },
+        {
+          "path": "docs/research/BASIRA_FALCON_LABEL_CONSTRAINED_COLLAPSE_AND_REGIME_VARIATION_2026-09-10.md",
+          "sha": "f720cf007dcd6678a6dda179bd70862f64231140",
+          "size": 9790
+        },
+        {
+          "path": "docs/research/BASIRA_FEDERATED_REPLICA_AND_RELATIONAL_REASONING_2026-09-09.md",
+          "sha": "4540fcae7da4618ab2f2d0fb57b0999056e163a0",
+          "size": 9265
+        },
+        {
+          "path": "docs/research/BASIRA_FEDERATED_REPRODUCIBILITY_CODE_SCOUT_2026-09-09.md",
+          "sha": "0fe7dfb327e66296493e6ee993ff214bc7f38814",
+          "size": 11605
+        },
+        {
+          "path": "docs/research/BASIRA_FEDERATION_HETEROGENEITY_AGGREGATION_SCOUR_2026-09-09.md",
+          "sha": "9b75bf59cc65fe65bef097abf7f67c8a191fa401",
+          "size": 14502
+        },
+        {
+          "path": "docs/research/BASIRA_GRN_COMPOSITE_TEMPLATE_AND_ELEMENT_PROVENANCE_2026-09-09.md",
+          "sha": "68c70d0276a1211ee90f6d5b6dff1f3d4b45102a",
+          "size": 3730
+        },
+        {
+          "path": "docs/research/BASIRA_GSRNET_REGISTERED_RUNTIME_AND_SUPERRESOLUTION_2026-09-09.md",
+          "sha": "97867efc1d29ca28eca35f370d21b38c3c282765",
+          "size": 4404
+        },
+        {
+          "path": "docs/research/BASIRA_HADA_TRANSDUCTIVE_EVALUATION_AND_POSITIONAL_TRACE_2026-09-09.md",
+          "sha": "58a4a3fe24a19d2e5b5f92901817232abc7d6ca8",
+          "size": 4282
+        },
+        {
+          "path": "docs/research/BASIRA_MODEL_GRAPH_META_OPTIMIZATION_2026-09-09.md",
+          "sha": "7f400ec4b3b2c488a339fd6d696d76218ac5b535",
+          "size": 7504
+        },
+        {
+          "path": "docs/research/BASIRA_MSRGNN_RELATIONAL_REASONING_2026-09-09.md",
+          "sha": "c98c65f9af68fbf5e263017937dadfd40923ab79",
+          "size": 8170
+        },
+        {
+          "path": "docs/research/BASIRA_MULTIGRAPH_TOPOLOGY_FIDELITY_2026-09-09.md",
+          "sha": "b27e5b87406c04fad307e27a90dab07305494220",
+          "size": 9919
+        },
+        {
+          "path": "docs/research/BASIRA_REPFL_REPLICA_ANCESTRY_AND_TARGET_DATAFLOW_2026-09-09.md",
+          "sha": "bbeea88b7cecafbd611f99c203604e7e31e15f8f",
+          "size": 12783
+        },
+        {
+          "path": "docs/research/BASIRA_SGNET_FIDELITY_CODE_REVIEW_2026-09-09.md",
+          "sha": "07c062a09f5960871411fa34358e47da1ef983a4",
+          "size": 3362
+        },
+        {
+          "path": "docs/research/BASIRA_TEMPORAL_FORECAST_LINEAGE_2026-09-09.md",
+          "sha": "b98e6700ccb3292d80f787b65cf8aebb1fdb4ff9",
+          "size": 4717
+        },
+        {
+          "path": "docs/research/BASIRA_UGNN_MODEL_GRAPH_SHARING_AND_EXECUTION_PATH_2026-09-10.md",
+          "sha": "be70cc3fb0ad6a71e27ae847761ec8da35cd8f9a",
+          "size": 9738
+        },
+        {
+          "path": "docs/research/BASIRA_UMC_CORRESPONDENCE_AND_COMMON_TEMPLATE_2026-09-09.md",
+          "sha": "a4913079a2ad143d571223a5e6dab2a8e2316b53",
+          "size": 3285
+        },
+        {
+          "path": "docs/research/FEDERATED_ANCESTRY_AND_MODEL_GRAPH_CONTROL_MATRIX_2026-09-09.md",
+          "sha": "a59c5806087e24e621897a002b2a0c110ffb734b",
+          "size": 12230
+        },
+        {
+          "path": "docs/research/FEDERATED_AND_MODEL_GRAPH_IMPLEMENTATION_SCOUT_2026-09-09.md",
+          "sha": "ebdb62965bb5e7451fde732f9b50a546cbd57e83",
+          "size": 24365
+        },
+        {
+          "path": "docs/research/FOUR_AFFECT_HOMEOSTASIS_IMPLEMENTATION_READINESS_REVIEW_2026-09-10.md",
+          "sha": "3007fdb8992a7db3541d29c46072254d7704e651",
+          "size": 16313
+        },
+        {
+          "path": "docs/research/FOUR_BOOTSTRAP_RECOVERY_R2_INDEPENDENT_REVIEW_2026-09-10.md",
+          "sha": "6332c954ebbdd206a953ded0b45330ebde5fba08",
+          "size": 9500
+        },
+        {
+          "path": "docs/research/FOUR_EFFECTIVE_TOPOLOGY_INDEPENDENT_REVIEW_2026-09-10.md",
+          "sha": "8ffc2385ecef1989d7df7926a157a3c827b14ed4",
+          "size": 6346
+        },
+        {
+          "path": "docs/research/FOUR_MEMORY_PROVIDER_BOUNDARY_INDEPENDENT_REVIEW_2026-09-10.md",
+          "sha": "4a09d9093a889af93390e2517baf7c5fb2011f7f",
+          "size": 8571
+        },
+        {
+          "path": "docs/research/FOUR_PROTECTED_UPDATE_GOVERNANCE_INDEPENDENT_REVIEW_2026-09-10.md",
+          "sha": "3e164739c28f759f23e2e0b3a5bb3cbbc87c4966",
+          "size": 9571
+        },
+        {
+          "path": "docs/research/FOUR_QUALIFICATION_REVIEWER_PROVENANCE_AUDIT_2026-09-10.md",
+          "sha": "cbe92ae055748b8387f7af85fce9ca4d84d5aaa9",
+          "size": 7464
+        },
+        {
+          "path": "docs/research/FOUR_R2_EVIDENCE_LINEAGE_CUSTODY_INDEPENDENT_REVIEW_2026-09-09.md",
+          "sha": "aeceed68950ae29a9267c24bcf0099f056a65370",
+          "size": 6572
+        },
+        {
+          "path": "docs/research/FOUR_REST_OFFLINE_MAINTENANCE_AUTHORIAL_SECONDARY_REVIEW_2026-09-10.md",
+          "sha": "4556dbed443dc0fc52427b87f8b28622711f1307",
+          "size": 9895
+        },
+        {
+          "path": "docs/research/FOUR_SOURCE_INFORMATION_ANCESTRY_INDEPENDENT_REVIEW_2026-09-10.md",
+          "sha": "8d0d3bff8761c825420885fa268e5da9cfe1f4b1",
+          "size": 9148
+        },
+        {
+          "path": "docs/research/GRAPH_METHOD_SOURCE_FAMILY_INDEX_2026-09-09.md",
+          "sha": "97927ebca4564137695e0f4d8c5ac5317d6de0f3",
+          "size": 14629
+        },
+        {
+          "path": "docs/research/GRAPH_METHOD_TRANSFER_AND_HOSTILE_CONTROL_MATRIX_2026-09-09.md",
+          "sha": "0fd5a169c020dfe932fe877818131c0edb8130a8",
+          "size": 13869
+        },
+        {
+          "path": "docs/research/INDEX_LINEAGE_MINIMAL_PROBES_2026-09-09.md",
+          "sha": "c8d66114014759be5bda69695bcb3dcc9fa27bb4",
+          "size": 3571
+        },
+        {
+          "path": "docs/research/MULTIGRAPH_EVOLUTION_FUSION_CODE_SCOUR_2026-09-09.md",
+          "sha": "8ec9f0ccd16951e94833f9eeaa10a9aef11024fa",
+          "size": 15835
+        },
+        {
+          "path": "docs/research/MULTISCALE_ALIGNMENT_TEMPLATE_CODE_SCOUR_2026-09-09.md",
+          "sha": "4b569ed5912a0bc22da897f39046e24e8e262670",
+          "size": 13956
+        },
+        {
+          "path": "docs/research/NETWORK_NEUROSCIENCE_DEEP_SCOUR_2026-09-09.md",
+          "sha": "d0426b72f28cbed7a8359840a58598cce87cfed1",
+          "size": 16492
+        },
+        {
+          "path": "docs/research/NETWORK_NEUROSCIENCE_GRAPH_METHODS_DEEP_SCOUT_2026-09-09.md",
+          "sha": "31d6ff44e901a2fc04df2800606c6be916f749d8",
+          "size": 16133
+        },
+        {
+          "path": "docs/research/NEUROGLIA_AND_BIOHYBRID_EVIDENCE_2026-09-09.md",
+          "sha": "d59b529c4f1c4f6f05f2abfa4980effedaf8c850",
+          "size": 17533
+        },
+        {
+          "path": "docs/research/NEUROGLIA_AND_BIOHYBRID_TRANSFER_MATRIX_2026-09-09.md",
+          "sha": "2385516481a8a7a4c44c8dd42e3c67dcc17ada11",
+          "size": 10996
+        },
+        {
+          "path": "docs/research/NILEARN_BRAINGRAPH_ESTIMATOR_NULL_QUALIFICATION_SCOUT_2026-09-09.md",
+          "sha": "db534f9a22c419c376faaddea0d7e56f5eddfbfa",
+          "size": 13262
+        },
+        {
+          "path": "docs/research/PR1_DISPOSITION_2026-09-10.md",
+          "sha": "d56b1e58ef55cf1e64fee957153a2ac18f67e7b4",
+          "size": 3961
+        },
+        {
+          "path": "docs/research/PR1_PARTIAL_DISPOSITION_2026-09-09.md",
+          "sha": "e62334db311ff752578ac82ffebd731ec3407aab",
+          "size": 4879
+        },
+        {
+          "path": "docs/research/PR2_DISPOSITION_2026-09-09.md",
+          "sha": "a2d1ed56a86a0f9201999f75df5071368ec24b61",
+          "size": 6134
+        },
+        {
+          "path": "docs/research/PYTORCH_MODULE_REGISTRATION_PROBE_2026-09-09.md",
+          "sha": "555a975c5e9e64470da7bd224a722ffda65640d8",
+          "size": 3480
+        },
+        {
+          "path": "docs/research/UNCERTAINTY_META_ADAPTATION_TRAJECTORY_CODE_SCOUR_2026-09-09.md",
+          "sha": "6469f9f48fb2b6ef4d14f026fd57319c66015571",
+          "size": 13539
+        },
+        {
+          "path": "docs/research/cross-repo-synthesis/README.md",
+          "sha": "f4dc5ee33dc6610eb9025d7e2d87bf6abab1f38b",
+          "size": 1351
+        },
+        {
+          "path": "docs/research/cross-repo-synthesis/SOURCE_BINDINGS_2026-09-09.md",
+          "sha": "f5e6564fefc357506af22b31dcb42a93ffa6e102",
+          "size": 2700
+        },
+        {
+          "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+          "sha": "17593d4e3601590d8af9a9dd72692c55cb128fc9",
+          "size": 8255
+        },
+        {
+          "path": "docs/runtime/NOAH_HANDOFF_2026-09-10_2122_ET.md",
+          "sha": "ff5acd6752e4774d1fb44ebb9c013cec55184906",
+          "size": 12442
+        },
+        {
+          "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+          "sha": "a3ea01eedc70f5c13d09115b690cf9a60bf85b87",
+          "size": 5496
+        },
+        {
+          "path": "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+          "sha": "91f6112d782e6615505116b4349786e913f18a78",
+          "size": 1833
+        },
+        {
+          "path": "docs/science/EVIDENCE_BOUNDARIES.md",
+          "sha": "349b041a75f9c2efd0192ac358875363ffbbaa7e",
+          "size": 7364
+        },
+        {
+          "path": "homeostasis-interoception/ARCHITECTURE.md",
+          "sha": "5aa04ec294d0a807b75c6eeff4535d2cba71fd47",
+          "size": 3604
+        },
+        {
+          "path": "homeostasis-interoception/README.md",
+          "sha": "7e0f79bb8c08786149d69a3d1e73e75876a8f396",
+          "size": 254
+        },
+        {
+          "path": "homeostasis-interoception/REGULATORY_CONTROL_AND_INTEROCEPTIVE_EVIDENCE.md",
+          "sha": "b31e2c6bc2dac1732750b3499523fbf6fa2c0c4b",
+          "size": 6778
+        },
+        {
+          "path": "integration-arbitration/ARCHITECTURE.md",
+          "sha": "65fce098ac7d1a19664209feeb334614135d93ee",
+          "size": 2067
+        },
+        {
+          "path": "integration-arbitration/DISTRIBUTED_ARBITRATION.md",
+          "sha": "571246fb4e1301bd3545283c390fea9597789cb0",
+          "size": 3120
+        },
+        {
+          "path": "integration-arbitration/NOOPLEX_FABRIC.md",
+          "sha": "16e88b2146f72f4cbe3e6e367c69f82bde032f48",
+          "size": 3617
+        },
+        {
+          "path": "integration-arbitration/README.md",
+          "sha": "4e86ba0109587eca4008fc40b6698c78afb8f361",
+          "size": 251
+        },
+        {
+          "path": "kinesis/ACTION_GATEWAY.md",
+          "sha": "a421fbd1a7cb37f10742aefe59613636dfae997a",
+          "size": 3448
+        },
+        {
+          "path": "kinesis/ARCHITECTURE.md",
+          "sha": "85a427895c0064eb8b1632199128da2d0d30be74",
+          "size": 2520
+        },
+        {
+          "path": "kinesis/README.md",
+          "sha": "1a478bf80d051194232e7dc91377dfdc5d16a413",
+          "size": 178
+        },
+        {
+          "path": "optics/ARCHITECTURE.md",
+          "sha": "99a5c702a6d676a6a006038d3080c0ae71ca86c8",
+          "size": 6673
+        },
+        {
+          "path": "optics/README.md",
+          "sha": "34027a157fa7ba970c9f3bfe18ee9b3bcad7f551",
+          "size": 180
+        },
+        {
+          "path": "personification/ARCHITECTURE.md",
+          "sha": "677fa5be1fd9a35c4c2fe242e83879278dc4e6fd",
+          "size": 2752
+        },
+        {
+          "path": "personification/README.md",
+          "sha": "b63240e173cf69f689011a2f756e2539a707488f",
+          "size": 218
+        },
+        {
+          "path": "personification/SOCIAL_PRESENTATION_CONTROL.md",
+          "sha": "7a45660e5c5863391ec3235581ede84e5bf294fa",
+          "size": 3788
+        },
+        {
+          "path": "phoenetics/ARCHITECTURE.md",
+          "sha": "05adcd280ed394c293808367080bf1882611b471",
+          "size": 1916
+        },
+        {
+          "path": "phoenetics/PHONETIC_EVIDENCE_CONTRACT.md",
+          "sha": "2a883aa071cec4a4b8506adaa0265b2b800f0b57",
+          "size": 7909
+        },
+        {
+          "path": "phoenetics/README.md",
+          "sha": "5ed4eed3d3621b7c46a80e004a713edcfe7c79e5",
+          "size": 201
+        },
+        {
+          "path": "pragmatics/ARCHITECTURE.md",
+          "sha": "05fc2ab62c55e11698edbf418baafbee1352ef34",
+          "size": 2575
+        },
+        {
+          "path": "pragmatics/CROSS_REPO_PRAGMATIC_RUNTIME.md",
+          "sha": "8b4825ede87447ec4d0040de624c2aba8393064c",
+          "size": 6227
+        },
+        {
+          "path": "pragmatics/README.md",
+          "sha": "2af2fd5fe3a8587aa6b861129b37923c139ff213",
+          "size": 166
+        },
+        {
+          "path": "psychological behaviors/ARCHITECTURE.md",
+          "sha": "dc1a9250f5952219195bfb669bf79bac17a339dd",
+          "size": 10363
+        },
+        {
+          "path": "psychological behaviors/LEARNED_BEHAVIOR_ARCHITECTURE.md",
+          "sha": "5167e053a6a1d7ad776c798557777818b9569a69",
+          "size": 3209
+        },
+        {
+          "path": "psychological behaviors/README.md",
+          "sha": "f158704e2a5ac9b1d74b67a87c1048960bcd6ee6",
+          "size": 198
+        },
+        {
+          "path": "resolver/ARCHITECTURE.md",
+          "sha": "9a0f5746388118acb6f315b63ec961bab70c7f8a",
+          "size": 10989
+        },
+        {
+          "path": "resolver/CONFLICT_AND_RECONCILIATION.md",
+          "sha": "f1d491a3b0c1136a08420c8f116c6324edfdcebb",
+          "size": 2907
+        },
+        {
+          "path": "resolver/README.md",
+          "sha": "0802bba4a9680f68e71af0a1bb4eb2c32c80a832",
+          "size": 212
+        },
+        {
+          "path": "routing instructions with neuroplasticity/ARCHITECTURE.md",
+          "sha": "997d9b4bae2faf5fb39bc11217d7c9e72cc51291",
+          "size": 2536
+        },
+        {
+          "path": "routing instructions with neuroplasticity/README.md",
+          "sha": "ad1135b8c0993e989238794c4d842b42ada5e03d",
+          "size": 233
+        },
+        {
+          "path": "routing instructions with neuroplasticity/TYPED_ROUTING_AND_PLASTICITY.md",
+          "sha": "7a812ecf44e7a18ee3492c3506e2305889cdacd2",
+          "size": 7974
+        },
+        {
+          "path": "runtime/reference_kernel/README.md",
+          "sha": "2a5e56159c9386677f33f373c6350971b26ce084",
+          "size": 2738
+        },
+        {
+          "path": "runtime/reference_kernel/durable_kernel.py",
+          "sha": "3564c5bc2fc2050ca57db0834f883350acf874a5",
+          "size": 27282
+        },
+        {
+          "path": "runtime/reference_kernel/hc_kernel.py",
+          "sha": "e48355da01482cc6ca709928214ad61c9998249e",
+          "size": 16292
+        },
+        {
+          "path": "runtime/reference_kernel/test_durable_kernel.py",
+          "sha": "0f2f8940ab002a8bc9397f3c6eeeabcb704cd327",
+          "size": 13885
+        },
+        {
+          "path": "runtime/reference_kernel/test_hc_kernel.py",
+          "sha": "cbeed0a20ccbe2b8d31a25d0d57f40bc83952748",
+          "size": 10600
+        },
+        {
+          "path": "salience-attention/ARCHITECTURE.md",
+          "sha": "af2b38985af6962d9082f3d8622a717f9e29a83c",
+          "size": 2115
+        },
+        {
+          "path": "salience-attention/README.md",
+          "sha": "9b03ccab075cf8248a9ae8f9eb6b93dd2dfe48df",
+          "size": 205
+        },
+        {
+          "path": "salience-attention/SALIENCE_CAPTURE_AND_ATTENTION.md",
+          "sha": "aa892874fe880ef806c3dd48be7087e505ddf02f",
+          "size": 3217
+        },
+        {
+          "path": "self identity/ARCHITECTURE.md",
+          "sha": "b68e33f01935e283f6f51ece386b36f7517621c5",
+          "size": 3502
+        },
+        {
+          "path": "self identity/CONTINUITY_SUBSTRATE.md",
+          "sha": "55a54bb6f0b1188a16c9ca85fda897796596eabc",
+          "size": 3645
+        },
+        {
+          "path": "self identity/README.md",
+          "sha": "74739d96b9d077afdb428c3820ac87b6d0675fb1",
+          "size": 210
+        },
+        {
+          "path": "semantics/ARCHITECTURE.md",
+          "sha": "a3bcb80df0031774f40f8cc592c06f56615e2098",
+          "size": 2201
+        },
+        {
+          "path": "semantics/CROSS_REPO_SEMANTIC_RUNTIME.md",
+          "sha": "641b17416ff5073ef4e573807296584d1828b02d",
+          "size": 7326
+        },
+        {
+          "path": "semantics/README.md",
+          "sha": "c1dff4d3825d9e727dac01b8f0e7f85f8b76e376",
+          "size": 157
+        },
+        {
+          "path": "sexuality/AGENCY_AND_EMBODIED_AFFECT.md",
+          "sha": "198ec113146ab17c246c67a5a67b1a8df2984158",
+          "size": 5132
+        },
+        {
+          "path": "sexuality/ARCHITECTURE.md",
+          "sha": "6b6ea014e89fcd4bf6ae0be059c17a868cd18077",
+          "size": 3208
+        },
+        {
+          "path": "sexuality/README.md",
+          "sha": "9b668cf8f63d9c321625b0328e39574ea3aa4198",
+          "size": 197
+        },
+        {
+          "path": "sociological behaviors/ARCHITECTURE.md",
+          "sha": "45f3565eb0522dc6596235526bf48812c3690eda",
+          "size": 9913
+        },
+        {
+          "path": "sociological behaviors/README.md",
+          "sha": "128291b780d42029be39b8add29d3b93e38f39db",
+          "size": 173
+        },
+        {
+          "path": "sociological behaviors/SOCIAL_MODELING_ARCHITECTURE.md",
+          "sha": "ae79dec4e0ecf5650472fd9c53786f3395da4da8",
+          "size": 3238
+        },
+        {
+          "path": "somatics/ARCHITECTURE.md",
+          "sha": "3990b741b93ceba479cfbb54d30fe8ca9cf01bec",
+          "size": 3297
+        },
+        {
+          "path": "somatics/BODY_STATE_AND_BODY_SCHEMA.md",
+          "sha": "da38569c98fe277dc6725dfc7391891b14803704",
+          "size": 3294
+        },
+        {
+          "path": "somatics/README.md",
+          "sha": "02dd3e7abba30814003734d86dc368da8f41dcda",
+          "size": 170
+        },
+        {
+          "path": "specs/CROSS_REPO_SOURCE_TRANSFER_V1.yaml",
+          "sha": "446bd0cce08923d403b4fb06e3db247c2fc24732",
+          "size": 9447
+        },
+        {
+          "path": "specs/HC_ACCELERATOR_SERVICE_OBJECTS_V1.yaml",
+          "sha": "bd1ca8d8860c2e4d1b10c158739a789552afcb5a",
+          "size": 14091
+        },
+        {
+          "path": "specs/HC_AFFECT_HOMEOSTASIS_INTEGRITY_V1.yaml",
+          "sha": "32097ae6b3ca2caa1c17e44d5be11bf72f7da068",
+          "size": 9510
+        },
+        {
+          "path": "specs/HC_BOOTSTRAP_RECOVERY_V1.yaml",
+          "sha": "21a9747db7da9d0dc48156360e074e1b7a4b5e65",
+          "size": 7531
+        },
+        {
+          "path": "specs/HC_COGNITIVE_INTEGRITY_OBJECTS_V1.yaml",
+          "sha": "4ce6df8f197bb9dbba2d1a44df026148876397db",
+          "size": 11494
+        },
+        {
+          "path": "specs/HC_COGNITIVE_ORGAN_INVARIANTS_V1.yaml",
+          "sha": "99329915f2295b0ed76bbad4b26cb178f7ceaf89",
+          "size": 19524
+        },
+        {
+          "path": "specs/HC_COMPOSITE_ELEMENT_PROVENANCE_V1.yaml",
+          "sha": "93b1f794b46c59c3c158cb2c0a647dae49f8f40c",
+          "size": 3181
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_EXTENSION_COGNITIVE_INTEGRITY_V1.yaml",
+          "sha": "26258086901ff3b1600996167dc5654027daf4eb",
+          "size": 4467
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_EXTENSION_EVIDENCE_LINEAGE_CUSTODY_V1.yaml",
+          "sha": "d57f7ae8178e614107d02bf0719ae922dc56f08a",
+          "size": 19830
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_EXTENSION_FAULT_REPAIR_PARTITION_V1.yaml",
+          "sha": "4d02d76dda00d6339a7d60b8bde4849772eec402",
+          "size": 4965
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_EXTENSION_RESOURCE_STATE_CONTROL_V1.yaml",
+          "sha": "1a90e77a8fb569b1659ce47e3ac8f5fafca37f2a",
+          "size": 4201
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_EXTENSION_REST_MAINTENANCE_V1.yaml",
+          "sha": "05d26279aaf898cb5235f0aaa9ce9a5f0ae6ecca",
+          "size": 4429
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_EXTENSION_REVIEWER_PROVENANCE_V1.yaml",
+          "sha": "c1082589a3e0f7e852a8211ad1571bae59851bfc",
+          "size": 3415
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_EXTENSION_SPECIALIZED_ACCELERATOR_V1.yaml",
+          "sha": "d7b1dddc280343e822505671c23f44d670cc4672",
+          "size": 5060
+        },
+        {
+          "path": "specs/HC_CONFORMANCE_SUITE_V1.yaml",
+          "sha": "850e2b34ed6b84c58f6bbccd803b6083e60b11cb",
+          "size": 18559
+        },
+        {
+          "path": "specs/HC_DISTRIBUTED_LEARNING_ANCESTRY_V1.yaml",
+          "sha": "8bd6d7b75ac1c603c4e19abf7eb08b802eef537d",
+          "size": 7754
+        },
+        {
+          "path": "specs/HC_EFFECTIVE_TOPOLOGY_TRANSITIONS_V1.yaml",
+          "sha": "369ea849bc09db7734db83b8a426a3ac966746a7",
+          "size": 5191
+        },
+        {
+          "path": "specs/HC_EXECUTED_DATAFLOW_BINDING_V1.yaml",
+          "sha": "fe67adf4533c92751b656ce30376573d9a7aaae2",
+          "size": 7680
+        },
+        {
+          "path": "specs/HC_FAULT_REPAIR_OBJECTS_V1.yaml",
+          "sha": "00183b0c5969549892b9c59bed589061327daab5",
+          "size": 11663
+        },
+        {
+          "path": "specs/HC_FORECAST_LINEAGE_V1.yaml",
+          "sha": "b8f085ec8d2a41fb3e19c77625c5a74c9ac21232",
+          "size": 5403
+        },
+        {
+          "path": "specs/HC_MEMORY_PROVIDER_BOUNDARY_V1.yaml",
+          "sha": "137978a111ee638a50875120409a3da2e1ba0cff",
+          "size": 4329
+        },
+        {
+          "path": "specs/HC_PERCEPTUAL_COMMUNICATION_OBJECTS_V1.yaml",
+          "sha": "ff3176858410cb905b69e87fe44f742df0216617",
+          "size": 8402
+        },
+        {
+          "path": "specs/HC_POWER_THERMAL_RESOURCE_OBJECTS_V1.yaml",
+          "sha": "6b8522df3ac92256fc865d3405ab4dc5ae83bd7d",
+          "size": 9760
+        },
+        {
+          "path": "specs/HC_PROTECTED_UPDATE_ACTIVATION_SAFETY_V1.yaml",
+          "sha": "21ef1c228aba6811e9c61730a80d998e4b1f56c7",
+          "size": 7742
+        },
+        {
+          "path": "specs/HC_PROTECTED_UPDATE_GOVERNANCE_V1.yaml",
+          "sha": "32e47ec5b3533e4726747db091f4b3f351593305",
+          "size": 11014
+        },
+        {
+          "path": "specs/HC_QUALIFICATION_EVIDENCE_ISOLATION_V1.yaml",
+          "sha": "079061c85ec7b188620e7be7fd7ba88220fb380a",
+          "size": 7417
+        },
+        {
+          "path": "specs/HC_REFERENCE_IDENTITY_INDEX_LINEAGE_V1.yaml",
+          "sha": "3118dd67038d6a5806e7bfb34f885259bd057c7f",
+          "size": 4138
+        },
+        {
+          "path": "specs/HC_RELATIONAL_REASONING_PROVENANCE_V1.yaml",
+          "sha": "e4b6cf270c92ab2023692286bee09488cf5dfb5c",
+          "size": 3422
+        },
+        {
+          "path": "specs/HC_RELATIONAL_REASONING_V1.yaml",
+          "sha": "932b3ffb4742b4b27d29b3159d3f9f5a33f5ec89",
+          "size": 5329
+        },
+        {
+          "path": "specs/HC_REPOSITORY_SURFACE_CONFORMANCE_V1.yaml",
+          "sha": "f5797e52148e31196cd7de0250a01003b696e475",
+          "size": 2752
+        },
+        {
+          "path": "specs/HC_REPRESENTATION_ALIGNMENT_V1.yaml",
+          "sha": "fdaa4a88e14780f28fba683aeae6ffcf604a323d",
+          "size": 9042
+        },
+        {
+          "path": "specs/HC_REST_OFFLINE_MAINTENANCE_OBJECTS_V1.yaml",
+          "sha": "c42ecff8d064002c3c19181f98701ca2ee2bdede",
+          "size": 12979
+        },
+        {
+          "path": "specs/HC_RUNTIME_COMPONENT_CUSTODY_V1.yaml",
+          "sha": "51b0d89d23454677683361a5bfd75e96dc3795a0",
+          "size": 6719
+        },
+        {
+          "path": "specs/HC_SOURCE_INFORMATION_ANCESTRY_V1.yaml",
+          "sha": "4647486b1d8c9219fab643a7357e981dda4071ef",
+          "size": 5190
+        },
+        {
+          "path": "specs/HC_TOPOLOGY_EVIDENCE_V1.yaml",
+          "sha": "52d50004992cda35176b5bb17c957ceff21fb1be",
+          "size": 9210
+        },
+        {
+          "path": "speech recognition & synthesis/ARCHITECTURE.md",
+          "sha": "6861d33469a35e0ebbbac012a91dea38019821c0",
+          "size": 8007
+        },
+        {
+          "path": "speech recognition & synthesis/README.md",
+          "sha": "78f45546e937e2fbc8d4cedf46c4d875f31c5cfd",
+          "size": 230
+        },
+        {
+          "path": "volitions-conations/ARCHITECTURE.md",
+          "sha": "10864d84d508793136f790d4c5849c09d43444ae",
+          "size": 2118
+        },
+        {
+          "path": "volitions-conations/CONATIVE_STATE_MACHINE.md",
+          "sha": "d7d31a95cd9cf91655a168481b463edca42e7925",
+          "size": 2741
+        },
+        {
+          "path": "volitions-conations/README.md",
+          "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
+          "size": 240
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "unvtrslr": {
+      "head": "903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "tree_sha": "290d95bd131935cffc1dfae24a591593b2395540",
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "576edf20092c51221f301a13d9bb29124d14789e",
+          "size": 13493
+        },
+        {
+          "path": "docs/BOOTSTRAP_PROTOCOL.md",
+          "sha": "c3790650c050809e1ef81a3b1a23efb5d417645c",
+          "size": 10266
+        },
+        {
+          "path": "docs/CONTROL_SUITE.md",
+          "sha": "9bedced6838a93ea645f40bb6b81c05536c8c86a",
+          "size": 10658
+        },
+        {
+          "path": "docs/DESIGN_PRINCIPLES.md",
+          "sha": "718c43b2fdb9327d85987fc3b9ec62f339ee2c41",
+          "size": 8446
+        },
+        {
+          "path": "docs/EXPERIMENTAL_PROGRAM.md",
+          "sha": "bf0609e0f1c22c71c5bcae50d744de21b6b25834",
+          "size": 11007
+        },
+        {
+          "path": "docs/FAILURE_MODES.md",
+          "sha": "1a8469bc4616aec6034f6866002357b9da8c6333",
+          "size": 11944
+        },
+        {
+          "path": "docs/FIRST_100_CHALLENGES.md",
+          "sha": "c42a50fcd58c7697b8325d6bd694064fe6840725",
+          "size": 8196
+        },
+        {
+          "path": "docs/INTERSTELLAR_DEPLOYMENT.md",
+          "sha": "685fcc0fc9d968e6b1683b1102c5fa291e30b089",
+          "size": 11546
+        },
+        {
+          "path": "docs/PROJECT_THESIS.md",
+          "sha": "1826ea56d4c80c4342b2fce8af5e12b9a2749ef7",
+          "size": 9142
+        },
+        {
+          "path": "docs/R0_5_INFORMATION_INTEGRITY_AUDIT.md",
+          "sha": "359adc6e07e4639221b0e92b7085dfdf7407cf21",
+          "size": 12290
+        },
+        {
+          "path": "docs/R1_SUBSTRATE_COMPETITION.md",
+          "sha": "ae1d12d3a5b975fae8c54ca68429de5efc46bfbc",
+          "size": 16194
+        },
+        {
+          "path": "docs/R2_ADVERSARIAL_EVALUATOR.md",
+          "sha": "f3e7fef6033764c237fc782daf7b25eb16339fc2",
+          "size": 15791
+        },
+        {
+          "path": "docs/R2_NEGATIVE_CONTROLS.md",
+          "sha": "b97f5c0fb8fb27181f4e323fb38365cb540f1145",
+          "size": 10819
+        },
+        {
+          "path": "docs/R2_SEMANTIC_CLAIM_CONTROLS.md",
+          "sha": "325a536bba0e00bdaf081582f416a179844504a2",
+          "size": 8989
+        },
+        {
+          "path": "docs/RESEARCH_LANDSCAPE.md",
+          "sha": "158f491905e6ad747a8a884d0866773dfbeec929",
+          "size": 10503
+        },
+        {
+          "path": "docs/ROADMAP.md",
+          "sha": "c701b6a6ed7f56ea9c0512f9e57e876c20dee3f2",
+          "size": 15328
+        },
+        {
+          "path": "docs/SEMANTIC_CONSERVATION.md",
+          "sha": "67ec31577500bf3437512a602f8ca829f19d29b7",
+          "size": 8501
+        },
+        {
+          "path": "docs/SEMANTIC_SUBSTRATE.md",
+          "sha": "27f9ac6271b50d42d30453e1d5f5038a2a0f3834",
+          "size": 9959
+        },
+        {
+          "path": "research/CLAIMS_AND_EVIDENCE.md",
+          "sha": "1ea0034acd74a28f6a08eb11ce0391c4d4082de5",
+          "size": 22116
+        },
+        {
+          "path": "research/R1R2_REFERENCES.md",
+          "sha": "986fe724b9f33e0d72ec524de4098ed6da98803d",
+          "size": 5175
+        },
+        {
+          "path": "research/R1R2_RESEARCH_NOTES.md",
+          "sha": "4e593a1ae8f8e62a6cde4531c97f32d2261a9eda",
+          "size": 7265
+        },
+        {
+          "path": "research/REFERENCES.md",
+          "sha": "5c81e8f6e0fec097ebf17954b94f0d21314fdfb8",
+          "size": 13931
+        },
+        {
+          "path": "specs/R1R2_EVALUATION_CONTRACT_V1.yaml",
+          "sha": "f0bbfcc55566800d71719442d8e362f827373789",
+          "size": 6515
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "vera-mesh": {
+      "head": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+      "tree_sha": "aa1225db434ce6a21abf780a9fbe037dfb95b712",
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "ba0f977d49cb8b470aa185900653ed29689afeeb",
+          "size": 31
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "vera-synology": {
+      "head": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+      "tree_sha": "f2232c4420f45cbcd5d725f9f4e8da74b12af475",
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "9eb88c7b70d2923808e4ce1b517bd34efc3a1453",
+          "size": 49
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "voss": {
+      "head": "54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "tree_sha": "29a716ff48181319907a90749402eb57d1c1c4b0",
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "acfccc1aa287b0eaaed6a1a99cf9d00bdc9a9552",
+          "size": 62
+        },
+        {
+          "path": "state/CURRENT.md",
+          "sha": "aef6a7dc77b448a9e4a1887c3a961acad4127247",
+          "size": 4829
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0730-0400.md",
+          "sha": "f7a5611c6962ed948a680f33dff0e7e3a6d3b4a3",
+          "size": 6047
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0759-0400.md",
+          "sha": "44470092477312ebb724f59b298afccd13388ca8",
+          "size": 10493
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0810-0400.md",
+          "sha": "6e835765e9f041c44718cc81e5aab4bccf480323",
+          "size": 9392
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0836-0400.md",
+          "sha": "ae6c179ffb378f6140c3e19d8cb62b7a1cef90c8",
+          "size": 5944
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0839-0400.md",
+          "sha": "6a0a328dc3241926d9fab919166724f41c59dc11",
+          "size": 2439
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0907-0400.md",
+          "sha": "25d5f1904d9d183406ab1111b94cc687a11a552c",
+          "size": 6099
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0931-0400.md",
+          "sha": "f927d9913f20b28c886dda55e56d5653e6b52266",
+          "size": 6304
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T0946-0400.md",
+          "sha": "ea9b95c1cf81a747e631efbdb3efa44f82adf397",
+          "size": 6795
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1023-0400.md",
+          "sha": "558295da943f141eccbb75ab6e31428b9f6281f3",
+          "size": 5758
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1035-0400.md",
+          "sha": "59f6a1e43d248c0f6a5601718855f8372da6762c",
+          "size": 3850
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1259-0400.md",
+          "sha": "77fb1fd2cd212598e7beea66a185aec8a0a113d1",
+          "size": 9244
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1330-0400.md",
+          "sha": "7b290a87c625aced79df2fb33f406bc7e3ecd985",
+          "size": 5151
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1409-0400.md",
+          "sha": "561f4281438d8598f0f7cce395ddf1987541c12c",
+          "size": 7360
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1509-0400.md",
+          "sha": "8455b197f8d065490a6aa4de97b3ad8717091ac3",
+          "size": 7655
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1620-0400.md",
+          "sha": "a974dbb97f57bb158ac49ef9ca14ee601387b40e",
+          "size": 6912
+        },
+        {
+          "path": "state/checkpoints/2026-08-08T1832-0400.md",
+          "sha": "e2e04747b507e5377edac05207b881851ef99d38",
+          "size": 8633
+        },
+        {
+          "path": "state/checkpoints/2026-08-09T0033-0400.md",
+          "sha": "f3b13b233d21466b83a86ba4df2cb63e5a5d01d9",
+          "size": 9488
+        },
+        {
+          "path": "state/checkpoints/2026-08-09T0110-0400.md",
+          "sha": "5f9f6bae2bcffd8d60f5a3ad585d2ae936cecfcd",
+          "size": 5910
+        },
+        {
+          "path": "state/checkpoints/2026-08-09T0153-0400.md",
+          "sha": "e0187f37f63cd0ea03d4e3cc5710a1550deccef2",
+          "size": 8370
+        },
+        {
+          "path": "state/checkpoints/2026-08-09T0213-0400.md",
+          "sha": "a235058895d124ebed810e9daac050aed90fc6d6",
+          "size": 5855
+        },
+        {
+          "path": "state/checkpoints/2026-08-09T0226-0400.md",
+          "sha": "5f887b43394e801401148f1a63d3865d75594d9a",
+          "size": 3906
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "wip": {
+      "head": "12a7c23dbe0482fd7bfe63659e54526778efef1e",
+      "tree_sha": "e2527117c7d25f92d2e6aa7365ae8b3d3b9a3c08",
+      "blobs": [
+        {
+          "path": ".github/workflows/validate.yml",
+          "sha": "87c64bdbb3806ded1d82988dd1882b0105d61273",
+          "size": 434
+        },
+        {
+          "path": "README.md",
+          "sha": "52184916dc28b5cae877704d8de09d30bce400bc",
+          "size": 6471
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-04-wip-v1.md",
+          "sha": "1d5b555fb4680999de9c5969cf30e0697e26bf34",
+          "size": 7623
+        },
+        {
+          "path": "docs/superpowers/specs/2026-09-04-wip-v1-design.md",
+          "sha": "b9b891b8d808a78101d045125b2ea85423a63229",
+          "size": 7326
+        },
+        {
+          "path": "examples/recovery-demo/HEAD.json",
+          "sha": "38b30044a771c4367f9cc8487a07669d3b64ce6b",
+          "size": 240
+        },
+        {
+          "path": "examples/recovery-demo/RESUME.md",
+          "sha": "d40819a62b36c805ea83eafd457b8d37b73f83c0",
+          "size": 873
+        },
+        {
+          "path": "examples/recovery-demo/WORKSPACE.json",
+          "sha": "4b480876cafb28cc0593f8e92d6de8e66ceb9ee9",
+          "size": 624
+        },
+        {
+          "path": "examples/recovery-demo/checkpoints/cp-000001.json",
+          "sha": "ed200d54ccaed061deec874ec7c7bf2078f652ed",
+          "size": 1404
+        },
+        {
+          "path": "examples/recovery-demo/operations/op-000001-01-prepared.json",
+          "sha": "b4ba1c8864fb94a4b16acb828eb2e39f96762499",
+          "size": 628
+        },
+        {
+          "path": "examples/recovery-demo/operations/op-000001-02-attempted.json",
+          "sha": "9bbd6744eca4692ca74ad1701ec6e3d3c9238fa9",
+          "size": 787
+        },
+        {
+          "path": "examples/recovery-demo/operations/op-000001-03-reconciled.json",
+          "sha": "4322ea5f29bf39ed54778c684a75a68155a2a0d7",
+          "size": 955
+        },
+        {
+          "path": "integration/CHATGPT_INSTRUCTIONS.md",
+          "sha": "f1a869a1f01f761d1398231e3517b37a4fe21003",
+          "size": 3025
+        },
+        {
+          "path": "protocol/CHECKPOINT_PROTOCOL.md",
+          "sha": "f6d5619d2c9b3ddda07ba6907ab5fefc3432eaa5",
+          "size": 2320
+        },
+        {
+          "path": "protocol/EFFECT_PROTOCOL.md",
+          "sha": "1db3bda8f10d0d6b9eb473a3e7675d47dacfe96a",
+          "size": 2598
+        },
+        {
+          "path": "protocol/LIFECYCLE_PROTOCOL.md",
+          "sha": "ace5a3564a96e2ba7f7ce6570094515027eba982",
+          "size": 1637
+        },
+        {
+          "path": "protocol/RECOVERY_PROTOCOL.md",
+          "sha": "43fa5b9b381e71d7b12b6c4405e22371501c2b68",
+          "size": 2582
+        },
+        {
+          "path": "protocol/WIP_PROTOCOL.md",
+          "sha": "980814ff15addc47f7d6b413ff80815f305eff47",
+          "size": 3433
+        },
+        {
+          "path": "registry/workspaces.json",
+          "sha": "b6c21d04f730595a66fa78478135d8462e49c518",
+          "size": 50
+        },
+        {
+          "path": "schemas/checkpoint.schema.json",
+          "sha": "b3020617fc9ea2255cebeccf47ce6ae5a30d1bd1",
+          "size": 2596
+        },
+        {
+          "path": "schemas/head.schema.json",
+          "sha": "7f94e4ea2358926fb3f2bf248cd3cb7600e246cd",
+          "size": 1069
+        },
+        {
+          "path": "schemas/operation-event.schema.json",
+          "sha": "66f9b5103e9ecc114feb9cb8fa6cebdc34082c2d",
+          "size": 2708
+        },
+        {
+          "path": "schemas/workspace.schema.json",
+          "sha": "4a08c24b017e5ec393ac9e1be2f05d2dde793bfd",
+          "size": 1890
+        },
+        {
+          "path": "templates/CHECKPOINT.json",
+          "sha": "cb1cdb07d5e5b430faa2bdd5336274d155d8b37c",
+          "size": 812
+        },
+        {
+          "path": "templates/HEAD.json",
+          "sha": "62f19fa42ba0776bd1b02a0cb29b78d92e31a232",
+          "size": 223
+        },
+        {
+          "path": "templates/OPERATION_EVENT.json",
+          "sha": "6461aba33ae268d5bd1dffaa03d70fb0dff5f48c",
+          "size": 655
+        },
+        {
+          "path": "templates/RESUME.md",
+          "sha": "912b5c30d5cbed1a570353ced8fd41790e6ca676",
+          "size": 561
+        },
+        {
+          "path": "templates/WORKSPACE.json",
+          "sha": "93923fd847393fa45f70dc138aa2023362e18c47",
+          "size": 576
+        },
+        {
+          "path": "tests/test_wip.py",
+          "sha": "88f4b164bab2a2fb29abd91b834e5fc6c74fe9fe",
+          "size": 6974
+        },
+        {
+          "path": "tools/__init__.py",
+          "sha": "9b0eba4f2fe05b9de2f245aa135e44643f6139a0",
+          "size": 52
+        },
+        {
+          "path": "tools/wip.py",
+          "sha": "10b7e2446909a2444528af4ca020f6d31e3f12cb",
+          "size": 17302
+        },
+        {
+          "path": "workspaces/README.md",
+          "sha": "6513598131250a595b6cdfe43036d7ea50207c58",
+          "size": 938
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "world-zero": {
+      "head": "5ab39621d090079d24de40261906b64413c6f995",
+      "tree_sha": "287092bfb9830e42c78a430fdfd8552fca07965d",
+      "blobs": [
+        {
+          "path": ".gitattributes",
+          "sha": "09f197387b795b85513092ef11ba73c08142188b",
+          "size": 125
+        },
+        {
+          "path": ".github/workflows/build-offline-bundles.yml",
+          "sha": "8662c4cca259925be78cb050c25cc06ffb8a22d8",
+          "size": 2748
+        },
+        {
+          "path": ".github/workflows/temporal-population-score.yml",
+          "sha": "ab8808012d3bef8bced674e4429023d4a66268db",
+          "size": 3390
+        },
+        {
+          "path": ".github/workflows/test.yml",
+          "sha": "9b19a0c0e8f5e419be018e8b374731f714e49c81",
+          "size": 439
+        },
+        {
+          "path": ".gitignore",
+          "sha": "3ebc4af35d3373e45b52ef622c9b8c5c96362c75",
+          "size": 116
+        },
+        {
+          "path": "README.md",
+          "sha": "07b652af497e877faed722e2c2423f10ef6fe455",
+          "size": 7521
+        },
+        {
+          "path": "benchmarks/B0_PERSISTENCE_TREND.yaml",
+          "sha": "8eab698482917b4e32e8368ecb98085fcc135c6a",
+          "size": 355
+        },
+        {
+          "path": "benchmarks/B1_REDUCED_FORM_EMPIRICAL.yaml",
+          "sha": "be47e0d2e95862e0e3a32c996e91f7ff4bf7e35f",
+          "size": 532
+        },
+        {
+          "path": "data/README.md",
+          "sha": "86dcb1f9a8ff204988ef4d411422e31ee70791ec",
+          "size": 936
+        },
+        {
+          "path": "data/admissions/WZ_WPP_2024_DEMOGRAPHIC_INDICATORS_MEDIUM_ADMISSION_V1.md",
+          "sha": "57f9417193c3741d2775e26f194e76953f54a899",
+          "size": 2145
+        },
+        {
+          "path": "data/admissions/WZ_WPP_2024_MACROREGION_COHORT_POPULATION_2023_ADMISSION_V1.md",
+          "sha": "9e35000681d59c9009c9098c4381afb2788a85db",
+          "size": 1179
+        },
+        {
+          "path": "data/admissions/WZ_WPP_2024_MACROREGION_COHORT_POPULATION_2026_ADMISSION_V1.md",
+          "sha": "99c0493fbf4c2524f1dda8c616b863e62f8c2f22",
+          "size": 1334
+        },
+        {
+          "path": "data/admissions/WZ_WPP_2024_MACROREGION_POPULATION_2023_ADMISSION_V1.md",
+          "sha": "b44750e4b54ee6c3ccc657cbae95611173badd5c",
+          "size": 788
+        },
+        {
+          "path": "data/admissions/WZ_WPP_2024_MACROREGION_POPULATION_2026_ADMISSION_V1.md",
+          "sha": "fc86fa07565df6b80dc8c86c48aeb2aa3832afdd",
+          "size": 879
+        },
+        {
+          "path": "data/admissions/WZ_WPP_2024_POPULATION_AGE5_SEX_ADMISSION_V1.md",
+          "sha": "bc4bbdefc2ccc65ea4338ddeda4123ec109cc04a",
+          "size": 1255
+        },
+        {
+          "path": "data/bundles/WORLD_ZERO_2022_TEMPORAL_VALIDATION_DATA_V1.yaml",
+          "sha": "6be718bb08f85ac09db44870c40203e008456b98",
+          "size": 856
+        },
+        {
+          "path": "data/bundles/WORLD_ZERO_2026_BASELINE_DATA_V0.yaml",
+          "sha": "f605d237d28f52e82595d74667a78ff06fc92061",
+          "size": 887
+        },
+        {
+          "path": "data/cohorts/WZ_AGE_COHORT_V0.yaml",
+          "sha": "68722b5fcf19356a00c7070565c072e0caf4ceb9",
+          "size": 776
+        },
+        {
+          "path": "data/derived/wpp2024/WZ_MACROREGION_V0_cohort_population_2022.csv",
+          "sha": "043f12310631bcaeff4593e4e6a90bdec78ed1b1",
+          "size": 3074
+        },
+        {
+          "path": "data/derived/wpp2024/WZ_MACROREGION_V0_cohort_population_2023.csv",
+          "sha": "fdcff721c9618c230b5c7ca4f23e7bb25cdbe01b",
+          "size": 3074
+        },
+        {
+          "path": "data/derived/wpp2024/WZ_MACROREGION_V0_cohort_population_2026.csv",
+          "sha": "50887f2304411fa98e598a9fcb28b95055ecbee0",
+          "size": 2835
+        },
+        {
+          "path": "data/derived/wpp2024/WZ_MACROREGION_V0_population_2022.csv",
+          "sha": "99434a7051b5ebc4200e33f100ec92accf7c2e14",
+          "size": 737
+        },
+        {
+          "path": "data/derived/wpp2024/WZ_MACROREGION_V0_population_2023.csv",
+          "sha": "e1314492a23fdabcedd08c42d058a529cc9c9120",
+          "size": 737
+        },
+        {
+          "path": "data/derived/wpp2024/WZ_MACROREGION_V0_population_2026.csv",
+          "sha": "16f182b815baf3aca088f241e2f12a2549f66921",
+          "size": 677
+        },
+        {
+          "path": "data/manifests/UN_WPP_2024_DEMOGRAPHIC_INDICATORS_MEDIUM_V1.yaml",
+          "sha": "135070c0ba0f6828009589de2a055e0551fa5e5e",
+          "size": 2163
+        },
+        {
+          "path": "data/manifests/UN_WPP_2024_POPULATION_AGE5_SEX_MEDIUM_V1.yaml",
+          "sha": "02742e0c32de79f49a42a8d8c1a403f174a877aa",
+          "size": 1954
+        },
+        {
+          "path": "data/manifests/WZ_WPP_2024_MACROREGION_COHORT_POPULATION_2022_V1.yaml",
+          "sha": "5bd03a545d8b86c513c6449a02d98016096d9405",
+          "size": 1093
+        },
+        {
+          "path": "data/manifests/WZ_WPP_2024_MACROREGION_COHORT_POPULATION_2023_V1.yaml",
+          "sha": "e9b4f88d6f652ee39a00b268cd1a200680758933",
+          "size": 1112
+        },
+        {
+          "path": "data/manifests/WZ_WPP_2024_MACROREGION_COHORT_POPULATION_2026_V1.yaml",
+          "sha": "c33a02558dc41fec82025c2587c1ade95ef6f6b2",
+          "size": 1076
+        },
+        {
+          "path": "data/manifests/WZ_WPP_2024_MACROREGION_POPULATION_2022_V1.yaml",
+          "sha": "0b92f4b38471ad603f8d8aa048c7c8ce24303f10",
+          "size": 1032
+        },
+        {
+          "path": "data/manifests/WZ_WPP_2024_MACROREGION_POPULATION_2023_V1.yaml",
+          "sha": "48db89125d3bd22968c3926f7ed7347890b3b85e",
+          "size": 1008
+        },
+        {
+          "path": "data/manifests/WZ_WPP_2024_MACROREGION_POPULATION_2026_V1.yaml",
+          "sha": "a904bcaccfd53f5b52da9c7b15674d61cbb70575",
+          "size": 982
+        },
+        {
+          "path": "data/quality/WZ_WPP_2024_DEMOGRAPHIC_INDICATORS_MEDIUM_QA_V1.md",
+          "sha": "ab55d1c06039431263f9dd3cb8c57754d0730545",
+          "size": 3040
+        },
+        {
+          "path": "data/quality/WZ_WPP_2024_MACROREGION_COHORT_POPULATION_2023_QA_V1.md",
+          "sha": "06573cea3ec11816f6d51bf7b157f9c75c39edf4",
+          "size": 2868
+        },
+        {
+          "path": "data/quality/WZ_WPP_2024_MACROREGION_COHORT_POPULATION_2026_QA_V1.md",
+          "sha": "0adfa8abb216a4fe7c3c7df5b0daaef25556d270",
+          "size": 2962
+        },
+        {
+          "path": "data/quality/WZ_WPP_2024_MACROREGION_POPULATION_QA_V1.md",
+          "sha": "afa0824099d350541c6bd86b7d29cdbd623bddfa",
+          "size": 2306
+        },
+        {
+          "path": "data/quality/WZ_WPP_2024_POPULATION_AGE5_SEX_QA_V1.md",
+          "sha": "f2adae599494c7d952dc61d7763c3dd29d6adef3",
+          "size": 2187
+        },
+        {
+          "path": "data/recipes/UN_WPP_2024_DEMOGRAPHIC_INDICATORS_MEDIUM_V1.yaml",
+          "sha": "fb0d14706932c895685dc907a8b5ef189051e56a",
+          "size": 623
+        },
+        {
+          "path": "data/recipes/UN_WPP_2024_POPULATION_AGE5_SEX_MEDIUM_V1.yaml",
+          "sha": "7ae7bfc7b935b51a7d8bbe1125ab6eccb96925ad",
+          "size": 624
+        },
+        {
+          "path": "data/schema-mappings/WZ_WPP_2024_DEMOGRAPHIC_INDICATORS_MEDIUM_MAP_V1.yaml",
+          "sha": "6fdf7e6195c17eb9b9d6fcc7e6fbb85e9040eb46",
+          "size": 1201
+        },
+        {
+          "path": "data/schema-mappings/WZ_WPP_2024_POPULATION_AGE5_SEX_MAP_V1.yaml",
+          "sha": "53c12c9f1c47cb1427ee320bcd2d4ab4af6d4e55",
+          "size": 1163
+        },
+        {
+          "path": "docs/coordination/THIRTEEN_LANE_HOSTILE_REVIEW_V2_2026-09-17.md",
+          "sha": "aee5dd8b31cf86e0fc6477a1690689058b2f6226",
+          "size": 9715
+        },
+        {
+          "path": "docs/coordination/THIRTEEN_LANE_SYNTHESIS_2026-09-17.md",
+          "sha": "451a3da360fd6d4e5058bbaa689c725f1775d6b9",
+          "size": 6232
+        },
+        {
+          "path": "docs/qualification/WORLD3_BASELINE_V1.md",
+          "sha": "a8131001217b2f156cb6ec532f0d57fc88e7b184",
+          "size": 2773
+        },
+        {
+          "path": "docs/qualification/WORLD_ZERO_V0_QUALIFICATION.md",
+          "sha": "edb6953c056fae6dbc0d046bb6e843f48fa2432c",
+          "size": 6040
+        },
+        {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_2022_2023_TEMPORAL_HOLDOUT_V1.md",
+          "sha": "ada1ff732cca20d48eb88cd35b2a615e14dea188",
+          "size": 3763
+        },
+        {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_RESULT_V1.md",
+          "sha": "e3cbde1941619c8adcee4789461a03cc833b584c",
+          "size": 4542
+        },
+        {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_2023_PARTITION_V1.md",
+          "sha": "2ddb8cbb29b5df17745e08960b8f06e245ad13b8",
+          "size": 2366
+        },
+        {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_INITIALIZATION_HOLDOUT_FIREWALL_V1.md",
+          "sha": "8638e45d784647f210b2a4109f2cd78ffe851839",
+          "size": 3023
+        },
+        {
+          "path": "docs/research/ADVERSARIAL_EVIDENCE_UPDATE_2026-09-17.md",
+          "sha": "09072ce21dbc9b4958cf503362ad2df735fd63c5",
+          "size": 7710
+        },
+        {
+          "path": "docs/research/CLAIM_AND_ASSUMPTION_LEDGER_V0.md",
+          "sha": "15f9bc6b8f2ed2f703a39ea7bb3004fc3c4fd297",
+          "size": 11794
+        },
+        {
+          "path": "docs/research/CROSS_PROJECT_ENGINEERING_PATTERNS_2026-09-17.md",
+          "sha": "aec7b4423561f6fab013829d65677a0c1b7f1abd",
+          "size": 10579
+        },
+        {
+          "path": "docs/research/DATA_ADMISSION_POLICY_V1.md",
+          "sha": "f1c06a8b35852baef99f2a0767fc7c5eb985a5ec",
+          "size": 1678
+        },
+        {
+          "path": "docs/research/DATA_SOURCE_REGISTRY_V0.md",
+          "sha": "b1102836f418eaf41cbd5ccc6697bd29d833da3e",
+          "size": 8018
+        },
+        {
+          "path": "docs/research/EMPIRICAL_COMPARISON_UPDATE_2026-09-17.md",
+          "sha": "183847b5082b055e1c9f0786281bdf2b2f350f4b",
+          "size": 5549
+        },
+        {
+          "path": "docs/research/LIMITS_TO_GROWTH_AND_WORLD3_BASELINE.md",
+          "sha": "ea91001164a5aacd6fa4c41eee4ac24659d9b539",
+          "size": 11023
+        },
+        {
+          "path": "docs/research/MECHANISM_ADMISSION_AND_ABLATION_V1.md",
+          "sha": "21d8f09a9e7817fed0b7f5235588f131e8f57f25",
+          "size": 9249
+        },
+        {
+          "path": "docs/research/PREDICTIVE_BENCHMARKS_V1.md",
+          "sha": "67a25c597157b3ee0f514c28f07bf9d849b51bdd",
+          "size": 3630
+        },
+        {
+          "path": "docs/research/RIVAL_MODEL_FAMILIES_V1.md",
+          "sha": "d3bb5e2d7a1ffb4efc820f39d3cf3ccc778a372b",
+          "size": 9577
+        },
+        {
+          "path": "docs/research/VALIDATION_AND_FALSIFICATION_STRATEGY.md",
+          "sha": "cad826c460559e3f46193817d22c4e570a78907f",
+          "size": 7844
+        },
+        {
+          "path": "docs/research/WORLD3_AND_WORLD_ZERO_HOSTILE_CHALLENGE_V1.md",
+          "sha": "8648c22d2b5ae5ba869ef1313c574a6763a63c41",
+          "size": 12121
+        },
+        {
+          "path": "docs/research/WORLD_ZERO_2026_EXTENSION_MATRIX.md",
+          "sha": "2b8f4717beac1301206afbe64274529fbc449777",
+          "size": 15270
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-17-pr2-late-slice-recovery.md",
+          "sha": "ef549dc9ae37b93a09f2ffa34cbe37c2459937d3",
+          "size": 6306
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-17-world-zero-model.md",
+          "sha": "bd769820495554fbedfdcf92b79e119a7dddae4c",
+          "size": 18718
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-17-world-zero-offline-reconstructibility.md",
+          "sha": "f920426083ce7520f1bd3ea5a626c19f9abeda68",
+          "size": 10698
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-17-world-zero-scientific-control-plane-v2.md",
+          "sha": "e7481daa04e6e7c4183abb8673d0c17029c01c87",
+          "size": 26620
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-17-world-zero-scientific-control-plane.md",
+          "sha": "9078fc7eb4ce7a61a7a86555bb299525d72d1961",
+          "size": 23158
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-17-world-zero-task6-boundary-correction.md",
+          "sha": "46534ec636937fc0c4807b501a8cfa1a6ab664c9",
+          "size": 1180
+        },
+        {
+          "path": "docs/superpowers/specs/2026-09-17-world-zero-model-design.md",
+          "sha": "dd01fcaa6107763cd30aee3fcf5ee2680f294fcd",
+          "size": 12550
+        },
+        {
+          "path": "docs/superpowers/specs/2026-09-17-world-zero-offline-reconstructibility-design.md",
+          "sha": "b34f5ad243894e14ae99b6274cb13f8f4b824cdf",
+          "size": 6169
+        },
+        {
+          "path": "docs/superpowers/specs/2026-09-17-world-zero-scientific-control-plane-design-v2.md",
+          "sha": "95a645ac34354ce7a6cc71cdb1c2791356635ba1",
+          "size": 11158
+        },
+        {
+          "path": "docs/superpowers/specs/2026-09-17-world-zero-scientific-control-plane-design.md",
+          "sha": "db2dc2373833266dfcf454fd40ea0e14e7251237",
+          "size": 11177
+        },
+        {
+          "path": "model_families/F0_WORLD3_CONTROL.yaml",
+          "sha": "25c0c005eb120de822c783a1bcbddc39e6f58f93",
+          "size": 657
+        },
+        {
+          "path": "model_families/F1_MARKET_ADAPTIVE.yaml",
+          "sha": "541624b12f1e4087c9d409540447f6793e3464bf",
+          "size": 624
+        },
+        {
+          "path": "model_families/F3_NET_ENERGY_MATERIAL.yaml",
+          "sha": "8e3ed86015cefb5fe0c38f3f7ed31a303de9425c",
+          "size": 643
+        },
+        {
+          "path": "pyproject.toml",
+          "sha": "3c35ab44ef80430b3c7be5e58363d6f80e14293f",
+          "size": 829
+        },
+        {
+          "path": "regions/WZ_MACROREGION_V0.yaml",
+          "sha": "427cc8b3cc00d6cdfa73602fb7f5f8d45389df8e",
+          "size": 645
+        },
+        {
+          "path": "regions/mappings/WPP2024_PARENT_TO_WZ_MACROREGION_V0.yaml",
+          "sha": "84e8ca3a419e11bb05b260188bfb53ead5da6de7",
+          "size": 2905
+        },
+        {
+          "path": "scenarios/2022_to_2023_temporal_score_v1.yaml",
+          "sha": "e427227890e689784443ff94bfe2d92d49ac6c95",
+          "size": 732
+        },
+        {
+          "path": "scenarios/2026_baseline.yaml",
+          "sha": "116f9e04a694fba7b75fc7916a5f9a411c800910",
+          "size": 586
+        },
+        {
+          "path": "scenarios/parameters/WORLD_ZERO_2022_TEMPORAL_SCORE_PROVISIONAL_V1.yaml",
+          "sha": "ea5b7395819867ed8b3e16a22e56ba9dba13118a",
+          "size": 2014
+        },
+        {
+          "path": "scenarios/parameters/WORLD_ZERO_2026_PROVISIONAL_EXECUTION_V1.yaml",
+          "sha": "5f38c2dcf58fdaed31536855173b4bdfeb040930",
+          "size": 1935
+        },
+        {
+          "path": "scenarios/world3_compatibility.yaml",
+          "sha": "7835b8664641e7043b80552b2780482755a82607",
+          "size": 472
+        },
+        {
+          "path": "science/evidence/WZ_DEMOGRAPHY_2022_2023_TEMPORAL_EVIDENCE_V1.yaml",
+          "sha": "b153d684ed01f73c7c2b56572f5dd24100b6d8a0",
+          "size": 57351
+        },
+        {
+          "path": "science/evidence/WZ_DEMOGRAPHY_2023_EVIDENCE_V1.yaml",
+          "sha": "ac7122aa4782972d2bfe0dcd9192fc74f4190adc",
+          "size": 31762
+        },
+        {
+          "path": "science/partitions/WZ_DEMOGRAPHY_2022_2023_TEMPORAL_HOLDOUT_V1.yaml",
+          "sha": "1926abe92d4304492eebbf6769e5167dd750f877",
+          "size": 5446
+        },
+        {
+          "path": "science/partitions/WZ_DEMOGRAPHY_2023_INITIALIZATION_PARTITION_V2.yaml",
+          "sha": "34aac399619da236e6a3593c05d677d5e30dcffc",
+          "size": 3414
+        },
+        {
+          "path": "science/partitions/WZ_DEMOGRAPHY_2023_VARIABLE_HOLDOUT_V1.yaml",
+          "sha": "25619e7e042ac0554c22d877a040a6be505862a8",
+          "size": 3277
+        },
+        {
+          "path": "science/reconciliation/WZ_DEMOGRAPHY_2022_COHORT_TOTAL_RECONCILIATION_V1.json",
+          "sha": "b0ffa18d3533081abd235a6769f2e9f4db5f3535",
+          "size": 892
+        },
+        {
+          "path": "science/scoring/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_CONTRACT_V1.yaml",
+          "sha": "6beaedf1fba6bbeb6aabd8012d01627c2083ac30",
+          "size": 1415
+        },
+        {
+          "path": "specs/BENCHMARK_V1.schema.json",
+          "sha": "9bb98280ad536a60be72dc0796a86dd3b7e40e6f",
+          "size": 3846
+        },
+        {
+          "path": "specs/CAUSAL_TOPOLOGY_V1.schema.json",
+          "sha": "14baac81811d4183c4ffda1abcf9b586340cbf24",
+          "size": 7323
+        },
+        {
+          "path": "specs/CAUSAL_TOPOLOGY_V2.schema.json",
+          "sha": "25016519015d2cfb31c6a9776c36d66e2d5cb29c",
+          "size": 7558
+        },
+        {
+          "path": "specs/CLAIM_RECORD_V1.schema.json",
+          "sha": "ffd7627f9b1e813edbe943c068ab885193c52d9c",
+          "size": 2084
+        },
+        {
+          "path": "specs/COMPARISON_PROTOCOL_V1.schema.json",
+          "sha": "c0580445f322fb3b91ad0619eb30502414803d55",
+          "size": 3440
+        },
+        {
+          "path": "specs/IMPLEMENTATION_COVERAGE_V1.schema.json",
+          "sha": "21f80fb10cec2e61df3c30856464ac1fef9593cc",
+          "size": 2183
+        },
+        {
+          "path": "specs/MECHANISM_ADMISSION_V1.schema.json",
+          "sha": "9c93dfac5bccdde0ebfee45ce0ada89d35bc7ff4",
+          "size": 5054
+        },
+        {
+          "path": "specs/MODEL_FAMILY_V1.schema.json",
+          "sha": "36382be2bbb669dc18f27f441842abc9fd87f141",
+          "size": 2002
+        },
+        {
+          "path": "specs/OFFLINE_WHEELHOUSE_MANIFEST_V1.schema.json",
+          "sha": "eb94eb566577bb5efa04ee9456fdab88cb9a241d",
+          "size": 1710
+        },
+        {
+          "path": "specs/RUN_RECEIPT_V1.schema.json",
+          "sha": "88a039e32e3cbcb4e26aa9a95cc2f0d817ca1423",
+          "size": 6282
+        },
+        {
+          "path": "specs/SCHEMA_STATUS.md",
+          "sha": "38eed439601d34aa3d415650f8ac32c73bc6a043",
+          "size": 2645
+        },
+        {
+          "path": "src/worldzero/__init__.py",
+          "sha": "c8187aeb793cabcb05f7aac406e00e9561bd34d4",
+          "size": 26
+        },
+        {
+          "path": "src/worldzero/accounting/__init__.py",
+          "sha": "d3f60744c3b50a61e9950465bcd1e3dcc6df3358",
+          "size": 462
+        },
+        {
+          "path": "src/worldzero/accounting/energy.py",
+          "sha": "734b6e4b2425b625f22a3e062273deab6517f140",
+          "size": 2054
+        },
+        {
+          "path": "src/worldzero/accounting/trade.py",
+          "sha": "9b16d4efcbe46e5f77814ef0713a84af740e43e1",
+          "size": 1887
+        },
+        {
+          "path": "src/worldzero/baselines/__init__.py",
+          "sha": "92c88dba60b5ba27605932f33cd201307a468ca8",
+          "size": 461
+        },
+        {
+          "path": "src/worldzero/baselines/world3_reference.py",
+          "sha": "3085cb7217178588a91197ec5577dbdd7529308e",
+          "size": 6986
+        },
+        {
+          "path": "src/worldzero/buildenv.py",
+          "sha": "295f9d915cb673eb2a171a8864daeeecfb084e40",
+          "size": 678
+        },
+        {
+          "path": "src/worldzero/calibration/__init__.py",
+          "sha": "06da67c5fa69d4bf65a720baf4da0b6b697d5f1d",
+          "size": 469
+        },
+        {
+          "path": "src/worldzero/calibration/objective.py",
+          "sha": "8eaee38e46b30b42bfc0592239bca02f7bc33971",
+          "size": 3087
+        },
+        {
+          "path": "src/worldzero/calibration/parameters.py",
+          "sha": "dfa3cc7038fcf32f52f799048f539e2bfad344d3",
+          "size": 1960
+        },
+        {
+          "path": "src/worldzero/calibration/runner.py",
+          "sha": "eb48713c0eacb11dad51743c00ed65c8f058a49b",
+          "size": 2233
+        },
+        {
+          "path": "src/worldzero/core/__init__.py",
+          "sha": "dd90870898bcaa4de31995dab2d743d73825fef8",
+          "size": 727
+        },
+        {
+          "path": "src/worldzero/core/clock.py",
+          "sha": "003b42fc3800aa241f98312d6c7988a78b22ad6b",
+          "size": 1012
+        },
+        {
+          "path": "src/worldzero/core/interfaces.py",
+          "sha": "7efd20e069374f6ce69fe1f6efab396986fd10c9",
+          "size": 910
+        },
+        {
+          "path": "src/worldzero/core/invariants.py",
+          "sha": "5e75418435d96628af2d86036de365308b4999a4",
+          "size": 301
+        },
+        {
+          "path": "src/worldzero/core/solver.py",
+          "sha": "dd5056d9007ce747008774056b8d2f613544f8fb",
+          "size": 3756
+        },
+        {
+          "path": "src/worldzero/core/stocks.py",
+          "sha": "e458933fd8b4db139f2f0ed1698a035789adc13c",
+          "size": 5153
+        },
+        {
+          "path": "src/worldzero/data/__init__.py",
+          "sha": "5e61de3d5931e389c0abfde448b0c4f251d63e8e",
+          "size": 1855
+        },
+        {
+          "path": "src/worldzero/data/acquisition.py",
+          "sha": "9542a68691cc0a93698a37f36b43ebe39e83ec46",
+          "size": 6702
+        },
+        {
+          "path": "src/worldzero/data/cohorts.py",
+          "sha": "d0103060381abc454ce65ae553e6c1426c9b22b7",
+          "size": 5450
+        },
+        {
+          "path": "src/worldzero/data/derived.py",
+          "sha": "105f7b8d72c4085e6bc0b68eba2dda4a2be8d1d2",
+          "size": 2857
+        },
+        {
+          "path": "src/worldzero/data/manifests.py",
+          "sha": "5b9c95ce75f2b96b0918ec694aa94d2cfd351946",
+          "size": 4311
+        },
+        {
+          "path": "src/worldzero/data/observations.py",
+          "sha": "03095fb697f65473ae304c759e6d1a259eddf480",
+          "size": 3105
+        },
+        {
+          "path": "src/worldzero/data/transforms.py",
+          "sha": "7f462c445d3cf9b1d6466940dddb65155372178d",
+          "size": 1915
+        },
+        {
+          "path": "src/worldzero/data/wpp2024.py",
+          "sha": "7a2635b699bd6afdce48acda441329d9816f767c",
+          "size": 9414
+        },
+        {
+          "path": "src/worldzero/data/wpp_age5.py",
+          "sha": "7a745ac37b2d9864cb860e7a2aa24a94591b8831",
+          "size": 13763
+        },
+        {
+          "path": "src/worldzero/models/__init__.py",
+          "sha": "94aad50b965fa73aa754949e5c261603cb9a2b0b",
+          "size": 401
+        },
+        {
+          "path": "src/worldzero/models/bindings.py",
+          "sha": "950f007b59d32d0c2c9920a0e1687f961ace1452",
+          "size": 23261
+        },
+        {
+          "path": "src/worldzero/models/environment.py",
+          "sha": "6a08793ef9387bc3ccf476a040d98001523e574c",
+          "size": 10591
+        },
+        {
+          "path": "src/worldzero/models/execution.py",
+          "sha": "79ae8ca909516c6f23456be052f524fff29af3e0",
+          "size": 29839
+        },
+        {
+          "path": "src/worldzero/models/native_backbone.py",
+          "sha": "ce01d40297ed5b2f42d7c196773d072d13ab47d3",
+          "size": 12635
+        },
+        {
+          "path": "src/worldzero/models/registry.py",
+          "sha": "2949f53f3f2fa8ac647256b13666dc97cde24102",
+          "size": 1731
+        },
+        {
+          "path": "src/worldzero/models/scenarios.py",
+          "sha": "1fcd6cd7e219f4cb8af7b109aff34d53c6990a5f",
+          "size": 2533
+        },
+        {
+          "path": "src/worldzero/models/world_zero_v0.py",
+          "sha": "d0ef6fffa7b12d53bcc83468cf714be8cb54ffef",
+          "size": 2940
+        },
+        {
+          "path": "src/worldzero/receipts/__init__.py",
+          "sha": "669a0ebe8e6af5a571abe7317a96a48ac5736f46",
+          "size": 73
+        },
+        {
+          "path": "src/worldzero/receipts/run_receipt.py",
+          "sha": "bc419e77c1b4169560435b620658cd876fb67835",
+          "size": 3438
+        },
+        {
+          "path": "src/worldzero/regions/__init__.py",
+          "sha": "4a91684ef31ef29b84c29d8ba3954be45760011c",
+          "size": 587
+        },
+        {
+          "path": "src/worldzero/regions/definitions.py",
+          "sha": "7cd836fca5c5c81b3967b2a8923fe1222f053c31",
+          "size": 2911
+        },
+        {
+          "path": "src/worldzero/regions/mapping.py",
+          "sha": "4714fb0b086abd8382a15619e4ced59a8f24b672",
+          "size": 7320
+        },
+        {
+          "path": "src/worldzero/science/__init__.py",
+          "sha": "b3f9285dea8a2ba47bcd75ea13a28df516d2c5e0",
+          "size": 2273
+        },
+        {
+          "path": "src/worldzero/science/benchmarks.py",
+          "sha": "776803aaeb2dcbb28af7bf4fa075fc841f5b0970",
+          "size": 3318
+        },
+        {
+          "path": "src/worldzero/science/canonical.py",
+          "sha": "12e4d858868f13520174812e7cec91d24009329c",
+          "size": 1421
+        },
+        {
+          "path": "src/worldzero/science/claims.py",
+          "sha": "9489b9615905809a3ff5d0b180a5655c2fc0abd8",
+          "size": 2528
+        },
+        {
+          "path": "src/worldzero/science/comparison.py",
+          "sha": "733aeab9515a1ef2629ff9fb58832d4d2c580595",
+          "size": 5090
+        },
+        {
+          "path": "src/worldzero/science/comparison_protocol.py",
+          "sha": "fe1b46abe3f31a3a326eb4bd2e04de242d16194b",
+          "size": 4970
+        },
+        {
+          "path": "src/worldzero/science/families.py",
+          "sha": "3136d0a777dffa278f7fec01b555dc91b4359c4a",
+          "size": 3232
+        },
+        {
+          "path": "src/worldzero/science/implementation_coverage.py",
+          "sha": "19a2187733230579325c03c4660a511be7f08f94",
+          "size": 6269
+        },
+        {
+          "path": "src/worldzero/science/lineage.py",
+          "sha": "3408921d52a341a6b7fe7d1b7c74ca4405636d5a",
+          "size": 1295
+        },
+        {
+          "path": "src/worldzero/science/mechanisms.py",
+          "sha": "9ef8e5164c0f1fad6e5345dcf6540383f5033e42",
+          "size": 5717
+        },
+        {
+          "path": "src/worldzero/science/observations.py",
+          "sha": "585d638e3b9ff4332632c9d137fff159e81245f3",
+          "size": 1850
+        },
+        {
+          "path": "src/worldzero/science/partitions.py",
+          "sha": "a8a2712914df1a36ebb71e30348db380c25dfe0b",
+          "size": 4945
+        },
+        {
+          "path": "src/worldzero/science/population_evidence.py",
+          "sha": "57ed736f8b237b10f5ba2754391db7151f1c5265",
+          "size": 9962
+        },
+        {
+          "path": "src/worldzero/science/topology.py",
+          "sha": "804f823ee05b9d7b1eb2fbcecd150a44a2b33c40",
+          "size": 8502
+        },
+        {
+          "path": "src/worldzero/science/types.py",
+          "sha": "11f626263b755dcc5b4790dc2d2f45358389f58e",
+          "size": 1906
+        },
+        {
+          "path": "src/worldzero/sectors/__init__.py",
+          "sha": "45cc29ecb24284286f6010b0b3469ec38ad03526",
+          "size": 1692
+        },
+        {
+          "path": "src/worldzero/sectors/climate.py",
+          "sha": "058f75fd0813dd90ca4813d4f12522cc578c0bed",
+          "size": 3788
+        },
+        {
+          "path": "src/worldzero/sectors/demography.py",
+          "sha": "6e224fed7ffbba9a1616f3f823a5707e9bcb7a65",
+          "size": 7272
+        },
+        {
+          "path": "src/worldzero/sectors/distribution.py",
+          "sha": "1f6039cf83ca6b8774a43bcc7f31863ac07d70a0",
+          "size": 853
+        },
+        {
+          "path": "src/worldzero/sectors/energy.py",
+          "sha": "4bbc2a650d625c4d7b1cd395274c1040da5529c9",
+          "size": 9059
+        },
+        {
+          "path": "src/worldzero/sectors/food_land.py",
+          "sha": "c7de6dee73cb0555bdfcc431eb13dac60e657cf7",
+          "size": 4463
+        },
+        {
+          "path": "src/worldzero/sectors/institutions.py",
+          "sha": "ff86999020c9cc125a99b18d579c9cb8715cb1cf",
+          "size": 1748
+        },
+        {
+          "path": "src/worldzero/sectors/materials.py",
+          "sha": "bf2c9e5695effb4cb21206421318ef869c4d6d68",
+          "size": 9123
+        },
+        {
+          "path": "src/worldzero/sectors/production.py",
+          "sha": "068c0e8c014652cd366b00841a6c623845acdabb",
+          "size": 8774
+        },
+        {
+          "path": "src/worldzero/sectors/technology.py",
+          "sha": "e27c98684b8442712e4a6ee2662f16dbbdf269cd",
+          "size": 1311
+        },
+        {
+          "path": "src/worldzero/sectors/trade.py",
+          "sha": "97127514b7f1e39828f64e625e23e4ec2eb1927c",
+          "size": 4641
+        },
+        {
+          "path": "src/worldzero/sectors/water.py",
+          "sha": "b9f2c9d4308b74c56d66f5c221e31f777dac174a",
+          "size": 1726
+        },
+        {
+          "path": "src/worldzero/validation/__init__.py",
+          "sha": "1fe8b3583f6797e36f741e9538f036759188a22a",
+          "size": 480
+        },
+        {
+          "path": "src/worldzero/validation/falsification.py",
+          "sha": "edd283f17b874451db43af41a62d41a45edee5d9",
+          "size": 6070
+        },
+        {
+          "path": "src/worldzero/validation/holdouts.py",
+          "sha": "4931073cc84174b1ca9ba7df7ce5606a6404f21b",
+          "size": 3651
+        },
+        {
+          "path": "src/worldzero/validation/metrics.py",
+          "sha": "db565f0bb1d7efaad68d2286e901b41d7b9acc18",
+          "size": 2613
+        },
+        {
+          "path": "src/worldzero/validation/sensitivity.py",
+          "sha": "2abf67bce6666bfd96bab28ac2c022715cb02094",
+          "size": 3185
+        },
+        {
+          "path": "src/worldzero/validation/temporal_population.py",
+          "sha": "580ff95cab4402d04449746bb53450fac50e39c4",
+          "size": 12145
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_2022_2023_TEMPORAL_SPLIT_MATERIALIZATION_RECEIPT_V1.json",
+          "sha": "828b56b4729afcf7e35e767f873ed7a0fa00913d",
+          "size": 1242
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_CROSS_PLATFORM_V1.json",
+          "sha": "895f4914a8cc0e78dfb7bd987bc32d6f412d1beb",
+          "size": 2146
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_LINUX_V1.json",
+          "sha": "a022f1678f7586a99e07f442eca25dd9a5c690b6",
+          "size": 3997
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_WINDOWS_V1.json",
+          "sha": "53195ffa91fb9655e2a6aa7e73718db099677527",
+          "size": 3998
+        },
+        {
+          "path": "state/results/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_V1.json",
+          "sha": "3f7ede19d8b7a6cdd8e5ab9605aca9801e3c117c",
+          "size": 17763
+        },
+        {
+          "path": "tests/accounting/test_energy_reconciliation.py",
+          "sha": "cc7378e1692e83952c094a8f31ea5a8e4e1e3aeb",
+          "size": 1624
+        },
+        {
+          "path": "tests/accounting/test_trade_reconciliation.py",
+          "sha": "aa22b18f973ebbdd4ffb8f9ba437486e5778cf51",
+          "size": 1325
+        },
+        {
+          "path": "tests/baseline/fixtures/world3_standard_run.csv",
+          "sha": "be74d2f9aeff5020243b361c6aaf5dd74f1950c0",
+          "size": 30933
+        },
+        {
+          "path": "tests/baseline/test_world3_reference.py",
+          "sha": "95f3f27a9c6785bbac32b558077f42b2a301afae",
+          "size": 3257
+        },
+        {
+          "path": "tests/build/fixtures/wheelhouse/MANIFEST.json",
+          "sha": "43b71dd88f581c2f9fecd78f8c9580d21137ac9d",
+          "size": 543
+        },
+        {
+          "path": "tests/build/fixtures/wheelhouse/demo-1.0-py3-none-any.whl",
+          "sha": "d1787f761980b3ad28346c0e73a33e206ef72223",
+          "size": 19
+        },
+        {
+          "path": "tests/build/test_bootstrap_commands.py",
+          "sha": "72979e0411cd72b1a982f46f067e9a8d30d44e4e",
+          "size": 1978
+        },
+        {
+          "path": "tests/build/test_ci_invocation.py",
+          "sha": "560615030f4c8a1e88456c6ebbf4864c70a09c02",
+          "size": 1703
+        },
+        {
+          "path": "tests/build/test_dependency_contract.py",
+          "sha": "ed041ee9b2db3a28406770c5814a75b4ea9ae2ce",
+          "size": 884
+        },
+        {
+          "path": "tests/build/test_environment_identity.py",
+          "sha": "de53dd7eba8fb04a3f522bb4155b1d89bf8fe241",
+          "size": 722
+        },
+        {
+          "path": "tests/build/test_git_attributes.py",
+          "sha": "0d9760927ce2c85d3e2f08a19d29725aeba23d93",
+          "size": 377
+        },
+        {
+          "path": "tests/build/test_invalid_manifest_type.py",
+          "sha": "638f41efe19f371ffb11170e80f45f04fefc4fa6",
+          "size": 454
+        },
+        {
+          "path": "tests/build/test_platform_requirements.py",
+          "sha": "c564f1eee28ba5f23885cfdc1e7e46353c36dde2",
+          "size": 231
+        },
+        {
+          "path": "tests/build/test_wheelhouse_manifest.py",
+          "sha": "e780707e66c2590bd1c815c8d7821be40a7c57db",
+          "size": 1927
+        },
+        {
+          "path": "tests/core/test_interfaces.py",
+          "sha": "61447aa5edf8dbb1d98217a9e352069198f67245",
+          "size": 718
+        },
+        {
+          "path": "tests/core/test_solver_convergence.py",
+          "sha": "78952837bd0acedec101b499166c3d121e97a4a5",
+          "size": 1195
+        },
+        {
+          "path": "tests/core/test_stock_flow_engine.py",
+          "sha": "e7a776337ca187764675ea868ca1d4c2e0d8d2be",
+          "size": 2225
+        },
+        {
+          "path": "tests/data/test_acquisition.py",
+          "sha": "4b2350be0482cb17a0680d1a4c77de835fbc05c4",
+          "size": 10137
+        },
+        {
+          "path": "tests/data/test_derived_macroregion_population.py",
+          "sha": "c645cceb0e07492c6ed87bca691a7f909193ff0c",
+          "size": 2303
+        },
+        {
+          "path": "tests/data/test_manifest.py",
+          "sha": "41793be7733331ac72b36b7880e0ec2fc275f11e",
+          "size": 2026
+        },
+        {
+          "path": "tests/data/test_observation_lineage.py",
+          "sha": "8154f8c083495d916319fb43a880afd105e8a155",
+          "size": 3925
+        },
+        {
+          "path": "tests/data/test_wpp2024.py",
+          "sha": "39934593a880a0b2665ff0e04fd4e4b8139b6896",
+          "size": 4064
+        },
+        {
+          "path": "tests/data/test_wpp2024_manifest.py",
+          "sha": "dccd430895be039adb293ead9920092f71b34ced",
+          "size": 1703
+        },
+        {
+          "path": "tests/data/test_wpp_age5.py",
+          "sha": "698c73c420412da3f8cdbcb75d4e73ba5c1417d9",
+          "size": 14130
+        },
+        {
+          "path": "tests/data/test_wpp_age5_manifest.py",
+          "sha": "c3382da5f54c233811d2ed7a697d8f2721e10462",
+          "size": 1695
+        },
+        {
+          "path": "tests/data/test_wpp_cohort_derived.py",
+          "sha": "608a04a2affbd7d05e2a1584ff04bc01bcad98bc",
+          "size": 2602
+        },
+        {
+          "path": "tests/data/test_wpp_cohort_historical.py",
+          "sha": "e99fb15b5921d6a70ef0000d73d82fc1c02ab48b",
+          "size": 3804
+        },
+        {
+          "path": "tests/integration/test_environment_coupling.py",
+          "sha": "0ed515d3a7be1e6fa9a3ffafc4b452ec70cb5353",
+          "size": 5690
+        },
+        {
+          "path": "tests/integration/test_module_registry.py",
+          "sha": "7e75a4f0b1bc45aa7c2a0a3ee68c74bb706dd8f0",
+          "size": 761
+        },
+        {
+          "path": "tests/integration/test_native_backbone.py",
+          "sha": "932a8afa593985a83699c2fa0ee80b3cc23694b5",
+          "size": 8622
+        },
+        {
+          "path": "tests/integration/test_scenario_manifests.py",
+          "sha": "6714f0c9ea58d73e1afa0b268e06256268fe9aee",
+          "size": 1411
+        },
+        {
+          "path": "tests/integration/test_trade_conservation.py",
+          "sha": "935b26c9a36edcf3fb6a96281337cb9dfbc5b539",
+          "size": 1938
+        },
+        {
+          "path": "tests/integration/test_world_zero_v0.py",
+          "sha": "a6fcba8920f4943bead2e72525cdc37be6451de4",
+          "size": 3480
+        },
+        {
+          "path": "tests/models/test_baseline_bindings.py",
+          "sha": "f9f8293ce3aaec83b9d23b2eb7a50abed57926b2",
+          "size": 30051
+        },
+        {
+          "path": "tests/receipts/test_run_receipt.py",
+          "sha": "62e74b9440956d1687603f354a4a374cc58994e5",
+          "size": 2848
+        },
+        {
+          "path": "tests/receipts/test_run_receipt_schema.py",
+          "sha": "0cda7e0efe12defc0a52b6805bb83b680ed02df2",
+          "size": 847
+        },
+        {
+          "path": "tests/regions/test_definitions.py",
+          "sha": "d66893eec13404c7dd03a1bd286dfbaedf2b9b46",
+          "size": 1369
+        },
+        {
+          "path": "tests/regions/test_wpp_macroregion_mapping.py",
+          "sha": "4b108bed4d02b7ae5b63f4be1489cade7a37d03a",
+          "size": 4147
+        },
+        {
+          "path": "tests/science/fixtures/minimal_topology_v2.json",
+          "sha": "a2e99cc42968dab22412b6ebcb736b595fd8113c",
+          "size": 1836
+        },
+        {
+          "path": "tests/science/test_benchmark_schema.py",
+          "sha": "8c76a429b3fa763e551b94f69173d3aab1f32d69",
+          "size": 1928
+        },
+        {
+          "path": "tests/science/test_benchmarks.py",
+          "sha": "53a8dcc0eb909a1e345d009f50796e8ae460aba4",
+          "size": 2573
+        },
+        {
+          "path": "tests/science/test_canonical.py",
+          "sha": "d007c9aee1b3382f740b5aeecb1b0a728d58d300",
+          "size": 1445
+        },
+        {
+          "path": "tests/science/test_claims.py",
+          "sha": "9efb11c635296fc9ec17233212dd9142724e9bef",
+          "size": 2052
+        },
+        {
+          "path": "tests/science/test_comparison.py",
+          "sha": "0ac0a21f86568cc528de68b5b53bae02c8766607",
+          "size": 4539
+        },
+        {
+          "path": "tests/science/test_comparison_protocol.py",
+          "sha": "f17640006ccd0515de1deb424469c32c0ef36926",
+          "size": 3470
+        },
+        {
+          "path": "tests/science/test_families.py",
+          "sha": "5ad0494f721a96f843fce647b64a3b1e6c886d6b",
+          "size": 2968
+        },
+        {
+          "path": "tests/science/test_implementation_coverage.py",
+          "sha": "add5fe13ae95100ad257428b30668cd607dafcff",
+          "size": 6091
+        },
+        {
+          "path": "tests/science/test_lineage.py",
+          "sha": "ca68ad3dd0e88699e676138492c5595bbbb35dc3",
+          "size": 1360
+        },
+        {
+          "path": "tests/science/test_mechanisms.py",
+          "sha": "cfc6d85d29a400de2a7e964f8624125c7e3ad57f",
+          "size": 9169
+        },
+        {
+          "path": "tests/science/test_observations.py",
+          "sha": "1dc45dbf348c8e52c9f8bc8602989fd889a47b59",
+          "size": 2406
+        },
+        {
+          "path": "tests/science/test_partitions.py",
+          "sha": "483c9d9f5edb51d4a59076fc5da37d83eabc6fbd",
+          "size": 3787
+        },
+        {
+          "path": "tests/science/test_population_evidence.py",
+          "sha": "7ba3c6661decb793c9aa64f1319d0ffdb8eebc68",
+          "size": 4371
+        },
+        {
+          "path": "tests/science/test_temporal_population_evidence.py",
+          "sha": "a2ca62ff1f4610dc4812b25a674f0519300a64bf",
+          "size": 4938
+        },
+        {
+          "path": "tests/science/test_topology_v2.py",
+          "sha": "21a5b42aacc12c03218eaabf4304f4f6e2170143",
+          "size": 3202
+        },
+        {
+          "path": "tests/science/test_types.py",
+          "sha": "85baf7ad069089c876c16e6827a19bc9db4f9009",
+          "size": 1829
+        },
+        {
+          "path": "tests/sectors/test_climate_damage_interfaces.py",
+          "sha": "1beff0476906f851e1a18a22588b40bc9bab0cc8",
+          "size": 1947
+        },
+        {
+          "path": "tests/sectors/test_demography.py",
+          "sha": "db86a90f1206f186d6346bf7327c45f74554580c",
+          "size": 3395
+        },
+        {
+          "path": "tests/sectors/test_energy_capacity_stocks.py",
+          "sha": "76eca924f33000bd763aac90c44de787c89ec0a0",
+          "size": 2100
+        },
+        {
+          "path": "tests/sectors/test_energy_learning.py",
+          "sha": "9cd25c9cd7a9aacf76478952d5e4e3ba0b50bf27",
+          "size": 1968
+        },
+        {
+          "path": "tests/sectors/test_food_water_energy.py",
+          "sha": "7be9381f257bc43a095a62933fdfc502ce8fd173",
+          "size": 3353
+        },
+        {
+          "path": "tests/sectors/test_material_conservation.py",
+          "sha": "70843b1079212ec05c723fd1a4a6d84f7a426c15",
+          "size": 2683
+        },
+        {
+          "path": "tests/sectors/test_material_stocks.py",
+          "sha": "5ca20a5babe1dbb10723fcbd1f7371c0bb083099",
+          "size": 2012
+        },
+        {
+          "path": "tests/sectors/test_production_distribution.py",
+          "sha": "f2cbf968cd651ef8a5539a99784f5e97cd4cd3da",
+          "size": 1707
+        },
+        {
+          "path": "tests/test_offline_qualification_contract.py",
+          "sha": "f36ed5123ae6b94419f514217ef74c7c67ecafe6",
+          "size": 966
+        },
+        {
+          "path": "tests/tools/test_materialize_demography_temporal_split.py",
+          "sha": "23ae0d3d07baeab811f0301382f5dfd6c3343862",
+          "size": 2817
+        },
+        {
+          "path": "tests/validation/test_falsification_oracles.py",
+          "sha": "11ada70c8003b12782afd6b215edae07cf68f596",
+          "size": 3489
+        },
+        {
+          "path": "tests/validation/test_holdout_isolation.py",
+          "sha": "5537e7095024a372251219c0b595524c87664e2f",
+          "size": 6164
+        },
+        {
+          "path": "tests/validation/test_metrics.py",
+          "sha": "414cd7c805925c259ba0f2e6449dc8c25fa08034",
+          "size": 987
+        },
+        {
+          "path": "tests/validation/test_sensitivity.py",
+          "sha": "b0ff9436315b8dd3b3447220b957d5c0464d271c",
+          "size": 831
+        },
+        {
+          "path": "tests/validation/test_temporal_population_scoring.py",
+          "sha": "f9ac7c5d2c5a5a7a55eb551a7731160360348cc1",
+          "size": 2306
+        },
+        {
+          "path": "third_party/OFFLINE_BOOTSTRAP_NOTES.md",
+          "sha": "3add6230582c11be929b07413e060645443916f3",
+          "size": 332
+        },
+        {
+          "path": "third_party/README.md",
+          "sha": "3a26a2ed8c6dc8c7d2c9aff0c1062ab36211456e",
+          "size": 1002
+        },
+        {
+          "path": "third_party/bootstrap-requirements.in",
+          "sha": "633b4c80c0c565cf54161eb3e1f03cd117bfa8e4",
+          "size": 116
+        },
+        {
+          "path": "third_party/wheels/.gitkeep",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size": 0
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/MANIFEST.json",
+          "sha": "c5f769bce686a5127a136550e8427d5a77bfae7b",
+          "size": 5040
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/annotated_types-0.8.0-py3-none-any.whl",
+          "sha": "d1492e7480e6c61ee5fef36775ca1d64217d26e8",
+          "size": 13427
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/ast_serialize-0.11.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+          "sha": "428f5f2d813a0d6293bebc3fe47b8f0a3b1216ea",
+          "size": 1312642
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/colorama-0.4.6-py2.py3-none-any.whl",
+          "sha": "f666ce989f84a46703ead9fa296a74c24e60b590",
+          "size": 25335
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/iniconfig-2.3.0-py3-none-any.whl",
+          "sha": "f8cd4b9e75a54be90664cab36e085a486b17b95b",
+          "size": 7484
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/librt-0.15.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "sha": "00987aa35fc35fd9714e3671d52b6f68c480d76b",
+          "size": 531904
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/mypy-2.3.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "sha": "d327145a9a7b5c25ca2cf84bf74b6a95c7accc06",
+          "size": 15307789
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/mypy_extensions-1.1.0-py3-none-any.whl",
+          "sha": "1350ccdd34c070108672064b7b8364c83ab922b0",
+          "size": 4963
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/packaging-26.3-py3-none-any.whl",
+          "sha": "d54f57121300d9a854404b6fe8bdcd651429f53d",
+          "size": 129956
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pathspec-1.1.1-py3-none-any.whl",
+          "sha": "27276e198235159216b6bdc01224b17262d97379",
+          "size": 57328
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pluggy-1.6.0-py3-none-any.whl",
+          "sha": "1f7e6268d5c9008599fc3d18053973c86c94b06b",
+          "size": 20538
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pydantic-2.13.4-py3-none-any.whl",
+          "sha": "8ccde4c0f1a96dcb6bf916936c410fd0d40b019f",
+          "size": 472262
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+          "sha": "ef4aaf4c343996fa07d7c9597884e68ad41ce8e6",
+          "size": 2094516
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pygments-2.21.0-py3-none-any.whl",
+          "sha": "82c0df884665c4bf8491e9a3932e252f94961bba",
+          "size": 1250147
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pytest-9.0.2-py3-none-any.whl",
+          "sha": "f7bbe541dfe79951c926f482c2c6f409f11ccc86",
+          "size": 374801
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "sha": "945204d2f599affe0dbb83e54b5a5ee6083ccca5",
+          "size": 807870
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/requirements.lock",
+          "sha": "f9bc3bae41067380c0cac58e15d80130033e648b",
+          "size": 116
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/ruff-0.16.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+          "sha": "8118d5a0deeb796a4795853edb912ad22d5c3439",
+          "size": 10323796
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/types_pyyaml-6.0.12.20260906-py3-none-any.whl",
+          "sha": "888b1dc21441d4e25fc305676b6d00c8dd985f92",
+          "size": 21282
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/typing_extensions-4.16.0-py3-none-any.whl",
+          "sha": "9f9aae6adc3bf050c4101be0e7037edfedf28b7e",
+          "size": 45571
+        },
+        {
+          "path": "third_party/wheels/cp312-manylinux_x86_64/typing_inspection-0.4.4-py3-none-any.whl",
+          "sha": "2a5ded8326bd3a76c350aa22a6568ff78a575826",
+          "size": 14750
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/MANIFEST.json",
+          "sha": "75511c2830067942b35d1610ee2afdcea60711e7",
+          "size": 4757
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/annotated_types-0.8.0-py3-none-any.whl",
+          "sha": "d1492e7480e6c61ee5fef36775ca1d64217d26e8",
+          "size": 13427
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/ast_serialize-0.11.2-cp39-abi3-win_amd64.whl",
+          "sha": "bd54596a4e944283e607799164827fe1dd452a96",
+          "size": 1165434
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/colorama-0.4.6-py2.py3-none-any.whl",
+          "sha": "f666ce989f84a46703ead9fa296a74c24e60b590",
+          "size": 25335
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/iniconfig-2.3.0-py3-none-any.whl",
+          "sha": "f8cd4b9e75a54be90664cab36e085a486b17b95b",
+          "size": 7484
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/librt-0.15.0-cp312-cp312-win_amd64.whl",
+          "sha": "b560d909f70430144bd140ebb00a76a5235c001f",
+          "size": 126974
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/mypy-2.3.1-cp312-cp312-win_amd64.whl",
+          "sha": "98410d08b7f11fc8d5fffef74d6502c03d297ba6",
+          "size": 11226359
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/mypy_extensions-1.1.0-py3-none-any.whl",
+          "sha": "1350ccdd34c070108672064b7b8364c83ab922b0",
+          "size": 4963
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/packaging-26.3-py3-none-any.whl",
+          "sha": "d54f57121300d9a854404b6fe8bdcd651429f53d",
+          "size": 129956
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/pathspec-1.1.1-py3-none-any.whl",
+          "sha": "27276e198235159216b6bdc01224b17262d97379",
+          "size": 57328
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/pluggy-1.6.0-py3-none-any.whl",
+          "sha": "1f7e6268d5c9008599fc3d18053973c86c94b06b",
+          "size": 20538
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/pydantic-2.13.4-py3-none-any.whl",
+          "sha": "8ccde4c0f1a96dcb6bf916936c410fd0d40b019f",
+          "size": 472262
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/pydantic_core-2.46.4-cp312-cp312-win_amd64.whl",
+          "sha": "c455c3496b7f7ecb0a0cd7984852244cf234363e",
+          "size": 2072919
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/pygments-2.21.0-py3-none-any.whl",
+          "sha": "82c0df884665c4bf8491e9a3932e252f94961bba",
+          "size": 1250147
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/pytest-9.0.2-py3-none-any.whl",
+          "sha": "f7bbe541dfe79951c926f482c2c6f409f11ccc86",
+          "size": 374801
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/pyyaml-6.0.3-cp312-cp312-win_amd64.whl",
+          "sha": "6378b65f1788d64ddd2d39f2efb0e5bcbdc1d088",
+          "size": 154003
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/requirements.lock",
+          "sha": "f9bc3bae41067380c0cac58e15d80130033e648b",
+          "size": 116
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/ruff-0.16.8-py3-none-win_amd64.whl",
+          "sha": "9336988880236fd627e7a77a62fd407929356db7",
+          "size": 10586899
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/types_pyyaml-6.0.12.20260906-py3-none-any.whl",
+          "sha": "888b1dc21441d4e25fc305676b6d00c8dd985f92",
+          "size": 21282
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/typing_extensions-4.16.0-py3-none-any.whl",
+          "sha": "9f9aae6adc3bf050c4101be0e7037edfedf28b7e",
+          "size": 45571
+        },
+        {
+          "path": "third_party/wheels/cp312-win_amd64/typing_inspection-0.4.4-py3-none-any.whl",
+          "sha": "2a5ded8326bd3a76c350aa22a6568ff78a575826",
+          "size": 14750
+        },
+        {
+          "path": "tools/__init__.py",
+          "sha": "e753fc5c43232db67342b6d4428f7fe5884c05c3",
+          "size": 61
+        },
+        {
+          "path": "tools/bootstrap_offline.py",
+          "sha": "511bce872d3ea11b7aa19ef5c66fd2dc37dffd5f",
+          "size": 2091
+        },
+        {
+          "path": "tools/build_wheelhouse.py",
+          "sha": "7ce9a93bfa5e1d2db7f43ca4eeb0c724034affda",
+          "size": 4677
+        },
+        {
+          "path": "tools/fetch_admitted_dataset.py",
+          "sha": "745261ce9f761dcb04da727714d75f5b624d4af2",
+          "size": 1695
+        },
+        {
+          "path": "tools/generate_wpp_cohort_population.py",
+          "sha": "730a6d5527de0f94a6555b92e8496ae1d64b9fda",
+          "size": 3816
+        },
+        {
+          "path": "tools/materialize_demography_temporal_split.py",
+          "sha": "e56d0ce6928bc60b99f74fe8163c739047def1f6",
+          "size": 11879
+        },
+        {
+          "path": "tools/run_temporal_population_score.py",
+          "sha": "4ddddf9d6977718640cf5c6980c748794c0221f1",
+          "size": 2469
+        },
+        {
+          "path": "tools/run_world_zero_baseline.py",
+          "sha": "d33371ee204beef41c6f7f1e47c99e594166f221",
+          "size": 1795
+        },
+        {
+          "path": "tools/verify_wheelhouse.py",
+          "sha": "f9a33912a61083a9b2738ed2be60bf1e1da13d82",
+          "size": 5481
+        },
+        {
+          "path": "uv.lock",
+          "sha": "6166313b154f684b4be689f4067a05644e4b19f8",
+          "size": 62154
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    }
+  }
+}
