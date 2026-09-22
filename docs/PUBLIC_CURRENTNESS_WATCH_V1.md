@@ -33,6 +33,10 @@ Public repository addition/removal or default-branch/head/tree/archive movement 
 
 The workflow does **not** automatically refresh Discovery evidence. A red currentness watch is intentionally a review trigger, not permission to rewrite the baseline.
 
+When stale public subjects are detected, `tools/trace_public_impact.py` searches Discovery's bounded evidence surface for exact references to the stale commit SHA. The workflow prints a second machine-readable impact report listing the affected files and line numbers.
+
+This is exact-reference tracing, not semantic dependency inference. A missing exact SHA reference is reported as an evidence gap and never treated as proof that no dependency exists.
+
 ## Private boundary
 
 This watch does not inspect private repositories.
