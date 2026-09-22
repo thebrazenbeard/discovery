@@ -64,8 +64,7 @@ PRIOR_PUBLIC_CUT_BINDING = {
     "repository": "thebrazenbeard/discovery",
     "commit": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
     "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
-    "blob_sha": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
-    "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1",
+    "blob": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
 }
 PRIOR_PUBLIC_OBSERVED_DATE = "2026-09-19"
 PRIOR_PUBLIC_NAMES_SHA256 = (
@@ -153,9 +152,9 @@ def _validate_census_currentness_bindings(
 
     digest_validation = census.get("inventory_digest_validation", {})
     if digest_validation != {
-        "public_names_sha256": "SOURCE_RECOMPUTED",
-        "private_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED",
-        "all_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED",
+        "public_names_sha256": "SOURCE_RECOMPUTED_FROM_PUBLIC_REPOSITORIES",
+        "private_names_sha256": "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE",
+        "all_names_sha256": "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE",
     }:
         errors.append("census inventory digest validation ceiling mismatch")
 
