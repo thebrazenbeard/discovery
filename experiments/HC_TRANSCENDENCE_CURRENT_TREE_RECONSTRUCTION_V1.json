@@ -1,0 +1,191 @@
+{
+  "schema": "DISCOVERY_HC_TRANSCENDENCE_CURRENT_TREE_RECONSTRUCTION_V1",
+  "observed_date": "2026-09-21",
+  "status": "EXECUTED_EXACT_TREE_RECONSTRUCTION",
+  "base": {
+    "repository": "thebrazenbeard/hc-brain",
+    "ref": "main@618245b54fb923c7a204892c6953ab6d1c5dac57",
+    "tree_sha": "623f272aa9060ad9e222a5cfaea801082bb5a562",
+    "filemap": "experiments/hc_transcendence_current_reconstruction_v1/HC_BASE_FILEMAP.json"
+  },
+  "target": {
+    "repository": "thebrazenbeard/transcendence",
+    "ref": "main@68e7a794d6134e8319121404f31062288dc8d6a3",
+    "tree_sha": "c8d16282fa65b14962757539773a78803613bd6a"
+  },
+  "method": {
+    "operation": "Start with the exact HC base file map, delete base-only paths, replace same-path divergent objects with target object identities, add target-only paths, then recompute canonical Git tree objects recursively.",
+    "git_identity": "Tree entries are hashed as canonical Git tree objects using mode, UTF-8 path name, raw 20-byte object id, and recursively computed subtree ids.",
+    "source_observation": "Exact commit/tree/blob identities were read from GitHub at the bound refs before this artifact was written."
+  },
+  "counts": {
+    "base_files": 300,
+    "target_files": 263,
+    "inherited_unchanged": 255,
+    "deletes": 37,
+    "overrides": 8,
+    "additions": 0
+  },
+  "operations": {
+    "delete_paths": [
+      ".github/workflows/architecture-conformance.yml",
+      ".github/workflows/cognitive-core.yml",
+      "CURRENT.md",
+      "docs/architecture/CAUSAL_AUTHORITY_RECOVERY_HARDENING_V2.md",
+      "docs/architecture/STATE_FAMILY_CONSISTENCY_AND_CAUSAL_FRONTIER.md",
+      "docs/qualification/HOSTILE_AUDIT_DISPOSITION_2026-09-15.md",
+      "docs/research/VERA_HC_V2_DISTRIBUTED_CAUSAL_ARCHITECTURE_2026-09-17.md",
+      "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+      "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-17.md",
+      "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+      "docs/runtime/NOAH_CURRENT_KNOWLEDGE_2026-09-15.md",
+      "docs/runtime/NOAH_HANDOFF_2026-09-15.md",
+      "docs/superpowers/plans/2026-09-17-hc-architecture-hardening-v2.md",
+      "homeostasis-interoception/REGULATORY_STATE_CONTRACT.md",
+      "runtime/cognitive_core/README.md",
+      "runtime/cognitive_core/__init__.py",
+      "runtime/cognitive_core/cognitive_loop.py",
+      "runtime/cognitive_core/deep_memory.py",
+      "runtime/cognitive_core/homeostasis_somatics.py",
+      "runtime/cognitive_core/metacognition.py",
+      "runtime/cognitive_core/social_pragmatics.py",
+      "runtime/cognitive_core/test_cognitive_loop.py",
+      "runtime/cognitive_core/test_deep_memory.py",
+      "runtime/cognitive_core/test_homeostasis_somatics.py",
+      "runtime/cognitive_core/test_metacognition.py",
+      "runtime/cognitive_core/test_social_pragmatics.py",
+      "runtime/cognitive_core/test_world_model.py",
+      "runtime/cognitive_core/world_model.py",
+      "runtime/reference_kernel/governed_kernel_v2.py",
+      "runtime/reference_kernel/test_four_adversarial_kernel.py",
+      "runtime/reference_kernel/test_four_adversarial_kernel_r2.py",
+      "runtime/reference_kernel/test_vera_adversarial_kernel_v2.py",
+      "specs/HC_REVIEW_RECEIPT_V1.yaml",
+      "specs/HC_STATE_FAMILY_CONSISTENCY_POLICY_V1.yaml",
+      "specs/HC_STATE_FAMILY_CONSISTENCY_REGISTRY_V1.yaml",
+      "tests/test_validate_hc_architecture.py",
+      "tools/validate_hc_architecture.py"
+    ],
+    "overrides": [
+      {
+        "path": ".github/workflows/reference-kernel.yml",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d6f680af07374b39115135de865c4a96b3c50cda"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "49103331626af048ad4dc8ec8f6455f42ed1d017"
+        }
+      },
+      {
+        "path": "README.md",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b545ddb85bccb2bd8efe7316efcb6a4ef6122308"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e"
+        }
+      },
+      {
+        "path": "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7fbb1524db43cb34316e1408bb78414b89904c94"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "91f6112d782e6615505116b4349786e913f18a78"
+        }
+      },
+      {
+        "path": "runtime/reference_kernel/README.md",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1bd11f8ec1bf1d77f98d69054096f9e710fc6ba2"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2a5e56159c9386677f33f373c6350971b26ce084"
+        }
+      },
+      {
+        "path": "runtime/reference_kernel/durable_kernel.py",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "fee7ac6ceb0b26459323ec15e89cfb42e30e220b"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3564c5bc2fc2050ca57db0834f883350acf874a5"
+        }
+      },
+      {
+        "path": "runtime/reference_kernel/hc_kernel.py",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a318a03f6bad104c3984a0e2afc7532c91a3ec78"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e48355da01482cc6ca709928214ad61c9998249e"
+        }
+      },
+      {
+        "path": "runtime/reference_kernel/test_durable_kernel.py",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b98c03f412a216559e350911602b34c658eeab5a"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0f2f8940ab002a8bc9397f3c6eeeabcb704cd327"
+        }
+      },
+      {
+        "path": "runtime/reference_kernel/test_hc_kernel.py",
+        "from": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1bdc52213b4796d2119147ccf7279f92760b5d46"
+        },
+        "to": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "cbeed0a20ccbe2b8d31a25d0d57f40bc83952748"
+        }
+      }
+    ],
+    "additions": []
+  },
+  "expected_result": {
+    "reconstructed_tree_sha": "c8d16282fa65b14962757539773a78803613bd6a",
+    "exact_target_tree_match": true
+  },
+  "claim_ceiling": [
+    "This proves exact current-head Git tree reconstructibility for the bound HC and Transcendence commits.",
+    "It does not prove that a shared dependency is cheaper to maintain over future changes.",
+    "It does not establish moving-base inheritance, authority transfer, or canonical successor direction.",
+    "It does not authorize repository rewrites, deduplication, merge, deployment, or deletion."
+  ],
+  "next_falsification": [
+    "Replay real forward HC changes against this current-head manifest and measure override/deletion churn.",
+    "Measure whether Transcendence-specific review and qualification burden decreases or increases under a pinned-base representation."
+  ]
+}
