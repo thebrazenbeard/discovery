@@ -57,9 +57,9 @@
   "completeness_rule": "A repository does not need to be a consolidation candidate to be included. Exclusion from a particular experiment must be explicit rather than inferred from absence.",
   "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current.",
   "inventory_digest_validation": {
-    "public_names_sha256": "SOURCE_RECOMPUTED",
-    "private_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED",
-    "all_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED"
+    "public_names_sha256": "SOURCE_RECOMPUTED_FROM_PUBLIC_REPOSITORIES",
+    "private_names_sha256": "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE",
+    "all_names_sha256": "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE"
   },
   "source_validation_scope": {
     "source_validated": [
