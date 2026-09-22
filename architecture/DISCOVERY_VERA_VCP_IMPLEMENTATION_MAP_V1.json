@@ -1,0 +1,297 @@
+{
+  "schema": "DISCOVERY_VERA_VCP_IMPLEMENTATION_MAP_V1",
+  "status": "SOURCE_INTEGRATION_PLAN_NOT_INSTALLATION_NOT_RUNTIME_QUALIFICATION",
+  "observed_date": "2026-09-22",
+  "discovery_subject": "vera/discovery-public-blob-reproducer-v1-20260922@a54c958e6dd25c736fb17f92f3a91f99a581bc8e",
+  "target_baselines": {
+    "vera": {
+      "repository": "thebrazenbeard/vera",
+      "head": "6388f9e2564795530db35728f42d5ab9f50275ae",
+      "source_registry_path": "architecture/VERA_RUNTIME_SOURCE_REGISTRY_V1.json",
+      "source_registry_blob": "350b5a489d7d0cb11af65cafe52edc136667e9a6"
+    },
+    "vera_control_plane": {
+      "repository": "thebrazenbeard/vera-control-plane",
+      "head": "505c395890bde275cbbc6327be8f387e7f25ca3a"
+    }
+  },
+  "mission": "DISCOVER_CLASSIFY_IMPLEMENT_INTO_VERA_AND_VCP_WITHOUT_COLLAPSING_SOURCE_INSTALLATION_RUNTIME_OR_AUTHORITY",
+  "lifecycle": [
+    "DISCOVERED",
+    "CLASSIFIED",
+    "IMPLEMENTATION_PREPARED",
+    "SOURCE_INTEGRATED",
+    "INSTALLATION_PENDING_OR_NOT_APPLICABLE",
+    "RUNTIME_CONSUMED_IF_SEPARATELY_EVIDENCED",
+    "BEHAVIORALLY_QUALIFIED_IF_SEPARATELY_EVIDENCED"
+  ],
+  "counts": {
+    "public_subjects": 23,
+    "already_bound": 8,
+    "known_unbound": 2,
+    "absent_from_vera_source_registry": 13
+  },
+  "implementation_rules": [
+    "Every discovered repository receives an explicit Vera/VCP disposition.",
+    "Source registration does not imply installation, activation, runtime consumption, behavioral qualification, identity transfer, memory admission, consent, belief, or effect authority.",
+    "Discovery may prepare and apply reversible source-level integration work on isolated branches and Draft PRs when authorized by current workflow; protected runtime/provider/install/merge effects remain external explicit authority.",
+    "Project Runner is the preferred bounded execution substrate for repeatable cross-repository implementation operations; Discovery owns classification and implementation intent, not generic effect execution.",
+    "VCP receives only repositories/mechanisms that materially participate in control, recovery, routing, qualification, provenance, deployment, or execution governance; not every repository becomes a release control."
+  ],
+  "subjects": [
+    {
+      "repository": "thebrazenbeard/Attune",
+      "exact_public_head": "eff6f9eb250a6f7684459eadf0695340053201da",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "RELATIONSHIP_COMPANION_ARCHITECTURE_SOURCE",
+      "activation_mode": "EXPLICIT_TASK_RETRIEVAL",
+      "authority_ceiling": "Product/relationship architecture evidence only; no automatic Vera identity, sexuality, consent, preference, or relationship-state transfer.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/abil",
+      "exact_public_head": "0812d9780ce1648820269fa142a43e17030ef793",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "ADAPTIVE_LEARNING_AND_INTEGRATION_RESEARCH_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/bt2",
+      "exact_public_head": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "GENERIC_COGNITIVE_TEMPLATE_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Reusable Hyperconnectome template evidence only; never a Vera identity or current runtime instance by template proximity.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/discovery",
+      "exact_public_head": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "PORTFOLIO_DISCOVERY_AND_IMPLEMENTATION_SOURCE",
+      "activation_mode": "PORTFOLIO_INTAKE_AND_IMPLEMENTATION_PLANNING",
+      "authority_ceiling": "May discover, classify, prepare bounded integration work, and verify source implementation evidence; does not self-authorize installation, provider effects, runtime activation, or merge.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_INTAKE_SUPPORT_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/driftguard",
+      "exact_public_head": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "BEHAVIORAL_DRIFT_AND_RECOVERY_ASSURANCE_SOURCE",
+      "activation_mode": "QUALIFICATION_SUPPORT_ONLY",
+      "authority_ceiling": "Behavioral drift/recovery assurance only; reload directive, applied effect, recovery, and causality remain separate evidence classes.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_QUALIFICATION_SUPPORT_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/god-brain",
+      "exact_public_head": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "EXPERIMENTAL_COGNITIVE_ARCHITECTURE_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Experimental cognition and extreme reasoning architecture only; metaphysical hypotheses are not Vera runtime truth or authority.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/hc-brain",
+      "exact_public_head": "618245b54fb923c7a204892c6953ab6d1c5dac57",
+      "current_vera_registry_state": "UNBOUND",
+      "implementation_action": "PROMOTE_TO_VERA_SOURCE",
+      "vera_runtime_role": "GENERIC_COGNITIVE_TEMPLATE_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Generic Hyperconnectome architecture may inform Vera mechanisms but cannot hydrate Vera identity, memory, preferences, or current state.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/mosaic",
+      "exact_public_head": "a3115031ec716526532b32dc004303b4042e4a26",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "MODEL_COMPOSITION_ARCHITECTURE_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Model-composition and persistent-core/swappable-specialist architecture evidence only until a Vera-specific adapter is independently qualified.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/noema",
+      "exact_public_head": "890efdca01cf496ce1b8686d86f8442a149a9d34",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "COGNITIVE_ARCHITECTURE_RESEARCH_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/on-theo",
+      "exact_public_head": "eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "HISTORICAL_RELIGIOUS_RESEARCH_SOURCE",
+      "activation_mode": "EXPLICIT_TASK_RETRIEVAL",
+      "authority_ceiling": "Historical/source-critical religious research only; no automatic belief, identity, memory, or worldview promotion.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/project-runner",
+      "exact_public_head": "bc05812b560b4fcde3a362e72fba04c626cafac8",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "PORTFOLIO_EXECUTION_ORCHESTRATION_SOURCE",
+      "activation_mode": "EXACT_TASK_AND_TARGET_AUTHORITY_REQUIRED",
+      "authority_ceiling": "Execution/orchestration source. Technical capability never substitutes for target authority; exact preconditions and effect readback remain required.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_EXECUTION_SUPPORT_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/rezon",
+      "exact_public_head": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "REASONING_RESEARCH_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Reasoning mechanism research only until specific Vera-facing contracts and qualification exist.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/roots",
+      "exact_public_head": "7fab72635f319c633b480174c8a0687901ac1db2",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "PROVENANCE_ORIGIN_TRACING_SOURCE",
+      "activation_mode": "EXPLICIT_TASK_RETRIEVAL",
+      "authority_ceiling": "Origin/derivation tracing evidence only; inferred provenance remains bounded by retrieved records and does not self-authorize corrections.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_PROVENANCE_SUPPORT_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/semanticatlas",
+      "exact_public_head": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "SEMANTIC_PROVENANCE_SOURCE",
+      "activation_mode": "AUTHORITY_SCOPE_AND_CURRENTNESS_GATED",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/spm",
+      "exact_public_head": "0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "SEMANTIC_PRAGMATIC_MODEL_RESEARCH_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/testament",
+      "exact_public_head": "76f70643484ff22684f535d376e10e72c4aefba9",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "LITERARY_RELIGIOUS_SYNTHESIS_SOURCE",
+      "activation_mode": "EXPLICIT_TASK_RETRIEVAL",
+      "authority_ceiling": "Literary/source-critical synthesis only; no automatic historical-truth, belief, identity, or memory promotion.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/transcendence",
+      "exact_public_head": "68e7a794d6134e8319121404f31062288dc8d6a3",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "COGNITIVE_TEMPLATE_LINEAGE_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "HC-lineage architecture evidence only; duplicated/template proximity cannot create Vera runtime identity or activation.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/unvtrslr",
+      "exact_public_head": "903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "SEMANTICS_PRAGMATICS_RESEARCH_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    },
+    {
+      "repository": "thebrazenbeard/vera-mesh",
+      "exact_public_head": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "RUNTIME_CONNECTIVITY_SOURCE",
+      "activation_mode": "RUNTIME_BINDING_REQUIRED",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_RUNTIME_CONNECTIVITY_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/vera-synology",
+      "exact_public_head": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "RUNTIME_HOST_DEPLOYMENT_SOURCE",
+      "activation_mode": "RUNTIME_BINDING_REQUIRED",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_DEPLOYMENT_SUPPORT_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/voss",
+      "exact_public_head": "54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "current_vera_registry_state": "UNBOUND",
+      "implementation_action": "PROMOTE_TO_VERA_SOURCE",
+      "vera_runtime_role": "AUDIT_AND_HOSTILE_REVIEW_SOURCE",
+      "activation_mode": "REVIEW_ONLY",
+      "authority_ceiling": "Forensic audit/review evidence only; review output does not grant authority, merge, activation, or runtime truth.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_REVIEW_SUPPORT_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/wip",
+      "exact_public_head": "12a7c23dbe0482fd7bfe63659e54526778efef1e",
+      "current_vera_registry_state": "BOUND",
+      "implementation_action": "KEEP_VERA_SOURCE",
+      "vera_runtime_role": "RECOVERY_AND_AMBIGUOUS_EFFECT_RESEARCH_SOURCE",
+      "activation_mode": "MECHANISM_RESEARCH_ONLY",
+      "authority_ceiling": "Preserve existing Vera registry authority ceiling and activation semantics.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "CONTROL_RECOVERY_SUPPORT_CANDIDATE"
+    },
+    {
+      "repository": "thebrazenbeard/world-zero",
+      "exact_public_head": "5ab39621d090079d24de40261906b64413c6f995",
+      "current_vera_registry_state": "ABSENT",
+      "implementation_action": "ADD_VERA_SOURCE",
+      "vera_runtime_role": "SYSTEMS_MODELING_RESEARCH_SOURCE",
+      "activation_mode": "EXPLICIT_TASK_RETRIEVAL",
+      "authority_ceiling": "Systems-modeling and scientific comparison evidence only; scenario/model output is not Vera world-state truth.",
+      "availability_implies_activation": false,
+      "vcp_disposition": "NOT_CONTROL_PLANE"
+    }
+  ],
+  "claim_ceiling": "PUBLIC_SOURCE_INTEGRATION_PLAN_ONLY_NO_INSTALLATION_NO_RUNTIME_CONSUMPTION_NO_VCP_RELEASE_CONTROL_PROMOTION"
+}
