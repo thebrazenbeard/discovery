@@ -40,7 +40,7 @@ Current public hypothesis: `VERAMESH_SYNOLOGY_HANDOFF_V1` tests whether VeraMesh
 
 ## 4. Cognitive-base overlap
 
-Public anchors: `hc-brain`, `transcendence`, `god-brain`, `bt2`.
+Active lineage anchors: `hc-brain`, `transcendence`, `god-brain`. Historical/bootstrap control: `bt2`.
 
 The prior portfolio audit observed substantial same-path byte identity between these systems. Discovery must remeasure against exact experiment heads rather than carrying an old count as current truth.
 
@@ -52,9 +52,11 @@ If that fails, deduplication is not justified.
 
 Private related repositories are included as additional overlap subjects or negative controls.
 
-The 2026-09-21 portfolio-wide default-head blob scan strengthens this family classification: across all 253 public-repository pairs, the only six pairs sharing any Git blob SHA are exactly the complete `bt2` / `god-brain` / `hc-brain` / `transcendence` clique. The other 247 public pairs share zero blob SHAs on that exact source cut.
+The 2026-09-21 portfolio-wide default-head blob scan still isolates a real four-repository byte-identity clique: the only six public pairs sharing any Git blob SHA are the complete `bt2` / `god-brain` / `hc-brain` / `transcendence` clique. The other 247 public pairs share zero blob SHAs on that exact source cut.
 
-This isolates a real byte-identity cluster, but does not decide lineage direction or whether deduplication is beneficial.
+Source provenance and branch topology split that byte cluster semantically. HC, God Brain, and Transcendence retain a large shared live branch-name namespace; `bt2` shares only `main` and has same-day source-controlled migration artifacts that establish a canonical Build Team Two platform role. Discovery therefore treats `bt2` as an HC-derived bootstrap/provenance control, not as an active HC factorization consumer. See `experiments/BT2_HC_BOOTSTRAP_PROVENANCE_V1.json`.
+
+This preserves the exact blob measurements while preventing byte identity or a stale root README from silently becoming repository-role authority.
 
 ## 5. Experiment mechanics
 
