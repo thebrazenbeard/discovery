@@ -266,6 +266,48 @@
   ],
   "edges": [
     {
+      "edge_id": "BT2_GODBRAIN_HC_FAMILY_DUPLICATION",
+      "from": "bt2",
+      "to": "god-brain",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact default-head HC-family overlap between bt2 and God Brain.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+        "thebrazenbeard/god-brain:main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5"
+      ],
+      "falsifiers": [
+        "The overlap is purely historical and no longer maintenance-relevant.",
+        "A common base would import bt2 archive/training semantics or constrain God Brain's independent experiment.",
+        "Forward changes demonstrate high recurring conflict/requalification cost."
+      ],
+      "notes": [
+        "178 identical same-path blobs; 10 changed same-path blobs.",
+        "Identical same-path bytes are 46.17560803% of the smaller repository byte surface."
+      ]
+    },
+    {
+      "edge_id": "BT2_TRANSCENDENCE_HC_FAMILY_DUPLICATION",
+      "from": "bt2",
+      "to": "transcendence",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact default-head HC-family overlap between bt2 and Transcendence with substantial bt2-specific and Transcendence-specific surfaces.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+        "thebrazenbeard/transcendence:main@68e7a794d6134e8319121404f31062288dc8d6a3"
+      ],
+      "falsifiers": [
+        "The common bytes are dominated by incidental archives/scaffolding rather than maintained HC substrate.",
+        "Lineage analysis shows no useful common base can be preserved without importing project-specific material.",
+        "Forward maintenance cost favors independent copies."
+      ],
+      "notes": [
+        "179 identical same-path blobs; 9 changed same-path blobs.",
+        "Identical same-path bytes are 56.68164073% of the smaller repository byte surface."
+      ]
+    },
+    {
       "edge_id": "DISCOVERY_CENSUS_PRIVATE_OPAQUE_CONSUMER",
       "from": "discovery",
       "to": "private-cohort",
@@ -343,6 +385,28 @@
       ],
       "notes": [
         "This edge is evidence for the triadic candidate, not a claim that DriftGuard and WIP share one state machine."
+      ]
+    },
+    {
+      "edge_id": "GODBRAIN_TRANSCENDENCE_HC_FAMILY_DUPLICATION",
+      "from": "god-brain",
+      "to": "transcendence",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact default-head HC-family snapshot overlap: 255 of 263 Transcendence paths are byte-identical to God Brain.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/god-brain:main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+        "thebrazenbeard/transcendence:main@68e7a794d6134e8319121404f31062288dc8d6a3"
+      ],
+      "falsifiers": [
+        "A fresh exact-head comparison materially reduces the overlap.",
+        "The shared bytes are a historical snapshot with no continuing maintenance implication.",
+        "A factorized representation would damage Transcendence's independent experimental isolation."
+      ],
+      "notes": [
+        "255 identical same-path blobs; 8 changed same-path blobs.",
+        "Identical same-path bytes are 95.35251012% of the smaller repository byte surface.",
+        "This edge is byte-identity evidence only; no dependency direction is established."
       ]
     },
     {
