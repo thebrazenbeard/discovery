@@ -38,6 +38,10 @@ A candidate abstraction must first prove itself in a real cross-project flow.
 
 Current public hypothesis: `VERAMESH_SYNOLOGY_HANDOFF_V1` tests whether VeraMesh transport/session source can hand off source/payload identity to Vera Synology packaging while source, package, install, route, and live-effect currentness remain distinct.
 
+First native falsifier result: `FAIL_CURRENT_NATIVE_CROSS_REPO_BINDING_MISSING`.
+
+Vera Synology's current package line strongly validates its own source manifest against packaged bytes/modes/path set, but that native validation path does not bind the exact VeraMesh producer repository/head. A Discovery-side record can pair the refs but cannot turn itself into package-native release provenance. The candidate therefore remains HYPOTHESIS and is narrowed to a missing identity-receipt contract.
+
 ## 4. Cognitive-base overlap
 
 Public anchors: `hc-brain`, `transcendence`, `god-brain`, `bt2`.
