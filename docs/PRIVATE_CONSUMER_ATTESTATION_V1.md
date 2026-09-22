@@ -4,7 +4,7 @@ Status: SOURCE CANDIDATE / PRIVACY-PRESERVING EXPERIMENT BINDING
 
 ## Problem
 
-Discovery is a public architecture-research repository. The current census contains 57 repositories, of which 45 are private.
+Discovery is a public architecture-research repository. The live portfolio count and visibility split are mutable currentness data and MUST be read from the exact bound `portfolio/PORTFOLIO_CENSUS_V1.json` subject rather than duplicated in this mechanism document.
 
 The lifecycle gate correctly requires active experiments to bind real consumers to exact subjects. Publishing raw private repository names and exact refs in a public candidate would violate Discovery's own privacy rule.
 
@@ -26,6 +26,8 @@ An active private consumer is represented publicly by:
 - `status: EXACT_PRIVATE_SUBJECT_ATTESTED`.
 
 The public repository does not contain the private preimages.
+
+The attestation document intentionally carries no copied "current repository count". A prior version did so and became stale when the portfolio moved from 57 repositories / 45 private to a later 58-repository cut with a different visibility split. Mechanism documentation is not a currentness source.
 
 The commitment preimages MUST be domain-separated canonical private records containing at least 128 bits of high-entropy nonce material retained only in the private governed domain. Direct unsalted hashes such as `SHA256(repository_name)` or `SHA256(repository@ref)` are forbidden because the portfolio is small enough for dictionary attacks. Consumer, subject, and receipt commitments must be distinct digests.
 
