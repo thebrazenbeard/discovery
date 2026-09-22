@@ -36,6 +36,8 @@ Question: can message envelopes, routing, delivery receipts, dead-letter handlin
 
 A candidate abstraction must first prove itself in a real cross-project flow.
 
+Current public hypothesis: `VERAMESH_SYNOLOGY_HANDOFF_V1` tests whether VeraMesh transport/session source can hand off source/payload identity to Vera Synology packaging while source, package, install, route, and live-effect currentness remain distinct.
+
 ## 4. Cognitive-base overlap
 
 Public anchors: `hc-brain`, `transcendence`, `god-brain`, `bt2`.
@@ -90,6 +92,8 @@ The expected separation is:
 `evidence + replay -> reconstruction/shadow model -> human service/deployment`
 
 No actuation or production authority follows from architectural reuse.
+
+Current public-cut result: ABIL is the only defensible public industrial-chain anchor found in the 2026-09-21 intake/search pass. Searches across the other 22 public repositories did not identify a second brownfield/PLC/historian/fieldbus/OPC/Modbus/machine-telemetry handoff subject. This is a hold, not proof of absence; private, branch-only, unindexed, differently worded, or future subjects may exist.
 
 ## 8. Domain negative controls
 
@@ -150,3 +154,18 @@ Exact HC-family measurement at the refreshed cut:
 - `bt2/main@30e81cadd94fae117a7f6875523c03251c7c9f6e` vs the same HC head: 178 identical same-path blobs, 10 changed same-path blobs, 329 bt2-only blobs, and 112 HC-only blobs; identical bytes are 46.14031461% of the measured HC byte surface.
 
 These measurements establish duplication, not consolidation. The generated `HC_FAMILY_LINEAGE_V1` candidate remains a HYPOTHESIS until exact reconstruction and forward-maintenance evidence exist.
+
+
+## 12. Audit/reviewer source sufficiency
+
+Public anchor: `voss`.
+
+At `voss/main@54478372002bb24c6df733092a32abbdd1fa8d3c`, the public surface contains only the role README identifying Voss as a forensic auditor/reviewer.
+
+That is insufficient to classify a reusable audit protocol or generate a Discovery candidate.
+
+Disposition:
+
+`INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE`
+
+Discovery should revisit Voss only when public source exposes a concrete review contract, receipt, exact-head binding, evidence model, or executable audit mechanic.
