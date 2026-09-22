@@ -1,15 +1,16 @@
 {
   "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1",
-  "observed_date": "2026-09-21",
+  "observed_date": "2026-09-22",
   "source": "GitHub accessible repository inventory for owner thebrazenbeard",
   "status": "OBSERVED_INVENTORY_NOT_ARCHITECTURAL_AUTHORITY",
   "counts": {
-    "total": 58,
-    "public": 23,
+    "total": 59,
+    "public": 24,
     "private": 35
   },
   "public_repositories": [
     "Attune",
+    "WorkBridgeMCP",
     "abil",
     "bt2",
     "discovery",
@@ -35,13 +36,13 @@
   ],
   "inventory_digests": {
     "algorithm": "SHA-256 over lexicographically sorted repository names, UTF-8, one name per line with trailing newline",
-    "public_names_sha256": "25fe6601b4c664490bfe4494d8650dca4804ff5607ff599ee5ec0981a2f177d7",
+    "public_names_sha256": "a35c5bb3e0b99e99592b2e9535db1e2bf9a8bfc2582f113ccc1547c3607ae86e",
     "private_names_sha256": "bef511eac762ae94bc697b8a42311f48300d9b44c61830ef95b8d7b9e5069489",
-    "all_names_sha256": "c854d8891e87272f7bc1bb6530aedc339581a51a6be6026efb087c6be08e7a2d"
+    "all_names_sha256": "68fca652ca0688b7871c352987ffe68b55d4c0af521802704920b058e2fa943c"
   },
   "privacy_rule": "Private repository names and private technical detail are intentionally not published by this public repository. Private repositories still participate in the analysis and aggregate counts.",
   "discovery_roles": {
-    "direct_architecture_subjects": 32,
+    "direct_architecture_subjects": 33,
     "boundary_or_negative_control_consumers": 22,
     "historical_or_reference_only": 2,
     "discovery_self": 1,
@@ -55,7 +56,7 @@
     "unclassified_since_prior_cut": "One repository exists beyond the prior classified 57-repository cut; this refresh does not silently assign it a role without a dedicated classification pass."
   },
   "completeness_rule": "A repository does not need to be a consolidation candidate to be included. Exclusion from a particular experiment must be explicit rather than inferred from absence.",
-  "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current.",
+  "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current. Full 59-repository disposition is separately bound by DISCOVERY_LIVE_PORTFOLIO_MAP_V2.",
   "inventory_digest_validation": {
     "public_names_sha256": "SOURCE_RECOMPUTED",
     "private_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED",
