@@ -593,7 +593,7 @@
       "from": "vera-mesh",
       "to": "vera-synology",
       "relation": "COMPLEMENTARY_BOUNDARY",
-      "scope": "VeraMesh transport/application-session source and route currentness handed to Synology-specific deterministic package/build/install/currentness custody without authority transfer",
+      "scope": "Complementary transport/session versus package/install boundary with a currently missing native producer-provenance binding: Synology validates local package/source identity but does not natively bind the exact VeraMesh producer head.",
       "evidence_state": "HYPOTHESIS",
       "source_refs": [
         "thebrazenbeard/vera-mesh:9bffc57930587bf74a12657bbeaa913474ab5574",
@@ -607,7 +607,10 @@
       "notes": [
         "VeraMesh source explicitly separates source/runtime/plugin/route/read/write/process states.",
         "Vera Synology source cross-binds package bytes/modes to SOURCE_MANIFEST and separately records installed R6 versus later current source.",
-        "Candidate VERAMESH_SYNOLOGY_HANDOFF_V1 remains HYPOTHESIS."
+        "Candidate VERAMESH_SYNOLOGY_HANDOFF_V1 remains HYPOTHESIS.",
+        "Experiment V1 result: FAIL_CURRENT_NATIVE_CROSS_REPO_BINDING_MISSING.",
+        "Discovery can externally pair the exact producer and consumer refs, but that pairing is not native Synology package validation and grants no release/install/route authority.",
+        "Any future receipt must remain identity-only and preserve source != build != install != route != live effect."
       ]
     },
     {
