@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "work/discovery-lifecycle-current-composed-v1-20260920"
+      - "bt2/discovery-research-ingest-v1-20260921"
   pull_request:
 
 permissions:
