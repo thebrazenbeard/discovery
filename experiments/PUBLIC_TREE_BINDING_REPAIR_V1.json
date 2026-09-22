@@ -1,13 +1,13 @@
 {
   "schema": "DISCOVERY_PUBLIC_TREE_BINDING_REPAIR_V1",
-  "status": "LIVE_SOURCE_REPAIR_EXACT_HEADS_UNCHANGED_TREE_BINDINGS_CORRECTED",
+  "status": "LIVE_SOURCE_REFRESH_PUBLIC_SET_AND_HEADS_UPDATED",
   "observed_date": "2026-09-22",
   "prior_subject": "vera/discovery-live-census-public-intake-v1-20260921@56822c92c4cb3709bf742032f539206a0e398024",
   "live_inventory": {
-    "total": 58,
-    "public": 23,
+    "total": 59,
+    "public": 24,
     "private": 35,
-    "public_set_changed": false
+    "public_set_changed": true
   },
   "finding": {
     "id": "TREE-BINDING-001",
@@ -17,12 +17,16 @@
     "root_cause_class": "SHAPE_VALIDATED_SEMANTICS_UNVERIFIED"
   },
   "repair": {
-    "public_default_heads_changed_since_prior_scan": false,
-    "repaired_repository_count": 23,
+    "public_default_heads_changed_since_prior_scan": true,
+    "repaired_repository_count": 24,
     "bindings": {
       "Attune": {
         "head": "eff6f9eb250a6f7684459eadf0695340053201da",
         "tree": "d877f1f9e53e71d03ea1268060610da983f57659"
+      },
+      "WorkBridgeMCP": {
+        "head": "12bcbec3a4bda69e8b9361317feb8e9d9d47b6df",
+        "tree": "3fa829d1df4a97f59262fd0302530ba42b64a270"
       },
       "abil": {
         "head": "0812d9780ce1648820269fa142a43e17030ef793",
@@ -37,8 +41,8 @@
         "tree": "f604fbf501150065e8e4345df432cc99fa8d9796"
       },
       "driftguard": {
-        "head": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
-        "tree": "3707ba40343f381a6bcf6fcb9e55a5d8f048d1c5"
+        "head": "ce6c0fcbc38560b6604039d4921cc4f0c10cd248",
+        "tree": "908497781f10af23f9a948aea2a354d8045de984"
       },
       "god-brain": {
         "head": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
@@ -61,16 +65,16 @@
         "tree": "c99963ee2dd2c4ad2ca487f1be1894906d5fc265"
       },
       "project-runner": {
-        "head": "bc05812b560b4fcde3a362e72fba04c626cafac8",
-        "tree": "2c7b588b06c68f0a0ed63a79ed092b3132e462ca"
+        "head": "a0db5e26c084b8c7226199ca0d8d6550296e709b",
+        "tree": "b68fb42164d5dde04ea9424178499d0f3bd5b13e"
       },
       "rezon": {
-        "head": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
-        "tree": "8a4353736fbbabe5071b80b2ea1b16e39c7a1712"
+        "head": "facced1e651f47979266f25f48cd376275cbb27e",
+        "tree": "1d38dcbfde414e521dca7c14cfee1b1275070f39"
       },
       "roots": {
-        "head": "7fab72635f319c633b480174c8a0687901ac1db2",
-        "tree": "e0f43a5f9539a1f85ab52ac6b2e5dcf4d4d96a40"
+        "head": "d62c58ed1385111170eafc1cda3fee0b68c9f05e",
+        "tree": "f604932cffb83144cf82ae3bbf60cf6864066327"
       },
       "semanticatlas": {
         "head": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
@@ -93,8 +97,8 @@
         "tree": "290d95bd131935cffc1dfae24a591593b2395540"
       },
       "vera-mesh": {
-        "head": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
-        "tree": "aa1225db434ce6a21abf780a9fbe037dfb95b712"
+        "head": "82e6f463b4a3c239a4d658901bc6930f9d4320bf",
+        "tree": "d0392370b87d9a17dce45dd8f8974e95f234b1fb"
       },
       "vera-synology": {
         "head": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
@@ -113,8 +117,8 @@
         "tree": "287092bfb9830e42c78a430fdfd8552fca07965d"
       }
     },
-    "validator_guard": "REJECT_TREE_SHA_EQUAL_TO_HEAD_COMMIT_SHA",
+    "validator_guard": "REJECT_TREE_SHA_EQUAL_TO_HEAD_COMMIT_SHA_AND_BIND_CURRENT_SHARDS_EXACTLY",
     "regression_test": "tests/test_public_blob_tree_binding_integrity.py"
   },
-  "claim_ceiling": "TREE_BINDING_FIELD_REPAIRED_FROM_LIVE_GITHUB_BRANCH_COMMIT_TREE_EVIDENCE_NO_NEW_LINEAGE_OR_REUSE_CLAIM"
+  "claim_ceiling": "CURRENT_PUBLIC_TREE_BINDINGS_AND_BLOB_EVIDENCE_REFRESHED_FROM_EXACT_GITHUB_SUBJECTS_NO_LINEAGE_OR_RUNTIME_AUTHORITY_PROMOTION"
 }
