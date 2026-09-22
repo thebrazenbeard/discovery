@@ -79,6 +79,16 @@ Potentially reusable mechanics include:
 
 Scientific hypotheses, evaluators, and validity criteria remain owned by their projects.
 
+The third-consumer falsifier now includes DriftGuard. Its real `DRIFTGUARD_RECOVERY_WINDOW_RECEIPT_V1` is materially independent and durable, but it does not preserve the earlier World Zero↔Mosaic four-part residue as a common contract. Across all three systems:
+
+- exact repository-source experiment identity is not common;
+- general execution-environment identity is not common;
+- explicit claim-ceiling receipt fields are not common;
+- result/evidence identity is common, but too weak by itself to justify architecture;
+- demonstrated code deleted/replaced by a common layer remains **0**.
+
+Disposition: `THIRD_CONSUMER_FALSIFIES_PRIOR_GENERIC_RECEIPT_PATTERN_NO_EXTRACTION`. Experiment receipts remain project-specific.
+
 ## 6. Vera runtime and control
 
 Public anchors: `driftguard`, `vera-mesh`, `vera-synology`.
