@@ -4,11 +4,11 @@
   "source_shards": [
     {
       "path": "experiments/public_blob_index_v1/SHARD_A.json",
-      "blob": "745ecbbd5db86e226b575b53b36a9b4337859a00"
+      "blob": "e9c55fd3d1b90358380529132e51d51ef155b744"
     },
     {
       "path": "experiments/public_blob_index_v1/SHARD_B.json",
-      "blob": "129c93ea419fa0e0973a1d68420915c147ea94b6"
+      "blob": "147e4226aa581beda90c25c2c3b2f54c1383db9c"
     }
   ],
   "repository_count": 23,
