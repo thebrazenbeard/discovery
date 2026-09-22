@@ -1,0 +1,88 @@
+{
+  "schema": "DISCOVERY_EXPERIMENT_RECEIPT_THIRD_CONSUMER_V1",
+  "observed_date": "2026-09-22",
+  "exact_subjects": {
+    "world_zero": {
+      "repo": "thebrazenbeard/world-zero",
+      "ref": "science/demography-older-mortality-mass-normalization-v1-20260919@9be13e8e34772a90a812815b074bf21bb89e972a",
+      "run_receipt_schema": {
+        "path": "specs/RUN_RECEIPT_V1.schema.json",
+        "blob": "88a039e32e3cbcb4e26aa9a95cc2f0d817ca1423"
+      }
+    },
+    "mosaic": {
+      "repo": "thebrazenbeard/mosaic",
+      "ref": "one/mosaic-p1-protocol-harness-v1-20260918@96fd911e5a6a9b2069a88ae20d0dfa4f6bbad01f",
+      "receipt_implementation": {
+        "path": "runtime/handoff.py",
+        "blob": "ab880ada80dd238751f7aec918cd0cafb5e85ce9"
+      },
+      "receipt_test": {
+        "path": "tests/test_p1_handoff.py",
+        "blob": "ebf4851bacfbbab71b7a6ad664ef232123fd91bd"
+      }
+    },
+    "driftguard": {
+      "repo": "thebrazenbeard/driftguard",
+      "ref": "main@9894692ff6b549e4378bcc2b8ca46813ff18bf37",
+      "receipt_implementation": {
+        "path": "src/driftguard/recovery_qualification.py",
+        "blob": "af329f61d9eb9f094896a4eb14f1263d9f6c861a"
+      },
+      "claim_boundary": {
+        "path": "docs/RECOVERY_QUALIFICATION_V1.md",
+        "blob": "23086180965bf51800e8e195ca8f6ac87595878e"
+      }
+    }
+  },
+  "prior_pairwise_survivor": "exact subject -> execution context -> result evidence -> explicit claim ceiling",
+  "three_system_mapping": {
+    "world_zero": {
+      "exact_subject": "EXPLICIT_SOURCE_COMMIT_AND_TREE_PLUS_SCIENTIFIC_SUBJECT_DIGESTS",
+      "execution_context": "EXPLICIT_SOLVER_VERSION_TIMESTEP_TOLERANCE_SEED_ENVIRONMENT",
+      "result_evidence": "OPTIONAL_RESULT_DIGEST",
+      "claim_ceiling": "OUTSIDE_RUN_RECEIPT_IN_COMPARISON_PROTOCOL_AND_PROJECT_QUALIFICATION_SEMANTICS",
+      "domain_specific_core": "SCIENTIFIC_DATASET_PARAMETER_REGION_SCENARIO_CALIBRATION_HOLDOUT_AND_PROTOCOL_DIGESTS"
+    },
+    "mosaic": {
+      "exact_subject": "NOT_ENCODED_IN_RECEIPT_OBJECT",
+      "execution_context": "SYNTHETIC_CONDITION_AND_CASE_SET_ONLY_NOT_GENERAL_ENVIRONMENT_IDENTITY",
+      "result_evidence": "INLINE_DETERMINISTIC_METRICS_AND_BOOLEAN_GATES",
+      "claim_ceiling": "EXPLICIT_RECEIPT_FIELD",
+      "domain_specific_core": "CONTINUITY_CASES_STATE_REVISIONS_STALE_ERROR_CORRECTION_BURDEN_AND_P1_GATES"
+    },
+    "driftguard": {
+      "exact_subject": "STATE_DIGEST_SESSION_LEDGER_CHAIN_NOT_REPOSITORY_SOURCE_COMMIT",
+      "execution_context": "POLICY_DIGEST_TURN_AND_GENERATION_WINDOW_NOT_GENERAL_EXECUTION_ENVIRONMENT",
+      "result_evidence": "EVALUATION_DIGEST_TRACE_PLUS_DISPOSITION_AND_RECEIPT_DIGEST",
+      "claim_ceiling": "DOCUMENTED_TEMPORAL_BOUNDARY_NOT_A_RECEIPT_FIELD",
+      "domain_specific_core": "DURABLE_ACK_REPLAY_CHECKPOINT_CHAIN_BEHAVIORAL_CLASSIFICATION_AND_RECOVERY_WINDOW"
+    }
+  },
+  "intersection_test": {
+    "exact_repository_source_subject_shared_across_all_three": false,
+    "general_execution_environment_identity_shared_across_all_three": false,
+    "result_or_evidence_identity_shared_across_all_three": true,
+    "explicit_claim_ceiling_field_shared_across_all_three": false,
+    "meaningful_common_executable_validation_beyond_digest_or_identity_plumbing": false,
+    "demonstrated_code_deleted_or_replaced_by_common_layer": 0
+  },
+  "result": {
+    "third_materially_independent_receipt_system_found": true,
+    "prior_four_part_pattern_survives_three_way": false,
+    "shared_executable_harness_candidate_created": false,
+    "generic_receipt_candidate_created": false,
+    "disposition": "THIRD_CONSUMER_FALSIFIES_PRIOR_GENERIC_RECEIPT_PATTERN_NO_EXTRACTION"
+  },
+  "interpretation": [
+    "DriftGuard is a legitimate third receipt-producing system, but its durable subject is a state/session/ledger recovery window rather than an exact repository-source experiment subject.",
+    "Mosaic's receipt carries an explicit claim ceiling but no general exact source/execution identity; World Zero has rich subject/execution identity but its claim ceiling is governed outside the receipt object.",
+    "The three-way intersection is too weak to justify a shared schema: result/evidence identity and digest plumbing alone do not remove meaningful domain code.",
+    "No common layer has demonstrated deletion or replacement of existing project-local implementation, so candidate creation would be schema theater."
+  ],
+  "claim_ceiling": [
+    "This does not claim receipt abstraction is impossible; only that these three exact implementations do not justify one now.",
+    "This does not propose modifying World Zero, Mosaic, or DriftGuard.",
+    "A future candidate would require an organic fourth/consumer need or a concrete adapter that measurably deletes duplicated non-domain plumbing without weakening native qualification."
+  ]
+}
