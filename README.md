@@ -51,6 +51,25 @@ See:
 - [docs/PORTFOLIO_CLUSTER_MAP_V1.md](docs/PORTFOLIO_CLUSTER_MAP_V1.md)
 - [portfolio/CANDIDATE_FAMILIES_V1.json](portfolio/CANDIDATE_FAMILIES_V1.json)
 
+## Operational public observatory
+
+Discovery's public evidence has a read-only operational loop:
+
+1. `tools/check_public_currentness.py` reads the live public GitHub estate and compares repository membership, default branch, exact commit, exact tree, and archive state with the bound public evidence.
+2. When drift is found, `tools/trace_public_impact.py` identifies Discovery artifacts that still contain exact references to the stale commit SHA.
+3. When the public subjects are current, `tools/refresh_public_blob_evidence.py --check` reacquires all 23 exact Git trees and must reproduce both public blob-index shards and the 253-pair overlap scan byte-for-byte.
+4. `.github/workflows/discovery-public-currentness.yml` runs the live check every six hours after landing, on demand, and on relevant pull requests.
+
+The workflow never refreshes evidence automatically. A stale result is a review trigger, not mutation authority.
+
+Public currentness is intentionally not whole-portfolio currentness: the public watcher does not inspect or identify private repositories.
+
+See:
+
+- [docs/PUBLIC_CURRENTNESS_WATCH_V1.md](docs/PUBLIC_CURRENTNESS_WATCH_V1.md)
+- [docs/PUBLIC_BLOB_REPRODUCIBILITY_V1.md](docs/PUBLIC_BLOB_REPRODUCIBILITY_V1.md)
+- [docs/DISCOVERY_ARCHITECTURE_OBSERVATORY_V1.md](docs/DISCOVERY_ARCHITECTURE_OBSERVATORY_V1.md)
+
 ## Initial experiments
 
 The first three candidates deliberately test different kinds of reuse:
