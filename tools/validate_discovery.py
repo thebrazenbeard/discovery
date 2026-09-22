@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import re
@@ -64,6 +65,34 @@ PRIVATE_VERIFIER_CLASSES = {
     "PRIVATE_OWNER_REGISTRY",
     "INDEPENDENT_PRIVATE_REVIEWER",
 }
+
+PR21_PRIOR_CENSUS_BINDING = {
+    "repository": "thebrazenbeard/discovery",
+    "commit": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+    "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
+    "blob": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
+    "observed_date": "2026-09-19",
+    "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34",
+}
+PR21_PRIOR_PUBLIC_REPOSITORIES = frozenset({
+    "discovery",
+    "driftguard",
+    "hc-brain",
+    "mosaic",
+    "on-theo",
+    "project-runner",
+    "rezon",
+    "roots",
+    "testament",
+    "transcendence",
+    "wip",
+    "world-zero",
+})
+OPAQUE_PRIVATE_COHORT_ID = "private-cohort"
+PRIVATE_ATTESTATION_REF = re.compile(r"^private-attestation:sha256:[0-9a-f]{64}$")
+PUBLIC_GRAPH_REPO_REF = re.compile(
+    r"^thebrazenbeard/([^:]+):(.+)$"
+)
 
 
 def _validate_private_attestation(
@@ -265,6 +294,166 @@ def _validate_candidate_lifecycle(candidate: dict, *, filename: str) -> list[str
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _public_names_sha256(names) -> str:
+    normalized = sorted(names)
+    payload = "".join(f"{name}\n" for name in normalized).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def _validate_census_contract(
+    census: dict,
+    graph: dict,
+    public_intake: dict,
+) -> list[str]:
+    errors: list[str] = []
+    counts = census.get("counts", {})
+    public_repos = census.get("public_repositories")
+    if not isinstance(public_repos, list) or any(
+        not _nonempty_string(item) for item in public_repos
+    ):
+        return ["census public_repositories invalid"]
+
+    if len(public_repos) != len(set(public_repos)):
+        errors.append("census public_repositories contains duplicates")
+
+    public_count = counts.get("public")
+    private_count = counts.get("private")
+    total_count = counts.get("total")
+    if public_count != len(public_repos):
+        errors.append("census public count does not match public repository list")
+    if (
+        type(public_count) is not int
+        or type(private_count) is not int
+        or type(total_count) is not int
+        or total_count != public_count + private_count
+    ):
+        errors.append("census total/public/private arithmetic mismatch")
+
+    digests = census.get("inventory_digests", {})
+    expected_public_digest = _public_names_sha256(public_repos)
+    if digests.get("public_names_sha256") != expected_public_digest:
+        errors.append("census public_names_sha256 does not recompute")
+
+    validation = census.get("inventory_digest_validation", {})
+    if validation.get("public_names_sha256") != "SOURCE_RECOMPUTED_FROM_PUBLIC_REPOSITORIES":
+        errors.append("census public digest validation class mismatch")
+    if (
+        validation.get("private_names_sha256")
+        != "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE"
+    ):
+        errors.append("census private digest evidence ceiling mismatch")
+    if (
+        validation.get("all_names_sha256")
+        != "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE"
+    ):
+        errors.append("census all-names digest evidence ceiling mismatch")
+
+    observed_date = census.get("observed_date")
+    binding = graph.get("inventory_binding", {})
+    if binding.get("observed_date") != observed_date:
+        errors.append("graph observed_date does not match census")
+    if binding.get("total_count") != total_count:
+        errors.append("graph total_count does not match census")
+    if binding.get("all_names_sha256") != digests.get("all_names_sha256"):
+        errors.append("graph all_names digest does not match census external observation")
+
+    current_cut = public_intake.get("current_public_cut", {})
+    if public_intake.get("observed_date") != observed_date:
+        errors.append("public intake observed_date does not match census")
+    if current_cut.get("observed_date") != observed_date:
+        errors.append("public intake current-cut observed_date does not match census")
+    if current_cut.get("public_count") != public_count:
+        errors.append("public intake current public count does not match census")
+    if current_cut.get("public_names_sha256") != expected_public_digest:
+        errors.append("public intake current public digest does not match census")
+
+    prior_cut = public_intake.get("prior_public_cut", {})
+    prior_public = set(prior_cut.get("public_repositories", []))
+    if prior_public != set(PR21_PRIOR_PUBLIC_REPOSITORIES):
+        errors.append("public intake prior public set diverges from immutable prior census")
+    if prior_cut.get("observed_date") != PR21_PRIOR_CENSUS_BINDING["observed_date"]:
+        errors.append("public intake prior observed_date mismatch")
+    if prior_cut.get("public_count") != len(PR21_PRIOR_PUBLIC_REPOSITORIES):
+        errors.append("public intake prior public count mismatch")
+    if _public_names_sha256(prior_public) != PR21_PRIOR_CENSUS_BINDING["public_names_sha256"]:
+        errors.append("public intake prior public digest recomputation mismatch")
+    source_binding = prior_cut.get("source_binding")
+    if source_binding != {
+        key: value
+        for key, value in PR21_PRIOR_CENSUS_BINDING.items()
+        if key != "observed_date"
+    }:
+        errors.append("public intake prior census immutable source binding mismatch")
+
+    return errors
+
+
+def _validate_graph_privacy(graph: dict, public_repos: set[str], private_count: int) -> list[str]:
+    errors: list[str] = []
+    nodes = graph.get("nodes")
+    edges = graph.get("edges")
+    if not isinstance(nodes, list) or not isinstance(edges, list):
+        return errors
+
+    opaque_nodes = [
+        node
+        for node in nodes
+        if isinstance(node, dict)
+        and (
+            node.get("kind") == "OPAQUE_PRIVATE_COHORT"
+            or node.get("privacy") == "PRIVATE_OPAQUE"
+        )
+    ]
+    if len(opaque_nodes) != 1:
+        errors.append("public graph must contain exactly one opaque private cohort")
+    else:
+        node = opaque_nodes[0]
+        expected_node = {
+            "id": OPAQUE_PRIVATE_COHORT_ID,
+            "kind": "OPAQUE_PRIVATE_COHORT",
+            "privacy": "PRIVATE_OPAQUE",
+            "labels": [f"{private_count}_PRIVATE_REPOSITORIES"],
+            "notes": [
+                "Node intentionally hides private repository identities; "
+                f"count bound to the {graph.get('inventory_binding', {}).get('observed_date')} census."
+            ],
+        }
+        if node != expected_node:
+            errors.append("opaque private cohort shape/content mismatch")
+
+    for node in nodes:
+        if not isinstance(node, dict):
+            continue
+        if node.get("privacy") == "PRIVATE":
+            errors.append(f"raw private node forbidden in public graph: {node.get('id')}")
+        if node.get("privacy") == "PRIVATE_OPAQUE" and node.get("id") != OPAQUE_PRIVATE_COHORT_ID:
+            errors.append("unexpected opaque private node identifier")
+
+    for edge in edges:
+        if not isinstance(edge, dict):
+            continue
+        refs = edge.get("source_refs", [])
+        if not isinstance(refs, list):
+            continue
+        for ref in refs:
+            if not isinstance(ref, str):
+                errors.append("graph source_ref must be string")
+                continue
+            if PRIVATE_ATTESTATION_REF.fullmatch(ref):
+                continue
+            match = PUBLIC_GRAPH_REPO_REF.fullmatch(ref)
+            if match is None:
+                errors.append(f"graph source_ref unsupported public shape: {ref}")
+                continue
+            repo_name, subject_ref = match.groups()
+            if repo_name not in public_repos:
+                errors.append("graph source_ref names repository outside public census")
+            if not EXACT_SUBJECT_REF.fullmatch(subject_ref):
+                errors.append(f"graph source_ref not exact: {repo_name}")
+
+    return errors
 
 
 
@@ -522,6 +711,14 @@ def validate() -> list[str]:
     graph = load(GRAPH)
     public_intake = load(PUBLIC_INTAKE)
     errors.extend(_validate_public_blob_scan(census))
+    errors.extend(_validate_census_contract(census, graph, public_intake))
+    errors.extend(
+        _validate_graph_privacy(
+            graph,
+            set(census.get("public_repositories", [])),
+            census.get("counts", {}).get("private"),
+        )
+    )
 
     if graph.get("schema_version") != "DISCOVERY_RELATIONSHIP_GRAPH_V1":
         errors.append("unexpected graph schema")
@@ -548,8 +745,6 @@ def validate() -> list[str]:
         if node_id in node_ids:
             errors.append(f"duplicate node id: {node_id}")
         node_ids.add(node_id)
-        if node.get("privacy") == "PRIVATE":
-            errors.append(f"raw private node forbidden in public graph: {node_id}")
 
     edges = graph.get("edges")
     if not isinstance(edges, list):
@@ -593,8 +788,6 @@ def validate() -> list[str]:
         errors.append("unexpected public subject intake schema")
     prior_cut = public_intake.get("prior_public_cut", {})
     prior_public = set(prior_cut.get("public_repositories", []))
-    if prior_cut.get("public_count") != len(prior_public):
-        errors.append("public subject intake prior count mismatch")
     if not prior_public.issubset(public_repos):
         errors.append("public subject intake prior public set not contained in current census")
 
