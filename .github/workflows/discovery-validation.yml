@@ -15,6 +15,7 @@ on:
   push:
     branches:
       - "vera/discovery-shared-substrate-v1"
+      - "bt2/discovery-research-ingest-v1-20260921"
     paths:
       - "architecture/**"
       - "candidates/**"
