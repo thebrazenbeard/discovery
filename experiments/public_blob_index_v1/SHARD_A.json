@@ -93,7 +93,8 @@
           "size": 5487
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "abil": {
       "head": "0812d9780ce1648820269fa142a43e17030ef793",
@@ -135,7 +136,8 @@
           "size": 7955
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "bt2": {
       "head": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
@@ -2727,7 +2729,8 @@
           "size": 240
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "discovery": {
       "head": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
@@ -3054,7 +3057,8 @@
           "size": 12031
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "driftguard": {
       "head": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
@@ -3241,7 +3245,8 @@
           "size": 11557
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "god-brain": {
       "head": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
@@ -4748,7 +4753,8 @@
           "size": 240
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "hc-brain": {
       "head": "618245b54fb923c7a204892c6953ab6d1c5dac57",
@@ -6255,7 +6261,8 @@
           "size": 240
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "mosaic": {
       "head": "a3115031ec716526532b32dc004303b4042e4a26",
@@ -6277,7 +6284,8 @@
           "size": 643
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "noema": {
       "head": "890efdca01cf496ce1b8686d86f8442a149a9d34",
@@ -6749,7 +6757,8 @@
           "size": 11877
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "on-theo": {
       "head": "eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
@@ -6781,7 +6790,8 @@
           "size": 3061
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "project-runner": {
       "head": "bc05812b560b4fcde3a362e72fba04c626cafac8",
@@ -7193,7 +7203,8 @@
           "size": 526
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "rezon": {
       "head": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
@@ -7205,7 +7216,8 @@
           "size": 37
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     }
   }
 }
