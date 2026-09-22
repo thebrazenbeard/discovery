@@ -16,6 +16,11 @@ PUBLIC_BLOB_SHARDS = (
     ROOT / "experiments" / "public_blob_index_v1" / "SHARD_B.json",
 )
 PUBLIC_BLOB_SCAN = ROOT / "experiments" / "PUBLIC_BLOB_OVERLAP_SCAN_V1.json"
+HC_ANCESTRY = ROOT / "experiments" / "HC_COMMON_BRANCH_ANCESTRY_V1.json"
+HC_ANCESTRY_SHARDS = tuple(
+    ROOT / "experiments" / "hc_common_branch_ancestry_v1" / f"SHARD_{index:02d}.json"
+    for index in range(1, 8)
+)
 CANDIDATES = ROOT / "candidates"
 
 VALID_RELATIONS = {
@@ -699,6 +704,187 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
     return errors
 
 
+
+def _validate_hc_ancestry_contract(artifact: dict, shards: list[dict]) -> list[str]:
+    errors: list[str] = []
+    if artifact.get("schema") != "DISCOVERY_HC_COMMON_BRANCH_ANCESTRY_V1":
+        errors.append("unexpected HC ancestry schema")
+
+    branch_subjects: dict[str, dict] = {}
+    for index, shard in enumerate(shards, start=1):
+        if shard.get("schema") != "DISCOVERY_HC_COMMON_BRANCH_ANCESTRY_SHARD_V1":
+            errors.append(f"unexpected HC ancestry shard schema: {index:02d}")
+            continue
+        if shard.get("shard") != f"{index:02d}":
+            errors.append(f"HC ancestry shard id mismatch: {index:02d}")
+        branches = shard.get("branches")
+        if not isinstance(branches, dict):
+            errors.append(f"HC ancestry shard branches invalid: {index:02d}")
+            continue
+        for branch_name, subjects in branches.items():
+            if branch_name == "main":
+                errors.append("HC ancestry shards must exclude main")
+            if branch_name in branch_subjects:
+                errors.append(f"HC ancestry branch duplicated across shards: {branch_name}")
+            branch_subjects[branch_name] = subjects
+
+    if len(branch_subjects) != 34:
+        errors.append("HC ancestry shards must contain exactly 34 non-main branches")
+
+    expected_records: dict[str, dict] = {}
+    required_subjects = {"hc-brain", "transcendence", "god-brain"}
+    for branch_name, subjects in branch_subjects.items():
+        if not isinstance(subjects, dict) or set(subjects) != required_subjects:
+            errors.append(f"HC ancestry subjects invalid: {branch_name}")
+            continue
+        h = subjects["hc-brain"]
+        t = subjects["transcendence"]
+        g = subjects["god-brain"]
+        for label, subject in (("hc", h), ("transcendence", t), ("god_brain", g)):
+            for field in ("sha", "tree_sha"):
+                value = subject.get(field)
+                if not isinstance(value, str) or not re.fullmatch(r"[0-9a-f]{40}", value):
+                    errors.append(f"HC ancestry {label} {field} invalid: {branch_name}")
+            parents = subject.get("parents")
+            if not isinstance(parents, list) or any(
+                not isinstance(value, str) or not re.fullmatch(r"[0-9a-f]{40}", value)
+                for value in parents
+            ):
+                errors.append(f"HC ancestry {label} parents invalid: {branch_name}")
+            if not _nonempty_string(subject.get("message")):
+                errors.append(f"HC ancestry {label} message invalid: {branch_name}")
+            if not _nonempty_string(subject.get("author_date")):
+                errors.append(f"HC ancestry {label} author_date invalid: {branch_name}")
+
+        expected_records[branch_name] = {
+            "branch": branch_name,
+            "hc": {
+                "head": h.get("sha"),
+                "tree_sha": h.get("tree_sha"),
+                "parents": h.get("parents"),
+                "message": h.get("message"),
+                "author_date": h.get("author_date"),
+            },
+            "transcendence": {
+                "head": t.get("sha"),
+                "tree_sha": t.get("tree_sha"),
+                "parents": t.get("parents"),
+                "message": t.get("message"),
+                "author_date": t.get("author_date"),
+            },
+            "god_brain": {
+                "head": g.get("sha"),
+                "tree_sha": g.get("tree_sha"),
+                "parents": g.get("parents"),
+                "message": g.get("message"),
+                "author_date": g.get("author_date"),
+            },
+            "same_tree_sha": (
+                h.get("tree_sha") == t.get("tree_sha") == g.get("tree_sha")
+            ),
+            "hc_parented": bool(h.get("parents")),
+            "transcendence_parentless": t.get("parents") == [],
+            "god_brain_parentless": g.get("parents") == [],
+            "hc_earlier_than_transcendence": (
+                isinstance(h.get("author_date"), str)
+                and isinstance(t.get("author_date"), str)
+                and h["author_date"] < t["author_date"]
+            ),
+            "transcendence_earlier_than_god_brain": (
+                isinstance(t.get("author_date"), str)
+                and isinstance(g.get("author_date"), str)
+                and t["author_date"] < g["author_date"]
+            ),
+            "transcendence_initialize_message": (
+                t.get("message") == f"Initialize {branch_name}"
+            ),
+            "god_brain_initialize_message": (
+                g.get("message") == f"Initialize {branch_name}"
+            ),
+        }
+
+    records = artifact.get("records")
+    if not isinstance(records, list):
+        errors.append("HC ancestry records must be a list")
+        records = []
+    observed_records: dict[str, dict] = {}
+    for record in records:
+        if not isinstance(record, dict) or not _nonempty_string(record.get("branch")):
+            errors.append("HC ancestry record invalid")
+            continue
+        branch_name = record["branch"]
+        if branch_name in observed_records:
+            errors.append(f"HC ancestry record duplicated: {branch_name}")
+        observed_records[branch_name] = record
+
+    if set(observed_records) != set(expected_records):
+        errors.append("HC ancestry records must exactly cover shard branch population")
+    for branch_name, expected in expected_records.items():
+        if observed_records.get(branch_name) != expected:
+            errors.append(f"HC ancestry record does not recompute: {branch_name}")
+
+    expected_pattern = [
+        record
+        for record in expected_records.values()
+        if all(
+            record[field] is True
+            for field in (
+                "same_tree_sha",
+                "hc_parented",
+                "transcendence_parentless",
+                "god_brain_parentless",
+                "hc_earlier_than_transcendence",
+                "transcendence_earlier_than_god_brain",
+                "transcendence_initialize_message",
+                "god_brain_initialize_message",
+            )
+        )
+    ]
+    results = artifact.get("results", {})
+    expected_count = len(expected_records)
+    expected_summary = {
+        "branch_count": expected_count,
+        "same_tree_sha_count": sum(r["same_tree_sha"] for r in expected_records.values()),
+        "hc_parented_count": sum(r["hc_parented"] for r in expected_records.values()),
+        "transcendence_parentless_count": sum(
+            r["transcendence_parentless"] for r in expected_records.values()
+        ),
+        "god_brain_parentless_count": sum(
+            r["god_brain_parentless"] for r in expected_records.values()
+        ),
+        "hc_earlier_than_transcendence_count": sum(
+            r["hc_earlier_than_transcendence"] for r in expected_records.values()
+        ),
+        "transcendence_earlier_than_god_brain_count": sum(
+            r["transcendence_earlier_than_god_brain"] for r in expected_records.values()
+        ),
+        "transcendence_initialize_message_count": sum(
+            r["transcendence_initialize_message"] for r in expected_records.values()
+        ),
+        "god_brain_initialize_message_count": sum(
+            r["god_brain_initialize_message"] for r in expected_records.values()
+        ),
+        "all_branches_match_pattern": len(expected_pattern) == expected_count == 34,
+        "bounded_result": (
+            "ALL_34_NON_MAIN_COMMON_BRANCHES_SHOW_EARLIER_PARENTED_HC_COMMIT_"
+            "AND_LATER_PARENTLESS_IDENTICAL_TREE_INITIALIZATIONS_IN_TRANSCENDENCE_"
+            "AND_GOD_BRAIN"
+        ),
+    }
+    if results != expected_summary:
+        errors.append("HC ancestry summary does not recompute")
+
+    return errors
+
+
+def _validate_hc_ancestry() -> list[str]:
+    return _validate_hc_ancestry_contract(
+        load(HC_ANCESTRY),
+        [load(path) for path in HC_ANCESTRY_SHARDS],
+    )
+
+
+
 def validate() -> list[str]:
     errors: list[str] = []
     census = load(CENSUS)
@@ -707,6 +893,7 @@ def validate() -> list[str]:
     errors.extend(_validate_census_currentness_bindings(census, graph, public_intake))
     errors.extend(_validate_opaque_graph_privacy(census, graph))
     errors.extend(_validate_public_blob_scan(census))
+    errors.extend(_validate_hc_ancestry())
 
     if graph.get("schema_version") != "DISCOVERY_RELATIONSHIP_GRAPH_V1":
         errors.append("unexpected graph schema")
