@@ -406,7 +406,9 @@
       "notes": [
         "255 identical same-path blobs; 8 changed same-path blobs.",
         "Identical same-path bytes are 95.35251012% of the smaller repository byte surface.",
-        "This edge is byte-identity evidence only; no dependency direction is established."
+        "This edge is byte-identity evidence only; no dependency direction is established.",
+        "Both repositories carry later parentless re-rootings of the same 34 HC non-main branch trees; Transcendence's re-rooting dates precede God Brain's in every measured branch.",
+        "Chronology alone does not establish Transcendence as God Brain's direct source; both may derive independently from HC or another reconstruction artifact."
       ]
     },
     {
@@ -436,7 +438,7 @@
       "from": "hc-brain",
       "to": "god-brain",
       "relation": "DUPLICATED_IMPLEMENTATION",
-      "scope": "Exact main-head source snapshot overlap: 299 of 300 same-path blobs are byte-identical; only README.md differs at the measured cut.",
+      "scope": "Exact main-head duplication plus exhaustive non-main branch source-side lineage evidence: HC holds earlier parented commits for 34 copied branch snapshots; God Brain later re-roots the identical trees as parentless Initialize commits.",
       "evidence_state": "OBSERVED",
       "source_refs": [
         "thebrazenbeard/hc-brain:main@618245b54fb923c7a204892c6953ab6d1c5dac57",
@@ -450,7 +452,9 @@
       "notes": [
         "Measured 299/300 identical same-path blobs.",
         "Identical blobs account for 2,181,434 of 2,191,461 hc-brain bytes at the exact measured heads (99.54245136%).",
-        "This is duplication evidence only; it does not establish dependency adoption, moving-base inheritance, or HC semantic authority over God Brain."
+        "This is duplication evidence only; it does not establish dependency adoption, moving-base inheritance, or HC semantic authority over God Brain.",
+        "Across all 34 non-main live branch names common to HC, Transcendence, and God Brain, God Brain's tree SHA equals HC's earlier tree SHA while God Brain's branch commit is a later parentless `Initialize <branch>` root.",
+        "This supports HC as the historical source side of those snapshots, but does not prove whether God Brain copied directly from HC, via Transcendence, or via an intermediate reconstruction artifact."
       ]
     },
     {
@@ -475,7 +479,9 @@
         "HC main→PR22 simulation changes 8 of 73 current overlay instructions; payload bytes unchanged; two new HC motor-control paths are explicitly excluded.",
         "Ten selected real HC shared-path transitions yield nine immediate overlay removals and one transient override that converges on the next real HC change.",
         "Selection is conditioned on paths shared today and does not establish future conflict rate or original HC import lineage.",
-        "Dependency adoption remains unproven; moving-base inheritance remains rejected."
+        "Dependency adoption remains unproven; moving-base inheritance remains rejected.",
+        "Exhaustive branch ancestry now establishes source-side chronology for 34 non-main common live branches: HC has the earlier parented commit and Transcendence later re-roots the identical tree as a parentless `Initialize <branch>` commit.",
+        "That evidence narrows historical provenance but does not make a moving-base dependency or HC semantic authority valid."
       ]
     },
     {
