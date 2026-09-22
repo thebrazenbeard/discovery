@@ -519,6 +519,28 @@
       ]
     },
     {
+      "edge_id": "VERAMESH_SYNOLOGY_CURRENTNESS_HANDOFF",
+      "from": "vera-mesh",
+      "to": "vera-synology",
+      "relation": "COMPLEMENTARY_BOUNDARY",
+      "scope": "VeraMesh transport/application-session source and route currentness handed to Synology-specific deterministic package/build/install/currentness custody without authority transfer",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/vera-mesh:9bffc57930587bf74a12657bbeaa913474ab5574",
+        "thebrazenbeard/vera-synology:553e3a637833c5469f6b99fbc4d597755a0c9a5e"
+      ],
+      "falsifiers": [
+        "A neutral handoff cannot distinguish source, package artifact, installed artifact, route currentness, and live-effect readback.",
+        "Synology must interpret VeraPort session/fencing authority or VeraMesh must interpret DSM/package lifecycle semantics.",
+        "The handoff adds more validation/adapter burden than duplicated currentness plumbing it removes."
+      ],
+      "notes": [
+        "VeraMesh source explicitly separates source/runtime/plugin/route/read/write/process states.",
+        "Vera Synology source cross-binds package bytes/modes to SOURCE_MANIFEST and separately records installed R6 versus later current source.",
+        "Candidate VERAMESH_SYNOLOGY_HANDOFF_V1 remains HYPOTHESIS."
+      ]
+    },
+    {
       "edge_id": "WORLDZERO_MOSAIC_HARNESS_SEPARATION",
       "from": "world-zero",
       "to": "mosaic",
