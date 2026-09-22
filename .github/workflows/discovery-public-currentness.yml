@@ -3,10 +3,17 @@ name: Discovery public currentness watch
 on:
   pull_request:
     paths:
-      - "experiments/public_blob_index_v1/**"
-      - "portfolio/PORTFOLIO_CENSUS_V1.json"
+      - "architecture/**"
+      - "candidates/**"
+      - "docs/**"
+      - "experiments/**"
+      - "portfolio/**"
+      - "research/**"
+      - "schemas/**"
       - "tools/check_public_currentness.py"
+      - "tools/trace_public_impact.py"
       - "tests/test_public_currentness_watch.py"
+      - "tests/test_public_impact_radar.py"
       - ".github/workflows/discovery-public-currentness.yml"
   workflow_dispatch:
   schedule:
@@ -30,7 +37,7 @@ jobs:
         run: |
           set +e
           python tools/check_public_currentness.py --output public-currentness.json
-          code=$?
+          currentness_code=$?
           set -e
 
           if [[ -f public-currentness.json ]]; then
@@ -45,4 +52,17 @@ jobs:
             echo "Public currentness acquisition failed before a report was written."               | tee -a "$GITHUB_STEP_SUMMARY"
           fi
 
-          exit "$code"
+          if [[ "$currentness_code" -eq 1 && -f public-currentness.json ]]; then
+            python tools/trace_public_impact.py               public-currentness.json               --output public-impact.json
+
+            cat public-impact.json
+            {
+              echo
+              echo "### Discovery stale-subject impact trace"
+              echo '~~~json'
+              cat public-impact.json
+              echo '~~~'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          exit "$currentness_code"
