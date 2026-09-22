@@ -1,7 +1,7 @@
 {
   "schema": "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1",
   "shard": "A",
-  "observed_date": "2026-09-21",
+  "observed_date": "2026-09-22",
   "repositories": {
     "Attune": {
       "head": "eff6f9eb250a6f7684459eadf0695340053201da",
@@ -3061,13 +3061,28 @@
       "archived": false
     },
     "driftguard": {
-      "head": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
-      "tree_sha": "3707ba40343f381a6bcf6fcb9e55a5d8f048d1c5",
+      "head": "ce6c0fcbc38560b6604039d4921cc4f0c10cd248",
+      "tree_sha": "908497781f10af23f9a948aea2a354d8045de984",
       "blobs": [
         {
           "path": ".gitattributes",
           "sha": "2970269ea651d40ab11a52e3de3f5c94e32ec0ce",
           "size": 37
+        },
+        {
+          "path": ".github/workflows/codeql.yml",
+          "sha": "5cf76bece57cb2a6c08c28ef83faed556ba1e77d",
+          "size": 4724
+        },
+        {
+          "path": ".github/workflows/python-package-conda.yml",
+          "sha": "f3586044ab80acefe54b36a3f5b0b5be41bba7fd",
+          "size": 1061
+        },
+        {
+          "path": ".github/workflows/stale.yml",
+          "sha": "968c84ab0acabc6e3a245fb9293b777335e10411",
+          "size": 716
         },
         {
           "path": ".github/workflows/tests.yml",
@@ -6794,23 +6809,68 @@
       "archived": false
     },
     "project-runner": {
-      "head": "bc05812b560b4fcde3a362e72fba04c626cafac8",
-      "tree_sha": "2c7b588b06c68f0a0ed63a79ed092b3132e462ca",
+      "head": "a0db5e26c084b8c7226199ca0d8d6550296e709b",
+      "tree_sha": "b68fb42164d5dde04ea9424178499d0f3bd5b13e",
       "blobs": [
         {
           "path": ".github/workflows/test.yml",
-          "sha": "fdb3bf57e1546896b0d0ea69583f56d246a62c86",
-          "size": 1023
+          "sha": "50de3bce7e4847a578b8ae415801314255d95b8e",
+          "size": 1354
         },
         {
           "path": "PROJECT_RUNNER.md",
-          "sha": "bb9b1ea0a729ab1ac2eb655bd8cf8627f7fa8ee3",
-          "size": 3332
+          "sha": "bee2af72cf03fcdc4fa6ec8640b030ebee24b45c",
+          "size": 9786
         },
         {
           "path": "README.md",
-          "sha": "30eb3bbcd80a0195423569e4382531cd221d8870",
-          "size": 3189
+          "sha": "5faa0fbc245264e2c9406bc3d7d69600c2660f9f",
+          "size": 8204
+        },
+        {
+          "path": "architecture/REPOSITORY_RECONCILIATION_V1.json",
+          "sha": "df46158bdc469d47d5d54d32614c8104f8ee9d0c",
+          "size": 7599
+        },
+        {
+          "path": "docs/CURRENTNESS_AND_RECONCILIATION_V1.md",
+          "sha": "5721d4e6f6b38bb627a6484445251e171f61f0aa",
+          "size": 6044
+        },
+        {
+          "path": "docs/PROJECT_RUNNER_WORKER_RECONSTRUCTION_V1.md",
+          "sha": "7a533592039f5164b4b6c12ac2e469e4dfa38376",
+          "size": 5393
+        },
+        {
+          "path": "docs/WORKER_RECONSTRUCTION_V1.md",
+          "sha": "44f0c9c9c06f729a8449c1503eca2773f3755e08",
+          "size": 3454
+        },
+        {
+          "path": "docs/architecture/CHATGPT_EXODUS_WORKER_RECONSTRUCTION.md",
+          "sha": "de2c7923a80aa5b285f07f6956e9170a4659c80e",
+          "size": 2179
+        },
+        {
+          "path": "docs/architecture/PROJECT_RUNNER_DECHATIFIED_RUNTIME_V1.md",
+          "sha": "959621a06465303631fc114265bd9b605965bcae",
+          "size": 4037
+        },
+        {
+          "path": "docs/exodus/CHATLESS_ORCHESTRATION_V1.md",
+          "sha": "9b3e1f797a9954fb39def9ed599d23b2a2bd897c",
+          "size": 2867
+        },
+        {
+          "path": "docs/exodus/PORTFOLIO_DISCOVERY_V1.md",
+          "sha": "6b5c9422523b963f57c3a01c0eb4ee267d1bdd9a",
+          "size": 4390
+        },
+        {
+          "path": "docs/qualification/M6_SQLITE_CONNECTION_LIFETIME.md",
+          "sha": "9d1c8fc48365dc422bb952a613a5b665496e3dfa",
+          "size": 3033
         },
         {
           "path": "docs/superpowers/plans/2026-09-17-m1-kernel-worker-registry.md",
@@ -6863,14 +6923,19 @@
           "size": 597
         },
         {
+          "path": "registry/interfaces.yaml",
+          "sha": "6df9e5ccd34f24903b21a04e71af6f4ea89d1410",
+          "size": 800
+        },
+        {
           "path": "registry/projects.yaml",
-          "sha": "c5efac657051669e092ea9d9ed1b9f8f8f8d93b1",
-          "size": 909
+          "sha": "cda1dcd108bef36db4161970d60153d26411bc8e",
+          "size": 2360
         },
         {
           "path": "registry/workers.yaml",
-          "sha": "850939c76ab757ebd89ace871e1cebe2679458a4",
-          "size": 5036
+          "sha": "c39a3621178fa13ba67af9fe44c683b8f1343b83",
+          "size": 3974
         },
         {
           "path": "runner/__init__.py",
@@ -6884,8 +6949,8 @@
         },
         {
           "path": "runner/budgets.py",
-          "sha": "51041845c9e6bc8335541cf498f75da24bfaa89e",
-          "size": 2619
+          "sha": "5eac59c4a5a1f7e11333ae4af31dbd13b1b1f159",
+          "size": 3018
         },
         {
           "path": "runner/capabilities.py",
@@ -6894,8 +6959,8 @@
         },
         {
           "path": "runner/cli.py",
-          "sha": "f01de7e61905b04eadb5a94714defa276c9b51fb",
-          "size": 11786
+          "sha": "d0ae43e54d81c1e1815627e89f36d8e52c874ee8",
+          "size": 16505
         },
         {
           "path": "runner/collisions.py",
@@ -6909,28 +6974,33 @@
         },
         {
           "path": "runner/decompose.py",
-          "sha": "b2cc636b6eca540f33a3a82bb53fceaa6e26c794",
-          "size": 2604
+          "sha": "d9afc005e9228bc2df1511fcf32996e33c169170",
+          "size": 2656
         },
         {
           "path": "runner/dedup.py",
-          "sha": "7f5773ffe7adcd0838a621991e6956bf918012fb",
-          "size": 2711
+          "sha": "6ee802a98b5f97430c1718862013f92584cfec70",
+          "size": 2753
         },
         {
           "path": "runner/dispatch.py",
-          "sha": "07ed101232eb9ecdc224c3bde0c621fefe7ebf5e",
-          "size": 3190
+          "sha": "2d7b8780841f1fff11c5e78cfdda2829813ccd8c",
+          "size": 3386
+        },
+        {
+          "path": "runner/durable_dispatch.py",
+          "sha": "f110d45a7ef05b6ece54b89e777e5c178950debd",
+          "size": 54540
         },
         {
           "path": "runner/frontier.py",
-          "sha": "af71661b8d9e6823d61f11d515b173a3a03ee4f4",
-          "size": 3241
+          "sha": "edf85919ca0115d6341634ff2316d772aa368a1e",
+          "size": 3774
         },
         {
           "path": "runner/github_backend.py",
-          "sha": "833915398626c091a5df1dcc96504a7a12e7325f",
-          "size": 13547
+          "sha": "8048ac5a16add878ff5204bf84e0b5683cbdac9e",
+          "size": 14736
         },
         {
           "path": "runner/graph.py",
@@ -6943,14 +7013,19 @@
           "size": 4170
         },
         {
+          "path": "runner/m6_github.py",
+          "sha": "c63b24ef66c8390eb9468a77b7dddf421b5f87a6",
+          "size": 15190
+        },
+        {
           "path": "runner/models.py",
-          "sha": "255ced72a65489f9dcfe7c05f6a418625d44b33a",
-          "size": 10249
+          "sha": "fe4e34d395a2fa9c9169105806d715da938a7c9c",
+          "size": 13463
         },
         {
           "path": "runner/persistent_state.py",
-          "sha": "9f74b6ac50629976d79b73628b26c34201e9b099",
-          "size": 9062
+          "sha": "3623c2761e26001e2fd91f59256d846c070b5e92",
+          "size": 11317
         },
         {
           "path": "runner/prioritize.py",
@@ -6963,9 +7038,24 @@
           "size": 1467
         },
         {
+          "path": "runner/recovery.py",
+          "sha": "b03c1ab698fe7e6352870d6132e11b9bfa689bab",
+          "size": 6772
+        },
+        {
+          "path": "runner/recursive_admission.py",
+          "sha": "67f6f763865b3c449662dd255d17fa95a9385862",
+          "size": 15110
+        },
+        {
+          "path": "runner/recursive_state.py",
+          "sha": "843d352f17ffa852614156826ed03e398980f0d0",
+          "size": 31673
+        },
+        {
           "path": "runner/registry.py",
-          "sha": "52336e8d827e5b5f9f6c125b476122827043e6d4",
-          "size": 1969
+          "sha": "2bb7582172946297e6eed7853371ffa81b1210e9",
+          "size": 3936
         },
         {
           "path": "runner/schema.py",
@@ -6974,13 +7064,13 @@
         },
         {
           "path": "runner/sqlite_state.py",
-          "sha": "80969cfdae7e68c4722f4466c3392890ae31c3a2",
-          "size": 12617
+          "sha": "c829398d6cfa31d0fbffa54cf072f7f3c36af35c",
+          "size": 13061
         },
         {
           "path": "runner/verify.py",
-          "sha": "e4f0453404013cbfe26882ea4805ae2fb3ce25aa",
-          "size": 2356
+          "sha": "4149a230cbec25e18d96263c562403af8252a776",
+          "size": 3698
         },
         {
           "path": "runner/work_units.py",
@@ -6994,8 +7084,8 @@
         },
         {
           "path": "schemas/frontier.schema.json",
-          "sha": "7443e42acd610cd6f3622e2d6606a3e0b0a2e8ca",
-          "size": 1833
+          "sha": "3be57e7f1395c079c3eacbe3f92f5f721feb3664",
+          "size": 2375
         },
         {
           "path": "schemas/observation.schema.json",
@@ -7004,8 +7094,8 @@
         },
         {
           "path": "schemas/project.schema.json",
-          "sha": "52a4ad0b38b2c8a6592710f936afca3dbbf4e554",
-          "size": 1066
+          "sha": "ccdbe4f18ca213c48a66f501040750b3c7d9a6cf",
+          "size": 2197
         },
         {
           "path": "schemas/work-unit.schema.json",
@@ -7014,13 +7104,43 @@
         },
         {
           "path": "schemas/worker.schema.json",
-          "sha": "c79ab03f8a4e0c19da60498a2caa5cbf05e069ea",
-          "size": 1692
+          "sha": "9da3c1d705de26da368248002cbd1620408460fd",
+          "size": 3012
+        },
+        {
+          "path": "scripts/m6_hc_transcendence_live_proof.py",
+          "sha": "7d9ba40b327e69e0495e4a601150e6ebaa2a23c9",
+          "size": 12202
+        },
+        {
+          "path": "scripts/m6_recursive_restart_proof.py",
+          "sha": "49b15a902735861484250772e82c091717a5d16e",
+          "size": 10174
         },
         {
           "path": "tests/fixtures/m3-dependencies.yaml",
           "sha": "7cf30d9a43531e2a7d2344b0a8db40cd56e12e29",
           "size": 593
+        },
+        {
+          "path": "tests/fixtures/m6-hc-before.yaml",
+          "sha": "d61ad50cb84474d4523b7f2566a125568f8fb81c",
+          "size": 313
+        },
+        {
+          "path": "tests/fixtures/m6-hc-current.yaml",
+          "sha": "1f6a176a928343ff874fa7522aeff1acb6228296",
+          "size": 313
+        },
+        {
+          "path": "tests/fixtures/m6-hc-substantive.yaml",
+          "sha": "dae918270e1f0b53ce8d3354eaf49906b62b4995",
+          "size": 313
+        },
+        {
+          "path": "tests/fixtures/m6-hc-transcendence-dependencies.yaml",
+          "sha": "a7b03cd7f5f3fcc819daadbb4d7c07f0d4c292f7",
+          "size": 463
         },
         {
           "path": "tests/fixtures/observations-after.yaml",
@@ -7044,8 +7164,13 @@
         },
         {
           "path": "tests/integration/test_cli.py",
-          "sha": "c60360870317bd1742ae81218244bf426f173393",
-          "size": 435
+          "sha": "6b43af0e6ad255e780cee10167f6a27b4caebea6",
+          "size": 15816
+        },
+        {
+          "path": "tests/integration/test_exodus_chat_decoupling.py",
+          "sha": "70cd27691f780054760f86b76eb59ea94ae195fa",
+          "size": 754
         },
         {
           "path": "tests/integration/test_invalidation.py",
@@ -7068,6 +7193,16 @@
           "size": 1017
         },
         {
+          "path": "tests/integration/test_m6_hc_transcendence.py",
+          "sha": "e9813fbb7b93570e4c8cb0536cf07551d7cad693",
+          "size": 11254
+        },
+        {
+          "path": "tests/integration/test_m6_self_mutation.py",
+          "sha": "7b3cbf0c1abf06ec06d8c1cb2ab050d201eb5a86",
+          "size": 18207
+        },
+        {
           "path": "tests/integration/test_packaging.py",
           "sha": "7636825d3718867b90c472920c95085a2564f733",
           "size": 289
@@ -7079,13 +7214,18 @@
         },
         {
           "path": "tests/integration/test_seed_registries.py",
-          "sha": "89fae0abdacd46e0443d8705283c973f8824e557",
-          "size": 558
+          "sha": "5df73730795f5fda81857eeff14afd29cc5895c5",
+          "size": 1050
+        },
+        {
+          "path": "tests/test_exodus_worker_reconstruction.py",
+          "sha": "96672dde8ce8da1ba506b1d5d272125baf63228a",
+          "size": 1091
         },
         {
           "path": "tests/unit/test_budgets.py",
-          "sha": "3db51b3704f32ff9af1da07a6cc9f6004fcb76d3",
-          "size": 2381
+          "sha": "cc2723ebcad826d329f5c793e586213c3f40b3e5",
+          "size": 3205
         },
         {
           "path": "tests/unit/test_capabilities.py",
@@ -7104,8 +7244,8 @@
         },
         {
           "path": "tests/unit/test_decompose.py",
-          "sha": "109979d80621b52ded3f6316485de8c7c2a0ff34",
-          "size": 3483
+          "sha": "cc23b34d4cf5e46685a393557f9eefa4be37c0a9",
+          "size": 4789
         },
         {
           "path": "tests/unit/test_dedup.py",
@@ -7123,9 +7263,19 @@
           "size": 4088
         },
         {
+          "path": "tests/unit/test_durable_dispatch.py",
+          "sha": "f46a040fc4a8b30124cad963987a58b028d7be4d",
+          "size": 8654
+        },
+        {
+          "path": "tests/unit/test_execution_journal.py",
+          "sha": "02a8d084b35784ee9fb960e31055be17d8e15daa",
+          "size": 10081
+        },
+        {
           "path": "tests/unit/test_frontier_generation.py",
-          "sha": "62cb5dda4c56fd80729f07902c33bda8dfbba606",
-          "size": 2245
+          "sha": "c5c0d8c11c1f1b309abea603d3bd30ad6b43c861",
+          "size": 2969
         },
         {
           "path": "tests/unit/test_frontier_model.py",
@@ -7134,8 +7284,8 @@
         },
         {
           "path": "tests/unit/test_github_backend.py",
-          "sha": "d2515d7e44f513abe15b258c6e763f0b68a6032a",
-          "size": 6839
+          "sha": "8993a3351d71dc5afe4554f22f2706b43d830cd4",
+          "size": 9283
         },
         {
           "path": "tests/unit/test_graph.py",
@@ -7148,9 +7298,14 @@
           "size": 2442
         },
         {
+          "path": "tests/unit/test_m6_github.py",
+          "sha": "c85ec5601637499d5785fc52dc14c34451b9999b",
+          "size": 7569
+        },
+        {
           "path": "tests/unit/test_models.py",
-          "sha": "4d91798aea0166a3a508b11a7509353489dcf3c7",
-          "size": 1399
+          "sha": "94972625bb69a802122fbd5613c4e8380c1c0100",
+          "size": 4474
         },
         {
           "path": "tests/unit/test_observation.py",
@@ -7159,8 +7314,8 @@
         },
         {
           "path": "tests/unit/test_persistent_state.py",
-          "sha": "3fdfad9e238628767d9bce2f37bd842edec0d247",
-          "size": 2220
+          "sha": "2a16e45637ecbc34b0326871584a166b83d6eab2",
+          "size": 3946
         },
         {
           "path": "tests/unit/test_prioritize.py",
@@ -7168,9 +7323,24 @@
           "size": 1512
         },
         {
+          "path": "tests/unit/test_recovery.py",
+          "sha": "f513ca94ce0db44590dcd8af1e4c43c98427106e",
+          "size": 16732
+        },
+        {
+          "path": "tests/unit/test_recursive_admission.py",
+          "sha": "f1e35b131ca586b589bcd96fe1afe1ba0a148331",
+          "size": 17800
+        },
+        {
+          "path": "tests/unit/test_recursive_state.py",
+          "sha": "c48d1f16bc050319fe5ad5b94c555dcee758b01c",
+          "size": 33677
+        },
+        {
           "path": "tests/unit/test_registry.py",
-          "sha": "b7e6d972f32613473b4df22b34e8248e0b674101",
-          "size": 1082
+          "sha": "7baa37b9c848c362d10b9c2a7f51103bef8b7f24",
+          "size": 4204
         },
         {
           "path": "tests/unit/test_schema.py",
@@ -7178,9 +7348,14 @@
           "size": 2135
         },
         {
+          "path": "tests/unit/test_sqlite_connection_lifetime.py",
+          "sha": "d14e5ba4c9fbaf02342390b6d3e92c718cf1aa43",
+          "size": 1848
+        },
+        {
           "path": "tests/unit/test_sqlite_state.py",
-          "sha": "3396437d46df914d52f3a30a92befdf023bf4506",
-          "size": 3737
+          "sha": "46a479e3d4acee6fbc384807d996025abb47314c",
+          "size": 4315
         },
         {
           "path": "tests/unit/test_verify.py",
@@ -7198,6 +7373,11 @@
           "size": 2420
         },
         {
+          "path": "tests/unit/test_worker_reconstruction_schema.py",
+          "sha": "ccb869c6562e030c50a9594f4bf424222e5fb324",
+          "size": 647
+        },
+        {
           "path": "topology/dependencies.yaml",
           "sha": "0d917a3ad2a465ef49cc45add1def92008e50d06",
           "size": 526
@@ -7207,13 +7387,86 @@
       "archived": false
     },
     "rezon": {
-      "head": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
-      "tree_sha": "8a4353736fbbabe5071b80b2ea1b16e39c7a1712",
+      "head": "facced1e651f47979266f25f48cd376275cbb27e",
+      "tree_sha": "1d38dcbfde414e521dca7c14cfee1b1275070f39",
       "blobs": [
+        {
+          "path": ".github/workflows/codeql.yml",
+          "sha": "48425562f50c52c17e3bcc43f5d5ec32ba3d578a",
+          "size": 4616
+        },
         {
           "path": "README.md",
           "sha": "e192b67735a93adde60589ffbf193b0058c5bbaa",
           "size": 37
+        }
+      ],
+      "default_branch": "main",
+      "archived": false
+    },
+    "WorkBridgeMCP": {
+      "head": "12bcbec3a4bda69e8b9361317feb8e9d9d47b6df",
+      "tree_sha": "3fa829d1df4a97f59262fd0302530ba42b64a270",
+      "blobs": [
+        {
+          "path": ".github/workflows/docker-image.yml",
+          "sha": "3f53646d13d79fa69f02dec2b73c625918ad116a",
+          "size": 301
+        },
+        {
+          "path": ".github/workflows/go.yml",
+          "sha": "0b443f376a6a3de600d8cde57dbb383a426e02f1",
+          "size": 523
+        },
+        {
+          "path": ".github/workflows/google-cloudrun-docker.yml",
+          "sha": "4ebba004bb27816b4c1c657ee1b045cd9c8dca54",
+          "size": 3612
+        },
+        {
+          "path": ".github/workflows/google-cloudrun-source.yml",
+          "sha": "f0191b905c21c7082a94a9e3bc2907a7498c459d",
+          "size": 2756
+        },
+        {
+          "path": ".github/workflows/node.js.yml",
+          "sha": "2284b93570365dc670f7a59e5bb0256810645f81",
+          "size": 864
+        },
+        {
+          "path": ".github/workflows/npm-publish-github-packages.yml",
+          "sha": "ea2d329fa02ad58ad9455f9ddbf02a76b4ca3182",
+          "size": 896
+        },
+        {
+          "path": ".github/workflows/npm-publish.yml",
+          "sha": "2a4766d38913eac7de6ddc5ef138ca76d8d2c302",
+          "size": 833
+        },
+        {
+          "path": ".github/workflows/python-app.yml",
+          "sha": "1168bd9ad833dbe8e52ca13af9c2dcc9eeeebbe1",
+          "size": 1186
+        },
+        {
+          "path": ".github/workflows/python-package.yml",
+          "sha": "e56abb6303084744726ba895652e3b70c5c71a71",
+          "size": 1308
+        },
+        {
+          "path": ".github/workflows/python-publish.yml",
+          "sha": "82f8dbd960d2ee51c15733a17ca612a00645c862",
+          "size": 2218
+        },
+        {
+          "path": ".github/workflows/webpack.yml",
+          "sha": "9626ff6d358970dfb1a88ff0693264632e22fae1",
+          "size": 481
+        },
+        {
+          "path": "README.md",
+          "sha": "350011dbe95d3f3fd3b5cb44272adc505c805bd2",
+          "size": 39
         }
       ],
       "default_branch": "main",
