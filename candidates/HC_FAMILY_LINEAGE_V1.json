@@ -1,14 +1,19 @@
 {
   "schema_version": "DISCOVERY_CANDIDATE_V1",
   "candidate_id": "HC_FAMILY_LINEAGE_V1",
-  "title": "Test explicit HC-family lineage/factorization across hc-brain, God Brain, and bt2",
+  "title": "Test explicit HC-family lineage/factorization across hc-brain, Transcendence, God Brain, and bt2",
   "status": "HYPOTHESIS",
-  "claim": "The newly public HC-family repositories contain enough exact byte overlap to justify a bounded lineage/factorization experiment, but not enough evidence to choose a shared dependency or consolidation direction. God Brain is a near-exact HC snapshot at the measured heads; bt2 shares a substantial HC substrate while already carrying material divergence.",
+  "claim": "The public HC-family repositories now have strong evidence of shared historical HC snapshots but still insufficient evidence to choose a shared dependency or consolidation direction. Across every one of the 34 non-main live branch names common to hc-brain, Transcendence, and God Brain, HC contains an earlier parented commit and the later repositories re-root the identical tree as parentless Initialize commits; main is the active divergence surface. bt2 shares substantial HC bytes but does not preserve that inherited branch namespace.",
   "consumers": [
     {
       "repo": "thebrazenbeard/hc-brain",
       "role": "current public HC reference subject; no implied semantic authority over derivatives",
       "ref": "main@618245b54fb923c7a204892c6953ab6d1c5dac57"
+    },
+    {
+      "repo": "thebrazenbeard/transcendence",
+      "role": "later independent repository carrying re-rooted HC branch snapshots plus a materially diverged main surface",
+      "ref": "main@68e7a794d6134e8319121404f31062288dc8d6a3"
     },
     {
       "repo": "thebrazenbeard/god-brain",
@@ -25,7 +30,9 @@
     "Repository identity, authority, scientific purpose, and qualification remain project-owned.",
     "God Brain's simulation/contact research question is not inherited by HC and HC semantics are not automatically authoritative over God Brain.",
     "bt2 archive/training/qualification material must not be imported into hc-brain merely because some blobs are identical.",
-    "No moving-base dependency, repository merge, branch rewrite, or canonical-successor direction follows from static byte overlap."
+    "No moving-base dependency, repository merge, branch rewrite, or canonical-successor direction follows from static byte overlap.",
+    "Historical source-side evidence for HC snapshots does not make hc-brain authoritative over Transcendence or God Brain's later scientific purpose, semantics, runtime, or qualification.",
+    "A later parentless initialization with the same tree SHA does not prove whether God Brain copied directly from hc-brain, from Transcendence, or from an intermediate reconstruction artifact."
   ],
   "promotion_evidence": [
     "At exact main heads, God Brain and hc-brain each contain 300 blobs; 299 same-path blobs are identical and only README.md differs.",
@@ -36,26 +43,33 @@
     "Portfolio-wide default-head scan covers all 253 unordered pairs across the 23 public repositories; only six pairs share any Git blob SHA, and those six are exactly the complete bt2/god-brain/hc-brain/transcendence clique.",
     "All 247 non-HC-family pairs share zero Git blob SHAs at the exact indexed default heads, reducing the likelihood that the measured HC overlap is ordinary repository-template noise.",
     "God Brain ↔ Transcendence: 255 identical same-path blobs / 95.35251012% of the smaller repository byte surface.",
-    "bt2 ↔ Transcendence: 179 identical same-path blobs / 56.68164073% of the smaller repository byte surface."
+    "bt2 ↔ Transcendence: 179 identical same-path blobs / 56.68164073% of the smaller repository byte surface.",
+    "Live branch topology: hc-brain and God Brain share 42 branch names; hc-brain and Transcendence share 35; God Brain and Transcendence share 35; bt2 shares only main by branch name with each.",
+    "Across all 35 live branch names common to hc-brain, God Brain, and Transcendence, 102 of 105 pairwise blob-set comparisons are exact; the only three divergences are the three pairings of main.",
+    "All 34 non-main three-way common branches have identical blob path/SHA sets across hc-brain, Transcendence, and God Brain.",
+    "Commit-object census across those same 34 branches is exception-free: HC has the earlier parented commit; Transcendence later re-roots the identical tree as a parentless `Initialize <branch>` commit; God Brain later still does the same.",
+    "The exhaustive ancestry evidence is recorded in experiments/HC_COMMON_BRANCH_ANCESTRY_V1.json; it supports hc-brain as historical source-side evidence for those snapshots but does not establish the direct transfer path to God Brain."
   ],
   "rejection_conditions": [
     "Exact base-plus-overlay reconstruction cannot reproduce God Brain or bt2 target trees without importing project-specific authority or unrelated archives.",
     "Forward changes show that maintaining a shared base requires more review, adapter, qualification, or migration work than independent copies.",
-    "The apparent overlap is mostly historical snapshot provenance with no continuing maintenance duplication.",
+    "The lineage evidence is historical snapshot provenance only and forward maintenance measurement shows no recurring duplication worth factoring.",
     "A factorized design would reduce either God Brain's or bt2's ability to diverge, falsify HC assumptions, or preserve independent research history."
   ],
   "hostile_review": {
     "status": "NOT_RUN",
     "critical_objections": [
-      "Static overlap is especially vulnerable to post-fork snapshot bias.",
-      "God Brain's near-total duplication may be transient and intentionally useful while the experiment establishes its own architecture.",
-      "bt2's much larger unique surface may make one shared base an attractive but misleading simplification."
+      "Strong source-side lineage does not imply that maintaining a shared moving base is cheaper or safer than independent snapshots.",
+      "Parentless re-rooting proves repository-local history reconstruction but not the direct transfer path between HC, Transcendence, and God Brain.",
+      "The active divergence on main may be exactly where independent repositories are useful; factorization could erase experimental isolation.",
+      "bt2 is byte-related but topologically different enough that forcing it into the same inheritance mechanism may be framework overreach."
     ]
   },
   "notes": [
     "This candidate was generated from the live 2026-09-21 public census refresh rather than the prior seeded experiment queue.",
-    "Next valid experiment: exact pinned-base-plus-overlay reconstruction for God Brain, followed by forward-change maintenance measurement.",
     "bt2 requires provenance/lineage analysis before any reconstruction direction is chosen.",
-    "Full public byte-identity scan isolates a four-repository HC-family cluster, but branch-only/historical/semantic similarity remains outside that source cut."
+    "Full public byte-identity scan isolates a four-repository HC-family cluster, but branch-only/historical/semantic similarity remains outside that source cut.",
+    "Current lineage result: hc-brain is strongly supported as the historical source side for the 34 copied non-main branch snapshots; direct transfer path and architectural factorization remain unresolved.",
+    "Next valid experiment: measure forward maintenance economics from the active main divergence surface before proposing any shared moving base."
   ]
 }
