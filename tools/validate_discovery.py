@@ -459,7 +459,7 @@ def load(path: Path):
 
 def _git_blob_sha1(path: Path) -> str:
     payload = path.read_bytes()
-    header = f"blob {len(payload)}\\0".encode("ascii")
+    header = b"blob " + str(len(payload)).encode("ascii") + b"\0"
     return hashlib.sha1(header + payload).hexdigest()
 
 
