@@ -6,7 +6,11 @@ Non-goal: creation of a mandatory portfolio operating system
 
 ## 1. Purpose
 
-Discovery is an experimental layer for deciding whether repeated mechanisms across independently evolved repositories should be:
+Discovery is the portfolio intake and implementation layer for Vera and Vera Control Plane.
+
+It discovers repositories/capabilities, classifies their appropriate Vera/VCP role, tests reuse and integration hypotheses, prepares bounded implementation work, verifies source-level effects, and hands protected installation/runtime/control effects to their owning authority.
+
+For repeated mechanisms across independently evolved repositories, Discovery also decides whether they should be:
 
 - reused as-is;
 - generalized into a narrow shared substrate;
@@ -14,7 +18,7 @@ Discovery is an experimental layer for deciding whether repeated mechanisms acro
 - rejected as a bad abstraction;
 - reconstructed as a base + overlay relationship.
 
-Discovery records evidence about architecture. It does not become the authority of the projects it observes.
+Discovery does not become semantic or runtime authority merely because it can implement source changes.
 
 ## 2. Preservation rule
 
@@ -143,3 +147,23 @@ The goal is:
 **less duplicated machinery + clearer ownership + preserved independence + smaller blast radius.**
 
 If a consolidation reduces repository count but increases semantic ambiguity or coupling, Discovery should call it a failure.
+
+
+## 7. Implementation plane
+
+Discovery may advance a classified finding into concrete Vera/VCP source integration when current workflow authority permits reversible isolated source work.
+
+Allowed implementation outputs include:
+
+- exact integration plans;
+- runtime-source registry entries;
+- adapters/contracts/schemas/tests;
+- isolated branches and Draft PRs;
+- Project Runner work packets;
+- VCP control-integration review frontiers.
+
+Source implementation must preserve exact target preconditions and effect readback.
+
+A source change never self-promotes into installation, native Project activation, runtime consumption, provider mutation, behavioral qualification, merge authority, identity transfer, memory admission, belief, preference, consent, or phenomenology.
+
+Where active integration work already exists, Discovery must reconcile with that work and produce the missing delta rather than create a parallel collision.
