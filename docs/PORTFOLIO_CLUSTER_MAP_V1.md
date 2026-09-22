@@ -56,6 +56,10 @@ The 2026-09-21 portfolio-wide default-head blob scan strengthens this family cla
 
 This isolates a real byte-identity cluster, but does not decide lineage direction or whether deduplication is beneficial.
 
+The branch/history follow-up narrows lineage further. HC, Transcendence, and God Brain share 35 live branch names. Exhaustive comparison shows all 34 non-`main` common branches carry identical blob snapshots across all three repositories. For every one of those 34, HC holds the earlier parented commit and the later repositories re-root the identical tree as parentless `Initialize <branch>` commits. `main` is the active divergence surface.
+
+This is strong evidence that HC is on the historical source side of those snapshots. It does **not** prove the direct copy path to God Brain, make HC semantically authoritative, or decide whether a moving shared base would reduce maintenance cost.
+
 ## 5. Experiment mechanics
 
 Public anchors: `world-zero`, `mosaic`.
