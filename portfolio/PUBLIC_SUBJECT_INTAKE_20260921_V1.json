@@ -59,11 +59,12 @@
       "repo": "thebrazenbeard/bt2",
       "ref": "main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
       "primary_families": [
-        "COGNITIVE_BASE_OVERLAP"
+        "COGNITIVE_BASE_OVERLAP",
+        "EVIDENCE_PROVENANCE_CUSTODY"
       ],
-      "observed_role": "Repository describing itself as the reusable HC-series Hyperconnectome template, but with substantial unique archive/training/qualification material.",
-      "disposition": "HC_FAMILY_LINEAGE_HYPOTHESIS_GENERATED",
-      "next_question": "Establish provenance/lineage and maintenance economics before selecting any base/overlay or successor direction."
+      "observed_role": "Canonical Build Team Two platform repository initialized from HC-derived source material. Its unchanged Hyperconnectome root README is bootstrap ancestry; exact BT2 migration/provenance artifacts establish the current platform role.",
+      "disposition": "HC_BOOTSTRAP_PROVENANCE_CONTROL_NOT_ACTIVE_HC_FACTOR_CONSUMER",
+      "next_question": "Audit which retained HC-derived files are still live BT2 dependencies before proposing archive/removal; do not infer current HC semantic authority from byte overlap or the stale root README."
     },
     {
       "repo": "thebrazenbeard/god-brain",
