@@ -487,9 +487,13 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
             if not isinstance(subject, dict):
                 errors.append(f"public blob subject invalid: {repo_name}")
                 continue
+            default_branch = subject.get("default_branch")
             head = subject.get("head")
             tree_sha = subject.get("tree_sha")
+            archived = subject.get("archived")
             blobs = subject.get("blobs")
+            if not _nonempty_string(default_branch):
+                errors.append(f"public blob default branch invalid: {repo_name}")
             if not isinstance(head, str) or not re.fullmatch(r"[0-9a-f]{40}", head):
                 errors.append(f"public blob head invalid: {repo_name}")
             if not isinstance(tree_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", tree_sha):
@@ -498,6 +502,8 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
                 errors.append(
                     f"public blob tree sha incorrectly aliases commit sha: {repo_name}"
                 )
+            if type(archived) is not bool:
+                errors.append(f"public blob archived state invalid: {repo_name}")
             if not isinstance(blobs, list):
                 errors.append(f"public blob list invalid: {repo_name}")
                 continue
