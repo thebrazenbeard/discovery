@@ -1,0 +1,204 @@
+{
+  "schema_version": "DISCOVERY_FEDERATED_COHESION_RESEARCH_V1",
+  "status": "PUBLIC_SAFE_HYPOTHESIS_PACKET",
+  "observed_date": "2026-09-22",
+  "inventory_binding": {
+    "total_repositories": 58,
+    "public_repositories": 23,
+    "private_repositories": 35,
+    "privacy_rule": "PUBLIC_REPOSITORIES_MAY_BE_NAMED_PRIVATE_REPOSITORIES_REMAIN_OPAQUE",
+    "discovery_live_base": "vera/discovery-live-census-public-intake-v1-20260921@da9fd6f507d19f8afdfff4e5a313554263e4652e"
+  },
+  "public_subjects": [
+    {
+      "repo": "thebrazenbeard/project-runner",
+      "exact_ref": "main@bc05812b560b4fcde3a362e72fba04c626cafac8",
+      "evidence": [
+        "README.md",
+        "schemas/work-unit.schema.json",
+        "docs/superpowers/plans/2026-09-17-m5-github-backend.md"
+      ],
+      "observed_mechanics": [
+        "typed portfolio orchestration",
+        "semantic work identity and collision grouping",
+        "bounded recursive work",
+        "explicit target authority independent from backend capability",
+        "expected-state mutation preconditions",
+        "post-write readback",
+        "persistent budgets, leases and fencing"
+      ],
+      "preserved_boundary": "ORCHESTRATION_DOES_NOT_MANUFACTURE_TARGET_AUTHORITY_OR_COMPLETION"
+    },
+    {
+      "repo": "thebrazenbeard/wip",
+      "exact_ref": "main@12a7c23dbe0482fd7bfe63659e54526778efef1e",
+      "evidence": [
+        "README.md"
+      ],
+      "observed_mechanics": [
+        "durable checkpoints",
+        "append-only operation journal",
+        "PREPARED_ATTEMPTED_VERIFIED_FAILED_AMBIGUOUS effect lifecycle",
+        "inspect-before-retry recovery",
+        "generation-based optimistic concurrency",
+        "promotion out of WIP rather than authority competition"
+      ],
+      "preserved_boundary": "RECOVERY_RECORDS_DO_NOT_GRANT_EXTERNAL_EFFECT_AUTHORITY"
+    },
+    {
+      "repo": "thebrazenbeard/driftguard",
+      "exact_ref": "main@9894692ff6b549e4378bcc2b8ca46813ff18bf37",
+      "evidence": [
+        "README.md"
+      ],
+      "observed_mechanics": [
+        "versioned behavioral save-state",
+        "exact provenance binding",
+        "monotonic evaluation ledger",
+        "reload decision/effect/acknowledgement/behavioral verification separation",
+        "fail-closed UNKNOWN handling",
+        "ambiguous delivery without blind retry"
+      ],
+      "preserved_boundary": "BEHAVIORAL_EVIDENCE_DOES_NOT_PROVE_HIDDEN_STATE_IDENTITY_OR_RELOAD_CAUSALITY"
+    },
+    {
+      "repo": "thebrazenbeard/discovery",
+      "exact_ref": "vera/discovery-live-census-public-intake-v1-20260921@da9fd6f507d19f8afdfff4e5a313554263e4652e",
+      "evidence": [
+        "README.md",
+        "docs/DISCOVERY_PROTOCOL_V1.md",
+        "docs/PORTFOLIO_CLUSTER_MAP_V1.md",
+        "experiments/EFFECT_ENVELOPE_PRODUCER_BINDINGS_V1.json",
+        "PR #13",
+        "PR #14"
+      ],
+      "observed_mechanics": [
+        "whole-portfolio census with privacy-safe private participation",
+        "candidate promotion gates",
+        "negative controls",
+        "three-producer neutral effect-envelope experiment",
+        "maintenance accounting",
+        "centralization stop condition when no organic parser replacement target exists"
+      ],
+      "preserved_boundary": "DISCOVERY_EVIDENCE_DOES_NOT_GRANT_RUNTIME_OR_DOMAIN_AUTHORITY"
+    }
+  ],
+  "cross_system_observations": [
+    {
+      "id": "COH-001",
+      "state": "OBSERVED",
+      "proposition": "Project Runner, WIP and DriftGuard expose complementary but non-identical state machines.",
+      "support": [
+        "Project Runner centers authorized orchestration, exact mutable preconditions and completion verification.",
+        "WIP centers work-state recovery and ambiguous-effect reconciliation.",
+        "DriftGuard centers behavioral drift evidence and separates reload decisions, effects and later behavioral qualification."
+      ]
+    },
+    {
+      "id": "COH-002",
+      "state": "OBSERVED",
+      "proposition": "A neutral effect envelope can interoperate across Project Runner, WIP and DriftGuard without replacing their native state semantics.",
+      "support": [
+        "Discovery experiments bind all three public producers to one unchanged experimental envelope.",
+        "Producer-native state interpretation remains outside the neutral observer."
+      ]
+    },
+    {
+      "id": "COH-003",
+      "state": "OBSERVED",
+      "proposition": "The existing effect-envelope line did not demonstrate net maintenance reduction sufficient to justify centralization.",
+      "support": [
+        "Discovery PR #13 recorded zero pre-existing source-specific parser lines deleted.",
+        "Discovery PR #14 found no valid organic parser replacement target and set STOP_EFFECT_ENVELOPE_CENTRALIZATION_PENDING_ORGANIC_REPLACEMENT_TARGET."
+      ]
+    },
+    {
+      "id": "COH-004",
+      "state": "OBSERVED",
+      "proposition": "Portfolio completeness and architecture authority are different claims.",
+      "support": [
+        "Discovery currently observes 58 repositories, including 35 private repositories that remain opaque in this public repository.",
+        "Discovery candidate states explicitly do not grant merge, deployment, installation or semantic authority elsewhere."
+      ]
+    }
+  ],
+  "architecture_hypothesis": {
+    "id": "FEDERATED_COHESION_V1",
+    "state": "HYPOTHESIS",
+    "proposition": "Portfolio cohesion should be implemented as federated interoperability between independently authoritative systems, with shared contracts promoted only when real consumers prove simplification.",
+    "share_first": [
+      "exact subject and provenance bindings",
+      "neutral transport/interchange envelopes where producer-native semantics remain authoritative",
+      "receipts and currentness evidence",
+      "failure and retry boundaries",
+      "portable validation contracts",
+      "portfolio discovery indexes"
+    ],
+    "do_not_centralize_by_default": [
+      "domain truth",
+      "identity or relationship semantics",
+      "native state machines",
+      "target authority",
+      "runtime currentness",
+      "provider effect authority",
+      "project-specific qualification criteria"
+    ],
+    "mandatory_global_runtime": "NOT_JUSTIFIED",
+    "fallback_rule": "ANY_SHARED_MECHANISM_MUST_HAVE_A_PROJECT_LOCAL_FALLBACK_OR_ROLLBACK_PATH",
+    "promotion_ceiling": "HYPOTHESIS_ONLY"
+  },
+  "interface_rules": [
+    "OBSERVATION_IS_NOT_AUTHORITY",
+    "COORDINATION_IS_NOT_AUTHORIZATION",
+    "TRANSPORT_IS_NOT_SEMANTIC_OWNERSHIP",
+    "WRITE_SUCCESS_IS_NOT_COMPLETION",
+    "DECISION_IS_NOT_EFFECT",
+    "EFFECT_IS_NOT_BEHAVIORAL_QUALIFICATION",
+    "SHARED_ENVELOPE_IS_NOT_SHARED_NATIVE_STATE_MACHINE",
+    "SOURCE_INTEGRATION_IS_NOT_RUNTIME_INSTALLATION"
+  ],
+  "private_portfolio_boundary": {
+    "named_private_repositories": [],
+    "private_count": 35,
+    "allowed_use": "AGGREGATE_OR_OPAQUE_PARTICIPATION_ONLY",
+    "note": "This packet intentionally does not publish private repository identities or private mechanism details."
+  },
+  "hostile_review": {
+    "status": "PASS_WITH_BLOCKING_OBJECTIONS",
+    "objections": [
+      {
+        "id": "HR-001",
+        "severity": "HIGH",
+        "challenge": "A layered architecture diagram can become architecture theater unless it predicts concrete deletions, failure isolation or reduced operational burden.",
+        "required_falsifier": "Demonstrate one organic cross-project integration where the federated contract measurably removes duplicated glue or prevents a failure class without creating a mandatory central dependency."
+      },
+      {
+        "id": "HR-002",
+        "severity": "HIGH",
+        "challenge": "Existing boundaries can be cited circularly to justify federation even when a stronger shared abstraction might be better.",
+        "required_falsifier": "Permit a candidate shared mechanism to win if two independent consumers show lower total complexity, preserved rollback and no authority collapse."
+      },
+      {
+        "id": "HR-003",
+        "severity": "MEDIUM",
+        "challenge": "Public evidence underrepresents 35 private repositories.",
+        "required_falsifier": "Use approved opaque/private attestation mechanisms before claiming the hypothesis generalizes across the private cohort."
+      }
+    ]
+  },
+  "next_experiments": [
+    {
+      "id": "FED-EXP-1",
+      "question": "Can one organic cross-project handoff use exact provenance, authority and effect evidence without any participant adopting another participant's native state machine?",
+      "success": "At least two independent consumers use the contract and measurable duplicated glue or reconciliation work is removed.",
+      "failure": "Adapters add equal or greater maintenance burden, authority semantics blur, or any consumer becomes dependent on a central runtime for basic local operation."
+    },
+    {
+      "id": "FED-EXP-2",
+      "question": "Can a shared currentness receipt distinguish source, package, install, route, runtime consumption, effect and qualification without promoting one repository into global authority?",
+      "success": "Two independent projects validate the same receipt shape while retaining project-owned currentness decisions.",
+      "failure": "The shared receipt requires project-specific semantics or becomes a de facto global truth store."
+    }
+  ],
+  "claim_ceiling": "PUBLIC_SAFE_RESEARCH_HYPOTHESIS_ONLY_NO_CANDIDATE_PROMOTION_NO_RUNTIME_AUTHORITY"
+}
