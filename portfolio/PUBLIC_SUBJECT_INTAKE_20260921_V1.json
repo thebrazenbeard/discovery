@@ -3,7 +3,21 @@
   "observed_date": "2026-09-21",
   "prior_public_cut": {
     "observed_date": "2026-09-19",
-    "public_count": 12
+    "public_count": 12,
+    "public_repositories": [
+      "discovery",
+      "driftguard",
+      "hc-brain",
+      "mosaic",
+      "on-theo",
+      "project-runner",
+      "rezon",
+      "roots",
+      "testament",
+      "transcendence",
+      "wip",
+      "world-zero"
+    ]
   },
   "current_public_cut": {
     "observed_date": "2026-09-21",
