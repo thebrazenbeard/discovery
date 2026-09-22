@@ -43,8 +43,8 @@
         "INDUSTRIAL_DIAGNOSTIC_CHAIN"
       ],
       "observed_role": "Brownfield industrial adaptive intelligence/reconstruction subject with explicit read-only shadow-mode and safety/action-gateway separation.",
-      "disposition": "PUBLIC_FAMILY_ANCHOR_NEEDS_SECOND_REAL_HANDOFF_SUBJECT",
-      "next_question": "Find an existing evidence/replay producer whose output ABIL can consume without importing acquisition authority or production-control semantics."
+      "disposition": "NO_SECOND_PUBLIC_INDUSTRIAL_HANDOFF_SUBJECT_FOUND_CURRENT_CUT",
+      "next_question": "Keep the public handoff candidate held until a second industrial evidence/replay subject appears or a privacy-preserving opaque private consumer is independently attested."
     },
     {
       "repo": "thebrazenbeard/bt2",
@@ -119,8 +119,8 @@
         "VERA_RUNTIME_CONTROL"
       ],
       "observed_role": "Public Vera-node connectivity/transport subject; main README currently establishes only a minimal connection role.",
-      "disposition": "NEEDS_DEEPER_SOURCE_REVIEW",
-      "next_question": "Separate reusable transport/session mechanics from Vera-specific identity, authority, continuity, and deployment semantics."
+      "disposition": "TRANSPORT_PACKAGE_BOUNDARY_HYPOTHESIS_GENERATED",
+      "next_question": "Test a neutral source/build/install/runtime-currentness handoff record without importing VeraPort session authority into packaging."
     },
     {
       "repo": "thebrazenbeard/vera-synology",
@@ -129,8 +129,8 @@
         "VERA_RUNTIME_CONTROL"
       ],
       "observed_role": "Synology packaging/deployment subject for Vera.",
-      "disposition": "NEEDS_DEEPER_SOURCE_REVIEW",
-      "next_question": "Identify packaging/install/currentness mechanics that are reusable without making a device target or install route authoritative."
+      "disposition": "TRANSPORT_PACKAGE_BOUNDARY_HYPOTHESIS_GENERATED",
+      "next_question": "Validate a VeraMesh source/payload handoff while retaining DSM package/install/migration authority locally."
     },
     {
       "repo": "thebrazenbeard/voss",
@@ -139,8 +139,8 @@
         "EVIDENCE_PROVENANCE_CUSTODY"
       ],
       "observed_role": "Forensic auditor/reviewer subject.",
-      "disposition": "NEEDS_DEEPER_SOURCE_REVIEW",
-      "next_question": "Test whether review receipts, evidence binding, and exact-head audit mechanics overlap with existing Discovery candidates without centralizing reviewer judgment."
+      "disposition": "INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE",
+      "next_question": "Revisit only when public source exposes an audit/review contract, receipt, exact-head binding, or implementation that can be compared mechanically."
     }
   ],
   "anti_cherry_pick_result": {
