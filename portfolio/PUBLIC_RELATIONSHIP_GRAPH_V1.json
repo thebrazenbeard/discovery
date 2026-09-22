@@ -478,6 +478,47 @@
       ]
     },
     {
+      "edge_id": "SEMANTICATLAS_UNVTRSLR_PROVENANCE_MECHANICS",
+      "from": "semanticatlas",
+      "to": "unvtrslr",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "semantic-claim provenance, unresolved/rival state, evidence lineage, and explicit claim ceilings without shared ontology",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/semanticatlas:main@5669a727b870a490ecee748b2cd712a2fc4a54c5",
+        "thebrazenbeard/unvtrslr:main@903d79c6e47bb9f73bd7700edd35315777e9f5d1"
+      ],
+      "falsifiers": [
+        "A lossless common record requires Semantic Atlas ontology semantics or UNVTRSLR grounding/evaluator semantics.",
+        "The shared representation collapses source/inference/history distinctions or operational/semantic claim ceilings.",
+        "Adapters add more semantic translation and maintenance burden than the common mechanic removes."
+      ],
+      "notes": [
+        "Source-bound comparison recorded in experiments/SEMANTIC_GROUNDING_PROVENANCE_SURFACE_V1.json.",
+        "No shared semantic ontology, truth authority, or runtime dependency is proposed."
+      ]
+    },
+    {
+      "edge_id": "SPM_SEMANTIC_PROVENANCE_THIRD_CONSUMER",
+      "from": "spm",
+      "to": "semanticatlas",
+      "relation": "NEEDS_MORE_EVIDENCE",
+      "scope": "provenance sensitivity, semantic scope fidelity, ambiguity/conflict preservation, and currentness as possible third-consumer evaluation mechanics",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/spm:main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+        "thebrazenbeard/semanticatlas:main@5669a727b870a490ecee748b2cd712a2fc4a54c5"
+      ],
+      "falsifiers": [
+        "SPM evaluation needs only benchmark scoring and no reusable provenance/claim-state record.",
+        "Using the candidate mechanic biases SPM toward Semantic Atlas's representation rather than testing model architecture independently.",
+        "A third-consumer adapter cannot remain smaller and semantically narrower than the native evaluation logic."
+      ],
+      "notes": [
+        "SPM is not counted as evidence of reuse yet; it is the intended independent third-consumer falsifier."
+      ]
+    },
+    {
       "edge_id": "WORLDZERO_MOSAIC_HARNESS_SEPARATION",
       "from": "world-zero",
       "to": "mosaic",
