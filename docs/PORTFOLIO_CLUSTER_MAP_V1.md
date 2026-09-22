@@ -2,7 +2,7 @@
 
 Status: **OBSERVED CLUSTERING / HYPOTHESES ONLY**
 
-Discovery now treats the full accessible portfolio as the search space. At the 2026-09-19 cut, that is 57 repositories: 12 public and 45 private.
+Discovery now treats the full accessible portfolio as the search space. At the 2026-09-21 cut, that is 58 repositories: 23 public and 35 private.
 
 Because this repository is public, private repository names and private mechanism details are deliberately omitted. Their presence still affects counts, overlap analysis, and candidate generation.
 
@@ -20,7 +20,7 @@ Strong current hypothesis: Project Runner can own generic durable execution whil
 
 ## 2. Evidence, provenance, and custody
 
-Public anchors: `roots`, `testament`, `on-theo`.
+Public anchors: `roots`, `testament`, `on-theo`, `semanticatlas`, `voss`.
 
 Private participants include systems concerned with evidence storage, semantic provenance, historical retrieval, industrial evidence, and currentness.
 
@@ -30,7 +30,7 @@ The failure condition is a common record format silently becoming a common ontol
 
 ## 3. Coordination and transport
 
-The strongest participants are private at this cut, so this public map records the family without publishing their names.
+Public anchor: `vera-mesh`. Private participants remain part of the family.
 
 Question: can message envelopes, routing, delivery receipts, dead-letter handling, and device transport share a neutral protocol without making the transport layer an authority system?
 
@@ -38,7 +38,7 @@ A candidate abstraction must first prove itself in a real cross-project flow.
 
 ## 4. Cognitive-base overlap
 
-Public anchors: `hc-brain`, `transcendence`.
+Public anchors: `hc-brain`, `transcendence`, `god-brain`, `bt2`.
 
 The prior portfolio audit observed substantial same-path byte identity between these systems. Discovery must remeasure against exact experiment heads rather than carrying an old count as current truth.
 
@@ -71,7 +71,7 @@ Scientific hypotheses, evaluators, and validity criteria remain owned by their p
 
 ## 6. Vera runtime and control
 
-Public anchor: `driftguard`.
+Public anchors: `driftguard`, `vera-mesh`, `vera-synology`.
 
 Most members of this cluster are private. The cluster includes runtime, control-plane, persistence/currentness, hardware/device, and model-routing concerns.
 
@@ -79,7 +79,7 @@ Discovery should aggressively look for shared *mechanics* here while treating Ve
 
 ## 7. Industrial diagnostic chain
 
-This cluster is private at the current public surface.
+Public anchor: `abil`. Private participants remain part of the broader industrial chain.
 
 Working architectural question:
 
@@ -93,7 +93,7 @@ No actuation or production authority follows from architectural reuse.
 
 ## 8. Domain negative controls
 
-Public anchors: `on-theo`, `testament`.
+Public anchors: `on-theo`, `testament`, `Attune`.
 
 A good shared substrate should work underneath specialized domains without flattening their evidence classes, canon rules, scientific questions, privacy models, or authorship.
 
@@ -113,6 +113,40 @@ Each must be converted into a bounded candidate with exact refs and explicit rej
 
 ## Hostile review of this map
 
-> **HOSTILE REVIEWER:** Clustering 57 repositories can create the illusion of objectivity while still embedding the classifier's assumptions. Counts and digests prove inventory coverage, not that the chosen families are correct. Discovery must permit repositories to belong to multiple clusters, permit new clusters to emerge, and record failed classifications rather than forcing everything into the initial taxonomy.
+> **HOSTILE REVIEWER:** Clustering 58 repositories can create the illusion of objectivity while still embedding the classifier's assumptions. Counts and digests prove inventory coverage, not that the chosen families are correct. Discovery must permit repositories to belong to multiple clusters, permit new clusters to emerge, and record failed classifications rather than forcing everything into the initial taxonomy.
 
 Accepted. The family map is explicitly non-exclusive and revisable.
+
+
+## 10. Semantic grounding and provenance
+
+Public anchors: `semanticatlas`, `spm`, `unvtrslr`.
+
+Question: can semantic hypothesis/provenance records, uncertainty representation, rival-hypothesis lineage, and adversarial evaluation mechanics be shared without creating a universal ontology or forcing a single model architecture?
+
+Default posture:
+
+`SHARE_PROVENANCE_AND_EVALUATION_MECHANICS_NOT_ONTOLOGY`
+
+The strongest immediate falsifier is to identify one minimal record/evaluation contract independently needed by at least two projects, then prove each project's native semantic model remains strictly richer and authoritative.
+
+## 11. 2026-09-21 public-surface refresh
+
+Visibility changes are not architectural promotion. They do, however, permit exact public-safe source binding where Discovery previously had to stay aggregate or opaque.
+
+Newly nameable subjects include:
+
+- `god-brain` and `bt2` for HC-family lineage and duplication testing;
+- `abil` for industrial brownfield diagnostics/reconstruction;
+- `semanticatlas`, `spm`, and `unvtrslr` for semantic provenance and grounding mechanics;
+- `vera-mesh` and `vera-synology` for transport/runtime/deployment separation;
+- `noema` as an independently evolving predictive-cognition research subject;
+- `voss` as an audit/review subject;
+- `Attune` as a negative control against universalizing relationship/identity semantics.
+
+Exact HC-family measurement at the refreshed cut:
+
+- `god-brain/main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5` vs `hc-brain/main@618245b54fb923c7a204892c6953ab6d1c5dac57`: 299/300 identical same-path blobs; only `README.md` differs; identical bytes are 99.54245136% of the measured HC byte surface.
+- `bt2/main@30e81cadd94fae117a7f6875523c03251c7c9f6e` vs the same HC head: 178 identical same-path blobs, 10 changed same-path blobs, 329 bt2-only blobs, and 112 HC-only blobs; identical bytes are 46.14031461% of the measured HC byte surface.
+
+These measurements establish duplication, not consolidation. The generated `HC_FAMILY_LINEAGE_V1` candidate remains a HYPOTHESIS until exact reconstruction and forward-maintenance evidence exist.
