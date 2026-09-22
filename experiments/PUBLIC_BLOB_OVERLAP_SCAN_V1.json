@@ -5220,5 +5220,23 @@
       "a_only_paths": 29,
       "b_only_paths": 302
     }
-  ]
+  ],
+  "summary": {
+    "total_pairs": 253,
+    "hc_family_members": [
+      "bt2",
+      "god-brain",
+      "hc-brain",
+      "transcendence"
+    ],
+    "hc_family_pair_count": 6,
+    "pairs_with_any_identical_same_path_blob": 6,
+    "pairs_with_any_shared_blob_sha_any_path": 6,
+    "all_byte_identity_pairs_are_inside_hc_family": true,
+    "non_hc_pair_count": 247,
+    "max_non_hc_identical_same_path_blobs": 0,
+    "max_non_hc_shared_blob_sha_count": 0,
+    "bounded_result": "PUBLIC_DEFAULT_HEAD_BYTE_IDENTITY_ISOLATES_ONE_FOUR_REPO_HC_FAMILY_CLUSTER",
+    "caveat": "This scan binds only the exact indexed default-branch heads. It does not cover open PR/branch-only bytes, historical commits, generated artifacts absent from Git, or semantic similarity without byte identity."
+  }
 }
