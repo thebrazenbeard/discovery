@@ -55,5 +55,24 @@
     "unclassified_since_prior_cut": "One repository exists beyond the prior classified 57-repository cut; this refresh does not silently assign it a role without a dedicated classification pass."
   },
   "completeness_rule": "A repository does not need to be a consolidation candidate to be included. Exclusion from a particular experiment must be explicit rather than inferred from absence.",
-  "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current."
+  "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current.",
+  "inventory_digest_validation": {
+    "public_names_sha256": "SOURCE_RECOMPUTED_FROM_PUBLIC_REPOSITORIES",
+    "private_names_sha256": "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE",
+    "all_names_sha256": "EXTERNAL_LIVE_INVENTORY_OBSERVATION_NOT_SOURCE_RECOMPUTABLE"
+  },
+  "source_validation_scope": {
+    "source_validated": [
+      "public repository count equals public_repositories length",
+      "total count equals public + private",
+      "public_names_sha256 recomputes from lexicographically sorted public_repositories",
+      "census observed_date is joined to graph/intake current cut"
+    ],
+    "externally_observed_only": [
+      "private_names_sha256",
+      "all_names_sha256",
+      "private repository names themselves"
+    ],
+    "claim_ceiling": "PUBLIC_SOURCE_VALIDATES_PUBLIC_SET_AND_ARITHMETIC_ONLY_PRIVATE_AND_ALL_DIGESTS_REQUIRE_EXTERNAL_LIVE_INVENTORY_EVIDENCE"
+  }
 }
