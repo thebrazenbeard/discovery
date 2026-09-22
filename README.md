@@ -86,3 +86,7 @@ The second-pass source review narrows those frontiers further:
 - `voss` remains `INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE` rather than being promoted from a role label alone.
 
 See `experiments/PUBLIC_INTAKE_SECOND_PASS_V1.*` for the source-bound dispositions.
+
+A portfolio-wide exact blob scan now binds all 23 public repositories at exact default heads and computes all 253 unordered pairs. On that cut, only six pairs share any Git blob SHA at all, and those six are exactly the complete `bt2` / `god-brain` / `hc-brain` / `transcendence` clique. The other 247 pairs share zero blob SHAs. Discovery recomputes this result in `tools/validate_discovery.py`; it is byte-identity evidence, not lineage or consolidation authority.
+
+See `experiments/PUBLIC_BLOB_OVERLAP_SCAN_V1.*` and `experiments/public_blob_index_v1/`.
