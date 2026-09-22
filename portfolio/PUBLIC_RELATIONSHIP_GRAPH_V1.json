@@ -2,9 +2,9 @@
   "schema_version": "DISCOVERY_RELATIONSHIP_GRAPH_V1",
   "status": "PUBLIC_SAFE_LIVE_GRAPH_HYPOTHESES",
   "inventory_binding": {
-    "observed_date": "2026-09-21",
-    "total_count": 58,
-    "all_names_sha256": "c854d8891e87272f7bc1bb6530aedc339581a51a6be6026efb087c6be08e7a2d"
+    "observed_date": "2026-09-22",
+    "total_count": 59,
+    "all_names_sha256": "68fca652ca0688b7871c352987ffe68b55d4c0af521802704920b058e2fa943c"
   },
   "nodes": [
     {
@@ -123,7 +123,7 @@
         "35_PRIVATE_REPOSITORIES"
       ],
       "notes": [
-        "Node intentionally hides private repository identities; count bound to the 2026-09-21 census."
+        "Node intentionally hides private repository identities; count bound to the 2026-09-22 census."
       ]
     },
     {
@@ -262,6 +262,18 @@
         "SYSTEMS_SIMULATION"
       ],
       "notes": []
+    },
+    {
+      "id": "WorkBridgeMCP",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "WORKSTATION_BRIDGE",
+        "RUNTIME_BOUNDARY_CANDIDATE"
+      ],
+      "notes": [
+        "Current main is a stub; usable implementation is tracked separately in WorkBridgeMCP PR #5. Presence does not establish installation or runtime consumption."
+      ]
     }
   ],
   "edges": [
