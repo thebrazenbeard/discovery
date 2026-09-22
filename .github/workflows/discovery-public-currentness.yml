@@ -12,8 +12,10 @@ on:
       - "schemas/**"
       - "tools/check_public_currentness.py"
       - "tools/trace_public_impact.py"
+      - "tools/refresh_public_blob_evidence.py"
       - "tests/test_public_currentness_watch.py"
       - "tests/test_public_impact_radar.py"
+      - "tests/test_public_blob_reproducer.py"
       - ".github/workflows/discovery-public-currentness.yml"
   workflow_dispatch:
   schedule:
@@ -52,6 +54,22 @@ jobs:
             echo "Public currentness acquisition failed before a report was written."               | tee -a "$GITHUB_STEP_SUMMARY"
           fi
 
+          repro_code=0
+          if [[ "$currentness_code" -eq 0 ]]; then
+            set +e
+            python tools/refresh_public_blob_evidence.py --check               | tee public-blob-reproducibility.json
+            repro_code=${PIPESTATUS[0]}
+            set -e
+
+            {
+              echo
+              echo "### Discovery public blob evidence reproducibility"
+              echo '~~~json'
+              cat public-blob-reproducibility.json
+              echo '~~~'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
           if [[ "$currentness_code" -eq 1 && -f public-currentness.json ]]; then
             python tools/trace_public_impact.py               public-currentness.json               --output public-impact.json
 
@@ -65,4 +83,7 @@ jobs:
             } >> "$GITHUB_STEP_SUMMARY"
           fi
 
-          exit "$currentness_code"
+          if [[ "$currentness_code" -ne 0 ]]; then
+            exit "$currentness_code"
+          fi
+          exit "$repro_code"
