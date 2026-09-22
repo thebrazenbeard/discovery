@@ -1,0 +1,66 @@
+{
+  "schema": "DISCOVERY_COGNITIVE_PUBLIC_OVERLAP_REFRESH_V1",
+  "observed_date": "2026-09-21",
+  "method": {
+    "comparison": "Recursive Git tree blob comparison by exact repository path and Git blob SHA.",
+    "byte_share_denominator": "Sum of hc-brain blob sizes at the exact measured hc-brain head.",
+    "caveat": "Git blob identity proves byte identity at the measured paths; it does not prove shared semantic authority, desired dependency direction, original copy lineage, or future maintenance benefit."
+  },
+  "subjects": {
+    "hc-brain": {
+      "ref": "main@618245b54fb923c7a204892c6953ab6d1c5dac57",
+      "files": 300,
+      "total_blob_bytes": 2191461
+    },
+    "god-brain": {
+      "ref": "main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+      "files": 300
+    },
+    "bt2": {
+      "ref": "main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "files": 517
+    }
+  },
+  "results": {
+    "god_brain_vs_hc": {
+      "common_paths": 300,
+      "identical_same_path_blobs": 299,
+      "changed_same_path_blobs": 1,
+      "changed_paths": [
+        "README.md"
+      ],
+      "god_brain_only_blobs": 0,
+      "hc_only_blobs": 0,
+      "identical_blob_bytes": 2181434,
+      "identical_share_of_hc_bytes": 0.995424513600744,
+      "bounded_result": "NEAR_EXACT_HC_SNAPSHOT_WITH_PROJECT_SPECIFIC_README_AT_MEASURED_HEADS"
+    },
+    "bt2_vs_hc": {
+      "common_paths": 188,
+      "identical_same_path_blobs": 178,
+      "changed_same_path_blobs": 10,
+      "bt2_only_blobs": 329,
+      "hc_only_blobs": 112,
+      "identical_blob_bytes": 1011147,
+      "identical_share_of_hc_bytes": 0.46140314612032796,
+      "changed_same_path_examples": [
+        "README.md",
+        "affect/README.md",
+        "basic operating instructions/BOOTSTRAP_RECOVERY_AND_SAFE_DEGRADATION.md",
+        "docs/REPOSITORY_MAP.md",
+        "specs/HC_BOOTSTRAP_RECOVERY_V1.yaml"
+      ],
+      "bounded_result": "SUBSTANTIAL_SHARED_HC_SUBSTRATE_WITH_MATERIAL_DIVERGENCE"
+    }
+  },
+  "claim_ceiling": [
+    "OBSERVED byte duplication is established at the exact measured heads.",
+    "No base-plus-overlay reconstruction has yet been executed for God Brain or bt2.",
+    "No dependency, canonical-successor relation, merge direction, semantic authority transfer, or repository consolidation is established."
+  ],
+  "next_falsifiers": [
+    "Reconstruct God Brain from exact hc-brain base plus explicit overlay and require exact target-tree equality.",
+    "Trace bt2/hc-brain common-blob provenance and measure whether a factorized base removes more maintenance than it creates.",
+    "Replay forward changes rather than relying only on a single static overlap snapshot."
+  ]
+}
