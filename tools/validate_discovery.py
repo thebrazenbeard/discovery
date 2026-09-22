@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import hashlib
 import json
 import math
 import re
@@ -52,6 +53,40 @@ EXACT_SUBJECT_REF = re.compile(
 PLACEHOLDER_REPO_PREFIXES = ("TBD", "UNKNOWN", "PLACEHOLDER")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
 PRIVATE_OPAQUE_REPO = re.compile(r"^PRIVATE_OPAQUE_[0-9a-f]{16}$")
+PRIVATE_ATTESTATION_REF = re.compile(r"^private-attestation:sha256:[0-9a-f]{64}$")
+PUBLIC_SOURCE_REF = re.compile(
+    r"^thebrazenbeard/([^:]+):.+@[0-9a-f]{40}$"
+)
+PUBLIC_NAME_DIGEST_ALGORITHM = (
+    "SHA-256 over lexicographically sorted repository names, UTF-8, "
+    "one name per line with trailing newline"
+)
+PRIOR_PUBLIC_CUT_BINDING = {
+    "repository": "thebrazenbeard/discovery",
+    "commit": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+    "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
+    "blob_sha": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
+    "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1",
+}
+PRIOR_PUBLIC_OBSERVED_DATE = "2026-09-19"
+PRIOR_PUBLIC_NAMES_SHA256 = (
+    "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
+)
+PRIOR_PUBLIC_REPOSITORIES = (
+    "discovery",
+    "driftguard",
+    "hc-brain",
+    "mosaic",
+    "on-theo",
+    "project-runner",
+    "rezon",
+    "roots",
+    "testament",
+    "transcendence",
+    "wip",
+    "world-zero",
+)
+OPAQUE_PRIVATE_NODE_ID = "private-cohort"
 PRIVATE_ATTESTATION_FIELDS = {
     "schema",
     "commitment_scheme",
@@ -93,6 +128,151 @@ PRIVATE_ATTESTATION_REF = re.compile(r"^private-attestation:sha256:[0-9a-f]{64}$
 PUBLIC_GRAPH_REPO_REF = re.compile(
     r"^thebrazenbeard/([^:]+):(.+)$"
 )
+
+
+def _canonical_name_digest(names: list[str] | tuple[str, ...]) -> str:
+    payload = "".join(f"{name}\n" for name in sorted(names)).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def _public_safe_opaque_source_ref(value, public_repos: set[str]) -> bool:
+    if not isinstance(value, str):
+        return False
+    if PRIVATE_ATTESTATION_REF.fullmatch(value):
+        return True
+    match = PUBLIC_SOURCE_REF.fullmatch(value)
+    return bool(match and match.group(1) in public_repos)
+
+
+def _validate_census_currentness_bindings(
+    census: dict,
+    graph: dict,
+    public_intake: dict,
+) -> list[str]:
+    errors: list[str] = []
+    public_list = census.get("public_repositories")
+    if not isinstance(public_list, list) or any(
+        not _nonempty_string(item) for item in public_list
+    ):
+        return ["census public repository list invalid"]
+    if len(set(public_list)) != len(public_list):
+        errors.append("census public repository list contains duplicates")
+
+    counts = census.get("counts", {})
+    total = counts.get("total")
+    public_count = counts.get("public")
+    private_count = counts.get("private")
+    if public_count != len(public_list):
+        errors.append("census public count does not match published public list")
+    if not all(type(value) is int and value >= 0 for value in (total, public_count, private_count)):
+        errors.append("census counts must be nonnegative integers")
+    elif total != public_count + private_count:
+        errors.append("census total must equal public plus private")
+
+    digests = census.get("inventory_digests", {})
+    if digests.get("algorithm") != PUBLIC_NAME_DIGEST_ALGORITHM:
+        errors.append("census inventory digest algorithm mismatch")
+    recomputed_public = _canonical_name_digest(public_list)
+    if digests.get("public_names_sha256") != recomputed_public:
+        errors.append("census public names digest mismatch")
+    for field in ("private_names_sha256", "all_names_sha256"):
+        value = digests.get(field)
+        if not isinstance(value, str) or not SHA256.fullmatch(value):
+            errors.append(f"census {field} malformed")
+
+    digest_validation = census.get("inventory_digest_validation", {})
+    if digest_validation != {
+        "public_names_sha256": "SOURCE_RECOMPUTED",
+        "private_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED",
+        "all_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED",
+    }:
+        errors.append("census inventory digest validation ceiling mismatch")
+
+    observed_date = census.get("observed_date")
+    binding = graph.get("inventory_binding", {})
+    if binding.get("observed_date") != observed_date:
+        errors.append("graph observed_date does not match census")
+    if public_intake.get("observed_date") != observed_date:
+        errors.append("public subject intake observed_date does not match census")
+
+    current_cut = public_intake.get("current_public_cut", {})
+    if current_cut.get("observed_date") != observed_date:
+        errors.append("public subject intake current cut date mismatch")
+    if current_cut.get("public_count") != public_count:
+        errors.append("public subject intake current count mismatch")
+    if current_cut.get("public_names_sha256") != recomputed_public:
+        errors.append("public subject intake current public digest mismatch")
+
+    prior_cut = public_intake.get("prior_public_cut", {})
+    prior_list = prior_cut.get("public_repositories")
+    expected_prior = list(PRIOR_PUBLIC_REPOSITORIES)
+    if prior_cut.get("source_binding") != PRIOR_PUBLIC_CUT_BINDING:
+        errors.append("public subject intake prior source binding mismatch")
+    if prior_cut.get("observed_date") != PRIOR_PUBLIC_OBSERVED_DATE:
+        errors.append("public subject intake prior observed_date mismatch")
+    if prior_cut.get("public_count") != len(PRIOR_PUBLIC_REPOSITORIES):
+        errors.append("public subject intake prior count not bound to historical census")
+    if prior_cut.get("public_names_sha256") != PRIOR_PUBLIC_NAMES_SHA256:
+        errors.append("public subject intake prior digest identity mismatch")
+    if prior_list != expected_prior:
+        errors.append("public subject intake prior list diverges from historical census")
+    if isinstance(prior_list, list):
+        if _canonical_name_digest(prior_list) != PRIOR_PUBLIC_NAMES_SHA256:
+            errors.append("public subject intake prior list digest mismatch")
+
+    return errors
+
+
+def _validate_opaque_graph_privacy(census: dict, graph: dict) -> list[str]:
+    errors: list[str] = []
+    public_repos = set(census.get("public_repositories", []))
+    private_count = census.get("counts", {}).get("private")
+    observed_date = census.get("observed_date")
+    nodes = graph.get("nodes", [])
+    opaque_nodes = [
+        node for node in nodes
+        if isinstance(node, dict) and node.get("privacy") == "PRIVATE_OPAQUE"
+    ]
+    if len(opaque_nodes) != 1:
+        errors.append("public graph must contain exactly one opaque private cohort node")
+        return errors
+
+    node = opaque_nodes[0]
+    if node.get("id") != OPAQUE_PRIVATE_NODE_ID:
+        errors.append("opaque private cohort id invalid")
+    if node.get("kind") != "OPAQUE_PRIVATE_COHORT":
+        errors.append("opaque private cohort kind invalid")
+    if node.get("labels") != [f"{private_count}_PRIVATE_REPOSITORIES"]:
+        errors.append("opaque private cohort label must contain aggregate count only")
+    expected_note = (
+        "Node intentionally hides private repository identities; count bound to the "
+        f"{observed_date} census."
+    )
+    if node.get("notes") != [expected_note]:
+        errors.append("opaque private cohort notes must match public-safe template")
+
+    for other in nodes:
+        if not isinstance(other, dict):
+            continue
+        if other.get("kind") == "OPAQUE_PRIVATE_COHORT" and other.get("privacy") != "PRIVATE_OPAQUE":
+            errors.append("opaque private cohort kind requires PRIVATE_OPAQUE privacy")
+
+    for edge in graph.get("edges", []):
+        if not isinstance(edge, dict):
+            continue
+        if OPAQUE_PRIVATE_NODE_ID not in {edge.get("from"), edge.get("to")}:
+            continue
+        refs = edge.get("source_refs")
+        if not isinstance(refs, list) or not refs:
+            errors.append(f"opaque private edge source refs invalid: {edge.get('edge_id')}")
+            continue
+        for ref in refs:
+            if not _public_safe_opaque_source_ref(ref, public_repos):
+                errors.append(
+                    f"opaque private edge has unsafe source ref: {edge.get('edge_id')}"
+                )
+
+    return errors
 
 
 def _validate_private_attestation(
@@ -710,6 +890,8 @@ def validate() -> list[str]:
     census = load(CENSUS)
     graph = load(GRAPH)
     public_intake = load(PUBLIC_INTAKE)
+    errors.extend(_validate_census_currentness_bindings(census, graph, public_intake))
+    errors.extend(_validate_opaque_graph_privacy(census, graph))
     errors.extend(_validate_public_blob_scan(census))
     errors.extend(_validate_census_contract(census, graph, public_intake))
     errors.extend(
