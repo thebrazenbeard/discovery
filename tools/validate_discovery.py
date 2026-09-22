@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 import re
 from pathlib import Path
 
@@ -9,6 +10,11 @@ ROOT = Path(__file__).resolve().parents[1]
 CENSUS = ROOT / "portfolio" / "PORTFOLIO_CENSUS_V1.json"
 GRAPH = ROOT / "portfolio" / "PUBLIC_RELATIONSHIP_GRAPH_V1.json"
 PUBLIC_INTAKE = ROOT / "portfolio" / "PUBLIC_SUBJECT_INTAKE_20260921_V1.json"
+PUBLIC_BLOB_SHARDS = (
+    ROOT / "experiments" / "public_blob_index_v1" / "SHARD_A.json",
+    ROOT / "experiments" / "public_blob_index_v1" / "SHARD_B.json",
+)
+PUBLIC_BLOB_SCAN = ROOT / "experiments" / "PUBLIC_BLOB_OVERLAP_SCAN_V1.json"
 CANDIDATES = ROOT / "candidates"
 
 VALID_RELATIONS = {
@@ -261,11 +267,261 @@ def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+
+def _validate_public_blob_scan(census: dict) -> list[str]:
+    errors: list[str] = []
+    public_repos = set(census.get("public_repositories", []))
+    indexed: dict[str, dict] = {}
+
+    for path in PUBLIC_BLOB_SHARDS:
+        shard = load(path)
+        if shard.get("schema") != "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1":
+            errors.append(f"unexpected public blob shard schema: {path.name}")
+            continue
+        repositories = shard.get("repositories")
+        if not isinstance(repositories, dict):
+            errors.append(f"public blob shard repositories invalid: {path.name}")
+            continue
+        for repo_name, subject in repositories.items():
+            if repo_name in indexed:
+                errors.append(f"public blob repo duplicated across shards: {repo_name}")
+                continue
+            if repo_name not in public_repos:
+                errors.append(f"public blob repo not in census: {repo_name}")
+            if not isinstance(subject, dict):
+                errors.append(f"public blob subject invalid: {repo_name}")
+                continue
+            head = subject.get("head")
+            tree_sha = subject.get("tree_sha")
+            blobs = subject.get("blobs")
+            if not isinstance(head, str) or not re.fullmatch(r"[0-9a-f]{40}", head):
+                errors.append(f"public blob head invalid: {repo_name}")
+            if not isinstance(tree_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", tree_sha):
+                errors.append(f"public blob tree sha invalid: {repo_name}")
+            if not isinstance(blobs, list):
+                errors.append(f"public blob list invalid: {repo_name}")
+                continue
+            seen_paths: set[str] = set()
+            for index, blob in enumerate(blobs):
+                if not isinstance(blob, dict):
+                    errors.append(f"public blob entry invalid: {repo_name}:{index}")
+                    continue
+                blob_path = blob.get("path")
+                blob_sha = blob.get("sha")
+                size = blob.get("size")
+                if not _nonempty_string(blob_path):
+                    errors.append(f"public blob path invalid: {repo_name}:{index}")
+                elif blob_path in seen_paths:
+                    errors.append(f"public blob path duplicated: {repo_name}:{blob_path}")
+                else:
+                    seen_paths.add(blob_path)
+                if not isinstance(blob_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", blob_sha):
+                    errors.append(f"public blob sha invalid: {repo_name}:{index}")
+                if type(size) is not int or size < 0:
+                    errors.append(f"public blob size invalid: {repo_name}:{index}")
+            indexed[repo_name] = subject
+
+    if set(indexed) != public_repos:
+        errors.append("public blob shards must exactly cover current public census")
+
+    prepared: dict[str, dict] = {}
+    for repo_name, subject in indexed.items():
+        blobs = subject.get("blobs", [])
+        by_path = {blob["path"]: blob for blob in blobs if isinstance(blob, dict) and "path" in blob}
+        by_sha: dict[str, int] = {}
+        total = 0
+        for blob in blobs:
+            if not isinstance(blob, dict):
+                continue
+            size = blob.get("size")
+            sha = blob.get("sha")
+            if type(size) is int:
+                total += size
+            if isinstance(sha, str) and sha not in by_sha and type(size) is int:
+                by_sha[sha] = size
+        prepared[repo_name] = {
+            "by_path": by_path,
+            "by_sha": by_sha,
+            "total": total,
+            "files": len(blobs),
+        }
+
+    scan = load(PUBLIC_BLOB_SCAN)
+    if scan.get("schema") != "DISCOVERY_PUBLIC_BLOB_OVERLAP_SCAN_V1":
+        errors.append("unexpected public blob overlap scan schema")
+        return errors
+
+    expected_pair_count = len(public_repos) * (len(public_repos) - 1) // 2
+    if scan.get("repository_count") != len(public_repos):
+        errors.append("public blob scan repository count mismatch")
+    if scan.get("pair_count") != expected_pair_count:
+        errors.append("public blob scan pair count mismatch")
+
+    scan_repositories = scan.get("repositories")
+    if not isinstance(scan_repositories, dict) or set(scan_repositories) != public_repos:
+        errors.append("public blob scan repository set mismatch")
+    else:
+        for repo_name in public_repos:
+            scan_subject = scan_repositories[repo_name]
+            indexed_subject = indexed.get(repo_name, {})
+            prep = prepared.get(repo_name, {})
+            if scan_subject.get("head") != indexed_subject.get("head"):
+                errors.append(f"public blob scan head mismatch: {repo_name}")
+            if scan_subject.get("tree_sha") != indexed_subject.get("tree_sha"):
+                errors.append(f"public blob scan tree mismatch: {repo_name}")
+            if scan_subject.get("files") != prep.get("files"):
+                errors.append(f"public blob scan file count mismatch: {repo_name}")
+            if scan_subject.get("total_blob_bytes") != prep.get("total"):
+                errors.append(f"public blob scan byte count mismatch: {repo_name}")
+
+    expected_pairs: dict[frozenset[str], dict] = {}
+    names = sorted(public_repos)
+    for index, a in enumerate(names):
+        for b in names[index + 1:]:
+            pa = prepared[a]
+            pb = prepared[b]
+            common = identical = changed = same_bytes = 0
+            for blob_path, left in pa["by_path"].items():
+                right = pb["by_path"].get(blob_path)
+                if right is None:
+                    continue
+                common += 1
+                if left.get("sha") == right.get("sha"):
+                    identical += 1
+                    same_bytes += left.get("size", 0)
+                else:
+                    changed += 1
+            small_sha, large_sha = (
+                (pa["by_sha"], pb["by_sha"])
+                if len(pa["by_sha"]) <= len(pb["by_sha"])
+                else (pb["by_sha"], pa["by_sha"])
+            )
+            shared_sha_count = 0
+            shared_sha_bytes = 0
+            for sha, size in small_sha.items():
+                if sha in large_sha:
+                    shared_sha_count += 1
+                    shared_sha_bytes += size
+            smaller_bytes = min(pa["total"], pb["total"])
+            expected_pairs[frozenset((a, b))] = {
+                "a_files": pa["files"],
+                "b_files": pb["files"],
+                "a_bytes": pa["total"],
+                "b_bytes": pb["total"],
+                "common_paths": common,
+                "identical_same_path_blobs": identical,
+                "changed_same_path_blobs": changed,
+                "identical_same_path_bytes": same_bytes,
+                "identical_same_path_share_of_smaller_bytes": (
+                    same_bytes / smaller_bytes if smaller_bytes else 0.0
+                ),
+                "shared_blob_sha_count": shared_sha_count,
+                "shared_blob_sha_bytes_unique": shared_sha_bytes,
+                "shared_blob_sha_share_of_smaller_bytes": (
+                    shared_sha_bytes / smaller_bytes if smaller_bytes else 0.0
+                ),
+                "a_only_paths": pa["files"] - common,
+                "b_only_paths": pb["files"] - common,
+                "a_head": indexed[a].get("head"),
+                "b_head": indexed[b].get("head"),
+                "a_name": a,
+                "b_name": b,
+            }
+
+    observed_pairs = scan.get("pairs")
+    if not isinstance(observed_pairs, list):
+        errors.append("public blob scan pairs invalid")
+        observed_pairs = []
+    seen_pairs: set[frozenset[str]] = set()
+    for record in observed_pairs:
+        if not isinstance(record, dict):
+            errors.append("public blob scan pair record invalid")
+            continue
+        a = record.get("a")
+        b = record.get("b")
+        key = frozenset((a, b)) if isinstance(a, str) and isinstance(b, str) else frozenset()
+        if len(key) != 2 or key not in expected_pairs:
+            errors.append(f"public blob scan unexpected pair: {a!r}<->{b!r}")
+            continue
+        if key in seen_pairs:
+            errors.append(f"public blob scan duplicate pair: {a}<->{b}")
+            continue
+        seen_pairs.add(key)
+        expected = expected_pairs[key]
+
+        # Pair orientation in the stored scan determines which side owns a_* fields.
+        if a != expected["a_name"]:
+            expected = {
+                **expected,
+                "a_files": expected["b_files"],
+                "b_files": expected["a_files"],
+                "a_bytes": expected["b_bytes"],
+                "b_bytes": expected["a_bytes"],
+                "a_only_paths": expected["b_only_paths"],
+                "b_only_paths": expected["a_only_paths"],
+                "a_head": expected["b_head"],
+                "b_head": expected["a_head"],
+            }
+
+        integer_fields = (
+            "a_files", "b_files", "a_bytes", "b_bytes", "common_paths",
+            "identical_same_path_blobs", "changed_same_path_blobs",
+            "identical_same_path_bytes", "shared_blob_sha_count",
+            "shared_blob_sha_bytes_unique", "a_only_paths", "b_only_paths",
+        )
+        for field in integer_fields:
+            if record.get(field) != expected[field]:
+                errors.append(f"public blob scan metric mismatch: {a}<->{b}:{field}")
+        for field in (
+            "identical_same_path_share_of_smaller_bytes",
+            "shared_blob_sha_share_of_smaller_bytes",
+        ):
+            value = record.get(field)
+            if not isinstance(value, (int, float)) or not math.isclose(
+                float(value), float(expected[field]), rel_tol=1e-12, abs_tol=1e-15
+            ):
+                errors.append(f"public blob scan ratio mismatch: {a}<->{b}:{field}")
+        if record.get("a_head") != expected["a_head"] or record.get("b_head") != expected["b_head"]:
+            errors.append(f"public blob scan pair head mismatch: {a}<->{b}")
+
+    if seen_pairs != set(expected_pairs):
+        errors.append("public blob scan does not contain every public repository pair")
+
+    hc_family = {"bt2", "god-brain", "hc-brain", "transcendence"}
+    identity_pairs = [
+        record for record in observed_pairs
+        if isinstance(record, dict) and record.get("shared_blob_sha_count", 0) > 0
+    ]
+    if len(identity_pairs) != 6:
+        errors.append("public blob scan expected exactly six byte-identity pairs")
+    for record in identity_pairs:
+        if {record.get("a"), record.get("b")} - hc_family:
+            errors.append("public blob scan byte identity escaped HC family")
+    non_hc = [
+        record for record in observed_pairs
+        if isinstance(record, dict)
+        and not ({record.get("a"), record.get("b")} <= hc_family)
+    ]
+    if any(record.get("shared_blob_sha_count", 0) != 0 for record in non_hc):
+        errors.append("public blob scan non-HC shared blob found")
+
+    summary = scan.get("summary", {})
+    if summary.get("total_pairs") != expected_pair_count:
+        errors.append("public blob scan summary pair count mismatch")
+    if summary.get("non_hc_pair_count") != expected_pair_count - 6:
+        errors.append("public blob scan summary non-HC pair count mismatch")
+    if summary.get("all_byte_identity_pairs_are_inside_hc_family") is not True:
+        errors.append("public blob scan summary HC isolation flag missing")
+
+    return errors
+
+
 def validate() -> list[str]:
     errors: list[str] = []
     census = load(CENSUS)
     graph = load(GRAPH)
     public_intake = load(PUBLIC_INTAKE)
+    errors.extend(_validate_public_blob_scan(census))
 
     if graph.get("schema_version") != "DISCOVERY_RELATIONSHIP_GRAPH_V1":
         errors.append("unexpected graph schema")
