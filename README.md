@@ -35,12 +35,13 @@ See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md).
 
 Discovery's search space is the **whole accessible portfolio**, not a hand-picked list of favored projects.
 
-Current inventory cut:
+Current inventory cut (2026-09-21):
 
-- 57 repositories observed;
-- 12 public repositories named in the public census;
-- 45 private repositories included in the inventory calculation but intentionally not named here;
-- exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names.
+- 58 repositories observed;
+- 23 public repositories named in the public census;
+- 35 private repositories included in the inventory calculation but intentionally not named here;
+- exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names;
+- this refresh invalidates the prior 2026-09-19 57/12/45 census as a currentness claim while preserving it as historical evidence.
 
 See:
 
@@ -61,3 +62,17 @@ They are the first experiments, not the complete scope.
 The broader census identifies additional candidate families around execution integrity, evidence/provenance, coordination transport, cognitive-base overlap, experimental mechanics, runtime/control separation, industrial diagnostics, and domain-specific negative controls.
 
 These remain hypotheses until individual candidates earn promotion under the Discovery Protocol.
+
+
+## 2026-09-21 public-surface intake
+
+The latest census made eleven previously unnamed public repositories available for direct public-safe classification. Discovery has not treated visibility change as architectural promotion.
+
+The first exact remeasurement found:
+
+- `god-brain` vs `hc-brain`: 299/300 same-path blobs identical; only `README.md` differs at the measured heads; identical bytes equal 99.54245136% of the measured HC byte surface.
+- `bt2` vs `hc-brain`: 178 identical same-path blobs, 10 changed same-path blobs, plus substantial unique surfaces on both sides; identical bytes equal 46.14031461% of the measured HC byte surface.
+
+Those observations generated `HC_FAMILY_LINEAGE_V1` as a HYPOTHESIS, not a consolidation decision.
+
+The same intake exposes public anchors for previously opaque families including industrial diagnostics (`abil`), semantic grounding/provenance (`semanticatlas`, `spm`, `unvtrslr`), and Vera transport/runtime packaging (`vera-mesh`, `vera-synology`).
