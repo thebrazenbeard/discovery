@@ -332,7 +332,7 @@
       "from": "discovery",
       "to": "project-runner",
       "relation": "PROVIDER_CONSUMER",
-      "scope": "exact privacy-safe repository census bytes used only as portfolio drift/currentness input",
+      "scope": "Exact privacy-safe Discovery census bytes used only as replaceable drift/currentness input; the real 57→58 transition demonstrates stale rejection but not automatic refresh to the current census.",
       "evidence_state": "EXPERIMENTING",
       "source_refs": [
         "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
@@ -344,7 +344,10 @@
         "The binding fails to detect a changed census artifact or accepts altered bytes."
       ],
       "notes": [
-        "Hosted Project Runner workflow run 35509678751 succeeded on the exact consumer source."
+        "Hosted Project Runner workflow run 35509678751 succeeded on the exact consumer source.",
+        "Real transition result: Project Runner PR #29 classifies the old PR #23 57-repository binding as BLOCKED_STALE_EXTERNAL_CURRENTNESS.",
+        "No inspected Project Runner subject binds Discovery's current 58-repository census blob 1b46d741...; stale rejection therefore does not equal refresh.",
+        "Same total count is insufficient for synchronized currentness: Project Runner's 2026-09-20 split was 14 public / 44 private, while Discovery's 2026-09-21 cut is 23 public / 35 private."
       ]
     },
     {
