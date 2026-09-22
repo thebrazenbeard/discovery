@@ -236,7 +236,14 @@ def compare_public_subjects(
                     "observed": after.get(field),
                 }
         if changes:
-            moved.append({"name": name, "changes": changes})
+            moved.append(
+                {
+                    "name": name,
+                    "expected_subject": before,
+                    "observed_subject": after,
+                    "changes": changes,
+                }
+            )
 
     reasons: list[str] = []
     if added or removed:
@@ -252,6 +259,8 @@ def compare_public_subjects(
         "observed_repository_count": len(observed),
         "added": added,
         "removed": removed,
+        "added_subjects": [observed[name] for name in added],
+        "removed_subjects": [expected[name] for name in removed],
         "moved": moved,
         "private_currentness": "NOT_OBSERVED",
         "claim_ceiling": (
