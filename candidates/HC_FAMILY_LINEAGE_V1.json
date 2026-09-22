@@ -1,9 +1,9 @@
 {
   "schema_version": "DISCOVERY_CANDIDATE_V1",
   "candidate_id": "HC_FAMILY_LINEAGE_V1",
-  "title": "Test explicit HC-family lineage/factorization across hc-brain, God Brain, and bt2",
+  "title": "Test explicit HC-family lineage/factorization across hc-brain, God Brain, and Transcendence",
   "status": "HYPOTHESIS",
-  "claim": "The newly public HC-family repositories contain enough exact byte overlap to justify a bounded lineage/factorization experiment, but not enough evidence to choose a shared dependency or consolidation direction. God Brain is a near-exact HC snapshot at the measured heads; bt2 shares a substantial HC substrate while already carrying material divergence.",
+  "claim": "Exact byte and live-branch-topology evidence justifies a bounded lineage/factorization experiment across hc-brain, God Brain, and Transcendence. bt2 retains substantial HC-derived bytes but source-controlled BT2 provenance establishes a canonical Build Team Two platform role; bt2 is therefore retained as a historical-bootstrap control rather than an active HC factorization consumer.",
   "consumers": [
     {
       "repo": "thebrazenbeard/hc-brain",
@@ -16,46 +16,50 @@
       "ref": "main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5"
     },
     {
-      "repo": "thebrazenbeard/bt2",
-      "role": "public repository describing itself as a reusable HC-series template but materially diverged from hc-brain",
-      "ref": "main@30e81cadd94fae117a7f6875523c03251c7c9f6e"
+      "repo": "thebrazenbeard/transcendence",
+      "role": "independent HC-derived subject with measured exact reconstruction/overlay evidence and strong current byte overlap",
+      "ref": "main@68e7a794d6134e8319121404f31062288dc8d6a3"
     }
   ],
   "preserved_boundaries": [
     "Repository identity, authority, scientific purpose, and qualification remain project-owned.",
     "God Brain's simulation/contact research question is not inherited by HC and HC semantics are not automatically authoritative over God Brain.",
-    "bt2 archive/training/qualification material must not be imported into hc-brain merely because some blobs are identical.",
-    "No moving-base dependency, repository merge, branch rewrite, or canonical-successor direction follows from static byte overlap."
+    "Transcendence remains independently governed; prior pinned-base reconstruction evidence does not create moving-base inheritance.",
+    "bt2 is a canonical Build Team Two platform with HC-derived bootstrap ancestry; its retained HC bytes must not be used to infer current HC semantic authority.",
+    "No moving-base dependency, repository merge, branch rewrite, archive/delete action, or canonical-successor direction follows from static byte overlap."
   ],
   "promotion_evidence": [
     "At exact main heads, God Brain and hc-brain each contain 300 blobs; 299 same-path blobs are identical and only README.md differs.",
     "The God Brain/HC identical blobs account for 2,181,434 of 2,191,461 hc-brain blob bytes (99.54245136%).",
-    "At exact main heads, bt2 and hc-brain share 188 paths; 178 same-path blobs are identical and 10 differ.",
-    "The bt2/HC identical blobs account for 1,011,147 of 2,191,461 hc-brain blob bytes (46.14031461%); bt2 also has 329 unique blobs and hc-brain 112 unique blobs.",
-    "Full measurement method and exact subjects are recorded in experiments/COGNITIVE_PUBLIC_OVERLAP_REFRESH_V1.json.",
+    "Current Transcendence main has 263 file paths, all present in current hc-brain; 255 are byte-identical and eight differ.",
+    "God Brain ↔ Transcendence measures 255 identical same-path blobs / 95.35251012% of the smaller repository byte surface.",
+    "HC, God Brain, and Transcendence share a 35-branch live namespace while exact same-named branch heads have diverged.",
     "Portfolio-wide default-head scan covers all 253 unordered pairs across the 23 public repositories; only six pairs share any Git blob SHA, and those six are exactly the complete bt2/god-brain/hc-brain/transcendence clique.",
-    "All 247 non-HC-family pairs share zero Git blob SHAs at the exact indexed default heads, reducing the likelihood that the measured HC overlap is ordinary repository-template noise.",
-    "God Brain ↔ Transcendence: 255 identical same-path blobs / 95.35251012% of the smaller repository byte surface.",
-    "bt2 ↔ Transcendence: 179 identical same-path blobs / 56.68164073% of the smaller repository byte surface."
+    "bt2 ↔ HC still measures 178 identical same-path blobs and 46.14031461% of hc-brain bytes, but BT2 source provenance shows that overlap is bootstrap/history evidence rather than sufficient evidence of a current HC-template role.",
+    "experiments/BT2_HC_BOOTSTRAP_PROVENANCE_V1.json binds the BT2 role correction to exact source history and preserves the static overlap measurements."
   ],
   "rejection_conditions": [
-    "Exact base-plus-overlay reconstruction cannot reproduce God Brain or bt2 target trees without importing project-specific authority or unrelated archives.",
+    "Exact base-plus-overlay reconstruction cannot reproduce God Brain or Transcendence target trees without importing project-specific authority or unrelated state.",
     "Forward changes show that maintaining a shared base requires more review, adapter, qualification, or migration work than independent copies.",
-    "The apparent overlap is mostly historical snapshot provenance with no continuing maintenance duplication.",
-    "A factorized design would reduce either God Brain's or bt2's ability to diverge, falsify HC assumptions, or preserve independent research history."
+    "The apparent HC/God Brain/Transcendence overlap is mostly historical snapshot provenance with no continuing maintenance duplication.",
+    "A factorized design would reduce either God Brain's or Transcendence's ability to diverge, falsify HC assumptions, or preserve independent research history.",
+    "New exact source evidence shows bt2 intentionally retains an active HC-template semantic role after its canonical Build Team Two platform declarations; until then bt2 remains a provenance control rather than an active consumer."
   ],
   "hostile_review": {
     "status": "NOT_RUN",
     "critical_objections": [
       "Static overlap is especially vulnerable to post-fork snapshot bias.",
+      "A large shared branch-name namespace is a provenance signal, not proof of ancestry direction or shared desired maintenance.",
       "God Brain's near-total duplication may be transient and intentionally useful while the experiment establishes its own architecture.",
-      "bt2's much larger unique surface may make one shared base an attractive but misleading simplification."
+      "Transcendence's prior overlay success does not prove that the same factorization economics apply to God Brain.",
+      "bt2 demonstrates why copied bytes and a stale root README cannot by themselves define current repository role."
     ]
   },
   "notes": [
     "This candidate was generated from the live 2026-09-21 public census refresh rather than the prior seeded experiment queue.",
-    "Next valid experiment: exact pinned-base-plus-overlay reconstruction for God Brain, followed by forward-change maintenance measurement.",
-    "bt2 requires provenance/lineage analysis before any reconstruction direction is chosen.",
-    "Full public byte-identity scan isolates a four-repository HC-family cluster, but branch-only/historical/semantic similarity remains outside that source cut."
+    "Next valid active-lineage experiment: exact pinned-HC-plus-overlay reconstruction for current God Brain, followed by forward-change maintenance measurement.",
+    "Transcendence remains a distinct active lineage subject with prior exact reconstruction evidence and fresh current-head overlap measurements.",
+    "bt2 is retained outside the active consumer set as a historical-bootstrap/provenance control; any cleanup of HC-derived BT2 material requires a separate dependency audit.",
+    "Full public byte-identity scan still isolates the four-repository byte-overlap clique; this correction changes semantic interpretation, not the measured blob facts."
   ]
 }
