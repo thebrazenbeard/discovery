@@ -2,11 +2,46 @@
   "schema_version": "DISCOVERY_RELATIONSHIP_GRAPH_V1",
   "status": "PUBLIC_SAFE_INITIAL_GRAPH_HYPOTHESES",
   "inventory_binding": {
-    "observed_date": "2026-09-19",
-    "total_count": 57,
-    "all_names_sha256": "43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd"
+    "observed_date": "2026-09-21",
+    "total_count": 58,
+    "all_names_sha256": "c854d8891e87272f7bc1bb6530aedc339581a51a6be6026efb087c6be08e7a2d"
   },
   "nodes": [
+    {
+      "id": "abil",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "INDUSTRIAL_DIAGNOSTIC_CANDIDATE"
+      ],
+      "notes": [
+        "Brownfield intelligence research surface; safety and actuation authority remain project-owned."
+      ]
+    },
+    {
+      "id": "Attune",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "RELATIONSHIP_AI",
+        "UNCLASSIFIED_PUBLIC_RESEARCH_SURFACE"
+      ],
+      "notes": [
+        "Added by the 2026-09-21 census refresh; no reuse relation is asserted by membership alone."
+      ]
+    },
+    {
+      "id": "bt2",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_BASE_CANDIDATE",
+        "ROLE_DISCREPANCY_REQUIRES_REVIEW"
+      ],
+      "notes": [
+        "Current README describes a Hyperconnectome template while installed BT2 Project instructions assign this repository a Build Team Two source role; discrepancy is preserved, not resolved here."
+      ]
+    },
     {
       "id": "discovery",
       "kind": "REPOSITORY",
@@ -28,6 +63,17 @@
       "notes": []
     },
     {
+      "id": "god-brain",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_INTEGRATION_RESEARCH"
+      ],
+      "notes": [
+        "Evidence-disciplined cognitive integration research; no metaphysical claim is promoted."
+      ]
+    },
+    {
       "id": "hc-brain",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -44,6 +90,17 @@
         "EXPERIMENT_SYSTEM"
       ],
       "notes": []
+    },
+    {
+      "id": "noema",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_ARCHITECTURE_RESEARCH"
+      ],
+      "notes": [
+        "Architecture remains exploratory; no implementation architecture is presumed accepted."
+      ]
     },
     {
       "id": "on-theo",
@@ -83,6 +140,28 @@
       "notes": []
     },
     {
+      "id": "semanticatlas",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "SEMANTIC_PROVENANCE"
+      ],
+      "notes": [
+        "Provenance-aware semantic mapping research surface."
+      ]
+    },
+    {
+      "id": "spm",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "SEMANTIC_PRAGMATIC_MODEL_RESEARCH"
+      ],
+      "notes": [
+        "Research-foundation model concept; no implemented model is inferred."
+      ]
+    },
+    {
       "id": "testament",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -100,6 +179,51 @@
         "COGNITIVE_OVERLAY_CANDIDATE"
       ],
       "notes": []
+    },
+    {
+      "id": "unvtrslr",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "SEMANTIC_MEDIATION_RESEARCH"
+      ],
+      "notes": [
+        "Semantic-bootstrap research surface; universality is a question, not an established property."
+      ]
+    },
+    {
+      "id": "vera-mesh",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COORDINATION_TRANSPORT_CANDIDATE",
+        "VERA_RUNTIME_CONTROL_CANDIDATE"
+      ],
+      "notes": [
+        "Connectivity surface only; transport does not imply identity or authority continuity."
+      ]
+    },
+    {
+      "id": "vera-synology",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "VERA_RUNTIME_CONTROL_CANDIDATE"
+      ],
+      "notes": [
+        "Packaging/deployment surface; no currentness or identity claim follows."
+      ]
+    },
+    {
+      "id": "voss",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "REVIEW_VALIDATION_CANDIDATE"
+      ],
+      "notes": [
+        "Forensic audit/review surface; reviewer output remains evidence rather than automatic authority."
+      ]
     },
     {
       "id": "wip",
@@ -126,10 +250,10 @@
       "kind": "OPAQUE_PRIVATE_COHORT",
       "privacy": "PRIVATE_OPAQUE",
       "labels": [
-        "45_PRIVATE_REPOSITORIES"
+        "35_PRIVATE_REPOSITORIES"
       ],
       "notes": [
-        "Node intentionally hides private repository identities."
+        "Node intentionally hides private repository identities; count refreshed from the 2026-09-21 census."
       ]
     }
   ],
