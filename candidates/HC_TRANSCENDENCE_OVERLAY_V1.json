@@ -3,7 +3,7 @@
   "candidate_id": "HC_TRANSCENDENCE_OVERLAY_V1",
   "title": "Reconstruct Transcendence as exact HC base plus overlay",
   "status": "EXPERIMENTING",
-  "claim": "Current Transcendence can be reconstructed exactly from a pinned HC base plus an explicit overlay. One real HC main→PR22 base upgrade has low overlay churn, and a bounded replay of ten real HC shared-path transitions shows mostly convergent behavior, but future maintenance economics and unbiased conflict rates remain unproven.",
+  "claim": "Transcendence is exactly reconstructible from a pinned HC base plus an explicit overlay on both the historical qualified subject and the exact current main heads. Current-main reconstruction requires 37 deletions, 8 same-path object overrides, and 0 additions, reproducing the exact Transcendence root tree. Adoption still depends on forward maintenance economics and review/qualification burden.",
   "consumers": [
     {
       "repo": "thebrazenbeard/hc-brain",
@@ -24,6 +24,9 @@
     "HC-only paths are explicit deletions; later HC cognitive/runtime features do not silently enter Transcendence."
   ],
   "promotion_evidence": [
+    "Exact current-main reconstruction: hc-brain@618245b54fb923c7a204892c6953ab6d1c5dac57 tree 623f272aa9060ad9e222a5cfaea801082bb5a562 transforms to transcendence@68e7a794d6134e8319121404f31062288dc8d6a3 tree c8d16282fa65b14962757539773a78803613bd6a using 37 deletions, 8 same-path overrides, and 0 additions.",
+    "The current-main reconstruction inherits 255 unchanged file objects; canonical recursive Git-tree hashing recomputes both bound source trees and the reconstructed target root exactly.",
+    "Executable source-controlled verification is in experiments/HC_TRANSCENDENCE_CURRENT_TREE_RECONSTRUCTION_V1.json, experiments/hc_transcendence_current_reconstruction_v1/HC_BASE_FILEMAP.json, tools/validate_hc_transcendence_current_reconstruction.py, and hostile regression tests.",
     "Stable main↔main comparison: 255 of 263 Transcendence files are identical at the same paths, accounting for 1,718,257 of 1,802,005 target bytes (95.352510121%).",
     "Current HC PR #22 ↔ Transcendence PR #7 comparison: 254 of 288 Transcendence files are identical at the same paths, accounting for 1,706,224 of 1,992,586 target bytes (85.628625314%).",
     "Current exact overlay payload is 34 files / 286,362 bytes (14.371374686% of target bytes), plus 39 explicit deletions.",
@@ -52,6 +55,8 @@
     ]
   },
   "notes": [
+    "CURRENT_MAIN_EXACT_RECONSTRUCTION is established on the bound 2026-09-21 main heads: 255 inherited files + 8 overrides + 37 deletes + 0 additions reproduce target tree c8d16282fa65b14962757539773a78803613bd6a.",
+    "This current-head result strengthens reconstructibility but does not change the candidate above EXPERIMENTING because sustained forward maintenance economics remain unproven.",
     "EXACT_PINNED_BASE_PLUS_OVERLAY_RECONSTRUCTION is established at Discovery PR #15 exact head.",
     "Current frontier: 85.628625314% of Transcendence target bytes are identical to HC; overlay payload is 14.371374686% plus explicit deletions.",
     "First real base-upgrade result: LOW_CHURN_FIRST_UPGRADE; 8/73 current instructions change, payload bytes remain constant.",
