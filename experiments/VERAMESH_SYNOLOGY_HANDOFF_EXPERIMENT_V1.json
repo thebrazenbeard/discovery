@@ -1,0 +1,120 @@
+{
+  "schema": "DISCOVERY_VERAMESH_SYNOLOGY_HANDOFF_EXPERIMENT_V1",
+  "observed_date": "2026-09-22",
+  "exact_subjects": {
+    "vera_mesh": {
+      "repo": "thebrazenbeard/vera-mesh",
+      "exact_ref": "PR12@9bffc57930587bf74a12657bbeaa913474ab5574",
+      "source_contracts": [
+        {
+          "path": "protocol/veraport/v1/chatgpt-mcp-profile.md",
+          "blob": "20d5d65ca638dc22fe9831e581a28145bb2803f7"
+        },
+        {
+          "path": "protocol/veraport/v1/mutation-ledger-profile.md",
+          "blob": "4ff75a1f3026b55c34028468f597a29d6cc84fc5"
+        },
+        {
+          "path": "protocol/veraport/v1/lappy-service-edge-profile.md",
+          "blob": "7f7af9e5ce1424bdd8fc1151657341ba20c10ef1"
+        },
+        {
+          "path": "docs/synology-edge-integration-gate-20260919.md",
+          "blob": "249c57c334dfa66f559a8f16eb58b8fbdc14f81e"
+        }
+      ]
+    },
+    "vera_synology": {
+      "repo": "thebrazenbeard/vera-synology",
+      "exact_ref": "PR3@553e3a637833c5469f6b99fbc4d597755a0c9a5e",
+      "package_sources": [
+        {
+          "path": "SOURCE_MANIFEST.json",
+          "blob": "1ff985635f4b04b648e7a164d0fa16b2a6823660"
+        },
+        {
+          "path": "tools/verify_spk.py",
+          "blob": "63ae207a3482a9dbc53b157576809b298fbd6066"
+        },
+        {
+          "path": "tools/make_source_manifest.py",
+          "blob": "2cc0934e5fa3d70c46d4800713a5f7c80a5d733d"
+        },
+        {
+          "path": "SOURCE_PATHS.json",
+          "blob": "7131c4d7d3748c135fab7a5a4a7f76f484fc1065"
+        },
+        {
+          "path": "payload/bin/veramesh_edge.py",
+          "blob": "3d61fdd322a3f225e8c609a2a622b757d8315403"
+        }
+      ]
+    }
+  },
+  "proposed_minimal_handoff_record": {
+    "producer_repo": "thebrazenbeard/vera-mesh",
+    "producer_exact_ref": "9bffc57930587bf74a12657bbeaa913474ab5574",
+    "consumer_repo": "thebrazenbeard/vera-synology",
+    "consumer_exact_ref": "553e3a637833c5469f6b99fbc4d597755a0c9a5e",
+    "consumer_source_manifest_blob": "1ff985635f4b04b648e7a164d0fa16b2a6823660",
+    "payload_path": "payload/bin/veramesh_edge.py",
+    "payload_git_blob": "3d61fdd322a3f225e8c609a2a622b757d8315403",
+    "payload_sha256_from_source_manifest": "1374d263213fceb125a4052b4e306e5200d61621087b313ef119182dd8df8dca",
+    "payload_bytes": 12303,
+    "payload_mode": "0755",
+    "source_state": "SOURCE_IMPLEMENTATION_CANDIDATE",
+    "build_state": "NOT_EXECUTED_BY_DISCOVERY",
+    "install_state": "NOT_OBSERVED_BY_DISCOVERY",
+    "route_state": "NOT_INFERRED",
+    "live_effect_state": "NOT_INFERRED"
+  },
+  "native_validation_observation": {
+    "synology_source_manifest_entry_fields": [
+      "bytes",
+      "path",
+      "sha256",
+      "source_mode",
+      "type"
+    ],
+    "synology_verifier_proves": [
+      "local package/source byte identity",
+      "local package/source mode identity",
+      "local package/source path-set identity",
+      "closed SPK metadata profile"
+    ],
+    "synology_verifier_does_not_bind": [
+      "VeraMesh producer repository identity",
+      "VeraMesh producer exact commit/ref",
+      "VeraMesh route/current-session state",
+      "VeraMesh live effect state"
+    ],
+    "exact_inspected_synology_files_with_no_vera_mesh_repo_or_producer_head": [
+      "SOURCE_MANIFEST.json",
+      "tools/verify_spk.py",
+      "tools/make_source_manifest.py",
+      "SOURCE_PATHS.json",
+      "README.md",
+      "docs/TOOLKIT_QUALIFICATION.md"
+    ],
+    "current_native_cross_repo_binding_present": false
+  },
+  "result": {
+    "local_synology_source_to_package_crossbind": "SUPPORTED_BY_SOURCE",
+    "exact_veramesh_producer_to_synology_package_binding": "NOT_ESTABLISHED",
+    "discovery_side_record_could_bind_both_subjects": true,
+    "discovery_side_record_is_native_synology_validation": false,
+    "end_to_end_handoff_verifiable_by_current_synology_native_verifier": false,
+    "disposition": "FAIL_CURRENT_NATIVE_CROSS_REPO_BINDING_MISSING"
+  },
+  "interpretation": [
+    "VeraMesh and Vera Synology remain correctly separated at source: transport/session authority is not imported into Synology's package verifier.",
+    "That separation currently leaves a provenance gap: Synology's native artifact/source verification does not attest which exact VeraMesh producer contract/source head the package is intended to implement.",
+    "Adding producer identity only in Discovery would create external research evidence, not a package-native handoff guarantee.",
+    "The failed experiment therefore narrows the candidate to a missing-contract question rather than validating a reusable interchange."
+  ],
+  "claim_ceiling": [
+    "No claim that the entire Vera Synology repository contains no mention of VeraMesh provenance; the negative result is bound to the exact native package identity/verification sources inspected above.",
+    "No claim that current Synology source is unqualified as a local package or live edge; only the cross-repo producer binding is missing from the native package identity path.",
+    "No install, build, route, credential, provider, device, or runtime effect was performed."
+  ]
+}
