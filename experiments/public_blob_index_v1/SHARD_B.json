@@ -13,7 +13,8 @@
           "size": 171
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "semanticatlas": {
       "head": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
@@ -625,7 +626,8 @@
           "size": 3956
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "spm": {
       "head": "0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
@@ -667,7 +669,8 @@
           "size": 4396
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "testament": {
       "head": "76f70643484ff22684f535d376e10e72c4aefba9",
@@ -679,7 +682,8 @@
           "size": 268
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "transcendence": {
       "head": "68e7a794d6134e8319121404f31062288dc8d6a3",
@@ -2001,7 +2005,8 @@
           "size": 240
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "unvtrslr": {
       "head": "903d79c6e47bb9f73bd7700edd35315777e9f5d1",
@@ -2123,7 +2128,8 @@
           "size": 6515
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "vera-mesh": {
       "head": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
@@ -2135,7 +2141,8 @@
           "size": 31
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "vera-synology": {
       "head": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
@@ -2147,7 +2154,8 @@
           "size": 49
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "voss": {
       "head": "54478372002bb24c6df733092a32abbdd1fa8d3c",
@@ -2269,7 +2277,8 @@
           "size": 3906
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "wip": {
       "head": "12a7c23dbe0482fd7bfe63659e54526778efef1e",
@@ -2431,7 +2440,8 @@
           "size": 938
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     },
     "world-zero": {
       "head": "5ab39621d090079d24de40261906b64413c6f995",
@@ -3958,7 +3968,8 @@
           "size": 62154
         }
       ],
-      "default_branch": "main"
+      "default_branch": "main",
+      "archived": false
     }
   }
 }
