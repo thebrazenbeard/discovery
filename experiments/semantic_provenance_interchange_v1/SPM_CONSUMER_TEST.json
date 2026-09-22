@@ -1,0 +1,49 @@
+{
+  "schema_version": "SEMANTIC_PROVENANCE_INTERCHANGE_SPM_CONSUMER_V1",
+  "project_subject": {
+    "repo": "thebrazenbeard/spm",
+    "exact_ref": "main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+    "source_path": "docs/03-evaluation-and-falsification.md",
+    "source_blob_sha": "73e7915486baf2d1449d73122d0232eff297313f"
+  },
+  "consumer_mode": "EVALUATION_METADATA_ONLY",
+  "records": [
+    "SA_SEMANTIC_INTERFACE_FIDELITY_CURRENT_METHOD",
+    "UNVTRSLR_C047_OPERATIONAL_SEMANTIC_SEPARATION"
+  ],
+  "dimension_mapping": {
+    "referential_integrity": [
+      "record_id",
+      "proposition.native_id",
+      "project_subject"
+    ],
+    "semantic_scope_fidelity": [
+      "proposition.text",
+      "claim_ceiling"
+    ],
+    "contradiction_and_ambiguity_preservation": [
+      "interpretation_state.unresolved",
+      "interpretation_state.surviving_alternatives"
+    ],
+    "provenance_sensitivity": [
+      "source_bindings",
+      "evidence_bindings"
+    ],
+    "correction_state_transition": [
+      "currentness.supersedes"
+    ],
+    "temporal_currentness_sensitivity": [
+      "currentness.state",
+      "currentness.observed_date"
+    ]
+  },
+  "forbidden_imports": [
+    "Semantic Atlas node semantics",
+    "Semantic Atlas ontology/graph authority",
+    "UNVTRSLR substrate semantics",
+    "UNVTRSLR evaluator truth labels or hidden holdout state",
+    "SPM model architecture or training objective fields"
+  ],
+  "pass_rule": "Both records validate under the same neutral envelope, every mapped SPM dimension is addressable using shared fields only, and no mapped dimension requires interpreting a project-native ID/status as a cross-project ontology.",
+  "claim_ceiling": "STRUCTURAL_THIRD_CONSUMER_COMPATIBILITY_ONLY_NOT_SPM_MODEL_QUALIFICATION"
+}
