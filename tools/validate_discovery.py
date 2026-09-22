@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CENSUS = ROOT / "portfolio" / "PORTFOLIO_CENSUS_V1.json"
 GRAPH = ROOT / "portfolio" / "PUBLIC_RELATIONSHIP_GRAPH_V1.json"
+PUBLIC_INTAKE = ROOT / "portfolio" / "PUBLIC_SUBJECT_INTAKE_20260921_V1.json"
 CANDIDATES = ROOT / "candidates"
 
 VALID_RELATIONS = {
@@ -264,6 +265,7 @@ def validate() -> list[str]:
     errors: list[str] = []
     census = load(CENSUS)
     graph = load(GRAPH)
+    public_intake = load(PUBLIC_INTAKE)
 
     if graph.get("schema_version") != "DISCOVERY_RELATIONSHIP_GRAPH_V1":
         errors.append("unexpected graph schema")
@@ -330,6 +332,59 @@ def validate() -> list[str]:
         errors.append(
             "public graph repository nodes must exactly equal public census repositories"
         )
+
+    if public_intake.get("schema") != "DISCOVERY_PUBLIC_SUBJECT_INTAKE_V1":
+        errors.append("unexpected public subject intake schema")
+    prior_cut = public_intake.get("prior_public_cut", {})
+    prior_public = set(prior_cut.get("public_repositories", []))
+    if prior_cut.get("public_count") != len(prior_public):
+        errors.append("public subject intake prior count mismatch")
+    if not prior_public.issubset(public_repos):
+        errors.append("public subject intake prior public set not contained in current census")
+
+    intake_subjects = public_intake.get("subjects")
+    intake_repos: set[str] = set()
+    if not isinstance(intake_subjects, list):
+        errors.append("public subject intake subjects must be a list")
+        intake_subjects = []
+    for index, subject in enumerate(intake_subjects):
+        if not isinstance(subject, dict):
+            errors.append(f"public subject intake invalid subject: {index}")
+            continue
+        repo = subject.get("repo")
+        ref = subject.get("ref")
+        families = subject.get("primary_families")
+        if not isinstance(repo, str) or not repo.startswith("thebrazenbeard/"):
+            errors.append(f"public subject intake invalid repo: {index}")
+            continue
+        repo_name = repo.split("/", 1)[1]
+        intake_repos.add(repo_name)
+        if repo_name not in public_repos:
+            errors.append(f"public subject intake repo not in current census: {repo_name}")
+        if not isinstance(ref, str) or not EXACT_SUBJECT_REF.fullmatch(ref):
+            errors.append(f"public subject intake ref not exact: {repo_name}")
+        if not isinstance(families, list) or not families or any(
+            not _nonempty_string(item) for item in families
+        ):
+            errors.append(f"public subject intake families invalid: {repo_name}")
+        if not _nonempty_string(subject.get("observed_role")):
+            errors.append(f"public subject intake observed role missing: {repo_name}")
+        if not _nonempty_string(subject.get("disposition")):
+            errors.append(f"public subject intake disposition missing: {repo_name}")
+        if not _nonempty_string(subject.get("next_question")):
+            errors.append(f"public subject intake next question missing: {repo_name}")
+
+    expected_new_public = public_repos - prior_public
+    if intake_repos != expected_new_public:
+        errors.append(
+            "public subject intake must exactly cover repositories newly public "
+            "relative to its bound prior cut"
+        )
+    anti = public_intake.get("anti_cherry_pick_result", {})
+    if anti.get("subjects_expected") != len(expected_new_public):
+        errors.append("public subject intake expected count mismatch")
+    if anti.get("subjects_recorded") != len(intake_repos):
+        errors.append("public subject intake recorded count mismatch")
 
     for path in CANDIDATES.glob("*.json"):
         candidate = load(path)
