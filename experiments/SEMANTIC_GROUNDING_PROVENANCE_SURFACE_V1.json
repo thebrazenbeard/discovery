@@ -1,0 +1,66 @@
+{
+  "schema": "DISCOVERY_SEMANTIC_GROUNDING_PROVENANCE_SURFACE_V1",
+  "observed_date": "2026-09-21",
+  "status": "OBSERVED_CROSS_PROJECT_MECHANIC_HYPOTHESIS",
+  "subjects": [
+    {
+      "repo": "thebrazenbeard/semanticatlas",
+      "ref": "main@5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "source": "README.md",
+      "source_blob": "64e567868f6a893538f155f76ec32afb5432310e",
+      "observed_mechanics": [
+        "provenance-aware semantic concepts/distinctions/relations/interpretations",
+        "explicit separation of source statements, user statements, inference, symbolism, architecture, historical promotion, later evidence, and unresolved state",
+        "semantic similarity must not merge provenance, authority, identity, or historical state"
+      ]
+    },
+    {
+      "repo": "thebrazenbeard/unvtrslr",
+      "ref": "main@903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "source": "docs/R2_SEMANTIC_CLAIM_CONTROLS.md",
+      "source_blob": "325a536bba0e00bdaf081582f416a179844504a2",
+      "observed_mechanics": [
+        "separate operational relation verification from semantic interpretation selection/confirmation",
+        "confirmatory vs exploratory hypothesis provenance",
+        "structured rival adequacy and surviving alternative explanations",
+        "claim-discriminating holdouts, semantic-surplus obligations, and explicit claim ceilings"
+      ]
+    },
+    {
+      "repo": "thebrazenbeard/spm",
+      "ref": "main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "source": "docs/03-evaluation-and-falsification.md",
+      "source_blob": "73e7915486baf2d1449d73122d0232eff297313f",
+      "observed_mechanics": [
+        "provenance sensitivity",
+        "semantic scope fidelity",
+        "contradiction and ambiguity preservation",
+        "correction-state transition and temporal/currentness sensitivity",
+        "matched-baseline falsification and unseen-domain transfer"
+      ]
+    }
+  ],
+  "overlap_hypothesis": {
+    "narrow_shared_surface": [
+      "proposition/interpretation provenance",
+      "explicit unresolved/alternative state",
+      "claim ceiling or qualification boundary",
+      "current-vs-historical distinction",
+      "evaluation evidence that can discriminate stronger semantic claims from weaker operational ones"
+    ],
+    "must_remain_project_owned": [
+      "Semantic Atlas ontology/graph architecture",
+      "UNVTRSLR grounding substrate and extraterrestrial-communication evaluator",
+      "SPM model architecture/training objectives",
+      "project-specific truth, admission, qualification, authority, and runtime state"
+    ]
+  },
+  "next_experiment": "Design one minimal semantic-evidence record that can losslessly encode one real current claim-control example from Semantic Atlas and one from UNVTRSLR; then test SPM as an independent third consumer without modifying any project's native semantic state machine.",
+  "rejection_conditions": [
+    "The common record requires ontology fields specific to one project.",
+    "Adapters are larger or more semantically complex than the duplicated provenance/evaluation mechanics they replace.",
+    "Shared representation causes current/historical, operational/semantic, or evidence/authority distinctions to collapse.",
+    "SPM cannot consume the minimal record without importing UNVTRSLR or Semantic Atlas semantics."
+  ],
+  "claim_ceiling": "HYPOTHESIS_ONLY_NO_SHARED_SEMANTIC_ONTOLOGY"
+}
