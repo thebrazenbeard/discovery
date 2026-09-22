@@ -16,6 +16,7 @@ PUBLIC_BLOB_SHARDS = (
     ROOT / "experiments" / "public_blob_index_v1" / "SHARD_B.json",
 )
 PUBLIC_BLOB_SCAN = ROOT / "experiments" / "PUBLIC_BLOB_OVERLAP_SCAN_V1.json"
+TREE_BINDING_REPAIR = ROOT / "experiments" / "PUBLIC_TREE_BINDING_REPAIR_V1.json"
 HC_ANCESTRY = ROOT / "experiments" / "HC_COMMON_BRANCH_ANCESTRY_V1.json"
 HC_ANCESTRY_SHARDS = tuple(
     ROOT / "experiments" / "hc_common_branch_ancestry_v1" / f"SHARD_{index:02d}.json"
@@ -456,6 +457,12 @@ def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _git_blob_sha1(path: Path) -> str:
+    payload = path.read_bytes()
+    header = f"blob {len(payload)}\\0".encode("ascii")
+    return hashlib.sha1(header + payload).hexdigest()
+
+
 def _validate_public_blob_scan(census: dict) -> list[str]:
     errors: list[str] = []
     public_repos = set(census.get("public_repositories", []))
@@ -542,6 +549,44 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
     if scan.get("schema") != "DISCOVERY_PUBLIC_BLOB_OVERLAP_SCAN_V1":
         errors.append("unexpected public blob overlap scan schema")
         return errors
+
+    expected_source_shards = [
+        {
+            "path": path.relative_to(ROOT).as_posix(),
+            "blob": _git_blob_sha1(path),
+        }
+        for path in PUBLIC_BLOB_SHARDS
+    ]
+    if scan.get("source_shards") != expected_source_shards:
+        errors.append("public blob scan source shard bindings mismatch")
+
+    repair = load(TREE_BINDING_REPAIR)
+    if repair.get("schema") != "DISCOVERY_PUBLIC_TREE_BINDING_REPAIR_V1":
+        errors.append("unexpected public tree binding repair schema")
+    repair_live = repair.get("live_inventory", {})
+    census_counts = census.get("counts", {})
+    if repair_live != {
+        "total": census_counts.get("total"),
+        "public": census_counts.get("public"),
+        "private": census_counts.get("private"),
+        "public_set_changed": False,
+    }:
+        errors.append("public tree binding repair inventory mismatch")
+    repair_data = repair.get("repair", {})
+    repair_bindings = repair_data.get("bindings")
+    expected_repair_bindings = {
+        repo_name: {
+            "head": subject.get("head"),
+            "tree": subject.get("tree_sha"),
+        }
+        for repo_name, subject in indexed.items()
+    }
+    if repair_bindings != expected_repair_bindings:
+        errors.append("public tree binding repair bindings mismatch")
+    if repair_data.get("repaired_repository_count") != len(public_repos):
+        errors.append("public tree binding repair repository count mismatch")
+    if repair_data.get("public_default_heads_changed_since_prior_scan") is not False:
+        errors.append("public tree binding repair head-movement claim mismatch")
 
     expected_pair_count = len(public_repos) * (len(public_repos) - 1) // 2
     if scan.get("repository_count") != len(public_repos):
