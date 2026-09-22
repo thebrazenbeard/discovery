@@ -415,23 +415,23 @@
       "edge_id": "HC_BT2_PARTIAL_TEMPLATE_DUPLICATION",
       "from": "hc-brain",
       "to": "bt2",
-      "relation": "HISTORICAL_REFERENCE",
-      "scope": "Exact current-head byte overlap retained from HC-derived bootstrap ancestry inside the canonical Build Team Two platform; overlap is provenance evidence, not an active HC-template dependency claim.",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact current-head HC-family byte overlap: 178 same-path blobs are byte-identical and 10 same-path blobs differ. The measurement establishes duplication, while separate provenance evidence prevents that duplication from being treated as current BT2 HC-template authority.",
       "evidence_state": "OBSERVED",
       "source_refs": [
         "thebrazenbeard/hc-brain:main@618245b54fb923c7a204892c6953ab6d1c5dac57",
         "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e"
       ],
       "falsifiers": [
-        "New exact source evidence shows current BT2 intentionally adopts HC semantic/template authority after the canonical BT2 platform declarations.",
-        "A dependency audit demonstrates the retained HC-derived bytes are actively maintained as a shared HC substrate rather than preserved/bootstrap material.",
-        "The exact overlap measurement itself fails on a fresh comparison of the bound heads."
+        "A fresh comparison of the exact bound heads fails to reproduce the recorded overlap.",
+        "A path/provenance audit shows the counted bytes are generated/incidental artifacts rather than substantive duplicated source material.",
+        "The measurement has been superseded by a newer explicitly bound exact-head overlap cut."
       ],
       "notes": [
-        "Measured overlap is preserved: 178 identical same-path blobs, 10 changed same-path blobs, 329 bt2-only blobs, and 112 hc-brain-only blobs.",
+        "Measured 178 identical same-path blobs, 10 changed same-path blobs, 329 bt2-only blobs, and 112 hc-brain-only blobs.",
         "Identical same-path blobs account for 1,011,147 of 2,191,461 hc-brain bytes at the exact measured heads (46.14031461%).",
-        "BT2 initial/current README blob 447c4cc24ea27660772cc0123b91592ae9c36f7e is byte-identical to historical HC Brain README at 8a343efdf9ff5a0fb2677cfb765f8cf2780f825c.",
-        "BT2 source commits bfc201d24b4313ae54fefe5202d81fa4bfb64911, 68bcaa5096b1823df964c4572fc12c73aaa464f7c, and ff60e98c7a7bd92faf7f9bcb4f539909b43733d0 establish canonical BT2 platform migration/identity/consolidation semantics."
+        "This edge records duplication only; it does not assert current repository role, dependency direction, or factorization desirability.",
+        "Repository-role interpretation is recorded separately by HC_BT2_BOOTSTRAP_PROVENANCE."
       ]
     },
     {
@@ -644,6 +644,30 @@
       ],
       "notes": [
         "Do not create a shared component from this pair alone."
+      ]
+    },
+    {
+      "edge_id": "HC_BT2_BOOTSTRAP_PROVENANCE",
+      "from": "bt2",
+      "to": "hc-brain",
+      "relation": "HISTORICAL_REFERENCE",
+      "scope": "Exact historical README identity plus same-day BT2 canonical-platform migration evidence: HC-derived bootstrap provenance is retained without assigning current HC semantic authority to bt2.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/bt2:33ff114d59da533f183739026e0b0f328a9b6c6e",
+        "thebrazenbeard/hc-brain:8a343efdf9ff5a0fb2677cfb765f8cf2780f825c",
+        "thebrazenbeard/bt2:bfc201d24b4313ae54fefe5202d81fa4bfb64911",
+        "thebrazenbeard/bt2:ff60e98c7a7bd92faf7f9bcb4f539909b43733d0"
+      ],
+      "falsifiers": [
+        "The README blob identity is shown not to exist at the exact bound refs.",
+        "Exact later source evidence establishes that the canonical BT2 platform declarations were superseded by a deliberate current HC-template role.",
+        "The source-controlled BT2 migration artifacts are shown not to apply to this repository identity."
+      ],
+      "notes": [
+        "BT2 initial/current README and historical HC Brain README share blob 447c4cc24ea27660772cc0123b91592ae9c36f7e.",
+        "This edge does not claim the precise copy mechanism or that all HC-overlapping BT2 files are inactive.",
+        "See experiments/BT2_HC_BOOTSTRAP_PROVENANCE_V1.json."
       ]
     }
   ]
