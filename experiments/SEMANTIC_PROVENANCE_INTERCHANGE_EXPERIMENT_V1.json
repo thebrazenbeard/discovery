@@ -1,0 +1,52 @@
+{
+  "schema": "DISCOVERY_SEMANTIC_PROVENANCE_INTERCHANGE_EXPERIMENT_V1",
+  "observed_date": "2026-09-22",
+  "exact_source_subjects": {
+    "semantic_atlas": "main@5669a727b870a490ecee748b2cd712a2fc4a54c5",
+    "unvtrslr": "main@903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+    "spm": "main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8"
+  },
+  "records": [
+    "SA_SEMANTIC_INTERFACE_FIDELITY_CURRENT_METHOD",
+    "UNVTRSLR_C047_OPERATIONAL_SEMANTIC_SEPARATION"
+  ],
+  "experiment": {
+    "shared_mechanic": "A narrow envelope for exact proposition identity, source/evidence provenance, unresolved/alternative state, currentness/supersession, and claim ceiling.",
+    "semantic_atlas_case": "Observed current Semantic Atlas method/adjudication with three historical evidence bindings and project-native definitions/nodes retained by exact extension refs.",
+    "unvtrslr_case": "Current C047 design requirement plus specified unresolved semantic-naming control state; deliberately carries zero empirical evidence bindings because the R2 harness is not built.",
+    "spm_test": "SPM consumes only shared envelope fields for six evaluation dimensions. Project-native statuses and ontology/substrate extensions are forbidden from the shared mapping."
+  },
+  "summary": {
+    "record_count": 2,
+    "shared_top_level_field_count": 11,
+    "spm_mapped_dimension_count": 6,
+    "project_native_status_fields_consumed_by_spm": 0,
+    "result": "PASS_WITH_LIMITS",
+    "candidate_disposition": "HYPOTHESIS_RETAINED_PENDING_INDEPENDENT_REVIEW_AND_IMPLEMENTATION_ECONOMICS"
+  },
+  "rejection_conditions_tested": [
+    {
+      "condition": "The common record requires ontology fields specific to one project.",
+      "result": "NOT_OBSERVED_IN_TWO_CASE_MAPPING",
+      "limit": "Project-native definitions, nodes, substrates, and evaluator semantics remain external exact refs rather than shared fields."
+    },
+    {
+      "condition": "The representation conflates operational success with semantic confirmation or historical evidence with current state.",
+      "result": "FALSIFIER_SURVIVED",
+      "detail": "UNVTRSLR remains SPECIFIED_CONTROL_CASE with zero empirical evidence bindings and unresolved semantic naming; Semantic Atlas remains OBSERVED_CURRENT_RECORD with explicit historical evidence custody limits."
+    },
+    {
+      "condition": "SPM cannot consume the minimal record without importing UNVTRSLR or Semantic Atlas semantics.",
+      "result": "NOT_OBSERVED_IN_STRUCTURAL_TEST",
+      "limit": "Only evaluation metadata compatibility was tested; no SPM model/prototype consumed the records."
+    }
+  ],
+  "unresolved": [
+    "No production or model implementation consumes this interchange.",
+    "Adapter/maintenance economics have not been measured.",
+    "Only one Semantic Atlas case and one UNVTRSLR control case were encoded.",
+    "Independent hostile review has not yet qualified the experiment.",
+    "The interchange is not a semantic ontology and cannot decide project-native meaning, truth, authority, or qualification."
+  ],
+  "claim_ceiling": "SOURCE_BOUND_TWO_CASE_INTERCHANGE_AND_STRUCTURAL_THIRD_CONSUMER_COMPATIBILITY_ONLY"
+}
