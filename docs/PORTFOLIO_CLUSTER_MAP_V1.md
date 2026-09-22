@@ -28,6 +28,8 @@ Question: can custody mechanics be shared while each domain retains its own stan
 
 The failure condition is a common record format silently becoming a common ontology or truth authority.
 
+The private evidence-custody candidate has now passed only its **source package metadata** sub-gate. The active package repair truthfully narrows package identity/API/dependencies and preserves the custody-vs-domain-authority boundary, but general installability is not established. Independent Windows execution exposed a declared-platform mismatch and checkout-line-ending sensitivity; hosted package CI remains pre-step/no-execution. Disposition: `FIRST_TASK_NOT_CLOSED_SOURCE_REPAIR_PRESENT_PLATFORM_CONTRACT_BLOCKED`. No first real consumer should be bound until that package gate closes.
+
 ## 3. Coordination and transport
 
 Public anchor: `vera-mesh`. Private participants remain part of the family.
