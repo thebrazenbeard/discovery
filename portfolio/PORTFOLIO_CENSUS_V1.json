@@ -41,16 +41,18 @@
   },
   "privacy_rule": "Private repository names and private technical detail are intentionally not published by this public repository. Private repositories still participate in the analysis and aggregate counts.",
   "discovery_roles": {
-    "direct_architecture_subjects": 33,
+    "direct_architecture_subjects": 32,
     "boundary_or_negative_control_consumers": 22,
     "historical_or_reference_only": 2,
-    "discovery_self": 1
+    "discovery_self": 1,
+    "unclassified_since_prior_cut": 1
   },
   "role_semantics": {
     "direct_architecture_subjects": "Repositories containing potentially reusable mechanics, overlapping infrastructure, implementation duplication, orchestration, evidence, currentness, recovery, transport, cognition, or experiment machinery.",
     "boundary_or_negative_control_consumers": "Repositories useful for proving that a proposed substrate preserves domain-specific semantics and independence rather than swallowing them.",
     "historical_or_reference_only": "Repositories retained for provenance/comparison and not presumed to be current architecture candidates.",
-    "discovery_self": "Discovery must also be reviewed for overreach and accidental framework gravity."
+    "discovery_self": "Discovery must also be reviewed for overreach and accidental framework gravity.",
+    "unclassified_since_prior_cut": "One repository exists beyond the prior classified 57-repository cut; this refresh does not silently assign it a role without a dedicated classification pass."
   },
   "completeness_rule": "A repository does not need to be a consolidation candidate to be included. Exclusion from a particular experiment must be explicit rather than inferred from absence.",
   "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current."
