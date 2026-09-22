@@ -1,0 +1,95 @@
+{
+  "schema": "DISCOVERY_BT2_HC_BOOTSTRAP_PROVENANCE_V1",
+  "observed_date": "2026-09-21",
+  "status": "OBSERVED_SOURCE_HISTORY_WITH_BOUNDED_INTERPRETATION",
+  "subjects": {
+    "bt2_current": "thebrazenbeard/bt2@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+    "bt2_initial": "thebrazenbeard/bt2@33ff114d59da533f183739026e0b0f328a9b6c6e",
+    "hc_readme_reference": "thebrazenbeard/hc-brain@8a343efdf9ff5a0fb2677cfb765f8cf2780f825c"
+  },
+  "observed_evidence": [
+    {
+      "kind": "README_BLOB_IDENTITY",
+      "blob_sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e",
+      "facts": [
+        "BT2 initial README has this blob SHA.",
+        "BT2 current-main README has this same blob SHA.",
+        "HC Brain README at 8a343efdf9ff5a0fb2677cfb765f8cf2780f825c has this same blob SHA."
+      ],
+      "interpretation_ceiling": "Proves exact README byte identity and persistence; does not by itself prove copy direction or repository role."
+    },
+    {
+      "kind": "SOURCE_CONTROLLED_CANONICAL_PLATFORM_DECLARATION",
+      "commit": "bfc201d24b4313ae54fefe5202d81fa4bfb64911",
+      "timestamp_utc": "2026-09-10T13:05:38Z",
+      "path": "docs/migration/SOURCE_PROVENANCE_MANIFEST_V1.md",
+      "file_blob_sha": "308425440cfda18413bcdb8f910bc9e010b069d5",
+      "facts": [
+        "The manifest names thebrazenbeard/bt2 as the target repository used to assemble the canonical Build Team Two platform.",
+        "It names WoWSQL project bt2-479e4ad9 as the target backend.",
+        "It explicitly separates historical preservation from active promotion and retirement authority."
+      ]
+    },
+    {
+      "kind": "BT2_IDENTITY_MIGRATION",
+      "commit": "68bcaa5096b1823df964c4572fc12c73aaa464f7c",
+      "timestamp_utc": "2026-09-10T13:36:07Z",
+      "fact": "Commit message explicitly adds BT2 identity and recovery integrity migration."
+    },
+    {
+      "kind": "CANONICAL_CONSOLIDATION_CLASSIFICATION",
+      "commit": "ff60e98c7a7bd92faf7f9bcb4f539909b43733d0",
+      "timestamp_utc": "2026-09-10T13:45:44Z",
+      "path": "docs/migration/SOURCE_CONTENT_CONSOLIDATION_MAP_V1.md",
+      "file_blob_sha": "ebe8058b66cabfd852c4036e5330a69b38a5311d",
+      "fact": "The source-content map classifies material for the canonical BT2 platform and explicitly distinguishes CANONICALIZE, HISTORICAL_ONLY, SOURCE_REFERENCE, and other migration dispositions."
+    },
+    {
+      "kind": "LIVE_BRANCH_TOPOLOGY_CONTRAST",
+      "discovery_source": "experiments/HC_BRANCH_TOPOLOGY_V1.json",
+      "facts": [
+        "hc-brain and God Brain share 42 live branch names.",
+        "hc-brain and Transcendence share 35 live branch names.",
+        "God Brain and Transcendence share 35 live branch names.",
+        "bt2 shares only the branch name main with each of hc-brain, God Brain, and Transcendence."
+      ],
+      "interpretation_ceiling": "Branch-name topology is a provenance signal, not ancestry proof."
+    },
+    {
+      "kind": "STATIC_BYTE_OVERLAP_PRESERVED",
+      "discovery_sources": [
+        "experiments/COGNITIVE_PUBLIC_OVERLAP_REFRESH_V1.json",
+        "experiments/PUBLIC_BLOB_OVERLAP_SCAN_V1.json"
+      ],
+      "facts": [
+        "bt2 and hc-brain retain substantial exact Git-blob overlap at the measured default heads.",
+        "The byte-overlap measurement remains valid and is not erased by the repository-role correction."
+      ]
+    }
+  ],
+  "bounded_interpretation": {
+    "classification": "HC_DERIVED_BOOTSTRAP_ANCESTRY_ON_CANONICAL_BT2_PLATFORM",
+    "rationale": [
+      "The unchanged HC README is traceable to BT2 repository initialization.",
+      "Within hours, source-controlled BT2 artifacts explicitly established a Build Team Two canonical-platform role.",
+      "Later BT2 history and current project source continue BT2/Lantern/runtime/platform work.",
+      "The live branch namespace does not track the broad HC/God Brain/Transcendence branch family."
+    ],
+    "consequence_for_discovery": [
+      "Treat bt2 as evidence of HC-derived bootstrap provenance and retained byte overlap.",
+      "Do not treat the stale root README as authoritative evidence that bt2 is currently an HC-template repository.",
+      "Do not count bt2 as an active HC factorization consumer without separate evidence that current BT2 semantics intentionally depend on HC."
+    ]
+  },
+  "unresolved": [
+    "The source record reviewed here does not establish why an HC-derived snapshot was chosen as the initial bt2 seed.",
+    "This does not prove which HC-derived files remain live dependencies inside current BT2.",
+    "Archive/removal of HC-derived material requires a separate dependency and provenance audit."
+  ],
+  "non_claims": [
+    "No source files are declared disposable.",
+    "No dependency, consolidation, merge, archive, deletion, migration, deployment, or runtime effect is authorized.",
+    "No claim is made that static byte overlap is accidental; it is preserved as provenance evidence."
+  ],
+  "claim_ceiling": "OBSERVED_PROVENANCE_AND_REPOSITORY_ROLE_INTERPRETATION_ONLY"
+}
