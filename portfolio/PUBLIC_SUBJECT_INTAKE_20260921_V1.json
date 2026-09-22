@@ -22,9 +22,10 @@
       "repository": "thebrazenbeard/discovery",
       "commit": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
       "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
-      "blob": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
-      "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
-    }
+      "blob_sha": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
+      "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1"
+    },
+    "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
   },
   "current_public_cut": {
     "observed_date": "2026-09-21",
@@ -155,5 +156,6 @@
     "subjects_expected": 11,
     "subjects_recorded": 11,
     "rule": "Every repository newly nameable relative to the prior public census receives an explicit disposition; lack of immediate candidate generation is itself recorded."
-  }
+  },
+  "validation_ceiling": "Current public list/count/digest and the exact historical prior-public cut are source-validated. Private/all-name digests remain externally supplied commitments and this public artifact does not claim content-wide proof that no private name occurs anywhere."
 }
