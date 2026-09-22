@@ -552,7 +552,7 @@
       "from": "semanticatlas",
       "to": "unvtrslr",
       "relation": "OVERLAPPING_MECHANIC",
-      "scope": "semantic-claim provenance, unresolved/rival state, evidence lineage, and explicit claim ceilings without shared ontology",
+      "scope": "Source-bound two-case test of a narrow provenance/claim-control envelope: exact proposition/source identity, evidence bindings when evidence exists, unresolved/alternative state, currentness, and claim ceiling; no shared ontology.",
       "evidence_state": "HYPOTHESIS",
       "source_refs": [
         "thebrazenbeard/semanticatlas:main@5669a727b870a490ecee748b2cd712a2fc4a54c5",
@@ -565,7 +565,10 @@
       ],
       "notes": [
         "Source-bound comparison recorded in experiments/SEMANTIC_GROUNDING_PROVENANCE_SURFACE_V1.json.",
-        "No shared semantic ontology, truth authority, or runtime dependency is proposed."
+        "No shared semantic ontology, truth authority, or runtime dependency is proposed.",
+        "Experiment V1 maps a current Semantic Atlas method record and UNVTRSLR C047 through the same envelope without treating UNVTRSLR's unimplemented control as empirical evidence.",
+        "SPM structurally consumes six evaluation dimensions from shared fields only; project-native statuses/ontology/substrate semantics remain excluded from the shared mapping.",
+        "Candidate remains HYPOTHESIS because broader-case coverage and implementation/maintenance economics are untested."
       ]
     },
     {
