@@ -486,6 +486,10 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
                 errors.append(f"public blob head invalid: {repo_name}")
             if not isinstance(tree_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", tree_sha):
                 errors.append(f"public blob tree sha invalid: {repo_name}")
+            elif isinstance(head, str) and tree_sha == head:
+                errors.append(
+                    f"public blob tree sha incorrectly aliases commit sha: {repo_name}"
+                )
             if not isinstance(blobs, list):
                 errors.append(f"public blob list invalid: {repo_name}")
                 continue
