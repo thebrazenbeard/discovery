@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/thebrazenbeard/discovery/schemas/semantic_evidence_interchange_v1.schema.json",
+  "title": "Semantic Evidence Interchange V1",
+  "description": "A deliberately narrow provenance/claim-control envelope. It preserves project-native semantics by opaque IDs and exact source bindings rather than normalizing project ontologies.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "record_mode",
+    "project_subject",
+    "proposition",
+    "source_bindings",
+    "evidence_bindings",
+    "interpretation_state",
+    "currentness",
+    "claim_ceiling",
+    "native_extension_refs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "SEMANTIC_EVIDENCE_INTERCHANGE_V1"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_mode": {
+      "enum": [
+        "OBSERVED_CURRENT_RECORD",
+        "SPECIFIED_CONTROL_CASE"
+      ]
+    },
+    "project_subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "exact_ref"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string",
+          "pattern": "^thebrazenbeard/[^\\s]+$"
+        },
+        "exact_ref": {
+          "type": "string",
+          "pattern": "^main@[0-9a-f]{40}$"
+        }
+      }
+    },
+    "proposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "native_id",
+        "text",
+        "native_type",
+        "native_status"
+      ],
+      "properties": {
+        "native_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "native_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "native_status": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "blob_sha",
+          "native_record_ids"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "blob_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "native_record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "evidence_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "native_id",
+          "evidence_class",
+          "custody_status",
+          "source_path",
+          "source_blob_sha"
+        ],
+        "properties": {
+          "native_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_class": {
+            "type": "string",
+            "minLength": 1
+          },
+          "custody_status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_blob_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          }
+        }
+      }
+    },
+    "interpretation_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "native_status",
+        "unresolved",
+        "surviving_alternatives"
+      ],
+      "properties": {
+        "native_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unresolved": {
+          "type": "boolean"
+        },
+        "surviving_alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "currentness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "observed_date",
+        "supersedes"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "CURRENT",
+            "HISTORICAL",
+            "UNRESOLVED"
+          ]
+        },
+        "observed_date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "claim_ceiling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "native_label",
+        "text"
+      ],
+      "properties": {
+        "native_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "native_extension_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "blob_sha",
+          "purpose"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "blob_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
