@@ -4,11 +4,11 @@
   "source_shards": [
     {
       "path": "experiments/public_blob_index_v1/SHARD_A.json",
-      "blob": "4639e6e328fe0ac6b111a589490273cd19f8bc3c"
+      "blob": "4502685f464eec08e33a038ecf91caaf0540cc6f"
     },
     {
       "path": "experiments/public_blob_index_v1/SHARD_B.json",
-      "blob": "693cb4af689dcb56aadddf7043feecf6cc03cf0e"
+      "blob": "f0059355484caf120354884c7f56b658513f4081"
     }
   ],
   "repository_count": 23,
@@ -22,139 +22,139 @@
   "repositories": {
     "abil": {
       "head": "0812d9780ce1648820269fa142a43e17030ef793",
-      "tree_sha": "0812d9780ce1648820269fa142a43e17030ef793",
+      "tree_sha": "2824c2c4d2f4175288f26ad3e30a1e3d096136c9",
       "files": 7,
       "total_blob_bytes": 59103
     },
     "Attune": {
       "head": "eff6f9eb250a6f7684459eadf0695340053201da",
-      "tree_sha": "eff6f9eb250a6f7684459eadf0695340053201da",
+      "tree_sha": "d877f1f9e53e71d03ea1268060610da983f57659",
       "files": 17,
       "total_blob_bytes": 68009
     },
     "bt2": {
       "head": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
-      "tree_sha": "30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "tree_sha": "6782a2d62afeab8cefb1a3bc39cc39ab617d637c",
       "files": 517,
       "total_blob_bytes": 2389567
     },
     "discovery": {
       "head": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
-      "tree_sha": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+      "tree_sha": "f604fbf501150065e8e4345df432cc99fa8d9796",
       "files": 64,
       "total_blob_bytes": 449231
     },
     "driftguard": {
       "head": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
-      "tree_sha": "9894692ff6b549e4378bcc2b8ca46813ff18bf37",
+      "tree_sha": "3707ba40343f381a6bcf6fcb9e55a5d8f048d1c5",
       "files": 36,
       "total_blob_bytes": 265497
     },
     "god-brain": {
       "head": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
-      "tree_sha": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+      "tree_sha": "f08c2a94e6f564c48669c91a8bef689ede6c51dc",
       "files": 300,
       "total_blob_bytes": 2189786
     },
     "hc-brain": {
       "head": "618245b54fb923c7a204892c6953ab6d1c5dac57",
-      "tree_sha": "618245b54fb923c7a204892c6953ab6d1c5dac57",
+      "tree_sha": "623f272aa9060ad9e222a5cfaea801082bb5a562",
       "files": 300,
       "total_blob_bytes": 2191461
     },
     "mosaic": {
       "head": "a3115031ec716526532b32dc004303b4042e4a26",
-      "tree_sha": "a3115031ec716526532b32dc004303b4042e4a26",
+      "tree_sha": "704bd189af1963e2149f0ab541f8f43c094e9067",
       "files": 3,
       "total_blob_bytes": 4391
     },
     "noema": {
       "head": "890efdca01cf496ce1b8686d86f8442a149a9d34",
-      "tree_sha": "890efdca01cf496ce1b8686d86f8442a149a9d34",
+      "tree_sha": "70a6ffe45df26c9eb5ccfe3210d6091daff7ccd2",
       "files": 93,
       "total_blob_bytes": 1104260
     },
     "on-theo": {
       "head": "eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
-      "tree_sha": "eedbcf660c2cfe6cff5636e798806b0cd3d56efc",
+      "tree_sha": "c99963ee2dd2c4ad2ca487f1be1894906d5fc265",
       "files": 5,
       "total_blob_bytes": 15649
     },
     "project-runner": {
       "head": "bc05812b560b4fcde3a362e72fba04c626cafac8",
-      "tree_sha": "bc05812b560b4fcde3a362e72fba04c626cafac8",
+      "tree_sha": "2c7b588b06c68f0a0ed63a79ed092b3132e462ca",
       "files": 81,
       "total_blob_bytes": 244309
     },
     "rezon": {
       "head": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
-      "tree_sha": "e3d7a41eccb49a9f403ef66f511faef677ceec1b",
+      "tree_sha": "8a4353736fbbabe5071b80b2ea1b16e39c7a1712",
       "files": 1,
       "total_blob_bytes": 37
     },
     "roots": {
       "head": "7fab72635f319c633b480174c8a0687901ac1db2",
-      "tree_sha": "7fab72635f319c633b480174c8a0687901ac1db2",
+      "tree_sha": "e0f43a5f9539a1f85ab52ac6b2e5dcf4d4d96a40",
       "files": 1,
       "total_blob_bytes": 171
     },
     "semanticatlas": {
       "head": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
-      "tree_sha": "5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "tree_sha": "088e74b6e0e90960d6fe1407a6e50a6e99ef0c6f",
       "files": 121,
       "total_blob_bytes": 37292007
     },
     "spm": {
       "head": "0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
-      "tree_sha": "0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "tree_sha": "7b04c7d8349b57113d4f5775e6a1f69e394ba1d3",
       "files": 7,
       "total_blob_bytes": 29796
     },
     "testament": {
       "head": "76f70643484ff22684f535d376e10e72c4aefba9",
-      "tree_sha": "76f70643484ff22684f535d376e10e72c4aefba9",
+      "tree_sha": "76727c7eb215b07a476fc6d8ca84babf77c7ed7c",
       "files": 1,
       "total_blob_bytes": 268
     },
     "transcendence": {
       "head": "68e7a794d6134e8319121404f31062288dc8d6a3",
-      "tree_sha": "68e7a794d6134e8319121404f31062288dc8d6a3",
+      "tree_sha": "c8d16282fa65b14962757539773a78803613bd6a",
       "files": 263,
       "total_blob_bytes": 1802005
     },
     "unvtrslr": {
       "head": "903d79c6e47bb9f73bd7700edd35315777e9f5d1",
-      "tree_sha": "903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "tree_sha": "290d95bd131935cffc1dfae24a591593b2395540",
       "files": 23,
       "total_blob_bytes": 258074
     },
     "vera-mesh": {
       "head": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
-      "tree_sha": "d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+      "tree_sha": "aa1225db434ce6a21abf780a9fbe037dfb95b712",
       "files": 1,
       "total_blob_bytes": 31
     },
     "vera-synology": {
       "head": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
-      "tree_sha": "1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+      "tree_sha": "f2232c4420f45cbcd5d725f9f4e8da74b12af475",
       "files": 1,
       "total_blob_bytes": 49
     },
     "voss": {
       "head": "54478372002bb24c6df733092a32abbdd1fa8d3c",
-      "tree_sha": "54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "tree_sha": "29a716ff48181319907a90749402eb57d1c1c4b0",
       "files": 23,
       "total_blob_bytes": 146496
     },
     "wip": {
       "head": "12a7c23dbe0482fd7bfe63659e54526778efef1e",
-      "tree_sha": "12a7c23dbe0482fd7bfe63659e54526778efef1e",
+      "tree_sha": "e2527117c7d25f92d2e6aa7365ae8b3d3b9a3c08",
       "files": 31,
       "total_blob_bytes": 79366
     },
     "world-zero": {
       "head": "5ab39621d090079d24de40261906b64413c6f995",
-      "tree_sha": "5ab39621d090079d24de40261906b64413c6f995",
+      "tree_sha": "287092bfb9830e42c78a430fdfd8552fca07965d",
       "files": 304,
       "total_blob_bytes": 61806304
     }
