@@ -57,5 +57,11 @@
     "Does not establish that current-head reconstruction has been executed successfully.",
     "Does not supersede the historical exact experiment evidence already recorded in Discovery.",
     "Does not authorize deduplication, migration, merge, deletion, or dependency adoption."
-  ]
+  ],
+  "discovery_bindings": {
+    "public_research_cut": "research/PUBLIC_REPOSITORY_RESEARCH_CUT_20260921_V1.json",
+    "cluster_map": "docs/PORTFOLIO_CLUSTER_MAP_V1.md",
+    "historical_candidate": "candidates/HC_TRANSCENDENCE_OVERLAY_V1.json",
+    "binding_note": "This current-head observation informs the next experiment frontier but does not rewrite or supersede the historical exact reconstruction candidate evidence."
+  }
 }
