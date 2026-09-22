@@ -1,0 +1,87 @@
+{
+  "schema": "DISCOVERY_PUBLIC_INTAKE_SECOND_PASS_V1",
+  "observed_date": "2026-09-21",
+  "status": "SOURCE_BOUND_CLASSIFICATION_REFRESH",
+  "subjects": {
+    "vera_mesh": {
+      "repo": "thebrazenbeard/vera-mesh",
+      "exact_subject": "PR12@9bffc57930587bf74a12657bbeaa913474ab5574",
+      "source_files": [
+        {
+          "path": "protocol/veraport/v1/chatgpt-mcp-profile.md",
+          "blob": "20d5d65ca638dc22fe9831e581a28145bb2803f7"
+        },
+        {
+          "path": "protocol/veraport/v1/mutation-ledger-profile.md",
+          "blob": "4ff75a1f3026b55c34028468f597a29d6cc84fc5"
+        },
+        {
+          "path": "reference/veraport_agent/veraport_agent/controller.py",
+          "blob": "a27b00ba4a24f281c586ea95edf7abacd3445c07"
+        }
+      ],
+      "observed_mechanics": [
+        "authenticated application-session and route currentness",
+        "read-only cross-session mirroring with per-session fencing",
+        "mutation ambiguity handling and same-session durable-idempotency failover",
+        "explicit separation of source presence, MCP runtime, plugin registration, route currentness, and live read/write effects"
+      ],
+      "disposition": "TRANSPORT_AUTHORITY_SIDE_OF_HANDOFF"
+    },
+    "vera_synology": {
+      "repo": "thebrazenbeard/vera-synology",
+      "exact_subject": "PR3@553e3a637833c5469f6b99fbc4d597755a0c9a5e",
+      "source_files": [
+        {
+          "path": "tools/verify_spk.py",
+          "blob": "63ae207a3482a9dbc53b157576809b298fbd6066"
+        },
+        {
+          "path": "SOURCE_MANIFEST.json",
+          "role": "exact package/source custody manifest"
+        },
+        {
+          "path": "payload/bin/veramesh_state.py",
+          "role": "legacy-state migration and fail-closed state initialization"
+        }
+      ],
+      "observed_mechanics": [
+        "deterministic package structure and metadata profile verification",
+        "artifact/source byte and mode cross-binding through a source manifest",
+        "fail-closed legacy-state migration and recovery",
+        "explicit separation of installed production R6 state from later current PR source and pending update/readback"
+      ],
+      "disposition": "PACKAGE_INSTALL_CURRENTNESS_SIDE_OF_HANDOFF"
+    },
+    "voss": {
+      "repo": "thebrazenbeard/voss",
+      "exact_subject": "main@54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "source_file": {
+        "path": "README.md",
+        "blob": "acfccc1aa287b0eaaed6a1a99cf9d00bdc9a9552"
+      },
+      "observed_mechanics": [],
+      "disposition": "INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE",
+      "reason": "The public exact head exposes only the repository role statement 'forensic auditor & reviewer'; no public implementation, receipt, review contract, or exact-head audit mechanic is present to classify."
+    },
+    "abil_public_handoff_search": {
+      "repo": "thebrazenbeard/abil",
+      "exact_subject": "main@0812d9780ce1648820269fa142a43e17030ef793",
+      "search_space": "the other 22 repositories in the bound 2026-09-21 public census",
+      "github_code_search_queries": [
+        "brownfield PLC industrial",
+        "historian fieldbus",
+        "OPC Modbus",
+        "machine telemetry sensor"
+      ],
+      "result": "NO_SECOND_PUBLIC_INDUSTRIAL_HANDOFF_SUBJECT_FOUND_CURRENT_CUT",
+      "limitation": "Code search can miss unindexed, differently worded, branch-only, or non-code evidence. This result rejects only promotion on the current public/default-branch evidence cut; it does not assert that no private or future subject exists.",
+      "disposition": "HOLD_PUBLIC_INDUSTRIAL_HANDOFF_CANDIDATE"
+    }
+  },
+  "cross_project_hypothesis": {
+    "id": "VERAMESH_SYNOLOGY_HANDOFF_V1",
+    "proposition": "A narrow source/build/install/runtime-currentness handoff contract may connect VeraMesh transport source to Vera Synology packaging without merging transport authority with package/install authority.",
+    "claim_ceiling": "HYPOTHESIS_ONLY_NO_RUNTIME_OR_INSTALL_AUTHORITY_TRANSFER"
+  }
+}
