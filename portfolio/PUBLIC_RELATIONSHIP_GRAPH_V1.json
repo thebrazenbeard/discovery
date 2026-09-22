@@ -508,11 +508,12 @@
       "from": "rezon",
       "to": "project-runner",
       "relation": "COMPLEMENTARY_BOUNDARY",
-      "scope": "Rezon-owned epistemic execution and admission with Project Runner independently verifying exported run-evidence structure; no semantic or authority transfer",
+      "scope": "Rezon-owned epistemic execution/admission with Project Runner performing producer-contract-aware structural verification; deterministic producer-ID and generic claim-disposition restrictions are mirrored, but truth/qualification/authority do not transfer.",
       "evidence_state": "EXPERIMENTING",
       "source_refs": [
         "thebrazenbeard/rezon:radar/r51-failure-summary-binding-20260919@8289914ec500a1392b10fe1a3774dee166e73b40",
-        "thebrazenbeard/project-runner:work/discovery-rezon-evidence-verifier-v1-20260920@4de0f6148b3d7d04ccdb4e0057435fa0d904590a"
+        "thebrazenbeard/project-runner:work/discovery-rezon-evidence-verifier-v1-20260920@4de0f6148b3d7d04ccdb4e0057435fa0d904590a",
+        "thebrazenbeard/project-runner:bt2/rezon-evidence-contract-hardening-v1-20260920@8e588bd1cb72808b4a611d2a0bcbaeba6cb10b15"
       ],
       "falsifiers": [
         "Runner must interpret Rezon accepted/rejected/unresolved claims or admission semantics to verify evidence.",
@@ -524,7 +525,10 @@
         "Real Rezon R51 deterministic evidence export consumed by independent Runner verifier.",
         "Runner exact hosted workflow 35517367117: 222/222 tests PASS plus registry/restart validation.",
         "Rezon exact R51 locally rechecked under Python 3.12: 10/10 focused and 275/275 full PASS; no hosted exact-head CI is claimed.",
-        "Current experiment is mechanical evidence verification only; it does not delegate Rezon reasoning or admission."
+        "Current experiment is mechanical evidence verification only; it does not delegate Rezon reasoning or admission.",
+        "Current Runner successor PR #31 is producer-contract-aware: it mirrors deterministic Rezon producer-ID construction and enforces generic claim-disposition restrictions.",
+        "Independent exact-head rereview on 8e588bd1... is PASS_WITH_CLAIM_CEILING; outer evidence hash proves self-consistency, not producer authenticity.",
+        "Maintenance delta from the original verifier is 11 commits / 7 files / +445/-16, with no demonstrated second organic direct consumer or net code-removal benefit."
       ]
     },
     {
