@@ -90,3 +90,15 @@ See `experiments/PUBLIC_INTAKE_SECOND_PASS_V1.*` for the source-bound dispositio
 A portfolio-wide exact blob scan now binds all 23 public repositories at exact default heads and computes all 253 unordered pairs. On that cut, only six pairs share any Git blob SHA at all, and those six are exactly the complete `bt2` / `god-brain` / `hc-brain` / `transcendence` clique. The other 247 pairs share zero blob SHAs. Discovery recomputes this result in `tools/validate_discovery.py`; it is byte-identity evidence, not lineage or consolidation authority.
 
 See `experiments/PUBLIC_BLOB_OVERLAP_SCAN_V1.*` and `experiments/public_blob_index_v1/`.
+
+The HC-family lineage pass now extends beyond `main`:
+
+- HC / Transcendence / God Brain share 35 live branch names;
+- all **34 non-`main` common branches** have identical blob path/SHA snapshots across all three;
+- on every one of those 34 branches, HC has the earlier parented commit, while Transcendence and God Brain later re-root the identical Git tree as parentless `Initialize <branch>` commits;
+- `main` is the only common-branch content divergence surface on the observed cut;
+- bt2 remains byte-related but topologically distinct, sharing only `main` by branch name with the other three.
+
+This is strong historical source-side evidence for HC snapshots, not a consolidation decision and not proof of the direct transfer path to God Brain.
+
+See `experiments/HC_COMMON_BRANCH_EXHAUSTIVE_V1.*` and `experiments/HC_COMMON_BRANCH_ANCESTRY_V1.*`.
