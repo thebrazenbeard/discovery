@@ -26,6 +26,29 @@ class PublicBlobTreeBindingIntegrityTests(unittest.TestCase):
                     f"{repo_name} tree_sha must be the commit's tree object, not the commit SHA",
                 )
 
+    def test_scan_source_shard_bindings_are_real_git_blobs(self):
+        scan = validator.load(validator.PUBLIC_BLOB_SCAN)
+        expected = [
+            {
+                "path": path.relative_to(validator.ROOT).as_posix(),
+                "blob": validator._git_blob_sha1(path),
+            }
+            for path in validator.PUBLIC_BLOB_SHARDS
+        ]
+        self.assertEqual(expected, scan["source_shards"])
+
+    def test_repair_receipt_matches_current_shards(self):
+        repair = validator.load(validator.TREE_BINDING_REPAIR)
+        bindings = {
+            repo_name: {
+                "head": subject["head"],
+                "tree": subject["tree_sha"],
+            }
+            for path in validator.PUBLIC_BLOB_SHARDS
+            for repo_name, subject in validator.load(path)["repositories"].items()
+        }
+        self.assertEqual(bindings, repair["repair"]["bindings"])
+
     def test_validator_rejects_commit_as_tree_false_green(self):
         census = validator.load(validator.CENSUS)
         original_shards = validator.PUBLIC_BLOB_SHARDS
