@@ -42,11 +42,11 @@ A candidate abstraction must first prove itself in a real cross-project flow.
 
 ## 4. Cognitive-base overlap
 
-Public anchors: `hc-brain`, `transcendence`, `god-brain`, `bt2`.
+Public anchors: `hc-brain`, `transcendence`, `god-brain`.
 
 The prior portfolio audit observed substantial same-path byte identity between HC Brain and Transcendence on exact historical subjects. Discovery must remeasure current heads rather than carrying an old count as current truth.
 
-The `bt2` public repository currently presents a Hyperconnectome-template README while installed Build Team Two Project instructions assign that repository a Build Team Two source role. Discovery records this as a role discrepancy requiring source-history investigation; it does not silently choose one interpretation.
+Source-history review removed `bt2` from this cluster as a current-role anchor. Its unchanged Hyperconnectome README is byte-identical to an HC Brain historical README and entered `bt2` at repository initialization, but same-day source-controlled migration artifacts explicitly establish `bt2` as the canonical Build Team Two platform target. Discovery therefore records the HC material as bootstrap ancestry, not current repository-role evidence.
 
 The base/overlay experiment remains:
 
@@ -54,7 +54,19 @@ The base/overlay experiment remains:
 
 If exact reconstruction fails, deduplication is not justified.
 
-## 5. Experiment mechanics
+## 5. Platform consolidation and provenance
+
+Public anchor: `bt2`.
+
+The BT2 repository is a useful negative example for repository-role inference: root-level content can preserve the ancestry of the seed repository while later source-controlled manifests establish a different canonical role.
+
+Observed mechanics include source-cut provenance, semantic migration classification, continuity/recovery, training package preservation, Lantern material governance, and WoWSQL-backed runtime reconstruction.
+
+The reusable question is not whether BT2 itself should become a universal platform. It is whether narrow provenance/migration mechanics can help other projects distinguish bootstrap residue, preserved history, canonicalized semantics, and current authority without conflating them.
+
+See `research/BT2_REPOSITORY_ROLE_PROVENANCE_20260921_V1.json`.
+
+## 6. Experiment mechanics
 
 Public anchors: `world-zero`, `mosaic`, with `god-brain` as a research consumer candidate rather than an established shared-harness consumer.
 
@@ -71,7 +83,7 @@ Potentially reusable mechanics include:
 
 Scientific hypotheses, evaluators, and validity criteria remain owned by their projects.
 
-## 6. Semantic cognition and mediation
+## 7. Semantic cognition and mediation
 
 Public anchors: `spm`, `unvtrslr`, `semanticatlas`, `rezon`.
 
@@ -84,7 +96,7 @@ Observed questions include:
 
 These repositories are not presumed to share one ontology or one cognition stack merely because they all concern meaning.
 
-## 7. Vera runtime and control
+## 8. Vera runtime and control
 
 Public anchors: `driftguard`, `vera-mesh`, `vera-synology`.
 
@@ -94,7 +106,7 @@ Discovery should look for shared *mechanics* while treating Vera identity, curre
 
 Transport and packaging are not evidence of identity continuity or runtime currentness.
 
-## 8. Industrial diagnostic chain
+## 9. Industrial diagnostic chain
 
 Public anchor: `abil`.
 
@@ -106,7 +118,7 @@ Can trustworthy machine evidence/replay feed brownfield reconstruction and bound
 
 No actuation or production authority follows from architectural reuse.
 
-## 9. Review and validation
+## 10. Review and validation
 
 Public anchor: `voss`.
 
@@ -114,7 +126,7 @@ Question: can hostile review, forensic audit, exact-subject qualification, and r
 
 Reviewer output is evidence about a subject, not an automatic promotion or effect authorization.
 
-## 10. Relationship and continuity systems
+## 11. Relationship and continuity systems
 
 Public anchor: `Attune`.
 
@@ -122,7 +134,7 @@ Question: which persistence, memory, preference, boundary, and continuity mechan
 
 This is an emerging family only. No reuse candidate is implied by one observed repository.
 
-## 11. Domain negative controls
+## 12. Domain negative controls
 
 Public anchors: `on-theo`, `testament`, with `unvtrslr` useful as a semantic non-equivalence stressor.
 
@@ -130,16 +142,16 @@ A good shared substrate should work underneath specialized domains without flatt
 
 Negative controls are first-class Discovery evidence. A project that **should not** fit an abstraction can be more informative than a project that does.
 
-## 12. Next research queue
+## 13. Next research queue
 
 The refreshed cut makes these bounded next questions high-value:
 
 1. remeasure current `hc-brain` ↔ `transcendence` overlap at exact current heads;
-2. investigate the `bt2` repository-role discrepancy from Git history and source provenance;
-3. compare `semanticatlas`, `spm`, `unvtrslr`, and `rezon` for mechanical overlap without assuming semantic equivalence;
-4. test whether `voss` exposes reusable review-receipt mechanics or only project-specific review behavior;
-5. inspect `vera-mesh` protocol/security semantics before treating it as transport infrastructure;
-6. compare `abil` evidence/replay needs against existing industrial evidence machinery without inferring actuation authority;
+2. compare `semanticatlas`, `spm`, `unvtrslr`, and `rezon` for mechanical overlap without assuming semantic equivalence;
+3. test whether `voss` exposes reusable review-receipt mechanics or only project-specific review behavior;
+4. inspect `vera-mesh` protocol/security semantics before treating it as transport infrastructure;
+5. compare `abil` evidence/replay needs against existing industrial evidence machinery without inferring actuation authority;
+6. audit whether BT2's HC-derived bootstrap files still have live dependencies before any archive/cleanup proposal;
 7. reclassify the full 58-repository inventory rather than reusing stale 2026-09-19 role counts.
 
 Each must become a bounded candidate with exact refs and explicit rejection criteria before implementation begins.
