@@ -7,6 +7,7 @@ on:
       - "candidates/**"
       - "docs/**"
       - "portfolio/**"
+      - "research/**"
       - "schemas/**"
       - "tools/**"
       - "tests/**"
@@ -19,6 +20,7 @@ on:
       - "candidates/**"
       - "docs/**"
       - "portfolio/**"
+      - "research/**"
       - "schemas/**"
       - "tools/**"
       - "tests/**"
@@ -39,6 +41,8 @@ jobs:
         run: python tools/validate_discovery.py
       - name: Validate repository reconciliation currentness
         run: python tools/validate_reconciliation.py
+      - name: Validate research ingest
+        run: python tools/validate_research_ingest.py
       - name: Run Discovery regressions
         run: python -m unittest discover -s tests -v
       - name: Compile Discovery Python
