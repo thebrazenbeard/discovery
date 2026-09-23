@@ -1,0 +1,292 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_EXHAUSTIVE_SHARD_V1",
+  "shard": "04",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "noah/reference-kernel-authority-hardening-r3-red": {
+      "subjects": {
+        "hc-brain": {
+          "head": "12cbd4934b12bf363ee79aaeecbf52143e8fc338",
+          "blob_count": 265,
+          "total_blob_bytes": 1838409
+        },
+        "god-brain": {
+          "head": "c2efe854076d43e1d3d6ec91669cbacdb8ef5ebf",
+          "blob_count": 265,
+          "total_blob_bytes": 1838409
+        },
+        "transcendence": {
+          "head": "9b9cb1cc06fe0a713ba08d01d0632f7e9959b83c",
+          "blob_count": 265,
+          "total_blob_bytes": 1838409
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1838409,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1838409,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1838409,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    },
+    "noah/reference-kernel-authority-hardening-r4-red": {
+      "subjects": {
+        "hc-brain": {
+          "head": "06c9430a19079694751ed9d5b6d85e98a7e3f819",
+          "blob_count": 266,
+          "total_blob_bytes": 1846800
+        },
+        "god-brain": {
+          "head": "4674fbb8cc550b6007072e33147a478284b225df",
+          "blob_count": 266,
+          "total_blob_bytes": 1846800
+        },
+        "transcendence": {
+          "head": "5b18ed82258503bbda800a7481741204d3919f25",
+          "blob_count": 266,
+          "total_blob_bytes": 1846800
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 266,
+          "identical_same_path_blobs": 266,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1846800,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 266,
+          "identical_same_path_blobs": 266,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1846800,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 266,
+          "identical_same_path_blobs": 266,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1846800,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    },
+    "noah/reference-kernel-authority-hardening-v1-candidate": {
+      "subjects": {
+        "hc-brain": {
+          "head": "25a5524e3b018f8ea1d7678ba0a58f78108be66f",
+          "blob_count": 265,
+          "total_blob_bytes": 1836628
+        },
+        "god-brain": {
+          "head": "eda0e279d0bc6fdb31be5eb91fa85cd8a10e1ebf",
+          "blob_count": 265,
+          "total_blob_bytes": 1836628
+        },
+        "transcendence": {
+          "head": "748c570b0fb6d154268d3cb76ac10c28860a7ffe",
+          "blob_count": 265,
+          "total_blob_bytes": 1836628
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1836628,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1836628,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1836628,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    },
+    "noah/reference-kernel-lineage-hardening-r5-red": {
+      "subjects": {
+        "hc-brain": {
+          "head": "3d9df59b2ad8b10f2d46b4dfe67a309e2b02f207",
+          "blob_count": 270,
+          "total_blob_bytes": 1900398
+        },
+        "god-brain": {
+          "head": "cc72dd74c78b7ff7897fc3b3dec401a089ff8c50",
+          "blob_count": 270,
+          "total_blob_bytes": 1900398
+        },
+        "transcendence": {
+          "head": "5f18a3ad2f7d59cd56965d686a6cab7c2ac96cd3",
+          "blob_count": 270,
+          "total_blob_bytes": 1900398
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 270,
+          "identical_same_path_blobs": 270,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1900398,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 270,
+          "identical_same_path_blobs": 270,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1900398,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 270,
+          "identical_same_path_blobs": 270,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1900398,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    },
+    "reconcile/pr4-foundations-v1": {
+      "subjects": {
+        "hc-brain": {
+          "head": "1f30449968e98196fa8f6a0a5f9bc07c3405adf8",
+          "blob_count": 84,
+          "total_blob_bytes": 242726
+        },
+        "god-brain": {
+          "head": "c33e9de6847ad57bb90d651d8db1ad5731729f7f",
+          "blob_count": 84,
+          "total_blob_bytes": 242726
+        },
+        "transcendence": {
+          "head": "a963ffd3d5d39f31bf8fcd5e1dd5c3b8cbe25123",
+          "blob_count": 84,
+          "total_blob_bytes": 242726
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 84,
+          "identical_same_path_blobs": 84,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 242726,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 84,
+          "identical_same_path_blobs": 84,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 242726,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 84,
+          "identical_same_path_blobs": 84,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 242726,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    }
+  }
+}

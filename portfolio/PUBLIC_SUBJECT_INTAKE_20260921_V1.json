@@ -1,0 +1,172 @@
+{
+  "schema": "DISCOVERY_PUBLIC_SUBJECT_INTAKE_V1",
+  "observed_date": "2026-09-22",
+  "prior_public_cut": {
+    "observed_date": "2026-09-19",
+    "public_count": 12,
+    "public_repositories": [
+      "discovery",
+      "driftguard",
+      "hc-brain",
+      "mosaic",
+      "on-theo",
+      "project-runner",
+      "rezon",
+      "roots",
+      "testament",
+      "transcendence",
+      "wip",
+      "world-zero"
+    ],
+    "source_binding": {
+      "repository": "thebrazenbeard/discovery",
+      "commit": "34b9d49ff4be7eedd6104cbfa5501549e468eccd",
+      "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
+      "blob_sha": "34cd2ab55d46f5a1ecc2c894f3e8cfdb8afa41df",
+      "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1"
+    },
+    "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
+  },
+  "current_public_cut": {
+    "observed_date": "2026-09-22",
+    "public_count": 24,
+    "public_names_sha256": "a35c5bb3e0b99e99592b2e9535db1e2bf9a8bfc2582f113ccc1547c3607ae86e"
+  },
+  "scope": "Repositories publicly nameable in the current census that were not named in the prior public census.",
+  "authority_ceiling": "OBSERVED_CLASSIFICATION_INPUT_ONLY",
+  "subjects": [
+    {
+      "repo": "thebrazenbeard/Attune",
+      "ref": "main@eff6f9eb250a6f7684459eadf0695340053201da",
+      "primary_families": [
+        "DOMAIN_NEGATIVE_CONTROLS"
+      ],
+      "observed_role": "Relationship-first AI companion product/research subject whose identity, continuity, preferences, boundaries, and relationship semantics should remain product-owned.",
+      "disposition": "NEGATIVE_CONTROL_ANCHOR",
+      "next_question": "Which generic memory/provenance/runtime mechanics can sit underneath Attune without turning relationship semantics, consent, or persona identity into shared infrastructure?"
+    },
+    {
+      "repo": "thebrazenbeard/abil",
+      "ref": "main@0812d9780ce1648820269fa142a43e17030ef793",
+      "primary_families": [
+        "INDUSTRIAL_DIAGNOSTIC_CHAIN"
+      ],
+      "observed_role": "Brownfield industrial adaptive intelligence/reconstruction subject with explicit read-only shadow-mode and safety/action-gateway separation.",
+      "disposition": "NO_SECOND_PUBLIC_INDUSTRIAL_HANDOFF_SUBJECT_FOUND_CURRENT_CUT",
+      "next_question": "Keep the public handoff candidate held until a second industrial evidence/replay subject appears or a privacy-preserving opaque private consumer is independently attested."
+    },
+    {
+      "repo": "thebrazenbeard/bt2",
+      "ref": "main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "primary_families": [
+        "COGNITIVE_BASE_OVERLAP"
+      ],
+      "observed_role": "Repository describing itself as the reusable HC-series Hyperconnectome template, but with substantial unique archive/training/qualification material.",
+      "disposition": "HC_FAMILY_LINEAGE_HYPOTHESIS_GENERATED",
+      "next_question": "Establish provenance/lineage and maintenance economics before selecting any base/overlay or successor direction."
+    },
+    {
+      "repo": "thebrazenbeard/god-brain",
+      "ref": "main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+      "primary_families": [
+        "COGNITIVE_BASE_OVERLAP",
+        "EXPERIMENT_MECHANICS"
+      ],
+      "observed_role": "Experimental cognitive derivative whose README explicitly states hc-brain template origin and independent project history.",
+      "disposition": "HC_FAMILY_LINEAGE_HYPOTHESIS_GENERATED",
+      "next_question": "Perform exact pinned-HC-plus-overlay reconstruction and then measure forward divergence cost."
+    },
+    {
+      "repo": "thebrazenbeard/noema",
+      "ref": "main@890efdca01cf496ce1b8686d86f8442a149a9d34",
+      "primary_families": [
+        "COGNITIVE_BASE_OVERLAP",
+        "EXPERIMENT_MECHANICS"
+      ],
+      "observed_role": "Independent predictive-cognition research subject with no approved implementation architecture.",
+      "disposition": "NEGATIVE_CONTROL_OR_FUTURE_CONSUMER",
+      "next_question": "Do not force Noema into HC lineage; use it to test whether proposed cognition mechanics are genuinely reusable across distinct architectural hypotheses."
+    },
+    {
+      "repo": "thebrazenbeard/semanticatlas",
+      "ref": "main@5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "primary_families": [
+        "EVIDENCE_PROVENANCE_CUSTODY",
+        "SEMANTIC_GROUNDING_PROVENANCE"
+      ],
+      "observed_role": "Provenance-aware semantic concept/interpretation mapping and historical-source archaeology.",
+      "disposition": "SEMANTIC_PROVENANCE_HYPOTHESIS_GENERATED",
+      "next_question": "Test a minimal claim/provenance record without importing Semantic Atlas ontology or admission semantics."
+    },
+    {
+      "repo": "thebrazenbeard/spm",
+      "ref": "main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "primary_families": [
+        "SEMANTIC_GROUNDING_PROVENANCE",
+        "EXPERIMENT_MECHANICS"
+      ],
+      "observed_role": "Research program testing semantics/pragmatics as first-class model targets with explicit baseline and falsification discipline.",
+      "disposition": "INDEPENDENT_THIRD_CONSUMER_FALSIFIER",
+      "next_question": "Determine whether a narrow semantic-evidence record is useful to SPM without biasing the model hypothesis toward another repository's representation."
+    },
+    {
+      "repo": "thebrazenbeard/unvtrslr",
+      "ref": "main@903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "primary_families": [
+        "SEMANTIC_GROUNDING_PROVENANCE",
+        "EXPERIMENT_MECHANICS"
+      ],
+      "observed_role": "Adversarial semantic-grounding and zero-shared-language mediation research with explicit claim ceilings and rival-hypothesis controls.",
+      "disposition": "SEMANTIC_PROVENANCE_HYPOTHESIS_GENERATED",
+      "next_question": "Encode one real R2 semantic-claim-control case through a minimal interchange and test losslessness."
+    },
+    {
+      "repo": "thebrazenbeard/vera-mesh",
+      "ref": "main@d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+      "primary_families": [
+        "COORDINATION_TRANSPORT",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "observed_role": "Public Vera-node connectivity/transport subject; main README currently establishes only a minimal connection role.",
+      "disposition": "TRANSPORT_PACKAGE_BOUNDARY_HYPOTHESIS_GENERATED",
+      "next_question": "Test a neutral source/build/install/runtime-currentness handoff record without importing VeraPort session authority into packaging."
+    },
+    {
+      "repo": "thebrazenbeard/vera-synology",
+      "ref": "main@1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+      "primary_families": [
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "observed_role": "Synology packaging/deployment subject for Vera.",
+      "disposition": "TRANSPORT_PACKAGE_BOUNDARY_HYPOTHESIS_GENERATED",
+      "next_question": "Validate a VeraMesh source/payload handoff while retaining DSM package/install/migration authority locally."
+    },
+    {
+      "repo": "thebrazenbeard/voss",
+      "ref": "main@54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "primary_families": [
+        "EVIDENCE_PROVENANCE_CUSTODY"
+      ],
+      "observed_role": "Forensic auditor/reviewer subject.",
+      "disposition": "INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE",
+      "next_question": "Revisit only when public source exposes an audit/review contract, receipt, exact-head binding, or implementation that can be compared mechanically."
+    },
+    {
+      "repo": "thebrazenbeard/WorkBridgeMCP",
+      "ref": "main@12bcbec3a4bda69e8b9361317feb8e9d9d47b6df",
+      "primary_families": [
+        "COORDINATION_TRANSPORT",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "observed_role": "Public workstation-bridge repository whose current main is a stub while PR #5 contains the qualified implementation candidate.",
+      "disposition": "RUNTIME_BRIDGE_CANDIDATE_NOT_CURRENT_RUNTIME",
+      "next_question": "Complete exact-head review/canonicalization of PR #5, then separately verify installation and MCP client/runtime registration before treating WorkBridge as consumed."
+    }
+  ],
+  "anti_cherry_pick_result": {
+    "subjects_expected": 12,
+    "subjects_recorded": 12,
+    "rule": "Every repository newly nameable relative to the prior public census receives an explicit disposition; lack of immediate candidate generation is itself recorded."
+  },
+  "validation_ceiling": "Current public list/count/digest and the exact historical prior-public cut are source-validated. Private/all-name digests remain externally supplied commitments and this public artifact does not claim content-wide proof that no private name occurs anywhere."
+}

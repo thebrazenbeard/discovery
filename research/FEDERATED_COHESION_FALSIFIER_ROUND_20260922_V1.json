@@ -1,0 +1,132 @@
+{
+  "schema_version": "DISCOVERY_FEDERATED_COHESION_FALSIFIER_ROUND_V1",
+  "status": "PUBLIC_SAFE_SOURCE_BOUND_FALSIFICATION_ROUND",
+  "observed_date": "2026-09-22",
+  "parent_subject": {
+    "pr": 25,
+    "ref": "vera/discovery-federated-cohesion-research-v2-20260922@7167f65ad74b3b1bb2114fa8397b8c2c1308390b",
+    "research_blob": "a2b96283babde252d41e503938cf5a001399abe5",
+    "prior_hypothesis": "FEDERATED_COHESION_V1"
+  },
+  "falsifier_subjects": [
+    {
+      "pr": 26,
+      "ref": "vera/discovery-semantic-provenance-interchange-v1-20260922@a64e3c44c781012adf32f65338703713543d190e",
+      "experiment_path": "experiments/SEMANTIC_PROVENANCE_INTERCHANGE_EXPERIMENT_V1.json",
+      "experiment_blob": "946bf718a653bb36e762f302964ac9f19adb8dbc",
+      "result": "PASS_WITH_LIMITS",
+      "candidate_disposition": "HYPOTHESIS_RETAINED_PENDING_INDEPENDENT_REVIEW_AND_IMPLEMENTATION_ECONOMICS",
+      "federated_implication": "NARROW_STRUCTURAL_INTERCHANGE_CAN_PRESERVE_PROJECT_ONTOLOGY_BUT_REUSE_ECONOMICS_REMAIN_UNPROVEN"
+    },
+    {
+      "pr": 27,
+      "ref": "vera/discovery-veramesh-synology-handoff-v1-20260922@018028702eadd4693623d887b2228d8fa5d6e44f",
+      "experiment_path": "experiments/VERAMESH_SYNOLOGY_HANDOFF_EXPERIMENT_V1.json",
+      "experiment_blob": "2ed5ebd834fae845d4553cc283a3b4d1ac6b1807",
+      "result": "FAIL_CURRENT_NATIVE_CROSS_REPO_BINDING_MISSING",
+      "candidate_disposition": "HYPOTHESIS",
+      "federated_implication": "DISCOVERY_SIDE_CROSS_BINDING_CANNOT_SUBSTITUTE_FOR_NATIVE_CONSUMER_PROVENANCE"
+    },
+    {
+      "pr": 28,
+      "ref": "vera/discovery-experiment-receipt-third-consumer-v1-20260922@c19a73c4b563e001b09189d688b995d7b368e58b",
+      "experiment_path": "experiments/EXPERIMENT_RECEIPT_THIRD_CONSUMER_V1.json",
+      "experiment_blob": "f90fc854555ed5078d79a748493c6b226aeb0011",
+      "result": "THIRD_CONSUMER_FALSIFIES_PRIOR_GENERIC_RECEIPT_PATTERN_NO_EXTRACTION",
+      "candidate_disposition": "PROJECT_SPECIFIC_NO_GENERIC_RECEIPT_CANDIDATE",
+      "federated_implication": "SHARED_EVIDENCE_CLASS_VOCABULARY_MAY_SURVIVE_WHILE_ONE_UNIVERSAL_RECEIPT_SCHEMA_DOES_NOT"
+    },
+    {
+      "pr": 29,
+      "ref": "vera/discovery-rezon-runner-maintenance-v1-20260922@033f96d171fb7eed7fba537e6044e31eb94c472a",
+      "experiment_path": "experiments/REZON_RUNNER_MAINTENANCE_CURRENTNESS_V1.json",
+      "experiment_blob": "3b81218b02e999c5f4bd3cb6899391edda3db6d5",
+      "result": "EXPERIMENTING_NARROWED_CURRENT_SUCCESSOR_NO_REUSE_PROMOTION",
+      "candidate_disposition": "EXPERIMENTING_NARROWED",
+      "maintenance_delta": {
+        "commits_ahead_from_original_verifier": 11,
+        "changed_files": 7,
+        "additions": 445,
+        "deletions": 16,
+        "verifier_net_line_growth": 73,
+        "primary_test_net_line_growth": 80,
+        "added_failure_test_lines": 105
+      },
+      "federated_implication": "MECHANICAL_BOUNDARY_CAN_SURVIVE_WHILE_PRODUCER_AGNOSTICITY_AND_NET_MAINTENANCE_VALUE_FAIL_TO_MATERIALIZE"
+    }
+  ],
+  "prior_experiment_reassessment": [
+    {
+      "id": "FED-EXP-1",
+      "prior_question": "Can one organic cross-project handoff use exact provenance, authority and effect evidence without any participant adopting another participant's native state machine?",
+      "current_state": "UNRESOLVED_WITH_NEGATIVE_ECONOMIC_AND_NATIVE_BINDING_EVIDENCE",
+      "evidence": [
+        "PR #27 found that Discovery-side cross-repo knowledge does not create native Synology provenance for the exact VeraMesh producer.",
+        "PR #29 preserves a useful Rezon-to-Runner mechanical boundary but measures maintenance coupling, no second organic consumer, and no net maintenance savings."
+      ],
+      "promotion": "NO"
+    },
+    {
+      "id": "FED-EXP-2",
+      "prior_question": "Can a shared currentness receipt distinguish source, package, install, route, runtime consumption, effect and qualification without promoting one repository into global authority?",
+      "current_state": "NAIVE_UNIVERSAL_RECEIPT_PATTERN_FALSIFIED",
+      "evidence": [
+        "PR #28 found no meaningful three-way common executable receipt contract across World Zero, Mosaic and DriftGuard beyond weak identity/digest plumbing.",
+        "PR #27 still supports the usefulness of keeping source, build, install, route and live-effect states distinct, but does not establish one shared receipt schema."
+      ],
+      "promotion": "NO"
+    }
+  ],
+  "narrowed_hypothesis": {
+    "id": "FEDERATED_COHESION_V1_NARROWED",
+    "state": "HYPOTHESIS",
+    "proposition": "Prefer project-owned native semantics with narrow cross-project boundary contracts. Share evidence-class vocabulary, exact provenance, and mechanically neutral interchange only when independent consumers demonstrate preserved authority boundaries and measurable maintenance or failure-isolation value.",
+    "supported_so_far": [
+      "Semantic/provenance interchange can preserve native ontologies in a narrow structural test.",
+      "Exact source/currentness distinctions remain useful across heterogeneous projects.",
+      "Mechanical verification can be separated from epistemic authority."
+    ],
+    "rejected_or_not_supported": [
+      "A mandatory global runtime.",
+      "A universal generic receipt schema across materially different systems.",
+      "Discovery-side records as substitutes for native consumer provenance.",
+      "Producer-agnostic verifier reuse where producer invariants must be mirrored.",
+      "Reuse promotion without measured code deletion, maintenance reduction, or independent organic consumers."
+    ],
+    "default_rule": "LOCAL_NATIVE_MODEL_PLUS_BOUNDARY_CONTRACT_UNLESS_REUSE_EARNS_PROMOTION",
+    "promotion_ceiling": "HYPOTHESIS_ONLY"
+  },
+  "decision_rules": [
+    {
+      "rule": "SHARE_DISTINCTIONS_BEFORE_SCHEMAS",
+      "meaning": "Common evidence classes such as source, build, install, route, effect and qualification may be useful even when their concrete receipt schemas remain project-specific."
+    },
+    {
+      "rule": "NATIVE_BINDING_BEATS_EXTERNAL_CORRELATION",
+      "meaning": "A cross-project observer knowing two exact refs does not prove the consumer's native artifact or runtime validates that producer binding."
+    },
+    {
+      "rule": "INTEROPERABILITY_IS_NOT_REUSE_VALUE",
+      "meaning": "A common envelope or verifier must demonstrate actual simplification, code deletion, failure prevention, or maintenance reduction before promotion."
+    },
+    {
+      "rule": "ADAPTER_GROWTH_COUNTS_AS_COST",
+      "meaning": "Hardening that mirrors producer invariants is legitimate engineering but counts against producer-agnostic reuse claims."
+    },
+    {
+      "rule": "NEGATIVE_RESULTS_ROUTE_ARCHITECTURE",
+      "meaning": "A failed abstraction test should narrow the portfolio contract rather than trigger another broader schema by default."
+    }
+  ],
+  "hostile_review": {
+    "status": "PASS_WITH_BLOCKING_OBJECTIONS",
+    "critical_objections": [
+      "The narrowed hypothesis may be so conservative that it becomes unfalsifiable: every failed shared abstraction could be re-described as evidence for federation.",
+      "Evidence-class vocabulary can still become a de facto ontology if downstream systems begin treating labels as semantically authoritative.",
+      "Maintenance growth in Rezon-Runner may reflect necessary correctness work rather than failed reuse economics; actual comparative baseline costs remain unmeasured.",
+      "The current falsifier set is concentrated in public repositories and cannot establish the same architecture for the private cohort."
+    ],
+    "required_next_falsifier": "Find one existing organic integration where a narrow boundary contract demonstrably deletes duplicated non-domain code or prevents a previously observed failure while both projects remain locally operable without the shared component."
+  },
+  "claim_ceiling": "FOUR_EXACT_FALSIFIERS_INGESTED_HYPOTHESIS_SURVIVES_NARROWED_NO_REUSE_PROMOTION_NO_RUNTIME_AUTHORITY"
+}

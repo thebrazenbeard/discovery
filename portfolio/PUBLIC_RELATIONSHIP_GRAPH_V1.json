@@ -1,12 +1,48 @@
 {
   "schema_version": "DISCOVERY_RELATIONSHIP_GRAPH_V1",
-  "status": "PUBLIC_SAFE_INITIAL_GRAPH_HYPOTHESES",
+  "status": "PUBLIC_SAFE_LIVE_GRAPH_HYPOTHESES",
   "inventory_binding": {
-    "observed_date": "2026-09-19",
-    "total_count": 57,
-    "all_names_sha256": "43dfda1fa3dd24dec39e2aa345d93ab192dbda777433feae384da632b3d008dd"
+    "observed_date": "2026-09-22",
+    "total_count": 59,
+    "all_names_sha256": "68fca652ca0688b7871c352987ffe68b55d4c0af521802704920b058e2fa943c"
   },
   "nodes": [
+    {
+      "id": "abil",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "INDUSTRIAL_DIAGNOSTICS",
+        "BROWNFIELD_ADAPTATION"
+      ],
+      "notes": [
+        "Public anchor for the industrial diagnostic/reconstruction chain."
+      ]
+    },
+    {
+      "id": "Attune",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "RELATIONSHIP_PRODUCT",
+        "DOMAIN_NEGATIVE_CONTROL"
+      ],
+      "notes": [
+        "Product thesis explicitly treats identity/continuity/relationship semantics as product-owned rather than generic substrate."
+      ]
+    },
+    {
+      "id": "bt2",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_BASE_CANDIDATE",
+        "REUSABLE_HC_TEMPLATE"
+      ],
+      "notes": [
+        "README describes this repository as the canonical reusable HC-series Hyperconnectome template."
+      ]
+    },
     {
       "id": "discovery",
       "kind": "REPOSITORY",
@@ -28,6 +64,18 @@
       "notes": []
     },
     {
+      "id": "god-brain",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_DERIVATIVE",
+        "EXPERIMENT_SYSTEM"
+      ],
+      "notes": [
+        "README states the repository was created from the hc-brain template and has independent project history."
+      ]
+    },
+    {
       "id": "hc-brain",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -46,6 +94,18 @@
       "notes": []
     },
     {
+      "id": "noema",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COGNITIVE_RESEARCH",
+        "PREDICTIVE_WORLD_MODEL"
+      ],
+      "notes": [
+        "Research project for persistent predictive cognition; architecture remains unapproved."
+      ]
+    },
+    {
       "id": "on-theo",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -54,6 +114,17 @@
         "EVIDENCE_DISCIPLINE"
       ],
       "notes": []
+    },
+    {
+      "id": "private-cohort",
+      "kind": "OPAQUE_PRIVATE_COHORT",
+      "privacy": "PRIVATE_OPAQUE",
+      "labels": [
+        "35_PRIVATE_REPOSITORIES"
+      ],
+      "notes": [
+        "Node intentionally hides private repository identities; count bound to the 2026-09-22 census."
+      ]
     },
     {
       "id": "project-runner",
@@ -83,6 +154,29 @@
       "notes": []
     },
     {
+      "id": "semanticatlas",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "SEMANTIC_PROVENANCE",
+        "EVIDENCE_DISCIPLINE"
+      ],
+      "notes": [
+        "Provenance-aware semantic concept and relation mapping."
+      ]
+    },
+    {
+      "id": "spm",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "SEMANTIC_MODEL_RESEARCH"
+      ],
+      "notes": [
+        "Research program for semantics/pragmatics as first-class model targets."
+      ]
+    },
+    {
       "id": "testament",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -100,6 +194,54 @@
         "COGNITIVE_OVERLAY_CANDIDATE"
       ],
       "notes": []
+    },
+    {
+      "id": "unvtrslr",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "SEMANTIC_GROUNDING_EXPERIMENT",
+        "EXPERIMENT_SYSTEM"
+      ],
+      "notes": [
+        "Adversarial research program for grounded semantic mediation without assumed shared language."
+      ]
+    },
+    {
+      "id": "vera-mesh",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "COORDINATION_TRANSPORT",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "notes": [
+        "Public transport/runtime subject; README only establishes Vera-node connectivity at main."
+      ]
+    },
+    {
+      "id": "vera-synology",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "VERA_RUNTIME_CONTROL",
+        "DEPLOYMENT_PACKAGE"
+      ],
+      "notes": [
+        "Public packaging/runtime subject for a Synology target."
+      ]
+    },
+    {
+      "id": "voss",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "AUDIT_REVIEW",
+        "EVIDENCE_DISCIPLINE"
+      ],
+      "notes": [
+        "Public forensic auditor/reviewer subject."
+      ]
     },
     {
       "id": "wip",
@@ -122,18 +264,257 @@
       "notes": []
     },
     {
-      "id": "private-cohort",
-      "kind": "OPAQUE_PRIVATE_COHORT",
-      "privacy": "PRIVATE_OPAQUE",
+      "id": "WorkBridgeMCP",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
       "labels": [
-        "45_PRIVATE_REPOSITORIES"
+        "WORKSTATION_BRIDGE",
+        "RUNTIME_BOUNDARY_CANDIDATE"
       ],
       "notes": [
-        "Node intentionally hides private repository identities."
+        "Current main is a stub; usable implementation is tracked separately in WorkBridgeMCP PR #5. Presence does not establish installation or runtime consumption."
       ]
     }
   ],
   "edges": [
+    {
+      "edge_id": "BT2_GODBRAIN_HC_FAMILY_DUPLICATION",
+      "from": "bt2",
+      "to": "god-brain",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact default-head HC-family overlap between bt2 and God Brain.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+        "thebrazenbeard/god-brain:main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5"
+      ],
+      "falsifiers": [
+        "The overlap is purely historical and no longer maintenance-relevant.",
+        "A common base would import bt2 archive/training semantics or constrain God Brain's independent experiment.",
+        "Forward changes demonstrate high recurring conflict/requalification cost."
+      ],
+      "notes": [
+        "178 identical same-path blobs; 10 changed same-path blobs.",
+        "Identical same-path bytes are 46.17560803% of the smaller repository byte surface."
+      ]
+    },
+    {
+      "edge_id": "BT2_TRANSCENDENCE_HC_FAMILY_DUPLICATION",
+      "from": "bt2",
+      "to": "transcendence",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact default-head HC-family overlap between bt2 and Transcendence with substantial bt2-specific and Transcendence-specific surfaces.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+        "thebrazenbeard/transcendence:main@68e7a794d6134e8319121404f31062288dc8d6a3"
+      ],
+      "falsifiers": [
+        "The common bytes are dominated by incidental archives/scaffolding rather than maintained HC substrate.",
+        "Lineage analysis shows no useful common base can be preserved without importing project-specific material.",
+        "Forward maintenance cost favors independent copies."
+      ],
+      "notes": [
+        "179 identical same-path blobs; 9 changed same-path blobs.",
+        "Identical same-path bytes are 56.68164073% of the smaller repository byte surface."
+      ]
+    },
+    {
+      "edge_id": "DISCOVERY_CENSUS_PRIVATE_OPAQUE_CONSUMER",
+      "from": "discovery",
+      "to": "private-cohort",
+      "relation": "PROVIDER_CONSUMER",
+      "scope": "same exact census digest consumed by one opaque private runtime/source-registry subject without publishing its identity",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
+        "private-attestation:sha256:1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969"
+      ],
+      "falsifiers": [
+        "The public attestation leaks or permits practical inference of the hidden repository identity/ref.",
+        "The hidden consumer requires Discovery to own its runtime/control semantics.",
+        "The private receipt cannot be reverified in its governed private domain."
+      ],
+      "notes": [
+        "Opaque private evidence is insufficient for PROVEN_REUSABLE under V1."
+      ]
+    },
+    {
+      "edge_id": "DISCOVERY_CENSUS_PROJECT_RUNNER_CONSUMER",
+      "from": "discovery",
+      "to": "project-runner",
+      "relation": "PROVIDER_CONSUMER",
+      "scope": "exact privacy-safe repository census bytes used only as portfolio drift/currentness input",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
+        "thebrazenbeard/project-runner:work/discovery-census-consumer-v1-20260920@b763c707abacc7dfe30dc451b2b42354a30e3621"
+      ],
+      "falsifiers": [
+        "Project Runner must import Discovery scheduling, authority, or project semantics to consume the census.",
+        "Project Runner requires live Discovery availability after exact census bytes have been obtained.",
+        "The binding fails to detect a changed census artifact or accepts altered bytes."
+      ],
+      "notes": [
+        "Hosted Project Runner workflow run 35509678751 succeeded on the exact consumer source."
+      ]
+    },
+    {
+      "edge_id": "DRIFTGUARD_RUNNER_EFFECT_INTEGRITY",
+      "from": "driftguard",
+      "to": "project-runner",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "effect decision/precondition, post-effect uncertainty, receipt/readback, and separation of decision from verified effect",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
+        "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8"
+      ],
+      "falsifiers": [
+        "Neutral phase mapping requires DriftGuard behavioral-recovery semantics or Runner scheduling/lease semantics.",
+        "Accepted DriftGuard acknowledgement must be mislabeled as verified effect to fit the shared envelope.",
+        "Either project must consume Discovery at runtime."
+      ],
+      "notes": [
+        "DriftGuard adapter preserves acknowledgement as POST_EFFECT_UNVERIFIED and uses DOMAIN_DECIDES."
+      ]
+    },
+    {
+      "edge_id": "DRIFTGUARD_WIP_EFFECT_INTEGRITY",
+      "from": "driftguard",
+      "to": "wip",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "source-native effect attempt/acknowledgement states mapped to neutral unverified/verified/reconciled effect phases",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
+        "thebrazenbeard/wip:main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
+      ],
+      "falsifiers": [
+        "Mapping collapses WIP ambiguity/reconciliation semantics or DriftGuard acknowledgement/recovery semantics.",
+        "The common envelope becomes authoritative for retry or completion.",
+        "Adapter burden exceeds duplicated interchange logic removed."
+      ],
+      "notes": [
+        "This edge is evidence for the triadic candidate, not a claim that DriftGuard and WIP share one state machine."
+      ]
+    },
+    {
+      "edge_id": "GODBRAIN_TRANSCENDENCE_HC_FAMILY_DUPLICATION",
+      "from": "god-brain",
+      "to": "transcendence",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact default-head HC-family snapshot overlap: 255 of 263 Transcendence paths are byte-identical to God Brain.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/god-brain:main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+        "thebrazenbeard/transcendence:main@68e7a794d6134e8319121404f31062288dc8d6a3"
+      ],
+      "falsifiers": [
+        "A fresh exact-head comparison materially reduces the overlap.",
+        "The shared bytes are a historical snapshot with no continuing maintenance implication.",
+        "A factorized representation would damage Transcendence's independent experimental isolation."
+      ],
+      "notes": [
+        "255 identical same-path blobs; 8 changed same-path blobs.",
+        "Identical same-path bytes are 95.35251012% of the smaller repository byte surface.",
+        "This edge is byte-identity evidence only; no dependency direction is established.",
+        "Both repositories carry later parentless re-rootings of the same 34 HC non-main branch trees; Transcendence's re-rooting dates precede God Brain's in every measured branch.",
+        "Chronology alone does not establish Transcendence as God Brain's direct source; both may derive independently from HC or another reconstruction artifact."
+      ]
+    },
+    {
+      "edge_id": "HC_BT2_PARTIAL_TEMPLATE_DUPLICATION",
+      "from": "hc-brain",
+      "to": "bt2",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact main-head HC-family overlap with substantial divergence: 178 same-path blobs are byte-identical and 10 same-path blobs differ.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/hc-brain:main@618245b54fb923c7a204892c6953ab6d1c5dac57",
+        "thebrazenbeard/bt2:main@30e81cadd94fae117a7f6875523c03251c7c9f6e"
+      ],
+      "falsifiers": [
+        "The identical blobs are dominated by incidental documentation or generated artifacts rather than reusable HC implementation.",
+        "A path-normalized or provenance-aware comparison shows the apparent overlap does not represent common maintained substrate.",
+        "Factorization would import bt2 archive/training history or project-specific authority into hc-brain."
+      ],
+      "notes": [
+        "Measured 178 identical same-path blobs, 10 changed same-path blobs, 329 bt2-only blobs, and 112 hc-brain-only blobs.",
+        "Identical same-path blobs account for 1,011,147 of 2,191,461 hc-brain bytes at the exact measured heads (46.14031461%).",
+        "The divergence is too large to infer a safe overlay or canonical successor relationship without a dedicated lineage/reconstruction experiment."
+      ]
+    },
+    {
+      "edge_id": "HC_GODBRAIN_INITIAL_SNAPSHOT_DUPLICATION",
+      "from": "hc-brain",
+      "to": "god-brain",
+      "relation": "DUPLICATED_IMPLEMENTATION",
+      "scope": "Exact main-head duplication plus exhaustive non-main branch source-side lineage evidence: HC holds earlier parented commits for 34 copied branch snapshots; God Brain later re-roots the identical trees as parentless Initialize commits.",
+      "evidence_state": "OBSERVED",
+      "source_refs": [
+        "thebrazenbeard/hc-brain:main@618245b54fb923c7a204892c6953ab6d1c5dac57",
+        "thebrazenbeard/god-brain:main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5"
+      ],
+      "falsifiers": [
+        "A fresh exact-head comparison materially reduces the measured overlap.",
+        "God Brain intentionally begins modifying inherited HC paths at a rate that makes a base-plus-overlay representation higher-maintenance than independent copies.",
+        "The copied HC snapshot is historical provenance only and no ongoing synchronization or factorization benefit can be demonstrated."
+      ],
+      "notes": [
+        "Measured 299/300 identical same-path blobs.",
+        "Identical blobs account for 2,181,434 of 2,191,461 hc-brain bytes at the exact measured heads (99.54245136%).",
+        "This is duplication evidence only; it does not establish dependency adoption, moving-base inheritance, or HC semantic authority over God Brain.",
+        "Across all 34 non-main live branch names common to HC, Transcendence, and God Brain, God Brain's tree SHA equals HC's earlier tree SHA while God Brain's branch commit is a later parentless `Initialize <branch>` root.",
+        "This supports HC as the historical source side of those snapshots, but does not prove whether God Brain copied directly from HC, via Transcendence, or via an intermediate reconstruction artifact."
+      ]
+    },
+    {
+      "edge_id": "HC_TRANSCENDENCE_BASE_OVERLAY",
+      "from": "hc-brain",
+      "to": "transcendence",
+      "relation": "POTENTIAL_BASE_OVERLAY",
+      "scope": "exact pinned HC source bytes plus explicit Transcendence additions/overwrites/deletions; no moving-base or authority inheritance",
+      "evidence_state": "EXPERIMENTING",
+      "source_refs": [
+        "thebrazenbeard/hc-brain:noah/kinesis-runtime-v1@5929da3e8904e23e484df0deac920a008ec33d52",
+        "thebrazenbeard/transcendence:one/transcendence-integrity-manifest-runtime-parity-v1-20260919@be3785c83dbe89b0d4236b43eda97a277eb6baad"
+      ],
+      "falsifiers": [
+        "A forward-observed HC upgrade changing inherited shared bytes creates large recurring override or qualification burden.",
+        "Transcendence future work requires frequent intentional forks of currently shared HC paths.",
+        "Pinned-base dependency or deletion-manifest mechanics increase maintenance/risk more than copied-base synchronization removes."
+      ],
+      "notes": [
+        "Exact pinned HC PR #22 + explicit overlay reconstructs Transcendence PR #7 exact Git tree; Discovery PR #15 hosted PASS.",
+        "Current target overlap: 254 identical same-path files / 85.628625314% of target bytes; overlay payload 34 files / 286,362 bytes / 14.371374686%, plus 39 deletes.",
+        "HC main→PR22 simulation changes 8 of 73 current overlay instructions; payload bytes unchanged; two new HC motor-control paths are explicitly excluded.",
+        "Ten selected real HC shared-path transitions yield nine immediate overlay removals and one transient override that converges on the next real HC change.",
+        "Selection is conditioned on paths shared today and does not establish future conflict rate or original HC import lineage.",
+        "Dependency adoption remains unproven; moving-base inheritance remains rejected.",
+        "Exhaustive branch ancestry now establishes source-side chronology for 34 non-main common live branches: HC has the earlier parented commit and Transcendence later re-roots the identical tree as a parentless `Initialize <branch>` commit.",
+        "That evidence narrows historical provenance but does not make a moving-base dependency or HC semantic authority valid."
+      ]
+    },
+    {
+      "edge_id": "ONTHEO_TESTAMENT_NEGATIVE_CONTROL",
+      "from": "on-theo",
+      "to": "testament",
+      "relation": "NEGATIVE_CONTROL",
+      "scope": "test whether generic evidence/provenance abstractions preserve distinct domain source classes and inference rules",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/on-theo:research/hostile-powers-transmission-map-v1-20260919@940a9b3bbefd8790ad5ced58c88d249f08fbf16f",
+        "thebrazenbeard/testament:foundation/testament-v1@c3871a554f9dc9dcdf3e49d3c70fc2d8492e4681"
+      ],
+      "falsifiers": [
+        "The negative-control pair does not materially exercise different evidence semantics.",
+        "A proposed generic evidence layer changes either project's domain-specific interpretation rules."
+      ],
+      "notes": [
+        "Success means a shared mechanic can be used without harmonizing domain meaning."
+      ]
+    },
     {
       "edge_id": "RUNNER_REZON_EXECUTION_BOUNDARY",
       "from": "rezon",
@@ -179,28 +560,66 @@
       ]
     },
     {
-      "edge_id": "HC_TRANSCENDENCE_BASE_OVERLAY",
-      "from": "hc-brain",
-      "to": "transcendence",
-      "relation": "POTENTIAL_BASE_OVERLAY",
-      "scope": "exact pinned HC source bytes plus explicit Transcendence additions/overwrites/deletions; no moving-base or authority inheritance",
-      "evidence_state": "EXPERIMENTING",
+      "edge_id": "SEMANTICATLAS_UNVTRSLR_PROVENANCE_MECHANICS",
+      "from": "semanticatlas",
+      "to": "unvtrslr",
+      "relation": "OVERLAPPING_MECHANIC",
+      "scope": "semantic-claim provenance, unresolved/rival state, evidence lineage, and explicit claim ceilings without shared ontology",
+      "evidence_state": "HYPOTHESIS",
       "source_refs": [
-        "thebrazenbeard/hc-brain:noah/kinesis-runtime-v1@5929da3e8904e23e484df0deac920a008ec33d52",
-        "thebrazenbeard/transcendence:one/transcendence-integrity-manifest-runtime-parity-v1-20260919@be3785c83dbe89b0d4236b43eda97a277eb6baad"
+        "thebrazenbeard/semanticatlas:main@5669a727b870a490ecee748b2cd712a2fc4a54c5",
+        "thebrazenbeard/unvtrslr:main@903d79c6e47bb9f73bd7700edd35315777e9f5d1"
       ],
       "falsifiers": [
-        "A forward-observed HC upgrade changing inherited shared bytes creates large recurring override or qualification burden.",
-        "Transcendence future work requires frequent intentional forks of currently shared HC paths.",
-        "Pinned-base dependency or deletion-manifest mechanics increase maintenance/risk more than copied-base synchronization removes."
+        "A lossless common record requires Semantic Atlas ontology semantics or UNVTRSLR grounding/evaluator semantics.",
+        "The shared representation collapses source/inference/history distinctions or operational/semantic claim ceilings.",
+        "Adapters add more semantic translation and maintenance burden than the common mechanic removes."
       ],
       "notes": [
-        "Exact pinned HC PR #22 + explicit overlay reconstructs Transcendence PR #7 exact Git tree; Discovery PR #15 hosted PASS.",
-        "Current target overlap: 254 identical same-path files / 85.628625314% of target bytes; overlay payload 34 files / 286,362 bytes / 14.371374686%, plus 39 deletes.",
-        "HC main→PR22 simulation changes 8 of 73 current overlay instructions; payload bytes unchanged; two new HC motor-control paths are explicitly excluded.",
-        "Ten selected real HC shared-path transitions yield nine immediate overlay removals and one transient override that converges on the next real HC change.",
-        "Selection is conditioned on paths shared today and does not establish future conflict rate or original HC import lineage.",
-        "Dependency adoption remains unproven; moving-base inheritance remains rejected."
+        "Source-bound comparison recorded in experiments/SEMANTIC_GROUNDING_PROVENANCE_SURFACE_V1.json.",
+        "No shared semantic ontology, truth authority, or runtime dependency is proposed."
+      ]
+    },
+    {
+      "edge_id": "SPM_SEMANTIC_PROVENANCE_THIRD_CONSUMER",
+      "from": "spm",
+      "to": "semanticatlas",
+      "relation": "NEEDS_MORE_EVIDENCE",
+      "scope": "provenance sensitivity, semantic scope fidelity, ambiguity/conflict preservation, and currentness as possible third-consumer evaluation mechanics",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/spm:main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+        "thebrazenbeard/semanticatlas:main@5669a727b870a490ecee748b2cd712a2fc4a54c5"
+      ],
+      "falsifiers": [
+        "SPM evaluation needs only benchmark scoring and no reusable provenance/claim-state record.",
+        "Using the candidate mechanic biases SPM toward Semantic Atlas's representation rather than testing model architecture independently.",
+        "A third-consumer adapter cannot remain smaller and semantically narrower than the native evaluation logic."
+      ],
+      "notes": [
+        "SPM is not counted as evidence of reuse yet; it is the intended independent third-consumer falsifier."
+      ]
+    },
+    {
+      "edge_id": "VERAMESH_SYNOLOGY_CURRENTNESS_HANDOFF",
+      "from": "vera-mesh",
+      "to": "vera-synology",
+      "relation": "COMPLEMENTARY_BOUNDARY",
+      "scope": "VeraMesh transport/application-session source and route currentness handed to Synology-specific deterministic package/build/install/currentness custody without authority transfer",
+      "evidence_state": "HYPOTHESIS",
+      "source_refs": [
+        "thebrazenbeard/vera-mesh:9bffc57930587bf74a12657bbeaa913474ab5574",
+        "thebrazenbeard/vera-synology:553e3a637833c5469f6b99fbc4d597755a0c9a5e"
+      ],
+      "falsifiers": [
+        "A neutral handoff cannot distinguish source, package artifact, installed artifact, route currentness, and live-effect readback.",
+        "Synology must interpret VeraPort session/fencing authority or VeraMesh must interpret DSM/package lifecycle semantics.",
+        "The handoff adds more validation/adapter burden than duplicated currentness plumbing it removes."
+      ],
+      "notes": [
+        "VeraMesh source explicitly separates source/runtime/plugin/route/read/write/process states.",
+        "Vera Synology source cross-binds package bytes/modes to SOURCE_MANIFEST and separately records installed R6 versus later current source.",
+        "Candidate VERAMESH_SYNOLOGY_HANDOFF_V1 remains HYPOTHESIS."
       ]
     },
     {
@@ -223,25 +642,6 @@
       ]
     },
     {
-      "edge_id": "ONTHEO_TESTAMENT_NEGATIVE_CONTROL",
-      "from": "on-theo",
-      "to": "testament",
-      "relation": "NEGATIVE_CONTROL",
-      "scope": "test whether generic evidence/provenance abstractions preserve distinct domain source classes and inference rules",
-      "evidence_state": "HYPOTHESIS",
-      "source_refs": [
-        "thebrazenbeard/on-theo:research/hostile-powers-transmission-map-v1-20260919@940a9b3bbefd8790ad5ced58c88d249f08fbf16f",
-        "thebrazenbeard/testament:foundation/testament-v1@c3871a554f9dc9dcdf3e49d3c70fc2d8492e4681"
-      ],
-      "falsifiers": [
-        "The negative-control pair does not materially exercise different evidence semantics.",
-        "A proposed generic evidence layer changes either project's domain-specific interpretation rules."
-      ],
-      "notes": [
-        "Success means a shared mechanic can be used without harmonizing domain meaning."
-      ]
-    },
-    {
       "edge_id": "WORLDZERO_MOSAIC_RECEIPT_PATTERN",
       "from": "world-zero",
       "to": "mosaic",
@@ -259,86 +659,6 @@
       ],
       "notes": [
         "Do not create a shared component from this pair alone."
-      ]
-    },
-    {
-      "edge_id": "DISCOVERY_CENSUS_PROJECT_RUNNER_CONSUMER",
-      "from": "discovery",
-      "to": "project-runner",
-      "relation": "PROVIDER_CONSUMER",
-      "scope": "exact privacy-safe repository census bytes used only as portfolio drift/currentness input",
-      "evidence_state": "EXPERIMENTING",
-      "source_refs": [
-        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
-        "thebrazenbeard/project-runner:work/discovery-census-consumer-v1-20260920@b763c707abacc7dfe30dc451b2b42354a30e3621"
-      ],
-      "falsifiers": [
-        "Project Runner must import Discovery scheduling, authority, or project semantics to consume the census.",
-        "Project Runner requires live Discovery availability after exact census bytes have been obtained.",
-        "The binding fails to detect a changed census artifact or accepts altered bytes."
-      ],
-      "notes": [
-        "Hosted Project Runner workflow run 35509678751 succeeded on the exact consumer source."
-      ]
-    },
-    {
-      "edge_id": "DISCOVERY_CENSUS_PRIVATE_OPAQUE_CONSUMER",
-      "from": "discovery",
-      "to": "private-cohort",
-      "relation": "PROVIDER_CONSUMER",
-      "scope": "same exact census digest consumed by one opaque private runtime/source-registry subject without publishing its identity",
-      "evidence_state": "EXPERIMENTING",
-      "source_refs": [
-        "thebrazenbeard/discovery:vera/discovery-shared-substrate-v1@1316094edbed17fa5918b70793c95ffddfcf92ea",
-        "private-attestation:sha256:1be6377f5e125c4fca3da825824a57297dfbb16f8758fddc8bc2d17bc4ff2969"
-      ],
-      "falsifiers": [
-        "The public attestation leaks or permits practical inference of the hidden repository identity/ref.",
-        "The hidden consumer requires Discovery to own its runtime/control semantics.",
-        "The private receipt cannot be reverified in its governed private domain."
-      ],
-      "notes": [
-        "Opaque private evidence is insufficient for PROVEN_REUSABLE under V1."
-      ]
-    },
-    {
-      "edge_id": "DRIFTGUARD_RUNNER_EFFECT_INTEGRITY",
-      "from": "driftguard",
-      "to": "project-runner",
-      "relation": "OVERLAPPING_MECHANIC",
-      "scope": "effect decision/precondition, post-effect uncertainty, receipt/readback, and separation of decision from verified effect",
-      "evidence_state": "EXPERIMENTING",
-      "source_refs": [
-        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
-        "thebrazenbeard/project-runner:main@bc05812b560b4fcde3a362e72fba04c626cafac8"
-      ],
-      "falsifiers": [
-        "Neutral phase mapping requires DriftGuard behavioral-recovery semantics or Runner scheduling/lease semantics.",
-        "Accepted DriftGuard acknowledgement must be mislabeled as verified effect to fit the shared envelope.",
-        "Either project must consume Discovery at runtime."
-      ],
-      "notes": [
-        "DriftGuard adapter preserves acknowledgement as POST_EFFECT_UNVERIFIED and uses DOMAIN_DECIDES."
-      ]
-    },
-    {
-      "edge_id": "DRIFTGUARD_WIP_EFFECT_INTEGRITY",
-      "from": "driftguard",
-      "to": "wip",
-      "relation": "OVERLAPPING_MECHANIC",
-      "scope": "source-native effect attempt/acknowledgement states mapped to neutral unverified/verified/reconciled effect phases",
-      "evidence_state": "EXPERIMENTING",
-      "source_refs": [
-        "thebrazenbeard/driftguard:work/discovery-effect-envelope-consumer-v1-20260920@976f50ca391560d16ebcdcfe478df28b1cd1efca",
-        "thebrazenbeard/wip:main@12a7c23dbe0482fd7bfe63659e54526778efef1e"
-      ],
-      "falsifiers": [
-        "Mapping collapses WIP ambiguity/reconciliation semantics or DriftGuard acknowledgement/recovery semantics.",
-        "The common envelope becomes authoritative for retry or completion.",
-        "Adapter burden exceeds duplicated interchange logic removed."
-      ],
-      "notes": [
-        "This edge is evidence for the triadic candidate, not a claim that DriftGuard and WIP share one state machine."
       ]
     }
   ]

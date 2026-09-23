@@ -1,0 +1,147 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_ANCESTRY_SHARD_V1",
+  "shard": "04",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "four/specialized-accelerator-v1": {
+      "hc-brain": {
+        "sha": "80a42e92d61517aa0eef0548a0f33d058ab3316f",
+        "tree_sha": "db629a2c9b28ce9dbeedca8d62033294cd0de3ce",
+        "parents": [
+          "b88d63bab88e582777eabc7772eeb1b65d3f5ab1"
+        ],
+        "message": "Rebuild accelerator service companion on current main",
+        "author_date": "2026-09-09T21:25:33Z",
+        "committer_date": "2026-09-09T21:25:33Z"
+      },
+      "transcendence": {
+        "sha": "41b59e90cecc4be89d9e3f5823410ca309a3073b",
+        "tree_sha": "db629a2c9b28ce9dbeedca8d62033294cd0de3ce",
+        "parents": [],
+        "message": "Initialize four/specialized-accelerator-v1",
+        "author_date": "2026-09-17T21:15:12Z",
+        "committer_date": "2026-09-17T21:15:12Z"
+      },
+      "god-brain": {
+        "sha": "39d3d4774b75528cc125ab0fbc04bfd84dce1a5c",
+        "tree_sha": "db629a2c9b28ce9dbeedca8d62033294cd0de3ce",
+        "parents": [],
+        "message": "Initialize four/specialized-accelerator-v1",
+        "author_date": "2026-09-20T11:51:06Z",
+        "committer_date": "2026-09-20T11:51:06Z"
+      }
+    },
+    "noah/integration-20260909": {
+      "hc-brain": {
+        "sha": "ec15b2beede68329305811bcbaad63d10ff7fe36",
+        "tree_sha": "4e68191fec9d3fefbac947b3222311e65a6bab36",
+        "parents": [
+          "46bf30635055821f09a9da2d9e68fe89ac6bb044"
+        ],
+        "message": "Refresh repository map after temporal-hypergraph correction",
+        "author_date": "2026-09-09T11:59:29Z",
+        "committer_date": "2026-09-09T11:59:29Z"
+      },
+      "transcendence": {
+        "sha": "9420fcc3f5c5359b10e12484017e9b8eb7426c57",
+        "tree_sha": "4e68191fec9d3fefbac947b3222311e65a6bab36",
+        "parents": [],
+        "message": "Initialize noah/integration-20260909",
+        "author_date": "2026-09-17T21:14:56Z",
+        "committer_date": "2026-09-17T21:14:56Z"
+      },
+      "god-brain": {
+        "sha": "b8f9467bd103f331bcb43d49303a026921ebd712",
+        "tree_sha": "4e68191fec9d3fefbac947b3222311e65a6bab36",
+        "parents": [],
+        "message": "Initialize noah/integration-20260909",
+        "author_date": "2026-09-20T11:50:51Z",
+        "committer_date": "2026-09-20T11:50:51Z"
+      }
+    },
+    "noah/reference-kernel-authority-hardening-r3-candidate": {
+      "hc-brain": {
+        "sha": "12cbd4934b12bf363ee79aaeecbf52143e8fc338",
+        "tree_sha": "b13ae398a492cab9d03d462871207b3b4aa79d01",
+        "parents": [
+          "95ddd55abb7bce42c0f5d535e9bad8c581a35ad6"
+        ],
+        "message": "Revalidate effect outcome trust during replay",
+        "author_date": "2026-09-13T23:24:58Z",
+        "committer_date": "2026-09-13T23:24:58Z"
+      },
+      "transcendence": {
+        "sha": "be54e4ff92f3d90079d9f74a067a94e4e9132fd4",
+        "tree_sha": "b13ae398a492cab9d03d462871207b3b4aa79d01",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-r3-candidate",
+        "author_date": "2026-09-17T21:15:24Z",
+        "committer_date": "2026-09-17T21:15:24Z"
+      },
+      "god-brain": {
+        "sha": "b8bd4d528fa9cacceb1fa126507bde3b86a0ed26",
+        "tree_sha": "b13ae398a492cab9d03d462871207b3b4aa79d01",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-r3-candidate",
+        "author_date": "2026-09-20T11:51:17Z",
+        "committer_date": "2026-09-20T11:51:17Z"
+      }
+    },
+    "noah/reference-kernel-authority-hardening-r3-red": {
+      "hc-brain": {
+        "sha": "12cbd4934b12bf363ee79aaeecbf52143e8fc338",
+        "tree_sha": "b13ae398a492cab9d03d462871207b3b4aa79d01",
+        "parents": [
+          "95ddd55abb7bce42c0f5d535e9bad8c581a35ad6"
+        ],
+        "message": "Revalidate effect outcome trust during replay",
+        "author_date": "2026-09-13T23:24:58Z",
+        "committer_date": "2026-09-13T23:24:58Z"
+      },
+      "transcendence": {
+        "sha": "9b9cb1cc06fe0a713ba08d01d0632f7e9959b83c",
+        "tree_sha": "b13ae398a492cab9d03d462871207b3b4aa79d01",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-r3-red",
+        "author_date": "2026-09-17T21:15:25Z",
+        "committer_date": "2026-09-17T21:15:25Z"
+      },
+      "god-brain": {
+        "sha": "c2efe854076d43e1d3d6ec91669cbacdb8ef5ebf",
+        "tree_sha": "b13ae398a492cab9d03d462871207b3b4aa79d01",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-r3-red",
+        "author_date": "2026-09-20T11:51:18Z",
+        "committer_date": "2026-09-20T11:51:18Z"
+      }
+    },
+    "noah/reference-kernel-authority-hardening-r4-red": {
+      "hc-brain": {
+        "sha": "06c9430a19079694751ed9d5b6d85e98a7e3f819",
+        "tree_sha": "a4a58f5767513809367c82a11a36f933b08ea8ff",
+        "parents": [
+          "017a6b46249c730a04340fbcf284d6422ceb2ab5"
+        ],
+        "message": "Add R4 live outcome capability red regressions",
+        "author_date": "2026-09-13T23:38:12Z",
+        "committer_date": "2026-09-13T23:38:12Z"
+      },
+      "transcendence": {
+        "sha": "5b18ed82258503bbda800a7481741204d3919f25",
+        "tree_sha": "a4a58f5767513809367c82a11a36f933b08ea8ff",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-r4-red",
+        "author_date": "2026-09-17T21:15:27Z",
+        "committer_date": "2026-09-17T21:15:27Z"
+      },
+      "god-brain": {
+        "sha": "4674fbb8cc550b6007072e33147a478284b225df",
+        "tree_sha": "a4a58f5767513809367c82a11a36f933b08ea8ff",
+        "parents": [],
+        "message": "Initialize noah/reference-kernel-authority-hardening-r4-red",
+        "author_date": "2026-09-20T11:51:20Z",
+        "committer_date": "2026-09-20T11:51:20Z"
+      }
+    }
+  }
+}

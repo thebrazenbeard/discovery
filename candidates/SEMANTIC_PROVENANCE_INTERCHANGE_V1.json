@@ -1,0 +1,56 @@
+{
+  "schema_version": "DISCOVERY_CANDIDATE_V1",
+  "candidate_id": "SEMANTIC_PROVENANCE_INTERCHANGE_V1",
+  "title": "Test a narrow semantic-provenance and claim-control interchange",
+  "status": "HYPOTHESIS",
+  "claim": "Semantic Atlas, UNVTRSLR, and SPM independently require provenance-sensitive handling of semantic claims, ambiguity, historical/current state, and evidence-supported claim boundaries. A minimal interchange may reduce duplicated record/evaluation plumbing if it remains strictly below each project's ontology, model architecture, and epistemic authority.",
+  "consumers": [
+    {
+      "repo": "thebrazenbeard/semanticatlas",
+      "role": "provenance-aware semantic relation and interpretation subject",
+      "ref": "main@5669a727b870a490ecee748b2cd712a2fc4a54c5"
+    },
+    {
+      "repo": "thebrazenbeard/unvtrslr",
+      "role": "adversarial semantic-grounding claim-control subject",
+      "ref": "main@903d79c6e47bb9f73bd7700edd35315777e9f5d1"
+    },
+    {
+      "repo": "thebrazenbeard/spm",
+      "role": "independent model-evaluation falsifier / possible third consumer",
+      "ref": "main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8"
+    }
+  ],
+  "preserved_boundaries": [
+    "Semantic Atlas retains its own concept/relation graph, historical reconstruction semantics, and current architecture admission.",
+    "UNVTRSLR retains its grounding substrates, experiment design, rival families, semantic-surplus obligations, and qualification semantics.",
+    "SPM retains its model architecture, training objectives, benchmark design, baseline comparison, and definition of a successful SPM.",
+    "A shared record cannot promote evidence into truth, currentness, authority, or semantic interpretation."
+  ],
+  "promotion_evidence": [
+    "Semantic Atlas main explicitly requires semantic concepts/interpretations to preserve evidentiary lineage and to keep direct source, user statement, inference, symbolism, historical promotion, later evidence, and unresolved state distinct.",
+    "UNVTRSLR main explicitly separates operational relation verification from semantic interpretation selection/confirmation and binds hypothesis provenance, rival adequacy, claim-discriminating evidence, surviving alternatives, and claim ceilings.",
+    "SPM main independently lists provenance sensitivity, semantic scope fidelity, contradiction/ambiguity preservation, correction-state transition, and temporal/currentness sensitivity as evaluation dimensions.",
+    "Exact source refs and source blobs are recorded in experiments/SEMANTIC_GROUNDING_PROVENANCE_SURFACE_V1.json."
+  ],
+  "rejection_conditions": [
+    "The minimal interchange needs project-specific ontology or evaluator fields to remain lossless.",
+    "Adapters become larger or more semantically complex than native duplicated record/evaluation code.",
+    "The representation conflates operational success with semantic confirmation or historical evidence with current state.",
+    "SPM's evaluation is biased toward another project's representation rather than independently testing its model hypothesis.",
+    "No measurable duplicated maintenance or validation plumbing can actually be removed."
+  ],
+  "hostile_review": {
+    "status": "NOT_RUN",
+    "critical_objections": [
+      "Shared vocabulary is not evidence of shared implementation.",
+      "A provenance schema can quietly become a universal semantic ontology through field accretion.",
+      "SPM may need only tests and scores, making a shared semantic record unnecessary framework gravity."
+    ]
+  },
+  "notes": [
+    "Candidate generated from the 2026-09-21 public-surface refresh.",
+    "Next valid experiment is one minimal record encoded losslessly from one real Semantic Atlas claim-control case and one real UNVTRSLR case, with SPM tested only afterward as an independent third consumer.",
+    "No runtime dependency, ontology merge, model integration, or PROVEN_REUSABLE claim follows."
+  ]
+}

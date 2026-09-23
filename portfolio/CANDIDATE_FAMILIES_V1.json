@@ -3,18 +3,16 @@
   "status": "OBSERVED_CLUSTER_HYPOTHESES",
   "families": [
     {
-      "family_id": "EXECUTION_INTEGRITY",
-      "question": "Which mechanics for work identity, CAS/fencing, leases, idempotency, ambiguous effects, verification, and recovery are genuinely reusable?",
-      "public_anchors": ["project-runner", "wip", "driftguard"],
+      "family_id": "COGNITIVE_BASE_OVERLAP",
+      "question": "Where does copied cognitive implementation represent accidental duplication versus intentional experimental isolation?",
+      "public_anchors": [
+        "bt2",
+        "god-brain",
+        "hc-brain",
+        "transcendence"
+      ],
       "private_participation": true,
-      "default_disposition": "GENERALIZE_ONLY_AFTER_TWO_REAL_CONSUMERS"
-    },
-    {
-      "family_id": "EVIDENCE_PROVENANCE_CUSTODY",
-      "question": "Can custody, lineage, snapshot, receipt, and provenance mechanics be shared while domain truth and privacy remain project-owned?",
-      "public_anchors": ["roots", "testament", "on-theo"],
-      "private_participation": true,
-      "default_disposition": "SHARE_MECHANICS_NOT_ONTOLOGY"
+      "default_disposition": "EXACT_BASE_PLUS_OVERLAY_RECONSTRUCTION_BEFORE_DEDUP"
     },
     {
       "family_id": "COORDINATION_TRANSPORT",
@@ -24,39 +22,80 @@
       "default_disposition": "PROVE_WITH_REAL_CROSS_PROJECT_FLOW"
     },
     {
-      "family_id": "COGNITIVE_BASE_OVERLAP",
-      "question": "Where does copied cognitive implementation represent accidental duplication versus intentional experimental isolation?",
-      "public_anchors": ["hc-brain", "transcendence"],
+      "family_id": "DOMAIN_NEGATIVE_CONTROLS",
+      "question": "Which specialized repositories prove that a proposed shared abstraction is too broad because their semantics must remain independent?",
+      "public_anchors": [
+        "Attune",
+        "on-theo",
+        "testament"
+      ],
       "private_participation": true,
-      "default_disposition": "EXACT_BASE_PLUS_OVERLAY_RECONSTRUCTION_BEFORE_DEDUP"
+      "default_disposition": "PRESERVE_DOMAIN_OWNERSHIP"
+    },
+    {
+      "family_id": "EVIDENCE_PROVENANCE_CUSTODY",
+      "question": "Can custody, lineage, snapshot, receipt, and provenance mechanics be shared while domain truth and privacy remain project-owned?",
+      "public_anchors": [
+        "on-theo",
+        "roots",
+        "semanticatlas",
+        "testament",
+        "voss"
+      ],
+      "private_participation": true,
+      "default_disposition": "SHARE_MECHANICS_NOT_ONTOLOGY"
+    },
+    {
+      "family_id": "EXECUTION_INTEGRITY",
+      "question": "Which mechanics for work identity, CAS/fencing, leases, idempotency, ambiguous effects, verification, and recovery are genuinely reusable?",
+      "public_anchors": [
+        "project-runner",
+        "wip",
+        "driftguard"
+      ],
+      "private_participation": true,
+      "default_disposition": "GENERALIZE_ONLY_AFTER_TWO_REAL_CONSUMERS"
     },
     {
       "family_id": "EXPERIMENT_MECHANICS",
       "question": "Can preregistration, deterministic runs, holdouts, receipts, statistics, and artifact custody be shared without contaminating scientific hypotheses?",
-      "public_anchors": ["world-zero", "mosaic"],
+      "public_anchors": [
+        "world-zero",
+        "mosaic"
+      ],
       "private_participation": true,
       "default_disposition": "SHARE_HARNESS_MECHANICS_KEEP_EVALUATORS_INDEPENDENT"
     },
     {
-      "family_id": "VERA_RUNTIME_CONTROL",
-      "question": "Which runtime/control/install/currentness mechanics belong in common infrastructure and which must stay Vera-specific?",
-      "public_anchors": ["driftguard"],
-      "private_participation": true,
-      "default_disposition": "KEEP_IDENTITY_AND_AUTHORITY_SEMANTICS_PROJECT_SPECIFIC"
-    },
-    {
       "family_id": "INDUSTRIAL_DIAGNOSTIC_CHAIN",
       "question": "Can evidence acquisition, replay, reconstruction, and human service delivery form a layered stack without duplicating instrumentation?",
-      "public_anchors": [],
+      "public_anchors": [
+        "abil"
+      ],
       "private_participation": true,
       "default_disposition": "REUSE_EVIDENCE_AND_REPLAY_BELOW_DOMAIN_RECONSTRUCTION"
     },
     {
-      "family_id": "DOMAIN_NEGATIVE_CONTROLS",
-      "question": "Which specialized repositories prove that a proposed shared abstraction is too broad because their semantics must remain independent?",
-      "public_anchors": ["on-theo", "testament"],
+      "family_id": "SEMANTIC_GROUNDING_PROVENANCE",
+      "question": "Which mechanics for semantic hypotheses, provenance, uncertainty, grounding tests, and interpretation lineage can be reused across semantic research without imposing one ontology or model architecture?",
+      "public_anchors": [
+        "semanticatlas",
+        "spm",
+        "unvtrslr"
+      ],
       "private_participation": true,
-      "default_disposition": "PRESERVE_DOMAIN_OWNERSHIP"
+      "default_disposition": "SHARE_PROVENANCE_AND_EVALUATION_MECHANICS_NOT_ONTOLOGY"
+    },
+    {
+      "family_id": "VERA_RUNTIME_CONTROL",
+      "question": "Which runtime/control/install/currentness mechanics belong in common infrastructure and which must stay Vera-specific?",
+      "public_anchors": [
+        "driftguard",
+        "vera-mesh",
+        "vera-synology"
+      ],
+      "private_participation": true,
+      "default_disposition": "KEEP_IDENTITY_AND_AUTHORITY_SEMANTICS_PROJECT_SPECIFIC"
     }
   ],
   "anti_cherry_pick_rule": "Candidate generation must be explainable from the census/cluster evidence, not merely from previously favored architecture ideas."

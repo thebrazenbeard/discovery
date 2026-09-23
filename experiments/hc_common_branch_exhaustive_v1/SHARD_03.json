@@ -1,0 +1,354 @@
+{
+  "schema": "DISCOVERY_HC_COMMON_BRANCH_EXHAUSTIVE_SHARD_V1",
+  "shard": "03",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "four/rest-offline-maintenance-v2": {
+      "subjects": {
+        "hc-brain": {
+          "head": "0ecb3a08d031e0093c4da226949f38a77710bb59",
+          "blob_count": 147,
+          "total_blob_bytes": 797654
+        },
+        "god-brain": {
+          "head": "98de514e67b1a2d473843310cbc8cc0ba2fcd6de",
+          "blob_count": 147,
+          "total_blob_bytes": 797654
+        },
+        "transcendence": {
+          "head": "83789e095d2a8eb8b7abfd0dcad70de476707b50",
+          "blob_count": 147,
+          "total_blob_bytes": 797654
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 147,
+          "identical_same_path_blobs": 147,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 797654,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 147,
+          "identical_same_path_blobs": 147,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 797654,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 147,
+          "identical_same_path_blobs": 147,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 797654,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    },
+    "four/rest-offline-maintenance-v3": {
+      "subjects": {
+        "hc-brain": {
+          "head": "aaa7289088061afad4c74fc7d29390e0e4fd0013",
+          "blob_count": 150,
+          "total_blob_bytes": 822244
+        },
+        "god-brain": {
+          "head": "59a97ab69b9959c84997a21ceae08a378929ab22",
+          "blob_count": 150,
+          "total_blob_bytes": 822244
+        },
+        "transcendence": {
+          "head": "003fbf4dc3abf86d2238b791b1f14476c0340617",
+          "blob_count": 150,
+          "total_blob_bytes": 822244
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 150,
+          "identical_same_path_blobs": 150,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 822244,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 150,
+          "identical_same_path_blobs": 150,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 822244,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 150,
+          "identical_same_path_blobs": 150,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 822244,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    },
+    "four/specialized-accelerator-v1": {
+      "subjects": {
+        "hc-brain": {
+          "head": "80a42e92d61517aa0eef0548a0f33d058ab3316f",
+          "blob_count": 134,
+          "total_blob_bytes": 673601
+        },
+        "god-brain": {
+          "head": "39d3d4774b75528cc125ab0fbc04bfd84dce1a5c",
+          "blob_count": 134,
+          "total_blob_bytes": 673601
+        },
+        "transcendence": {
+          "head": "41b59e90cecc4be89d9e3f5823410ca309a3073b",
+          "blob_count": 134,
+          "total_blob_bytes": 673601
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 134,
+          "identical_same_path_blobs": 134,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 673601,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 134,
+          "identical_same_path_blobs": 134,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 673601,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 134,
+          "identical_same_path_blobs": 134,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 673601,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    },
+    "main": {
+      "subjects": {
+        "hc-brain": {
+          "head": "618245b54fb923c7a204892c6953ab6d1c5dac57",
+          "blob_count": 300,
+          "total_blob_bytes": 2191461
+        },
+        "god-brain": {
+          "head": "c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+          "blob_count": 300,
+          "total_blob_bytes": 2189786
+        },
+        "transcendence": {
+          "head": "68e7a794d6134e8319121404f31062288dc8d6a3",
+          "blob_count": 263,
+          "total_blob_bytes": 1802005
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 300,
+          "identical_same_path_blobs": 299,
+          "changed_same_path_blobs": 1,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 2181434,
+          "exact_blob_path_sha_set_equal": false,
+          "changed_paths": [
+            "README.md"
+          ],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 263,
+          "identical_same_path_blobs": 255,
+          "changed_same_path_blobs": 8,
+          "left_only_paths": 37,
+          "right_only_paths": 0,
+          "identical_bytes": 1718257,
+          "exact_blob_path_sha_set_equal": false,
+          "changed_paths": [
+            ".github/workflows/reference-kernel.yml",
+            "README.md",
+            "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+            "runtime/reference_kernel/README.md",
+            "runtime/reference_kernel/durable_kernel.py",
+            "runtime/reference_kernel/hc_kernel.py",
+            "runtime/reference_kernel/test_durable_kernel.py",
+            "runtime/reference_kernel/test_hc_kernel.py"
+          ],
+          "left_only_examples": [
+            ".github/workflows/architecture-conformance.yml",
+            ".github/workflows/cognitive-core.yml",
+            "CURRENT.md",
+            "docs/architecture/CAUSAL_AUTHORITY_RECOVERY_HARDENING_V2.md",
+            "docs/architecture/STATE_FAMILY_CONSISTENCY_AND_CAUSAL_FRONTIER.md",
+            "docs/qualification/HOSTILE_AUDIT_DISPOSITION_2026-09-15.md",
+            "docs/research/VERA_HC_V2_DISTRIBUTED_CAUSAL_ARCHITECTURE_2026-09-17.md",
+            "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+            "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-17.md",
+            "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+            "docs/runtime/NOAH_CURRENT_KNOWLEDGE_2026-09-15.md",
+            "docs/runtime/NOAH_HANDOFF_2026-09-15.md",
+            "docs/superpowers/plans/2026-09-17-hc-architecture-hardening-v2.md",
+            "homeostasis-interoception/REGULATORY_STATE_CONTRACT.md",
+            "runtime/cognitive_core/README.md",
+            "runtime/cognitive_core/__init__.py",
+            "runtime/cognitive_core/cognitive_loop.py",
+            "runtime/cognitive_core/deep_memory.py",
+            "runtime/cognitive_core/homeostasis_somatics.py",
+            "runtime/cognitive_core/metacognition.py"
+          ],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 263,
+          "identical_same_path_blobs": 255,
+          "changed_same_path_blobs": 8,
+          "left_only_paths": 37,
+          "right_only_paths": 0,
+          "identical_bytes": 1718257,
+          "exact_blob_path_sha_set_equal": false,
+          "changed_paths": [
+            ".github/workflows/reference-kernel.yml",
+            "README.md",
+            "docs/runtime/REFERENCE_KERNEL_IMPLEMENTATION_STATUS.md",
+            "runtime/reference_kernel/README.md",
+            "runtime/reference_kernel/durable_kernel.py",
+            "runtime/reference_kernel/hc_kernel.py",
+            "runtime/reference_kernel/test_durable_kernel.py",
+            "runtime/reference_kernel/test_hc_kernel.py"
+          ],
+          "left_only_examples": [
+            ".github/workflows/architecture-conformance.yml",
+            ".github/workflows/cognitive-core.yml",
+            "CURRENT.md",
+            "docs/architecture/CAUSAL_AUTHORITY_RECOVERY_HARDENING_V2.md",
+            "docs/architecture/STATE_FAMILY_CONSISTENCY_AND_CAUSAL_FRONTIER.md",
+            "docs/qualification/HOSTILE_AUDIT_DISPOSITION_2026-09-15.md",
+            "docs/research/VERA_HC_V2_DISTRIBUTED_CAUSAL_ARCHITECTURE_2026-09-17.md",
+            "docs/runtime/CAPABILITY_IMPLEMENTATION_LEDGER.md",
+            "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-17.md",
+            "docs/runtime/EXECUTABLE_COGNITIVE_CORE_STATUS_2026-09-18.md",
+            "docs/runtime/NOAH_CURRENT_KNOWLEDGE_2026-09-15.md",
+            "docs/runtime/NOAH_HANDOFF_2026-09-15.md",
+            "docs/superpowers/plans/2026-09-17-hc-architecture-hardening-v2.md",
+            "homeostasis-interoception/REGULATORY_STATE_CONTRACT.md",
+            "runtime/cognitive_core/README.md",
+            "runtime/cognitive_core/__init__.py",
+            "runtime/cognitive_core/cognitive_loop.py",
+            "runtime/cognitive_core/deep_memory.py",
+            "runtime/cognitive_core/homeostasis_somatics.py",
+            "runtime/cognitive_core/metacognition.py"
+          ],
+          "right_only_examples": []
+        }
+      }
+    },
+    "noah/reference-kernel-authority-hardening-r3-candidate": {
+      "subjects": {
+        "hc-brain": {
+          "head": "12cbd4934b12bf363ee79aaeecbf52143e8fc338",
+          "blob_count": 265,
+          "total_blob_bytes": 1838409
+        },
+        "god-brain": {
+          "head": "b8bd4d528fa9cacceb1fa126507bde3b86a0ed26",
+          "blob_count": 265,
+          "total_blob_bytes": 1838409
+        },
+        "transcendence": {
+          "head": "be54e4ff92f3d90079d9f74a067a94e4e9132fd4",
+          "blob_count": 265,
+          "total_blob_bytes": 1838409
+        }
+      },
+      "comparisons": {
+        "hc_vs_god": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1838409,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "hc_vs_transcendence": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1838409,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        },
+        "god_vs_transcendence": {
+          "common_paths": 265,
+          "identical_same_path_blobs": 265,
+          "changed_same_path_blobs": 0,
+          "left_only_paths": 0,
+          "right_only_paths": 0,
+          "identical_bytes": 1838409,
+          "exact_blob_path_sha_set_equal": true,
+          "changed_paths": [],
+          "left_only_examples": [],
+          "right_only_examples": []
+        }
+      }
+    }
+  }
+}

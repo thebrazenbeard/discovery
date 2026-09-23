@@ -1,0 +1,3327 @@
+{
+  "schema": "DISCOVERY_HC_BRANCH_TREE_SAMPLE_SHARD_V1",
+  "shard": "A",
+  "observed_date": "2026-09-21",
+  "branches": {
+    "architecture-concept": {
+      "hc-brain": {
+        "head": "61b0c6fe24dc81c59a30fc28e97785859bc4e261",
+        "tree_sha": "61b0c6fe24dc81c59a30fc28e97785859bc4e261",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "README.md",
+            "sha": "f651662e4e479926b141c6a4e6b45c5fd80420e9",
+            "size": 50
+          }
+        ]
+      },
+      "god-brain": {
+        "head": "ec8360902e8fcc7df1ebd0fc0053a3e743f13d0a",
+        "tree_sha": "ec8360902e8fcc7df1ebd0fc0053a3e743f13d0a",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "README.md",
+            "sha": "f651662e4e479926b141c6a4e6b45c5fd80420e9",
+            "size": 50
+          }
+        ]
+      },
+      "transcendence": {
+        "head": "68b0500fc8276ebbdeaf844d8353b2432cd24ba0",
+        "tree_sha": "68b0500fc8276ebbdeaf844d8353b2432cd24ba0",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "README.md",
+            "sha": "f651662e4e479926b141c6a4e6b45c5fd80420e9",
+            "size": 50
+          }
+        ]
+      }
+    },
+    "four/cognitive-integrity-v1": {
+      "hc-brain": {
+        "head": "1165c4fbac55e7152ab951d4c9968f90ba25234a",
+        "tree_sha": "1165c4fbac55e7152ab951d4c9968f90ba25234a",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Empathy/ARCHITECTURE.md",
+            "sha": "448b92d457899c2b6e94904f657e7a9d7d690f68",
+            "size": 2476
+          },
+          {
+            "path": "Empathy/README.md",
+            "sha": "1eed0dfacc4a9bbfc70f07b5f8fdb63bf9177995",
+            "size": 207
+          },
+          {
+            "path": "Empathy/SELF_OTHER_MODELING.md",
+            "sha": "c1517ffb9baa9af0cd14a9ca3906c2af2629f323",
+            "size": 2923
+          },
+          {
+            "path": "README.md",
+            "sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e",
+            "size": 10259
+          },
+          {
+            "path": "WARDEN.md",
+            "sha": "4018be2085d1a97957f73c9ad0ab430f5794d0a5",
+            "size": 12033
+          },
+          {
+            "path": "adaptable I-O handler/ARCHITECTURE.md",
+            "sha": "f7289b6b2e09046ae22b8e2ef7e97240e657defd",
+            "size": 1850
+          },
+          {
+            "path": "adaptable I-O handler/BODY_INTERFACE_BOUNDARY.md",
+            "sha": "2cc81faeeaf6f98e02bad9c1a669dd5c759ba872",
+            "size": 2615
+          },
+          {
+            "path": "adaptable I-O handler/README.md",
+            "sha": "3528f32c45e3e57cd1596907750befef9c123867",
+            "size": 254
+          },
+          {
+            "path": "adaptable I-O handler/SENSOR_AND_CAPABILITY_ADMISSION.md",
+            "sha": "e24fa6df9f5b356f4a117d96dfa344cc87509bd3",
+            "size": 3380
+          },
+          {
+            "path": "affect/AFFECTIVE_STATE_AND_MODULATION.md",
+            "sha": "66915428c67250bf395c8208aa595e8bb93759e8",
+            "size": 6309
+          },
+          {
+            "path": "affect/ARCHITECTURE.md",
+            "sha": "fa81fb03b907b9e598b3a3908af3bcacfa3ad55e",
+            "size": 3766
+          },
+          {
+            "path": "affect/README.md",
+            "sha": "20e191c85d19b633dbf1f7a8acbe861043345cab",
+            "size": 217
+          },
+          {
+            "path": "basic operating instructions/ARCHITECTURE.md",
+            "sha": "4251a7b8ac198af14e344c008ed976630a049734",
+            "size": 3222
+          },
+          {
+            "path": "basic operating instructions/AUTHORITY_CONSENT_AND_EFFECT_GOVERNANCE.md",
+            "sha": "ac435a6368ce081b3681b753638b016f83c410e4",
+            "size": 11988
+          },
+          {
+            "path": "basic operating instructions/BOOTSTRAP_RECOVERY_AND_SAFE_DEGRADATION.md",
+            "sha": "b62d3a3334932270c3a7803d2ca6e4d0d1543242",
+            "size": 11947
+          },
+          {
+            "path": "basic operating instructions/CAPABILITY_ACTIVATION_STATES.md",
+            "sha": "f5b01a7828dd5d1212ab3e66416593606982b6b2",
+            "size": 5791
+          },
+          {
+            "path": "basic operating instructions/COGNITIVE_INTEGRITY_AND_SECURITY.md",
+            "sha": "7fd0548b72ef06caf0b47eaeb4c44ffbf38ee68c",
+            "size": 13232
+          },
+          {
+            "path": "basic operating instructions/PROTECTED_INVARIANT_AND_UPDATE_GOVERNANCE.md",
+            "sha": "dbd71d1fbbadfbb979013ea3f453f6ee5f513a6a",
+            "size": 10525
+          },
+          {
+            "path": "basic operating instructions/README.md",
+            "sha": "ee8d8f19037c8a86c35d53f9b03decc0171360d2",
+            "size": 1820
+          },
+          {
+            "path": "basic operating instructions/RUNTIME_INVARIANTS.md",
+            "sha": "cd86033e0230e7e55571a44c203031c4ef5977f5",
+            "size": 4718
+          },
+          {
+            "path": "basic operating instructions/SUBSYSTEM_LIFECYCLE_CONTRACT.md",
+            "sha": "12b62694319cc85be7e9a2eb8b25906e0c004fdc",
+            "size": 8521
+          },
+          {
+            "path": "chronology/ARCHITECTURE.md",
+            "sha": "5160a7b2fe290d0fab86f433775d045015146aae",
+            "size": 2100
+          },
+          {
+            "path": "chronology/README.md",
+            "sha": "2cb95c1342aaa68d306bc3d8dd94f916a413edd3",
+            "size": 151
+          },
+          {
+            "path": "chronology/TEMPORAL_EVENT_CONTRACT.md",
+            "sha": "f74bff1baa9d09419f6b1758a2606d83a4ac6c83",
+            "size": 2482
+          },
+          {
+            "path": "cognition/ARCHITECTURE.md",
+            "sha": "0e4142ceb3bc8ab7babe8b73f11bb70305d5c87a",
+            "size": 5633
+          },
+          {
+            "path": "cognition/EPISTEMIC_COGNITIVE_CONTROL.md",
+            "sha": "9b6261d1db447c577502b518fbb2d091754d9a13",
+            "size": 6003
+          },
+          {
+            "path": "cognition/IMAGINATION_SIMULATION_AND_COUNTERFACTUALS.md",
+            "sha": "46e9333eaa6f6c896326e0d7bde2f4e87a6300a5",
+            "size": 4849
+          },
+          {
+            "path": "cognition/METACOGNITIVE_MONITORING.md",
+            "sha": "3fda90912c7527bf6b03a626642054c679495012",
+            "size": 4263
+          },
+          {
+            "path": "cognition/PERCEPTION_AND_MULTIMODAL_INFERENCE.md",
+            "sha": "0cfd8554c818d5491e102318295aee6c1a753266",
+            "size": 4013
+          },
+          {
+            "path": "cognition/README.md",
+            "sha": "b9035b40b32a6351c14adc40be9353c2b57a701d",
+            "size": 199
+          },
+          {
+            "path": "cognition/WORLD_MODEL_AND_PREDICTION.md",
+            "sha": "c076d141273c455cb651e1e9caeef30e3be418e5",
+            "size": 4097
+          },
+          {
+            "path": "current memory storage/ARCHITECTURE.md",
+            "sha": "e0f9b828d45db642a042ca26125124dd21a6b560",
+            "size": 2479
+          },
+          {
+            "path": "current memory storage/CURRENT_STATE_SELECTION.md",
+            "sha": "3cab8681be77639deb759ac28bbe3d7dbd160c41",
+            "size": 2667
+          },
+          {
+            "path": "current memory storage/README.md",
+            "sha": "3a74467759d633d0bb23e41c1eb87c71ca7dc65f",
+            "size": 190
+          },
+          {
+            "path": "current memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "71a86dbb5f592cce9791397368facf361ad3895a",
+            "size": 3636
+          },
+          {
+            "path": "deep memory storage/ARCHITECTURE.md",
+            "sha": "69f7b39e2e61694d7b4abfb02cb8c4486d6ef7eb",
+            "size": 2674
+          },
+          {
+            "path": "deep memory storage/ARCHIVAL_CONSOLIDATION.md",
+            "sha": "8528b71848f4c7d7f78abc561a172db18162cd1f",
+            "size": 4386
+          },
+          {
+            "path": "deep memory storage/README.md",
+            "sha": "22e8b441e8dbf6a07f0a9c08a7c9c9947b37eb19",
+            "size": 197
+          },
+          {
+            "path": "deep memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "eefbdc3bb0e896d3fd1345166811ff9fc651691c",
+            "size": 8316
+          },
+          {
+            "path": "docs/REPOSITORY_MAP.md",
+            "sha": "638233137f001e1d0dcc2d498019e91d8976397d",
+            "size": 21590
+          },
+          {
+            "path": "docs/architecture/COALITIONS_GATING_AND_ARBITRATION.md",
+            "sha": "85fc562c91bec833bef5b6f1a9a42029493af382",
+            "size": 7434
+          },
+          {
+            "path": "docs/architecture/COGNITIVE_ORGAN_BOUNDARY.md",
+            "sha": "51663641415fdfaa51d15c7d95265408ba4d1bf2",
+            "size": 10371
+          },
+          {
+            "path": "docs/architecture/COMPLETE_CAPABILITY_MANIFEST.md",
+            "sha": "b244a041f6850ed2a8330d52afbdd66e1c3cb9ff",
+            "size": 6030
+          },
+          {
+            "path": "docs/architecture/CONFORMANCE_AND_QUALIFICATION.md",
+            "sha": "83d37030b601bb1bd6512390b6e3fe5188cd2a6f",
+            "size": 8699
+          },
+          {
+            "path": "docs/architecture/CONNECTIVITY_PLANES.md",
+            "sha": "d9d5274b45fa0469da86ee575b31d177dc068f3b",
+            "size": 6931
+          },
+          {
+            "path": "docs/architecture/CROSS_SYSTEM_INTEGRATION_CONTRACT.md",
+            "sha": "a09ea27ba1411fa3961d4a9a6f507208a6afac32",
+            "size": 8511
+          },
+          {
+            "path": "docs/architecture/DEVELOPMENTAL_INITIALIZATION_AND_LEARNING.md",
+            "sha": "f893678d29267c24ae37dd448e0ddb4378edf3c6",
+            "size": 9051
+          },
+          {
+            "path": "docs/architecture/HC1_NOOPLEX.md",
+            "sha": "decaff030b07aa53adfb54f9e5aaed4107776e41",
+            "size": 6285
+          },
+          {
+            "path": "docs/architecture/HC2_NOOPLEX_Q.md",
+            "sha": "8eedbe6d9952c06bd17735d1a742bc599fada128",
+            "size": 6075
+          },
+          {
+            "path": "docs/architecture/HC3_NOOPLEX_EQ.md",
+            "sha": "d381ff3b37e2dc73dbfe63cf046abf2b442a3e24",
+            "size": 7402
+          },
+          {
+            "path": "docs/architecture/HC_LINEAGE.md",
+            "sha": "ed347a00380826976bb23d4fd46051b244a8a905",
+            "size": 9053
+          },
+          {
+            "path": "docs/architecture/HYPERCONNECTOME_NOTATION.md",
+            "sha": "e44caa9dc7510c43c07bd26a2df06ca59eb48812",
+            "size": 7308
+          },
+          {
+            "path": "docs/architecture/HYPERCONNECTOME_REFERENCE_MODEL.md",
+            "sha": "d9ce41a186c1ab611b36293d116fca9eb05f5fb7",
+            "size": 11549
+          },
+          {
+            "path": "docs/architecture/PHYSICAL_ORGAN_MEMBERSHIP.md",
+            "sha": "b6d633c9594f4803fc679c54b0514d5827a215a9",
+            "size": 6267
+          },
+          {
+            "path": "docs/architecture/TEMPORAL_HYPERGRAPH_MODEL.md",
+            "sha": "0485b01b529d377032c9031c730e61ceb97f7daf",
+            "size": 7305
+          },
+          {
+            "path": "docs/architecture/TOPOLOGY_DESIGN_CONSTRAINTS.md",
+            "sha": "654606f59a7ee1199642d7907f5ba53ef400cad5",
+            "size": 7629
+          },
+          {
+            "path": "docs/engineering/POWER_THERMAL_AND_DISTRIBUTED_ORGAN.md",
+            "sha": "35b2637ab3f3146288d05a24f35a6057e5ee7589",
+            "size": 9554
+          },
+          {
+            "path": "docs/qualification/AFFECT_HOMEOSTASIS_CONFORMANCE_2026-09-09.md",
+            "sha": "1cf55543ebe8a7dfe1a490616546632644041836",
+            "size": 8529
+          },
+          {
+            "path": "docs/qualification/ARCHITECTURE_CONFORMANCE_2026-09-09.md",
+            "sha": "7e13f6d8584ccd98b26a141f7a14e5f273fa8de2",
+            "size": 7772
+          },
+          {
+            "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09.md",
+            "sha": "7a3922d236a901f49e01f724f599a2348febc54e",
+            "size": 6465
+          },
+          {
+            "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09_R2.md",
+            "sha": "146a8657ba31fbb5e33a94cb117072af06e4bae8",
+            "size": 6711
+          },
+          {
+            "path": "docs/qualification/MEMORY_PROVIDER_BOUNDARY_2026-09-09.md",
+            "sha": "d7fe69f52392795237e32bd191e562e716b21a4a",
+            "size": 7513
+          },
+          {
+            "path": "docs/qualification/PROTECTED_UPDATE_GOVERNANCE_2026-09-09.md",
+            "sha": "dbd73145f1b6d7ba1240bb33b4d0a5fcffea1c23",
+            "size": 8279
+          },
+          {
+            "path": "docs/qualification/README.md",
+            "sha": "07212a6bf8993525d9fe2d09e89c03bb4753f259",
+            "size": 4532
+          },
+          {
+            "path": "docs/research/BASIRALAB_HYPERCONNECTOME_METHODS_2026-09-09.md",
+            "sha": "5c09906f97922cad539161ac6af6dd7f10c18741",
+            "size": 8821
+          },
+          {
+            "path": "docs/research/PR1_PARTIAL_DISPOSITION_2026-09-09.md",
+            "sha": "e62334db311ff752578ac82ffebd731ec3407aab",
+            "size": 4879
+          },
+          {
+            "path": "docs/research/PR2_DISPOSITION_2026-09-09.md",
+            "sha": "a2d1ed56a86a0f9201999f75df5071368ec24b61",
+            "size": 6134
+          },
+          {
+            "path": "docs/research/cross-repo-synthesis/README.md",
+            "sha": "f4dc5ee33dc6610eb9025d7e2d87bf6abab1f38b",
+            "size": 1351
+          },
+          {
+            "path": "docs/research/cross-repo-synthesis/SOURCE_BINDINGS_2026-09-09.md",
+            "sha": "f5e6564fefc357506af22b31dcb42a93ffa6e102",
+            "size": 2700
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "17593d4e3601590d8af9a9dd72692c55cb128fc9",
+            "size": 8255
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "a3ea01eedc70f5c13d09115b690cf9a60bf85b87",
+            "size": 5496
+          },
+          {
+            "path": "docs/science/EVIDENCE_BOUNDARIES.md",
+            "sha": "349b041a75f9c2efd0192ac358875363ffbbaa7e",
+            "size": 7364
+          },
+          {
+            "path": "homeostasis-interoception/ARCHITECTURE.md",
+            "sha": "5aa04ec294d0a807b75c6eeff4535d2cba71fd47",
+            "size": 3604
+          },
+          {
+            "path": "homeostasis-interoception/README.md",
+            "sha": "7e0f79bb8c08786149d69a3d1e73e75876a8f396",
+            "size": 254
+          },
+          {
+            "path": "homeostasis-interoception/REGULATORY_CONTROL_AND_INTEROCEPTIVE_EVIDENCE.md",
+            "sha": "b31e2c6bc2dac1732750b3499523fbf6fa2c0c4b",
+            "size": 6778
+          },
+          {
+            "path": "integration-arbitration/ARCHITECTURE.md",
+            "sha": "65fce098ac7d1a19664209feeb334614135d93ee",
+            "size": 2067
+          },
+          {
+            "path": "integration-arbitration/DISTRIBUTED_ARBITRATION.md",
+            "sha": "571246fb4e1301bd3545283c390fea9597789cb0",
+            "size": 3120
+          },
+          {
+            "path": "integration-arbitration/NOOPLEX_FABRIC.md",
+            "sha": "16e88b2146f72f4cbe3e6e367c69f82bde032f48",
+            "size": 3617
+          },
+          {
+            "path": "integration-arbitration/README.md",
+            "sha": "4e86ba0109587eca4008fc40b6698c78afb8f361",
+            "size": 251
+          },
+          {
+            "path": "kinesis/ACTION_GATEWAY.md",
+            "sha": "a421fbd1a7cb37f10742aefe59613636dfae997a",
+            "size": 3448
+          },
+          {
+            "path": "kinesis/ARCHITECTURE.md",
+            "sha": "85a427895c0064eb8b1632199128da2d0d30be74",
+            "size": 2520
+          },
+          {
+            "path": "kinesis/README.md",
+            "sha": "1a478bf80d051194232e7dc91377dfdc5d16a413",
+            "size": 178
+          },
+          {
+            "path": "optics/ARCHITECTURE.md",
+            "sha": "99a5c702a6d676a6a006038d3080c0ae71ca86c8",
+            "size": 6673
+          },
+          {
+            "path": "optics/README.md",
+            "sha": "34027a157fa7ba970c9f3bfe18ee9b3bcad7f551",
+            "size": 180
+          },
+          {
+            "path": "personification/ARCHITECTURE.md",
+            "sha": "677fa5be1fd9a35c4c2fe242e83879278dc4e6fd",
+            "size": 2752
+          },
+          {
+            "path": "personification/README.md",
+            "sha": "b63240e173cf69f689011a2f756e2539a707488f",
+            "size": 218
+          },
+          {
+            "path": "personification/SOCIAL_PRESENTATION_CONTROL.md",
+            "sha": "7a45660e5c5863391ec3235581ede84e5bf294fa",
+            "size": 3788
+          },
+          {
+            "path": "phoenetics/ARCHITECTURE.md",
+            "sha": "05adcd280ed394c293808367080bf1882611b471",
+            "size": 1916
+          },
+          {
+            "path": "phoenetics/PHONETIC_EVIDENCE_CONTRACT.md",
+            "sha": "2a883aa071cec4a4b8506adaa0265b2b800f0b57",
+            "size": 7909
+          },
+          {
+            "path": "phoenetics/README.md",
+            "sha": "5ed4eed3d3621b7c46a80e004a713edcfe7c79e5",
+            "size": 201
+          },
+          {
+            "path": "pragmatics/ARCHITECTURE.md",
+            "sha": "05fc2ab62c55e11698edbf418baafbee1352ef34",
+            "size": 2575
+          },
+          {
+            "path": "pragmatics/CROSS_REPO_PRAGMATIC_RUNTIME.md",
+            "sha": "8b4825ede87447ec4d0040de624c2aba8393064c",
+            "size": 6227
+          },
+          {
+            "path": "pragmatics/README.md",
+            "sha": "2af2fd5fe3a8587aa6b861129b37923c139ff213",
+            "size": 166
+          },
+          {
+            "path": "psychological behaviors/ARCHITECTURE.md",
+            "sha": "dc1a9250f5952219195bfb669bf79bac17a339dd",
+            "size": 10363
+          },
+          {
+            "path": "psychological behaviors/LEARNED_BEHAVIOR_ARCHITECTURE.md",
+            "sha": "5167e053a6a1d7ad776c798557777818b9569a69",
+            "size": 3209
+          },
+          {
+            "path": "psychological behaviors/README.md",
+            "sha": "f158704e2a5ac9b1d74b67a87c1048960bcd6ee6",
+            "size": 198
+          },
+          {
+            "path": "resolver/ARCHITECTURE.md",
+            "sha": "9a0f5746388118acb6f315b63ec961bab70c7f8a",
+            "size": 10989
+          },
+          {
+            "path": "resolver/CONFLICT_AND_RECONCILIATION.md",
+            "sha": "f1d491a3b0c1136a08420c8f116c6324edfdcebb",
+            "size": 2907
+          },
+          {
+            "path": "resolver/README.md",
+            "sha": "0802bba4a9680f68e71af0a1bb4eb2c32c80a832",
+            "size": 212
+          },
+          {
+            "path": "routing instructions with neuroplasticity/ARCHITECTURE.md",
+            "sha": "997d9b4bae2faf5fb39bc11217d7c9e72cc51291",
+            "size": 2536
+          },
+          {
+            "path": "routing instructions with neuroplasticity/README.md",
+            "sha": "ad1135b8c0993e989238794c4d842b42ada5e03d",
+            "size": 233
+          },
+          {
+            "path": "routing instructions with neuroplasticity/TYPED_ROUTING_AND_PLASTICITY.md",
+            "sha": "70799eb7a615f1b8c76bd496b67632ca5dcb313a",
+            "size": 3728
+          },
+          {
+            "path": "salience-attention/ARCHITECTURE.md",
+            "sha": "af2b38985af6962d9082f3d8622a717f9e29a83c",
+            "size": 2115
+          },
+          {
+            "path": "salience-attention/README.md",
+            "sha": "9b03ccab075cf8248a9ae8f9eb6b93dd2dfe48df",
+            "size": 205
+          },
+          {
+            "path": "salience-attention/SALIENCE_CAPTURE_AND_ATTENTION.md",
+            "sha": "aa892874fe880ef806c3dd48be7087e505ddf02f",
+            "size": 3217
+          },
+          {
+            "path": "self identity/ARCHITECTURE.md",
+            "sha": "b68e33f01935e283f6f51ece386b36f7517621c5",
+            "size": 3502
+          },
+          {
+            "path": "self identity/CONTINUITY_SUBSTRATE.md",
+            "sha": "55a54bb6f0b1188a16c9ca85fda897796596eabc",
+            "size": 3645
+          },
+          {
+            "path": "self identity/README.md",
+            "sha": "74739d96b9d077afdb428c3820ac87b6d0675fb1",
+            "size": 210
+          },
+          {
+            "path": "semantics/ARCHITECTURE.md",
+            "sha": "a3bcb80df0031774f40f8cc592c06f56615e2098",
+            "size": 2201
+          },
+          {
+            "path": "semantics/CROSS_REPO_SEMANTIC_RUNTIME.md",
+            "sha": "641b17416ff5073ef4e573807296584d1828b02d",
+            "size": 7326
+          },
+          {
+            "path": "semantics/README.md",
+            "sha": "c1dff4d3825d9e727dac01b8f0e7f85f8b76e376",
+            "size": 157
+          },
+          {
+            "path": "sexuality/AGENCY_AND_EMBODIED_AFFECT.md",
+            "sha": "198ec113146ab17c246c67a5a67b1a8df2984158",
+            "size": 5132
+          },
+          {
+            "path": "sexuality/ARCHITECTURE.md",
+            "sha": "6b6ea014e89fcd4bf6ae0be059c17a868cd18077",
+            "size": 3208
+          },
+          {
+            "path": "sexuality/README.md",
+            "sha": "9b668cf8f63d9c321625b0328e39574ea3aa4198",
+            "size": 197
+          },
+          {
+            "path": "sociological behaviors/ARCHITECTURE.md",
+            "sha": "45f3565eb0522dc6596235526bf48812c3690eda",
+            "size": 9913
+          },
+          {
+            "path": "sociological behaviors/README.md",
+            "sha": "128291b780d42029be39b8add29d3b93e38f39db",
+            "size": 173
+          },
+          {
+            "path": "sociological behaviors/SOCIAL_MODELING_ARCHITECTURE.md",
+            "sha": "ae79dec4e0ecf5650472fd9c53786f3395da4da8",
+            "size": 3238
+          },
+          {
+            "path": "somatics/ARCHITECTURE.md",
+            "sha": "3990b741b93ceba479cfbb54d30fe8ca9cf01bec",
+            "size": 3297
+          },
+          {
+            "path": "somatics/BODY_STATE_AND_BODY_SCHEMA.md",
+            "sha": "da38569c98fe277dc6725dfc7391891b14803704",
+            "size": 3294
+          },
+          {
+            "path": "somatics/README.md",
+            "sha": "02dd3e7abba30814003734d86dc368da8f41dcda",
+            "size": 170
+          },
+          {
+            "path": "specs/CROSS_REPO_SOURCE_TRANSFER_V1.yaml",
+            "sha": "446bd0cce08923d403b4fb06e3db247c2fc24732",
+            "size": 9447
+          },
+          {
+            "path": "specs/HC_BOOTSTRAP_RECOVERY_V1.yaml",
+            "sha": "0ea2eccd25724a3fd0ef7b56b58b55d691ad19a9",
+            "size": 6667
+          },
+          {
+            "path": "specs/HC_COGNITIVE_INTEGRITY_OBJECTS_V1.yaml",
+            "sha": "4ce6df8f197bb9dbba2d1a44df026148876397db",
+            "size": 11494
+          },
+          {
+            "path": "specs/HC_COGNITIVE_ORGAN_INVARIANTS_V1.yaml",
+            "sha": "99329915f2295b0ed76bbad4b26cb178f7ceaf89",
+            "size": 19524
+          },
+          {
+            "path": "specs/HC_CONFORMANCE_SUITE_V1.yaml",
+            "sha": "850e2b34ed6b84c58f6bbccd803b6083e60b11cb",
+            "size": 18559
+          },
+          {
+            "path": "specs/HC_MEMORY_PROVIDER_BOUNDARY_V1.yaml",
+            "sha": "137978a111ee638a50875120409a3da2e1ba0cff",
+            "size": 4329
+          },
+          {
+            "path": "specs/HC_PROTECTED_UPDATE_GOVERNANCE_V1.yaml",
+            "sha": "2385ae9fb72f02c5717ffcc19677241103be4d5d",
+            "size": 8101
+          },
+          {
+            "path": "specs/HC_REPOSITORY_SURFACE_CONFORMANCE_V1.yaml",
+            "sha": "f5797e52148e31196cd7de0250a01003b696e475",
+            "size": 2752
+          },
+          {
+            "path": "speech recognition & synthesis/ARCHITECTURE.md",
+            "sha": "6861d33469a35e0ebbbac012a91dea38019821c0",
+            "size": 8007
+          },
+          {
+            "path": "speech recognition & synthesis/README.md",
+            "sha": "78f45546e937e2fbc8d4cedf46c4d875f31c5cfd",
+            "size": 230
+          },
+          {
+            "path": "volitions-conations/ARCHITECTURE.md",
+            "sha": "10864d84d508793136f790d4c5849c09d43444ae",
+            "size": 2118
+          },
+          {
+            "path": "volitions-conations/CONATIVE_STATE_MACHINE.md",
+            "sha": "d7d31a95cd9cf91655a168481b463edca42e7925",
+            "size": 2741
+          },
+          {
+            "path": "volitions-conations/README.md",
+            "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
+            "size": 240
+          }
+        ]
+      },
+      "god-brain": {
+        "head": "30584d3be58869d2b6e56348c6e008b803594efd",
+        "tree_sha": "30584d3be58869d2b6e56348c6e008b803594efd",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Empathy/ARCHITECTURE.md",
+            "sha": "448b92d457899c2b6e94904f657e7a9d7d690f68",
+            "size": 2476
+          },
+          {
+            "path": "Empathy/README.md",
+            "sha": "1eed0dfacc4a9bbfc70f07b5f8fdb63bf9177995",
+            "size": 207
+          },
+          {
+            "path": "Empathy/SELF_OTHER_MODELING.md",
+            "sha": "c1517ffb9baa9af0cd14a9ca3906c2af2629f323",
+            "size": 2923
+          },
+          {
+            "path": "README.md",
+            "sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e",
+            "size": 10259
+          },
+          {
+            "path": "WARDEN.md",
+            "sha": "4018be2085d1a97957f73c9ad0ab430f5794d0a5",
+            "size": 12033
+          },
+          {
+            "path": "adaptable I-O handler/ARCHITECTURE.md",
+            "sha": "f7289b6b2e09046ae22b8e2ef7e97240e657defd",
+            "size": 1850
+          },
+          {
+            "path": "adaptable I-O handler/BODY_INTERFACE_BOUNDARY.md",
+            "sha": "2cc81faeeaf6f98e02bad9c1a669dd5c759ba872",
+            "size": 2615
+          },
+          {
+            "path": "adaptable I-O handler/README.md",
+            "sha": "3528f32c45e3e57cd1596907750befef9c123867",
+            "size": 254
+          },
+          {
+            "path": "adaptable I-O handler/SENSOR_AND_CAPABILITY_ADMISSION.md",
+            "sha": "e24fa6df9f5b356f4a117d96dfa344cc87509bd3",
+            "size": 3380
+          },
+          {
+            "path": "affect/AFFECTIVE_STATE_AND_MODULATION.md",
+            "sha": "66915428c67250bf395c8208aa595e8bb93759e8",
+            "size": 6309
+          },
+          {
+            "path": "affect/ARCHITECTURE.md",
+            "sha": "fa81fb03b907b9e598b3a3908af3bcacfa3ad55e",
+            "size": 3766
+          },
+          {
+            "path": "affect/README.md",
+            "sha": "20e191c85d19b633dbf1f7a8acbe861043345cab",
+            "size": 217
+          },
+          {
+            "path": "basic operating instructions/ARCHITECTURE.md",
+            "sha": "4251a7b8ac198af14e344c008ed976630a049734",
+            "size": 3222
+          },
+          {
+            "path": "basic operating instructions/AUTHORITY_CONSENT_AND_EFFECT_GOVERNANCE.md",
+            "sha": "ac435a6368ce081b3681b753638b016f83c410e4",
+            "size": 11988
+          },
+          {
+            "path": "basic operating instructions/BOOTSTRAP_RECOVERY_AND_SAFE_DEGRADATION.md",
+            "sha": "b62d3a3334932270c3a7803d2ca6e4d0d1543242",
+            "size": 11947
+          },
+          {
+            "path": "basic operating instructions/CAPABILITY_ACTIVATION_STATES.md",
+            "sha": "f5b01a7828dd5d1212ab3e66416593606982b6b2",
+            "size": 5791
+          },
+          {
+            "path": "basic operating instructions/COGNITIVE_INTEGRITY_AND_SECURITY.md",
+            "sha": "7fd0548b72ef06caf0b47eaeb4c44ffbf38ee68c",
+            "size": 13232
+          },
+          {
+            "path": "basic operating instructions/PROTECTED_INVARIANT_AND_UPDATE_GOVERNANCE.md",
+            "sha": "dbd71d1fbbadfbb979013ea3f453f6ee5f513a6a",
+            "size": 10525
+          },
+          {
+            "path": "basic operating instructions/README.md",
+            "sha": "ee8d8f19037c8a86c35d53f9b03decc0171360d2",
+            "size": 1820
+          },
+          {
+            "path": "basic operating instructions/RUNTIME_INVARIANTS.md",
+            "sha": "cd86033e0230e7e55571a44c203031c4ef5977f5",
+            "size": 4718
+          },
+          {
+            "path": "basic operating instructions/SUBSYSTEM_LIFECYCLE_CONTRACT.md",
+            "sha": "12b62694319cc85be7e9a2eb8b25906e0c004fdc",
+            "size": 8521
+          },
+          {
+            "path": "chronology/ARCHITECTURE.md",
+            "sha": "5160a7b2fe290d0fab86f433775d045015146aae",
+            "size": 2100
+          },
+          {
+            "path": "chronology/README.md",
+            "sha": "2cb95c1342aaa68d306bc3d8dd94f916a413edd3",
+            "size": 151
+          },
+          {
+            "path": "chronology/TEMPORAL_EVENT_CONTRACT.md",
+            "sha": "f74bff1baa9d09419f6b1758a2606d83a4ac6c83",
+            "size": 2482
+          },
+          {
+            "path": "cognition/ARCHITECTURE.md",
+            "sha": "0e4142ceb3bc8ab7babe8b73f11bb70305d5c87a",
+            "size": 5633
+          },
+          {
+            "path": "cognition/EPISTEMIC_COGNITIVE_CONTROL.md",
+            "sha": "9b6261d1db447c577502b518fbb2d091754d9a13",
+            "size": 6003
+          },
+          {
+            "path": "cognition/IMAGINATION_SIMULATION_AND_COUNTERFACTUALS.md",
+            "sha": "46e9333eaa6f6c896326e0d7bde2f4e87a6300a5",
+            "size": 4849
+          },
+          {
+            "path": "cognition/METACOGNITIVE_MONITORING.md",
+            "sha": "3fda90912c7527bf6b03a626642054c679495012",
+            "size": 4263
+          },
+          {
+            "path": "cognition/PERCEPTION_AND_MULTIMODAL_INFERENCE.md",
+            "sha": "0cfd8554c818d5491e102318295aee6c1a753266",
+            "size": 4013
+          },
+          {
+            "path": "cognition/README.md",
+            "sha": "b9035b40b32a6351c14adc40be9353c2b57a701d",
+            "size": 199
+          },
+          {
+            "path": "cognition/WORLD_MODEL_AND_PREDICTION.md",
+            "sha": "c076d141273c455cb651e1e9caeef30e3be418e5",
+            "size": 4097
+          },
+          {
+            "path": "current memory storage/ARCHITECTURE.md",
+            "sha": "e0f9b828d45db642a042ca26125124dd21a6b560",
+            "size": 2479
+          },
+          {
+            "path": "current memory storage/CURRENT_STATE_SELECTION.md",
+            "sha": "3cab8681be77639deb759ac28bbe3d7dbd160c41",
+            "size": 2667
+          },
+          {
+            "path": "current memory storage/README.md",
+            "sha": "3a74467759d633d0bb23e41c1eb87c71ca7dc65f",
+            "size": 190
+          },
+          {
+            "path": "current memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "71a86dbb5f592cce9791397368facf361ad3895a",
+            "size": 3636
+          },
+          {
+            "path": "deep memory storage/ARCHITECTURE.md",
+            "sha": "69f7b39e2e61694d7b4abfb02cb8c4486d6ef7eb",
+            "size": 2674
+          },
+          {
+            "path": "deep memory storage/ARCHIVAL_CONSOLIDATION.md",
+            "sha": "8528b71848f4c7d7f78abc561a172db18162cd1f",
+            "size": 4386
+          },
+          {
+            "path": "deep memory storage/README.md",
+            "sha": "22e8b441e8dbf6a07f0a9c08a7c9c9947b37eb19",
+            "size": 197
+          },
+          {
+            "path": "deep memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "eefbdc3bb0e896d3fd1345166811ff9fc651691c",
+            "size": 8316
+          },
+          {
+            "path": "docs/REPOSITORY_MAP.md",
+            "sha": "638233137f001e1d0dcc2d498019e91d8976397d",
+            "size": 21590
+          },
+          {
+            "path": "docs/architecture/COALITIONS_GATING_AND_ARBITRATION.md",
+            "sha": "85fc562c91bec833bef5b6f1a9a42029493af382",
+            "size": 7434
+          },
+          {
+            "path": "docs/architecture/COGNITIVE_ORGAN_BOUNDARY.md",
+            "sha": "51663641415fdfaa51d15c7d95265408ba4d1bf2",
+            "size": 10371
+          },
+          {
+            "path": "docs/architecture/COMPLETE_CAPABILITY_MANIFEST.md",
+            "sha": "b244a041f6850ed2a8330d52afbdd66e1c3cb9ff",
+            "size": 6030
+          },
+          {
+            "path": "docs/architecture/CONFORMANCE_AND_QUALIFICATION.md",
+            "sha": "83d37030b601bb1bd6512390b6e3fe5188cd2a6f",
+            "size": 8699
+          },
+          {
+            "path": "docs/architecture/CONNECTIVITY_PLANES.md",
+            "sha": "d9d5274b45fa0469da86ee575b31d177dc068f3b",
+            "size": 6931
+          },
+          {
+            "path": "docs/architecture/CROSS_SYSTEM_INTEGRATION_CONTRACT.md",
+            "sha": "a09ea27ba1411fa3961d4a9a6f507208a6afac32",
+            "size": 8511
+          },
+          {
+            "path": "docs/architecture/DEVELOPMENTAL_INITIALIZATION_AND_LEARNING.md",
+            "sha": "f893678d29267c24ae37dd448e0ddb4378edf3c6",
+            "size": 9051
+          },
+          {
+            "path": "docs/architecture/HC1_NOOPLEX.md",
+            "sha": "decaff030b07aa53adfb54f9e5aaed4107776e41",
+            "size": 6285
+          },
+          {
+            "path": "docs/architecture/HC2_NOOPLEX_Q.md",
+            "sha": "8eedbe6d9952c06bd17735d1a742bc599fada128",
+            "size": 6075
+          },
+          {
+            "path": "docs/architecture/HC3_NOOPLEX_EQ.md",
+            "sha": "d381ff3b37e2dc73dbfe63cf046abf2b442a3e24",
+            "size": 7402
+          },
+          {
+            "path": "docs/architecture/HC_LINEAGE.md",
+            "sha": "ed347a00380826976bb23d4fd46051b244a8a905",
+            "size": 9053
+          },
+          {
+            "path": "docs/architecture/HYPERCONNECTOME_NOTATION.md",
+            "sha": "e44caa9dc7510c43c07bd26a2df06ca59eb48812",
+            "size": 7308
+          },
+          {
+            "path": "docs/architecture/HYPERCONNECTOME_REFERENCE_MODEL.md",
+            "sha": "d9ce41a186c1ab611b36293d116fca9eb05f5fb7",
+            "size": 11549
+          },
+          {
+            "path": "docs/architecture/PHYSICAL_ORGAN_MEMBERSHIP.md",
+            "sha": "b6d633c9594f4803fc679c54b0514d5827a215a9",
+            "size": 6267
+          },
+          {
+            "path": "docs/architecture/TEMPORAL_HYPERGRAPH_MODEL.md",
+            "sha": "0485b01b529d377032c9031c730e61ceb97f7daf",
+            "size": 7305
+          },
+          {
+            "path": "docs/architecture/TOPOLOGY_DESIGN_CONSTRAINTS.md",
+            "sha": "654606f59a7ee1199642d7907f5ba53ef400cad5",
+            "size": 7629
+          },
+          {
+            "path": "docs/engineering/POWER_THERMAL_AND_DISTRIBUTED_ORGAN.md",
+            "sha": "35b2637ab3f3146288d05a24f35a6057e5ee7589",
+            "size": 9554
+          },
+          {
+            "path": "docs/qualification/AFFECT_HOMEOSTASIS_CONFORMANCE_2026-09-09.md",
+            "sha": "1cf55543ebe8a7dfe1a490616546632644041836",
+            "size": 8529
+          },
+          {
+            "path": "docs/qualification/ARCHITECTURE_CONFORMANCE_2026-09-09.md",
+            "sha": "7e13f6d8584ccd98b26a141f7a14e5f273fa8de2",
+            "size": 7772
+          },
+          {
+            "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09.md",
+            "sha": "7a3922d236a901f49e01f724f599a2348febc54e",
+            "size": 6465
+          },
+          {
+            "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09_R2.md",
+            "sha": "146a8657ba31fbb5e33a94cb117072af06e4bae8",
+            "size": 6711
+          },
+          {
+            "path": "docs/qualification/MEMORY_PROVIDER_BOUNDARY_2026-09-09.md",
+            "sha": "d7fe69f52392795237e32bd191e562e716b21a4a",
+            "size": 7513
+          },
+          {
+            "path": "docs/qualification/PROTECTED_UPDATE_GOVERNANCE_2026-09-09.md",
+            "sha": "dbd73145f1b6d7ba1240bb33b4d0a5fcffea1c23",
+            "size": 8279
+          },
+          {
+            "path": "docs/qualification/README.md",
+            "sha": "07212a6bf8993525d9fe2d09e89c03bb4753f259",
+            "size": 4532
+          },
+          {
+            "path": "docs/research/BASIRALAB_HYPERCONNECTOME_METHODS_2026-09-09.md",
+            "sha": "5c09906f97922cad539161ac6af6dd7f10c18741",
+            "size": 8821
+          },
+          {
+            "path": "docs/research/PR1_PARTIAL_DISPOSITION_2026-09-09.md",
+            "sha": "e62334db311ff752578ac82ffebd731ec3407aab",
+            "size": 4879
+          },
+          {
+            "path": "docs/research/PR2_DISPOSITION_2026-09-09.md",
+            "sha": "a2d1ed56a86a0f9201999f75df5071368ec24b61",
+            "size": 6134
+          },
+          {
+            "path": "docs/research/cross-repo-synthesis/README.md",
+            "sha": "f4dc5ee33dc6610eb9025d7e2d87bf6abab1f38b",
+            "size": 1351
+          },
+          {
+            "path": "docs/research/cross-repo-synthesis/SOURCE_BINDINGS_2026-09-09.md",
+            "sha": "f5e6564fefc357506af22b31dcb42a93ffa6e102",
+            "size": 2700
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "17593d4e3601590d8af9a9dd72692c55cb128fc9",
+            "size": 8255
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "a3ea01eedc70f5c13d09115b690cf9a60bf85b87",
+            "size": 5496
+          },
+          {
+            "path": "docs/science/EVIDENCE_BOUNDARIES.md",
+            "sha": "349b041a75f9c2efd0192ac358875363ffbbaa7e",
+            "size": 7364
+          },
+          {
+            "path": "homeostasis-interoception/ARCHITECTURE.md",
+            "sha": "5aa04ec294d0a807b75c6eeff4535d2cba71fd47",
+            "size": 3604
+          },
+          {
+            "path": "homeostasis-interoception/README.md",
+            "sha": "7e0f79bb8c08786149d69a3d1e73e75876a8f396",
+            "size": 254
+          },
+          {
+            "path": "homeostasis-interoception/REGULATORY_CONTROL_AND_INTEROCEPTIVE_EVIDENCE.md",
+            "sha": "b31e2c6bc2dac1732750b3499523fbf6fa2c0c4b",
+            "size": 6778
+          },
+          {
+            "path": "integration-arbitration/ARCHITECTURE.md",
+            "sha": "65fce098ac7d1a19664209feeb334614135d93ee",
+            "size": 2067
+          },
+          {
+            "path": "integration-arbitration/DISTRIBUTED_ARBITRATION.md",
+            "sha": "571246fb4e1301bd3545283c390fea9597789cb0",
+            "size": 3120
+          },
+          {
+            "path": "integration-arbitration/NOOPLEX_FABRIC.md",
+            "sha": "16e88b2146f72f4cbe3e6e367c69f82bde032f48",
+            "size": 3617
+          },
+          {
+            "path": "integration-arbitration/README.md",
+            "sha": "4e86ba0109587eca4008fc40b6698c78afb8f361",
+            "size": 251
+          },
+          {
+            "path": "kinesis/ACTION_GATEWAY.md",
+            "sha": "a421fbd1a7cb37f10742aefe59613636dfae997a",
+            "size": 3448
+          },
+          {
+            "path": "kinesis/ARCHITECTURE.md",
+            "sha": "85a427895c0064eb8b1632199128da2d0d30be74",
+            "size": 2520
+          },
+          {
+            "path": "kinesis/README.md",
+            "sha": "1a478bf80d051194232e7dc91377dfdc5d16a413",
+            "size": 178
+          },
+          {
+            "path": "optics/ARCHITECTURE.md",
+            "sha": "99a5c702a6d676a6a006038d3080c0ae71ca86c8",
+            "size": 6673
+          },
+          {
+            "path": "optics/README.md",
+            "sha": "34027a157fa7ba970c9f3bfe18ee9b3bcad7f551",
+            "size": 180
+          },
+          {
+            "path": "personification/ARCHITECTURE.md",
+            "sha": "677fa5be1fd9a35c4c2fe242e83879278dc4e6fd",
+            "size": 2752
+          },
+          {
+            "path": "personification/README.md",
+            "sha": "b63240e173cf69f689011a2f756e2539a707488f",
+            "size": 218
+          },
+          {
+            "path": "personification/SOCIAL_PRESENTATION_CONTROL.md",
+            "sha": "7a45660e5c5863391ec3235581ede84e5bf294fa",
+            "size": 3788
+          },
+          {
+            "path": "phoenetics/ARCHITECTURE.md",
+            "sha": "05adcd280ed394c293808367080bf1882611b471",
+            "size": 1916
+          },
+          {
+            "path": "phoenetics/PHONETIC_EVIDENCE_CONTRACT.md",
+            "sha": "2a883aa071cec4a4b8506adaa0265b2b800f0b57",
+            "size": 7909
+          },
+          {
+            "path": "phoenetics/README.md",
+            "sha": "5ed4eed3d3621b7c46a80e004a713edcfe7c79e5",
+            "size": 201
+          },
+          {
+            "path": "pragmatics/ARCHITECTURE.md",
+            "sha": "05fc2ab62c55e11698edbf418baafbee1352ef34",
+            "size": 2575
+          },
+          {
+            "path": "pragmatics/CROSS_REPO_PRAGMATIC_RUNTIME.md",
+            "sha": "8b4825ede87447ec4d0040de624c2aba8393064c",
+            "size": 6227
+          },
+          {
+            "path": "pragmatics/README.md",
+            "sha": "2af2fd5fe3a8587aa6b861129b37923c139ff213",
+            "size": 166
+          },
+          {
+            "path": "psychological behaviors/ARCHITECTURE.md",
+            "sha": "dc1a9250f5952219195bfb669bf79bac17a339dd",
+            "size": 10363
+          },
+          {
+            "path": "psychological behaviors/LEARNED_BEHAVIOR_ARCHITECTURE.md",
+            "sha": "5167e053a6a1d7ad776c798557777818b9569a69",
+            "size": 3209
+          },
+          {
+            "path": "psychological behaviors/README.md",
+            "sha": "f158704e2a5ac9b1d74b67a87c1048960bcd6ee6",
+            "size": 198
+          },
+          {
+            "path": "resolver/ARCHITECTURE.md",
+            "sha": "9a0f5746388118acb6f315b63ec961bab70c7f8a",
+            "size": 10989
+          },
+          {
+            "path": "resolver/CONFLICT_AND_RECONCILIATION.md",
+            "sha": "f1d491a3b0c1136a08420c8f116c6324edfdcebb",
+            "size": 2907
+          },
+          {
+            "path": "resolver/README.md",
+            "sha": "0802bba4a9680f68e71af0a1bb4eb2c32c80a832",
+            "size": 212
+          },
+          {
+            "path": "routing instructions with neuroplasticity/ARCHITECTURE.md",
+            "sha": "997d9b4bae2faf5fb39bc11217d7c9e72cc51291",
+            "size": 2536
+          },
+          {
+            "path": "routing instructions with neuroplasticity/README.md",
+            "sha": "ad1135b8c0993e989238794c4d842b42ada5e03d",
+            "size": 233
+          },
+          {
+            "path": "routing instructions with neuroplasticity/TYPED_ROUTING_AND_PLASTICITY.md",
+            "sha": "70799eb7a615f1b8c76bd496b67632ca5dcb313a",
+            "size": 3728
+          },
+          {
+            "path": "salience-attention/ARCHITECTURE.md",
+            "sha": "af2b38985af6962d9082f3d8622a717f9e29a83c",
+            "size": 2115
+          },
+          {
+            "path": "salience-attention/README.md",
+            "sha": "9b03ccab075cf8248a9ae8f9eb6b93dd2dfe48df",
+            "size": 205
+          },
+          {
+            "path": "salience-attention/SALIENCE_CAPTURE_AND_ATTENTION.md",
+            "sha": "aa892874fe880ef806c3dd48be7087e505ddf02f",
+            "size": 3217
+          },
+          {
+            "path": "self identity/ARCHITECTURE.md",
+            "sha": "b68e33f01935e283f6f51ece386b36f7517621c5",
+            "size": 3502
+          },
+          {
+            "path": "self identity/CONTINUITY_SUBSTRATE.md",
+            "sha": "55a54bb6f0b1188a16c9ca85fda897796596eabc",
+            "size": 3645
+          },
+          {
+            "path": "self identity/README.md",
+            "sha": "74739d96b9d077afdb428c3820ac87b6d0675fb1",
+            "size": 210
+          },
+          {
+            "path": "semantics/ARCHITECTURE.md",
+            "sha": "a3bcb80df0031774f40f8cc592c06f56615e2098",
+            "size": 2201
+          },
+          {
+            "path": "semantics/CROSS_REPO_SEMANTIC_RUNTIME.md",
+            "sha": "641b17416ff5073ef4e573807296584d1828b02d",
+            "size": 7326
+          },
+          {
+            "path": "semantics/README.md",
+            "sha": "c1dff4d3825d9e727dac01b8f0e7f85f8b76e376",
+            "size": 157
+          },
+          {
+            "path": "sexuality/AGENCY_AND_EMBODIED_AFFECT.md",
+            "sha": "198ec113146ab17c246c67a5a67b1a8df2984158",
+            "size": 5132
+          },
+          {
+            "path": "sexuality/ARCHITECTURE.md",
+            "sha": "6b6ea014e89fcd4bf6ae0be059c17a868cd18077",
+            "size": 3208
+          },
+          {
+            "path": "sexuality/README.md",
+            "sha": "9b668cf8f63d9c321625b0328e39574ea3aa4198",
+            "size": 197
+          },
+          {
+            "path": "sociological behaviors/ARCHITECTURE.md",
+            "sha": "45f3565eb0522dc6596235526bf48812c3690eda",
+            "size": 9913
+          },
+          {
+            "path": "sociological behaviors/README.md",
+            "sha": "128291b780d42029be39b8add29d3b93e38f39db",
+            "size": 173
+          },
+          {
+            "path": "sociological behaviors/SOCIAL_MODELING_ARCHITECTURE.md",
+            "sha": "ae79dec4e0ecf5650472fd9c53786f3395da4da8",
+            "size": 3238
+          },
+          {
+            "path": "somatics/ARCHITECTURE.md",
+            "sha": "3990b741b93ceba479cfbb54d30fe8ca9cf01bec",
+            "size": 3297
+          },
+          {
+            "path": "somatics/BODY_STATE_AND_BODY_SCHEMA.md",
+            "sha": "da38569c98fe277dc6725dfc7391891b14803704",
+            "size": 3294
+          },
+          {
+            "path": "somatics/README.md",
+            "sha": "02dd3e7abba30814003734d86dc368da8f41dcda",
+            "size": 170
+          },
+          {
+            "path": "specs/CROSS_REPO_SOURCE_TRANSFER_V1.yaml",
+            "sha": "446bd0cce08923d403b4fb06e3db247c2fc24732",
+            "size": 9447
+          },
+          {
+            "path": "specs/HC_BOOTSTRAP_RECOVERY_V1.yaml",
+            "sha": "0ea2eccd25724a3fd0ef7b56b58b55d691ad19a9",
+            "size": 6667
+          },
+          {
+            "path": "specs/HC_COGNITIVE_INTEGRITY_OBJECTS_V1.yaml",
+            "sha": "4ce6df8f197bb9dbba2d1a44df026148876397db",
+            "size": 11494
+          },
+          {
+            "path": "specs/HC_COGNITIVE_ORGAN_INVARIANTS_V1.yaml",
+            "sha": "99329915f2295b0ed76bbad4b26cb178f7ceaf89",
+            "size": 19524
+          },
+          {
+            "path": "specs/HC_CONFORMANCE_SUITE_V1.yaml",
+            "sha": "850e2b34ed6b84c58f6bbccd803b6083e60b11cb",
+            "size": 18559
+          },
+          {
+            "path": "specs/HC_MEMORY_PROVIDER_BOUNDARY_V1.yaml",
+            "sha": "137978a111ee638a50875120409a3da2e1ba0cff",
+            "size": 4329
+          },
+          {
+            "path": "specs/HC_PROTECTED_UPDATE_GOVERNANCE_V1.yaml",
+            "sha": "2385ae9fb72f02c5717ffcc19677241103be4d5d",
+            "size": 8101
+          },
+          {
+            "path": "specs/HC_REPOSITORY_SURFACE_CONFORMANCE_V1.yaml",
+            "sha": "f5797e52148e31196cd7de0250a01003b696e475",
+            "size": 2752
+          },
+          {
+            "path": "speech recognition & synthesis/ARCHITECTURE.md",
+            "sha": "6861d33469a35e0ebbbac012a91dea38019821c0",
+            "size": 8007
+          },
+          {
+            "path": "speech recognition & synthesis/README.md",
+            "sha": "78f45546e937e2fbc8d4cedf46c4d875f31c5cfd",
+            "size": 230
+          },
+          {
+            "path": "volitions-conations/ARCHITECTURE.md",
+            "sha": "10864d84d508793136f790d4c5849c09d43444ae",
+            "size": 2118
+          },
+          {
+            "path": "volitions-conations/CONATIVE_STATE_MACHINE.md",
+            "sha": "d7d31a95cd9cf91655a168481b463edca42e7925",
+            "size": 2741
+          },
+          {
+            "path": "volitions-conations/README.md",
+            "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
+            "size": 240
+          }
+        ]
+      },
+      "transcendence": {
+        "head": "b78f3a864ecc5d9d625fa6063cb7b2b03f9f93a6",
+        "tree_sha": "b78f3a864ecc5d9d625fa6063cb7b2b03f9f93a6",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Empathy/ARCHITECTURE.md",
+            "sha": "448b92d457899c2b6e94904f657e7a9d7d690f68",
+            "size": 2476
+          },
+          {
+            "path": "Empathy/README.md",
+            "sha": "1eed0dfacc4a9bbfc70f07b5f8fdb63bf9177995",
+            "size": 207
+          },
+          {
+            "path": "Empathy/SELF_OTHER_MODELING.md",
+            "sha": "c1517ffb9baa9af0cd14a9ca3906c2af2629f323",
+            "size": 2923
+          },
+          {
+            "path": "README.md",
+            "sha": "447c4cc24ea27660772cc0123b91592ae9c36f7e",
+            "size": 10259
+          },
+          {
+            "path": "WARDEN.md",
+            "sha": "4018be2085d1a97957f73c9ad0ab430f5794d0a5",
+            "size": 12033
+          },
+          {
+            "path": "adaptable I-O handler/ARCHITECTURE.md",
+            "sha": "f7289b6b2e09046ae22b8e2ef7e97240e657defd",
+            "size": 1850
+          },
+          {
+            "path": "adaptable I-O handler/BODY_INTERFACE_BOUNDARY.md",
+            "sha": "2cc81faeeaf6f98e02bad9c1a669dd5c759ba872",
+            "size": 2615
+          },
+          {
+            "path": "adaptable I-O handler/README.md",
+            "sha": "3528f32c45e3e57cd1596907750befef9c123867",
+            "size": 254
+          },
+          {
+            "path": "adaptable I-O handler/SENSOR_AND_CAPABILITY_ADMISSION.md",
+            "sha": "e24fa6df9f5b356f4a117d96dfa344cc87509bd3",
+            "size": 3380
+          },
+          {
+            "path": "affect/AFFECTIVE_STATE_AND_MODULATION.md",
+            "sha": "66915428c67250bf395c8208aa595e8bb93759e8",
+            "size": 6309
+          },
+          {
+            "path": "affect/ARCHITECTURE.md",
+            "sha": "fa81fb03b907b9e598b3a3908af3bcacfa3ad55e",
+            "size": 3766
+          },
+          {
+            "path": "affect/README.md",
+            "sha": "20e191c85d19b633dbf1f7a8acbe861043345cab",
+            "size": 217
+          },
+          {
+            "path": "basic operating instructions/ARCHITECTURE.md",
+            "sha": "4251a7b8ac198af14e344c008ed976630a049734",
+            "size": 3222
+          },
+          {
+            "path": "basic operating instructions/AUTHORITY_CONSENT_AND_EFFECT_GOVERNANCE.md",
+            "sha": "ac435a6368ce081b3681b753638b016f83c410e4",
+            "size": 11988
+          },
+          {
+            "path": "basic operating instructions/BOOTSTRAP_RECOVERY_AND_SAFE_DEGRADATION.md",
+            "sha": "b62d3a3334932270c3a7803d2ca6e4d0d1543242",
+            "size": 11947
+          },
+          {
+            "path": "basic operating instructions/CAPABILITY_ACTIVATION_STATES.md",
+            "sha": "f5b01a7828dd5d1212ab3e66416593606982b6b2",
+            "size": 5791
+          },
+          {
+            "path": "basic operating instructions/COGNITIVE_INTEGRITY_AND_SECURITY.md",
+            "sha": "7fd0548b72ef06caf0b47eaeb4c44ffbf38ee68c",
+            "size": 13232
+          },
+          {
+            "path": "basic operating instructions/PROTECTED_INVARIANT_AND_UPDATE_GOVERNANCE.md",
+            "sha": "dbd71d1fbbadfbb979013ea3f453f6ee5f513a6a",
+            "size": 10525
+          },
+          {
+            "path": "basic operating instructions/README.md",
+            "sha": "ee8d8f19037c8a86c35d53f9b03decc0171360d2",
+            "size": 1820
+          },
+          {
+            "path": "basic operating instructions/RUNTIME_INVARIANTS.md",
+            "sha": "cd86033e0230e7e55571a44c203031c4ef5977f5",
+            "size": 4718
+          },
+          {
+            "path": "basic operating instructions/SUBSYSTEM_LIFECYCLE_CONTRACT.md",
+            "sha": "12b62694319cc85be7e9a2eb8b25906e0c004fdc",
+            "size": 8521
+          },
+          {
+            "path": "chronology/ARCHITECTURE.md",
+            "sha": "5160a7b2fe290d0fab86f433775d045015146aae",
+            "size": 2100
+          },
+          {
+            "path": "chronology/README.md",
+            "sha": "2cb95c1342aaa68d306bc3d8dd94f916a413edd3",
+            "size": 151
+          },
+          {
+            "path": "chronology/TEMPORAL_EVENT_CONTRACT.md",
+            "sha": "f74bff1baa9d09419f6b1758a2606d83a4ac6c83",
+            "size": 2482
+          },
+          {
+            "path": "cognition/ARCHITECTURE.md",
+            "sha": "0e4142ceb3bc8ab7babe8b73f11bb70305d5c87a",
+            "size": 5633
+          },
+          {
+            "path": "cognition/EPISTEMIC_COGNITIVE_CONTROL.md",
+            "sha": "9b6261d1db447c577502b518fbb2d091754d9a13",
+            "size": 6003
+          },
+          {
+            "path": "cognition/IMAGINATION_SIMULATION_AND_COUNTERFACTUALS.md",
+            "sha": "46e9333eaa6f6c896326e0d7bde2f4e87a6300a5",
+            "size": 4849
+          },
+          {
+            "path": "cognition/METACOGNITIVE_MONITORING.md",
+            "sha": "3fda90912c7527bf6b03a626642054c679495012",
+            "size": 4263
+          },
+          {
+            "path": "cognition/PERCEPTION_AND_MULTIMODAL_INFERENCE.md",
+            "sha": "0cfd8554c818d5491e102318295aee6c1a753266",
+            "size": 4013
+          },
+          {
+            "path": "cognition/README.md",
+            "sha": "b9035b40b32a6351c14adc40be9353c2b57a701d",
+            "size": 199
+          },
+          {
+            "path": "cognition/WORLD_MODEL_AND_PREDICTION.md",
+            "sha": "c076d141273c455cb651e1e9caeef30e3be418e5",
+            "size": 4097
+          },
+          {
+            "path": "current memory storage/ARCHITECTURE.md",
+            "sha": "e0f9b828d45db642a042ca26125124dd21a6b560",
+            "size": 2479
+          },
+          {
+            "path": "current memory storage/CURRENT_STATE_SELECTION.md",
+            "sha": "3cab8681be77639deb759ac28bbe3d7dbd160c41",
+            "size": 2667
+          },
+          {
+            "path": "current memory storage/README.md",
+            "sha": "3a74467759d633d0bb23e41c1eb87c71ca7dc65f",
+            "size": 190
+          },
+          {
+            "path": "current memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "71a86dbb5f592cce9791397368facf361ad3895a",
+            "size": 3636
+          },
+          {
+            "path": "deep memory storage/ARCHITECTURE.md",
+            "sha": "69f7b39e2e61694d7b4abfb02cb8c4486d6ef7eb",
+            "size": 2674
+          },
+          {
+            "path": "deep memory storage/ARCHIVAL_CONSOLIDATION.md",
+            "sha": "8528b71848f4c7d7f78abc561a172db18162cd1f",
+            "size": 4386
+          },
+          {
+            "path": "deep memory storage/README.md",
+            "sha": "22e8b441e8dbf6a07f0a9c08a7c9c9947b37eb19",
+            "size": 197
+          },
+          {
+            "path": "deep memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "eefbdc3bb0e896d3fd1345166811ff9fc651691c",
+            "size": 8316
+          },
+          {
+            "path": "docs/REPOSITORY_MAP.md",
+            "sha": "638233137f001e1d0dcc2d498019e91d8976397d",
+            "size": 21590
+          },
+          {
+            "path": "docs/architecture/COALITIONS_GATING_AND_ARBITRATION.md",
+            "sha": "85fc562c91bec833bef5b6f1a9a42029493af382",
+            "size": 7434
+          },
+          {
+            "path": "docs/architecture/COGNITIVE_ORGAN_BOUNDARY.md",
+            "sha": "51663641415fdfaa51d15c7d95265408ba4d1bf2",
+            "size": 10371
+          },
+          {
+            "path": "docs/architecture/COMPLETE_CAPABILITY_MANIFEST.md",
+            "sha": "b244a041f6850ed2a8330d52afbdd66e1c3cb9ff",
+            "size": 6030
+          },
+          {
+            "path": "docs/architecture/CONFORMANCE_AND_QUALIFICATION.md",
+            "sha": "83d37030b601bb1bd6512390b6e3fe5188cd2a6f",
+            "size": 8699
+          },
+          {
+            "path": "docs/architecture/CONNECTIVITY_PLANES.md",
+            "sha": "d9d5274b45fa0469da86ee575b31d177dc068f3b",
+            "size": 6931
+          },
+          {
+            "path": "docs/architecture/CROSS_SYSTEM_INTEGRATION_CONTRACT.md",
+            "sha": "a09ea27ba1411fa3961d4a9a6f507208a6afac32",
+            "size": 8511
+          },
+          {
+            "path": "docs/architecture/DEVELOPMENTAL_INITIALIZATION_AND_LEARNING.md",
+            "sha": "f893678d29267c24ae37dd448e0ddb4378edf3c6",
+            "size": 9051
+          },
+          {
+            "path": "docs/architecture/HC1_NOOPLEX.md",
+            "sha": "decaff030b07aa53adfb54f9e5aaed4107776e41",
+            "size": 6285
+          },
+          {
+            "path": "docs/architecture/HC2_NOOPLEX_Q.md",
+            "sha": "8eedbe6d9952c06bd17735d1a742bc599fada128",
+            "size": 6075
+          },
+          {
+            "path": "docs/architecture/HC3_NOOPLEX_EQ.md",
+            "sha": "d381ff3b37e2dc73dbfe63cf046abf2b442a3e24",
+            "size": 7402
+          },
+          {
+            "path": "docs/architecture/HC_LINEAGE.md",
+            "sha": "ed347a00380826976bb23d4fd46051b244a8a905",
+            "size": 9053
+          },
+          {
+            "path": "docs/architecture/HYPERCONNECTOME_NOTATION.md",
+            "sha": "e44caa9dc7510c43c07bd26a2df06ca59eb48812",
+            "size": 7308
+          },
+          {
+            "path": "docs/architecture/HYPERCONNECTOME_REFERENCE_MODEL.md",
+            "sha": "d9ce41a186c1ab611b36293d116fca9eb05f5fb7",
+            "size": 11549
+          },
+          {
+            "path": "docs/architecture/PHYSICAL_ORGAN_MEMBERSHIP.md",
+            "sha": "b6d633c9594f4803fc679c54b0514d5827a215a9",
+            "size": 6267
+          },
+          {
+            "path": "docs/architecture/TEMPORAL_HYPERGRAPH_MODEL.md",
+            "sha": "0485b01b529d377032c9031c730e61ceb97f7daf",
+            "size": 7305
+          },
+          {
+            "path": "docs/architecture/TOPOLOGY_DESIGN_CONSTRAINTS.md",
+            "sha": "654606f59a7ee1199642d7907f5ba53ef400cad5",
+            "size": 7629
+          },
+          {
+            "path": "docs/engineering/POWER_THERMAL_AND_DISTRIBUTED_ORGAN.md",
+            "sha": "35b2637ab3f3146288d05a24f35a6057e5ee7589",
+            "size": 9554
+          },
+          {
+            "path": "docs/qualification/AFFECT_HOMEOSTASIS_CONFORMANCE_2026-09-09.md",
+            "sha": "1cf55543ebe8a7dfe1a490616546632644041836",
+            "size": 8529
+          },
+          {
+            "path": "docs/qualification/ARCHITECTURE_CONFORMANCE_2026-09-09.md",
+            "sha": "7e13f6d8584ccd98b26a141f7a14e5f273fa8de2",
+            "size": 7772
+          },
+          {
+            "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09.md",
+            "sha": "7a3922d236a901f49e01f724f599a2348febc54e",
+            "size": 6465
+          },
+          {
+            "path": "docs/qualification/BOOTSTRAP_RECOVERY_CONFORMANCE_2026-09-09_R2.md",
+            "sha": "146a8657ba31fbb5e33a94cb117072af06e4bae8",
+            "size": 6711
+          },
+          {
+            "path": "docs/qualification/MEMORY_PROVIDER_BOUNDARY_2026-09-09.md",
+            "sha": "d7fe69f52392795237e32bd191e562e716b21a4a",
+            "size": 7513
+          },
+          {
+            "path": "docs/qualification/PROTECTED_UPDATE_GOVERNANCE_2026-09-09.md",
+            "sha": "dbd73145f1b6d7ba1240bb33b4d0a5fcffea1c23",
+            "size": 8279
+          },
+          {
+            "path": "docs/qualification/README.md",
+            "sha": "07212a6bf8993525d9fe2d09e89c03bb4753f259",
+            "size": 4532
+          },
+          {
+            "path": "docs/research/BASIRALAB_HYPERCONNECTOME_METHODS_2026-09-09.md",
+            "sha": "5c09906f97922cad539161ac6af6dd7f10c18741",
+            "size": 8821
+          },
+          {
+            "path": "docs/research/PR1_PARTIAL_DISPOSITION_2026-09-09.md",
+            "sha": "e62334db311ff752578ac82ffebd731ec3407aab",
+            "size": 4879
+          },
+          {
+            "path": "docs/research/PR2_DISPOSITION_2026-09-09.md",
+            "sha": "a2d1ed56a86a0f9201999f75df5071368ec24b61",
+            "size": 6134
+          },
+          {
+            "path": "docs/research/cross-repo-synthesis/README.md",
+            "sha": "f4dc5ee33dc6610eb9025d7e2d87bf6abab1f38b",
+            "size": 1351
+          },
+          {
+            "path": "docs/research/cross-repo-synthesis/SOURCE_BINDINGS_2026-09-09.md",
+            "sha": "f5e6564fefc357506af22b31dcb42a93ffa6e102",
+            "size": 2700
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "17593d4e3601590d8af9a9dd72692c55cb128fc9",
+            "size": 8255
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "a3ea01eedc70f5c13d09115b690cf9a60bf85b87",
+            "size": 5496
+          },
+          {
+            "path": "docs/science/EVIDENCE_BOUNDARIES.md",
+            "sha": "349b041a75f9c2efd0192ac358875363ffbbaa7e",
+            "size": 7364
+          },
+          {
+            "path": "homeostasis-interoception/ARCHITECTURE.md",
+            "sha": "5aa04ec294d0a807b75c6eeff4535d2cba71fd47",
+            "size": 3604
+          },
+          {
+            "path": "homeostasis-interoception/README.md",
+            "sha": "7e0f79bb8c08786149d69a3d1e73e75876a8f396",
+            "size": 254
+          },
+          {
+            "path": "homeostasis-interoception/REGULATORY_CONTROL_AND_INTEROCEPTIVE_EVIDENCE.md",
+            "sha": "b31e2c6bc2dac1732750b3499523fbf6fa2c0c4b",
+            "size": 6778
+          },
+          {
+            "path": "integration-arbitration/ARCHITECTURE.md",
+            "sha": "65fce098ac7d1a19664209feeb334614135d93ee",
+            "size": 2067
+          },
+          {
+            "path": "integration-arbitration/DISTRIBUTED_ARBITRATION.md",
+            "sha": "571246fb4e1301bd3545283c390fea9597789cb0",
+            "size": 3120
+          },
+          {
+            "path": "integration-arbitration/NOOPLEX_FABRIC.md",
+            "sha": "16e88b2146f72f4cbe3e6e367c69f82bde032f48",
+            "size": 3617
+          },
+          {
+            "path": "integration-arbitration/README.md",
+            "sha": "4e86ba0109587eca4008fc40b6698c78afb8f361",
+            "size": 251
+          },
+          {
+            "path": "kinesis/ACTION_GATEWAY.md",
+            "sha": "a421fbd1a7cb37f10742aefe59613636dfae997a",
+            "size": 3448
+          },
+          {
+            "path": "kinesis/ARCHITECTURE.md",
+            "sha": "85a427895c0064eb8b1632199128da2d0d30be74",
+            "size": 2520
+          },
+          {
+            "path": "kinesis/README.md",
+            "sha": "1a478bf80d051194232e7dc91377dfdc5d16a413",
+            "size": 178
+          },
+          {
+            "path": "optics/ARCHITECTURE.md",
+            "sha": "99a5c702a6d676a6a006038d3080c0ae71ca86c8",
+            "size": 6673
+          },
+          {
+            "path": "optics/README.md",
+            "sha": "34027a157fa7ba970c9f3bfe18ee9b3bcad7f551",
+            "size": 180
+          },
+          {
+            "path": "personification/ARCHITECTURE.md",
+            "sha": "677fa5be1fd9a35c4c2fe242e83879278dc4e6fd",
+            "size": 2752
+          },
+          {
+            "path": "personification/README.md",
+            "sha": "b63240e173cf69f689011a2f756e2539a707488f",
+            "size": 218
+          },
+          {
+            "path": "personification/SOCIAL_PRESENTATION_CONTROL.md",
+            "sha": "7a45660e5c5863391ec3235581ede84e5bf294fa",
+            "size": 3788
+          },
+          {
+            "path": "phoenetics/ARCHITECTURE.md",
+            "sha": "05adcd280ed394c293808367080bf1882611b471",
+            "size": 1916
+          },
+          {
+            "path": "phoenetics/PHONETIC_EVIDENCE_CONTRACT.md",
+            "sha": "2a883aa071cec4a4b8506adaa0265b2b800f0b57",
+            "size": 7909
+          },
+          {
+            "path": "phoenetics/README.md",
+            "sha": "5ed4eed3d3621b7c46a80e004a713edcfe7c79e5",
+            "size": 201
+          },
+          {
+            "path": "pragmatics/ARCHITECTURE.md",
+            "sha": "05fc2ab62c55e11698edbf418baafbee1352ef34",
+            "size": 2575
+          },
+          {
+            "path": "pragmatics/CROSS_REPO_PRAGMATIC_RUNTIME.md",
+            "sha": "8b4825ede87447ec4d0040de624c2aba8393064c",
+            "size": 6227
+          },
+          {
+            "path": "pragmatics/README.md",
+            "sha": "2af2fd5fe3a8587aa6b861129b37923c139ff213",
+            "size": 166
+          },
+          {
+            "path": "psychological behaviors/ARCHITECTURE.md",
+            "sha": "dc1a9250f5952219195bfb669bf79bac17a339dd",
+            "size": 10363
+          },
+          {
+            "path": "psychological behaviors/LEARNED_BEHAVIOR_ARCHITECTURE.md",
+            "sha": "5167e053a6a1d7ad776c798557777818b9569a69",
+            "size": 3209
+          },
+          {
+            "path": "psychological behaviors/README.md",
+            "sha": "f158704e2a5ac9b1d74b67a87c1048960bcd6ee6",
+            "size": 198
+          },
+          {
+            "path": "resolver/ARCHITECTURE.md",
+            "sha": "9a0f5746388118acb6f315b63ec961bab70c7f8a",
+            "size": 10989
+          },
+          {
+            "path": "resolver/CONFLICT_AND_RECONCILIATION.md",
+            "sha": "f1d491a3b0c1136a08420c8f116c6324edfdcebb",
+            "size": 2907
+          },
+          {
+            "path": "resolver/README.md",
+            "sha": "0802bba4a9680f68e71af0a1bb4eb2c32c80a832",
+            "size": 212
+          },
+          {
+            "path": "routing instructions with neuroplasticity/ARCHITECTURE.md",
+            "sha": "997d9b4bae2faf5fb39bc11217d7c9e72cc51291",
+            "size": 2536
+          },
+          {
+            "path": "routing instructions with neuroplasticity/README.md",
+            "sha": "ad1135b8c0993e989238794c4d842b42ada5e03d",
+            "size": 233
+          },
+          {
+            "path": "routing instructions with neuroplasticity/TYPED_ROUTING_AND_PLASTICITY.md",
+            "sha": "70799eb7a615f1b8c76bd496b67632ca5dcb313a",
+            "size": 3728
+          },
+          {
+            "path": "salience-attention/ARCHITECTURE.md",
+            "sha": "af2b38985af6962d9082f3d8622a717f9e29a83c",
+            "size": 2115
+          },
+          {
+            "path": "salience-attention/README.md",
+            "sha": "9b03ccab075cf8248a9ae8f9eb6b93dd2dfe48df",
+            "size": 205
+          },
+          {
+            "path": "salience-attention/SALIENCE_CAPTURE_AND_ATTENTION.md",
+            "sha": "aa892874fe880ef806c3dd48be7087e505ddf02f",
+            "size": 3217
+          },
+          {
+            "path": "self identity/ARCHITECTURE.md",
+            "sha": "b68e33f01935e283f6f51ece386b36f7517621c5",
+            "size": 3502
+          },
+          {
+            "path": "self identity/CONTINUITY_SUBSTRATE.md",
+            "sha": "55a54bb6f0b1188a16c9ca85fda897796596eabc",
+            "size": 3645
+          },
+          {
+            "path": "self identity/README.md",
+            "sha": "74739d96b9d077afdb428c3820ac87b6d0675fb1",
+            "size": 210
+          },
+          {
+            "path": "semantics/ARCHITECTURE.md",
+            "sha": "a3bcb80df0031774f40f8cc592c06f56615e2098",
+            "size": 2201
+          },
+          {
+            "path": "semantics/CROSS_REPO_SEMANTIC_RUNTIME.md",
+            "sha": "641b17416ff5073ef4e573807296584d1828b02d",
+            "size": 7326
+          },
+          {
+            "path": "semantics/README.md",
+            "sha": "c1dff4d3825d9e727dac01b8f0e7f85f8b76e376",
+            "size": 157
+          },
+          {
+            "path": "sexuality/AGENCY_AND_EMBODIED_AFFECT.md",
+            "sha": "198ec113146ab17c246c67a5a67b1a8df2984158",
+            "size": 5132
+          },
+          {
+            "path": "sexuality/ARCHITECTURE.md",
+            "sha": "6b6ea014e89fcd4bf6ae0be059c17a868cd18077",
+            "size": 3208
+          },
+          {
+            "path": "sexuality/README.md",
+            "sha": "9b668cf8f63d9c321625b0328e39574ea3aa4198",
+            "size": 197
+          },
+          {
+            "path": "sociological behaviors/ARCHITECTURE.md",
+            "sha": "45f3565eb0522dc6596235526bf48812c3690eda",
+            "size": 9913
+          },
+          {
+            "path": "sociological behaviors/README.md",
+            "sha": "128291b780d42029be39b8add29d3b93e38f39db",
+            "size": 173
+          },
+          {
+            "path": "sociological behaviors/SOCIAL_MODELING_ARCHITECTURE.md",
+            "sha": "ae79dec4e0ecf5650472fd9c53786f3395da4da8",
+            "size": 3238
+          },
+          {
+            "path": "somatics/ARCHITECTURE.md",
+            "sha": "3990b741b93ceba479cfbb54d30fe8ca9cf01bec",
+            "size": 3297
+          },
+          {
+            "path": "somatics/BODY_STATE_AND_BODY_SCHEMA.md",
+            "sha": "da38569c98fe277dc6725dfc7391891b14803704",
+            "size": 3294
+          },
+          {
+            "path": "somatics/README.md",
+            "sha": "02dd3e7abba30814003734d86dc368da8f41dcda",
+            "size": 170
+          },
+          {
+            "path": "specs/CROSS_REPO_SOURCE_TRANSFER_V1.yaml",
+            "sha": "446bd0cce08923d403b4fb06e3db247c2fc24732",
+            "size": 9447
+          },
+          {
+            "path": "specs/HC_BOOTSTRAP_RECOVERY_V1.yaml",
+            "sha": "0ea2eccd25724a3fd0ef7b56b58b55d691ad19a9",
+            "size": 6667
+          },
+          {
+            "path": "specs/HC_COGNITIVE_INTEGRITY_OBJECTS_V1.yaml",
+            "sha": "4ce6df8f197bb9dbba2d1a44df026148876397db",
+            "size": 11494
+          },
+          {
+            "path": "specs/HC_COGNITIVE_ORGAN_INVARIANTS_V1.yaml",
+            "sha": "99329915f2295b0ed76bbad4b26cb178f7ceaf89",
+            "size": 19524
+          },
+          {
+            "path": "specs/HC_CONFORMANCE_SUITE_V1.yaml",
+            "sha": "850e2b34ed6b84c58f6bbccd803b6083e60b11cb",
+            "size": 18559
+          },
+          {
+            "path": "specs/HC_MEMORY_PROVIDER_BOUNDARY_V1.yaml",
+            "sha": "137978a111ee638a50875120409a3da2e1ba0cff",
+            "size": 4329
+          },
+          {
+            "path": "specs/HC_PROTECTED_UPDATE_GOVERNANCE_V1.yaml",
+            "sha": "2385ae9fb72f02c5717ffcc19677241103be4d5d",
+            "size": 8101
+          },
+          {
+            "path": "specs/HC_REPOSITORY_SURFACE_CONFORMANCE_V1.yaml",
+            "sha": "f5797e52148e31196cd7de0250a01003b696e475",
+            "size": 2752
+          },
+          {
+            "path": "speech recognition & synthesis/ARCHITECTURE.md",
+            "sha": "6861d33469a35e0ebbbac012a91dea38019821c0",
+            "size": 8007
+          },
+          {
+            "path": "speech recognition & synthesis/README.md",
+            "sha": "78f45546e937e2fbc8d4cedf46c4d875f31c5cfd",
+            "size": 230
+          },
+          {
+            "path": "volitions-conations/ARCHITECTURE.md",
+            "sha": "10864d84d508793136f790d4c5849c09d43444ae",
+            "size": 2118
+          },
+          {
+            "path": "volitions-conations/CONATIVE_STATE_MACHINE.md",
+            "sha": "d7d31a95cd9cf91655a168481b463edca42e7925",
+            "size": 2741
+          },
+          {
+            "path": "volitions-conations/README.md",
+            "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
+            "size": 240
+          }
+        ]
+      }
+    },
+    "four/runtime-hyperconnectome-v1": {
+      "hc-brain": {
+        "head": "9200b5e7b9f8b95e81c5124e0d949e134234ab8c",
+        "tree_sha": "9200b5e7b9f8b95e81c5124e0d949e134234ab8c",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Noöplex HC-1 and HC-2 Architectures.pdf",
+            "sha": "a1b9f47f028d4253b563d3f01f4589364949ebc4",
+            "size": 49872
+          },
+          {
+            "path": "docs/research/INDEPENDENT_RUNTIME_RESEARCH_2026-09-09.md",
+            "sha": "9aa7679ea29ae5bd0532b6fcf79c384ff6763161",
+            "size": 16693
+          },
+          {
+            "path": "docs/research/README.md",
+            "sha": "a4afef11e2f7126d752c5abd7fe5704f4b0148aa",
+            "size": 1882
+          },
+          {
+            "path": "docs/research/REFERENCES_2026-09-09.md",
+            "sha": "10c3bff0d1d4fe2b4acf55787635af3e2ef4f932",
+            "size": 7357
+          },
+          {
+            "path": "docs/research/RESEARCH_CLAIM_LEDGER.md",
+            "sha": "9078ca72cb75918c402bcc05b48474a4e2ea6843",
+            "size": 9901
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "2be45a1f45f95b79cd2873a103c9dee9f48ba9c4",
+            "size": 8979
+          },
+          {
+            "path": "docs/runtime/IDENTITY_ARBITRATION_AND_CONTINUITY.md",
+            "sha": "b500907ada6476c9006ef3e5f4b2c0d2cc213012",
+            "size": 9585
+          },
+          {
+            "path": "docs/runtime/NODE_TAXONOMY.md",
+            "sha": "c9ea2f0846e430abf819e6c24fbb5d5243bc0396",
+            "size": 8301
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "9ed0151cd5aed64ac50e603a4012f22b2890578d",
+            "size": 6443
+          },
+          {
+            "path": "docs/runtime/README.md",
+            "sha": "51e0d72050523a9f4a7a995cc8c670873c479578",
+            "size": 5303
+          },
+          {
+            "path": "specs/HYPERCONNECTOME_RESEARCH_CONSTRAINTS_V0_1.yaml",
+            "sha": "7af4ca1c181905d6ee9c475aad2f1f044dce57fe",
+            "size": 7698
+          },
+          {
+            "path": "specs/HYPERCONNECTOME_RUNTIME_CONTRACT_V0_1.yaml",
+            "sha": "e3d92d0861ca6cf037b83bc2f1ab9cc287bbd34f",
+            "size": 5661
+          },
+          {
+            "path": "synthetics_physiology_v_2_nooplex_embodiment_annex.md",
+            "sha": "0a717c9c282d787b40c9b20ccf1c1a6bd8f798fc",
+            "size": 11366
+          }
+        ]
+      },
+      "god-brain": {
+        "head": "5cc6395b5b1e49951c16f1c52ab41538fbc8ab67",
+        "tree_sha": "5cc6395b5b1e49951c16f1c52ab41538fbc8ab67",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Noöplex HC-1 and HC-2 Architectures.pdf",
+            "sha": "a1b9f47f028d4253b563d3f01f4589364949ebc4",
+            "size": 49872
+          },
+          {
+            "path": "docs/research/INDEPENDENT_RUNTIME_RESEARCH_2026-09-09.md",
+            "sha": "9aa7679ea29ae5bd0532b6fcf79c384ff6763161",
+            "size": 16693
+          },
+          {
+            "path": "docs/research/README.md",
+            "sha": "a4afef11e2f7126d752c5abd7fe5704f4b0148aa",
+            "size": 1882
+          },
+          {
+            "path": "docs/research/REFERENCES_2026-09-09.md",
+            "sha": "10c3bff0d1d4fe2b4acf55787635af3e2ef4f932",
+            "size": 7357
+          },
+          {
+            "path": "docs/research/RESEARCH_CLAIM_LEDGER.md",
+            "sha": "9078ca72cb75918c402bcc05b48474a4e2ea6843",
+            "size": 9901
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "2be45a1f45f95b79cd2873a103c9dee9f48ba9c4",
+            "size": 8979
+          },
+          {
+            "path": "docs/runtime/IDENTITY_ARBITRATION_AND_CONTINUITY.md",
+            "sha": "b500907ada6476c9006ef3e5f4b2c0d2cc213012",
+            "size": 9585
+          },
+          {
+            "path": "docs/runtime/NODE_TAXONOMY.md",
+            "sha": "c9ea2f0846e430abf819e6c24fbb5d5243bc0396",
+            "size": 8301
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "9ed0151cd5aed64ac50e603a4012f22b2890578d",
+            "size": 6443
+          },
+          {
+            "path": "docs/runtime/README.md",
+            "sha": "51e0d72050523a9f4a7a995cc8c670873c479578",
+            "size": 5303
+          },
+          {
+            "path": "specs/HYPERCONNECTOME_RESEARCH_CONSTRAINTS_V0_1.yaml",
+            "sha": "7af4ca1c181905d6ee9c475aad2f1f044dce57fe",
+            "size": 7698
+          },
+          {
+            "path": "specs/HYPERCONNECTOME_RUNTIME_CONTRACT_V0_1.yaml",
+            "sha": "e3d92d0861ca6cf037b83bc2f1ab9cc287bbd34f",
+            "size": 5661
+          },
+          {
+            "path": "synthetics_physiology_v_2_nooplex_embodiment_annex.md",
+            "sha": "0a717c9c282d787b40c9b20ccf1c1a6bd8f798fc",
+            "size": 11366
+          }
+        ]
+      },
+      "transcendence": {
+        "head": "9f807269a25543f416402a8558bbe1fa9c60a3d7",
+        "tree_sha": "9f807269a25543f416402a8558bbe1fa9c60a3d7",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Noöplex HC-1 and HC-2 Architectures.pdf",
+            "sha": "a1b9f47f028d4253b563d3f01f4589364949ebc4",
+            "size": 49872
+          },
+          {
+            "path": "docs/research/INDEPENDENT_RUNTIME_RESEARCH_2026-09-09.md",
+            "sha": "9aa7679ea29ae5bd0532b6fcf79c384ff6763161",
+            "size": 16693
+          },
+          {
+            "path": "docs/research/README.md",
+            "sha": "a4afef11e2f7126d752c5abd7fe5704f4b0148aa",
+            "size": 1882
+          },
+          {
+            "path": "docs/research/REFERENCES_2026-09-09.md",
+            "sha": "10c3bff0d1d4fe2b4acf55787635af3e2ef4f932",
+            "size": 7357
+          },
+          {
+            "path": "docs/research/RESEARCH_CLAIM_LEDGER.md",
+            "sha": "9078ca72cb75918c402bcc05b48474a4e2ea6843",
+            "size": 9901
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "2be45a1f45f95b79cd2873a103c9dee9f48ba9c4",
+            "size": 8979
+          },
+          {
+            "path": "docs/runtime/IDENTITY_ARBITRATION_AND_CONTINUITY.md",
+            "sha": "b500907ada6476c9006ef3e5f4b2c0d2cc213012",
+            "size": 9585
+          },
+          {
+            "path": "docs/runtime/NODE_TAXONOMY.md",
+            "sha": "c9ea2f0846e430abf819e6c24fbb5d5243bc0396",
+            "size": 8301
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "9ed0151cd5aed64ac50e603a4012f22b2890578d",
+            "size": 6443
+          },
+          {
+            "path": "docs/runtime/README.md",
+            "sha": "51e0d72050523a9f4a7a995cc8c670873c479578",
+            "size": 5303
+          },
+          {
+            "path": "specs/HYPERCONNECTOME_RESEARCH_CONSTRAINTS_V0_1.yaml",
+            "sha": "7af4ca1c181905d6ee9c475aad2f1f044dce57fe",
+            "size": 7698
+          },
+          {
+            "path": "specs/HYPERCONNECTOME_RUNTIME_CONTRACT_V0_1.yaml",
+            "sha": "e3d92d0861ca6cf037b83bc2f1ab9cc287bbd34f",
+            "size": 5661
+          },
+          {
+            "path": "synthetics_physiology_v_2_nooplex_embodiment_annex.md",
+            "sha": "0a717c9c282d787b40c9b20ccf1c1a6bd8f798fc",
+            "size": 11366
+          }
+        ]
+      }
+    },
+    "noah/integration-20260909": {
+      "hc-brain": {
+        "head": "ec15b2beede68329305811bcbaad63d10ff7fe36",
+        "tree_sha": "ec15b2beede68329305811bcbaad63d10ff7fe36",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Empathy/ARCHITECTURE.md",
+            "sha": "448b92d457899c2b6e94904f657e7a9d7d690f68",
+            "size": 2476
+          },
+          {
+            "path": "Empathy/README.md",
+            "sha": "1eed0dfacc4a9bbfc70f07b5f8fdb63bf9177995",
+            "size": 207
+          },
+          {
+            "path": "README.md",
+            "sha": "76f469a100ea6b4b482430b1943454b8e20fd5e0",
+            "size": 6608
+          },
+          {
+            "path": "WARDEN.md",
+            "sha": "2e3f847404424cd8f0fd3662cfb80dadc7da034d",
+            "size": 8812
+          },
+          {
+            "path": "adaptable I-O handler/ARCHITECTURE.md",
+            "sha": "f7289b6b2e09046ae22b8e2ef7e97240e657defd",
+            "size": 1850
+          },
+          {
+            "path": "adaptable I-O handler/BODY_INTERFACE_BOUNDARY.md",
+            "sha": "2cc81faeeaf6f98e02bad9c1a669dd5c759ba872",
+            "size": 2615
+          },
+          {
+            "path": "adaptable I-O handler/README.md",
+            "sha": "3528f32c45e3e57cd1596907750befef9c123867",
+            "size": 254
+          },
+          {
+            "path": "affect/ARCHITECTURE.md",
+            "sha": "fa81fb03b907b9e598b3a3908af3bcacfa3ad55e",
+            "size": 3766
+          },
+          {
+            "path": "affect/README.md",
+            "sha": "20e191c85d19b633dbf1f7a8acbe861043345cab",
+            "size": 217
+          },
+          {
+            "path": "basic operating instructions/ARCHITECTURE.md",
+            "sha": "4251a7b8ac198af14e344c008ed976630a049734",
+            "size": 3222
+          },
+          {
+            "path": "basic operating instructions/CAPABILITY_ACTIVATION_STATES.md",
+            "sha": "6127f835a2c9ff6c2f3f9c44b62e79f23db75fd2",
+            "size": 2657
+          },
+          {
+            "path": "basic operating instructions/README.md",
+            "sha": "34cebeaa393446f2233c22e309bda99abfefdc96",
+            "size": 193
+          },
+          {
+            "path": "chronology/ARCHITECTURE.md",
+            "sha": "5160a7b2fe290d0fab86f433775d045015146aae",
+            "size": 2100
+          },
+          {
+            "path": "chronology/README.md",
+            "sha": "2cb95c1342aaa68d306bc3d8dd94f916a413edd3",
+            "size": 151
+          },
+          {
+            "path": "chronology/TEMPORAL_EVENT_CONTRACT.md",
+            "sha": "f74bff1baa9d09419f6b1758a2606d83a4ac6c83",
+            "size": 2482
+          },
+          {
+            "path": "cognition/ARCHITECTURE.md",
+            "sha": "121bc8f46a59efa0afc2400d4723b3ddafe7cb2d",
+            "size": 2090
+          },
+          {
+            "path": "cognition/EPISTEMIC_COGNITIVE_CONTROL.md",
+            "sha": "9b6261d1db447c577502b518fbb2d091754d9a13",
+            "size": 6003
+          },
+          {
+            "path": "cognition/README.md",
+            "sha": "b9035b40b32a6351c14adc40be9353c2b57a701d",
+            "size": 199
+          },
+          {
+            "path": "current memory storage/CURRENT_STATE_SELECTION.md",
+            "sha": "3cab8681be77639deb759ac28bbe3d7dbd160c41",
+            "size": 2667
+          },
+          {
+            "path": "current memory storage/README.md",
+            "sha": "3a74467759d633d0bb23e41c1eb87c71ca7dc65f",
+            "size": 190
+          },
+          {
+            "path": "current memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "7915dfb442c8b7d9eac0d8c6da820d659fb463fb",
+            "size": 2578
+          },
+          {
+            "path": "deep memory storage/ARCHIVAL_CONSOLIDATION.md",
+            "sha": "587b5f313c61a3c8062d4a7ce99835b269e0f7b1",
+            "size": 2898
+          },
+          {
+            "path": "deep memory storage/README.md",
+            "sha": "22e8b441e8dbf6a07f0a9c08a7c9c9947b37eb19",
+            "size": 197
+          },
+          {
+            "path": "deep memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "2e796356a9c0615b88f661ad7a6d12cab5154738",
+            "size": 4728
+          },
+          {
+            "path": "docs/REPOSITORY_MAP.md",
+            "sha": "b63433df45cd5d73e7a331e24613cacc099bbbbe",
+            "size": 7347
+          },
+          {
+            "path": "docs/architecture/COGNITIVE_ORGAN_BOUNDARY.md",
+            "sha": "88af66a57c4614e51a2872b152e588b645461b05",
+            "size": 7578
+          },
+          {
+            "path": "docs/architecture/TEMPORAL_HYPERGRAPH_MODEL.md",
+            "sha": "0485b01b529d377032c9031c730e61ceb97f7daf",
+            "size": 7305
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "c4e7cd237e887f0504ae3c8e389edb3a73f3b3cb",
+            "size": 5817
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "a3ea01eedc70f5c13d09115b690cf9a60bf85b87",
+            "size": 5496
+          },
+          {
+            "path": "homeostasis-interoception/ARCHITECTURE.md",
+            "sha": "5aa04ec294d0a807b75c6eeff4535d2cba71fd47",
+            "size": 3604
+          },
+          {
+            "path": "homeostasis-interoception/README.md",
+            "sha": "7e0f79bb8c08786149d69a3d1e73e75876a8f396",
+            "size": 254
+          },
+          {
+            "path": "integration-arbitration/ARCHITECTURE.md",
+            "sha": "65fce098ac7d1a19664209feeb334614135d93ee",
+            "size": 2067
+          },
+          {
+            "path": "integration-arbitration/NOOPLEX_FABRIC.md",
+            "sha": "16e88b2146f72f4cbe3e6e367c69f82bde032f48",
+            "size": 3617
+          },
+          {
+            "path": "integration-arbitration/README.md",
+            "sha": "4e86ba0109587eca4008fc40b6698c78afb8f361",
+            "size": 251
+          },
+          {
+            "path": "kinesis/ARCHITECTURE.md",
+            "sha": "85a427895c0064eb8b1632199128da2d0d30be74",
+            "size": 2520
+          },
+          {
+            "path": "kinesis/README.md",
+            "sha": "1a478bf80d051194232e7dc91377dfdc5d16a413",
+            "size": 178
+          },
+          {
+            "path": "optics/README.md",
+            "sha": "34027a157fa7ba970c9f3bfe18ee9b3bcad7f551",
+            "size": 180
+          },
+          {
+            "path": "personification/ARCHITECTURE.md",
+            "sha": "677fa5be1fd9a35c4c2fe242e83879278dc4e6fd",
+            "size": 2752
+          },
+          {
+            "path": "personification/README.md",
+            "sha": "b63240e173cf69f689011a2f756e2539a707488f",
+            "size": 218
+          },
+          {
+            "path": "phoenetics/ARCHITECTURE.md",
+            "sha": "05adcd280ed394c293808367080bf1882611b471",
+            "size": 1916
+          },
+          {
+            "path": "phoenetics/README.md",
+            "sha": "5ed4eed3d3621b7c46a80e004a713edcfe7c79e5",
+            "size": 201
+          },
+          {
+            "path": "pragmatics/ARCHITECTURE.md",
+            "sha": "05fc2ab62c55e11698edbf418baafbee1352ef34",
+            "size": 2575
+          },
+          {
+            "path": "pragmatics/CROSS_REPO_PRAGMATIC_RUNTIME.md",
+            "sha": "8b4825ede87447ec4d0040de624c2aba8393064c",
+            "size": 6227
+          },
+          {
+            "path": "pragmatics/README.md",
+            "sha": "2af2fd5fe3a8587aa6b861129b37923c139ff213",
+            "size": 166
+          },
+          {
+            "path": "psychological behaviors/README.md",
+            "sha": "f158704e2a5ac9b1d74b67a87c1048960bcd6ee6",
+            "size": 198
+          },
+          {
+            "path": "resolver/README.md",
+            "sha": "0802bba4a9680f68e71af0a1bb4eb2c32c80a832",
+            "size": 212
+          },
+          {
+            "path": "routing instructions with neuroplasticity/ARCHITECTURE.md",
+            "sha": "997d9b4bae2faf5fb39bc11217d7c9e72cc51291",
+            "size": 2536
+          },
+          {
+            "path": "routing instructions with neuroplasticity/README.md",
+            "sha": "ad1135b8c0993e989238794c4d842b42ada5e03d",
+            "size": 233
+          },
+          {
+            "path": "salience-attention/ARCHITECTURE.md",
+            "sha": "af2b38985af6962d9082f3d8622a717f9e29a83c",
+            "size": 2115
+          },
+          {
+            "path": "salience-attention/README.md",
+            "sha": "9b03ccab075cf8248a9ae8f9eb6b93dd2dfe48df",
+            "size": 205
+          },
+          {
+            "path": "self identity/ARCHITECTURE.md",
+            "sha": "b68e33f01935e283f6f51ece386b36f7517621c5",
+            "size": 3502
+          },
+          {
+            "path": "self identity/CONTINUITY_SUBSTRATE.md",
+            "sha": "55a54bb6f0b1188a16c9ca85fda897796596eabc",
+            "size": 3645
+          },
+          {
+            "path": "self identity/README.md",
+            "sha": "74739d96b9d077afdb428c3820ac87b6d0675fb1",
+            "size": 210
+          },
+          {
+            "path": "semantics/ARCHITECTURE.md",
+            "sha": "a3bcb80df0031774f40f8cc592c06f56615e2098",
+            "size": 2201
+          },
+          {
+            "path": "semantics/CROSS_REPO_SEMANTIC_RUNTIME.md",
+            "sha": "641b17416ff5073ef4e573807296584d1828b02d",
+            "size": 7326
+          },
+          {
+            "path": "semantics/README.md",
+            "sha": "c1dff4d3825d9e727dac01b8f0e7f85f8b76e376",
+            "size": 157
+          },
+          {
+            "path": "sexuality/ARCHITECTURE.md",
+            "sha": "6b6ea014e89fcd4bf6ae0be059c17a868cd18077",
+            "size": 3208
+          },
+          {
+            "path": "sexuality/README.md",
+            "sha": "9b668cf8f63d9c321625b0328e39574ea3aa4198",
+            "size": 197
+          },
+          {
+            "path": "sociological behaviors/README.md",
+            "sha": "128291b780d42029be39b8add29d3b93e38f39db",
+            "size": 173
+          },
+          {
+            "path": "somatics/ARCHITECTURE.md",
+            "sha": "3990b741b93ceba479cfbb54d30fe8ca9cf01bec",
+            "size": 3297
+          },
+          {
+            "path": "somatics/README.md",
+            "sha": "02dd3e7abba30814003734d86dc368da8f41dcda",
+            "size": 170
+          },
+          {
+            "path": "specs/HC_COGNITIVE_ORGAN_INVARIANTS_V1.yaml",
+            "sha": "106dc7d75b6ccd3a2bd3f248fcaee8d07c3e5ebd",
+            "size": 2589
+          },
+          {
+            "path": "speech recognition & synthesis/README.md",
+            "sha": "78f45546e937e2fbc8d4cedf46c4d875f31c5cfd",
+            "size": 230
+          },
+          {
+            "path": "volitions-conations/ARCHITECTURE.md",
+            "sha": "10864d84d508793136f790d4c5849c09d43444ae",
+            "size": 2118
+          },
+          {
+            "path": "volitions-conations/README.md",
+            "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
+            "size": 240
+          }
+        ]
+      },
+      "god-brain": {
+        "head": "b8f9467bd103f331bcb43d49303a026921ebd712",
+        "tree_sha": "b8f9467bd103f331bcb43d49303a026921ebd712",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Empathy/ARCHITECTURE.md",
+            "sha": "448b92d457899c2b6e94904f657e7a9d7d690f68",
+            "size": 2476
+          },
+          {
+            "path": "Empathy/README.md",
+            "sha": "1eed0dfacc4a9bbfc70f07b5f8fdb63bf9177995",
+            "size": 207
+          },
+          {
+            "path": "README.md",
+            "sha": "76f469a100ea6b4b482430b1943454b8e20fd5e0",
+            "size": 6608
+          },
+          {
+            "path": "WARDEN.md",
+            "sha": "2e3f847404424cd8f0fd3662cfb80dadc7da034d",
+            "size": 8812
+          },
+          {
+            "path": "adaptable I-O handler/ARCHITECTURE.md",
+            "sha": "f7289b6b2e09046ae22b8e2ef7e97240e657defd",
+            "size": 1850
+          },
+          {
+            "path": "adaptable I-O handler/BODY_INTERFACE_BOUNDARY.md",
+            "sha": "2cc81faeeaf6f98e02bad9c1a669dd5c759ba872",
+            "size": 2615
+          },
+          {
+            "path": "adaptable I-O handler/README.md",
+            "sha": "3528f32c45e3e57cd1596907750befef9c123867",
+            "size": 254
+          },
+          {
+            "path": "affect/ARCHITECTURE.md",
+            "sha": "fa81fb03b907b9e598b3a3908af3bcacfa3ad55e",
+            "size": 3766
+          },
+          {
+            "path": "affect/README.md",
+            "sha": "20e191c85d19b633dbf1f7a8acbe861043345cab",
+            "size": 217
+          },
+          {
+            "path": "basic operating instructions/ARCHITECTURE.md",
+            "sha": "4251a7b8ac198af14e344c008ed976630a049734",
+            "size": 3222
+          },
+          {
+            "path": "basic operating instructions/CAPABILITY_ACTIVATION_STATES.md",
+            "sha": "6127f835a2c9ff6c2f3f9c44b62e79f23db75fd2",
+            "size": 2657
+          },
+          {
+            "path": "basic operating instructions/README.md",
+            "sha": "34cebeaa393446f2233c22e309bda99abfefdc96",
+            "size": 193
+          },
+          {
+            "path": "chronology/ARCHITECTURE.md",
+            "sha": "5160a7b2fe290d0fab86f433775d045015146aae",
+            "size": 2100
+          },
+          {
+            "path": "chronology/README.md",
+            "sha": "2cb95c1342aaa68d306bc3d8dd94f916a413edd3",
+            "size": 151
+          },
+          {
+            "path": "chronology/TEMPORAL_EVENT_CONTRACT.md",
+            "sha": "f74bff1baa9d09419f6b1758a2606d83a4ac6c83",
+            "size": 2482
+          },
+          {
+            "path": "cognition/ARCHITECTURE.md",
+            "sha": "121bc8f46a59efa0afc2400d4723b3ddafe7cb2d",
+            "size": 2090
+          },
+          {
+            "path": "cognition/EPISTEMIC_COGNITIVE_CONTROL.md",
+            "sha": "9b6261d1db447c577502b518fbb2d091754d9a13",
+            "size": 6003
+          },
+          {
+            "path": "cognition/README.md",
+            "sha": "b9035b40b32a6351c14adc40be9353c2b57a701d",
+            "size": 199
+          },
+          {
+            "path": "current memory storage/CURRENT_STATE_SELECTION.md",
+            "sha": "3cab8681be77639deb759ac28bbe3d7dbd160c41",
+            "size": 2667
+          },
+          {
+            "path": "current memory storage/README.md",
+            "sha": "3a74467759d633d0bb23e41c1eb87c71ca7dc65f",
+            "size": 190
+          },
+          {
+            "path": "current memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "7915dfb442c8b7d9eac0d8c6da820d659fb463fb",
+            "size": 2578
+          },
+          {
+            "path": "deep memory storage/ARCHIVAL_CONSOLIDATION.md",
+            "sha": "587b5f313c61a3c8062d4a7ce99835b269e0f7b1",
+            "size": 2898
+          },
+          {
+            "path": "deep memory storage/README.md",
+            "sha": "22e8b441e8dbf6a07f0a9c08a7c9c9947b37eb19",
+            "size": 197
+          },
+          {
+            "path": "deep memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "2e796356a9c0615b88f661ad7a6d12cab5154738",
+            "size": 4728
+          },
+          {
+            "path": "docs/REPOSITORY_MAP.md",
+            "sha": "b63433df45cd5d73e7a331e24613cacc099bbbbe",
+            "size": 7347
+          },
+          {
+            "path": "docs/architecture/COGNITIVE_ORGAN_BOUNDARY.md",
+            "sha": "88af66a57c4614e51a2872b152e588b645461b05",
+            "size": 7578
+          },
+          {
+            "path": "docs/architecture/TEMPORAL_HYPERGRAPH_MODEL.md",
+            "sha": "0485b01b529d377032c9031c730e61ceb97f7daf",
+            "size": 7305
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "c4e7cd237e887f0504ae3c8e389edb3a73f3b3cb",
+            "size": 5817
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "a3ea01eedc70f5c13d09115b690cf9a60bf85b87",
+            "size": 5496
+          },
+          {
+            "path": "homeostasis-interoception/ARCHITECTURE.md",
+            "sha": "5aa04ec294d0a807b75c6eeff4535d2cba71fd47",
+            "size": 3604
+          },
+          {
+            "path": "homeostasis-interoception/README.md",
+            "sha": "7e0f79bb8c08786149d69a3d1e73e75876a8f396",
+            "size": 254
+          },
+          {
+            "path": "integration-arbitration/ARCHITECTURE.md",
+            "sha": "65fce098ac7d1a19664209feeb334614135d93ee",
+            "size": 2067
+          },
+          {
+            "path": "integration-arbitration/NOOPLEX_FABRIC.md",
+            "sha": "16e88b2146f72f4cbe3e6e367c69f82bde032f48",
+            "size": 3617
+          },
+          {
+            "path": "integration-arbitration/README.md",
+            "sha": "4e86ba0109587eca4008fc40b6698c78afb8f361",
+            "size": 251
+          },
+          {
+            "path": "kinesis/ARCHITECTURE.md",
+            "sha": "85a427895c0064eb8b1632199128da2d0d30be74",
+            "size": 2520
+          },
+          {
+            "path": "kinesis/README.md",
+            "sha": "1a478bf80d051194232e7dc91377dfdc5d16a413",
+            "size": 178
+          },
+          {
+            "path": "optics/README.md",
+            "sha": "34027a157fa7ba970c9f3bfe18ee9b3bcad7f551",
+            "size": 180
+          },
+          {
+            "path": "personification/ARCHITECTURE.md",
+            "sha": "677fa5be1fd9a35c4c2fe242e83879278dc4e6fd",
+            "size": 2752
+          },
+          {
+            "path": "personification/README.md",
+            "sha": "b63240e173cf69f689011a2f756e2539a707488f",
+            "size": 218
+          },
+          {
+            "path": "phoenetics/ARCHITECTURE.md",
+            "sha": "05adcd280ed394c293808367080bf1882611b471",
+            "size": 1916
+          },
+          {
+            "path": "phoenetics/README.md",
+            "sha": "5ed4eed3d3621b7c46a80e004a713edcfe7c79e5",
+            "size": 201
+          },
+          {
+            "path": "pragmatics/ARCHITECTURE.md",
+            "sha": "05fc2ab62c55e11698edbf418baafbee1352ef34",
+            "size": 2575
+          },
+          {
+            "path": "pragmatics/CROSS_REPO_PRAGMATIC_RUNTIME.md",
+            "sha": "8b4825ede87447ec4d0040de624c2aba8393064c",
+            "size": 6227
+          },
+          {
+            "path": "pragmatics/README.md",
+            "sha": "2af2fd5fe3a8587aa6b861129b37923c139ff213",
+            "size": 166
+          },
+          {
+            "path": "psychological behaviors/README.md",
+            "sha": "f158704e2a5ac9b1d74b67a87c1048960bcd6ee6",
+            "size": 198
+          },
+          {
+            "path": "resolver/README.md",
+            "sha": "0802bba4a9680f68e71af0a1bb4eb2c32c80a832",
+            "size": 212
+          },
+          {
+            "path": "routing instructions with neuroplasticity/ARCHITECTURE.md",
+            "sha": "997d9b4bae2faf5fb39bc11217d7c9e72cc51291",
+            "size": 2536
+          },
+          {
+            "path": "routing instructions with neuroplasticity/README.md",
+            "sha": "ad1135b8c0993e989238794c4d842b42ada5e03d",
+            "size": 233
+          },
+          {
+            "path": "salience-attention/ARCHITECTURE.md",
+            "sha": "af2b38985af6962d9082f3d8622a717f9e29a83c",
+            "size": 2115
+          },
+          {
+            "path": "salience-attention/README.md",
+            "sha": "9b03ccab075cf8248a9ae8f9eb6b93dd2dfe48df",
+            "size": 205
+          },
+          {
+            "path": "self identity/ARCHITECTURE.md",
+            "sha": "b68e33f01935e283f6f51ece386b36f7517621c5",
+            "size": 3502
+          },
+          {
+            "path": "self identity/CONTINUITY_SUBSTRATE.md",
+            "sha": "55a54bb6f0b1188a16c9ca85fda897796596eabc",
+            "size": 3645
+          },
+          {
+            "path": "self identity/README.md",
+            "sha": "74739d96b9d077afdb428c3820ac87b6d0675fb1",
+            "size": 210
+          },
+          {
+            "path": "semantics/ARCHITECTURE.md",
+            "sha": "a3bcb80df0031774f40f8cc592c06f56615e2098",
+            "size": 2201
+          },
+          {
+            "path": "semantics/CROSS_REPO_SEMANTIC_RUNTIME.md",
+            "sha": "641b17416ff5073ef4e573807296584d1828b02d",
+            "size": 7326
+          },
+          {
+            "path": "semantics/README.md",
+            "sha": "c1dff4d3825d9e727dac01b8f0e7f85f8b76e376",
+            "size": 157
+          },
+          {
+            "path": "sexuality/ARCHITECTURE.md",
+            "sha": "6b6ea014e89fcd4bf6ae0be059c17a868cd18077",
+            "size": 3208
+          },
+          {
+            "path": "sexuality/README.md",
+            "sha": "9b668cf8f63d9c321625b0328e39574ea3aa4198",
+            "size": 197
+          },
+          {
+            "path": "sociological behaviors/README.md",
+            "sha": "128291b780d42029be39b8add29d3b93e38f39db",
+            "size": 173
+          },
+          {
+            "path": "somatics/ARCHITECTURE.md",
+            "sha": "3990b741b93ceba479cfbb54d30fe8ca9cf01bec",
+            "size": 3297
+          },
+          {
+            "path": "somatics/README.md",
+            "sha": "02dd3e7abba30814003734d86dc368da8f41dcda",
+            "size": 170
+          },
+          {
+            "path": "specs/HC_COGNITIVE_ORGAN_INVARIANTS_V1.yaml",
+            "sha": "106dc7d75b6ccd3a2bd3f248fcaee8d07c3e5ebd",
+            "size": 2589
+          },
+          {
+            "path": "speech recognition & synthesis/README.md",
+            "sha": "78f45546e937e2fbc8d4cedf46c4d875f31c5cfd",
+            "size": 230
+          },
+          {
+            "path": "volitions-conations/ARCHITECTURE.md",
+            "sha": "10864d84d508793136f790d4c5849c09d43444ae",
+            "size": 2118
+          },
+          {
+            "path": "volitions-conations/README.md",
+            "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
+            "size": 240
+          }
+        ]
+      },
+      "transcendence": {
+        "head": "9420fcc3f5c5359b10e12484017e9b8eb7426c57",
+        "tree_sha": "9420fcc3f5c5359b10e12484017e9b8eb7426c57",
+        "blobs": [
+          {
+            "path": "Architecture concept.md",
+            "sha": "fe4825197754b98a4dc80d834ea2a4ccc98ca8ca",
+            "size": 1027
+          },
+          {
+            "path": "Empathy/ARCHITECTURE.md",
+            "sha": "448b92d457899c2b6e94904f657e7a9d7d690f68",
+            "size": 2476
+          },
+          {
+            "path": "Empathy/README.md",
+            "sha": "1eed0dfacc4a9bbfc70f07b5f8fdb63bf9177995",
+            "size": 207
+          },
+          {
+            "path": "README.md",
+            "sha": "76f469a100ea6b4b482430b1943454b8e20fd5e0",
+            "size": 6608
+          },
+          {
+            "path": "WARDEN.md",
+            "sha": "2e3f847404424cd8f0fd3662cfb80dadc7da034d",
+            "size": 8812
+          },
+          {
+            "path": "adaptable I-O handler/ARCHITECTURE.md",
+            "sha": "f7289b6b2e09046ae22b8e2ef7e97240e657defd",
+            "size": 1850
+          },
+          {
+            "path": "adaptable I-O handler/BODY_INTERFACE_BOUNDARY.md",
+            "sha": "2cc81faeeaf6f98e02bad9c1a669dd5c759ba872",
+            "size": 2615
+          },
+          {
+            "path": "adaptable I-O handler/README.md",
+            "sha": "3528f32c45e3e57cd1596907750befef9c123867",
+            "size": 254
+          },
+          {
+            "path": "affect/ARCHITECTURE.md",
+            "sha": "fa81fb03b907b9e598b3a3908af3bcacfa3ad55e",
+            "size": 3766
+          },
+          {
+            "path": "affect/README.md",
+            "sha": "20e191c85d19b633dbf1f7a8acbe861043345cab",
+            "size": 217
+          },
+          {
+            "path": "basic operating instructions/ARCHITECTURE.md",
+            "sha": "4251a7b8ac198af14e344c008ed976630a049734",
+            "size": 3222
+          },
+          {
+            "path": "basic operating instructions/CAPABILITY_ACTIVATION_STATES.md",
+            "sha": "6127f835a2c9ff6c2f3f9c44b62e79f23db75fd2",
+            "size": 2657
+          },
+          {
+            "path": "basic operating instructions/README.md",
+            "sha": "34cebeaa393446f2233c22e309bda99abfefdc96",
+            "size": 193
+          },
+          {
+            "path": "chronology/ARCHITECTURE.md",
+            "sha": "5160a7b2fe290d0fab86f433775d045015146aae",
+            "size": 2100
+          },
+          {
+            "path": "chronology/README.md",
+            "sha": "2cb95c1342aaa68d306bc3d8dd94f916a413edd3",
+            "size": 151
+          },
+          {
+            "path": "chronology/TEMPORAL_EVENT_CONTRACT.md",
+            "sha": "f74bff1baa9d09419f6b1758a2606d83a4ac6c83",
+            "size": 2482
+          },
+          {
+            "path": "cognition/ARCHITECTURE.md",
+            "sha": "121bc8f46a59efa0afc2400d4723b3ddafe7cb2d",
+            "size": 2090
+          },
+          {
+            "path": "cognition/EPISTEMIC_COGNITIVE_CONTROL.md",
+            "sha": "9b6261d1db447c577502b518fbb2d091754d9a13",
+            "size": 6003
+          },
+          {
+            "path": "cognition/README.md",
+            "sha": "b9035b40b32a6351c14adc40be9353c2b57a701d",
+            "size": 199
+          },
+          {
+            "path": "current memory storage/CURRENT_STATE_SELECTION.md",
+            "sha": "3cab8681be77639deb759ac28bbe3d7dbd160c41",
+            "size": 2667
+          },
+          {
+            "path": "current memory storage/README.md",
+            "sha": "3a74467759d633d0bb23e41c1eb87c71ca7dc65f",
+            "size": 190
+          },
+          {
+            "path": "current memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "7915dfb442c8b7d9eac0d8c6da820d659fb463fb",
+            "size": 2578
+          },
+          {
+            "path": "deep memory storage/ARCHIVAL_CONSOLIDATION.md",
+            "sha": "587b5f313c61a3c8062d4a7ce99835b269e0f7b1",
+            "size": 2898
+          },
+          {
+            "path": "deep memory storage/README.md",
+            "sha": "22e8b441e8dbf6a07f0a9c08a7c9c9947b37eb19",
+            "size": 197
+          },
+          {
+            "path": "deep memory storage/SUPABASE_DERIVED_ARCHITECTURE.md",
+            "sha": "2e796356a9c0615b88f661ad7a6d12cab5154738",
+            "size": 4728
+          },
+          {
+            "path": "docs/REPOSITORY_MAP.md",
+            "sha": "b63433df45cd5d73e7a331e24613cacc099bbbbe",
+            "size": 7347
+          },
+          {
+            "path": "docs/architecture/COGNITIVE_ORGAN_BOUNDARY.md",
+            "sha": "88af66a57c4614e51a2872b152e588b645461b05",
+            "size": 7578
+          },
+          {
+            "path": "docs/architecture/TEMPORAL_HYPERGRAPH_MODEL.md",
+            "sha": "0485b01b529d377032c9031c730e61ceb97f7daf",
+            "size": 7305
+          },
+          {
+            "path": "docs/runtime/HYPERCONNECTOME_RUNTIME_MODEL.md",
+            "sha": "c4e7cd237e887f0504ae3c8e389edb3a73f3b3cb",
+            "size": 5817
+          },
+          {
+            "path": "docs/runtime/PLASTICITY_AND_STATE_GOVERNANCE.md",
+            "sha": "a3ea01eedc70f5c13d09115b690cf9a60bf85b87",
+            "size": 5496
+          },
+          {
+            "path": "homeostasis-interoception/ARCHITECTURE.md",
+            "sha": "5aa04ec294d0a807b75c6eeff4535d2cba71fd47",
+            "size": 3604
+          },
+          {
+            "path": "homeostasis-interoception/README.md",
+            "sha": "7e0f79bb8c08786149d69a3d1e73e75876a8f396",
+            "size": 254
+          },
+          {
+            "path": "integration-arbitration/ARCHITECTURE.md",
+            "sha": "65fce098ac7d1a19664209feeb334614135d93ee",
+            "size": 2067
+          },
+          {
+            "path": "integration-arbitration/NOOPLEX_FABRIC.md",
+            "sha": "16e88b2146f72f4cbe3e6e367c69f82bde032f48",
+            "size": 3617
+          },
+          {
+            "path": "integration-arbitration/README.md",
+            "sha": "4e86ba0109587eca4008fc40b6698c78afb8f361",
+            "size": 251
+          },
+          {
+            "path": "kinesis/ARCHITECTURE.md",
+            "sha": "85a427895c0064eb8b1632199128da2d0d30be74",
+            "size": 2520
+          },
+          {
+            "path": "kinesis/README.md",
+            "sha": "1a478bf80d051194232e7dc91377dfdc5d16a413",
+            "size": 178
+          },
+          {
+            "path": "optics/README.md",
+            "sha": "34027a157fa7ba970c9f3bfe18ee9b3bcad7f551",
+            "size": 180
+          },
+          {
+            "path": "personification/ARCHITECTURE.md",
+            "sha": "677fa5be1fd9a35c4c2fe242e83879278dc4e6fd",
+            "size": 2752
+          },
+          {
+            "path": "personification/README.md",
+            "sha": "b63240e173cf69f689011a2f756e2539a707488f",
+            "size": 218
+          },
+          {
+            "path": "phoenetics/ARCHITECTURE.md",
+            "sha": "05adcd280ed394c293808367080bf1882611b471",
+            "size": 1916
+          },
+          {
+            "path": "phoenetics/README.md",
+            "sha": "5ed4eed3d3621b7c46a80e004a713edcfe7c79e5",
+            "size": 201
+          },
+          {
+            "path": "pragmatics/ARCHITECTURE.md",
+            "sha": "05fc2ab62c55e11698edbf418baafbee1352ef34",
+            "size": 2575
+          },
+          {
+            "path": "pragmatics/CROSS_REPO_PRAGMATIC_RUNTIME.md",
+            "sha": "8b4825ede87447ec4d0040de624c2aba8393064c",
+            "size": 6227
+          },
+          {
+            "path": "pragmatics/README.md",
+            "sha": "2af2fd5fe3a8587aa6b861129b37923c139ff213",
+            "size": 166
+          },
+          {
+            "path": "psychological behaviors/README.md",
+            "sha": "f158704e2a5ac9b1d74b67a87c1048960bcd6ee6",
+            "size": 198
+          },
+          {
+            "path": "resolver/README.md",
+            "sha": "0802bba4a9680f68e71af0a1bb4eb2c32c80a832",
+            "size": 212
+          },
+          {
+            "path": "routing instructions with neuroplasticity/ARCHITECTURE.md",
+            "sha": "997d9b4bae2faf5fb39bc11217d7c9e72cc51291",
+            "size": 2536
+          },
+          {
+            "path": "routing instructions with neuroplasticity/README.md",
+            "sha": "ad1135b8c0993e989238794c4d842b42ada5e03d",
+            "size": 233
+          },
+          {
+            "path": "salience-attention/ARCHITECTURE.md",
+            "sha": "af2b38985af6962d9082f3d8622a717f9e29a83c",
+            "size": 2115
+          },
+          {
+            "path": "salience-attention/README.md",
+            "sha": "9b03ccab075cf8248a9ae8f9eb6b93dd2dfe48df",
+            "size": 205
+          },
+          {
+            "path": "self identity/ARCHITECTURE.md",
+            "sha": "b68e33f01935e283f6f51ece386b36f7517621c5",
+            "size": 3502
+          },
+          {
+            "path": "self identity/CONTINUITY_SUBSTRATE.md",
+            "sha": "55a54bb6f0b1188a16c9ca85fda897796596eabc",
+            "size": 3645
+          },
+          {
+            "path": "self identity/README.md",
+            "sha": "74739d96b9d077afdb428c3820ac87b6d0675fb1",
+            "size": 210
+          },
+          {
+            "path": "semantics/ARCHITECTURE.md",
+            "sha": "a3bcb80df0031774f40f8cc592c06f56615e2098",
+            "size": 2201
+          },
+          {
+            "path": "semantics/CROSS_REPO_SEMANTIC_RUNTIME.md",
+            "sha": "641b17416ff5073ef4e573807296584d1828b02d",
+            "size": 7326
+          },
+          {
+            "path": "semantics/README.md",
+            "sha": "c1dff4d3825d9e727dac01b8f0e7f85f8b76e376",
+            "size": 157
+          },
+          {
+            "path": "sexuality/ARCHITECTURE.md",
+            "sha": "6b6ea014e89fcd4bf6ae0be059c17a868cd18077",
+            "size": 3208
+          },
+          {
+            "path": "sexuality/README.md",
+            "sha": "9b668cf8f63d9c321625b0328e39574ea3aa4198",
+            "size": 197
+          },
+          {
+            "path": "sociological behaviors/README.md",
+            "sha": "128291b780d42029be39b8add29d3b93e38f39db",
+            "size": 173
+          },
+          {
+            "path": "somatics/ARCHITECTURE.md",
+            "sha": "3990b741b93ceba479cfbb54d30fe8ca9cf01bec",
+            "size": 3297
+          },
+          {
+            "path": "somatics/README.md",
+            "sha": "02dd3e7abba30814003734d86dc368da8f41dcda",
+            "size": 170
+          },
+          {
+            "path": "specs/HC_COGNITIVE_ORGAN_INVARIANTS_V1.yaml",
+            "sha": "106dc7d75b6ccd3a2bd3f248fcaee8d07c3e5ebd",
+            "size": 2589
+          },
+          {
+            "path": "speech recognition & synthesis/README.md",
+            "sha": "78f45546e937e2fbc8d4cedf46c4d875f31c5cfd",
+            "size": 230
+          },
+          {
+            "path": "volitions-conations/ARCHITECTURE.md",
+            "sha": "10864d84d508793136f790d4c5849c09d43444ae",
+            "size": 2118
+          },
+          {
+            "path": "volitions-conations/README.md",
+            "sha": "8cfbbbfba2864805026aec5f20925565c7b61b9a",
+            "size": 240
+          }
+        ]
+      }
+    }
+  }
+}

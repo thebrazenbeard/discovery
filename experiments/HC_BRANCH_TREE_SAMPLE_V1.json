@@ -1,0 +1,406 @@
+{
+  "schema": "DISCOVERY_HC_BRANCH_TREE_SAMPLE_V1",
+  "observed_date": "2026-09-21",
+  "source_shards": [
+    {
+      "path": "experiments/hc_branch_tree_sample_v1/SHARD_A.json",
+      "blob": "440ddc3d67e1140408d5df5e838ba03519633750"
+    },
+    {
+      "path": "experiments/hc_branch_tree_sample_v1/SHARD_B.json",
+      "blob": "2d9461128fefe6992895cb9343f1e325df02de6a"
+    }
+  ],
+  "selection": {
+    "method": "Stratified investigator-selected sample from branch names common to hc-brain, god-brain, and transcendence after live branch-topology scan.",
+    "branches": [
+      "architecture-concept",
+      "four/cognitive-integrity-v1",
+      "four/runtime-hyperconnectome-v1",
+      "noah/integration-20260909",
+      "noah/reference-kernel-authority-hardening-v1",
+      "research/hyperconnectome-evidence-v1",
+      "review/pr4-reconciliation-v2",
+      "vera/hc-architecture-hardening-v2"
+    ],
+    "strata": [
+      "architecture",
+      "Four cognitive/runtime",
+      "Noah integration/authority",
+      "research",
+      "review",
+      "Vera architecture"
+    ],
+    "bias_ceiling": "Not random and selected after observing common branch names; suitable for falsifying unrelated-content explanations, not for estimating prevalence across all common branches."
+  },
+  "results": {
+    "architecture-concept": {
+      "hc_vs_god": {
+        "left_head": "61b0c6fe24dc81c59a30fc28e97785859bc4e261",
+        "right_head": "ec8360902e8fcc7df1ebd0fc0053a3e743f13d0a",
+        "left_blob_count": 2,
+        "right_blob_count": 2,
+        "common_paths": 2,
+        "identical_same_path_blobs": 2,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 1077,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "61b0c6fe24dc81c59a30fc28e97785859bc4e261",
+        "right_head": "68b0500fc8276ebbdeaf844d8353b2432cd24ba0",
+        "left_blob_count": 2,
+        "right_blob_count": 2,
+        "common_paths": 2,
+        "identical_same_path_blobs": 2,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 1077,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "ec8360902e8fcc7df1ebd0fc0053a3e743f13d0a",
+        "right_head": "68b0500fc8276ebbdeaf844d8353b2432cd24ba0",
+        "left_blob_count": 2,
+        "right_blob_count": 2,
+        "common_paths": 2,
+        "identical_same_path_blobs": 2,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 1077,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    },
+    "four/cognitive-integrity-v1": {
+      "hc_vs_god": {
+        "left_head": "1165c4fbac55e7152ab951d4c9968f90ba25234a",
+        "right_head": "30584d3be58869d2b6e56348c6e008b803594efd",
+        "left_blob_count": 134,
+        "right_blob_count": 134,
+        "common_paths": 134,
+        "identical_same_path_blobs": 134,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 667486,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "1165c4fbac55e7152ab951d4c9968f90ba25234a",
+        "right_head": "b78f3a864ecc5d9d625fa6063cb7b2b03f9f93a6",
+        "left_blob_count": 134,
+        "right_blob_count": 134,
+        "common_paths": 134,
+        "identical_same_path_blobs": 134,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 667486,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "30584d3be58869d2b6e56348c6e008b803594efd",
+        "right_head": "b78f3a864ecc5d9d625fa6063cb7b2b03f9f93a6",
+        "left_blob_count": 134,
+        "right_blob_count": 134,
+        "common_paths": 134,
+        "identical_same_path_blobs": 134,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 667486,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    },
+    "four/runtime-hyperconnectome-v1": {
+      "hc_vs_god": {
+        "left_head": "9200b5e7b9f8b95e81c5124e0d949e134234ab8c",
+        "right_head": "5cc6395b5b1e49951c16f1c52ab41538fbc8ab67",
+        "left_blob_count": 14,
+        "right_blob_count": 14,
+        "common_paths": 14,
+        "identical_same_path_blobs": 14,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 150068,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "9200b5e7b9f8b95e81c5124e0d949e134234ab8c",
+        "right_head": "9f807269a25543f416402a8558bbe1fa9c60a3d7",
+        "left_blob_count": 14,
+        "right_blob_count": 14,
+        "common_paths": 14,
+        "identical_same_path_blobs": 14,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 150068,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "5cc6395b5b1e49951c16f1c52ab41538fbc8ab67",
+        "right_head": "9f807269a25543f416402a8558bbe1fa9c60a3d7",
+        "left_blob_count": 14,
+        "right_blob_count": 14,
+        "common_paths": 14,
+        "identical_same_path_blobs": 14,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 150068,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    },
+    "noah/integration-20260909": {
+      "hc_vs_god": {
+        "left_head": "ec15b2beede68329305811bcbaad63d10ff7fe36",
+        "right_head": "b8f9467bd103f331bcb43d49303a026921ebd712",
+        "left_blob_count": 66,
+        "right_blob_count": 66,
+        "common_paths": 66,
+        "identical_same_path_blobs": 66,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 155218,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "ec15b2beede68329305811bcbaad63d10ff7fe36",
+        "right_head": "9420fcc3f5c5359b10e12484017e9b8eb7426c57",
+        "left_blob_count": 66,
+        "right_blob_count": 66,
+        "common_paths": 66,
+        "identical_same_path_blobs": 66,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 155218,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "b8f9467bd103f331bcb43d49303a026921ebd712",
+        "right_head": "9420fcc3f5c5359b10e12484017e9b8eb7426c57",
+        "left_blob_count": 66,
+        "right_blob_count": 66,
+        "common_paths": 66,
+        "identical_same_path_blobs": 66,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 155218,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    },
+    "noah/reference-kernel-authority-hardening-v1": {
+      "hc_vs_god": {
+        "left_head": "3d9df59b2ad8b10f2d46b4dfe67a309e2b02f207",
+        "right_head": "6b7eb18278f277700df40d6d544223c81e9ea4d6",
+        "left_blob_count": 270,
+        "right_blob_count": 270,
+        "common_paths": 270,
+        "identical_same_path_blobs": 270,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 1900398,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "3d9df59b2ad8b10f2d46b4dfe67a309e2b02f207",
+        "right_head": "823be2d341621d3be9835d7ca10f7ac151327727",
+        "left_blob_count": 270,
+        "right_blob_count": 270,
+        "common_paths": 270,
+        "identical_same_path_blobs": 270,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 1900398,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "6b7eb18278f277700df40d6d544223c81e9ea4d6",
+        "right_head": "823be2d341621d3be9835d7ca10f7ac151327727",
+        "left_blob_count": 270,
+        "right_blob_count": 270,
+        "common_paths": 270,
+        "identical_same_path_blobs": 270,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 1900398,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    },
+    "research/hyperconnectome-evidence-v1": {
+      "hc_vs_god": {
+        "left_head": "7cf41836dd3daf6e690ba1a8c39526b106b6a381",
+        "right_head": "1a999ae18aede0eabe28c0888c4503c019de34f4",
+        "left_blob_count": 30,
+        "right_blob_count": 30,
+        "common_paths": 30,
+        "identical_same_path_blobs": 30,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 235749,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "7cf41836dd3daf6e690ba1a8c39526b106b6a381",
+        "right_head": "121bab5ae8408b2369e79d9f6d50c03e7dc44ecc",
+        "left_blob_count": 30,
+        "right_blob_count": 30,
+        "common_paths": 30,
+        "identical_same_path_blobs": 30,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 235749,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "1a999ae18aede0eabe28c0888c4503c019de34f4",
+        "right_head": "121bab5ae8408b2369e79d9f6d50c03e7dc44ecc",
+        "left_blob_count": 30,
+        "right_blob_count": 30,
+        "common_paths": 30,
+        "identical_same_path_blobs": 30,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 235749,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    },
+    "review/pr4-reconciliation-v2": {
+      "hc_vs_god": {
+        "left_head": "550f86962069b88d6024d8a72e719a1272eaadaf",
+        "right_head": "449353d45baecc77cb6e6559cbe2627fadb330f7",
+        "left_blob_count": 95,
+        "right_blob_count": 95,
+        "common_paths": 95,
+        "identical_same_path_blobs": 95,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 261311,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "550f86962069b88d6024d8a72e719a1272eaadaf",
+        "right_head": "396ce64087389507482910b79f661f54b67bb371",
+        "left_blob_count": 95,
+        "right_blob_count": 95,
+        "common_paths": 95,
+        "identical_same_path_blobs": 95,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 261311,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "449353d45baecc77cb6e6559cbe2627fadb330f7",
+        "right_head": "396ce64087389507482910b79f661f54b67bb371",
+        "left_blob_count": 95,
+        "right_blob_count": 95,
+        "common_paths": 95,
+        "identical_same_path_blobs": 95,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 261311,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    },
+    "vera/hc-architecture-hardening-v2": {
+      "hc_vs_god": {
+        "left_head": "fc8da8882078ef449bc02d61f03df8a892da2f0a",
+        "right_head": "92db76cd639baeb9e9a84a076e7ac1a195e6d6e4",
+        "left_blob_count": 282,
+        "right_blob_count": 282,
+        "common_paths": 282,
+        "identical_same_path_blobs": 282,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 2019810,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "hc_vs_transcendence": {
+        "left_head": "fc8da8882078ef449bc02d61f03df8a892da2f0a",
+        "right_head": "ed2b5573f90e3fb991bef9b12e703c1af33d2fcd",
+        "left_blob_count": 282,
+        "right_blob_count": 282,
+        "common_paths": 282,
+        "identical_same_path_blobs": 282,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 2019810,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      },
+      "god_vs_transcendence": {
+        "left_head": "92db76cd639baeb9e9a84a076e7ac1a195e6d6e4",
+        "right_head": "ed2b5573f90e3fb991bef9b12e703c1af33d2fcd",
+        "left_blob_count": 282,
+        "right_blob_count": 282,
+        "common_paths": 282,
+        "identical_same_path_blobs": 282,
+        "changed_same_path_blobs": 0,
+        "left_only_paths": 0,
+        "right_only_paths": 0,
+        "identical_same_path_bytes": 2019810,
+        "identical_share_of_smaller_blob_bytes": 1,
+        "exact_blob_path_sha_set_equal": true
+      }
+    }
+  },
+  "summary": {
+    "sampled_branch_count": 8,
+    "repository_count": 3,
+    "pairwise_comparison_count": 24,
+    "exact_blob_path_sha_set_equal_count": 24,
+    "comparisons_with_changed_blob": 0,
+    "comparisons_with_missing_or_extra_blob_path": 0,
+    "all_sampled_pairwise_blob_sets_identical": true,
+    "bounded_result": "STRATIFIED_COMMON_BRANCH_SAMPLE_HAS_IDENTICAL_BLOB_PATH_SHA_SETS_ACROSS_HC_GODBRAIN_TRANSCENDENCE_DESPITE_DISTINCT_COMMIT_HEADS"
+  },
+  "claim_ceiling": [
+    "Exact blob path/SHA set equality is established only for the eight sampled branch heads.",
+    "Commit heads remain distinct; this artifact does not claim shared commit identity or identical parent history.",
+    "Selection is stratified and non-random; unsampled branches may diverge.",
+    "Original copy direction, timing, authorship, and desired dependency/consolidation direction remain unresolved."
+  ]
+}
