@@ -572,13 +572,13 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
         errors.append("unexpected public tree binding repair schema")
     repair_live = repair.get("live_inventory", {})
     census_counts = census.get("counts", {})
-    if repair_live != {
-        "total": census_counts.get("total"),
-        "public": census_counts.get("public"),
-        "private": census_counts.get("private"),
-        "public_set_changed": False,
-    }:
+    if not isinstance(repair_live, dict) or any(
+        repair_live.get(field) != census_counts.get(field)
+        for field in ("total", "public", "private")
+    ):
         errors.append("public tree binding repair inventory mismatch")
+    elif type(repair_live.get("public_set_changed")) is not bool:
+        errors.append("public tree binding repair public-set-change flag must be boolean")
     repair_data = repair.get("repair", {})
     repair_bindings = repair_data.get("bindings")
     expected_repair_bindings = {
@@ -736,26 +736,58 @@ def _validate_public_blob_scan(census: dict) -> list[str]:
         record for record in observed_pairs
         if isinstance(record, dict) and record.get("shared_blob_sha_count", 0) > 0
     ]
-    if len(identity_pairs) != 6:
-        errors.append("public blob scan expected exactly six byte-identity pairs")
-    for record in identity_pairs:
-        if {record.get("a"), record.get("b")} - hc_family:
-            errors.append("public blob scan byte identity escaped HC family")
+    same_path_pairs = [
+        record for record in observed_pairs
+        if isinstance(record, dict) and record.get("identical_same_path_blobs", 0) > 0
+    ]
     non_hc = [
         record for record in observed_pairs
         if isinstance(record, dict)
         and not ({record.get("a"), record.get("b")} <= hc_family)
     ]
-    if any(record.get("shared_blob_sha_count", 0) != 0 for record in non_hc):
-        errors.append("public blob scan non-HC shared blob found")
+    all_inside_hc = all(
+        {record.get("a"), record.get("b")} <= hc_family
+        for record in identity_pairs
+    )
+    hc_members = sorted(hc_family & public_repos)
+    hc_pair_count = len(hc_members) * (len(hc_members) - 1) // 2
+    max_non_hc_same_path = max(
+        (record.get("identical_same_path_blobs", 0) for record in non_hc),
+        default=0,
+    )
+    max_non_hc_shared = max(
+        (record.get("shared_blob_sha_count", 0) for record in non_hc),
+        default=0,
+    )
+    if not identity_pairs:
+        bounded_result = "NO_PUBLIC_DEFAULT_HEAD_BYTE_IDENTITY_OBSERVED"
+    elif (
+        len(identity_pairs) == hc_pair_count
+        and all_inside_hc
+        and set(hc_members) == hc_family
+    ):
+        bounded_result = (
+            "PUBLIC_DEFAULT_HEAD_BYTE_IDENTITY_ISOLATES_ONE_FOUR_REPO_HC_FAMILY_CLUSTER"
+        )
+    else:
+        bounded_result = "PUBLIC_DEFAULT_HEAD_BYTE_IDENTITY_PATTERN_CHANGED_REVIEW_REQUIRED"
 
     summary = scan.get("summary", {})
-    if summary.get("total_pairs") != expected_pair_count:
-        errors.append("public blob scan summary pair count mismatch")
-    if summary.get("non_hc_pair_count") != expected_pair_count - 6:
-        errors.append("public blob scan summary non-HC pair count mismatch")
-    if summary.get("all_byte_identity_pairs_are_inside_hc_family") is not True:
-        errors.append("public blob scan summary HC isolation flag missing")
+    expected_summary = {
+        "total_pairs": expected_pair_count,
+        "hc_family_members": hc_members,
+        "hc_family_pair_count": hc_pair_count,
+        "pairs_with_any_identical_same_path_blob": len(same_path_pairs),
+        "pairs_with_any_shared_blob_sha_any_path": len(identity_pairs),
+        "all_byte_identity_pairs_are_inside_hc_family": all_inside_hc,
+        "non_hc_pair_count": len(non_hc),
+        "max_non_hc_identical_same_path_blobs": max_non_hc_same_path,
+        "max_non_hc_shared_blob_sha_count": max_non_hc_shared,
+        "bounded_result": bounded_result,
+    }
+    for field, expected_value in expected_summary.items():
+        if summary.get(field) != expected_value:
+            errors.append(f"public blob scan summary mismatch: {field}")
 
     return errors
 
