@@ -115,6 +115,28 @@
       "status": "CORRECTED_STALE_CLASSIFICATION",
       "repository_archived": false,
       "disposition": "REVIEW_ONLY_IDENTITY_FIREWALLED"
+    },
+    {
+      "subject": "WORKBRIDGE_VERAMESH_BYTE_OVERLAP",
+      "status": "REVIEWED_NO_LINEAGE_ESTABLISHED",
+      "left": "thebrazenbeard/WorkBridgeMCP",
+      "right": "thebrazenbeard/vera-mesh",
+      "exact_shared_blob_count": 10,
+      "share_of_smaller_repo_bytes": 0.9419324765266032,
+      "shared_surface": ".github/workflows/*",
+      "interpretation": "GENERIC_GITHUB_WORKFLOW_TEMPLATE_BOILERPLATE",
+      "roots_rule": "BYTE_IDENTITY_IS_REUSE_EVIDENCE_NOT_ORIGIN_OR_SUPERSESSION_PROOF",
+      "successor_evidence": "WorkBridgeMCP PR #5 explicitly removes these unrelated generic workflow templates from its repaired implementation."
+    },
+    {
+      "subject": "DRIFTGUARD_VERAMESH_BYTE_OVERLAP",
+      "status": "REVIEWED_NO_LINEAGE_ESTABLISHED",
+      "left": "thebrazenbeard/driftguard",
+      "right": "thebrazenbeard/vera-mesh",
+      "exact_shared_blob_count": 1,
+      "shared_surface": ".github/workflows/python-package-conda.yml",
+      "interpretation": "GENERIC_GITHUB_WORKFLOW_TEMPLATE_BOILERPLATE",
+      "roots_rule": "SINGLE_SHARED_TEMPLATE_DOES_NOT_ESTABLISH_LINEAGE"
     }
   ],
   "cleanup": {
@@ -167,7 +189,8 @@
       "CURRENT_VERA_BUS_LANE_RESOLVED_FROM_LIVE_TOPOLOGY",
       "BUILD_TEAM_2_AND_BT2_DISTINCT",
       "VERA_R9A0_PREDECESSOR_PRESERVED",
-      "EMPTY_STUBS_NOT_PROMOTED"
+      "EMPTY_STUBS_NOT_PROMOTED",
+      "NON_HC_BLOB_OVERLAP_REVIEWED_AS_GENERIC_WORKFLOW_TEMPLATE_BOILERPLATE"
     ],
     "blockers": [
       "PRIVATE_GITHUB_HOSTED_ACTIONS_ZERO_RUNNER_ON_VERA_AND_VCP",
@@ -179,7 +202,30 @@
       "REDWORM_HISTORICAL_SOURCE_AUTHORSHIP_UNRESOLVED",
       "FULL_FRESH_CHAT_TO_REPO_TO_BUS_TO_PROVIDER_TO_RECOVERY_E2E_NOT_YET_QUALIFIED"
     ],
-    "ceiling": "PORTFOLIO_SOURCE_PROVIDER_AND_TOPOLOGY_QUALIFICATION_NOT_FULL_RUNTIME_CONSUMPTION"
+    "ceiling": "PORTFOLIO_SOURCE_PROVIDER_AND_TOPOLOGY_QUALIFICATION_NOT_FULL_RUNTIME_CONSUMPTION",
+    "byte_overlap_review": {
+      "scan_result": "PUBLIC_DEFAULT_HEAD_BYTE_IDENTITY_PATTERN_CHANGED_REVIEW_REQUIRED",
+      "review_result": "NO_NEW_LINEAGE_ESTABLISHED",
+      "non_hc_pairs": [
+        {
+          "pair": [
+            "WorkBridgeMCP",
+            "vera-mesh"
+          ],
+          "shared_blobs": 10,
+          "classification": "GENERIC_WORKFLOW_TEMPLATE_BOILERPLATE"
+        },
+        {
+          "pair": [
+            "driftguard",
+            "vera-mesh"
+          ],
+          "shared_blobs": 1,
+          "classification": "GENERIC_WORKFLOW_TEMPLATE_BOILERPLATE"
+        }
+      ],
+      "note": "Mechanical overlap remains preserved in the scan even though provenance review rejects a lineage promotion."
+    }
   },
   "repositories": [
     {
