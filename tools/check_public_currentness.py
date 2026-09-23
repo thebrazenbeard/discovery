@@ -19,6 +19,7 @@ PUBLIC_BLOB_SHARDS = (
     ROOT / "experiments" / "public_blob_index_v1" / "SHARD_B.json",
 )
 GIT_OID = re.compile(r"^[0-9a-f]{40}$")
+SELF_CURRENTNESS_SUBJECT = "discovery"
 
 
 class PublicCurrentnessError(ValueError):
@@ -229,7 +230,12 @@ def compare_public_subjects(
         before = expected[name]
         after = observed[name]
         changes: dict[str, dict[str, Any]] = {}
-        for field in ("default_branch", "head", "tree_sha", "archived"):
+        fields = (
+            ("default_branch", "archived")
+            if name == SELF_CURRENTNESS_SUBJECT
+            else ("default_branch", "head", "tree_sha", "archived")
+        )
+        for field in fields:
             if before.get(field) != after.get(field):
                 changes[field] = {
                     "expected": before.get(field),
@@ -262,6 +268,11 @@ def compare_public_subjects(
         "added_subjects": [observed[name] for name in added],
         "removed_subjects": [expected[name] for name in removed],
         "moved": moved,
+        "self_subject_currentness": {
+            "subject": SELF_CURRENTNESS_SUBJECT,
+            "status": "HEAD_TREE_SEPARATE_CI_CONCERN",
+            "rule": "Discovery cannot freeze its own current main head inside a commit without self-invalidating the next commit; branch/archive remain watched here and exact source qualification remains in Discovery CI.",
+        },
         "private_currentness": "NOT_OBSERVED",
         "claim_ceiling": (
             "PUBLIC_REPOSITORY_SET_DEFAULT_BRANCH_HEAD_TREE_ARCHIVE_CURRENTNESS_ONLY_"
