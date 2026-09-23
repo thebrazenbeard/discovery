@@ -425,7 +425,13 @@ def collect_live_subjects(
             f"missing={missing} added={added}"
         )
 
+    committed = subjects_from_committed_shards()
     for name in sorted(observed):
+        if name == "discovery":
+            # Discovery's own committed snapshot is intentionally self-referentially
+            # frozen. Exact current source qualification is handled by Discovery CI.
+            observed[name] = copy.deepcopy(committed[name])
+            continue
         observed[name]["blobs"] = client.recursive_blobs(owner, observed[name])
     return observed
 
