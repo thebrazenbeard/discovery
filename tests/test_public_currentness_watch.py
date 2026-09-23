@@ -64,6 +64,19 @@ class PublicCurrentnessComparisonTests(unittest.TestCase):
         self.assertIn("head", changes)
         self.assertIn("tree_sha", changes)
 
+    def test_discovery_self_head_movement_is_separate_ci_concern(self):
+        expected = {"discovery": subject("discovery")}
+        observed = {
+            "discovery": subject("discovery", head="c" * 40, tree="d" * 40),
+        }
+        report = watch.compare_public_subjects(expected, observed)
+        self.assertEqual("CURRENT", report["status"])
+        self.assertEqual([], report["moved"])
+        self.assertEqual(
+            "HEAD_TREE_SEPARATE_CI_CONCERN",
+            report["self_subject_currentness"]["status"],
+        )
+
     def test_default_branch_change_is_stale(self):
         expected = {"alpha": subject("alpha")}
         observed = {"alpha": subject("alpha", branch="stable")}
