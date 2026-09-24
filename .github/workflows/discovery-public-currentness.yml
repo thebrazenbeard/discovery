@@ -81,8 +81,11 @@ jobs:
             fi
           fi
 
+          impact_gate_code=0
           if [[ "$currentness_code" -eq 1 && -f public-currentness.json ]]; then
-            python tools/trace_public_impact.py               public-currentness.json               --output public-impact.json
+            python tools/trace_public_impact.py \
+              public-currentness.json \
+              --output public-impact.json
 
             cat public-impact.json
             {
@@ -92,9 +95,19 @@ jobs:
               cat public-impact.json
               echo '~~~'
             } >> "$GITHUB_STEP_SUMMARY"
+
+            impact_gate_status="$(python -c 'import json; from pathlib import Path; report=json.loads(Path("public-impact.json").read_text(encoding="utf-8")); print(report.get("gate_status", "BLOCKING_CURRENTNESS_IMPACT"))')"
+            if [[ "$impact_gate_status" == "NONBLOCKING_EXACT_HEAD_DRIFT" ]]; then
+              impact_gate_code=0
+            else
+              impact_gate_code=1
+            fi
           fi
 
-          if [[ "$currentness_code" -ne 0 ]]; then
-            exit "$currentness_code"
+          if [[ "$currentness_code" -eq 2 ]]; then
+            exit 2
+          fi
+          if [[ "$currentness_code" -eq 1 ]]; then
+            exit "$impact_gate_code"
           fi
           exit "$repro_code"
