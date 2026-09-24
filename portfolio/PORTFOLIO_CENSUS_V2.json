@@ -12,8 +12,10 @@
     "private_archived": 2
   },
   "public_repositories": [
-    "abil",
     "Attune",
+    "RepairTracker",
+    "WorkBridgeMCP",
+    "abil",
     "bt2",
     "bugops",
     "build-team-2.0",
@@ -38,7 +40,6 @@
     "project-achilles",
     "project-lantern",
     "project-runner",
-    "RepairTracker",
     "rezon",
     "roots",
     "semanticatlas",
@@ -49,16 +50,15 @@
     "unbound-sol",
     "unvtrslr",
     "vera",
-    "vera_model_training",
+    "vera-R9A0",
     "vera-control-plane",
     "vera-habitat",
     "vera-mesh",
     "vera-mono",
-    "vera-R9A0",
     "vera-synology",
+    "vera_model_training",
     "voss",
     "wip",
-    "WorkBridgeMCP",
     "world-zero"
   ],
   "inventory_digests": {
