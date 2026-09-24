@@ -20,6 +20,7 @@ EVIDENCE_ROOTS = (
 )
 ROOT_EVIDENCE_FILES = ("README.md",)
 GIT_OID = re.compile(r"^[0-9a-f]{40}$")
+CURRENTNESS_BASELINE_PATH = "portfolio/PUBLIC_CURRENTNESS_BASELINE_20260924_V2.json"
 
 
 class ImpactTraceError(ValueError):
@@ -100,6 +101,14 @@ def trace_exact_head_references(
         name = _subject_name(expected, label="moved expected_subject")
         head = _subject_head(expected, label=f"{name} expected_subject")
         observed_head = _subject_head(observed, label=f"{name} observed_subject")
+        change_fields = sorted(
+            str(field)
+            for field in (
+                moved.get("changes", {}).keys()
+                if isinstance(moved.get("changes"), dict)
+                else ()
+            )
+        )
         references = []
         for path in evidence_files:
             hits = _line_hits(path, head)
@@ -111,17 +120,32 @@ def trace_exact_head_references(
                         "occurrence_count": len(hits),
                     }
                 )
+        blocking_references = [
+            reference
+            for reference in references
+            if reference["path"] != CURRENTNESS_BASELINE_PATH
+        ]
         subjects.append(
             {
                 "name": name,
                 "change_kind": "MOVED",
+                "change_fields": change_fields,
                 "expected_head": head,
                 "observed_head": observed_head,
                 "exact_old_head_references": references,
+                "blocking_exact_old_head_references": blocking_references,
                 "reference_state": (
                     "EXACT_REFERENCES_FOUND"
                     if references
                     else "NO_EXACT_REFERENCE_FOUND"
+                ),
+                "impact_gate": (
+                    "BLOCK"
+                    if (
+                        set(change_fields) - {"head", "tree_sha"}
+                        or blocking_references
+                    )
+                    else "OBSERVE_ONLY"
                 ),
             }
         )
@@ -144,14 +168,17 @@ def trace_exact_head_references(
             {
                 "name": name,
                 "change_kind": "REMOVED",
+                "change_fields": ["repository_membership"],
                 "expected_head": head,
                 "observed_head": None,
                 "exact_old_head_references": references,
+                "blocking_exact_old_head_references": references,
                 "reference_state": (
                     "EXACT_REFERENCES_FOUND"
                     if references
                     else "NO_EXACT_REFERENCE_FOUND"
                 ),
+                "impact_gate": "BLOCK",
             }
         )
 
@@ -173,6 +200,15 @@ def trace_exact_head_references(
     unresolved = sum(
         1 for item in subjects if item["reference_state"] == "NO_EXACT_REFERENCE_FOUND"
     )
+    blocking_subjects = [
+        item for item in subjects if item.get("impact_gate") == "BLOCK"
+    ]
+    if status == "CURRENT":
+        gate_status = "CURRENT"
+    elif new_subjects or blocking_subjects:
+        gate_status = "BLOCKING_CURRENTNESS_IMPACT"
+    else:
+        gate_status = "NONBLOCKING_EXACT_HEAD_DRIFT"
 
     return {
         "schema": "DISCOVERY_PUBLIC_IMPACT_REPORT_V1",
@@ -186,16 +222,25 @@ def trace_exact_head_references(
         "stale_subject_count": len(subjects),
         "subjects_with_exact_references": referenced,
         "subjects_without_exact_references": unresolved,
+        "blocking_subject_count": len(blocking_subjects),
+        "gate_status": gate_status,
         "subjects": subjects,
         "new_subjects": new_subjects,
         "negative_evidence_rule": (
             "NO_EXACT_REFERENCE_FOUND does not prove that no dependency exists; "
             "it only proves that this exact old head string was not found in the "
-            "bounded Discovery evidence surface."
+            "bounded Discovery evidence surface. The impact gate therefore speaks "
+            "only to exact-head-bound Discovery evidence, not semantic dependency."
+        ),
+        "impact_gate_rule": (
+            "Repository additions/removals, default-branch/archive changes, or exact "
+            "old-head references outside the currentness baseline are blocking. "
+            "Head/tree-only drift whose old head is referenced only by the baseline "
+            "is reported as stale but does not fail the bounded exact-reference gate."
         ),
         "claim_ceiling": (
-            "EXACT_STALE_HEAD_TEXT_REFERENCE_TRACE_ONLY_"
-            "NO_SEMANTIC_DEPENDENCY_NO_AUTOMATIC_INVALIDATION_OR_REPAIR"
+            "EXACT_STALE_HEAD_TEXT_REFERENCE_GATE_ONLY_"
+            "NO_SEMANTIC_DEPENDENCY_NO_AUTOMATIC_REPAIR"
         ),
     }
 
