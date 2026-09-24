@@ -21,8 +21,8 @@ def test_census_v2_public_membership_and_arithmetic():
     assert counts["archived"] == (
         counts["public_archived"] + counts["private_archived"]
     )
-    assert counts["total"] == 66
-    assert counts["public"] == 48
+    assert counts["total"] == 67
+    assert counts["public"] == 49
     assert counts["private"] == 18
     assert len(census["public_repositories"]) == counts["public"]
     assert len(set(census["public_repositories"])) == counts["public"]
