@@ -98,10 +98,11 @@ class PublicCurrentnessComparisonTests(unittest.TestCase):
 class PublicCurrentnessBaselineTests(unittest.TestCase):
     def test_repository_baseline_loads_exact_current_public_set(self):
         subjects = watch.load_expected_public_subjects()
-        self.assertEqual(48, len(subjects))
+        self.assertEqual(49, len(subjects))
         self.assertIn("discovery", subjects)
         self.assertIn("world-zero", subjects)
         self.assertIn("WorkBridgeMCP", subjects)
+        self.assertIn("sql-connectome", subjects)
         self.assertEqual("collab", subjects["masamune"]["default_branch"])
         for name, item in subjects.items():
             if name != "masamune":
@@ -116,7 +117,7 @@ class PublicCurrentnessBaselineTests(unittest.TestCase):
             baseline["blob_evidence_status"],
         )
         self.assertEqual(
-            "NO_48_SUBJECT_BLOB_OVERLAP_CLAIM",
+            "NO_49_SUBJECT_BLOB_OVERLAP_CLAIM",
             baseline["blob_evidence_claim_ceiling"],
         )
 
