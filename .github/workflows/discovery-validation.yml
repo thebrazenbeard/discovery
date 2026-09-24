@@ -37,6 +37,8 @@ jobs:
           python-version: "3.12"
       - name: Validate Discovery source
         run: python tools/validate_discovery.py
+      - name: Validate portfolio census V2
+        run: python tools/validate_portfolio_census_v2.py
       - name: Validate repository reconciliation currentness
         run: python tools/validate_reconciliation.py
       - name: Run Discovery regressions
