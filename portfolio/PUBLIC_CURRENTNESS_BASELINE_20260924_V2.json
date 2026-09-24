@@ -1,0 +1,350 @@
+{
+  "schema": "DISCOVERY_PUBLIC_CURRENTNESS_BASELINE_V2",
+  "observed_at": "2026-09-24T19:39:00Z",
+  "owner": "thebrazenbeard",
+  "source": "Live public GitHub default-branch readback through the authorized GitHub connector.",
+  "purpose": "Exact public repository currentness baseline independent of stale blob-overlap evidence.",
+  "repository_count": 48,
+  "self_subject": "discovery",
+  "self_subject_head_tree_rule": "Discovery head/tree are excluded from same-commit currentness comparison because freezing its own head in-source self-invalidates the next commit; branch/archive remain checked.",
+  "blob_evidence_status": "STALE_PREDECESSOR_24_SUBJECT_SET",
+  "blob_evidence_claim_ceiling": "NO_48_SUBJECT_BLOB_OVERLAP_CLAIM",
+  "repositories": [
+    {
+      "name": "abil",
+      "default_branch": "main",
+      "head": "69a2d8f4302e31db589c57871a04ff8c0178c1e9",
+      "tree_sha": "d5808c8544766de452e98111f4830d4c4ce7479a",
+      "archived": false
+    },
+    {
+      "name": "Attune",
+      "default_branch": "main",
+      "head": "fd856412edca83ff380a9d74d2875e817d920742",
+      "tree_sha": "4074606acdfe0ce37c81323523536bddedea9f6d",
+      "archived": false
+    },
+    {
+      "name": "bt2",
+      "default_branch": "main",
+      "head": "3ffe9558f08ee826b6cc8d69956dbc3ad9dcf6ef",
+      "tree_sha": "c23c05a268154a22239d3b82f94ee1e1785533fc",
+      "archived": false
+    },
+    {
+      "name": "bugops",
+      "default_branch": "main",
+      "head": "07b8bc90fcb4beb82b1d26b394c730f29c2c425a",
+      "tree_sha": "fc80ca04ade38075a46faaa4f8124bc7ac65ca49",
+      "archived": false
+    },
+    {
+      "name": "build-team-2.0",
+      "default_branch": "main",
+      "head": "9f2743214298f1ae9d424f300a13d37e49e3c74f",
+      "tree_sha": "710d221a7fe253de15f15e2ba3c5472440e95708",
+      "archived": false
+    },
+    {
+      "name": "ccb-core",
+      "default_branch": "main",
+      "head": "157876c5c0434bf4f553d9e4f70f19076d058146",
+      "tree_sha": "d237317f2e9b847a10a34f90d8c9d9928044aa5d",
+      "archived": false
+    },
+    {
+      "name": "conations",
+      "default_branch": "main",
+      "head": "4b458ecf566f024c32109e06a96bf7b2e5f92da6",
+      "tree_sha": "be05c77713c7ceb71e4bf55868495954e45a241c",
+      "archived": false
+    },
+    {
+      "name": "deepmemorystorage",
+      "default_branch": "main",
+      "head": "0740fc188fde6d69d1690ee07ed9be3590ac493f",
+      "tree_sha": "e9c29a513c2a6b90847c7054de9a197777744674",
+      "archived": false
+    },
+    {
+      "name": "discovery",
+      "default_branch": "main",
+      "head": "368e8dc8274e89a306039d28462c7547b263e93e",
+      "tree_sha": "5ad959b4420aa2682a4144305ca329adecce9d3d",
+      "archived": false
+    },
+    {
+      "name": "driftguard",
+      "default_branch": "main",
+      "head": "52fa829c629fa0f3e729204912db9f9f783f322a",
+      "tree_sha": "82a204f42c86bb7ff49f814c6b2cc7ac654ab394",
+      "archived": false
+    },
+    {
+      "name": "empathy",
+      "default_branch": "main",
+      "head": "bc0c1d33b3187642d9e2f0801d1c5bde4f583e2b",
+      "tree_sha": "ccba77b066ce6b513431e68eb1b6e206fa175c79",
+      "archived": false
+    },
+    {
+      "name": "freerowcochkar",
+      "default_branch": "main",
+      "head": "00562b5fedf5ff636750b87e5ba82dad2911e2ab",
+      "tree_sha": "6310fcf00032a1c71a4a2b0f601411353b93e68f",
+      "archived": false
+    },
+    {
+      "name": "fuckup",
+      "default_branch": "main",
+      "head": "e999607481ba706523209ce129955a5e3d2d6ef7",
+      "tree_sha": "571ce50cb747fc9f8ff7390c1227f1fa2ff8eb15",
+      "archived": false
+    },
+    {
+      "name": "god-brain",
+      "default_branch": "main",
+      "head": "212eb464cb9259c8bad1fc978db372fa86ba3f10",
+      "tree_sha": "18ffaf9baba7dc0bf5eb1460a66b2d8d6ee937b9",
+      "archived": false
+    },
+    {
+      "name": "hc-brain",
+      "default_branch": "main",
+      "head": "c69c126a61b3fb44ec4466f301e128d3d3aed7d8",
+      "tree_sha": "a1bfc7a19fa423f65ce4a19ce9e37a74fc4aa7f9",
+      "archived": false
+    },
+    {
+      "name": "hephaestus",
+      "default_branch": "main",
+      "head": "7eb30f2777a7d16e4f55ca3066d8ac1e484f79a6",
+      "tree_sha": "30e0ffbcc683f76919196b8bbd5f1aa5376e6540",
+      "archived": false
+    },
+    {
+      "name": "intranel",
+      "default_branch": "main",
+      "head": "08bc122043b79422c31a958b7ffe7fff87e5f3f0",
+      "tree_sha": "c5dda30d8e38161d25c26ac82ad5acd4be5d0431",
+      "archived": false
+    },
+    {
+      "name": "masamune",
+      "default_branch": "collab",
+      "head": "0091746bba7740632268fb590ce19512e371f508",
+      "tree_sha": "66cf827966e2d9c9c8c3d0c90a8230f537d5356e",
+      "archived": false
+    },
+    {
+      "name": "meso-crct",
+      "default_branch": "main",
+      "head": "6ca7873bf066178aa2a21cd9244f500a3ab1c845",
+      "tree_sha": "540f0d7dd48fd63d21af966fe12ee084286b9fc0",
+      "archived": false
+    },
+    {
+      "name": "mosaic",
+      "default_branch": "main",
+      "head": "5450e6e5b7c919cb94586025032ca27ac28b73cb",
+      "tree_sha": "227e12f676eebd83d266cb3e7c70b710b5dad1d4",
+      "archived": false
+    },
+    {
+      "name": "noema",
+      "default_branch": "main",
+      "head": "094bdab92b7f74a12fd335ce421dcd61dc219abf",
+      "tree_sha": "839b267f84f7c8ae03260c5416fce76f47660da0",
+      "archived": false
+    },
+    {
+      "name": "on-theo",
+      "default_branch": "main",
+      "head": "268a005b11e3fede8a99d7cf2990f18fc3b32672",
+      "tree_sha": "c829d67e5617a5dfe28344f70618a65c3eebb0f8",
+      "archived": false
+    },
+    {
+      "name": "personification",
+      "default_branch": "main",
+      "head": "e2d8278257e1eda85d3e2f3f7a68bfe6a9616c38",
+      "tree_sha": "46dbbadb3b3870a94b51b9479f2d24eab5839655",
+      "archived": false
+    },
+    {
+      "name": "project-achilles",
+      "default_branch": "main",
+      "head": "6776d8c059e3f9ad791a47a0b62bb56588332968",
+      "tree_sha": "979060c62b5fb3c730c50aaed31200b45dba7f6f",
+      "archived": false
+    },
+    {
+      "name": "project-lantern",
+      "default_branch": "main",
+      "head": "9291d0cd914c40d16a80a24cc3fba92bbaa4b227",
+      "tree_sha": "f954b5d8b92eb11f963616bda39d95aef43cde57",
+      "archived": false
+    },
+    {
+      "name": "project-runner",
+      "default_branch": "main",
+      "head": "86b98473838bd5a4e1e2d9f6ac1b2cb6aa7f7094",
+      "tree_sha": "c466d56b3e87519ab3e5fa383bc4a8d1d8f7fd6f",
+      "archived": false
+    },
+    {
+      "name": "RepairTracker",
+      "default_branch": "main",
+      "head": "6b01c2a18035390c050ceecd0506181703d1f5fa",
+      "tree_sha": "59bf4f242ffdee9c69744ef8f8d6064789d37218",
+      "archived": false
+    },
+    {
+      "name": "rezon",
+      "default_branch": "main",
+      "head": "e9a893d11e47ba4065d962b8ee69d3b0e4c9e38a",
+      "tree_sha": "9c4d2579827d7b85cab5cf4cf9b6fa0fbb3419d5",
+      "archived": false
+    },
+    {
+      "name": "roots",
+      "default_branch": "main",
+      "head": "d99d3b709a1b257d8fa12fa541a6a6f18f03e2a8",
+      "tree_sha": "e77914a0abdd4f23686f8bde3ee023c1738fa9e2",
+      "archived": false
+    },
+    {
+      "name": "semanticatlas",
+      "default_branch": "main",
+      "head": "1efb5e5e4b124953f0d38e525df42445c5309d32",
+      "tree_sha": "ad7c0aee8a163ca8715e6e683362ac6042efba8c",
+      "archived": false
+    },
+    {
+      "name": "spm",
+      "default_branch": "main",
+      "head": "5fdaf0418585ef9a57fb2a1df8d0725ffd6bd174",
+      "tree_sha": "883e54952df997e031ccc9b8c181e984860e33f2",
+      "archived": false
+    },
+    {
+      "name": "temporal",
+      "default_branch": "main",
+      "head": "0fc7071a6b01e609fb2cdc76a32c73276ab27094",
+      "tree_sha": "b90617aec4f82ca76802b3fd334ed6c4505bb4ce",
+      "archived": false
+    },
+    {
+      "name": "testament",
+      "default_branch": "main",
+      "head": "a1fb95a40d49af994bf76c326e5eddf804979f62",
+      "tree_sha": "681d42666cf0f6ca79e09d43e05613fe86c84938",
+      "archived": false
+    },
+    {
+      "name": "transcendence",
+      "default_branch": "main",
+      "head": "ea7b73a44f21e1286cff43b813ac67dc0035f77b",
+      "tree_sha": "69dee713b3d1a8e3cd5e72fb20e4acacd6fe698b",
+      "archived": false
+    },
+    {
+      "name": "unbound-sol",
+      "default_branch": "main",
+      "head": "688094241755ed335cc1bad34008ffb686ec2e7f",
+      "tree_sha": "366c0a10b6f9498407d83ff30679f152bf5dc868",
+      "archived": false
+    },
+    {
+      "name": "unvtrslr",
+      "default_branch": "main",
+      "head": "513309edd087f7206a408a6da86ee91fb9efb5c9",
+      "tree_sha": "4d55817c2e5e97e9306e317442aa7f5956401f8a",
+      "archived": false
+    },
+    {
+      "name": "vera",
+      "default_branch": "main",
+      "head": "87aa888cb7543875ffa11c9c7a1eb9e5b60c35cf",
+      "tree_sha": "1a98e6d3cf61156c8e88503bb22f963539622979",
+      "archived": false
+    },
+    {
+      "name": "vera_model_training",
+      "default_branch": "main",
+      "head": "1673d72cef4938da8b0bea9385238073d1213715",
+      "tree_sha": "4628f9eb43fb215b0729c06fec18f5d2e69a3bad",
+      "archived": false
+    },
+    {
+      "name": "vera-control-plane",
+      "default_branch": "main",
+      "head": "65ce7908f640ffe53b678ef69c58411a91c23b8a",
+      "tree_sha": "26305b0b5f2ea4aebc03506d394ceaaea0482db8",
+      "archived": false
+    },
+    {
+      "name": "vera-habitat",
+      "default_branch": "main",
+      "head": "fa93ad23d9f6ba0f6b9508ac1b1ac2238320a954",
+      "tree_sha": "9db4f0b69445455e0f4c5fab3a2bdd948fb3f1b8",
+      "archived": false
+    },
+    {
+      "name": "vera-mesh",
+      "default_branch": "main",
+      "head": "6af00c096967253f85139c6efcf7fd4c04a64b7b",
+      "tree_sha": "e83dafa3c54183fdbb5a7fe5d443e37e832c1f53",
+      "archived": false
+    },
+    {
+      "name": "vera-mono",
+      "default_branch": "main",
+      "head": "b045ea3f286868582ae7538afb3d51405ab867d6",
+      "tree_sha": "7a70d9ec2f9d715d3794a62307df9037944d2064",
+      "archived": false
+    },
+    {
+      "name": "vera-R9A0",
+      "default_branch": "main",
+      "head": "b5260a9c129b9e7188d01cfee126df36326bc510",
+      "tree_sha": "10990ac7c2dc025d207c0866b8da23b3222f6d4f",
+      "archived": false
+    },
+    {
+      "name": "vera-synology",
+      "default_branch": "main",
+      "head": "a39e9da662f4de3b48d426da9ece13fd0149fd53",
+      "tree_sha": "45756645704b1cdfb33f1fd7dad156b8073bd7a5",
+      "archived": false
+    },
+    {
+      "name": "voss",
+      "default_branch": "main",
+      "head": "b8e35d4fb85da3e64521b0ebf02d8028311c3158",
+      "tree_sha": "ea7658034f6f0b24365cf0b400de4c54f951e523",
+      "archived": false
+    },
+    {
+      "name": "wip",
+      "default_branch": "main",
+      "head": "fc6629960850b768b7489ec35daa745083fc0800",
+      "tree_sha": "c3fad2cb962d2b7a0c6e1d7d670bb8a72f9f6493",
+      "archived": false
+    },
+    {
+      "name": "WorkBridgeMCP",
+      "default_branch": "main",
+      "head": "75c811f21ef97fe0356e8f54e007d086300dd0f1",
+      "tree_sha": "854ac0d7e359936361165d746c54cf4fefb5d4fb",
+      "archived": false
+    },
+    {
+      "name": "world-zero",
+      "default_branch": "main",
+      "head": "1b0405ed110bbb0711f3514ce50fed223b4641c9",
+      "tree_sha": "00978c8395236e8495acee1c8681bafc7babec51",
+      "archived": false
+    }
+  ]
+}
