@@ -43,8 +43,8 @@ Discovery's search space is the **whole accessible portfolio**, not a hand-picke
 
 Current live membership cut (2026-09-24):
 
-- 66 repositories observed;
-- 48 public repositories named in the current public-safe census;
+- 67 repositories observed;
+- 49 public repositories named in the current public-safe census;
 - 18 private repositories included in aggregate counts but intentionally not named here;
 - 2 archived repositories, both private;
 - the predecessor 59/24/35 census and its 24-public relationship/blob evidence remain historical cut evidence but are stale for whole-current-public-estate claims;
@@ -64,7 +64,7 @@ Discovery's predecessor public evidence has a read-only operational loop. As of 
 
 1. `tools/check_public_currentness.py` reads the live public GitHub estate and compares repository membership, default branch, exact commit, exact tree, and archive state with the bound public evidence.
 2. When drift is found, `tools/trace_public_impact.py` identifies Discovery artifacts that still contain exact references to the stale commit SHA.
-3. On the predecessor cut, `tools/refresh_public_blob_evidence.py --check` reacquires 23 exact Git trees and reproduces the corresponding 253-pair overlap scan byte-for-byte. The current 48-public-repository cut requires a new evidence generation before equivalent completeness claims are valid.
+3. On the predecessor cut, `tools/refresh_public_blob_evidence.py --check` reacquires 23 exact Git trees and reproduces the corresponding 253-pair overlap scan byte-for-byte. The current 49-public-repository cut requires a new evidence generation before equivalent completeness claims are valid.
 4. `.github/workflows/discovery-public-currentness.yml` runs the live check every six hours after landing, on demand, and on relevant pull requests.
 
 The workflow never refreshes evidence automatically. A stale result is a review trigger, not mutation authority.
