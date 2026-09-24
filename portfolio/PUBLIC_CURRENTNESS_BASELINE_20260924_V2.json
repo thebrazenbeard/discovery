@@ -8,7 +8,7 @@
   "self_subject": "discovery",
   "self_subject_head_tree_rule": "Discovery head/tree are excluded from same-commit currentness comparison because freezing its own head in-source self-invalidates the next commit; branch/archive remain checked.",
   "blob_evidence_status": "STALE_PREDECESSOR_24_SUBJECT_SET",
-  "blob_evidence_claim_ceiling": "NO_48_SUBJECT_BLOB_OVERLAP_CLAIM",
+  "blob_evidence_claim_ceiling": "NO_49_SUBJECT_BLOB_OVERLAP_CLAIM",
   "repositories": [
     {
       "name": "abil",
