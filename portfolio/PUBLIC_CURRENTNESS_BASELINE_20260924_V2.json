@@ -1,6 +1,6 @@
 {
   "schema": "DISCOVERY_PUBLIC_CURRENTNESS_BASELINE_V2",
-  "observed_at": "2026-09-24T19:39:00Z",
+  "observed_at": "2026-09-24T19:44:47Z",
   "owner": "thebrazenbeard",
   "source": "Live public GitHub default-branch readback through the authorized GitHub connector.",
   "purpose": "Exact public repository currentness baseline independent of stale blob-overlap evidence.",
@@ -300,8 +300,8 @@
     {
       "name": "vera-mono",
       "default_branch": "main",
-      "head": "b045ea3f286868582ae7538afb3d51405ab867d6",
-      "tree_sha": "7a70d9ec2f9d715d3794a62307df9037944d2064",
+      "head": "f88694df8d59ac2f0c754d1b686d44829a41445c",
+      "tree_sha": "04dc61eafc1f4d79792c8224d4eb21de8f28ca7d",
       "archived": false
     },
     {
