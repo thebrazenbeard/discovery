@@ -41,16 +41,18 @@ See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md) and [docs/DIS
 
 Discovery's search space is the **whole accessible portfolio**, not a hand-picked list of favored projects.
 
-Current inventory cut (2026-09-21):
+Current descriptive inventory cut (2026-09-24):
 
-- 58 repositories observed;
-- 23 public repositories named in the public census;
-- 35 private repositories included in the inventory calculation but intentionally not named here;
-- exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names;
-- this refresh invalidates the prior 2026-09-19 57/12/45 census as a currentness claim while preserving it as historical evidence.
+- 66 repositories observed;
+- 48 public repositories named in the V2 census;
+- 18 private repositories included by count and digest but intentionally not named here;
+- 2 repositories archived, both private;
+- exact sorted-name digests bind the public, private, and complete repository sets;
+- the older V1 census remains preserved because its source-bound overlap/currentness fixtures are historical reproducibility evidence, not a mutable alias for the latest estate.
 
 See:
 
+- [portfolio/PORTFOLIO_CENSUS_V2.json](portfolio/PORTFOLIO_CENSUS_V2.json)
 - [portfolio/PORTFOLIO_CENSUS_V1.json](portfolio/PORTFOLIO_CENSUS_V1.json)
 - [portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json](portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json)
 - [docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md](docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md)
