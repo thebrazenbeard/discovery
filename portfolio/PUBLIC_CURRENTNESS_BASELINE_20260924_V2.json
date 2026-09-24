@@ -1,10 +1,10 @@
 {
   "schema": "DISCOVERY_PUBLIC_CURRENTNESS_BASELINE_V2",
-  "observed_at": "2026-09-24T19:44:47Z",
+  "observed_at": "2026-09-24T17:16:00-04:00",
   "owner": "thebrazenbeard",
   "source": "Live public GitHub default-branch readback through the authorized GitHub connector.",
   "purpose": "Exact public repository currentness baseline independent of stale blob-overlap evidence.",
-  "repository_count": 48,
+  "repository_count": 49,
   "self_subject": "discovery",
   "self_subject_head_tree_rule": "Discovery head/tree are excluded from same-commit currentness comparison because freezing its own head in-source self-invalidates the next commit; branch/archive remain checked.",
   "blob_evidence_status": "STALE_PREDECESSOR_24_SUBJECT_SET",
@@ -228,6 +228,13 @@
       "archived": false
     },
     {
+      "name": "sql-connectome",
+      "default_branch": "main",
+      "head": "585f0c2ecee9059ba8b6b569b229348d7e4ded73",
+      "tree_sha": "d69a908f755ed10531ea96699185521b4a32312c",
+      "archived": false
+    },
+    {
       "name": "temporal",
       "default_branch": "main",
       "head": "0fc7071a6b01e609fb2cdc76a32c73276ab27094",
@@ -300,8 +307,8 @@
     {
       "name": "vera-mono",
       "default_branch": "main",
-      "head": "f88694df8d59ac2f0c754d1b686d44829a41445c",
-      "tree_sha": "04dc61eafc1f4d79792c8224d4eb21de8f28ca7d",
+      "head": "9675be98990287be42bc9b6811d8032aec2af70a",
+      "tree_sha": "1cb32278530e47714a61fd8daff15d83827b5f19",
       "archived": false
     },
     {
