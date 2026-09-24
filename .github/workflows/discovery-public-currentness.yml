@@ -76,7 +76,7 @@ jobs:
                 echo
                 echo "### Discovery public blob evidence reproducibility"
                 echo "Skipped: exact public currentness is current, but blob evidence status is $blob_status."
-                echo "The predecessor 24-subject blob scan remains historical evidence until regenerated for the 48-subject cut."
+                echo "The predecessor 24-subject blob scan remains historical evidence until regenerated for the 49-subject cut."
               } >> "$GITHUB_STEP_SUMMARY"
             fi
           fi
