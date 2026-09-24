@@ -1,11 +1,11 @@
 {
   "schema": "DISCOVERY_PORTFOLIO_CENSUS_V2",
-  "observed_at": "2026-09-24T14:51:00-04:00",
+  "observed_at": "2026-09-24T17:16:00-04:00",
   "source": "Live GitHub accessible repository inventory for owner thebrazenbeard, read through the authorized GitHub connector.",
   "status": "OBSERVED_INVENTORY_NOT_ARCHITECTURAL_AUTHORITY",
   "counts": {
-    "total": 66,
-    "public": 48,
+    "total": 67,
+    "public": 49,
     "private": 18,
     "archived": 2,
     "public_archived": 0,
@@ -44,6 +44,7 @@
     "roots",
     "semanticatlas",
     "spm",
+    "sql-connectome",
     "temporal",
     "testament",
     "transcendence",
@@ -61,7 +62,7 @@
     "wip",
     "world-zero"
   ],
-  "public_names_sha256": "666231989ee732262a03ccdb09a0df0a03ee3f7b77ae8f6486af2b656e9e5288",
+  "public_names_sha256": "0aa96157ca2789ec60cb0935403ba6e5de58742f501456bd5718e068e40e6e6c",
   "private_inventory": {
     "count": 18,
     "public_commitment_scheme": "COUNT_ONLY_PUBLIC_V1",
@@ -81,8 +82,8 @@
     "observed_date": "2026-09-22"
   },
   "delta": {
-    "total_repositories": 7,
-    "public_repositories": 24,
+    "total_repositories": 8,
+    "public_repositories": 25,
     "private_repositories": -17,
     "note": "The public/private delta includes visibility changes as well as repository creation; V2 does not infer which mechanism produced each membership change without per-repository historical evidence."
   },
@@ -91,7 +92,7 @@
     "prior_public_intake_current": false,
     "prior_public_blob_overlap_scan_current": false,
     "prior_architecture_observatory_current": false,
-    "rule": "Any artifact bound to the 24-public-repository cut is stale for whole-public-estate claims until regenerated against this 48-public-repository membership."
+    "rule": "Any artifact bound to the 24-public-repository cut is stale for whole-public-estate claims until regenerated against this 49-public-repository membership."
   },
   "claim_ceiling": "LIVE_MEMBERSHIP_AND_PUBLIC_NAME_SET_OBSERVED_PRIVATE_EXACT_MEMBERSHIP_REQUIRES_KEYED_EXTERNAL_SNAPSHOT_NO_ARCHITECTURAL_PROMOTION"
 }
