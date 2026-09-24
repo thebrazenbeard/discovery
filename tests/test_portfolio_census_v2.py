@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CENSUS = ROOT / "portfolio" / "PORTFOLIO_CENSUS_20260924_V2.json"
+BASELINE = ROOT / "portfolio" / "PUBLIC_CURRENTNESS_BASELINE_20260924_V2.json"
 
 
 def _digest(names):
@@ -46,3 +47,11 @@ def test_predecessor_whole_public_evidence_is_explicitly_stale():
     assert effect["prior_public_intake_current"] is False
     assert effect["prior_public_blob_overlap_scan_current"] is False
     assert effect["prior_architecture_observatory_current"] is False
+
+
+def test_census_v2_and_exact_currentness_baseline_membership_match():
+    census = json.loads(CENSUS.read_text(encoding="utf-8"))
+    baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
+    baseline_names = sorted(item["name"] for item in baseline["repositories"])
+    assert baseline["repository_count"] == census["counts"]["public"]
+    assert baseline_names == sorted(census["public_repositories"])
