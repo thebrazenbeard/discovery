@@ -59,8 +59,12 @@ class PublicImpactRadarTests(unittest.TestCase):
         self.assertEqual("alpha", item["name"])
         self.assertEqual("MOVED", item["change_kind"])
         self.assertEqual("EXACT_REFERENCES_FOUND", item["reference_state"])
+        self.assertEqual("BLOCK", item["impact_gate"])
+        self.assertEqual("BLOCKING_CURRENTNESS_IMPACT", result["gate_status"])
         self.assertEqual("docs/claim.md", item["exact_old_head_references"][0]["path"])
         self.assertEqual([1], item["exact_old_head_references"][0]["lines"])
+        self.assertEqual("BLOCK", item["impact_gate"])
+        self.assertEqual("BLOCKING_CURRENTNESS_IMPACT", result["gate_status"])
 
     def test_absence_is_reported_as_gap_not_proof_of_no_dependency(self):
         expected = {"alpha": subject("alpha", "a" * 40, "b" * 40)}
@@ -82,6 +86,7 @@ class PublicImpactRadarTests(unittest.TestCase):
             "does not prove that no dependency exists",
             result["negative_evidence_rule"],
         )
+        self.assertEqual("NONBLOCKING_EXACT_HEAD_DRIFT", result["gate_status"])
 
     def test_removed_subject_traces_old_head(self):
         old_head = "e" * 40
@@ -116,6 +121,52 @@ class PublicImpactRadarTests(unittest.TestCase):
             "UNCLASSIFIED_NEW_PUBLIC_SUBJECT",
             result["new_subjects"][0]["disposition"],
         )
+        self.assertEqual("BLOCKING_CURRENTNESS_IMPACT", result["gate_status"])
+
+    def test_baseline_self_reference_only_is_observe_only(self):
+        old_head = "7" * 40
+        new_head = "8" * 40
+        expected = {"alpha": subject("alpha", old_head, "9" * 40)}
+        observed = {"alpha": subject("alpha", new_head, "0" * 40)}
+        currentness = watch.compare_public_subjects(expected, observed)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = pathlib.Path(tmp)
+            baseline = root / "portfolio" / "PUBLIC_CURRENTNESS_BASELINE_20260924_V2.json"
+            baseline.parent.mkdir()
+            baseline.write_text(
+                json.dumps({"repository": f"alpha@{old_head}"}),
+                encoding="utf-8",
+            )
+            result = impact.trace_exact_head_references(currentness, root=root)
+
+        item = result["subjects"][0]
+        self.assertEqual("OBSERVE_ONLY", item["impact_gate"])
+        self.assertEqual([], item["blocking_exact_old_head_references"])
+        self.assertEqual("NONBLOCKING_EXACT_HEAD_DRIFT", result["gate_status"])
+
+    def test_default_branch_drift_blocks_even_without_old_head_reference(self):
+        expected = {"alpha": subject("alpha", "a" * 40, "b" * 40)}
+        observed = {
+            "alpha": subject(
+                "alpha",
+                "a" * 40,
+                "b" * 40,
+                branch="stable",
+            )
+        }
+        currentness = watch.compare_public_subjects(expected, observed)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            result = impact.trace_exact_head_references(
+                currentness,
+                root=pathlib.Path(tmp),
+            )
+
+        item = result["subjects"][0]
+        self.assertEqual("BLOCK", item["impact_gate"])
+        self.assertIn("default_branch", item["change_fields"])
+        self.assertEqual("BLOCKING_CURRENTNESS_IMPACT", result["gate_status"])
 
     def test_current_report_has_no_stale_subjects(self):
         expected = {"alpha": subject("alpha", "a" * 40, "b" * 40)}
@@ -129,6 +180,7 @@ class PublicImpactRadarTests(unittest.TestCase):
 
         self.assertEqual("NO_STALE_PUBLIC_SUBJECTS", result["status"])
         self.assertEqual(0, result["stale_subject_count"])
+        self.assertEqual("CURRENT", result["gate_status"])
 
 
 if __name__ == "__main__":

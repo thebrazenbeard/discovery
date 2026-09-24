@@ -98,14 +98,28 @@ class PublicCurrentnessComparisonTests(unittest.TestCase):
 class PublicCurrentnessBaselineTests(unittest.TestCase):
     def test_repository_baseline_loads_exact_current_public_set(self):
         subjects = watch.load_expected_public_subjects()
-        self.assertEqual(24, len(subjects))
+        self.assertEqual(49, len(subjects))
         self.assertIn("discovery", subjects)
         self.assertIn("world-zero", subjects)
         self.assertIn("WorkBridgeMCP", subjects)
-        for item in subjects.values():
-            self.assertEqual("main", item["default_branch"])
+        self.assertIn("sql-connectome", subjects)
+        self.assertEqual("collab", subjects["masamune"]["default_branch"])
+        for name, item in subjects.items():
+            if name != "masamune":
+                self.assertEqual("main", item["default_branch"])
             self.assertFalse(item["archived"])
             self.assertNotEqual(item["head"], item["tree_sha"])
+
+    def test_currentness_baseline_keeps_blob_overlap_stale(self):
+        baseline = watch.load_currentness_baseline()
+        self.assertEqual(
+            "STALE_PREDECESSOR_24_SUBJECT_SET",
+            baseline["blob_evidence_status"],
+        )
+        self.assertEqual(
+            "NO_49_SUBJECT_BLOB_OVERLAP_CLAIM",
+            baseline["blob_evidence_claim_ceiling"],
+        )
 
 
 class FakeGitHubPublicInventoryClient(watch.GitHubPublicInventoryClient):

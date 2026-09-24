@@ -41,29 +41,30 @@ See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md) and [docs/DIS
 
 Discovery's search space is the **whole accessible portfolio**, not a hand-picked list of favored projects.
 
-Current inventory cut (2026-09-21):
+Current live membership cut (2026-09-24):
 
-- 58 repositories observed;
-- 23 public repositories named in the public census;
-- 35 private repositories included in the inventory calculation but intentionally not named here;
-- exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names;
-- this refresh invalidates the prior 2026-09-19 57/12/45 census as a currentness claim while preserving it as historical evidence.
+- 67 repositories observed;
+- 49 public repositories named in the current public-safe census;
+- 18 private repositories included in aggregate counts but intentionally not named here;
+- 2 archived repositories, both private;
+- the predecessor 59/24/35 census and its 24-public relationship/blob evidence remain historical cut evidence but are stale for whole-current-public-estate claims;
+- exact private membership is intentionally not published as an unkeyed sorted-name digest; Discovery's hardened snapshot path requires a secret-key HMAC commitment.
 
 See:
 
-- [portfolio/PORTFOLIO_CENSUS_V1.json](portfolio/PORTFOLIO_CENSUS_V1.json)
-- [portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json](portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json)
-- [docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md](docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md)
-- [docs/PORTFOLIO_CLUSTER_MAP_V1.md](docs/PORTFOLIO_CLUSTER_MAP_V1.md)
-- [portfolio/CANDIDATE_FAMILIES_V1.json](portfolio/CANDIDATE_FAMILIES_V1.json)
+- [portfolio/PORTFOLIO_CENSUS_20260924_V2.json](portfolio/PORTFOLIO_CENSUS_20260924_V2.json)
+- [docs/PORTFOLIO_CENSUS_REFRESH_20260924_V2.md](docs/PORTFOLIO_CENSUS_REFRESH_20260924_V2.md)
+- [portfolio/PORTFOLIO_CENSUS_V1.json](portfolio/PORTFOLIO_CENSUS_V1.json) — predecessor cut
+- [portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json](portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json) — predecessor cut
+- [portfolio/CANDIDATE_FAMILIES_V1.json](portfolio/CANDIDATE_FAMILIES_V1.json) — predecessor-cut classifications pending refresh
 
 ## Operational public observatory
 
-Discovery's public evidence has a read-only operational loop:
+Discovery's predecessor public evidence has a read-only operational loop. As of the 2026-09-24 census refresh, that loop remains valid for its frozen cut but must be regenerated before being used as a whole-current-public-estate observatory:
 
 1. `tools/check_public_currentness.py` reads the live public GitHub estate and compares repository membership, default branch, exact commit, exact tree, and archive state with the bound public evidence.
 2. When drift is found, `tools/trace_public_impact.py` identifies Discovery artifacts that still contain exact references to the stale commit SHA.
-3. When the public subjects are current, `tools/refresh_public_blob_evidence.py --check` reacquires all 23 exact Git trees and must reproduce both public blob-index shards and the 253-pair overlap scan byte-for-byte.
+3. On the predecessor cut, `tools/refresh_public_blob_evidence.py --check` reacquires 23 exact Git trees and reproduces the corresponding 253-pair overlap scan byte-for-byte. The current 49-public-repository cut requires a new evidence generation before equivalent completeness claims are valid.
 4. `.github/workflows/discovery-public-currentness.yml` runs the live check every six hours after landing, on demand, and on relevant pull requests.
 
 The workflow never refreshes evidence automatically. A stale result is a review trigger, not mutation authority.
