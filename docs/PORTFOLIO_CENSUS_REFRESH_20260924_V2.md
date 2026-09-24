@@ -6,8 +6,8 @@ Status: live membership refresh / architecture evidence invalidation notice / no
 
 Live GitHub inventory for `thebrazenbeard` now contains:
 
-- 66 repositories total;
-- 48 public;
+- 67 repositories total;
+- 49 public;
 - 18 private;
 - 2 archived, both private.
 
@@ -17,7 +17,7 @@ This is a material portfolio topology change. Discovery must not continue treati
 
 ## Newly public relative to the predecessor public set
 
-The following 24 repositories are publicly nameable in the 2026-09-24 cut but were not in the prior published 24-repository set:
+The following 25 repositories are publicly nameable in the 2026-09-24 cut but were not in the prior published 24-repository set:
 
 - RepairTracker
 - bugops
@@ -75,9 +75,9 @@ Failing closed here is preferable to turning a public repository into a dictiona
 ## Next Discovery frontier
 
 1. Generate a fresh hardened portfolio snapshot with `tools/build_portfolio_snapshot.py` using an authorized private census key.
-2. Intake/classify all 24 newly public subjects.
-3. Rebuild the public relationship graph against all 48 public subjects.
-4. Re-run exact public blob overlap evidence for the 48-subject set.
+2. Intake/classify all 25 newly public subjects.
+3. Rebuild the public relationship graph against all 49 public subjects.
+4. Re-run exact public blob overlap evidence for the 49-subject set.
 5. Re-run architecture-observatory validation.
 6. Only then replace predecessor whole-public-estate architectural claims with the new cut.
 
