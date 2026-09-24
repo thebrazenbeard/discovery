@@ -13,10 +13,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CENSUS = ROOT / "portfolio" / "PORTFOLIO_CENSUS_V1.json"
-PUBLIC_BLOB_SHARDS = (
-    ROOT / "experiments" / "public_blob_index_v1" / "SHARD_A.json",
-    ROOT / "experiments" / "public_blob_index_v1" / "SHARD_B.json",
+CURRENTNESS_BASELINE = (
+    ROOT / "portfolio" / "PUBLIC_CURRENTNESS_BASELINE_20260924_V2.json"
 )
 GIT_OID = re.compile(r"^[0-9a-f]{40}$")
 SELF_CURRENTNESS_SUBJECT = "discovery"
@@ -46,55 +44,60 @@ def _load(path: Path) -> dict[str, Any]:
     return payload
 
 
+def load_currentness_baseline(
+    *,
+    baseline_path: Path = CURRENTNESS_BASELINE,
+) -> dict[str, Any]:
+    baseline = _load(baseline_path)
+    if baseline.get("schema") != "DISCOVERY_PUBLIC_CURRENTNESS_BASELINE_V2":
+        raise PublicCurrentnessError("unexpected public currentness baseline schema")
+    repositories = baseline.get("repositories")
+    if not isinstance(repositories, list) or not repositories:
+        raise PublicCurrentnessError(
+            "public currentness baseline repositories must be a non-empty list"
+        )
+    if baseline.get("repository_count") != len(repositories):
+        raise PublicCurrentnessError(
+            "public currentness baseline repository_count mismatch"
+        )
+    return baseline
+
+
 def load_expected_public_subjects(
     *,
-    census_path: Path = CENSUS,
-    shard_paths: tuple[Path, ...] = PUBLIC_BLOB_SHARDS,
+    baseline_path: Path = CURRENTNESS_BASELINE,
 ) -> dict[str, dict[str, Any]]:
-    census = _load(census_path)
-    public_names = census.get("public_repositories")
-    if not isinstance(public_names, list) or not all(
-        isinstance(name, str) and name for name in public_names
-    ):
-        raise PublicCurrentnessError("census public_repositories must be a non-empty string list")
-    if len(public_names) != len(set(public_names)):
-        raise PublicCurrentnessError("census public repository names must be unique")
-
+    baseline = load_currentness_baseline(baseline_path=baseline_path)
+    repositories = baseline["repositories"]
     subjects: dict[str, dict[str, Any]] = {}
-    for path in shard_paths:
-        shard = _load(path)
-        if shard.get("schema") != "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1":
-            raise PublicCurrentnessError(f"unexpected public shard schema: {path.name}")
-        repositories = shard.get("repositories")
-        if not isinstance(repositories, dict):
-            raise PublicCurrentnessError(f"public shard repositories invalid: {path.name}")
-        for name, value in repositories.items():
-            if name in subjects:
-                raise PublicCurrentnessError(f"duplicate public subject across shards: {name}")
-            if not isinstance(value, dict):
-                raise PublicCurrentnessError(f"public subject invalid: {name}")
-            default_branch = _nonempty(
-                value.get("default_branch"), f"{name} expected default_branch"
+    for value in repositories:
+        if not isinstance(value, dict):
+            raise PublicCurrentnessError(
+                "public currentness baseline repository entry must be an object"
             )
-            head = _git_oid(value.get("head"), f"{name} expected head")
-            tree = _git_oid(value.get("tree_sha"), f"{name} expected tree")
-            archived = value.get("archived")
-            if type(archived) is not bool:
-                raise PublicCurrentnessError(f"{name} expected archived must be boolean")
-            subjects[name] = {
-                "name": name,
-                "default_branch": default_branch,
-                "head": head,
-                "tree_sha": tree,
-                "archived": archived,
-            }
-
-    if set(subjects) != set(public_names):
-        missing = sorted(set(public_names) - set(subjects))
-        extra = sorted(set(subjects) - set(public_names))
-        raise PublicCurrentnessError(
-            f"public shard coverage mismatch: missing={missing} extra={extra}"
+        name = _nonempty(value.get("name"), "baseline repository name")
+        if name in subjects:
+            raise PublicCurrentnessError(
+                f"duplicate public subject in baseline: {name}"
+            )
+        default_branch = _nonempty(
+            value.get("default_branch"),
+            f"{name} expected default_branch",
         )
+        head = _git_oid(value.get("head"), f"{name} expected head")
+        tree = _git_oid(value.get("tree_sha"), f"{name} expected tree")
+        archived = value.get("archived")
+        if type(archived) is not bool:
+            raise PublicCurrentnessError(
+                f"{name} expected archived must be boolean"
+            )
+        subjects[name] = {
+            "name": name,
+            "default_branch": default_branch,
+            "head": head,
+            "tree_sha": tree,
+            "archived": archived,
+        }
     return subjects
 
 
@@ -304,6 +307,13 @@ def main(argv: list[str] | None = None) -> int:
             os.environ.get(args.token_env)
         ).inventory(args.owner)
         report = compare_public_subjects(expected, observed)
+        baseline = load_currentness_baseline()
+        report["baseline_schema"] = baseline["schema"]
+        report["baseline_observed_at"] = baseline["observed_at"]
+        report["blob_evidence_status"] = baseline["blob_evidence_status"]
+        report["blob_evidence_claim_ceiling"] = baseline[
+            "blob_evidence_claim_ceiling"
+        ]
         report["observed_at"] = _observed_at()
         report["owner"] = args.owner
         report["acquisition_method"] = (
