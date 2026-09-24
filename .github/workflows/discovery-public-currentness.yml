@@ -56,13 +56,7 @@ jobs:
 
           repro_code=0
           if [[ "$currentness_code" -eq 0 ]]; then
-            blob_status="$(python - <<'PY'
-import json
-from pathlib import Path
-report = json.loads(Path("public-currentness.json").read_text(encoding="utf-8"))
-print(report.get("blob_evidence_status", "UNKNOWN"))
-PY
-)"
+            blob_status="$(python -c 'import json; from pathlib import Path; report=json.loads(Path("public-currentness.json").read_text(encoding="utf-8")); print(report.get("blob_evidence_status", "UNKNOWN"))')"
             if [[ "$blob_status" == "CURRENT" ]]; then
               set +e
               python tools/refresh_public_blob_evidence.py --check \
