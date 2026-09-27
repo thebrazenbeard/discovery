@@ -41,17 +41,20 @@ See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md) and [docs/DIS
 
 Discovery's search space is the **whole accessible portfolio**, not a hand-picked list of favored projects.
 
-Current inventory cut (2026-09-21):
+Current live inventory cut (2026-09-27):
 
-- 58 repositories observed;
-- 23 public repositories named in the public census;
-- 35 private repositories included in the inventory calculation but intentionally not named here;
-- exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names;
-- this refresh invalidates the prior 2026-09-19 57/12/45 census as a currentness claim while preserving it as historical evidence.
+- **71 repositories observed**;
+- **69 active** and **2 archived**;
+- **53 public repositories** named in the V2 public census;
+- **18 private repositories** included in aggregate counts and digest commitments but intentionally not named here;
+- exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names.
+
+The earlier V1 census and its exact-head public observatory remain historical, internally coupled evidence for their older cut; they are not relabeled as current merely because the membership census advanced.
 
 See:
 
-- [portfolio/PORTFOLIO_CENSUS_V1.json](portfolio/PORTFOLIO_CENSUS_V1.json)
+- [portfolio/PORTFOLIO_CENSUS_V2.json](portfolio/PORTFOLIO_CENSUS_V2.json) — current membership/visibility census
+- [portfolio/PORTFOLIO_CENSUS_V1.json](portfolio/PORTFOLIO_CENSUS_V1.json) — historical observatory-bound census
 - [portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json](portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json)
 - [docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md](docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md)
 - [docs/PORTFOLIO_CLUSTER_MAP_V1.md](docs/PORTFOLIO_CLUSTER_MAP_V1.md)
@@ -59,7 +62,9 @@ See:
 
 ## Operational public observatory
 
-Discovery's public evidence has a read-only operational loop:
+The existing V1 public observatory is **historical exact-head evidence for its bound public cut**, not a current 53-public-repository scan. Its read-only mechanics remain useful, but the blob shards, pair counts, relationship graph, and intake bindings must be regenerated together before they can claim the 2026-09-27 public estate.
+
+Its operational loop is:
 
 1. `tools/check_public_currentness.py` reads the live public GitHub estate and compares repository membership, default branch, exact commit, exact tree, and archive state with the bound public evidence.
 2. When drift is found, `tools/trace_public_impact.py` identifies Discovery artifacts that still contain exact references to the stale commit SHA.
