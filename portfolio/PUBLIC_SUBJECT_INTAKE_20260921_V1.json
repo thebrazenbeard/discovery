@@ -1,6 +1,6 @@
 {
   "schema": "DISCOVERY_PUBLIC_SUBJECT_INTAKE_V1",
-  "observed_date": "2026-09-29",
+  "observed_date": "2026-09-30",
   "prior_public_cut": {
     "observed_date": "2026-09-19",
     "public_count": 12,
@@ -28,44 +28,13 @@
     "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
   },
   "current_public_cut": {
-    "observed_date": "2026-09-29",
-    "public_count": 55,
-    "public_names_sha256": "eb4923d21b1d062c905acd76884f32e0cd9405ba2ecdbfa076f807512b33a9a1"
+    "observed_date": "2026-09-30",
+    "public_count": 57,
+    "public_names_sha256": "112028b82ae5eaca484908612721cea05df4bbb6b4861262dcbc587c98292d64"
   },
   "scope": "Repositories publicly nameable in the current census that were not named in the prior public census.",
   "authority_ceiling": "OBSERVED_CLASSIFICATION_INPUT_ONLY",
   "subjects": [
-    {
-      "repo": "thebrazenbeard/Attune",
-      "ref": "main@46461057e4d9ea25ec91a051fc17020e1113329a",
-      "primary_families": [
-        "DOMAIN_NEGATIVE_CONTROLS"
-      ],
-      "observed_role": "Relationship-first AI companion product/research subject whose identity, continuity, preferences, boundaries, and relationship semantics should remain product-owned.",
-      "disposition": "NEGATIVE_CONTROL_ANCHOR",
-      "next_question": "Which generic memory/provenance/runtime mechanics can sit underneath Attune without turning relationship semantics, consent, or persona identity into shared infrastructure?"
-    },
-    {
-      "repo": "thebrazenbeard/RepairTracker",
-      "ref": "main@cd7c6f27d27a03130d6e793d69634005a130dc3a",
-      "primary_families": [
-        "UNCLASSIFIED_CURRENTNESS_INTAKE"
-      ],
-      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
-      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
-      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
-    },
-    {
-      "repo": "thebrazenbeard/WorkBridgeMCP",
-      "ref": "main@f51a75d927346a172bb7cc3e4e3f18cd3f52d701",
-      "primary_families": [
-        "COORDINATION_TRANSPORT",
-        "VERA_RUNTIME_CONTROL"
-      ],
-      "observed_role": "Public workstation-bridge repository whose current main is a stub while PR #5 contains the qualified implementation candidate.",
-      "disposition": "RUNTIME_BRIDGE_CANDIDATE_NOT_CURRENT_RUNTIME",
-      "next_question": "Complete exact-head review/canonicalization of PR #5, then separately verify installation and MCP client/runtime registration before treating WorkBridge as consumed."
-    },
     {
       "repo": "thebrazenbeard/abil",
       "ref": "main@a93e345da27028df77e8c9047d1d32780038550b",
@@ -75,6 +44,16 @@
       "observed_role": "Brownfield industrial adaptive intelligence/reconstruction subject with explicit read-only shadow-mode and safety/action-gateway separation.",
       "disposition": "NO_SECOND_PUBLIC_INDUSTRIAL_HANDOFF_SUBJECT_FOUND_CURRENT_CUT",
       "next_question": "Keep the public handoff candidate held until a second industrial evidence/replay subject appears or a privacy-preserving opaque private consumer is independently attested."
+    },
+    {
+      "repo": "thebrazenbeard/Attune",
+      "ref": "main@46461057e4d9ea25ec91a051fc17020e1113329a",
+      "primary_families": [
+        "DOMAIN_NEGATIVE_CONTROLS"
+      ],
+      "observed_role": "Relationship-first AI companion product/research subject whose identity, continuity, preferences, boundaries, and relationship semantics should remain product-owned.",
+      "disposition": "NEGATIVE_CONTROL_ANCHOR",
+      "next_question": "Which generic memory/provenance/runtime mechanics can sit underneath Attune without turning relationship semantics, consent, or persona identity into shared infrastructure?"
     },
     {
       "repo": "thebrazenbeard/axle",
@@ -88,7 +67,7 @@
     },
     {
       "repo": "thebrazenbeard/bt2",
-      "ref": "main@66ecc19b60036c14f6c0327787bddf9e2cb6b132",
+      "ref": "main@8d9b07d165350c341538be56cdfc919b729fe96b",
       "primary_families": [
         "COGNITIVE_BASE_OVERLAP"
       ],
@@ -138,7 +117,7 @@
     },
     {
       "repo": "thebrazenbeard/deepmemorystorage",
-      "ref": "main@fe73b7eee2e8b2498ff994c57e46080de329a0ef",
+      "ref": "main@3199b05a24411ed1b3a3561fe90866adf9c74d14",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -178,7 +157,7 @@
     },
     {
       "repo": "thebrazenbeard/god-brain",
-      "ref": "main@47ced181ef46e4481b875d9279d21dcd540f795e",
+      "ref": "main@495c2b42932153cba0926744d04a69bc34557f81",
       "primary_families": [
         "COGNITIVE_BASE_OVERLAP",
         "EXPERIMENT_MECHANICS"
@@ -199,7 +178,7 @@
     },
     {
       "repo": "thebrazenbeard/ingest",
-      "ref": "main@9c1a514f5140c89c0eb5c3c6fda5f9744436b25f",
+      "ref": "main@27764c9fb97c84d178a3f66e0da2d669df645ed6",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -229,7 +208,7 @@
     },
     {
       "repo": "thebrazenbeard/masamune",
-      "ref": "main@9cffd4dc1f4c7765b0f15664a9202248a2027a24",
+      "ref": "main@25653790d59080cda0b6d6e57b8a4cd64d1ee2b5",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -260,7 +239,7 @@
     },
     {
       "repo": "thebrazenbeard/personification",
-      "ref": "main@8c6cf04c45c83447801db997eac843968c0991c6",
+      "ref": "main@31610e915047af46aa3242190a57baedaed7fbfb",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -270,7 +249,7 @@
     },
     {
       "repo": "thebrazenbeard/pro-run",
-      "ref": "main@5bbbfe4a88402fc582ad923d5800ab52e7469e83",
+      "ref": "main@0ffc95351db34afed091c3239614f57f371c04ad",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -280,7 +259,7 @@
     },
     {
       "repo": "thebrazenbeard/project-achilles",
-      "ref": "main@6776d8c059e3f9ad791a47a0b62bb56588332968",
+      "ref": "main@99bc4e8cf7bd60d022fb25222d701a8cf42f80c0",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -290,7 +269,17 @@
     },
     {
       "repo": "thebrazenbeard/project-lantern",
-      "ref": "main@c6d5e54bfbace7b5cf16cbd061a5556516941e5e",
+      "ref": "main@79b730ed4d1d3d7486902a725ced39854e0ffb47",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/RepairTracker",
+      "ref": "main@cd7c6f27d27a03130d6e793d69634005a130dc3a",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -351,6 +340,16 @@
       "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
     },
     {
+      "repo": "thebrazenbeard/thebrazenbeard",
+      "ref": "main@83ea2e083ccbf83ad5215ca53a9d5a00d16bb0d0",
+      "primary_families": [
+        "PORTFOLIO_PRESENTATION"
+      ],
+      "observed_role": "Public GitHub profile and portfolio presentation surface; descriptive topology is not runtime or currentness authority.",
+      "disposition": "PRESENTATION_ONLY_CLASSIFICATION_RECORDED",
+      "next_question": "Keep profile claims subordinate to canonical repository, qualification, installation and runtime evidence."
+    },
+    {
       "repo": "thebrazenbeard/unbound-sol",
       "ref": "main@d4284dd1f044e506bb85554856c00497d6790d44",
       "primary_families": [
@@ -373,7 +372,7 @@
     },
     {
       "repo": "thebrazenbeard/vera",
-      "ref": "main@a267e7d555e2c15e51a2e578c1e08095091552f0",
+      "ref": "main@788b14bb97ccd5f81506d892fbdd557323680bb0",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -382,8 +381,8 @@
       "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
     },
     {
-      "repo": "thebrazenbeard/vera-R9A0",
-      "ref": "main@287a85cb5f2f6f553cfbb336cb2e03aa7b1c8d01",
+      "repo": "thebrazenbeard/vera_model_training",
+      "ref": "main@08a69c98312dd5aab437d4996e12bbb34a5900c2",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -393,7 +392,7 @@
     },
     {
       "repo": "thebrazenbeard/vera-control-plane",
-      "ref": "main@3916aaa7ae2825020c07057968c7a151d92d53de",
+      "ref": "main@b86143e50ba41d05eab19d5a300662afeda60d6e",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -403,7 +402,7 @@
     },
     {
       "repo": "thebrazenbeard/vera-habitat",
-      "ref": "main@6ae63ffa05c37711f34328ebd6a9500fe66a08e9",
+      "ref": "main@82cf6a625e417ced00205f66be1e76dc396ab617",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -424,7 +423,17 @@
     },
     {
       "repo": "thebrazenbeard/vera-mono",
-      "ref": "main@88d58f95216b6d76556040011b2931f894a109b5",
+      "ref": "main@413397e51bce35d0a36f00cf0ca2c876ca720b44",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/vera-R9A0",
+      "ref": "main@287a85cb5f2f6f553cfbb336cb2e03aa7b1c8d01",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
@@ -443,16 +452,6 @@
       "next_question": "Validate a VeraMesh source/payload handoff while retaining DSM package/install/migration authority locally."
     },
     {
-      "repo": "thebrazenbeard/vera_model_training",
-      "ref": "main@3ea9b345988201d78ad9c073254d9d3df15c9ed9",
-      "primary_families": [
-        "UNCLASSIFIED_CURRENTNESS_INTAKE"
-      ],
-      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
-      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
-      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
-    },
-    {
       "repo": "thebrazenbeard/voss",
       "ref": "main@36a623d3a158e5aef521d42e378bafacd67d3de5",
       "primary_families": [
@@ -463,19 +462,41 @@
       "next_question": "Revisit only when public source exposes an audit/review contract, receipt, exact-head binding, or implementation that can be compared mechanically."
     },
     {
+      "repo": "thebrazenbeard/workbridge",
+      "ref": "main@7caab29eb5667897a0a03d0ce67d733380b01685",
+      "primary_families": [
+        "WORKSTATION_RUNTIME",
+        "DERIVED_IMPLEMENTATION_LINEAGE"
+      ],
+      "observed_role": "Standalone bounded Go MCP workstation server plus Synology packaging, explicitly derived from an earlier WorkBridgeMCP source cut and now independently evolving.",
+      "disposition": "DERIVED_RUNTIME_LINEAGE_CLASSIFICATION_RECORDED",
+      "next_question": "Track donor-patch currentness and qualify source/build/package changes independently from WorkBridgeMCP and WorkBridge Commander."
+    },
+    {
       "repo": "thebrazenbeard/workbridgecommander",
-      "ref": "main@fe347db4a3a555bfc250ee2c61a64aabe9c8e553",
+      "ref": "main@c2b95be79ca011a539c20bfee60fcbc46cfea177",
       "primary_families": [
         "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
       "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
       "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
       "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/WorkBridgeMCP",
+      "ref": "main@f091f6be6e85f489e3e7839e10612204b89a4a9e",
+      "primary_families": [
+        "COORDINATION_TRANSPORT",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "observed_role": "Public workstation-bridge repository whose current main is a stub while PR #5 contains the qualified implementation candidate.",
+      "disposition": "RUNTIME_BRIDGE_CANDIDATE_NOT_CURRENT_RUNTIME",
+      "next_question": "Complete exact-head review/canonicalization of PR #5, then separately verify installation and MCP client/runtime registration before treating WorkBridge as consumed."
     }
   ],
   "anti_cherry_pick_result": {
-    "subjects_expected": 43,
-    "subjects_recorded": 43,
+    "subjects_expected": 45,
+    "subjects_recorded": 45,
     "rule": "Every repository newly public relative to the bound prior public census receives an explicit disposition; currentness intake does not imply semantic classification."
   },
   "validation_ceiling": "Current public list/count/digest and the exact historical prior-public cut are source-validated. Private/all-name digests remain externally supplied commitments and this public artifact does not claim content-wide proof that no private name occurs anywhere."
