@@ -1,6 +1,7 @@
 import importlib.util
 import pathlib
 import sys
+import tempfile
 import unittest
 
 
@@ -57,6 +58,113 @@ class PublicBlobReproducerTests(unittest.TestCase):
             "classify census membership before blob refresh",
         ):
             reproducer.render_artifacts_from_subjects(subjects)
+
+    def test_explicit_set_change_repartitions_deterministically(self):
+        subjects = reproducer.subjects_from_committed_shards()
+        subjects["new-public-repository"] = {
+            "name": "new-public-repository",
+            "default_branch": "main",
+            "head": "1" * 40,
+            "tree_sha": "2" * 40,
+            "archived": False,
+            "blobs": [
+                {"path": "README.md", "sha": "3" * 40, "size": 7},
+            ],
+        }
+
+        rendered = reproducer.render_artifacts_from_subjects(
+            subjects,
+            allow_set_change=True,
+        )
+        shard_payloads = [
+            __import__("json").loads(rendered[path])
+            for path in reproducer.SHARD_PATHS
+        ]
+        names = {
+            name
+            for shard in shard_payloads
+            for name in shard["repositories"]
+        }
+        self.assertEqual(set(subjects), names)
+
+        scan = __import__("json").loads(rendered[reproducer.SCAN_PATH])
+        self.assertEqual(len(subjects), scan["repository_count"])
+        self.assertEqual(
+            len(subjects) * (len(subjects) - 1) // 2,
+            scan["pair_count"],
+        )
+        self.assertEqual(
+            rendered,
+            reproducer.render_artifacts_from_subjects(
+                subjects,
+                allow_set_change=True,
+            ),
+        )
+
+    def test_live_collection_accepts_explicit_repository_set_change(self):
+        from unittest.mock import patch
+
+        committed = reproducer.subjects_from_committed_shards()
+        discovery = committed["discovery"]
+        new_subject = {
+            "name": "new-public-repository",
+            "default_branch": "main",
+            "head": "1" * 40,
+            "tree_sha": "2" * 40,
+            "archived": False,
+        }
+
+        class FakeClient:
+            def inventory(self, owner):
+                return {
+                    "discovery": {
+                        key: discovery[key]
+                        for key in (
+                            "name",
+                            "default_branch",
+                            "head",
+                            "tree_sha",
+                            "archived",
+                        )
+                    },
+                    "new-public-repository": dict(new_subject),
+                }
+
+            def recursive_blobs(self, owner, subject):
+                return [{"path": "README.md", "sha": "3" * 40, "size": 7}]
+
+        with patch.object(
+            reproducer,
+            "GitHubPublicBlobClient",
+            return_value=FakeClient(),
+        ), patch.object(
+            reproducer,
+            "load_expected_public_subjects",
+            return_value={"discovery": discovery},
+        ):
+            result = reproducer.collect_live_subjects(
+                "owner",
+                token=None,
+                allow_set_change=True,
+            )
+
+        self.assertEqual(
+            [{"path": "README.md", "sha": "3" * 40, "size": 7}],
+            result["new-public-repository"]["blobs"],
+        )
+        self.assertEqual(
+            discovery["blobs"],
+            result["discovery"]["blobs"],
+        )
+
+    def test_write_rendered_preserves_exact_lf_bytes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = pathlib.Path(tmp) / "artifact.json"
+            reproducer._write_rendered({path: "{\n  \"ok\": true\n}\n"})
+            self.assertEqual(
+                b'{\n  "ok": true\n}\n',
+                path.read_bytes(),
+            )
 
     def test_recursive_tree_rejects_truncation(self):
         class FakeClient(reproducer.GitHubPublicBlobClient):

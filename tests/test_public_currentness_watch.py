@@ -98,7 +98,11 @@ class PublicCurrentnessComparisonTests(unittest.TestCase):
 class PublicCurrentnessBaselineTests(unittest.TestCase):
     def test_repository_baseline_loads_exact_current_public_set(self):
         subjects = watch.load_expected_public_subjects()
-        self.assertEqual(24, len(subjects))
+        census = watch._load(watch.CENSUS)
+        self.assertEqual(
+            len(census["public_repositories"]),
+            len(subjects),
+        )
         self.assertIn("discovery", subjects)
         self.assertIn("world-zero", subjects)
         self.assertIn("WorkBridgeMCP", subjects)
