@@ -197,6 +197,7 @@ def render_artifacts_from_subjects(
     *,
     root: Path = ROOT,
     observed_date: str | None = None,
+    allow_set_change: bool = False,
 ) -> dict[Path, str]:
     shard_paths = tuple(
         root / path.relative_to(ROOT) if root != ROOT else path
@@ -212,7 +213,8 @@ def render_artifacts_from_subjects(
         for shard in shard_payloads
         for name in shard.get("repositories", {})
     }
-    if template_names != set(live_subjects):
+    set_changed = template_names != set(live_subjects)
+    if set_changed and not allow_set_change:
         missing = sorted(template_names - set(live_subjects))
         added = sorted(set(live_subjects) - template_names)
         raise BlobEvidenceError(
@@ -222,6 +224,73 @@ def render_artifacts_from_subjects(
 
     rendered: dict[Path, str] = {}
     canonical_subjects: dict[str, dict[str, Any]] = {}
+
+    if set_changed:
+        names = sorted(live_subjects)
+        split = math.ceil(len(names) / len(shard_paths))
+        shard_name_sets = (
+            names[:split],
+            names[split:],
+        )
+        for path, shard, shard_names in zip(
+            shard_paths,
+            shard_payloads,
+            shard_name_sets,
+        ):
+            if shard.get("schema") != "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1":
+                raise BlobEvidenceError(f"unexpected shard schema: {path.name}")
+            if observed_date is not None:
+                shard["observed_date"] = observed_date
+            repositories: dict[str, dict[str, Any]] = {}
+            for name in shard_names:
+                subject = copy.deepcopy(live_subjects[name])
+                subject.pop("name", None)
+                repositories[name] = subject
+                canonical_subjects[name] = subject
+            shard["repositories"] = repositories
+            rendered[path] = _render(shard)
+
+        source_bindings = [
+            {
+                "path": path.relative_to(root).as_posix(),
+                "blob": _git_blob_sha1_text(rendered[path]),
+            }
+            for path in shard_paths
+        ]
+        if scan.get("schema") != "DISCOVERY_PUBLIC_BLOB_OVERLAP_SCAN_V1":
+            raise BlobEvidenceError("unexpected public blob overlap scan schema")
+        if observed_date is not None:
+            scan["observed_date"] = observed_date
+        scan["source_shards"] = source_bindings
+        scan["repository_count"] = len(canonical_subjects)
+        scan["pair_count"] = (
+            len(canonical_subjects) * (len(canonical_subjects) - 1) // 2
+        )
+        prepared = {
+            name: _prepare_subject(subject)
+            for name, subject in canonical_subjects.items()
+        }
+        scan["repositories"] = {
+            name: {
+                "head": canonical_subjects[name]["head"],
+                "tree_sha": canonical_subjects[name]["tree_sha"],
+                "files": prepared[name]["files"],
+                "total_blob_bytes": prepared[name]["total"],
+            }
+            for name in names
+        }
+        refreshed_pairs = [
+            _pair_metrics(a, b, prepared, canonical_subjects)
+            for index, a in enumerate(names)
+            for b in names[index + 1 :]
+        ]
+        scan["pairs"] = refreshed_pairs
+        summary = scan.get("summary")
+        if not isinstance(summary, dict):
+            raise BlobEvidenceError("scan summary template missing")
+        _refresh_summary(summary, refreshed_pairs, canonical_subjects)
+        rendered[scan_path] = _render(scan)
+        return rendered
 
     for path, shard in zip(shard_paths, shard_payloads):
         if shard.get("schema") != "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1":
@@ -412,12 +481,13 @@ def collect_live_subjects(
     owner: str,
     *,
     token: str | None,
+    allow_set_change: bool = False,
 ) -> dict[str, dict[str, Any]]:
     client = GitHubPublicBlobClient(token)
     observed = client.inventory(owner)
 
     expected = load_expected_public_subjects()
-    if set(observed) != set(expected):
+    if set(observed) != set(expected) and not allow_set_change:
         missing = sorted(set(expected) - set(observed))
         added = sorted(set(observed) - set(expected))
         raise BlobEvidenceError(
@@ -446,7 +516,7 @@ def _check_rendered(rendered: dict[Path, str]) -> list[str]:
 
 def _write_rendered(rendered: dict[Path, str]) -> None:
     for path, text in rendered.items():
-        path.write_text(text, encoding="utf-8")
+        path.write_bytes(text.encode("utf-8"))
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -458,6 +528,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--owner", default="thebrazenbeard")
     parser.add_argument("--token-env", default="GITHUB_TOKEN")
     parser.add_argument("--observed-date")
+    parser.add_argument(
+        "--accept-set-change",
+        action="store_true",
+        help=(
+            "explicitly accept live public repository membership changes and "
+            "deterministically repartition the evidence shards"
+        ),
+    )
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--write", action="store_true")
@@ -471,10 +549,12 @@ def main(argv: list[str] | None = None) -> int:
         live = collect_live_subjects(
             args.owner,
             token=os.environ.get(args.token_env),
+            allow_set_change=args.accept_set_change,
         )
         rendered = render_artifacts_from_subjects(
             live,
             observed_date=args.observed_date,
+            allow_set_change=args.accept_set_change,
         )
     except (BlobEvidenceError, PublicCurrentnessError, KeyError) as exc:
         print(str(exc), file=sys.stderr)

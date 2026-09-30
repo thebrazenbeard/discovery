@@ -8,11 +8,11 @@ Parent exact subject:
 
 ## What the real snapshot exercise found
 
-The 2026-09-22 live GitHub inventory still reports:
+The 2026-09-29 live GitHub inventory still reports:
 
 - 58 repositories total;
 - 23 public;
-- 35 private;
+- 19 private;
 - the same 23 public repository names as Discovery's 2026-09-21 live-intake cut.
 
 All 23 public default-head commit SHAs also still match the heads recorded in the prior public blob-index shards.

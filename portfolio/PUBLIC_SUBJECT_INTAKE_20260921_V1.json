@@ -1,6 +1,6 @@
 {
   "schema": "DISCOVERY_PUBLIC_SUBJECT_INTAKE_V1",
-  "observed_date": "2026-09-22",
+  "observed_date": "2026-09-29",
   "prior_public_cut": {
     "observed_date": "2026-09-19",
     "public_count": 12,
@@ -28,16 +28,16 @@
     "public_names_sha256": "290a9a832b1c6a51dc0288de6892591fdbf5fd904d875782005d2b2d44197d34"
   },
   "current_public_cut": {
-    "observed_date": "2026-09-22",
-    "public_count": 24,
-    "public_names_sha256": "a35c5bb3e0b99e99592b2e9535db1e2bf9a8bfc2582f113ccc1547c3607ae86e"
+    "observed_date": "2026-09-29",
+    "public_count": 55,
+    "public_names_sha256": "eb4923d21b1d062c905acd76884f32e0cd9405ba2ecdbfa076f807512b33a9a1"
   },
   "scope": "Repositories publicly nameable in the current census that were not named in the prior public census.",
   "authority_ceiling": "OBSERVED_CLASSIFICATION_INPUT_ONLY",
   "subjects": [
     {
       "repo": "thebrazenbeard/Attune",
-      "ref": "main@eff6f9eb250a6f7684459eadf0695340053201da",
+      "ref": "main@46461057e4d9ea25ec91a051fc17020e1113329a",
       "primary_families": [
         "DOMAIN_NEGATIVE_CONTROLS"
       ],
@@ -46,8 +46,29 @@
       "next_question": "Which generic memory/provenance/runtime mechanics can sit underneath Attune without turning relationship semantics, consent, or persona identity into shared infrastructure?"
     },
     {
+      "repo": "thebrazenbeard/RepairTracker",
+      "ref": "main@cd7c6f27d27a03130d6e793d69634005a130dc3a",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/WorkBridgeMCP",
+      "ref": "main@f51a75d927346a172bb7cc3e4e3f18cd3f52d701",
+      "primary_families": [
+        "COORDINATION_TRANSPORT",
+        "VERA_RUNTIME_CONTROL"
+      ],
+      "observed_role": "Public workstation-bridge repository whose current main is a stub while PR #5 contains the qualified implementation candidate.",
+      "disposition": "RUNTIME_BRIDGE_CANDIDATE_NOT_CURRENT_RUNTIME",
+      "next_question": "Complete exact-head review/canonicalization of PR #5, then separately verify installation and MCP client/runtime registration before treating WorkBridge as consumed."
+    },
+    {
       "repo": "thebrazenbeard/abil",
-      "ref": "main@0812d9780ce1648820269fa142a43e17030ef793",
+      "ref": "main@a93e345da27028df77e8c9047d1d32780038550b",
       "primary_families": [
         "INDUSTRIAL_DIAGNOSTIC_CHAIN"
       ],
@@ -56,8 +77,18 @@
       "next_question": "Keep the public handoff candidate held until a second industrial evidence/replay subject appears or a privacy-preserving opaque private consumer is independently attested."
     },
     {
+      "repo": "thebrazenbeard/axle",
+      "ref": "main@d470544fb64875cb4789472ad4ef1b30f1fa65ee",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/bt2",
-      "ref": "main@30e81cadd94fae117a7f6875523c03251c7c9f6e",
+      "ref": "main@66ecc19b60036c14f6c0327787bddf9e2cb6b132",
       "primary_families": [
         "COGNITIVE_BASE_OVERLAP"
       ],
@@ -66,8 +97,88 @@
       "next_question": "Establish provenance/lineage and maintenance economics before selecting any base/overlay or successor direction."
     },
     {
+      "repo": "thebrazenbeard/bugops",
+      "ref": "main@1d35bcbd16da24c7635a004845de1390de850b4e",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/build-team-2.0",
+      "ref": "main@950112a697550b689049da807f2d8176a507c38f",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/ccb-core",
+      "ref": "main@273c93bc46683580024c1521fd2c523a8a6593bd",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/conations",
+      "ref": "main@51948aac796936f0e7c437722e6f52c883e544e9",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/deepmemorystorage",
+      "ref": "main@fe73b7eee2e8b2498ff994c57e46080de329a0ef",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/empathy",
+      "ref": "main@76ebb492827a79b20b3be76fe9f9f48ab860ef1d",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/freerowcochkar",
+      "ref": "main@9ea4eaefe5229ca90d7ae6099dbf30d9e13b64b2",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/fuckup",
+      "ref": "main@a87dea38a58c4cff75bc7d123d87f63a5e110895",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/god-brain",
-      "ref": "main@c0f6af7143aa5916bae96eb1f0ee9c9de6505cf5",
+      "ref": "main@47ced181ef46e4481b875d9279d21dcd540f795e",
       "primary_families": [
         "COGNITIVE_BASE_OVERLAP",
         "EXPERIMENT_MECHANICS"
@@ -77,8 +188,68 @@
       "next_question": "Perform exact pinned-HC-plus-overlay reconstruction and then measure forward divergence cost."
     },
     {
+      "repo": "thebrazenbeard/hephaestus",
+      "ref": "main@030494fa2cc4c875013a9a4842abe60588c9c709",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/ingest",
+      "ref": "main@9c1a514f5140c89c0eb5c3c6fda5f9744436b25f",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/intranel",
+      "ref": "main@677a1612e8a956760a40b942650b01cf0b22dd33",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/lgcm",
+      "ref": "main@0043c60419de9ef0b52363b62aed8c0a52ef63f5",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/masamune",
+      "ref": "main@9cffd4dc1f4c7765b0f15664a9202248a2027a24",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/meso-crct",
+      "ref": "main@060d0feeb9dc9eb23801082bd8f1c4a7cb06184d",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/noema",
-      "ref": "main@890efdca01cf496ce1b8686d86f8442a149a9d34",
+      "ref": "main@697d1fac6f9fea158994888a861e651ac8fac282",
       "primary_families": [
         "COGNITIVE_BASE_OVERLAP",
         "EXPERIMENT_MECHANICS"
@@ -88,8 +259,48 @@
       "next_question": "Do not force Noema into HC lineage; use it to test whether proposed cognition mechanics are genuinely reusable across distinct architectural hypotheses."
     },
     {
+      "repo": "thebrazenbeard/personification",
+      "ref": "main@8c6cf04c45c83447801db997eac843968c0991c6",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/pro-run",
+      "ref": "main@5bbbfe4a88402fc582ad923d5800ab52e7469e83",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/project-achilles",
+      "ref": "main@6776d8c059e3f9ad791a47a0b62bb56588332968",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/project-lantern",
+      "ref": "main@c6d5e54bfbace7b5cf16cbd061a5556516941e5e",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/semanticatlas",
-      "ref": "main@5669a727b870a490ecee748b2cd712a2fc4a54c5",
+      "ref": "main@beaecc6c64a6a8f90e7b47d4739296a3870b627c",
       "primary_families": [
         "EVIDENCE_PROVENANCE_CUSTODY",
         "SEMANTIC_GROUNDING_PROVENANCE"
@@ -99,8 +310,18 @@
       "next_question": "Test a minimal claim/provenance record without importing Semantic Atlas ontology or admission semantics."
     },
     {
+      "repo": "thebrazenbeard/semiotics",
+      "ref": "main@37117a2097f7f2aa35968fc9db24eacf7240826e",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/spm",
-      "ref": "main@0ab6e6cd32a48a0afa22c8c27ec6bae67220d7e8",
+      "ref": "main@d9ea72798ac892ac75f858177b6ed0c5a6b4c37c",
       "primary_families": [
         "SEMANTIC_GROUNDING_PROVENANCE",
         "EXPERIMENT_MECHANICS"
@@ -110,8 +331,38 @@
       "next_question": "Determine whether a narrow semantic-evidence record is useful to SPM without biasing the model hypothesis toward another repository's representation."
     },
     {
+      "repo": "thebrazenbeard/sql-connectome",
+      "ref": "main@f81ff43e5358f798f23bab8a718bda743c93e930",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/temporal",
+      "ref": "main@0fc7071a6b01e609fb2cdc76a32c73276ab27094",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/unbound-sol",
+      "ref": "main@d4284dd1f044e506bb85554856c00497d6790d44",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/unvtrslr",
-      "ref": "main@903d79c6e47bb9f73bd7700edd35315777e9f5d1",
+      "ref": "main@33edef682181e1bea6b36c5afc588d261f0c1289",
       "primary_families": [
         "SEMANTIC_GROUNDING_PROVENANCE",
         "EXPERIMENT_MECHANICS"
@@ -121,8 +372,48 @@
       "next_question": "Encode one real R2 semantic-claim-control case through a minimal interchange and test losslessness."
     },
     {
+      "repo": "thebrazenbeard/vera",
+      "ref": "main@a267e7d555e2c15e51a2e578c1e08095091552f0",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/vera-R9A0",
+      "ref": "main@287a85cb5f2f6f553cfbb336cb2e03aa7b1c8d01",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/vera-control-plane",
+      "ref": "main@3916aaa7ae2825020c07057968c7a151d92d53de",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
+      "repo": "thebrazenbeard/vera-habitat",
+      "ref": "main@6ae63ffa05c37711f34328ebd6a9500fe66a08e9",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/vera-mesh",
-      "ref": "main@d3bbaa247797dce5f6a26e7006206f37cfef66fe",
+      "ref": "main@98b74ff77981a5478e20a748bbb94565ad9140c8",
       "primary_families": [
         "COORDINATION_TRANSPORT",
         "VERA_RUNTIME_CONTROL"
@@ -132,8 +423,18 @@
       "next_question": "Test a neutral source/build/install/runtime-currentness handoff record without importing VeraPort session authority into packaging."
     },
     {
+      "repo": "thebrazenbeard/vera-mono",
+      "ref": "main@88d58f95216b6d76556040011b2931f894a109b5",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/vera-synology",
-      "ref": "main@1c453331fe2259f2807426aa0b59bad8dac1d0b7",
+      "ref": "main@d13cdefbf817aeba60c673fa4a517575c311da2c",
       "primary_families": [
         "VERA_RUNTIME_CONTROL"
       ],
@@ -142,8 +443,18 @@
       "next_question": "Validate a VeraMesh source/payload handoff while retaining DSM package/install/migration authority locally."
     },
     {
+      "repo": "thebrazenbeard/vera_model_training",
+      "ref": "main@3ea9b345988201d78ad9c073254d9d3df15c9ed9",
+      "primary_families": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
+    },
+    {
       "repo": "thebrazenbeard/voss",
-      "ref": "main@54478372002bb24c6df733092a32abbdd1fa8d3c",
+      "ref": "main@36a623d3a158e5aef521d42e378bafacd67d3de5",
       "primary_families": [
         "EVIDENCE_PROVENANCE_CUSTODY"
       ],
@@ -152,21 +463,20 @@
       "next_question": "Revisit only when public source exposes an audit/review contract, receipt, exact-head binding, or implementation that can be compared mechanically."
     },
     {
-      "repo": "thebrazenbeard/WorkBridgeMCP",
-      "ref": "main@12bcbec3a4bda69e8b9361317feb8e9d9d47b6df",
+      "repo": "thebrazenbeard/workbridgecommander",
+      "ref": "main@fe347db4a3a555bfc250ee2c61a64aabe9c8e553",
       "primary_families": [
-        "COORDINATION_TRANSPORT",
-        "VERA_RUNTIME_CONTROL"
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
-      "observed_role": "Public workstation-bridge repository whose current main is a stub while PR #5 contains the qualified implementation candidate.",
-      "disposition": "RUNTIME_BRIDGE_CANDIDATE_NOT_CURRENT_RUNTIME",
-      "next_question": "Complete exact-head review/canonicalization of PR #5, then separately verify installation and MCP client/runtime registration before treating WorkBridge as consumed."
+      "observed_role": "Public repository present in the current inventory; presence and exact subject are recorded without inferring an architectural role.",
+      "disposition": "UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+      "next_question": "What, if any, architecture or research role is supported by dedicated exact-head inspection of this repository?"
     }
   ],
   "anti_cherry_pick_result": {
-    "subjects_expected": 12,
-    "subjects_recorded": 12,
-    "rule": "Every repository newly nameable relative to the prior public census receives an explicit disposition; lack of immediate candidate generation is itself recorded."
+    "subjects_expected": 43,
+    "subjects_recorded": 43,
+    "rule": "Every repository newly public relative to the bound prior public census receives an explicit disposition; currentness intake does not imply semantic classification."
   },
   "validation_ceiling": "Current public list/count/digest and the exact historical prior-public cut are source-validated. Private/all-name digests remain externally supplied commitments and this public artifact does not claim content-wide proof that no private name occurs anywhere."
 }
