@@ -2,9 +2,9 @@
   "schema_version": "DISCOVERY_RELATIONSHIP_GRAPH_V1",
   "status": "PUBLIC_SAFE_LIVE_GRAPH_HYPOTHESES",
   "inventory_binding": {
-    "observed_date": "2026-09-22",
-    "total_count": 59,
-    "all_names_sha256": "68fca652ca0688b7871c352987ffe68b55d4c0af521802704920b058e2fa943c"
+    "observed_date": "2026-09-29",
+    "total_count": 74,
+    "all_names_sha256": "08d01261a81893236c558f0ae5f8ec5eb211042f8aa391f70faca81439789108"
   },
   "nodes": [
     {
@@ -32,6 +32,17 @@
       ]
     },
     {
+      "id": "axle",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
       "id": "bt2",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -41,6 +52,61 @@
       ],
       "notes": [
         "README describes this repository as the canonical reusable HC-series Hyperconnectome template."
+      ]
+    },
+    {
+      "id": "bugops",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "build-team-2.0",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "ccb-core",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "conations",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "deepmemorystorage",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
       ]
     },
     {
@@ -64,6 +130,39 @@
       "notes": []
     },
     {
+      "id": "empathy",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "freerowcochkar",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "fuckup",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
       "id": "god-brain",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -83,6 +182,72 @@
         "COGNITIVE_BASE_CANDIDATE"
       ],
       "notes": []
+    },
+    {
+      "id": "hephaestus",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "ingest",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "intranel",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "lgcm",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "masamune",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "meso-crct",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
     },
     {
       "id": "mosaic",
@@ -116,14 +281,47 @@
       "notes": []
     },
     {
-      "id": "private-cohort",
-      "kind": "OPAQUE_PRIVATE_COHORT",
-      "privacy": "PRIVATE_OPAQUE",
+      "id": "personification",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
       "labels": [
-        "35_PRIVATE_REPOSITORIES"
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
       "notes": [
-        "Node intentionally hides private repository identities; count bound to the 2026-09-22 census."
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "pro-run",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "project-achilles",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "project-lantern",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
       ]
     },
     {
@@ -134,6 +332,17 @@
         "EXECUTION_ORCHESTRATION"
       ],
       "notes": []
+    },
+    {
+      "id": "RepairTracker",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
     },
     {
       "id": "rezon",
@@ -166,6 +375,17 @@
       ]
     },
     {
+      "id": "semiotics",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
       "id": "spm",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -174,6 +394,28 @@
       ],
       "notes": [
         "Research program for semantics/pragmatics as first-class model targets."
+      ]
+    },
+    {
+      "id": "sql-connectome",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "temporal",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
       ]
     },
     {
@@ -196,6 +438,17 @@
       "notes": []
     },
     {
+      "id": "unbound-sol",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
       "id": "unvtrslr",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -205,6 +458,39 @@
       ],
       "notes": [
         "Adversarial research program for grounded semantic mediation without assumed shared language."
+      ]
+    },
+    {
+      "id": "vera",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "vera-control-plane",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "vera-habitat",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
       ]
     },
     {
@@ -220,6 +506,28 @@
       ]
     },
     {
+      "id": "vera-mono",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
+      "id": "vera-R9A0",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
+    },
+    {
       "id": "vera-synology",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
@@ -229,6 +537,17 @@
       ],
       "notes": [
         "Public packaging/runtime subject for a Synology target."
+      ]
+    },
+    {
+      "id": "vera_model_training",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
+      ],
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
       ]
     },
     {
@@ -254,14 +573,15 @@
       "notes": []
     },
     {
-      "id": "world-zero",
+      "id": "workbridgecommander",
       "kind": "REPOSITORY",
       "privacy": "PUBLIC",
       "labels": [
-        "EXPERIMENT_SYSTEM",
-        "SYSTEMS_SIMULATION"
+        "UNCLASSIFIED_CURRENTNESS_INTAKE"
       ],
-      "notes": []
+      "notes": [
+        "Publicly visible in the 2026-09-29 inventory; this currentness refresh infers no architectural role."
+      ]
     },
     {
       "id": "WorkBridgeMCP",
@@ -273,6 +593,27 @@
       ],
       "notes": [
         "Current main is a stub; usable implementation is tracked separately in WorkBridgeMCP PR #5. Presence does not establish installation or runtime consumption."
+      ]
+    },
+    {
+      "id": "world-zero",
+      "kind": "REPOSITORY",
+      "privacy": "PUBLIC",
+      "labels": [
+        "EXPERIMENT_SYSTEM",
+        "SYSTEMS_SIMULATION"
+      ],
+      "notes": []
+    },
+    {
+      "id": "private-cohort",
+      "kind": "OPAQUE_PRIVATE_COHORT",
+      "privacy": "PRIVATE_OPAQUE",
+      "labels": [
+        "19_PRIVATE_REPOSITORIES"
+      ],
+      "notes": [
+        "Node intentionally hides private repository identities; count bound to the 2026-09-29 census."
       ]
     }
   ],
