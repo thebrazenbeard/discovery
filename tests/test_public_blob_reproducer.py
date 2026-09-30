@@ -36,6 +36,16 @@ class PublicBlobReproducerTests(unittest.TestCase):
                 path.relative_to(ROOT).as_posix(),
             )
 
+    def test_semanticatlas_unicode_filename_is_not_double_decoded(self):
+        # Git tree name bytes C2 B7 represent one U+00B7 middle dot.
+        # An accidental CP1252 hop turns it into U+00C2 U+00B7.
+        subject = reproducer.subjects_from_committed_shards()["semanticatlas"]
+        paths = {blob["path"] for blob in subject["blobs"]}
+        correct = "Vera - Branch \u00b7 Vera Continuum Ingestion.pdf"
+        mojibake = "Vera - Branch \u00c2\u00b7 Vera Continuum Ingestion.pdf"
+        self.assertIn(correct, paths)
+        self.assertNotIn(mojibake, paths)
+
     def test_git_blob_identity_matches_known_empty_blob(self):
         self.assertEqual(
             "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
