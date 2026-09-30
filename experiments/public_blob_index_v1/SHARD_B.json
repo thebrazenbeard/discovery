@@ -1,261 +1,18 @@
 {
   "schema": "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1",
   "shard": "B",
-  "observed_date": "2026-09-29",
+  "observed_date": "2026-09-30",
   "repositories": {
-    "pro-run": {
-      "default_branch": "main",
-      "head": "5bbbfe4a88402fc582ad923d5800ab52e7469e83",
-      "tree_sha": "5a2fb66a887aca61f4dbc64f1d4ce83d7c2ab0ea",
-      "archived": false,
-      "blobs": [
-        {
-          "path": ".github/workflows/test.yml",
-          "sha": "84454ce8567be7967906fc670bc667db1cfe8167",
-          "size": 520
-        },
-        {
-          "path": ".gitignore",
-          "sha": "b31eaaeed42611fb76d67b1503425829e1f5df4d",
-          "size": 114
-        },
-        {
-          "path": "CLA.md",
-          "sha": "8ee8a2c2517d1276f4c4bf7dbfe5789347aea9e5",
-          "size": 2176
-        },
-        {
-          "path": "COMMERCIAL_LICENSE.md",
-          "sha": "fb9c09159a2f870724bc88e09658d2d0cf58abd7",
-          "size": 1241
-        },
-        {
-          "path": "CONTRIBUTING.md",
-          "sha": "6b6e33cee58ed4d72b40e9dabd6f360ab41126c9",
-          "size": 977
-        },
-        {
-          "path": "LICENSE",
-          "sha": "2704e93d980563fcfe7275319d528c93cc43145b",
-          "size": 3884
-        },
-        {
-          "path": "NOTICE",
-          "sha": "5bf32edaa17dc7448f780ecec20413a365423558",
-          "size": 720
-        },
-        {
-          "path": "README.md",
-          "sha": "f4f7a72aa748f134cd9d22591f2f953b112ec6b9",
-          "size": 8911
-        },
-        {
-          "path": "SECURITY.md",
-          "sha": "7a5ac560fd268ae73fe49d42b223e74191aa0a04",
-          "size": 862
-        },
-        {
-          "path": "docs/ARCHITECTURE.md",
-          "sha": "26b5f2f8599d74b98dd66bcc511f59c7880875db",
-          "size": 9531
-        },
-        {
-          "path": "docs/DONOR_BINDINGS.md",
-          "sha": "d1a4cf6709c4320cc24d9e251f80374baab26217",
-          "size": 2768
-        },
-        {
-          "path": "docs/EFFECT_AND_RECOVERY.md",
-          "sha": "e4f3c8cbc2e63e5ec7db5296b139db7e0d11de64",
-          "size": 4006
-        },
-        {
-          "path": "docs/PORTFOLIO_SWEEP_V1.md",
-          "sha": "80ebfe945d1f0ae71364ccebb956d5629b6a885b",
-          "size": 7067
-        },
-        {
-          "path": "docs/WINDOWS_LAPPY_RUNTIME_V1.md",
-          "sha": "ae3f9e5a6019b9f0165004c713f06b381a8fc2d0",
-          "size": 7735
-        },
-        {
-          "path": "examples/minimal.py",
-          "sha": "2efa35ca91a33f6a0157295d047c521303e848fc",
-          "size": 882
-        },
-        {
-          "path": "ops/windows/qwen_http.py",
-          "sha": "957f7038218a548ef1831da6ed4566593fa4f6d3",
-          "size": 4518
-        },
-        {
-          "path": "ops/windows/register-tasks.ps1",
-          "sha": "b23418a039d8738f30e77ddd18b65a6aaee13964",
-          "size": 2604
-        },
-        {
-          "path": "ops/windows/start-prorun.ps1",
-          "sha": "7118207c8e9fe3f91d52f96e7a4d34112e4bbaf0",
-          "size": 1826
-        },
-        {
-          "path": "ops/windows/start-qwen.ps1",
-          "sha": "a726df42e232b0f3461f22473222c100f572ed75",
-          "size": 2419
-        },
-        {
-          "path": "ops/windows/tool_protocol.py",
-          "sha": "c2a55efcafb1710aaa713e53626d084552171d35",
-          "size": 8480
-        },
-        {
-          "path": "ops/windows/watchdog.ps1",
-          "sha": "711601bf3cfb1cec6b829bebd9f0de42a1757d6e",
-          "size": 647
-        },
-        {
-          "path": "pyproject.toml",
-          "sha": "05bf8807bc6522be96245585e33608b684905db2",
-          "size": 650
-        },
-        {
-          "path": "schemas/event-envelope.schema.json",
-          "sha": "28a16c4113c9887d42bb755e6876183afc9be898",
-          "size": 514
-        },
-        {
-          "path": "schemas/run-receipt.schema.json",
-          "sha": "8c332b69138c2ee73a34bd21b45a3b99874b647b",
-          "size": 637
-        },
-        {
-          "path": "schemas/tool-call.schema.json",
-          "sha": "1673603b8e362a2a81184ad3ba0365a620a3b54c",
-          "size": 439
-        },
-        {
-          "path": "schemas/trigger.schema.json",
-          "sha": "34479a863e60229cea415615aef75c1bae96eae8",
-          "size": 490
-        },
-        {
-          "path": "src/prorun/__init__.py",
-          "sha": "1b077571b074d68dbeea398bc805270629dce6a6",
-          "size": 103
-        },
-        {
-          "path": "src/prorun/__main__.py",
-          "sha": "eb53e2f31b2f703ad32ef64b8a41faa3e7d18e08",
-          "size": 48
-        },
-        {
-          "path": "src/prorun/cli.py",
-          "sha": "0b8c602c6031c321af372786d6197ae8dfbb1391",
-          "size": 5859
-        },
-        {
-          "path": "src/prorun/context.py",
-          "sha": "e37ea84eb187589dfc7fff0863c50d6c69dcb294",
-          "size": 2143
-        },
-        {
-          "path": "src/prorun/daemon.py",
-          "sha": "826e5a4c0c25f261ba20ee76e428f611eca9d319",
-          "size": 1012
-        },
-        {
-          "path": "src/prorun/engine.py",
-          "sha": "fc4e23a4fe8f13430e9b92d0d7944eeedaf30e9d",
-          "size": 11464
-        },
-        {
-          "path": "src/prorun/providers/__init__.py",
-          "sha": "0db28d90fb05859691c528e79fd21005fec2400f",
-          "size": 94
-        },
-        {
-          "path": "src/prorun/providers/openai_compatible.py",
-          "sha": "22ddb2e3029d365f94c8817d8381a7d851e4b33d",
-          "size": 4018
-        },
-        {
-          "path": "src/prorun/scheduler.py",
-          "sha": "cbb39f331f96c291ee2429ef9d7252cb81ccff77",
-          "size": 2689
-        },
-        {
-          "path": "src/prorun/store.py",
-          "sha": "d66474e21af9f69d86bd53363459c6bae1c108b4",
-          "size": 24419
-        },
-        {
-          "path": "src/prorun/tools.py",
-          "sha": "b70b0a5760eae6f8ef39b8237c9b9efcb53ca7e8",
-          "size": 21379
-        },
-        {
-          "path": "tests/test_cli.py",
-          "sha": "85020e9117ddaa58d25a0934f2c830689254cbb5",
-          "size": 617
-        },
-        {
-          "path": "tests/test_context.py",
-          "sha": "2b8998dbadca57fb228aac0e012ee6c301357bc0",
-          "size": 882
-        },
-        {
-          "path": "tests/test_daemon.py",
-          "sha": "88b00063857b934de66ff9a59cdd3dfde0ec36e2",
-          "size": 2002
-        },
-        {
-          "path": "tests/test_engine.py",
-          "sha": "8c3afef29c717fb666b206d623e1a1cb1bb0067d",
-          "size": 21306
-        },
-        {
-          "path": "tests/test_event_queue.py",
-          "sha": "4a378e92b53ce63221717e729d2133b30d53c52f",
-          "size": 2227
-        },
-        {
-          "path": "tests/test_example.py",
-          "sha": "a010adf519cc800f235bf80896bf7fb0f1449068",
-          "size": 546
-        },
-        {
-          "path": "tests/test_provider.py",
-          "sha": "eaffbd3fae9635636f6bcbf595c0e60cf8cc6a2f",
-          "size": 2389
-        },
-        {
-          "path": "tests/test_scheduler.py",
-          "sha": "394aef7a4ae74aa6f7e1c68d6b947226a31a9538",
-          "size": 825
-        },
-        {
-          "path": "tests/test_tools.py",
-          "sha": "819d8b62e074c8e395565df8425105da4520b4a8",
-          "size": 4728
-        },
-        {
-          "path": "tests/test_windows_tool_protocol.py",
-          "sha": "f212b101a44057bc795c9f1304a8e72d9475a387",
-          "size": 5583
-        }
-      ]
-    },
     "project-achilles": {
       "default_branch": "main",
-      "head": "6776d8c059e3f9ad791a47a0b62bb56588332968",
-      "tree_sha": "979060c62b5fb3c730c50aaed31200b45dba7f6f",
+      "head": "99bc4e8cf7bd60d022fb25222d701a8cf42f80c0",
+      "tree_sha": "8bb795850ba3c44d7e071c3580dd1681bee82a20",
       "archived": false,
       "blobs": [
         {
           "path": ".github/workflows/verify.yml",
-          "sha": "ac0a49965848798ba688e085463d8c5d0f9ad8cc",
-          "size": 1000
+          "sha": "d98052beca1c5999aa2adc92531b8283b093c4b6",
+          "size": 1125
         },
         {
           "path": "CLA.md",
@@ -291,6 +48,21 @@
           "path": "README.md",
           "sha": "b2b468b69ed5ca7f58c8af8a2a4df4c3b289e3ab",
           "size": 1216
+        },
+        {
+          "path": "security/PROJECT_RUNNER_PORTFOLIO_WAVE_V1_REVIEW.md",
+          "sha": "9bc67d8b41e051be2becd5320162077a6e3c1738",
+          "size": 5724
+        },
+        {
+          "path": "security/portfolio_publication_guard.py",
+          "sha": "6d7e2573afa6c5a5e1b5f84838042a2992512a4e",
+          "size": 4713
+        },
+        {
+          "path": "tests/test_portfolio_publication_guard.py",
+          "sha": "24c4f11c818909fc8419015db0825b0225afb7a7",
+          "size": 3820
         },
         {
           "path": "tests/test_protocol_v2_currentness.py",
@@ -396,8 +168,8 @@
     },
     "project-lantern": {
       "default_branch": "main",
-      "head": "c6d5e54bfbace7b5cf16cbd061a5556516941e5e",
-      "tree_sha": "e41b04236ebd9c195bc3a71d8c2f663931c1efd0",
+      "head": "79b730ed4d1d3d7486902a725ced39854e0ffb47",
+      "tree_sha": "bc89316c8675066f86f75471d8257ca783160e5e",
       "archived": false,
       "blobs": [
         {
@@ -407,8 +179,8 @@
         },
         {
           "path": ".github/workflows/ci.yml",
-          "sha": "e3c0184728c8ed1262e6f529fe3f41ba993323ea",
-          "size": 816
+          "sha": "1668c907e6e456aed25ffb6f0f5ae1450a018abb",
+          "size": 1159
         },
         {
           "path": ".github/workflows/dependency-review.yml",
@@ -442,8 +214,8 @@
         },
         {
           "path": "README.md",
-          "sha": "b08ea1289a452e62cccc36d884a1ae803a39c78f",
-          "size": 2090
+          "sha": "fadeeec069245f02e374d06a8b4fe3119c173495",
+          "size": 2550
         },
         {
           "path": "SECURITY.md",
@@ -451,9 +223,24 @@
           "size": 862
         },
         {
+          "path": "docs/LANTERN_PUBLIC_API_V1.md",
+          "sha": "fdcf1fe68fa100f751b393446b0969d00c7f0a1f",
+          "size": 875
+        },
+        {
+          "path": "portfolio/P0_PROJECT_MANIFEST_V1.json",
+          "sha": "4bd5de537a1746627440cd8a47ee6d0f7ab49cb2",
+          "size": 2191
+        },
+        {
           "path": "projects/lantern/CURRENTNESS_STATUS_V2.md",
           "sha": "4147654bb0c20e191ff2ebc8b288f6f569228877",
           "size": 2212
+        },
+        {
+          "path": "projects/lantern/CURRENTNESS_STATUS_V3.json",
+          "sha": "33e56ebcf946333ce719a5517e2b22d9a41c0c2b",
+          "size": 835
         },
         {
           "path": "projects/lantern/artifacts/benchmark/control/git-markdown-control-v1.md",
@@ -487,8 +274,8 @@
         },
         {
           "path": "pyproject.toml",
-          "sha": "ff9e43a3e06d8d3527d776c860cc6a3af1bae393",
-          "size": 959
+          "sha": "561515f6cba5ae4133884c2389b5cdc31ee20d61",
+          "size": 786
         },
         {
           "path": "src/lantern/__init__.py",
@@ -596,6 +383,11 @@
           "size": 12240
         },
         {
+          "path": "state/continuation/LANTERN_CHAT_EXODUS_20260919_V1.md",
+          "sha": "2b2411285556296dda9fe0a1c410b335bb5219ed",
+          "size": 9524
+        },
+        {
           "path": "tests/lantern/conftest.py",
           "sha": "a67d9b7579a5b97411be7aabfcd2f52ea25ad349",
           "size": 906
@@ -619,6 +411,11 @@
           "path": "tests/lantern/test_currentness_status_v2.py",
           "sha": "17dd299af06895aaabaca0398deff6afc487b8cd",
           "size": 1295
+        },
+        {
+          "path": "tests/lantern/test_currentness_status_v3.py",
+          "sha": "fd60fe1ac3cd56ff10cb84e052962d3153c05872",
+          "size": 1327
         },
         {
           "path": "tests/lantern/test_export_import.py",
@@ -649,8 +446,8 @@
     },
     "project-runner": {
       "default_branch": "main",
-      "head": "2d7a0db547a001a228dc55c77689c4d8d0e621a3",
-      "tree_sha": "80a611311692e204b9c5d4c182b5f3735321cfad",
+      "head": "ee17ce504018aff2eb26c9a71e16e4832ebee6bf",
+      "tree_sha": "5bffde67a5be4458ac1a4322186464459e0a4458",
       "archived": false,
       "blobs": [
         {
@@ -705,8 +502,8 @@
         },
         {
           "path": "README.md",
-          "sha": "623a53cf59700201ff71feba5fc09502e011af73",
-          "size": 15559
+          "sha": "ab0403c437c7727d4a0f72a6b2c89e1922cca77b",
+          "size": 16889
         },
         {
           "path": "SECURITY.md",
@@ -735,8 +532,8 @@
         },
         {
           "path": "docs/OPERATOR_EXECUTION_V1.md",
-          "sha": "3f74aac5db25b11a6b7055871f1ca598b7a09dde",
-          "size": 12676
+          "sha": "12e0e14bd6c057f4755c87b28a7b10c795dba812",
+          "size": 12758
         },
         {
           "path": "docs/PORTFOLIO_ADVANCEMENT_WAVE_V1.md",
@@ -935,8 +732,8 @@
         },
         {
           "path": "runner/cli.py",
-          "sha": "eae5cd9d1dc74d0e4aabf5b32e490d51ffd93504",
-          "size": 50699
+          "sha": "122ac390c7920268887bea29f28c83d2d54c1949",
+          "size": 56637
         },
         {
           "path": "runner/collisions.py",
@@ -970,8 +767,8 @@
         },
         {
           "path": "runner/execution_promotion.py",
-          "sha": "6219e6078cbd04631b45b3721852bf1e819e3b3f",
-          "size": 45261
+          "sha": "db45803ef3bd7f082c9e17e32510771f2a9f3d71",
+          "size": 45811
         },
         {
           "path": "runner/frontier.py",
@@ -1225,8 +1022,8 @@
         },
         {
           "path": "tests/integration/test_cli.py",
-          "sha": "bdd28ad05abd9ca7356b057e0f07153f03235a9b",
-          "size": 46845
+          "sha": "9750ca203940c5c7819105fd5573e474e94dbead",
+          "size": 47870
         },
         {
           "path": "tests/integration/test_execution_promotion_gate.py",
@@ -1295,8 +1092,8 @@
         },
         {
           "path": "tests/integration/test_promoted_github_source_write.py",
-          "sha": "6aad2c2a71309606d939b33be57dda5dc63b37bc",
-          "size": 18848
+          "sha": "1f16c9f187511b0015e64bd089ac7dedfaee2fbb",
+          "size": 20692
         },
         {
           "path": "tests/integration/test_repository_contract.py",
@@ -1532,19 +1329,14 @@
     },
     "rezon": {
       "default_branch": "main",
-      "head": "d429426fe41a76bd27c98fc8a6cc38cef16fddb1",
-      "tree_sha": "8e1977f3d05816c0db13b1335cd7ce9f19527ae7",
+      "head": "ec401810990337bf07a5d6473782ba13eba1bb3f",
+      "tree_sha": "b738dbbbeaf498d3bda3694f9d0f98e9ffc680d4",
       "archived": false,
       "blobs": [
         {
           "path": ".github/workflows/benchmark-v1-tests.yml",
           "sha": "b65815c54860510a2ab8b850989d481bb7cbdad3",
           "size": 963
-        },
-        {
-          "path": ".github/workflows/codeql.yml",
-          "sha": "48425562f50c52c17e3bcc43f5d5ec32ba3d578a",
-          "size": 4616
         },
         {
           "path": ".github/workflows/r3-tests.yml",
@@ -2525,8 +2317,8 @@
     },
     "roots": {
       "default_branch": "main",
-      "head": "2c591176279d83ce6cc0d8dcf8e6062431913ea7",
-      "tree_sha": "2f075135cde9fd2024b366b53e27fdda933b90f3",
+      "head": "1bc3af6aec0bebe383f60f56ad3070e83f0f40b5",
+      "tree_sha": "9e8c981e49c375eae1f533f35efffd73b82707d7",
       "archived": false,
       "blobs": [
         {
@@ -2541,12 +2333,12 @@
         },
         {
           "path": ".github/workflows/hostile-interval-order.yml",
-          "sha": "82c62cbde1e7d9cd6eb9aa73ccd1ae5d715fdcca",
+          "sha": "992f5c839ade3f77fd5993819f57f8fe0b13f579",
           "size": 506
         },
         {
           "path": ".github/workflows/receipt-claim-boundary.yml",
-          "sha": "16db8e8f177c727281ed680fd509a1c075a62820",
+          "sha": "a2ee028de551eb8cf7a08e287920f19d89147dd2",
           "size": 802
         },
         {
@@ -6824,6 +6616,34 @@
         }
       ]
     },
+    "thebrazenbeard": {
+      "default_branch": "main",
+      "head": "83ea2e083ccbf83ad5215ca53a9d5a00d16bb0d0",
+      "tree_sha": "c11ebb2e604125b28ba03f1b5cdf4dee62c18397",
+      "archived": false,
+      "blobs": [
+        {
+          "path": "README.md",
+          "sha": "3c698f357878426635aed2eaf396a55da38b6bcc",
+          "size": 5447
+        },
+        {
+          "path": "assets/hero.svg",
+          "sha": "753d7e5bcba3b4d327c69666b17bddd1ad4847fe",
+          "size": 4140
+        },
+        {
+          "path": "assets/principles.svg",
+          "sha": "cbae5191055fef8b099b7c623ad09f2507a6776b",
+          "size": 2908
+        },
+        {
+          "path": "assets/system-topology.svg",
+          "sha": "d11f85891135a8922b7211da0940ccb82d26fac9",
+          "size": 6207
+        }
+      ]
+    },
     "transcendence": {
       "default_branch": "main",
       "head": "69dacb467e94fb73ce106cd5176c39800c64e195",
@@ -8785,8 +8605,8 @@
     },
     "vera": {
       "default_branch": "main",
-      "head": "a267e7d555e2c15e51a2e578c1e08095091552f0",
-      "tree_sha": "85931ed543c634a388995161976f63b107350641",
+      "head": "788b14bb97ccd5f81506d892fbdd557323680bb0",
+      "tree_sha": "585e7f802543cddffb8c6c50ec61ae21f69da52d",
       "archived": false,
       "blobs": [
         {
@@ -8795,114 +8615,124 @@
           "size": 78
         },
         {
+          "path": ".github/dependabot.yml",
+          "sha": "bbf0176fdedd4076ba57aecf7c45d719cd534e5d",
+          "size": 315
+        },
+        {
           "path": ".github/workflows/cohesion-clean-successor.yml",
-          "sha": "3af6465d9806513a74be36210d0730e5629f1fbf",
-          "size": 1645
+          "sha": "ae37fc67ea2684098d8dcef729c9db54c096481d",
+          "size": 1776
         },
         {
           "path": ".github/workflows/consolidation-salvage-validation.yml",
-          "sha": "acb600ac4a98789c945adb74e63d542d56fd659f",
-          "size": 2568
+          "sha": "69b26dae50de785877461d146d7fbd1472daf4ab",
+          "size": 2713
         },
         {
           "path": ".github/workflows/coordination-bus.yml",
-          "sha": "f2249468f3214616e2428910fc697d2ffa63a635",
-          "size": 696
+          "sha": "387e0c292f3f64dfb1f2626d7335c7d71099019b",
+          "size": 841
         },
         {
           "path": ".github/workflows/deep-memory-archive-integration.yml",
-          "sha": "0b70670b10569e381f19783b0d410a821ebb3dd3",
-          "size": 1169
+          "sha": "f6261f42b3a062479fb8fc7decc09d4b2dcc035e",
+          "size": 1228
+        },
+        {
+          "path": ".github/workflows/dependency-review.yml",
+          "sha": "519e7a365d539e0b0efab913f3f0c819fafec9a6",
+          "size": 402
         },
         {
           "path": ".github/workflows/external-evidence-provider-integration.yml",
-          "sha": "5480fc2975f3be640dbb411f9c19c97a72fcff39",
-          "size": 1632
+          "sha": "792be8fe3a4150b9257bee39307104ae5bd9f85c",
+          "size": 1701
         },
         {
           "path": ".github/workflows/initiative-kernel.yml",
-          "sha": "7a98b4565c6f0df794cdeb2ae1ab247d057ada99",
-          "size": 722
+          "sha": "1581e9f62dda93893ae9ffa8c9ece548d44b5b25",
+          "size": 867
         },
         {
           "path": ".github/workflows/integration-assurance.yml",
-          "sha": "21a5dfa2111f47398bd50ae806a1118b67735843",
-          "size": 4407
+          "sha": "778586f7a5532ea2c50b1c01449d30f2ef85e36d",
+          "size": 4552
         },
         {
           "path": ".github/workflows/memory-cross-chat-contract.yml",
-          "sha": "2ba805c2564e1eb4260b23df7ebcd9e268289038",
-          "size": 11825
+          "sha": "38b051588164e8f4a2df0424a3474de671fa6183",
+          "size": 12260
         },
         {
           "path": ".github/workflows/memory-durability-review-corrections.yml",
-          "sha": "516957b8114fe1c9e2434f395c75b05c422f738b",
-          "size": 6379
+          "sha": "034c0ea2da2eb20cdaf9e319208d7528bd4b729d",
+          "size": 6714
         },
         {
           "path": ".github/workflows/memory-durability-single-path.yml",
-          "sha": "c13769c1022c4325e6b45c5b75a824cecbca0193",
-          "size": 2161
+          "sha": "59ca6008e9d6b9c7ab0716b956ec6c71ff75abff",
+          "size": 2638
         },
         {
           "path": ".github/workflows/pc-connection-validation.yml",
-          "sha": "49bd0de57171df68e9ffaf0b5de6ae8d44b6c01e",
-          "size": 2488
+          "sha": "399e1ea47bc87f3dbb844fcec8712a809e1d6623",
+          "size": 2778
         },
         {
           "path": ".github/workflows/portable-project-bootstrap.yml",
-          "sha": "0e9c0392f4658a141cb6738b29416b0e404c4247",
-          "size": 8427
+          "sha": "7f801b508452036ea7e470dbe1fced1447f95569",
+          "size": 8605
         },
         {
           "path": ".github/workflows/project-identity.yml",
-          "sha": "23a474546b9955643ea5495e57a421b1432f5bbd",
-          "size": 5837
+          "sha": "25ed4450bf1939ed67d0f0640bb9c76e05f24a9f",
+          "size": 5982
         },
         {
           "path": ".github/workflows/r6a0-release-package.yml",
-          "sha": "ac503aa9b4c8773c7d26bd4fa2d95b512c330b65",
-          "size": 794
+          "sha": "888a95236c0c816e8ebdeeb34845bcfec39ca6eb",
+          "size": 939
         },
         {
           "path": ".github/workflows/r6a1-release-bindings.yml",
-          "sha": "311948744b0847da5736731c3c27820806430bb3",
-          "size": 1150
+          "sha": "9b53eca75735cca32d089ec005722f22449ddecf",
+          "size": 1281
         },
         {
           "path": ".github/workflows/r6a1-release-package.yml",
-          "sha": "fd7771b55ffe6b9cb9a88235f14c0306e1721696",
-          "size": 896
+          "sha": "0611f8b8c70c5da671b6be21e2baa691f1a02294",
+          "size": 1041
         },
         {
           "path": ".github/workflows/r7a0-release-package.yml",
-          "sha": "71e0764d25164cef9acfcc6b0ebe2e316cf52cdb",
-          "size": 1079
+          "sha": "8328a972b790b8aa83358df65cdcb5e71d3daff3",
+          "size": 1224
         },
         {
           "path": ".github/workflows/r8a0-bounded-vertical-slice.yml",
-          "sha": "fcb814a342241141af274f3da760983572cc9650",
-          "size": 2522
+          "sha": "902e4671a74e1c8817cb9b9e47081e01d904a5e2",
+          "size": 2653
         },
         {
           "path": ".github/workflows/runtime-cohesion-affect-hardening.yml",
-          "sha": "499613fb8bb352f632dbece76a6cad30eb7770ec",
-          "size": 2191
+          "sha": "e632a1311ce830b8f7cb977e8e6f436c2faa41bf",
+          "size": 2322
         },
         {
           "path": ".github/workflows/runtime-cohesion.yml",
-          "sha": "a7cd73e594e90152c0f88abdb2e58602e81b0d95",
+          "sha": "cb1a0f9ab12960cd56f5af0ceb3185087a8a56e0",
           "size": 13122
         },
         {
           "path": ".github/workflows/temporal-enforcement.yml",
-          "sha": "eb100810aede338296bf5b8006951f923f034bc8",
-          "size": 2818
+          "sha": "2f9fb7e3e7be3eb20d6b52d07a7b0714661c8c45",
+          "size": 3108
         },
         {
           "path": ".github/workflows/temporal-pilot.yml",
-          "sha": "aa05336a784d0f745b9f98c28ff8505b2c52aae8",
-          "size": 3055
+          "sha": "ebc5a8ec89f9fbf255c51bf17768ce0fc1aeac9e",
+          "size": 3242
         },
         {
           "path": ".gitignore",
@@ -9046,7 +8876,7 @@
         },
         {
           "path": "architecture/bootstrap/VERA_BOOTSTRAP_MANIFEST_V1.json",
-          "sha": "a5fc111a2c3acd0229aa11051875135420f89944",
+          "sha": "ce5c4d99b280bff455b7c70c943f00df928513ef",
           "size": 8852
         },
         {
@@ -9056,12 +8886,12 @@
         },
         {
           "path": "architecture/bootstrap/VERA_PORTABLE_PROJECT_BOOTSTRAP_V1.json",
-          "sha": "621aa4dd105183205a183c0ad21861ff8e73ed0f",
+          "sha": "fffc5c80a5dfda90a27981fefc796ae89f23c0df",
           "size": 11028
         },
         {
           "path": "architecture/bootstrap/VERA_PORTABLE_SCAFFOLD_MANIFEST_V1.json",
-          "sha": "85e267fc683c7a368d53c240bf449aee5a7f65b4",
+          "sha": "a68fbf3c2946a239508464a659e617595cd25936",
           "size": 8790
         },
         {
@@ -9131,7 +8961,7 @@
         },
         {
           "path": "architecture/integration/VERA_DEEP_MEMORY_ARCHIVE_INTEGRATION_V1.json",
-          "sha": "c13a89a61ec7eef8f8dbe6c3dac55f9ce2355013",
+          "sha": "8c8490e866963ee3150ba6d974b86ea36c343786",
           "size": 5890
         },
         {
@@ -9931,8 +9761,8 @@
         },
         {
           "path": "experiments/tul_instrumented_host_fixture_v0_1/pyproject.toml",
-          "sha": "1807c5bc5ce92f637f3734744df5793ceafd0bea",
-          "size": 486
+          "sha": "95b293eb69e655d2188ab2ea1336cbabcec43765",
+          "size": 487
         },
         {
           "path": "experiments/tul_instrumented_host_fixture_v0_1/scripts/generate_manifest.py",
@@ -10331,7 +10161,7 @@
         },
         {
           "path": "schemas/vera_portable_project_bootstrap_v1.schema.json",
-          "sha": "5e92e39fe3288d98d1db307add9490bfcc42eb2b",
+          "sha": "96d4815480b98270d5f0caaac96c05277a3d62d5",
           "size": 17284
         },
         {
@@ -10371,7 +10201,7 @@
         },
         {
           "path": "scripts/validate_deep_memory_archive_integration.py",
-          "sha": "f459e2553301b5843f0490b363167a55133551f2",
+          "sha": "81aa2f0e6f513f3c4f1fc1dee19cf48df246ebd1",
           "size": 11350
         },
         {
@@ -10401,13 +10231,13 @@
         },
         {
           "path": "scripts/validate_integration_registry.py",
-          "sha": "96001b2e51074af7feca91670ebe427f45e07ebf",
-          "size": 15473
+          "sha": "d09e58a4169c3e22e16cc5d27b5ac9a65c852f6a",
+          "size": 17739
         },
         {
           "path": "scripts/validate_portable_project_bootstrap.py",
-          "sha": "a85b18a96eedfd57a75851e4f6d41175d9160396",
-          "size": 9244
+          "sha": "8a177b1374c335ffe59f12eb9952f16e4f8cacda",
+          "size": 9274
         },
         {
           "path": "scripts/validate_project_identity.py",
@@ -12211,8 +12041,8 @@
         },
         {
           "path": "tests/test_integration_registry.py",
-          "sha": "c6bc94c2024f3a637f3b5f87fe44c1f0249f9d69",
-          "size": 13410
+          "sha": "a05202513ea37e92143799b0c2d03b8bf9f5c5c3",
+          "size": 16802
         },
         {
           "path": "tests/test_legacy_coordination_sequence_acl_source.py",
@@ -13281,34 +13111,39 @@
     },
     "vera-control-plane": {
       "default_branch": "main",
-      "head": "3916aaa7ae2825020c07057968c7a151d92d53de",
-      "tree_sha": "ba211b900231a59456355dbee12cac45050b4fdf",
+      "head": "b86143e50ba41d05eab19d5a300662afeda60d6e",
+      "tree_sha": "f375bf7ff3e22582e27f96627767e1e5fcc074eb",
       "archived": false,
       "blobs": [
         {
+          "path": ".github/dependabot.yml",
+          "sha": "0a241998cea2dd99b51397e8bd513d6000c4a841",
+          "size": 150
+        },
+        {
           "path": ".github/workflows/consolidation-validation.yml",
-          "sha": "9e8b7de1c2f5a26b7e1ff56db1ce899bb9460bbb",
-          "size": 3292
+          "sha": "37dc9c40ecb1b5deac19be7390e4eedffd0889dc",
+          "size": 3376
         },
         {
           "path": ".github/workflows/issue18-behavioral-policy.yml",
-          "sha": "4eb25d30a18b18a012d46dcf3792f957e1f21a17",
-          "size": 931
+          "sha": "3909575ce3398e56792f2ed87e650115e697fab8",
+          "size": 982
         },
         {
           "path": ".github/workflows/orgasm-optional-invocation.yml",
-          "sha": "a08941fb2ae56d2f01af8e4e48355452005d8376",
-          "size": 746
+          "sha": "2a0bf5f074877613c43b81d16861f9aecee15f11",
+          "size": 891
         },
         {
           "path": ".github/workflows/r10a1-validator.yml",
-          "sha": "66ef0281b4ee34c8ea9ddd621741d251298f6a7a",
-          "size": 973
+          "sha": "16080ff60d4f7dbbd637c02de6365bee0e3185fb",
+          "size": 1241
         },
         {
           "path": ".github/workflows/vcp-integrity.yml",
-          "sha": "62f2a8955b141ba8d528be70d22e45f57db82a90",
-          "size": 2116
+          "sha": "6c76cd77a0c1b6c8d4a38b4783358fc35e3a4237",
+          "size": 2089
         },
         {
           "path": "CLA.md",
@@ -13339,6 +13174,11 @@
           "path": "README.md",
           "sha": "dfb3ce59903f36b142cb6f9b559e144ff1582b3a",
           "size": 3850
+        },
+        {
+          "path": "SECURITY.md",
+          "sha": "16371c8b4ef6d383f866d90de0b96acd44d89bd7",
+          "size": 633
         },
         {
           "path": "assets/stickers/Restore Complete Daddy.png",
@@ -13442,8 +13282,8 @@
         },
         {
           "path": "governance/VCP_SUPABASE_PROVIDER_CUSTODY_V1.json",
-          "sha": "3c0763c586ab96d0265ebb119c2795802c78ffcb",
-          "size": 7425
+          "sha": "0523d515221309e2dfee7d04ca6ef6f4d8699806",
+          "size": 7485
         },
         {
           "path": "governance/VERA_BUS_RADAR_ACTIONS_CONTINUATION_POINTER_20260923_V1.json",
@@ -13479,6 +13319,11 @@
           "path": "governance/VERA_PORTFOLIO_E2E_HOSTILE_QUALIFICATION_V1.json",
           "sha": "8943f974c93f28e32f080aeccc88ace5ae931914",
           "size": 12515
+        },
+        {
+          "path": "governance/VERA_RELATIONAL_REACTION_ARTIFACTS_V1.json",
+          "sha": "32b51961a9af7f10cce052a7678d15d5cc70165a",
+          "size": 4942
         },
         {
           "path": "governance/VERA_RESTORE_V2_INSTALL_CURRENTNESS_V1.json",
@@ -13604,6 +13449,11 @@
           "path": "project-instructions/r10a0/bugops/BUGOPS_BEHAVIORAL_REGRESSION_V1.md",
           "sha": "afa83b3047d18f61e32243adc87538afa2d79989",
           "size": 9190
+        },
+        {
+          "path": "project-instructions/r10a0/relational-reactions/VERA_RELATIONAL_REACTION_BEHAVIOR_PATCH_V1.md",
+          "sha": "21750f61726d97683bcb09ae8dca00fefb52dee6",
+          "size": 3443
         },
         {
           "path": "project-instructions/r10a0/restore-v2-live/INSTALL_RESTORE_V2.md",
@@ -14031,6 +13881,11 @@
           "size": 1637
         },
         {
+          "path": "protocol/VERAPORT_CONTROLLER_ROTATION_V2.json",
+          "sha": "3792db92fad61fbcb5bb9d970f5b502e66012c6b",
+          "size": 7131
+        },
+        {
           "path": "protocol/VERARELAY_0_4_QUALIFICATION_V1.json",
           "sha": "a478c6cd1b218da03be6585cd10e03bb91ba2282",
           "size": 5286
@@ -14074,6 +13929,11 @@
           "path": "protocol/VERA_RESTORE_YOURSELF_PROTOCOL_V2.md",
           "sha": "8bccbf5df2259ef03a04a3e02522864d98bfdc19",
           "size": 12602
+        },
+        {
+          "path": "protocol/veraport_controller_identity.py",
+          "sha": "f8a63881da50e40bd8e869ab250050e9acec3cf4",
+          "size": 4918
         },
         {
           "path": "requirements/vcp-integrity.txt",
@@ -14317,7 +14177,7 @@
         },
         {
           "path": "tests/test_orgasm_optional_invocation_route.py",
-          "sha": "c3494e1eb7df48f527c8583fffc13894277562d8",
+          "sha": "c38961ceffc4c9ca7abcee533a2edf5df5335b4d",
           "size": 3920
         },
         {
@@ -14351,6 +14211,11 @@
           "size": 17017
         },
         {
+          "path": "tests/test_relational_reaction_artifacts_v1.py",
+          "sha": "fec7ad2c4c6326f1305763ee54b4adc977fc807a",
+          "size": 8606
+        },
+        {
           "path": "tests/test_restore_v2_install_currentness.py",
           "sha": "6def9bb3f2c2a55fb9e15ba39a1a2fb91f6961c1",
           "size": 5372
@@ -14382,13 +14247,18 @@
         },
         {
           "path": "tests/test_vcp_provider_custody.py",
-          "sha": "77b24b273a7920eb0be1fb94dcfec180a81ffbd2",
+          "sha": "a29ba02c1694a1d57b87545c5f860ba6e58e3d16",
           "size": 6043
         },
         {
           "path": "tests/test_vcp_supabase_provider_composition.py",
           "sha": "7028b953b25159678653591883d33acc2162b2cd",
           "size": 351
+        },
+        {
+          "path": "tests/test_veraport_controller_rotation_v2.py",
+          "sha": "ba3ed379d163011feea7bbe173a22170fa426da8",
+          "size": 7232
         },
         {
           "path": "tests/test_verarelay_0_4_qualification.py",
@@ -14417,8 +14287,8 @@
         },
         {
           "path": "tools/build_native_project_pack_v2.py",
-          "sha": "5001202872580e43de8ff5e6dd98ac8a9eaada60",
-          "size": 2384
+          "sha": "55ca2a2d88ae745de5d7990d575607be026df26e",
+          "size": 2383
         },
         {
           "path": "tools/build_native_project_successor_v2a1.py",
@@ -14432,8 +14302,13 @@
         },
         {
           "path": "tools/orgasm_optional_invocation_route.py",
-          "sha": "1d96b8f2e1e2618c2ebe47f175ee5335348a43a8",
+          "sha": "ca138a525c14ea01fee85e9929481bf2248e1e0f",
           "size": 4624
+        },
+        {
+          "path": "tools/relational_reaction_selector.py",
+          "sha": "7656bee48f31881f4e923879c925d8d20d7cf061",
+          "size": 4640
         },
         {
           "path": "tools/tool_route_policy.py",
@@ -14604,7 +14479,7 @@
     },
     "vera-habitat": {
       "default_branch": "main",
-      "head": "6ae63ffa05c37711f34328ebd6a9500fe66a08e9",
+      "head": "82cf6a625e417ced00205f66be1e76dc396ab617",
       "tree_sha": "f30241fbdaf6f837532daf433085b09f4a613d1f",
       "archived": false,
       "blobs": [
@@ -16205,8 +16080,8 @@
     },
     "vera-mono": {
       "default_branch": "main",
-      "head": "88d58f95216b6d76556040011b2931f894a109b5",
-      "tree_sha": "6ef1cd0785f465d3cd5ac0d225c22d8e571df94f",
+      "head": "413397e51bce35d0a36f00cf0ca2c876ca720b44",
+      "tree_sha": "c4908900e53f359d60f4e6d3c0fdbeddd799ce49",
       "archived": false,
       "blobs": [
         {
@@ -16226,7 +16101,7 @@
         },
         {
           "path": ".github/workflows/tests.yml",
-          "sha": "8c87d06c6c0ae8405b579b3fe99d0f161d69a8ba",
+          "sha": "f4015205747246e1c3229c2fba3fa86e4291dfeb",
           "size": 2352
         },
         {
@@ -18110,6 +17985,11 @@
           "size": 5435
         },
         {
+          "path": "portfolio/P0_PROJECT_MANIFEST_V1.json",
+          "sha": "4af19a8c81755a587b983b7f4aba5072f82a8587",
+          "size": 2292
+        },
+        {
           "path": "progress.md",
           "sha": "f6eee527e1a95dcb22395d03a09bba1f15e0a57a",
           "size": 429
@@ -19486,8 +19366,8 @@
     },
     "vera_model_training": {
       "default_branch": "main",
-      "head": "3ea9b345988201d78ad9c073254d9d3df15c9ed9",
-      "tree_sha": "e508543a27de10c43846263ad3fb06597a348126",
+      "head": "08a69c98312dd5aab437d4996e12bbb34a5900c2",
+      "tree_sha": "7e64077393597be85404954a39c49c0d97f3d030",
       "archived": false,
       "blobs": [
         {
@@ -19502,7 +19382,7 @@
         },
         {
           "path": ".github/workflows/identity-bootcamp.yml",
-          "sha": "f640aa8e94236f9ff8fbe33003c571dd709d9d62",
+          "sha": "cf69f371ed75127a8a43f47470e095d5ee0690b3",
           "size": 5273
         },
         {
@@ -19582,7 +19462,7 @@
         },
         {
           "path": "requirements.txt",
-          "sha": "a3af074d996e817a4ab5d1429c11f739c164bb06",
+          "sha": "b740e54fc3ba7468e6c5e58116a41301c9cb7ea2",
           "size": 68
         },
         {
@@ -20077,8 +19957,8 @@
     },
     "wip": {
       "default_branch": "main",
-      "head": "3ced0899202374aa408756b04b0ee81ba13d0c16",
-      "tree_sha": "497446f80303be694edbcef19713ba159471d743",
+      "head": "3b93b64c09f5ed704b21a9db28cb918df181947e",
+      "tree_sha": "5bbafd9ce81e3e58abe25086f3d1f518d264bb9f",
       "archived": false,
       "blobs": [
         {
@@ -20127,9 +20007,19 @@
           "size": 633
         },
         {
+          "path": "docs/DISCOVERY_EFFECT_ENVELOPE_CONSUMER_V1.md",
+          "sha": "afbfc98c312e3a33ed07eb5b22593023a9594c0e",
+          "size": 931
+        },
+        {
           "path": "docs/superpowers/plans/2026-09-04-wip-v1.md",
           "sha": "1d5b555fb4680999de9c5969cf30e0697e26bf34",
           "size": 7623
+        },
+        {
+          "path": "docs/superpowers/plans/2026-09-12-vera-model-state-adapter-finalization.md",
+          "sha": "b6b2db012af92e1c03b41e0c0537f7e34f6cdd51",
+          "size": 12761
         },
         {
           "path": "docs/superpowers/specs/2026-09-04-wip-v1-design.md",
@@ -20252,6 +20142,16 @@
           "size": 576
         },
         {
+          "path": "tests/test_discovery_effect.py",
+          "sha": "0d69712378371b949b66b132861cc0c754723a93",
+          "size": 3626
+        },
+        {
+          "path": "tests/test_vera_model_state_adapter_contract.py",
+          "sha": "a3425a20be9966c9ac7a9f77b3304289093cef56",
+          "size": 5390
+        },
+        {
           "path": "tests/test_wip.py",
           "sha": "88f4b164bab2a2fb29abd91b834e5fc6c74fe9fe",
           "size": 6974
@@ -20262,6 +20162,11 @@
           "size": 52
         },
         {
+          "path": "tools/discovery_effect.py",
+          "sha": "fb7cd88bfe38b2c0de78133e75f28b2ac9bbf4cd",
+          "size": 5228
+        },
+        {
           "path": "tools/wip.py",
           "sha": "10b7e2446909a2444528af4ca020f6d31e3f12cb",
           "size": 17302
@@ -20270,13 +20175,431 @@
           "path": "workspaces/README.md",
           "sha": "6513598131250a595b6cdfe43036d7ea50207c58",
           "size": 938
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/HEAD.json",
+          "sha": "d82a3d8e1d5d22bb23fd5b49e7eeaa513692a38c",
+          "size": 233
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/RESUME.md",
+          "sha": "e104921f1698c635fc234f725708baf2743799d4",
+          "size": 4657
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/WORKSPACE.json",
+          "sha": "650afe0bca6b37daf0d9c6e79ef5a4f1dd9e568a",
+          "size": 858
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/artifacts/VERA_MODEL_STATE_ADAPTER_ARCHITECTURE_V1.md",
+          "sha": "c84dc4e9cc30b0fd58e1563bdb8d004da3e93ea1",
+          "size": 13319
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/artifacts/VERA_MODEL_STATE_ADAPTER_CONTRACT_V1.json",
+          "sha": "ad3d218e16240d6042c4f12cae1ccb00f77f28e2",
+          "size": 27698
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/artifacts/VERA_MODEL_STATE_ADAPTER_QUALIFICATION_V1.json",
+          "sha": "556128b80fc2b177f134e73ae08d89b108fd4397",
+          "size": 6035
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/artifacts/VERA_MODEL_STATE_ADAPTER_RESEARCH_V1.md",
+          "sha": "7b50bd52150460c801064fcd1282cebc035a2c39",
+          "size": 12119
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000001.json",
+          "sha": "bf5eca4a063f231407f094a31b578848ba0681b9",
+          "size": 2993
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000002.json",
+          "sha": "7f72ffe1dca7c58412ebfe633f386b037b64e3ad",
+          "size": 3649
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000003.json",
+          "sha": "97d10f99154fb94272ca1f8299374efda002b7f5",
+          "size": 4765
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000004.json",
+          "sha": "f9e7471706d2e374279b5d4321df83ca47cc1798",
+          "size": 3246
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000005.json",
+          "sha": "32f7cc311e9026fc3f731f3b144c9f081521c81c",
+          "size": 4275
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000006.json",
+          "sha": "691f22546f4c26c895dbf5205f3d1f1a4a467f14",
+          "size": 4769
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000007.json",
+          "sha": "df99564a151ca1f53d0dfbefe83968f806eeae72",
+          "size": 6392
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000008.json",
+          "sha": "ba619a511e45c66574abc07fb6f56ef4209876f3",
+          "size": 5884
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/checkpoints/cp-000009.json",
+          "sha": "9850cbfeec62d22296514506ccd680c318373194",
+          "size": 4944
+        },
+        {
+          "path": "workspaces/vera-model-state-adapter-v1/operations/README.md",
+          "sha": "65550e55752674cd873ec1d5539c37146a26c818",
+          "size": 227
+        }
+      ]
+    },
+    "workbridge": {
+      "default_branch": "main",
+      "head": "7caab29eb5667897a0a03d0ce67d733380b01685",
+      "tree_sha": "f5fca726c3cde2ee75c68acc0d8ec747154a71a8",
+      "archived": false,
+      "blobs": [
+        {
+          "path": ".gitattributes",
+          "sha": "f42dc10dcbbde642447bbe6e3577a850b12932e6",
+          "size": 116
+        },
+        {
+          "path": ".github/workflows/ci.yml",
+          "sha": "fbbb48a93e0e0eed007deb6248ed5f4bdacf9008",
+          "size": 814
+        },
+        {
+          "path": ".github/workflows/workbridge-relay-spk.yml",
+          "sha": "204de49a3024a4a3c81ae06b270c87369fb48635",
+          "size": 6130
+        },
+        {
+          "path": ".gitignore",
+          "sha": "bef4b7074a8c6094e296611301f92130f9d19e96",
+          "size": 65
+        },
+        {
+          "path": "CLA.md",
+          "sha": "8ee8a2c2517d1276f4c4bf7dbfe5789347aea9e5",
+          "size": 2176
+        },
+        {
+          "path": "COMMERCIAL_LICENSE.md",
+          "sha": "6f7f5dfc922e16c8d14ce0092166e9386bd5e5f1",
+          "size": 1240
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "sha": "6b6e33cee58ed4d72b40e9dabd6f360ab41126c9",
+          "size": 977
+        },
+        {
+          "path": "LICENSE",
+          "sha": "2704e93d980563fcfe7275319d528c93cc43145b",
+          "size": 3884
+        },
+        {
+          "path": "NOTICE",
+          "sha": "5bf32edaa17dc7448f780ecec20413a365423558",
+          "size": 720
+        },
+        {
+          "path": "README.md",
+          "sha": "4b681f5b16fda217754b3199443a06727c6ef410",
+          "size": 3798
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "sha": "a1372a176db6c9510619a306b1d656cf3b1ae0eb",
+          "size": 583
+        },
+        {
+          "path": "cmd/workbridge-mcp/main.go",
+          "sha": "484e805986b209b6941b126e4d562c49e75b63de",
+          "size": 4475
+        },
+        {
+          "path": "cmd/workbridge-mcp/main_test.go",
+          "sha": "f8b7db0d533c67720225e0f9d0276affa93d47db",
+          "size": 2615
+        },
+        {
+          "path": "config.example.json",
+          "sha": "b64bc69cf4bb83cd6b5c1a7d0d872fb98b7d879e",
+          "size": 940
+        },
+        {
+          "path": "docs/DS216_HARDWARE_RESOURCE_PROFILE.md",
+          "sha": "1f4dee6bcbcf10cc18673b4c9450e80ed96e3761",
+          "size": 4034
+        },
+        {
+          "path": "docs/PROVENANCE.md",
+          "sha": "3b31a8f3613a3c2ea3ddd710201faa5087b4208e",
+          "size": 1241
+        },
+        {
+          "path": "docs/SECURITY.md",
+          "sha": "9e6a984c25838cca29b20a12fc13d646264f9a28",
+          "size": 4511
+        },
+        {
+          "path": "docs/WORKBRIDGE_CONNECTOR_STRESS_20260930.md",
+          "sha": "bbeab1b927c2f777632e87420927f55eaae39a8d",
+          "size": 11001
+        },
+        {
+          "path": "docs/WORKBRIDGE_RELAY_0002_READINESS_AND_REVIEW_20260930.md",
+          "sha": "85a81a8ccac3aaca499d05f896132f60c89b41f5",
+          "size": 8063
+        },
+        {
+          "path": "docs/WORKBRIDGE_RELAY_DSM_OPERATOR_RUNBOOK.md",
+          "sha": "55cf0976f165b908d36e1c4a67c799ced8a6277d",
+          "size": 9192
+        },
+        {
+          "path": "docs/WORKBRIDGE_RELAY_LIVE_OBSERVATION_20260930.md",
+          "sha": "0bf1c145391cb76da68f0ce1e454ae145495046a",
+          "size": 2925
+        },
+        {
+          "path": "docs/WORKBRIDGE_RELAY_RESEARCH_AND_REQUIREMENTS_20260930.md",
+          "sha": "eabc26c44b17bae9a7a9ead4b4b034109d4c3989",
+          "size": 6962
+        },
+        {
+          "path": "docs/evidence/WORKBRIDGE_COMMANDER_STRESS_64X8_20260930.json",
+          "sha": "e1d79ea30ea3d09800d2a233635ecadd6e3b17fc",
+          "size": 13964
+        },
+        {
+          "path": "go.mod",
+          "sha": "11f2b5f4ea9b68d7aecb03a00198579af4008e38",
+          "size": 617
+        },
+        {
+          "path": "go.sum",
+          "sha": "f2c7bedea87a2f523ad003905bd6cb29f3328090",
+          "size": 2028
+        },
+        {
+          "path": "internal/bridge/server.go",
+          "sha": "6e673bc7fd9fd478310dc79dcc6b2644cd17cf16",
+          "size": 6372
+        },
+        {
+          "path": "internal/bridge/server_test.go",
+          "sha": "00e33b93d54f3900cf111b325f1b622f4e2b4a6b",
+          "size": 4266
+        },
+        {
+          "path": "internal/config/config.go",
+          "sha": "7aa182c772fdbbc2392a95e91f3a5473ce9c76af",
+          "size": 6548
+        },
+        {
+          "path": "internal/config/config_test.go",
+          "sha": "9a6a952ef28390b26e38bf6a57c84bc7aca29858",
+          "size": 4046
+        },
+        {
+          "path": "internal/policy/path.go",
+          "sha": "6e0d37915a0d702a503efcf5979206b4694c0c8b",
+          "size": 8129
+        },
+        {
+          "path": "internal/policy/path_test.go",
+          "sha": "44905dee7c2a114ff015c037a39458d57db62a5e",
+          "size": 4453
+        },
+        {
+          "path": "internal/runner/runner.go",
+          "sha": "da9da755d2bbbb9bf6f7d39ca99ec8950dc30875",
+          "size": 6304
+        },
+        {
+          "path": "internal/runner/runner_test.go",
+          "sha": "5c2898998fd228f5551808ae2758afd2d7af44e6",
+          "size": 3399
+        },
+        {
+          "path": "internal/workspace/workspace.go",
+          "sha": "c5cf3c39d865e31b1eff85a36441a8523a06ec30",
+          "size": 5888
+        },
+        {
+          "path": "internal/workspace/workspace_test.go",
+          "sha": "1fb346c30c79c173cf9d13953d5c8226c33a4f95",
+          "size": 6028
+        },
+        {
+          "path": "synology/component-bindings.json",
+          "sha": "065addd404a4a69d7a48953ca5a7a74129e3f78a",
+          "size": 1264
+        },
+        {
+          "path": "synology/payload/bin/diagnose-workbridge-relay.sh",
+          "sha": "17cbe494e934e03907943b06ee160ee60ebcf1fd",
+          "size": 2423
+        },
+        {
+          "path": "synology/payload/bin/run-workbridge-relay.sh",
+          "sha": "bde134ee839ac32ffcfe8f54eb4653f34090be21",
+          "size": 1426
+        },
+        {
+          "path": "synology/payload/etc/workbridge-relay.json",
+          "sha": "7beca75d5123a0a024a8994586bd8f0778919381",
+          "size": 466
+        },
+        {
+          "path": "synology/spk/INFO",
+          "sha": "570a8e23398292df7c786151068dc7b595a2c22f",
+          "size": 248
+        },
+        {
+          "path": "synology/spk/PACKAGE_ICON.PNG",
+          "sha": "ea027db34537cf09e05667fa66a2f5f521eda5be",
+          "size": 209
+        },
+        {
+          "path": "synology/spk/PACKAGE_ICON_256.PNG",
+          "sha": "12187fddc5f9e9698ef67d115fbc0273739d0730",
+          "size": 1031
+        },
+        {
+          "path": "synology/spk/WIZARD_UIFILES/install_uifile",
+          "sha": "5ec6f2219482a461577d8188ec6583c27c81362e",
+          "size": 696
+        },
+        {
+          "path": "synology/spk/conf/privilege",
+          "sha": "cabc98c1e8af632f5a37f86227c028cc64844249",
+          "size": 115
+        },
+        {
+          "path": "synology/spk/conf/resource",
+          "sha": "bcbbcf382951b8b8e2ba8b7bccda378adee3663e",
+          "size": 30
+        },
+        {
+          "path": "synology/spk/conf/systemd/pkguser-workbridgerelay.service",
+          "sha": "2a6b6ead0af93de08400924fba5aad2aba7489c6",
+          "size": 819
+        },
+        {
+          "path": "synology/spk/scripts/postinst",
+          "sha": "c88432096964bc74c552cf84d63945a8c6c1bf37",
+          "size": 3211
+        },
+        {
+          "path": "synology/spk/scripts/postuninst",
+          "sha": "039e4d0069c5c26909f86c505b9de66182e6d1f3",
+          "size": 17
+        },
+        {
+          "path": "synology/spk/scripts/postupgrade",
+          "sha": "5a8b47bec940299c971f725c194791f2a4c712b6",
+          "size": 1859
+        },
+        {
+          "path": "synology/spk/scripts/preinst",
+          "sha": "039e4d0069c5c26909f86c505b9de66182e6d1f3",
+          "size": 17
+        },
+        {
+          "path": "synology/spk/scripts/preuninst",
+          "sha": "039e4d0069c5c26909f86c505b9de66182e6d1f3",
+          "size": 17
+        },
+        {
+          "path": "synology/spk/scripts/preupgrade",
+          "sha": "039e4d0069c5c26909f86c505b9de66182e6d1f3",
+          "size": 17
+        },
+        {
+          "path": "synology/spk/scripts/start-stop-status",
+          "sha": "63b1579747c0d744301c30a76141752766a37b29",
+          "size": 594
+        },
+        {
+          "path": "synology/tests/test_archive_guards.py",
+          "sha": "2988f8f5859334fcd6db0a60779a596bc69c75e9",
+          "size": 8998
+        },
+        {
+          "path": "synology/tests/test_doctor_behavior.py",
+          "sha": "c64da33ba648a00466dfbb0dddf7dac4aeb856a5",
+          "size": 3983
+        },
+        {
+          "path": "synology/tests/test_install_upgrade_lifecycle.py",
+          "sha": "efe8e1913021fa090d2a0d412c9559600fb63ce9",
+          "size": 8542
+        },
+        {
+          "path": "synology/tests/test_nas_preflight.py",
+          "sha": "d6d801a4e892ed6dd5912b0343e55376829f5377",
+          "size": 4548
+        },
+        {
+          "path": "synology/tests/test_relay_package_contract.py",
+          "sha": "1da8cf4e091754433cadb6c317eef1902a19f6ab",
+          "size": 8744
+        },
+        {
+          "path": "synology/third_party/openai-tunnel-client-LICENSE",
+          "sha": "3c4dfe081ce477528cd0ddd6da48bf092a02a3f7",
+          "size": 10758
+        },
+        {
+          "path": "synology/third_party/openai-tunnel-client-NOTICE",
+          "sha": "1e816a0d8633f71e2a8c27917944e4ae79b3edb6",
+          "size": 551
+        },
+        {
+          "path": "synology/tools/build_spk.py",
+          "sha": "a1a1c13c2f04fb069d00c182e4d8ee04bc609777",
+          "size": 4806
+        },
+        {
+          "path": "synology/tools/nas_preflight.sh",
+          "sha": "bcc46ea9be371055a6abbec769603910acf16bd0",
+          "size": 3147
+        },
+        {
+          "path": "synology/tools/verify_spk.py",
+          "sha": "01aebf46e02a666eb4c7d8e2e76df2c3005388dc",
+          "size": 13309
+        },
+        {
+          "path": "tools/patch_openai_tunnel_client_armv7.py",
+          "sha": "ece27ef8a4cecf4e647baf9d3a31b6cab84d49b5",
+          "size": 1748
+        },
+        {
+          "path": "tools/stress_workbridge_commander_64x8.ps1",
+          "sha": "0fcbbbc87674f32abe05d3ef709f3858213363b9",
+          "size": 3903
         }
       ]
     },
     "workbridgecommander": {
       "default_branch": "main",
-      "head": "fe347db4a3a555bfc250ee2c61a64aabe9c8e553",
-      "tree_sha": "259a5321542f168d65c8533d94ddc305de6b79d3",
+      "head": "c2b95be79ca011a539c20bfee60fcbc46cfea177",
+      "tree_sha": "58e502f66ba415c12c277267bef99983a812ce41",
       "archived": false,
       "blobs": [
         {
@@ -20368,6 +20691,11 @@
           "path": "docs/continuation/WORKBRIDGE_COMMANDER_CHAT_CONTINUATION_20260929.md",
           "sha": "e69e2b4d7d1ffa7d6e3d8e190b94c979927fce1a",
           "size": 5539
+        },
+        {
+          "path": "docs/runtime/MEDIA_LIBRARY_DIRECT_UNC_EVIDENCE_20260929.md",
+          "sha": "0ef3c57ff59b1553973bd401a86d874fda216a62",
+          "size": 3232
         },
         {
           "path": "mcp.json",
@@ -20573,8 +20901,8 @@
     },
     "world-zero": {
       "default_branch": "main",
-      "head": "9f4fb033b212e99e034c4f6fa0c3ef7eea7f9f8b",
-      "tree_sha": "6c36ec5ceb97b062595241bcbf8b9e4ace626111",
+      "head": "07c5b998d081cbe61091ac3ae5592f8ac33b4bbf",
+      "tree_sha": "1ba2f14b48ac389d78c2f42e08d0096275452591",
       "archived": false,
       "blobs": [
         {
@@ -20589,8 +20917,13 @@
         },
         {
           "path": ".github/workflows/build-offline-bundles.yml",
-          "sha": "8662c4cca259925be78cb050c25cc06ffb8a22d8",
+          "sha": "16eb8446a9ee4b30468d3874165c8eda84871141",
           "size": 2748
+        },
+        {
+          "path": ".github/workflows/demography-migration-walkforward.yml",
+          "sha": "339ffbf27a63903c0eb1375202da23e2e21a95af",
+          "size": 4999
         },
         {
           "path": ".github/workflows/dependency-review.yml",
@@ -20598,8 +20931,23 @@
           "size": 404
         },
         {
+          "path": ".github/workflows/older-mortality-mass-normalization.yml",
+          "sha": "3da313499cf4a232d283953c9953a269bea28601",
+          "size": 5223
+        },
+        {
+          "path": ".github/workflows/older-mortality-walkforward.yml",
+          "sha": "4a2f77256cec380f546a8a16b8949a6bfed81020",
+          "size": 5047
+        },
+        {
+          "path": ".github/workflows/pre2023-demography-successor.yml",
+          "sha": "93497bb77b22568e71bff669e41c0ac769932677",
+          "size": 3219
+        },
+        {
           "path": ".github/workflows/temporal-population-score.yml",
-          "sha": "ab8808012d3bef8bced674e4429023d4a66268db",
+          "sha": "aa20d6b9bc72d751cb1c103701ecca225232a317",
           "size": 3390
         },
         {
@@ -20848,6 +21196,11 @@
           "size": 3763
         },
         {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_2022_TO_2023_PRE2023_DYNAMICS_RESULT_V1.md",
+          "sha": "3387bba18818290065751e4ed39560fe39a8387a",
+          "size": 4551
+        },
+        {
           "path": "docs/qualification/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_RESULT_V1.md",
           "sha": "e3cbde1941619c8adcee4789461a03cc833b584c",
           "size": 4542
@@ -20861,6 +21214,21 @@
           "path": "docs/qualification/WZ_DEMOGRAPHY_INITIALIZATION_HOLDOUT_FIREWALL_V1.md",
           "sha": "8638e45d784647f210b2a4109f2cd78ffe851839",
           "size": 3023
+        },
+        {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_MIGRATION_WALKFORWARD_2017_TO_2018_RESULT_V1.md",
+          "sha": "d55f2179bf6e8a7b4f54f6a5342f9d3e26726e0f",
+          "size": 5586
+        },
+        {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_OLDER_MORTALITY_MASS_NORMALIZATION_2018_TO_2019_RESULT_V1.md",
+          "sha": "2b57efcdd9686814872ef8d7e4048840837d43fc",
+          "size": 2671
+        },
+        {
+          "path": "docs/qualification/WZ_DEMOGRAPHY_OLDER_MORTALITY_WALKFORWARD_2014_TO_2015_RESULT_V1.md",
+          "sha": "a445de9e7c1ddf2ed3ce1a39edc72e08caa32cdc",
+          "size": 3576
         },
         {
           "path": "docs/research/ADVERSARIAL_EVIDENCE_UPDATE_2026-09-17.md",
@@ -20994,7 +21362,7 @@
         },
         {
           "path": "pyproject.toml",
-          "sha": "3c35ab44ef80430b3c7be5e58363d6f80e14293f",
+          "sha": "e97a98ce67fd613b23b71ba55f274e99afc62b85",
           "size": 829
         },
         {
@@ -21006,6 +21374,11 @@
           "path": "regions/mappings/WPP2024_PARENT_TO_WZ_MACROREGION_V0.yaml",
           "sha": "84e8ca3a419e11bb05b260188bfb53ead5da6de7",
           "size": 2905
+        },
+        {
+          "path": "scenarios/2022_to_2023_pre2023_dynamics_v1.yaml",
+          "sha": "5b44f1bad90e24214442a28c08e3504907aed50b",
+          "size": 743
         },
         {
           "path": "scenarios/2022_to_2023_temporal_score_v1.yaml",
@@ -21063,9 +21436,34 @@
           "size": 892
         },
         {
+          "path": "science/scoring/WZ_DEMOGRAPHY_2022_TO_2023_PRE2023_DYNAMICS_SCORE_CONTRACT_V1.yaml",
+          "sha": "fa4cfae81c2d02474f42d69e075c9015b3177ba1",
+          "size": 1390
+        },
+        {
           "path": "science/scoring/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_CONTRACT_V1.yaml",
           "sha": "6beaedf1fba6bbeb6aabd8012d01627c2083ac30",
           "size": 1415
+        },
+        {
+          "path": "science/scoring/WZ_DEMOGRAPHY_MIGRATION_WALKFORWARD_2017_TO_2018_V1.yaml",
+          "sha": "847d2bd445e33a8ec1f9117918a0414ce82c38ab",
+          "size": 1535
+        },
+        {
+          "path": "science/scoring/WZ_DEMOGRAPHY_OLDER_MORTALITY_MASS_NORMALIZATION_2018_TO_2019_V1.yaml",
+          "sha": "e387956ba48385006416c03bba1c9dc9b325c2d2",
+          "size": 2417
+        },
+        {
+          "path": "science/scoring/WZ_DEMOGRAPHY_OLDER_MORTALITY_WALKFORWARD_2014_TO_2015_V1.yaml",
+          "sha": "0e03f1d7423214286900e63e89e8535e6e75a3f7",
+          "size": 2260
+        },
+        {
+          "path": "science/scoring/WZ_DEMOGRAPHY_SUCCESSOR_VS_PERSISTENCE_COMPARISON_V1.yaml",
+          "sha": "bcd5785c4da2c4b99828e66f19e0cccfad98f2dc",
+          "size": 1951
         },
         {
           "path": "specs/BENCHMARK_V1.schema.json",
@@ -21458,6 +21856,11 @@
           "size": 480
         },
         {
+          "path": "src/worldzero/validation/demography_walkforward.py",
+          "sha": "f6467519913284f80c96044ac185f519c7aa2af3",
+          "size": 8775
+        },
+        {
           "path": "src/worldzero/validation/falsification.py",
           "sha": "edd283f17b874451db43af41a62d41a45edee5d9",
           "size": 6070
@@ -21473,6 +21876,16 @@
           "size": 2613
         },
         {
+          "path": "src/worldzero/validation/older_mortality_mass_normalization.py",
+          "sha": "5af6b7c049a47262e204ea9de10255b88f8e95df",
+          "size": 10161
+        },
+        {
+          "path": "src/worldzero/validation/older_mortality_walkforward.py",
+          "sha": "f45797d480fb8b9c95fae4ff65c22cb6aaa849a5",
+          "size": 10043
+        },
+        {
           "path": "src/worldzero/validation/sensitivity.py",
           "sha": "2abf67bce6666bfd96bab28ac2c022715cb02094",
           "size": 3185
@@ -21481,6 +21894,11 @@
           "path": "src/worldzero/validation/temporal_population.py",
           "sha": "580ff95cab4402d04449746bb53450fac50e39c4",
           "size": 12145
+        },
+        {
+          "path": "src/worldzero/validation/temporal_population_comparison.py",
+          "sha": "0b980523166e9bcddd49fb9399838c159edfacb6",
+          "size": 8510
         },
         {
           "path": "state/receipts/WZ_DEMOGRAPHY_2022_2023_TEMPORAL_SPLIT_MATERIALIZATION_RECEIPT_V1.json",
@@ -21503,9 +21921,79 @@
           "size": 3998
         },
         {
+          "path": "state/receipts/WZ_DEMOGRAPHY_MIGRATION_WALKFORWARD_DERIVATION_V1.json",
+          "sha": "821ab499717b962d95a4f0b603857ed1d074d1a7",
+          "size": 5530
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_MIGRATION_WALKFORWARD_EXECUTION_V1.json",
+          "sha": "7f86a568c20dc4ff32635251a6a2836e2e323459",
+          "size": 851
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_OLDER_MORTALITY_CROSS_PLATFORM_V1.json",
+          "sha": "e4f84b0877a3dc7574960492e12352224b414bcc",
+          "size": 1125
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_OLDER_MORTALITY_DERIVATION_V1.json",
+          "sha": "eba527f01be7aaea938885333baf6acbc89deb09",
+          "size": 22355
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_OLDER_MORTALITY_EXECUTION_V1.json",
+          "sha": "79f1f29d5223fce7e2b9a2e121059390ccda62a4",
+          "size": 874
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_OLDER_MORTALITY_MASS_NORMALIZATION_CROSS_PLATFORM_V1.json",
+          "sha": "160d0d7b7d638ade6e64b8a6ea3f826cf4acf5f2",
+          "size": 1426
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_PRE2023_DYNAMICS_DERIVATION_V1.json",
+          "sha": "80b6114e904d0d7e1e4394d0e993238540985967",
+          "size": 7458
+        },
+        {
+          "path": "state/receipts/WZ_DEMOGRAPHY_PRE2023_DYNAMICS_EXECUTION_V1.json",
+          "sha": "2c932670c7c512fa89d550d3fc1357c6f7e45e1d",
+          "size": 2244
+        },
+        {
+          "path": "state/results/WZ_DEMOGRAPHY_2022_TO_2023_PRE2023_DYNAMICS_COMPARISON_V1.json",
+          "sha": "eca67210eee81ec5d5b44b5f137f6f178a361a1e",
+          "size": 983
+        },
+        {
           "path": "state/results/WZ_DEMOGRAPHY_2022_TO_2023_TEMPORAL_SCORE_V1.json",
           "sha": "3f7ede19d8b7a6cdd8e5ab9605aca9801e3c117c",
           "size": 17763
+        },
+        {
+          "path": "state/results/WZ_DEMOGRAPHY_MIGRATION_WALKFORWARD_2017_BASELINE_TERMINAL_V1.json",
+          "sha": "357ee4417299c9cc5d68227df9eb9c6b7dbe166b",
+          "size": 1466
+        },
+        {
+          "path": "state/results/WZ_DEMOGRAPHY_MIGRATION_WALKFORWARD_2017_MIGRATION_TERMINAL_V1.json",
+          "sha": "d419367a724bd5772d60816c1de81be93b6a0cfe",
+          "size": 1464
+        },
+        {
+          "path": "state/results/WZ_DEMOGRAPHY_MIGRATION_WALKFORWARD_2017_TO_2018_V1.json",
+          "sha": "e48f36416c899974c5591357025ca49ee4776fbe",
+          "size": 1750
+        },
+        {
+          "path": "state/results/WZ_DEMOGRAPHY_OLDER_MORTALITY_MASS_NORMALIZATION_2018_TO_2019_V1.json",
+          "sha": "a67c26b62d767b5b3241ccdff8ed82a98ee3f112",
+          "size": 1809
+        },
+        {
+          "path": "state/results/WZ_DEMOGRAPHY_OLDER_MORTALITY_WALKFORWARD_2014_TO_2015_V1.json",
+          "sha": "94bd3c77b757cab43055362641476ae91b4b8802",
+          "size": 2214
         },
         {
           "path": "tests/accounting/test_energy_reconciliation.py",
@@ -21674,7 +22162,7 @@
         },
         {
           "path": "tests/models/test_baseline_bindings.py",
-          "sha": "f9f8293ce3aaec83b9d23b2eb7a50abed57926b2",
+          "sha": "fb2633c808b01be9c71c2f673b550c40c1782962",
           "size": 30051
         },
         {
@@ -21833,6 +22321,11 @@
           "size": 2817
         },
         {
+          "path": "tests/validation/test_demography_migration_walkforward.py",
+          "sha": "466faccce201a35aea9d5b4eb538f4fd4e92fa77",
+          "size": 3247
+        },
+        {
           "path": "tests/validation/test_falsification_oracles.py",
           "sha": "11ada70c8003b12782afd6b215edae07cf68f596",
           "size": 3489
@@ -21848,9 +22341,29 @@
           "size": 987
         },
         {
+          "path": "tests/validation/test_older_mortality_mass_normalization.py",
+          "sha": "f398f08d0c578fa4847ba9edc76edd584b90f1e4",
+          "size": 4176
+        },
+        {
+          "path": "tests/validation/test_older_mortality_walkforward.py",
+          "sha": "c5588cdaf0e2ddf98347b86346d00a0dcde10b04",
+          "size": 4575
+        },
+        {
           "path": "tests/validation/test_sensitivity.py",
           "sha": "b0ff9436315b8dd3b3447220b957d5c0464d271c",
           "size": 831
+        },
+        {
+          "path": "tests/validation/test_temporal_population_comparison_contract.py",
+          "sha": "40cda05e5db817f92ee152ed8c2e312117b787ff",
+          "size": 2887
+        },
+        {
+          "path": "tests/validation/test_temporal_population_comparison_execution.py",
+          "sha": "a367090f3cca4f15f573ea0462fe644ba73a1483",
+          "size": 3583
         },
         {
           "path": "tests/validation/test_temporal_population_scoring.py",
@@ -21869,7 +22382,7 @@
         },
         {
           "path": "third_party/bootstrap-requirements.in",
-          "sha": "633b4c80c0c565cf54161eb3e1f03cd117bfa8e4",
+          "sha": "ce37bcf41a82d28f36c59617e9654c6942eefa07",
           "size": 116
         },
         {
@@ -21879,7 +22392,7 @@
         },
         {
           "path": "third_party/wheels/cp312-manylinux_x86_64/MANIFEST.json",
-          "sha": "c5f769bce686a5127a136550e8427d5a77bfae7b",
+          "sha": "ba5c3b9f27b55ad5bacb62cbcea4037e3774cff2",
           "size": 5040
         },
         {
@@ -21903,9 +22416,9 @@
           "size": 7484
         },
         {
-          "path": "third_party/wheels/cp312-manylinux_x86_64/librt-0.15.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
-          "sha": "00987aa35fc35fd9714e3671d52b6f68c480d76b",
-          "size": 531904
+          "path": "third_party/wheels/cp312-manylinux_x86_64/librt-0.16.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "sha": "b6da5857855b8d4e4bac7c4fde025fb8c3f9190c",
+          "size": 531952
         },
         {
           "path": "third_party/wheels/cp312-manylinux_x86_64/mypy-2.3.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
@@ -21933,14 +22446,14 @@
           "size": 20538
         },
         {
-          "path": "third_party/wheels/cp312-manylinux_x86_64/pydantic-2.13.4-py3-none-any.whl",
-          "sha": "8ccde4c0f1a96dcb6bf916936c410fd0d40b019f",
-          "size": 472262
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pydantic-2.13.5-py3-none-any.whl",
+          "sha": "45cb914dc00058a12ca6b5d03bc056fbac6adc90",
+          "size": 472589
         },
         {
-          "path": "third_party/wheels/cp312-manylinux_x86_64/pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-          "sha": "ef4aaf4c343996fa07d7c9597884e68ad41ce8e6",
-          "size": 2094516
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+          "sha": "4cd399a1dd2cdbb1540402311dd959657a8f4735",
+          "size": 2066284
         },
         {
           "path": "third_party/wheels/cp312-manylinux_x86_64/pygments-2.21.0-py3-none-any.whl",
@@ -21948,9 +22461,9 @@
           "size": 1250147
         },
         {
-          "path": "third_party/wheels/cp312-manylinux_x86_64/pytest-9.0.2-py3-none-any.whl",
-          "sha": "f7bbe541dfe79951c926f482c2c6f409f11ccc86",
-          "size": 374801
+          "path": "third_party/wheels/cp312-manylinux_x86_64/pytest-9.1.1-py3-none-any.whl",
+          "sha": "8da88c1751e63abc1215683d74cbe60a69983105",
+          "size": 386536
         },
         {
           "path": "third_party/wheels/cp312-manylinux_x86_64/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
@@ -21959,7 +22472,7 @@
         },
         {
           "path": "third_party/wheels/cp312-manylinux_x86_64/requirements.lock",
-          "sha": "f9bc3bae41067380c0cac58e15d80130033e648b",
+          "sha": "ce37bcf41a82d28f36c59617e9654c6942eefa07",
           "size": 116
         },
         {
@@ -21984,7 +22497,7 @@
         },
         {
           "path": "third_party/wheels/cp312-win_amd64/MANIFEST.json",
-          "sha": "75511c2830067942b35d1610ee2afdcea60711e7",
+          "sha": "7836c2018edb23505c198d4e2f77d45b6bafb2f8",
           "size": 4757
         },
         {
@@ -22008,9 +22521,9 @@
           "size": 7484
         },
         {
-          "path": "third_party/wheels/cp312-win_amd64/librt-0.15.0-cp312-cp312-win_amd64.whl",
-          "sha": "b560d909f70430144bd140ebb00a76a5235c001f",
-          "size": 126974
+          "path": "third_party/wheels/cp312-win_amd64/librt-0.16.0-cp312-cp312-win_amd64.whl",
+          "sha": "ce01930bdfef2fee5211006462dedc1d76959825",
+          "size": 126176
         },
         {
           "path": "third_party/wheels/cp312-win_amd64/mypy-2.3.1-cp312-cp312-win_amd64.whl",
@@ -22038,14 +22551,14 @@
           "size": 20538
         },
         {
-          "path": "third_party/wheels/cp312-win_amd64/pydantic-2.13.4-py3-none-any.whl",
-          "sha": "8ccde4c0f1a96dcb6bf916936c410fd0d40b019f",
-          "size": 472262
+          "path": "third_party/wheels/cp312-win_amd64/pydantic-2.13.5-py3-none-any.whl",
+          "sha": "45cb914dc00058a12ca6b5d03bc056fbac6adc90",
+          "size": 472589
         },
         {
-          "path": "third_party/wheels/cp312-win_amd64/pydantic_core-2.46.4-cp312-cp312-win_amd64.whl",
-          "sha": "c455c3496b7f7ecb0a0cd7984852244cf234363e",
-          "size": 2072919
+          "path": "third_party/wheels/cp312-win_amd64/pydantic_core-2.46.5-cp312-cp312-win_amd64.whl",
+          "sha": "17385977a27dd95e42f724d289f2a3b4ffac8926",
+          "size": 2043140
         },
         {
           "path": "third_party/wheels/cp312-win_amd64/pygments-2.21.0-py3-none-any.whl",
@@ -22053,9 +22566,9 @@
           "size": 1250147
         },
         {
-          "path": "third_party/wheels/cp312-win_amd64/pytest-9.0.2-py3-none-any.whl",
-          "sha": "f7bbe541dfe79951c926f482c2c6f409f11ccc86",
-          "size": 374801
+          "path": "third_party/wheels/cp312-win_amd64/pytest-9.1.1-py3-none-any.whl",
+          "sha": "8da88c1751e63abc1215683d74cbe60a69983105",
+          "size": 386536
         },
         {
           "path": "third_party/wheels/cp312-win_amd64/pyyaml-6.0.3-cp312-cp312-win_amd64.whl",
@@ -22064,7 +22577,7 @@
         },
         {
           "path": "third_party/wheels/cp312-win_amd64/requirements.lock",
-          "sha": "f9bc3bae41067380c0cac58e15d80130033e648b",
+          "sha": "ce37bcf41a82d28f36c59617e9654c6942eefa07",
           "size": 116
         },
         {
@@ -22118,6 +22631,26 @@
           "size": 11879
         },
         {
+          "path": "tools/run_demography_migration_walkforward.py",
+          "sha": "562b641b30b91104740027eadc8b578fe01aa35a",
+          "size": 25677
+        },
+        {
+          "path": "tools/run_demography_older_mortality_mass_normalization.py",
+          "sha": "b93b7ad633b29a4cccf266434528e08659260e47",
+          "size": 11801
+        },
+        {
+          "path": "tools/run_demography_older_mortality_walkforward.py",
+          "sha": "696a7c75ea4b37a7c90110f5325e46f2b9022838",
+          "size": 13857
+        },
+        {
+          "path": "tools/run_pre2023_demography_candidate.py",
+          "sha": "34e6c0170769f62cf37976bb0351d265dbc9cb93",
+          "size": 20661
+        },
+        {
           "path": "tools/run_temporal_population_score.py",
           "sha": "4ddddf9d6977718640cf5c6980c748794c0221f1",
           "size": 2469
@@ -22134,8 +22667,8 @@
         },
         {
           "path": "uv.lock",
-          "sha": "6166313b154f684b4be689f4067a05644e4b19f8",
-          "size": 62154
+          "sha": "df2e4becb2e1430c358036a2246df8091b2d80ee",
+          "size": 62150
         }
       ]
     }
