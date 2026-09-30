@@ -1,0 +1,44 @@
+{
+  "schema": "DISCOVERY_PORTFOLIO_CENSUS_DRIFT_V1",
+  "observed_date": "2026-09-30",
+  "base_census": {
+    "repository": "thebrazenbeard/discovery",
+    "commit": "620c09b2a1c96256cc7523877f3e986ad75f8f0a",
+    "path": "portfolio/PORTFOLIO_CENSUS_V1.json",
+    "counts": {
+      "total": 74,
+      "public": 55,
+      "private": 19
+    }
+  },
+  "live_authenticated_inventory": {
+    "counts": {
+      "total": 76,
+      "public": 57,
+      "private": 19,
+      "archived": 2,
+      "public_archived": 0,
+      "private_archived": 2
+    },
+    "public_additions_since_base": [
+      "thebrazenbeard/thebrazenbeard",
+      "thebrazenbeard/workbridge"
+    ],
+    "public_removals_since_base": []
+  },
+  "private_inventory": {
+    "public_commitment": "COUNT_ONLY",
+    "count": 19,
+    "exact_membership_publicly_committed": false
+  },
+  "status": "BASE_CENSUS_STALE_REQUIRES_FULL_DETERMINISTIC_REFRESH",
+  "classification_state": "NEW_PUBLIC_SUBJECTS_UNCLASSIFIED_PENDING_DEDICATED_REVIEW",
+  "rules": {
+    "this_artifact_is_not_replacement_census": true,
+    "do_not_infer_semantic_roles": true,
+    "do_not_infer_authority_from_membership": true,
+    "do_not_publish_private_names": true,
+    "full_refresh_must_rebuild_bound_graph_intake_and_blob_evidence": true
+  },
+  "evidence_ceiling": "AUTHENTICATED_INVENTORY_DRIFT_OBSERVATION_ONLY"
+}
