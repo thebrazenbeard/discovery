@@ -1,0 +1,64 @@
+{
+  "schema": "DISCOVERY_PUBLIC_SUBJECT_CLASSIFICATION_V1",
+  "observed_date": "2026-09-30",
+  "inventory_context": {
+    "total": 76,
+    "public": 57,
+    "private": 19,
+    "source_drift_artifact": "portfolio/PORTFOLIO_CENSUS_DRIFT_20260930_V1.json"
+  },
+  "classification_rule": "Exact-source descriptive classification only. Priority/family/activity labels do not grant execution, merge, deployment, installation, runtime, or effect authority.",
+  "subjects": [
+    {
+      "id": "semiotics",
+      "repository": "thebrazenbeard/semiotics",
+      "exact_head": "37117a2097f7f2aa35968fc9db24eacf7240826e",
+      "priority": "P2",
+      "family_id": "language-and-semantics",
+      "activity_state": "ACTIVE",
+      "purpose": "Deterministic source-bound registry for signs, contextual interpretations, provenance, revision history, and explicit interpretation relations.",
+      "status": "v0.2 corpus discipline is in progress; the kernel explicitly does not infer meaning, confidence, truth, or relations.",
+      "current_frontier": "Establish evaluation evidence before admitting learned/probabilistic interpretation, while preserving source-bound readings versus generated hypotheses."
+    },
+    {
+      "id": "thebrazenbeard",
+      "repository": "thebrazenbeard/thebrazenbeard",
+      "exact_head": "83ea2e083ccbf83ad5215ca53a9d5a00d16bb0d0",
+      "priority": "P2",
+      "family_id": "portfolio-presentation",
+      "activity_state": "STABLE",
+      "purpose": "Public GitHub profile and descriptive portfolio presentation surface.",
+      "status": "Profile README and visual assets present portfolio relationships and explicitly disclaim that the topology implies one live runtime.",
+      "current_frontier": "Keep presentation claims subordinate to canonical repository/runtime evidence; do not use profile prose as project currentness or authority."
+    },
+    {
+      "id": "workbridgecommander",
+      "repository": "thebrazenbeard/workbridgecommander",
+      "exact_head": "c2b95be79ca011a539c20bfee60fcbc46cfea177",
+      "priority": "P1",
+      "family_id": "coordination",
+      "activity_state": "ACTIVE",
+      "purpose": "Remote MCP ingress, authenticated device attachment, and orchestration surface for the WorkBridge Commander path.",
+      "status": "Remote service/device-agent source is on main; source explicitly preserves Desktop Commander workstation semantics and does not establish a deployed endpoint, installed workstation payload, or remote effect.",
+      "current_frontier": "Qualify endpoint/authentication, revocation, session isolation, exact routing, and workstation-payload binding without laundering remote reachability into workstation authority."
+    },
+    {
+      "id": "workbridge",
+      "repository": "thebrazenbeard/workbridge",
+      "exact_head": "7caab29eb5667897a0a03d0ce67d733380b01685",
+      "priority": "P1",
+      "family_id": "workstation-runtime",
+      "activity_state": "ACTIVE_HEAVY",
+      "purpose": "Standalone provider-neutral bounded Go MCP workstation server plus independent Synology WorkBridge packaging.",
+      "status": "Derived from an earlier WorkBridgeMCP Go-server cut and now independently evolving; WorkBridgeRelay 0002 source is on main while a separate process-argument hardening/package-0003 candidate is under qualification.",
+      "current_frontier": "Qualify independent source/build/package hardening and establish explicit donor-patch currentness so security fixes do not silently diverge across the WorkBridgeMCP-derived lineage."
+    }
+  ],
+  "cross_subject_boundaries": {
+    "WorkBridgeMCP": "Primary workstation implementation/qualification source containing both bounded native and exact Desktop Commander duplicate models; not aliased by this classification.",
+    "workbridgecommander": "Distinct remote transport/orchestration surface with zero observed shared blobs against the two implementation repositories at reviewed main heads.",
+    "workbridge": "Derived standalone bounded-Go/Synology implementation lineage requiring independent currentness and qualification.",
+    "profile": "Presentation is descriptive evidence only, never canonical system state."
+  },
+  "authority_ceiling": "DESCRIPTIVE_SOURCE_CLASSIFICATION_ONLY"
+}
