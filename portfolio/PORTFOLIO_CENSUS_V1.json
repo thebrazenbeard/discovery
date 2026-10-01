@@ -1,11 +1,11 @@
 {
   "schema": "DISCOVERY_PORTFOLIO_CENSUS_V1",
-  "observed_date": "2026-09-30",
+  "observed_date": "2026-10-01",
   "source": "GitHub accessible repository inventory for owner thebrazenbeard",
   "status": "OBSERVED_INVENTORY_NOT_ARCHITECTURAL_AUTHORITY",
   "counts": {
-    "total": 76,
-    "public": 57,
+    "total": 77,
+    "public": 58,
     "private": 19
   },
   "public_repositories": [
@@ -23,6 +23,7 @@
     "discovery",
     "driftguard",
     "empathy",
+    "executor",
     "freerowcochkar",
     "fuckup",
     "god-brain",
@@ -37,7 +38,7 @@
     "noema",
     "on-theo",
     "personification",
-    "pro-run",
+    "pre-active",
     "project-achilles",
     "project-lantern",
     "project-runner",
@@ -69,9 +70,9 @@
   ],
   "inventory_digests": {
     "algorithm": "SHA-256 over lexicographically sorted repository names, UTF-8, one name per line with trailing newline",
-    "public_names_sha256": "112028b82ae5eaca484908612721cea05df4bbb6b4861262dcbc587c98292d64",
+    "public_names_sha256": "443fc84900700b79f435d88810dec8e1b250dd73fa184d509bd16375411d9fcd",
     "private_names_sha256": "0995153e285d2ce12a1569ebcab76f420d95823da8f791332ac07c99f110a2ea",
-    "all_names_sha256": "b7542192d5182ffd52a0bdfa8845eeba3dc9b1c85231b3a6612fdfd16da665a3"
+    "all_names_sha256": "9c21a6fbf6c31ee413dfe05e07e41cde6e4f86603ba93f2bf3ff4f8c02065754"
   },
   "privacy_rule": "Private repository names and private technical detail are intentionally not published by this public repository. Private repositories still participate in the analysis and aggregate counts.",
   "discovery_roles": {
@@ -79,7 +80,7 @@
     "boundary_or_negative_control_consumers": 22,
     "historical_or_reference_only": 2,
     "discovery_self": 1,
-    "unclassified_since_prior_cut": 18
+    "unclassified_since_prior_cut": 19
   },
   "role_semantics": {
     "direct_architecture_subjects": "Repositories containing potentially reusable mechanics, overlapping infrastructure, implementation duplication, orchestration, evidence, currentness, recovery, transport, cognition, or experiment machinery.",
@@ -89,7 +90,7 @@
     "unclassified_since_prior_cut": "Repositories beyond the previously classified set remain explicitly unclassified in the census until dedicated exact-head review; separate classification artifacts do not change census authority."
   },
   "completeness_rule": "A repository does not need to be a consolidation candidate to be included. Exclusion from a particular experiment must be explicit rather than inferred from absence.",
-  "refresh_rule": "Any change in repository count, visibility split, public repository set, or any inventory digest invalidates claims that this exact census is current. The current inventory binds 76 accessible repositories; semantic role changes require separate classification evidence.",
+  "refresh_rule": "Any change in repository count, visibility split, public repository set, repository identity/path binding, or any inventory digest invalidates claims that this exact census is current. The current inventory binds 77 accessible repositories; semantic role changes require separate classification evidence.",
   "inventory_digest_validation": {
     "public_names_sha256": "SOURCE_RECOMPUTED",
     "private_names_sha256": "EXTERNALLY_SUPPLIED_NOT_SOURCE_VALIDATED",
