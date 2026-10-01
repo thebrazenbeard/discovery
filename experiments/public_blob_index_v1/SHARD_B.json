@@ -1,8 +1,256 @@
 {
   "schema": "DISCOVERY_PUBLIC_BLOB_INDEX_SHARD_V1",
   "shard": "B",
-  "observed_date": "2026-09-30",
+  "observed_date": "2026-10-01",
   "repositories": {
+    "pre-active": {
+      "default_branch": "main",
+      "head": "0ffc95351db34afed091c3239614f57f371c04ad",
+      "tree_sha": "9021032205208e91c9edddab7e4ec8ec08d56348",
+      "archived": false,
+      "blobs": [
+        {
+          "path": ".github/workflows/test.yml",
+          "sha": "84454ce8567be7967906fc670bc667db1cfe8167",
+          "size": 520
+        },
+        {
+          "path": ".gitignore",
+          "sha": "b31eaaeed42611fb76d67b1503425829e1f5df4d",
+          "size": 114
+        },
+        {
+          "path": "CLA.md",
+          "sha": "8ee8a2c2517d1276f4c4bf7dbfe5789347aea9e5",
+          "size": 2176
+        },
+        {
+          "path": "COMMERCIAL_LICENSE.md",
+          "sha": "fb9c09159a2f870724bc88e09658d2d0cf58abd7",
+          "size": 1241
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "sha": "6b6e33cee58ed4d72b40e9dabd6f360ab41126c9",
+          "size": 977
+        },
+        {
+          "path": "LICENSE",
+          "sha": "2704e93d980563fcfe7275319d528c93cc43145b",
+          "size": 3884
+        },
+        {
+          "path": "NOTICE",
+          "sha": "5bf32edaa17dc7448f780ecec20413a365423558",
+          "size": 720
+        },
+        {
+          "path": "README.md",
+          "sha": "f4f7a72aa748f134cd9d22591f2f953b112ec6b9",
+          "size": 8911
+        },
+        {
+          "path": "SECURITY.md",
+          "sha": "7a5ac560fd268ae73fe49d42b223e74191aa0a04",
+          "size": 862
+        },
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "sha": "26b5f2f8599d74b98dd66bcc511f59c7880875db",
+          "size": 9531
+        },
+        {
+          "path": "docs/DONOR_BINDINGS.md",
+          "sha": "d1a4cf6709c4320cc24d9e251f80374baab26217",
+          "size": 2768
+        },
+        {
+          "path": "docs/EFFECT_AND_RECOVERY.md",
+          "sha": "e4f3c8cbc2e63e5ec7db5296b139db7e0d11de64",
+          "size": 4006
+        },
+        {
+          "path": "docs/PORTFOLIO_SWEEP_V1.md",
+          "sha": "80ebfe945d1f0ae71364ccebb956d5629b6a885b",
+          "size": 7067
+        },
+        {
+          "path": "docs/WINDOWS_LAPPY_RUNTIME_V1.md",
+          "sha": "ae3f9e5a6019b9f0165004c713f06b381a8fc2d0",
+          "size": 7735
+        },
+        {
+          "path": "examples/minimal.py",
+          "sha": "2efa35ca91a33f6a0157295d047c521303e848fc",
+          "size": 882
+        },
+        {
+          "path": "ops/windows/qwen_http.py",
+          "sha": "957f7038218a548ef1831da6ed4566593fa4f6d3",
+          "size": 4518
+        },
+        {
+          "path": "ops/windows/register-tasks.ps1",
+          "sha": "b23418a039d8738f30e77ddd18b65a6aaee13964",
+          "size": 2604
+        },
+        {
+          "path": "ops/windows/start-prorun.ps1",
+          "sha": "7118207c8e9fe3f91d52f96e7a4d34112e4bbaf0",
+          "size": 1826
+        },
+        {
+          "path": "ops/windows/start-qwen.ps1",
+          "sha": "a726df42e232b0f3461f22473222c100f572ed75",
+          "size": 2419
+        },
+        {
+          "path": "ops/windows/tool_protocol.py",
+          "sha": "c2a55efcafb1710aaa713e53626d084552171d35",
+          "size": 8480
+        },
+        {
+          "path": "ops/windows/watchdog.ps1",
+          "sha": "711601bf3cfb1cec6b829bebd9f0de42a1757d6e",
+          "size": 647
+        },
+        {
+          "path": "pyproject.toml",
+          "sha": "05bf8807bc6522be96245585e33608b684905db2",
+          "size": 650
+        },
+        {
+          "path": "schemas/event-envelope.schema.json",
+          "sha": "28a16c4113c9887d42bb755e6876183afc9be898",
+          "size": 514
+        },
+        {
+          "path": "schemas/run-receipt.schema.json",
+          "sha": "8c332b69138c2ee73a34bd21b45a3b99874b647b",
+          "size": 637
+        },
+        {
+          "path": "schemas/tool-call.schema.json",
+          "sha": "1673603b8e362a2a81184ad3ba0365a620a3b54c",
+          "size": 439
+        },
+        {
+          "path": "schemas/trigger.schema.json",
+          "sha": "34479a863e60229cea415615aef75c1bae96eae8",
+          "size": 490
+        },
+        {
+          "path": "src/prorun/__init__.py",
+          "sha": "1b077571b074d68dbeea398bc805270629dce6a6",
+          "size": 103
+        },
+        {
+          "path": "src/prorun/__main__.py",
+          "sha": "eb53e2f31b2f703ad32ef64b8a41faa3e7d18e08",
+          "size": 48
+        },
+        {
+          "path": "src/prorun/cli.py",
+          "sha": "0b8c602c6031c321af372786d6197ae8dfbb1391",
+          "size": 5859
+        },
+        {
+          "path": "src/prorun/context.py",
+          "sha": "e37ea84eb187589dfc7fff0863c50d6c69dcb294",
+          "size": 2143
+        },
+        {
+          "path": "src/prorun/daemon.py",
+          "sha": "826e5a4c0c25f261ba20ee76e428f611eca9d319",
+          "size": 1012
+        },
+        {
+          "path": "src/prorun/engine.py",
+          "sha": "fc4e23a4fe8f13430e9b92d0d7944eeedaf30e9d",
+          "size": 11464
+        },
+        {
+          "path": "src/prorun/providers/__init__.py",
+          "sha": "0db28d90fb05859691c528e79fd21005fec2400f",
+          "size": 94
+        },
+        {
+          "path": "src/prorun/providers/openai_compatible.py",
+          "sha": "22ddb2e3029d365f94c8817d8381a7d851e4b33d",
+          "size": 4018
+        },
+        {
+          "path": "src/prorun/scheduler.py",
+          "sha": "cbb39f331f96c291ee2429ef9d7252cb81ccff77",
+          "size": 2689
+        },
+        {
+          "path": "src/prorun/store.py",
+          "sha": "d66474e21af9f69d86bd53363459c6bae1c108b4",
+          "size": 24419
+        },
+        {
+          "path": "src/prorun/tools.py",
+          "sha": "b70b0a5760eae6f8ef39b8237c9b9efcb53ca7e8",
+          "size": 21379
+        },
+        {
+          "path": "tests/test_cli.py",
+          "sha": "85020e9117ddaa58d25a0934f2c830689254cbb5",
+          "size": 617
+        },
+        {
+          "path": "tests/test_context.py",
+          "sha": "2b8998dbadca57fb228aac0e012ee6c301357bc0",
+          "size": 882
+        },
+        {
+          "path": "tests/test_daemon.py",
+          "sha": "88b00063857b934de66ff9a59cdd3dfde0ec36e2",
+          "size": 2002
+        },
+        {
+          "path": "tests/test_engine.py",
+          "sha": "8c3afef29c717fb666b206d623e1a1cb1bb0067d",
+          "size": 21306
+        },
+        {
+          "path": "tests/test_event_queue.py",
+          "sha": "4a378e92b53ce63221717e729d2133b30d53c52f",
+          "size": 2227
+        },
+        {
+          "path": "tests/test_example.py",
+          "sha": "a010adf519cc800f235bf80896bf7fb0f1449068",
+          "size": 546
+        },
+        {
+          "path": "tests/test_http_tool_loop_integration.py",
+          "sha": "321b5561f5b883e0174c242f7f1419f1c250935b",
+          "size": 4196
+        },
+        {
+          "path": "tests/test_provider.py",
+          "sha": "eaffbd3fae9635636f6bcbf595c0e60cf8cc6a2f",
+          "size": 2389
+        },
+        {
+          "path": "tests/test_scheduler.py",
+          "sha": "394aef7a4ae74aa6f7e1c68d6b947226a31a9538",
+          "size": 825
+        },
+        {
+          "path": "tests/test_tools.py",
+          "sha": "819d8b62e074c8e395565df8425105da4520b4a8",
+          "size": 4728
+        },
+        {
+          "path": "tests/test_windows_tool_protocol.py",
+          "sha": "f212b101a44057bc795c9f1304a8e72d9475a387",
+          "size": 5583
+        }
+      ]
+    },
     "project-achilles": {
       "default_branch": "main",
       "head": "99bc4e8cf7bd60d022fb25222d701a8cf42f80c0",
@@ -2490,8 +2738,8 @@
     },
     "semanticatlas": {
       "default_branch": "main",
-      "head": "beaecc6c64a6a8f90e7b47d4739296a3870b627c",
-      "tree_sha": "fd95ccb14dc386bf207367b922f0992917b72dca",
+      "head": "895677a64af5d29b580306ca52ecc0e0607a9ccc",
+      "tree_sha": "9fa0a13c2e2ff83b15f341448ff6278854092fbd",
       "archived": false,
       "blobs": [
         {
@@ -2698,6 +2946,16 @@
           "path": "governance/SEMANTIC_ATLAS_MUNE_STEWARDSHIP_HANDOFF_2026-08-23.md",
           "sha": "2512bbf16daa9f6af0779ac5772ed3c389502b87",
           "size": 1917
+        },
+        {
+          "path": "recovery/provider/SEMANTIC_ATLAS_PROVIDER_MIGRATION_CUSTODY_V1.md",
+          "sha": "39556f6cf2028fc3e948791920900e1a7b34b301",
+          "size": 1494
+        },
+        {
+          "path": "recovery/provider/VERA_SUPABASE_SEMANTIC_ATLAS_MIGRATION_LEDGER_V1.json",
+          "sha": "ec0db0398960c8309219e97b270967492ac376d3",
+          "size": 212392
         },
         {
           "path": "research/checkpoints/SEMANTIC_ATLAS_RESEARCH_CHECKPOINT_2026-08-22_V0.1.md",
@@ -20265,8 +20523,8 @@
     },
     "workbridge": {
       "default_branch": "main",
-      "head": "7caab29eb5667897a0a03d0ce67d733380b01685",
-      "tree_sha": "f5fca726c3cde2ee75c68acc0d8ec747154a71a8",
+      "head": "e88e14ea25f25abd723bb50909b3e25e67f889fd",
+      "tree_sha": "c0180f8ee44dce772ac9f7f6784e48756f7abbe6",
       "archived": false,
       "blobs": [
         {
@@ -20281,7 +20539,7 @@
         },
         {
           "path": ".github/workflows/workbridge-relay-spk.yml",
-          "sha": "204de49a3024a4a3c81ae06b270c87369fb48635",
+          "sha": "1450645fc46411181492d69102cb1484ee67f09a",
           "size": 6130
         },
         {
@@ -20316,7 +20574,7 @@
         },
         {
           "path": "README.md",
-          "sha": "4b681f5b16fda217754b3199443a06727c6ef410",
+          "sha": "916cce7fdad1ecc46ee6028adf675064b6d32d60",
           "size": 3798
         },
         {
@@ -20351,8 +20609,8 @@
         },
         {
           "path": "docs/SECURITY.md",
-          "sha": "9e6a984c25838cca29b20a12fc13d646264f9a28",
-          "size": 4511
+          "sha": "9e1bd219d52f8ae6b822acf60c656a4e46dd5484",
+          "size": 4714
         },
         {
           "path": "docs/WORKBRIDGE_CONNECTOR_STRESS_20260930.md",
@@ -20406,8 +20664,8 @@
         },
         {
           "path": "internal/config/config.go",
-          "sha": "7aa182c772fdbbc2392a95e91f3a5473ce9c76af",
-          "size": 6548
+          "sha": "c945cc74c57b4e057d51757bfc82e31070cec9cc",
+          "size": 6630
         },
         {
           "path": "internal/config/config_test.go",
@@ -20426,13 +20684,13 @@
         },
         {
           "path": "internal/runner/runner.go",
-          "sha": "da9da755d2bbbb9bf6f7d39ca99ec8950dc30875",
-          "size": 6304
+          "sha": "5c41ea1330efdf770b02c6721802caeafbc705dc",
+          "size": 6531
         },
         {
           "path": "internal/runner/runner_test.go",
-          "sha": "5c2898998fd228f5551808ae2758afd2d7af44e6",
-          "size": 3399
+          "sha": "89cf216def0cd73807974a10c2bc14094daabc62",
+          "size": 4547
         },
         {
           "path": "internal/workspace/workspace.go",
@@ -20446,7 +20704,7 @@
         },
         {
           "path": "synology/component-bindings.json",
-          "sha": "065addd404a4a69d7a48953ca5a7a74129e3f78a",
+          "sha": "6211edc60f8f8ce0ee380b80e7823937a2fd35db",
           "size": 1264
         },
         {
@@ -20466,7 +20724,7 @@
         },
         {
           "path": "synology/spk/INFO",
-          "sha": "570a8e23398292df7c786151068dc7b595a2c22f",
+          "sha": "8fd060e8b52f51d85f0a9f82da03961eef0be330",
           "size": 248
         },
         {
@@ -20556,7 +20814,7 @@
         },
         {
           "path": "synology/tests/test_relay_package_contract.py",
-          "sha": "1da8cf4e091754433cadb6c317eef1902a19f6ab",
+          "sha": "b37788f9382e4d51ae4df15a331fd6fb8fef9637",
           "size": 8744
         },
         {
@@ -20571,7 +20829,7 @@
         },
         {
           "path": "synology/tools/build_spk.py",
-          "sha": "a1a1c13c2f04fb069d00c182e4d8ee04bc609777",
+          "sha": "25759000bba3febad9048a8a01f3b783edd01a8b",
           "size": 4806
         },
         {
@@ -20581,7 +20839,7 @@
         },
         {
           "path": "synology/tools/verify_spk.py",
-          "sha": "01aebf46e02a666eb4c7d8e2e76df2c3005388dc",
+          "sha": "60d4888fbda30a1b1311bf355c1f298379e0e78b",
           "size": 13309
         },
         {
