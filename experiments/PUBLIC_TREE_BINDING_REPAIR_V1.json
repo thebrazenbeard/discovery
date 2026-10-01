@@ -1,11 +1,11 @@
 {
   "schema": "DISCOVERY_PUBLIC_TREE_BINDING_REPAIR_V1",
   "status": "LIVE_SOURCE_REFRESH_PUBLIC_SET_AND_HEADS_UPDATED",
-  "observed_date": "2026-09-30",
+  "observed_date": "2026-10-01",
   "prior_subject": "vera/discovery-live-census-public-intake-v1-20260921@56822c92c4cb3709bf742032f539206a0e398024",
   "live_inventory": {
-    "total": 76,
-    "public": 57,
+    "total": 77,
+    "public": 58,
     "private": 19,
     "public_set_changed": true
   },
@@ -18,7 +18,7 @@
   },
   "repair": {
     "public_default_heads_changed_since_prior_scan": true,
-    "repaired_repository_count": 57,
+    "repaired_repository_count": 58,
     "bindings": {
       "Attune": {
         "head": "46461057e4d9ea25ec91a051fc17020e1113329a",
@@ -76,6 +76,10 @@
         "head": "76ebb492827a79b20b3be76fe9f9f48ab860ef1d",
         "tree": "45d314a6af73ecc6d5e6d16613ea9a383c162ec0"
       },
+      "executor": {
+        "head": "2b9b4e9456c6481b1d5fe9be0a142d01ce804d8f",
+        "tree": "8bed8d8e8f447b959f5f9e917ca858e11ddb0433"
+      },
       "freerowcochkar": {
         "head": "9ea4eaefe5229ca90d7ae6099dbf30d9e13b64b2",
         "tree": "7bf7e104d9ae39e9242da223d76762de231b4bc5"
@@ -132,7 +136,7 @@
         "head": "31610e915047af46aa3242190a57baedaed7fbfb",
         "tree": "981a0f4bf5897d861f0ae5732e205e73b656969e"
       },
-      "pro-run": {
+      "pre-active": {
         "head": "0ffc95351db34afed091c3239614f57f371c04ad",
         "tree": "9021032205208e91c9edddab7e4ec8ec08d56348"
       },
@@ -157,8 +161,8 @@
         "tree": "9e8c981e49c375eae1f533f35efffd73b82707d7"
       },
       "semanticatlas": {
-        "head": "beaecc6c64a6a8f90e7b47d4739296a3870b627c",
-        "tree": "fd95ccb14dc386bf207367b922f0992917b72dca"
+        "head": "895677a64af5d29b580306ca52ecc0e0607a9ccc",
+        "tree": "9fa0a13c2e2ff83b15f341448ff6278854092fbd"
       },
       "semiotics": {
         "head": "37117a2097f7f2aa35968fc9db24eacf7240826e",
@@ -237,8 +241,8 @@
         "tree": "5bbafd9ce81e3e58abe25086f3d1f518d264bb9f"
       },
       "workbridge": {
-        "head": "7caab29eb5667897a0a03d0ce67d733380b01685",
-        "tree": "f5fca726c3cde2ee75c68acc0d8ec747154a71a8"
+        "head": "e88e14ea25f25abd723bb50909b3e25e67f889fd",
+        "tree": "c0180f8ee44dce772ac9f7f6784e48756f7abbe6"
       },
       "workbridgecommander": {
         "head": "c2b95be79ca011a539c20bfee60fcbc46cfea177",
