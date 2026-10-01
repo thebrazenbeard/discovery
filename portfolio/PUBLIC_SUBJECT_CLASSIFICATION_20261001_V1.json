@@ -1,0 +1,40 @@
+{
+  "schema": "DISCOVERY_PUBLIC_SUBJECT_CLASSIFICATION_V1",
+  "observed_date": "2026-10-01",
+  "inventory_context": {
+    "total": 77,
+    "public": 58,
+    "private": 19,
+    "census_path": "portfolio/PORTFOLIO_CENSUS_V1.json"
+  },
+  "classification_rule": "Repository identity, current-main facts, and draft-candidate semantics remain separate. Descriptive classification grants no execution, merge, deployment, installation, runtime, or effect authority.",
+  "subjects": [
+    {
+      "id": "pre-active",
+      "repository": "thebrazenbeard/pre-active",
+      "github_repository_id": 1387754784,
+      "renamed_from": "thebrazenbeard/pro-run",
+      "exact_head": "0ffc95351db34afed091c3239614f57f371c04ad",
+      "exact_tree": "9021032205208e91c9edddab7e4ec8ec08d56348",
+      "classification": "RENAME_CONTINUITY_UNCLASSIFIED",
+      "status": "Same GitHub repository identity and exact main previously addressed as thebrazenbeard/pro-run; path/name changed to pre-active. Rename alone does not establish a new role or invalidate the repository's prior source history."
+    },
+    {
+      "id": "executor",
+      "repository": "thebrazenbeard/executor",
+      "github_repository_id": 1399690088,
+      "exact_main": "2b9b4e9456c6481b1d5fe9be0a142d01ce804d8f",
+      "exact_tree": "8bed8d8e8f447b959f5f9e917ca858e11ddb0433",
+      "current_main_classification": "BOOTSTRAP_ONLY_UNCLASSIFIED",
+      "draft_candidate": {
+        "pr": 1,
+        "head": "f099c1af21f350d1f05a22fc13ed3658b31c6f4d",
+        "ci_run": 36849360739,
+        "ci_conclusion": "success",
+        "proposed_role": "FULL_AUTHORITY_SELF_HOSTED_REMOTE_DESKTOP_COMMANDER_SUCCESSOR"
+      },
+      "status": "Current main contains only bootstrap initialization. Draft PR #1 contains a green full-authority remote-execution implementation candidate, but candidate semantics are not promoted into current-main fact."
+    }
+  ],
+  "authority_ceiling": "DESCRIPTIVE_IDENTITY_AND_SOURCE_CLASSIFICATION_ONLY"
+}
