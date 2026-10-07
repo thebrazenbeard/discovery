@@ -89,6 +89,8 @@ The first three candidates deliberately test different kinds of reuse:
 - **HC Brain ↔ Transcendence:** can duplicated base implementation be replaced by exact base + overlay reconstruction without destroying provenance or experimental independence?
 - **Private evidence-custody system ↔ two consumers:** can evidence custody/interchange be reused without creating a global truth database?
 
+- **Rezon ↔ Vera/P.O.R.T.A.L. reasoning escalation:** can a coordinator delegate exact-bound work to a supported higher-reasoning specialist surface without confusing product capability, transport fanout, authority, or identity? Current status: HYPOTHESIS; see `experiments/REASONING_SURFACE_ESCALATION_V1.md`.
+
 They are the first experiments, not the complete scope.
 
 The broader census identifies additional candidate families around execution integrity, evidence/provenance, coordination transport, cognitive-base overlap, experimental mechanics, runtime/control separation, industrial diagnostics, and domain-specific negative controls.
