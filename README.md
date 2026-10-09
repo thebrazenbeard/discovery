@@ -41,12 +41,12 @@ See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md) and [docs/DIS
 
 Discovery's search space is the **whole accessible portfolio**, not a hand-picked list of favored projects.
 
-Current live inventory cut (2026-10-07):
+Authenticated inventory observation (2026-10-09; not a standing live-currentness claim):
 
-- **86 repositories observed**;
-- **81 active** and **5 archived**;
-- **67 public repositories** named in the V2 public census;
-- **19 private repositories** included in aggregate counts and digest commitments but intentionally not named here;
+- **88 repositories observed**;
+- **83 active** and **5 archived**;
+- **68 public repositories** named in the V2 public census;
+- **20 private repositories** included in aggregate counts and digest commitments but intentionally not named here;
 - exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names.
 
 The earlier V1 census and its exact-head public observatory remain historical, internally coupled evidence for their older cut; they are not relabeled as current merely because the membership census advanced.
@@ -62,7 +62,7 @@ See:
 
 ## Operational public observatory
 
-The existing V1 public observatory is **historical exact-head evidence for its bound public cut**, not a current 67-public-repository scan. Its read-only mechanics remain useful, but the blob shards, pair counts, relationship graph, and intake bindings must be regenerated together before they can claim the 2026-10-07 public estate.
+The existing V1 public observatory is **historical exact-head evidence for its bound public cut**, not a current 68-public-repository scan. Its read-only mechanics remain useful, but the blob shards, pair counts, relationship graph, and intake bindings must be regenerated together before they can claim the 2026-10-09 public estate.
 
 Its operational loop is:
 
