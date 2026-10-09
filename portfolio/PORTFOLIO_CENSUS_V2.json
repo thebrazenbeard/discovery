@@ -1,16 +1,16 @@
 {
   "schema": "DISCOVERY_PORTFOLIO_CENSUS_V2",
-  "observed_date": "2026-10-07",
+  "observed_date": "2026-10-09",
   "source": "Authenticated GitHub accessible repository inventory for owner thebrazenbeard, discovered through P.O.R.T.A.L.",
   "status": "OBSERVED_INVENTORY_NOT_ARCHITECTURAL_AUTHORITY",
   "counts": {
-    "total": 86,
-    "active": 81,
+    "total": 88,
+    "active": 83,
     "archived": 5,
-    "public": 67,
-    "private": 19,
-    "active_public": 65,
-    "active_private": 16,
+    "public": 68,
+    "private": 20,
+    "active_public": 66,
+    "active_private": 17,
     "archived_public": 2,
     "archived_private": 3
   },
@@ -20,6 +20,7 @@
     "WorkBridgeMCP",
     "abil",
     "axle",
+    "blotter",
     "bt2",
     "bugops",
     "build-team-2.0",
@@ -89,9 +90,9 @@
   ],
   "inventory_digests": {
     "algorithm": "SHA-256 over lexicographically sorted repository names, UTF-8, one name per line with trailing newline",
-    "public_names_sha256": "b01c0a7ea206462e5538bd5573d400d65150d8bece937e929e729aed8641b9fb",
-    "private_names_sha256": "0995153e285d2ce12a1569ebcab76f420d95823da8f791332ac07c99f110a2ea",
-    "all_names_sha256": "8d30dd33dbbf9f5146d6b24158fc76bb5088de41868d0f730afddb3b3e0886d5"
+    "public_names_sha256": "9b20e39929d96630b370c48e5560d0f6d631135fcf733d04beee49654ba12e37",
+    "private_names_sha256": "aa7632bee2942adba460cf03198c14449f5ac2177205792654407eae1074be30",
+    "all_names_sha256": "e08adf85861dd60a24ea40ee942af9f0c80964ee898e7c9cabcd4127268a6e7a"
   },
   "privacy_rule": "Private repository names are intentionally not published by this public repository. Private repositories still participate in aggregate counts and digest commitments.",
   "archived_rule": "Five archived repositories are present on this cut: two public repositories are named in archived_repositories_public and three are private and remain unnamed. Archived repositories are included in total/visibility counts and name digests and excluded from active counts.",
