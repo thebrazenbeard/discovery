@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -19,6 +20,20 @@ def load_snapshot(path: Path) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise ComparisonError("snapshot must be an object")
     return payload
+
+
+def _comparable_hmac(old: dict[str, Any], new: dict[str, Any]) -> bool:
+    key_id = old.get("key_id")
+    return (
+        isinstance(key_id, str)
+        and bool(key_id)
+        and key_id == new.get("key_id")
+        and all(
+            isinstance(value, str)
+            and re.fullmatch(r"[0-9a-f]{64}", value) is not None
+            for value in (old.get("hmac_sha256"), new.get("hmac_sha256"))
+        )
+    )
 
 
 def _public_map(snapshot: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -75,7 +90,7 @@ def compare_snapshots(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any
         raise ComparisonError("all inventory commitment missing")
 
     private_state = "UNKNOWN"
-    if old_private.get("key_id") == new_private.get("key_id") and old_private.get("key_id"):
+    if _comparable_hmac(old_private, new_private):
         private_state = (
             "CHANGED"
             if old_private.get("hmac_sha256") != new_private.get("hmac_sha256")
@@ -87,7 +102,7 @@ def compare_snapshots(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any
         private_state = "KEY_CHANGED_OR_UNCOMPARABLE"
 
     all_state = "UNKNOWN"
-    if old_all.get("key_id") == new_all.get("key_id") and old_all.get("key_id"):
+    if _comparable_hmac(old_all, new_all):
         all_state = (
             "CHANGED"
             if old_all.get("hmac_sha256") != new_all.get("hmac_sha256")
