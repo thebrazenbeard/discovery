@@ -122,7 +122,7 @@ def build_public_snapshot(
 
     normalized = [normalize_repository_record(record) for record in records]
     names = [record["name"] for record in normalized]
-    if len(names) != len(set(names)):
+    if len(names) != len(set(name.casefold() for name in names)):
         raise SnapshotError("repository names must be unique")
 
     public_records = sorted(
