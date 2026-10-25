@@ -17,6 +17,12 @@ def source_startup_violations(root: Path) -> list[str]:
             return []
         return [p for p in parent.iterdir() if p.name.casefold() == name.casefold()]
 
+    # Any source symlink could hide a nested workspace root on a host that
+    # follows the link. Fail closed instead of guessing its eventual target.
+    for item in root.rglob("*"):
+        if ".git" not in item.relative_to(root).parts and item.is_symlink():
+            problems.append(f"source symlink requires review: {item}")
+
     # A developer can open any nested folder as its own VS Code workspace.
     # Inspect each real directory as a potential workspace root, without
     # traversing symlinked directories or including Git metadata.
@@ -82,14 +88,27 @@ class EditorStartupSourceGuardTests(unittest.TestCase):
             root = Path(tmp)
             (root / ".vscode").mkdir()
             (root / ".vscode" / "tasks.json").symlink_to("missing.json")
-            self.assertEqual(len(source_startup_violations(root)), 1)
+            self.assertTrue(source_startup_violations(root))
 
     def test_parent_symlink_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "public").symlink_to("missing-public", target_is_directory=True)
             (root / ".vscode").symlink_to("missing-editor", target_is_directory=True)
-            self.assertEqual(len(source_startup_violations(root)), 2)
+            self.assertGreaterEqual(len(source_startup_violations(root)), 2)
+
+    def test_generic_ancestor_symlink_cannot_hide_nested_task(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)
+            root = base / "repo"
+            root.mkdir()
+            (base / "outside" / ".vscode").mkdir(parents=True)
+            (base / "outside" / ".vscode" / "tasks.json").write_text("{}", encoding="utf-8")
+            (root / "nested").symlink_to(base / "outside", target_is_directory=True)
+            (root / "orphan").symlink_to("missing-folder", target_is_directory=True)
+            violations = source_startup_violations(root)
+            self.assertTrue(any("nested" in v for v in violations))
+            self.assertTrue(any("orphan" in v for v in violations))
 
     def test_workspace_and_task_authority_are_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
