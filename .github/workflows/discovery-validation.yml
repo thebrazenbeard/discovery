@@ -3,6 +3,7 @@ name: Discovery validation
 on:
   pull_request:
     paths:
+      - "README.md"
       - "architecture/**"
       - "candidates/**"
       - "docs/**"
@@ -13,6 +14,7 @@ on:
       - ".github/workflows/discovery-validation.yml"
   push:
     branches:
+      - "main"
       - "vera/discovery-shared-substrate-v1"
     paths:
       - "architecture/**"

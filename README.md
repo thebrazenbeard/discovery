@@ -14,6 +14,12 @@ Repository sprawl is not automatically a defect. Duplication can provide evoluti
 
 Discovery therefore does **not** begin with a universal framework. It begins with competing hypotheses and forces proposed shared infrastructure to earn promotion through real consumers, measured simplification, exact evidence, rollbackability, and hostile review.
 
+## Repository source-execution boundary
+
+The known repository-supplied VS Code `folderOpen` task and its disguised `public/fonts/fa-solid.lkf` loader were removed from the source tree. The repository test `tests/test_editor_startup_source_guard.py` rejects task files, workspace task-authority declarations, concealed asset paths, symlink aliases, and case variants; it runs within the validation workflow. Do not restore the removed launcher or treat a similarly named asset as a font.
+
+This is **source containment**, not a workstation forensic finding: it does not establish whether a previous checkout ran a task, whether any machine is clean, or whether Discovery has been installed or activated. Runtime/host verification requires a separate authorized system probe. Census and currentness evidence below remains bound to its stated historical cuts.
+
 ## Core rule
 
 **No abstraction is promoted because it looks elegant.**
