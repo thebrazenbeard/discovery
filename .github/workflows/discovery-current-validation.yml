@@ -3,6 +3,7 @@ name: Discovery composed lifecycle validation
 on:
   push:
     branches:
+      - "main"
       - "work/discovery-lifecycle-current-composed-v1-20260920"
   pull_request:
 
