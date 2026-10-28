@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import argparse
 import copy
+from datetime import date
 import hashlib
 import json
 import math
 import os
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -24,6 +26,7 @@ SHARD_PATHS = (
 )
 SCAN_PATH = ROOT / "experiments" / "PUBLIC_BLOB_OVERLAP_SCAN_V1.json"
 HC_FAMILY = {"bt2", "god-brain", "hc-brain", "transcendence"}
+HISTORICAL_V1_OWNER = "thebrazenbeard"
 
 
 class BlobEvidenceError(ValueError):
@@ -429,6 +432,125 @@ def subjects_from_committed_shards(*, root: Path = ROOT) -> dict[str, dict[str, 
     return subjects
 
 
+def _cut_subject_identity(subject: dict[str, Any]) -> dict[str, Any]:
+    """Only source identity, not unreviewed architecture or relationships."""
+    if not isinstance(subject, dict):
+        raise BlobEvidenceError("public cut subject must be an object")
+    for field in ("head", "tree_sha"):
+        value = subject.get(field)
+        if not isinstance(value, str) or re.fullmatch(r"[0-9a-f]{40}", value) is None:
+            raise BlobEvidenceError(f"public cut {field} must be an exact Git SHA")
+    branch = subject.get("default_branch")
+    if not isinstance(branch, str) or not branch:
+        raise BlobEvidenceError("public cut default_branch invalid")
+    if type(subject.get("archived")) is not bool:
+        raise BlobEvidenceError("public cut archived flag invalid")
+    return {
+        "default_branch": branch,
+        "head": subject["head"],
+        "tree_sha": subject["tree_sha"],
+        "archived": subject["archived"],
+    }
+
+
+def build_public_cut_proposal_v2(
+    previous: dict[str, dict[str, Any]],
+    observed: dict[str, dict[str, Any]],
+    *,
+    observed_date: str,
+    owner: str,
+) -> dict[str, Any]:
+    """Generate unqualified transition evidence; never reclassify V1 in place."""
+    if owner != HISTORICAL_V1_OWNER:
+        raise BlobEvidenceError(
+            f"V1 comparison owner must be {HISTORICAL_V1_OWNER}"
+        )
+    try:
+        if date.fromisoformat(observed_date).isoformat() != observed_date:
+            raise ValueError("noncanonical date")
+    except (TypeError, ValueError) as exc:
+        raise BlobEvidenceError("proposal observed_date must be YYYY-MM-DD") from exc
+    prior_ids = {name: _cut_subject_identity(s) for name, s in previous.items()}
+    observed_ids = {name: _cut_subject_identity(s) for name, s in observed.items()}
+    old_names, new_names = set(prior_ids), set(observed_ids)
+    added, absent = sorted(new_names - old_names), sorted(old_names - new_names)
+    changed = sorted(
+        name for name in (old_names & new_names)
+        if prior_ids[name] != observed_ids[name]
+    )
+    transitions = {
+        name: {
+            "kind": "ADDED_TO_PUBLIC_INVENTORY",
+            "prior": None,
+            "observed": observed_ids[name],
+            "review_disposition": "UNRESOLVED",
+        }
+        for name in added
+    }
+    transitions.update({
+        name: {
+            "kind": "ABSENT_FROM_PUBLIC_INVENTORY_NOT_DELETION",
+            "prior": prior_ids[name],
+            "observed": None,
+            "review_disposition": "UNRESOLVED",
+        }
+        for name in absent
+    })
+    transitions.update({
+        name: {
+            "kind": "PUBLIC_SOURCE_IDENTITY_CHANGED",
+            "prior": prior_ids[name],
+            "observed": observed_ids[name],
+            "review_disposition": "UNRESOLVED",
+        }
+        for name in changed
+    })
+    return {
+        "schema": "DISCOVERY_PUBLIC_CUT_PROPOSAL_V2",
+        "owner": owner,
+        "observed_owner_source": "GITHUB_PUBLIC_OWNER_INVENTORY",
+        "disposition": "UNREVIEWED_NOT_ADMITTED",
+        "snapshot_stability": "NOT_ATTESTED",
+        "historical_source_binding": "LOCAL_BLOBS_NOT_REQUALIFIED_AGAINST_PINNED_COMMIT",
+        "observed_date": observed_date,
+        "previous_public_count": len(previous),
+        "observed_public_count": len(observed),
+        "added_names": added,
+        "absent_from_public_inventory": absent,
+        "changed_source_names": changed,
+        "transitions": dict(sorted(transitions.items())),
+        "previous_subjects": dict(sorted(prior_ids.items())),
+        "observed_subjects": dict(sorted(observed_ids.items())),
+        "limitations": [
+            "Public visibility absence does not establish deletion or transfer.",
+            "No membership, evidence, graph, architecture, or runtime qualification.",
+            "An inventory collection alone does not attest B0/B1 snapshot stability.",
+        ],
+    }
+
+
+def write_new_public_cut_proposal_v2(path: Path, payload: dict[str, Any]) -> None:
+    """Create a separate proposal once; never overwrite historical V1 evidence."""
+    raw = path.expanduser()
+    if not raw.is_absolute():
+        raise BlobEvidenceError("proposal-path must be absolute")
+    # A dangling final symlink previously resolved to its nonexistent target,
+    # allowing an unintended target file to be created. Never accept an alias.
+    if raw.is_symlink():
+        raise BlobEvidenceError("proposal-path final component must not be a symlink")
+    destination = raw.resolve(strict=False)
+    evidence_root = (ROOT / "experiments").resolve(strict=False)
+    if destination == evidence_root or evidence_root in destination.parents:
+        raise BlobEvidenceError("proposal may not be placed in historical experiments")
+    data = _render(payload).encode("utf-8")
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_NOFOLLOW", 0)
+    # Open the caller's original path with O_EXCL and O_NOFOLLOW; do not open
+    # the resolved target. Ancestor directory mutation remains out of scope.
+    fd = os.open(raw, flags, 0o600)
+    with os.fdopen(fd, "wb") as stream:
+        stream.write(data)
+
+
 class GitHubPublicBlobClient(GitHubPublicInventoryClient):
     def recursive_blobs(
         self,
@@ -506,6 +628,21 @@ def collect_live_subjects(
     return observed
 
 
+def collect_public_cut_observed_inventory(
+    owner: str,
+    *,
+    token: str | None,
+) -> dict[str, dict[str, Any]]:
+    """Read the real public source identities for a V2 review proposal.
+
+    Unlike the frozen V1 blob reproducer, this never substitutes the committed
+    Discovery self subject. GitHub's inventory HEAD/tree is an observation,
+    not an attestation of a stable B0/B1 cut or admission of membership.
+    Blob-tree collection is unnecessary for an identity-only proposal.
+    """
+    return GitHubPublicInventoryClient(token).inventory(owner)
+
+
 def _check_rendered(rendered: dict[Path, str]) -> list[str]:
     mismatches = []
     for path, text in rendered.items():
@@ -515,6 +652,9 @@ def _check_rendered(rendered: dict[Path, str]) -> list[str]:
 
 
 def _write_rendered(rendered: dict[Path, str]) -> None:
+    protected = {path.resolve(strict=False) for path in (*SHARD_PATHS, SCAN_PATH)}
+    if any(path.resolve(strict=False) in protected for path in rendered):
+        raise BlobEvidenceError("frozen V1 blob evidence may not be overwritten")
     for path, text in rendered.items():
         path.write_bytes(text.encode("utf-8"))
 
@@ -525,25 +665,73 @@ def main(argv: list[str] | None = None) -> int:
             "Reproduce Discovery public blob-index shards and overlap scan from live GitHub."
         )
     )
-    parser.add_argument("--owner", default="thebrazenbeard")
+    parser.add_argument("--owner", default=HISTORICAL_V1_OWNER)
     parser.add_argument("--token-env", default="GITHUB_TOKEN")
     parser.add_argument("--observed-date")
+    parser.add_argument("--proposal-path", help="absolute create-only path outside historical experiments")
     parser.add_argument(
         "--accept-set-change",
         action="store_true",
         help=(
-            "explicitly accept live public repository membership changes and "
-            "deterministically repartition the evidence shards"
+            "allow read-only comparison of changed public membership; "
+            "never authorize replacement of frozen V1 evidence"
         ),
     )
     mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--check", action="store_true")
-    mode.add_argument("--write", action="store_true")
+    mode.add_argument("--check", action="store_true", help="compare live blob evidence to frozen V1")
+    mode.add_argument("--write", action="store_true", help="legacy frozen V1 compare-only compatibility; never writes")
+    mode.add_argument("--proposal", action="store_true", help="create unreviewed V2 public identity proposal; no V1 write")
     args = parser.parse_args(argv)
 
-    if args.check and args.observed_date is not None:
-        print("--observed-date is only valid with --write", file=sys.stderr)
+    if args.owner != HISTORICAL_V1_OWNER:
+        print(
+            f"V1 comparison owner must be {HISTORICAL_V1_OWNER}", file=sys.stderr
+        )
         return 2
+
+    if args.check and args.observed_date is not None:
+        print("--observed-date is only valid with --write or --proposal", file=sys.stderr)
+        return 2
+    if not args.proposal and args.proposal_path is not None:
+        print("--proposal-path requires --proposal", file=sys.stderr)
+        return 2
+    if args.write and args.accept_set_change:
+        print(
+            "frozen historical V1 may not be repartitioned; use --proposal for V2 review",
+            file=sys.stderr,
+        )
+        return 2
+    if args.proposal:
+        if args.proposal_path is None or args.observed_date is None:
+            print("--proposal requires --proposal-path and --observed-date", file=sys.stderr)
+            return 2
+        try:
+            observed = collect_public_cut_observed_inventory(
+                args.owner, token=os.environ.get(args.token_env),
+            )
+            previous = subjects_from_committed_shards()
+            proposal = build_public_cut_proposal_v2(
+                previous, observed, observed_date=args.observed_date,
+                owner=args.owner,
+            )
+            proposal["historical_v1_source_shards"] = [
+                {
+                    "path": path.relative_to(ROOT).as_posix(),
+                    "git_blob_sha1": _git_blob_sha1_text(path.read_text(encoding="utf-8")),
+                }
+                for path in SHARD_PATHS
+            ]
+            write_new_public_cut_proposal_v2(Path(args.proposal_path), proposal)
+        except (BlobEvidenceError, PublicCurrentnessError, KeyError, OSError) as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
+        print(json.dumps({
+            "status": "UNREVIEWED_PUBLIC_CUT_PROPOSAL_CREATED",
+            "previous_public_count": len(previous),
+            "observed_public_count": len(observed),
+            "proposal_path": args.proposal_path,
+        }, indent=2))
+        return 0
 
     try:
         live = collect_live_subjects(
@@ -591,11 +779,20 @@ def main(argv: list[str] | None = None) -> int:
     if args.observed_date is None:
         print("--write requires --observed-date YYYY-MM-DD", file=sys.stderr)
         return 2
-    _write_rendered(rendered)
+    # V1 is historical evidence. Even when membership is unchanged, changing
+    # one head/byte must not silently rewrite its source-bound receipts.
+    mismatches = _check_rendered(rendered)
+    if mismatches:
+        print(
+            "frozen historical V1 differs; create a separate V2 proposal: "
+            + ", ".join(mismatches),
+            file=sys.stderr,
+        )
+        return 2
     print(
         json.dumps(
             {
-                "status": "WROTE_REPRODUCED_PUBLIC_BLOB_EVIDENCE",
+                "status": "FROZEN_V1_UNCHANGED",
                 "observed_date": args.observed_date,
                 "repository_count": len(live),
                 "artifacts": [
