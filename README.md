@@ -1,140 +1,90 @@
-> **License:** Source-visible, not open source. Original material is proprietary. Commercial use, redistribution, hosted-service use, and commercial derivative products require written permission. See [LICENSE](LICENSE) and [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md). Separately identified third-party components retain their own licenses.
+> **License:** Source-visible, **not open source**. The original code and documents are proprietary. Private noncommercial evaluation and research are permitted under [LICENSE](LICENSE); redistribution, commercial use, and hosted services require separate written permission. See [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md). Third-party materials retain their own licenses.
 
-# Discovery
+# Discovery — portfolio capability and integration research toolkit
 
-Discovery exists to **discover useful capability across the portfolio and get it governably implemented into Vera and Vera Control Plane**.
+Discovery is a set of Python utilities, evidence contracts, and review protocols for understanding a portfolio of software repositories. It helps maintainers take repeatable snapshots, detect changes, investigate possible duplication, and evaluate whether a capability should remain independent or become shared infrastructure.
 
-Its core loop is:
+**Implemented today:** source-side portfolio snapshots and comparisons, public-currentness checks against pinned historical evidence, overlap/reconciliation validators, candidate records, and bounded effect-envelope observation. **Not implemented:** a general-purpose repository crawler service, an automatic refactoring engine, an authorization service, or deployment of discovered capabilities to a host.
 
-`DISCOVER -> CLASSIFY -> IMPLEMENT -> VERIFY -> HAND OFF`
+The working method is **discover → classify → experiment → verify → hand off**. A shared abstraction must earn promotion through independent consumers, demonstrable simplification, semantic ownership, rollbackability, and hostile review. A source match, validated receipt, or passing unit test is evidence for a narrow claim—not permission to merge, deploy, or act.
 
-Reuse/deduplication is one part of that mission, not the whole mission. Discovery must also identify valuable standalone capabilities, decide how they belong in Vera/VCP, prepare the concrete integration work, and verify source-level implementation without confusing source integration with installation or runtime activation.
+## Available tools
 
-Repository sprawl is not automatically a defect. Duplication can provide evolutionary isolation, fault containment, independent falsification, and freedom to challenge assumptions.
+| Tool or artifact | What it actually does | Important limit |
+| --- | --- | --- |
+| [`build_portfolio_snapshot.py`](tools/build_portfolio_snapshot.py) | Builds a public-safe snapshot from authorized local JSON inventory or an authenticated GitHub owner inventory | Reads inventory; does not classify correctness or grant rights. Private-set commitments require a caller-held key |
+| [`compare_portfolio_snapshots.py`](tools/compare_portfolio_snapshots.py) | Compares two snapshot files and reports public subject, membership, and private-set drift | Relative currentness only, not cause or architectural authority |
+| [`check_public_currentness.py`](tools/check_public_currentness.py) | Checks the checked-in, historically pinned public observatory against live GitHub state | The checked-in public cut is not the entire present-day portfolio |
+| [`trace_public_impact.py`](tools/trace_public_impact.py) | Finds dependent repository artifacts referencing outdated exact-source IDs | Affected-file lead list, not automated repair |
+| [`refresh_public_blob_evidence.py`](tools/refresh_public_blob_evidence.py) | Reproduces or explicitly regenerates pinned public Git blob evidence (`--check` / `--write`) | `--write` mutates evidence artifacts; use only with a reviewed currentness plan |
+| [`effect_observer.py`](tools/effect_observer.py) | Validates and summarizes producer-selected effect-envelope records | Cannot independently prove a host effect occurred or identify an authorized actor |
+| [Candidate protocol](docs/DISCOVERY_PROTOCOL_V1.md) and [classification](docs/CLASSIFIER_PROTOCOL_V1.md) | Define evidence-qualified promotion states and falsification questions | Research/review contracts; not an executable consolidation engine |
 
-Discovery therefore does **not** begin with a universal framework. It begins with competing hypotheses and forces proposed shared infrastructure to earn promotion through real consumers, measured simplification, exact evidence, rollbackability, and hostile review.
+The historical [implementation planner](tools/plan_vera_vcp_implementation.py) consumes a specific Vera/Vera Control Plane registry. It is an **optional project-specific integration experiment**, not a requirement or capability available for arbitrary hosts.
 
-## Repository source-execution boundary
+## Quick start: work with an inventory you are authorized to inspect
 
-The known repository-supplied VS Code `folderOpen` task and its disguised `public/fonts/fa-solid.lkf` loader were removed from the source tree. The repository test `tests/test_editor_startup_source_guard.py` rejects task files, workspace task-authority declarations, concealed asset paths, symlink aliases, and case variants; it runs within the validation workflow. Do not restore the removed launcher or treat a similarly named asset as a font.
+Python 3.12 is used by the repository's validation workflow. The tools are stand-alone scripts and do not require installing a published package. In a checkout:
 
-This is **source containment**, not a workstation forensic finding: it does not establish whether a previous checkout ran a task, whether any machine is clean, or whether Discovery has been installed or activated. Runtime/host verification requires a separate authorized system probe. Census and currentness evidence below remains bound to its stated historical cuts.
+1. Provide a JSON list of repository records at `inventory.json`. A synthetic public-only example has this shape (the object IDs below are illustrative, not real Git references):
 
-## Core rule
+   ```json
+   [
+     {
+       "name": "sample-library",
+       "visibility": "public",
+       "archived": false,
+       "default_branch": "main",
+       "head_sha": "1111111111111111111111111111111111111111",
+       "tree_sha": "2222222222222222222222222222222222222222"
+     }
+   ]
+   ```
 
-**No abstraction is promoted because it looks elegant.**
+2. Build and compare snapshots:
 
-A candidate shared mechanism must demonstrate that it:
+   ```bash
+   python3 tools/build_portfolio_snapshot.py \
+     --owner sample-organization --input-json inventory.json \
+     --observed-at 2026-01-01T00:00:00Z --output snapshot-a.json
+   python3 tools/compare_portfolio_snapshots.py snapshot-a.json snapshot-a.json
+   ```
 
-1. serves at least two materially independent consumers;
-2. removes more complexity than it introduces;
-3. preserves each consumer's semantic ownership and authority boundaries;
-4. can fail without taking unrelated projects down with it;
-5. has an explicit fallback or rollback path;
-6. survives a hostile review that tries to prove the abstraction should not exist.
+   Comparing a snapshot to itself is a **format demonstration**, not proof that a repository is current. For useful drift checks, acquire a second independently observed inventory at a later time.
 
-## Candidate states
+3. Run local validation:
 
-`OBSERVED` → `HYPOTHESIS` → `EXPERIMENTING` → `PROVEN_REUSABLE`
+   ```bash
+   python3 tools/validate_discovery.py
+   python3 tools/validate_reconciliation.py
+   python3 -m unittest discover -s tests -q
+   ```
 
-A candidate may instead become `PROJECT_SPECIFIC`, `REJECTED`, or `SUPERSEDED`.
+The snapshot builder also supports authorized live GitHub inventory acquisition using a caller-supplied token from `GITHUB_TOKEN` (or `--token-env`). Do not put tokens in tracked files, command arguments, or public receipts. If private repository records are present, the builder requires a separately supplied private-census HMAC key through `DISCOVERY_PRIVATE_CENSUS_KEY_HEX` (or `--private-key-env`). It does not publish private names in the public snapshot; **a digest or HMAC commitment is not a privacy review**.
 
-`PROVEN_REUSABLE` is evidence of reuse suitability only. It grants no merge, deployment, installation, authority, or semantic promotion elsewhere.
+See the [snapshot pipeline](docs/PORTFOLIO_SNAPSHOT_PIPELINE_V1.md) and [currentness/reconciliation contract](docs/CURRENTNESS_AND_RECONCILIATION_V1.md) for input rules and claim ceilings.
 
-See [docs/DISCOVERY_PROTOCOL_V1.md](docs/DISCOVERY_PROTOCOL_V1.md) and [docs/DISCOVERY_VERA_VCP_IMPLEMENTATION_ENGINE_V1.md](docs/DISCOVERY_VERA_VCP_IMPLEMENTATION_ENGINE_V1.md).
+## Candidate decisions and evidence
 
-## Portfolio census
+The research lifecycle is `OBSERVED → HYPOTHESIS → EXPERIMENTING → PROVEN_REUSABLE`. A candidate may also become `PROJECT_SPECIFIC`, `REJECTED`, or `SUPERSEDED`. `PROVEN_REUSABLE` means only that the examined reuse claim survived the stated test; a separate owner must authorize code changes, installation, runtime access, and effects.
 
-Discovery's search space is the **whole accessible portfolio**, not a hand-picked list of favored projects.
+The repository contains checked-in experimental evidence for overlapping source trees, registry handoffs, transport/evidence interfaces, and competing integration designs. These are historical observations tied to **exact source commits**, not endorsements of a current portfolio architecture. In particular:
 
-Current live inventory cut (2026-09-27):
+- [September 2026 public/private portfolio census](portfolio/PORTFOLIO_CENSUS_V2.json) is a dated 71-repository observation, **not** a live or authoritative current total.
+- [V1 public observatory](docs/DISCOVERY_ARCHITECTURE_OBSERVATORY_V1.md), [blob reproducibility](docs/PUBLIC_BLOB_REPRODUCIBILITY_V1.md), and [relationship graph](portfolio/PUBLIC_RELATIONSHIP_GRAPH_V1.json) are bound to their older public cut. Their 23-source/253-pair measurements must not be generalized to the current estate.
+- [Public intake](docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md) and [research experiments](experiments/) retain historical provenance and negative controls. A byte-identical blob does not alone establish lineage, intended ownership, or permission to consolidate.
+- [Implementation-engine protocol](docs/DISCOVERY_VERA_VCP_IMPLEMENTATION_ENGINE_V1.md) illustrates a specific consuming ecosystem; future adopters can apply the principles without inheriting that ecosystem's identities or authority.
 
-- **71 repositories observed**;
-- **69 active** and **2 archived**;
-- **53 public repositories** named in the V2 public census;
-- **18 private repositories** included in aggregate counts and digest commitments but intentionally not named here;
-- exact sorted-name inventory digests recorded so future scans can detect portfolio drift without publishing private repository names.
+## Security and deployment boundaries
 
-The earlier V1 census and its exact-head public observatory remain historical, internally coupled evidence for their older cut; they are not relabeled as current merely because the membership census advanced.
+- **Read-only by default:** Inventory, comparison, and validation do not confer write authority. The explicit blob-evidence `--write` path is separate and requires review.
+- **No host authorization service:** Tools neither authenticate providers nor bind immutable subject identities, consent, or effect permissions. A consuming host must enforce those controls independently.
+- **No independent effect attestation:** The envelope observer reads records selected by a producer. Its report does not prove external execution, consent, or custody.
+- **No exhaustive privacy guarantee:** Public-safe snapshots suppress private *names*, but repository metadata, timing, hashes, and other artifacts may still disclose information. Check your disclosure and license obligations before publishing.
+- **Historical source-execution hazard:** A concealed VS Code `folderOpen` launcher and disguised font-path loader were removed from this source tree. [`test_editor_startup_source_guard.py`](tests/test_editor_startup_source_guard.py) checks the current source for regressions. This is **not** forensic evidence that an earlier checkout or any workstation was uncompromised.
 
-See:
+Use [`discovery-validation.yml`](.github/workflows/discovery-validation.yml) for source-level regression checks. The [public-currentness workflow](.github/workflows/discovery-public-currentness.yml) is a monitoring check bound to its declared historical evidence; it does not auto-refresh artifacts or authorize merges/deployment.
 
-- [portfolio/PORTFOLIO_CENSUS_V2.json](portfolio/PORTFOLIO_CENSUS_V2.json) — current membership/visibility census
-- [portfolio/PORTFOLIO_CENSUS_V1.json](portfolio/PORTFOLIO_CENSUS_V1.json) — historical observatory-bound census
-- [portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json](portfolio/PUBLIC_SUBJECT_INTAKE_20260921_V1.json)
-- [docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md](docs/PUBLIC_SUBJECT_INTAKE_20260921_V1.md)
-- [docs/PORTFOLIO_CLUSTER_MAP_V1.md](docs/PORTFOLIO_CLUSTER_MAP_V1.md)
-- [portfolio/CANDIDATE_FAMILIES_V1.json](portfolio/CANDIDATE_FAMILIES_V1.json)
+## Status and licensing
 
-## Operational public observatory
-
-The existing V1 public observatory is **historical exact-head evidence for its bound public cut**, not a current 53-public-repository scan. Its read-only mechanics remain useful, but the blob shards, pair counts, relationship graph, and intake bindings must be regenerated together before they can claim the 2026-09-27 public estate.
-
-Its operational loop is:
-
-1. `tools/check_public_currentness.py` reads the live public GitHub estate and compares repository membership, default branch, exact commit, exact tree, and archive state with the bound public evidence.
-2. When drift is found, `tools/trace_public_impact.py` identifies Discovery artifacts that still contain exact references to the stale commit SHA.
-3. When the public subjects are current, `tools/refresh_public_blob_evidence.py --check` reacquires all 23 exact Git trees and must reproduce both public blob-index shards and the 253-pair overlap scan byte-for-byte.
-4. `.github/workflows/discovery-public-currentness.yml` runs the live check every six hours after landing, on demand, and on relevant pull requests.
-
-The workflow never refreshes evidence automatically. A stale result is a review trigger, not mutation authority.
-
-Public currentness is intentionally not whole-portfolio currentness: the public watcher does not inspect or identify private repositories.
-
-See:
-
-- [docs/PUBLIC_CURRENTNESS_WATCH_V1.md](docs/PUBLIC_CURRENTNESS_WATCH_V1.md)
-- [docs/PUBLIC_BLOB_REPRODUCIBILITY_V1.md](docs/PUBLIC_BLOB_REPRODUCIBILITY_V1.md)
-- [docs/DISCOVERY_ARCHITECTURE_OBSERVATORY_V1.md](docs/DISCOVERY_ARCHITECTURE_OBSERVATORY_V1.md)
-
-## Initial experiments
-
-The first three candidates deliberately test different kinds of reuse:
-
-- **Rezon ↔ Project Runner:** can epistemic reasoning remain independent while delegating mechanical execution?
-- **HC Brain ↔ Transcendence:** can duplicated base implementation be replaced by exact base + overlay reconstruction without destroying provenance or experimental independence?
-- **Private evidence-custody system ↔ two consumers:** can evidence custody/interchange be reused without creating a global truth database?
-
-They are the first experiments, not the complete scope.
-
-The broader census identifies additional candidate families around execution integrity, evidence/provenance, coordination transport, cognitive-base overlap, experimental mechanics, runtime/control separation, industrial diagnostics, and domain-specific negative controls.
-
-These remain hypotheses until individual candidates earn promotion under the Discovery Protocol.
-
-
-## 2026-09-21 public-surface intake
-
-The latest census made eleven previously unnamed public repositories available for direct public-safe classification. Discovery has not treated visibility change as architectural promotion.
-
-The first exact remeasurement found:
-
-- `god-brain` vs `hc-brain`: 299/300 same-path blobs identical; only `README.md` differs at the measured heads; identical bytes equal 99.54245136% of the measured HC byte surface.
-- `bt2` vs `hc-brain`: 178 identical same-path blobs, 10 changed same-path blobs, plus substantial unique surfaces on both sides; identical bytes equal 46.14031461% of the measured HC byte surface.
-
-Those observations generated `HC_FAMILY_LINEAGE_V1` as a HYPOTHESIS, not a consolidation decision.
-
-The same intake exposes public anchors for previously opaque families including industrial diagnostics (`abil`), semantic grounding/provenance (`semanticatlas`, `spm`, `unvtrslr`), and Vera transport/runtime packaging (`vera-mesh`, `vera-synology`).
-
-The second-pass source review narrows those frontiers further:
-
-- `VERAMESH_SYNOLOGY_HANDOFF_V1` is now a HYPOTHESIS for a neutral source/build/install/runtime-currentness handoff; transport/session authority remains VeraMesh-owned and package/install authority remains Vera Synology-owned.
-- the public industrial handoff frontier remains held because no defensible second public industrial subject was found on the current cut;
-- `voss` remains `INSUFFICIENT_PUBLIC_SOURCE_NO_CANDIDATE` rather than being promoted from a role label alone.
-
-See `experiments/PUBLIC_INTAKE_SECOND_PASS_V1.*` for the source-bound dispositions.
-
-A portfolio-wide exact blob scan now binds all 23 public repositories at exact default heads and computes all 253 unordered pairs. On that cut, only six pairs share any Git blob SHA at all, and those six are exactly the complete `bt2` / `god-brain` / `hc-brain` / `transcendence` clique. The other 247 pairs share zero blob SHAs. Discovery recomputes this result in `tools/validate_discovery.py`; it is byte-identity evidence, not lineage or consolidation authority.
-
-See `experiments/PUBLIC_BLOB_OVERLAP_SCAN_V1.*` and `experiments/public_blob_index_v1/`.
-
-The HC-family lineage pass now extends beyond `main`:
-
-- HC / Transcendence / God Brain share 35 live branch names;
-- all **34 non-`main` common branches** have identical blob path/SHA snapshots across all three;
-- on every one of those 34 branches, HC has the earlier parented commit, while Transcendence and God Brain later re-root the identical Git tree as parentless `Initialize <branch>` commits;
-- `main` is the only common-branch content divergence surface on the observed cut;
-- bt2 remains byte-related but topologically distinct, sharing only `main` by branch name with the other three.
-
-This is strong historical source-side evidence for HC snapshots, not a consolidation decision and not proof of the direct transfer path to God Brain.
-
-See `experiments/HC_COMMON_BRANCH_EXHAUSTIVE_V1.*` and `experiments/HC_COMMON_BRANCH_ANCESTRY_V1.*`.
+Discovery is an **experimental, source-executed governance/research toolkit**. It is useful for bounded inventory evidence and candidate-review workflows. It is not a turnkey SaaS inventory service, distributed runtime, or universally proven consolidation framework. Public visibility does not grant open-source redistribution rights; consult [LICENSE](LICENSE) before reusing code or research artifacts outside the permitted evaluation scope.
