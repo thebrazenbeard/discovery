@@ -136,6 +136,15 @@ class PublicSourceGraphTests(unittest.TestCase):
         with self.assertRaises(graph.GraphInputError):
             graph.build_graph(corpus(a))
 
+    def test_duplicate_json_keys_fail_closed_before_manifest_parsing(self):
+        a = subject("a", source("package.json", '{"name":"a","name":"b"}'))
+        with self.assertRaisesRegex(graph.GraphInputError, "duplicate JSON"):
+            graph.build_graph(corpus(a))
+
+    def test_duplicate_visibility_keys_fail_closed_at_cli_parser(self):
+        with self.assertRaisesRegex(graph.GraphInputError, "duplicate JSON"):
+            graph._strict_json('{"visibility":"private","visibility":"public"}')
+
     def test_deterministic_order_independent_of_corpus_subject_order(self):
         a = subject("a", source("package.json", '{"name":"a","dependencies":{"b":"^1"}}'))
         b = subject("b", source("package.json", '{"name":"b"}'))

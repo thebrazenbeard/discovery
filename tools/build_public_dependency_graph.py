@@ -36,6 +36,19 @@ class GraphInputError(ValueError):
     pass
 
 
+def _unique_json_pairs(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in result:
+            raise GraphInputError("duplicate JSON object key forbidden")
+        result[key] = value
+    return result
+
+
+def _strict_json(content: str) -> Any:
+    return json.loads(content, object_pairs_hook=_unique_json_pairs)
+
+
 def _oid(value: Any, label: str) -> str:
     if not isinstance(value, str) or not OID.fullmatch(value):
         raise GraphInputError(f"{label} requires a lowercase 40-hex Git object ID")
@@ -132,7 +145,7 @@ def _scan_subject(subject: dict[str, Any]) -> dict[str, Any]:
                         dependencies.append((name, path, scope, "PYPROJECT_DECLARATION"))
         elif path == "package.json":
             try:
-                manifest = json.loads(text)
+                manifest = _strict_json(text)
             except json.JSONDecodeError as exc:
                 raise GraphInputError("invalid public package.json evidence") from exc
             if not isinstance(manifest, dict):
@@ -187,7 +200,7 @@ def _scan_subject(subject: dict[str, Any]) -> dict[str, Any]:
                         ignored_imports += 1
         elif path == PIN_PATH:
             try:
-                manifest = json.loads(text)
+                manifest = _strict_json(text)
             except json.JSONDecodeError as exc:
                 raise GraphInputError("invalid CCB source pin JSON") from exc
             if not isinstance(manifest, dict) or manifest.get("schema") != PIN_SCHEMA:
@@ -408,7 +421,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
     try:
-        result = build_graph(json.loads(args.corpus.read_text(encoding="utf-8")))
+        result = build_graph(_strict_json(args.corpus.read_text(encoding="utf-8")))
     except (GraphInputError, json.JSONDecodeError) as exc:
         print(str(exc), file=sys.stderr)
         return 2
