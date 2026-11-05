@@ -1,0 +1,74 @@
+{
+  "claim_ceiling": "SUPPLIED_PUBLIC_BLOB_BYTES_ONLY_NO_PROVIDER_AUTHENTICATION_NO_RUNTIME_OR_EFFECT_AUTHORITY",
+  "counts": {
+    "ambiguous_provider": 6,
+    "edges": 1,
+    "external_or_unmapped": 23,
+    "public_nodes": 4,
+    "source_files": 5,
+    "verified_source_bytes": 104809
+  },
+  "edges": [
+    {
+      "evidence": {
+        "blob_sha": "c6d8ba72454c07dc2587156bda871acb68bd5c4c",
+        "path": "architecture/contracts/CCB_BASE_CONTROL_PIN_V1.json",
+        "symbol": "source-pin"
+      },
+      "from": "thebrazenbeard/chat-communication-bus",
+      "pinned_commit": "273c93bc46683580024c1521fd2c523a8a6593bd",
+      "pinned_head_relation": "DIFFERS_FROM_SUPPLIED_SUBJECT",
+      "pinned_tree": "6594f71965e3e1a504f2265363b75b43f5fbd3de",
+      "relation": "DECLARED_HISTORICAL_SOURCE_PIN",
+      "runtime_connection": "NOT_VERIFIED",
+      "source_commit": "eb315a5612ae99aadddb397891ffcf3a2b0433a6",
+      "source_evidence_class": "GIT_BLOB_BYTES_VERIFIED_LOCAL_INPUT",
+      "to": "thebrazenbeard/ccb-core"
+    }
+  ],
+  "negative_evidence_rule": "Missing edges mean only no supported declaration in supplied files, not absence of a real dependency or channel.",
+  "nodes": [
+    {
+      "commit": "57b5bb97b923e43da0fb677b4e4a907bab222e37",
+      "repository": "thebrazenbeard/ccb-core",
+      "scanned_file_count": 1
+    },
+    {
+      "commit": "eb315a5612ae99aadddb397891ffcf3a2b0433a6",
+      "repository": "thebrazenbeard/chat-communication-bus",
+      "scanned_file_count": 1
+    },
+    {
+      "commit": "a27db806c064248cba5cf109aa8a4866df4fb8d1",
+      "repository": "thebrazenbeard/portal",
+      "scanned_file_count": 2
+    },
+    {
+      "commit": "44da26e02c39591118bf1fdfe7ec01bd1103fc66",
+      "repository": "thebrazenbeard/project-runner",
+      "scanned_file_count": 1
+    }
+  ],
+  "owner": "thebrazenbeard",
+  "provider_conflicts": [
+    {
+      "kind": "PYTHON_DISTRIBUTION",
+      "name": "project-runner",
+      "public_providers": [
+        "thebrazenbeard/portal",
+        "thebrazenbeard/project-runner"
+      ]
+    },
+    {
+      "kind": "PYTHON_MODULE",
+      "name": "runner",
+      "public_providers": [
+        "thebrazenbeard/portal",
+        "thebrazenbeard/project-runner"
+      ]
+    }
+  ],
+  "schema": "DISCOVERY_PUBLIC_SOURCE_GRAPH_V1",
+  "static_reference_cycles": [],
+  "status": "SOURCE_DERIVED_NOT_RUNTIME_VERIFIED"
+}
