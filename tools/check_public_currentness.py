@@ -20,10 +20,24 @@ PUBLIC_BLOB_SHARDS = (
 )
 GIT_OID = re.compile(r"^[0-9a-f]{40}$")
 SELF_CURRENTNESS_SUBJECT = "discovery"
+TRUSTED_BEARER_API_BASE = "https://api.github.com"
+MAX_JSON_RESPONSE_BYTES = 4 * 1024 * 1024
 
 
 class PublicCurrentnessError(ValueError):
     pass
+
+
+class _RejectRedirects(urllib.request.HTTPRedirectHandler):
+    """Keep bearer-bearing API reads on their exact requested endpoint.
+
+    urllib's default redirect handler copies Request headers, including
+    Authorization, even when a redirect crosses hosts. An unexpected GitHub
+    redirect is an acquisition failure, not an alternate source of evidence.
+    """
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
 
 
 def _nonempty(value: Any, label: str) -> str:
@@ -107,6 +121,10 @@ class GitHubPublicInventoryClient:
     ) -> None:
         self.token = token.strip() if isinstance(token, str) and token.strip() else None
         self.api_base = api_base.rstrip("/")
+        if self.token is not None and self.api_base != TRUSTED_BEARER_API_BASE:
+            raise PublicCurrentnessError(
+                "bearer-authenticated public inventory requires exact HTTPS GitHub API origin"
+            )
 
     def _get_json(self, path: str) -> Any:
         headers = {
@@ -122,8 +140,17 @@ class GitHubPublicInventoryClient:
             method="GET",
         )
         try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                return json.loads(response.read().decode("utf-8"))
+            with urllib.request.build_opener(_RejectRedirects()).open(
+                request, timeout=30
+            ) as response:
+                if response.status != 200:
+                    raise PublicCurrentnessError(
+                        f"GitHub acquisition returned non-200 HTTP status {response.status}"
+                    )
+                payload = response.read(MAX_JSON_RESPONSE_BYTES + 1)
+                if len(payload) > MAX_JSON_RESPONSE_BYTES:
+                    raise PublicCurrentnessError("GitHub JSON response exceeds bounded byte limit")
+                return json.loads(payload.decode("utf-8"))
         except Exception as exc:
             raise PublicCurrentnessError(f"GitHub request failed for {path}: {exc}") from exc
 
