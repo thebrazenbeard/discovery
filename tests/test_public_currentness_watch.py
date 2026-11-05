@@ -130,6 +130,64 @@ class FakeGitHubPublicInventoryClient(watch.GitHubPublicInventoryClient):
 
 
 class PublicCurrentnessClientTests(unittest.TestCase):
+    def test_bearer_client_refuses_non_github_or_non_https_origin(self):
+        for origin in (
+            "http://api.github.com",
+            "http://other.invalid",
+            "https://other.invalid",
+            "https://api.github.com.other.invalid",
+            "https://api.github.com:444",
+            "https://user@api.github.com",
+            "https://api.github.com/path",
+        ):
+            with self.subTest(origin=origin):
+                with self.assertRaises(watch.PublicCurrentnessError):
+                    watch.GitHubPublicInventoryClient(token="sentinel", api_base=origin)
+
+        self.assertEqual(
+            "https://api.github.com",
+            watch.GitHubPublicInventoryClient(token="sentinel").api_base,
+        )
+        self.assertEqual(
+            "https://other.invalid",
+            watch.GitHubPublicInventoryClient(api_base="https://other.invalid").api_base,
+        )
+
+    def test_partial_and_other_success_codes_do_not_qualify(self):
+        for status in (201, 202, 203, 206):
+            with self.subTest(status=status):
+                self._assert_response_rejected(status, b"[]")
+
+    def test_oversized_complete_response_is_rejected(self):
+        self._assert_response_rejected(200, b'["' + (b"x" * (4 * 1024 * 1024 + 1)) + b'"]')
+
+    def test_complete_200_response_is_accepted(self):
+        self.assertEqual([], self._synthetic_response(200, b"[]"))
+
+    def _assert_response_rejected(self, status, payload):
+        with self.assertRaises(watch.PublicCurrentnessError):
+            self._synthetic_response(status, payload)
+
+    def _synthetic_response(self, status, payload):
+        class SyntheticTransport(urllib.request.BaseHandler):
+            handler_order = 200
+
+            def https_open(self, request):
+                response = urllib.response.addinfourl(
+                    io.BytesIO(payload), {}, request.full_url, status
+                )
+                response.msg = "Synthetic"
+                return response
+
+        actual_build_opener = urllib.request.build_opener
+        with mock.patch.object(
+            urllib.request,
+            "build_opener",
+            side_effect=lambda *handlers: actual_build_opener(*handlers, SyntheticTransport()),
+        ):
+            client = watch.GitHubPublicInventoryClient(token="sentinel")
+            return client._get_json("/users/example/repos")
+
     def test_bearer_redirect_is_rejected_without_foreign_host_request(self):
         """A real urllib redirect must not forward a bearer to another host."""
         calls = []
