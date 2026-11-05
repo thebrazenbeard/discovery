@@ -125,6 +125,43 @@ class ComparisonIntegrityTests(unittest.TestCase):
         with self.assertRaises(comparator.ComparisonError):
             comparator.compare_snapshots(original, older)
 
+    def test_rejects_extra_private_name_bearing_envelope_field(self):
+        self.assert_rejected_identical_forgery(
+            lambda s: s.update(private_repositories=[{"name": "synthetic-hidden"}])
+        )
+
+    def test_rejects_whitespace_only_public_name_even_with_matching_digest(self):
+        def corrupt(snapshot):
+            snapshot["public_repositories"][0]["name"] = "   "
+            snapshot["public_name_digest"]["sha256"] = builder.public_name_digest(["   "])
+
+        self.assert_rejected_identical_forgery(corrupt)
+
+    def test_rejects_equal_separately_domain_keyed_commitments(self):
+        self.assert_rejected_identical_forgery(
+            lambda s: s["private_inventory_commitment"].update(
+                hmac_sha256=s["all_inventory_commitment"]["hmac_sha256"]
+            )
+        )
+
+    def test_rejects_forged_mutation_claim_ceiling(self):
+        self.assert_rejected_identical_forgery(
+            lambda s: s.update(claim_ceiling="MUTATION_AUTHORIZED")
+        )
+
+    def test_acquisition_method_change_never_reports_current(self):
+        original = valid_snapshot()
+        different = copy.deepcopy(original)
+        different["source"]["acquisition_method"] = "SYNTHETIC_UNVERIFIED"
+        result = comparator.compare_snapshots(original, different)
+        self.assertEqual("STALE", result["currentness"])
+        self.assertIn("ACQUISITION_METHOD_CHANGED", result["invalidation_reasons"])
+
+    def test_relative_currentness_admits_no_provenance_or_time_authentication(self):
+        result = comparator.compare_snapshots(valid_snapshot(), valid_snapshot())
+        self.assertEqual("NOT_AUTHENTICATED", result["source_observation_authentication"])
+        self.assertEqual("NOT_AUTHENTICATED", result["observation_time_authentication"])
+
 
 if __name__ == "__main__":
     unittest.main()
