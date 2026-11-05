@@ -1,7 +1,10 @@
 import copy
 import importlib.util
+import io
 import pathlib
 import unittest
+import urllib.request
+from unittest import mock
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -127,6 +130,50 @@ class FakeGitHubPublicInventoryClient(watch.GitHubPublicInventoryClient):
 
 
 class PublicCurrentnessClientTests(unittest.TestCase):
+    def test_bearer_redirect_is_rejected_without_foreign_host_request(self):
+        """A real urllib redirect must not forward a bearer to another host."""
+        calls = []
+
+        class RedirectingTransport(urllib.request.BaseHandler):
+            handler_order = 200
+
+            def https_open(self, request):
+                calls.append((request.full_url, request.get_header("Authorization")))
+                if request.full_url.startswith("https://api.github.com/"):
+                    response = urllib.response.addinfourl(
+                        io.BytesIO(b""),
+                        {"location": "https://other.invalid/steal"},
+                        request.full_url,
+                        302,
+                    )
+                    response.msg = "Moved"
+                    return response
+                response = urllib.response.addinfourl(
+                    io.BytesIO(b'{"forged":"response"}'),
+                    {},
+                    request.full_url,
+                    200,
+                )
+                response.msg = "OK"
+                return response
+
+        actual_build_opener = urllib.request.build_opener
+        unsafe_opener = actual_build_opener(RedirectingTransport())
+
+        def wrapped_build_opener(*handlers):
+            return actual_build_opener(*handlers, RedirectingTransport())
+
+        with mock.patch.object(urllib.request, "urlopen", side_effect=unsafe_opener.open):
+            with mock.patch.object(urllib.request, "build_opener", side_effect=wrapped_build_opener):
+                client = watch.GitHubPublicInventoryClient(token="sentinel")
+                with self.assertRaises(watch.PublicCurrentnessError):
+                    client._get_json("/users/example/repos")
+
+        self.assertEqual(
+            [("https://api.github.com/users/example/repos", "Bearer sentinel")],
+            calls,
+        )
+
     def test_public_inventory_needs_no_private_endpoint(self):
         list_path = (
             "/users/thebrazenbeard/repos?type=owner&sort=full_name"
