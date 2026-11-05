@@ -12,6 +12,16 @@ from typing import Any
 
 SCHEMA = "DISCOVERY_PORTFOLIO_SNAPSHOT_V1"
 STATUS = "OBSERVED_READ_ONLY_NOT_ARCHITECTURAL_AUTHORITY"
+CLAIM_CEILING = (
+    "READ_ONLY_PORTFOLIO_OBSERVATION_NO_PROJECT_AUTHORITY_"
+    "NO_RUNTIME_DEPENDENCY_NO_PRIVATE_NAME_PUBLICATION"
+)
+REQUIRED_KEYS = {
+    "schema", "status", "observed_at", "source", "counts",
+    "public_repositories", "public_name_digest", "private_inventory_commitment",
+    "all_inventory_commitment", "privacy_rule", "currentness_rule",
+    "claim_ceiling",
+}
 OID = re.compile(r"(?:[0-9a-f]{40}|[0-9a-f]{64})\Z")
 HEX_64 = re.compile(r"[0-9a-f]{64}\Z")
 KEY_ID = re.compile(r"[0-9a-f]{16}\Z")
@@ -90,6 +100,10 @@ def _validate_commitment(value: Any, *, field: str, count: int) -> str | None:
 def _validate_snapshot(snapshot: dict[str, Any]) -> datetime:
     if snapshot.get("schema") != SCHEMA or snapshot.get("status") != STATUS:
         raise ComparisonError("invalid portfolio snapshot schema or status")
+    if set(snapshot) != REQUIRED_KEYS:
+        raise ComparisonError("snapshot has missing or unexpected top-level fields")
+    if snapshot.get("claim_ceiling") != CLAIM_CEILING:
+        raise ComparisonError("snapshot claim ceiling differs from read-only V1 contract")
     for field in ("privacy_rule", "currentness_rule", "claim_ceiling"):
         _nonempty(snapshot.get(field), field)
     source = snapshot.get("source")
@@ -156,6 +170,15 @@ def _validate_snapshot(snapshot: dict[str, Any]) -> datetime:
     )
     if private_key != all_key:
         raise ComparisonError("private and all-set commitments use different key identities")
+    if (
+        private_key is not None
+        and snapshot["private_inventory_commitment"]["hmac_sha256"]
+        == snapshot["all_inventory_commitment"]["hmac_sha256"]
+    ):
+        # The V1 producer uses a distinct domain prefix for private and all
+        # sets. Equal tags under the same key are inconsistent unless a
+        # cryptographic collision occurred. This is NOT an HMAC verification.
+        raise ComparisonError("domain-separated commitments cannot share a digest")
     return observed
 
 
@@ -168,7 +191,7 @@ def _public_map(snapshot: dict[str, Any]) -> dict[str, dict[str, Any]]:
         if not isinstance(item, dict):
             raise ComparisonError("public repository item must be an object")
         name = item.get("name")
-        if not isinstance(name, str) or not name:
+        if not isinstance(name, str) or not name.strip() or name != name.strip():
             raise ComparisonError("public repository item missing name")
         if name in result:
             raise ComparisonError(f"duplicate public repository: {name}")
@@ -248,6 +271,8 @@ def compare_snapshots(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any
     counts_changed = old_counts != new_counts
 
     invalidation_reasons: list[str] = []
+    if old["source"]["acquisition_method"] != new["source"]["acquisition_method"]:
+        invalidation_reasons.append("ACQUISITION_METHOD_CHANGED")
     if added or removed:
         invalidation_reasons.append("PUBLIC_REPOSITORY_SET_CHANGED")
     if moved:
@@ -270,6 +295,9 @@ def compare_snapshots(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any
         "status": "READ_ONLY_CURRENTNESS_COMPARISON",
         "old_observed_at": old.get("observed_at"),
         "new_observed_at": new.get("observed_at"),
+        "source_observation_authentication": "NOT_AUTHENTICATED",
+        "observation_time_authentication": "NOT_AUTHENTICATED",
+        "keyed_commitment_authentication": "NOT_AUTHENTICATED_BY_READER",
         "currentness": currentness,
         "invalidation_reasons": invalidation_reasons,
         "public_changes": {
