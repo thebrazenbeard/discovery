@@ -54,16 +54,22 @@ Recognized static evidence:
 - npm `package.json` package names and direct runtime, development and optional
   dependencies. Local paths, aliases, URLs and workspace links are skipped.
 - Python `import` and absolute `from ... import` syntax in supplied `.py`
-  files, matched **only** to a uniquely evidenced provider module.
+  files are inspected for provider ambiguity, but **never** produce a
+  cross-repository edge by themselves. A module with a unique advertised
+  provider may still resolve locally, as a namespace package, from the
+  standard library, or differently in another Python environment. Those
+  candidates are counted as `unverified_import_resolution` instead.
 - The publicly documented CCB Base source-pin contract at
   `architecture/contracts/CCB_BASE_CONTROL_PIN_V1.json`, recognized by its
   exact schema. It produces a **historical source-pin reference**, never a
   Bus route, permission, provider or deployment claim. Other JSON documents
   do not produce edges by incidental string similarity.
 
-Only edges whose target has a unique public provider in this same corpus are
-emitted. Duplicate distribution or module providers are reported separately
-and associated edges are withheld. Static reference cycles are computed from
+Only explicitly declared **package dependencies** whose target has a unique
+public provider in this corpus, or recognized typed source pins, become edges.
+Duplicate distribution or module providers are reported separately and
+associated edges are withheld. Import-only edges are always withheld until
+independent package-resolution evidence exists. Static reference cycles are computed from
 the emitted edges; they are **not** evidence of a runtime deadlock.
 
 ## 2026-11-05 public four-repository source slice

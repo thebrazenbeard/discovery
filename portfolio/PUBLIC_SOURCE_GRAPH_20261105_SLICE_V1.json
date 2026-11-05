@@ -6,6 +6,7 @@
     "external_or_unmapped": 23,
     "public_nodes": 4,
     "source_files": 5,
+    "unverified_import_resolution": 0,
     "verified_source_bytes": 104809
   },
   "edges": [

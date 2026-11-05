@@ -33,7 +33,7 @@ def corpus(*subjects):
 
 
 class PublicSourceGraphTests(unittest.TestCase):
-    def test_python_manifest_and_import_produce_distinct_source_edges(self):
+    def test_python_manifest_edge_but_import_resolution_not_promoted(self):
         a = subject(
             "alpha",
             source("pyproject.toml", '[project]\nname="alpha"\ndependencies=["beta-lib>=1"]\n'),
@@ -45,11 +45,12 @@ class PublicSourceGraphTests(unittest.TestCase):
             source("beta_lib/__init__.py", ""),
         )
         result = graph.build_graph(corpus(a, b))
-        self.assertEqual(2, result["counts"]["edges"])
+        self.assertEqual(1, result["counts"]["edges"])
         self.assertEqual(
-            {"PYPROJECT_DECLARATION", "PYTHON_SOURCE_IMPORT"},
+            {"PYPROJECT_DECLARATION"},
             {e["relation"] for e in result["edges"]},
         )
+        self.assertEqual(1, result["counts"]["unverified_import_resolution"])
         self.assertTrue(all(e["runtime_connection"] == "NOT_VERIFIED" for e in result["edges"]))
         self.assertEqual([], result["static_reference_cycles"])
 
@@ -79,6 +80,24 @@ class PublicSourceGraphTests(unittest.TestCase):
         result = graph.build_graph(corpus(mono, separate, user))
         self.assertEqual([], result["edges"])
         self.assertEqual(["ingest"], [x["name"] for x in result["provider_conflicts"]])
+
+    def test_local_module_resolution_blocks_false_cross_repository_import(self):
+        app = subject("app", source("app/main.py", "import localmod\n"), source("localmod.py", "value=1\n"))
+        vendor = subject("vendor", source("localmod/__init__.py", ""))
+        result = graph.build_graph(corpus(app, vendor))
+        self.assertEqual([], result["edges"])
+
+    def test_standard_library_module_blocks_false_cross_repository_import(self):
+        app = subject("app", source("main.py", "import json\n"))
+        fake_vendor = subject("json-provider", source("json/__init__.py", ""))
+        result = graph.build_graph(corpus(app, fake_vendor))
+        self.assertEqual([], result["edges"])
+
+    def test_namespace_module_could_be_local_so_no_provider_promotion(self):
+        app = subject("app", source("main.py", "import namespace\n"), source("namespace/feature.py", "x=1\n"))
+        vendor = subject("vendor", source("namespace/__init__.py", ""))
+        result = graph.build_graph(corpus(app, vendor))
+        self.assertEqual([], result["edges"])
 
     def test_textual_mentions_are_not_manifest_or_import_evidence(self):
         a = subject("a", source("README.md", "Run beta-api through the network. Not an installed edge."))

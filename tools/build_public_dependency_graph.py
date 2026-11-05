@@ -320,7 +320,11 @@ def build_graph(corpus: dict[str, Any]) -> dict[str, Any]:
             provider_mod[value].add(repo)
 
     edges: list[dict[str, Any]] = []
-    unresolved = {"external_or_unmapped": 0, "ambiguous_provider": 0}
+    unresolved = {
+        "external_or_unmapped": 0,
+        "ambiguous_provider": 0,
+        "unverified_import_resolution": 0,
+    }
     for source, item in observed.items():
         source_blobs = {f["path"]: f["blob_sha"] for f in item["files"]}
         scan = item["scan"]
@@ -351,7 +355,12 @@ def build_graph(corpus: dict[str, Any]) -> dict[str, Any]:
         for module, path, relation, line in scan["imports"]:
             candidates = provider_mod.get(module, set())
             if len(candidates) == 1:
-                add(next(iter(candidates)), relation, path, module, line=line)
+                # AST import spelling plus a public provider declaration is
+                # not a binding to that provider: the importing environment
+                # may resolve a local/namespace/stdlib module first, or use
+                # another interpreter. No runtime module resolver is present.
+                # Deliberately WITHHOLD all import-only cross-repo edges.
+                unresolved["unverified_import_resolution"] += 1
             elif len(candidates) > 1:
                 unresolved["ambiguous_provider"] += 1
             else:
