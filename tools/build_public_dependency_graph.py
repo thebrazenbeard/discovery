@@ -181,8 +181,13 @@ def _scan_subject(subject: dict[str, Any]) -> dict[str, Any]:
             if len(parts) >= 2 and parts[-1] == "__init__.py":
                 if len(parts) == 2 and parts[0].isidentifier():
                     modules.add(parts[0])
-                elif len(parts) == 3 and parts[0] == "src" and parts[1].isidentifier():
+                elif len(parts) >= 3 and parts[0] == "src" and parts[1].isidentifier():
                     modules.add(parts[1])
+                elif (
+                    len(parts) >= 5 and parts[0] == "packages"
+                    and parts[2] == "src" and parts[3].isidentifier()
+                ):
+                    modules.add(parts[3])
             try:
                 tree = ast.parse(text, filename=path)
             except SyntaxError as exc:

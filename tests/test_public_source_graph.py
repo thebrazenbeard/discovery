@@ -72,6 +72,14 @@ class PublicSourceGraphTests(unittest.TestCase):
         self.assertEqual({"PYTHON_DISTRIBUTION", "PYTHON_MODULE"}, {x["kind"] for x in result["provider_conflicts"]})
         self.assertEqual(1, result["counts"]["ambiguous_provider"])
 
+    def test_nested_monorepo_package_provider_collision_suppresses_edge(self):
+        mono = subject("mono", source("packages/ingest/src/ingest/__init__.py", ""))
+        separate = subject("ingest", source("src/ingest/__init__.py", ""))
+        user = subject("consumer", source("consumer.py", "from ingest import Record\n"))
+        result = graph.build_graph(corpus(mono, separate, user))
+        self.assertEqual([], result["edges"])
+        self.assertEqual(["ingest"], [x["name"] for x in result["provider_conflicts"]])
+
     def test_textual_mentions_are_not_manifest_or_import_evidence(self):
         a = subject("a", source("README.md", "Run beta-api through the network. Not an installed edge."))
         b = subject("b", source("pyproject.toml", '[project]\nname="beta-api"\n'))

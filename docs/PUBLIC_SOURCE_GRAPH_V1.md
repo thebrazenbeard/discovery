@@ -95,6 +95,26 @@ coverage. Unscanned repositories and missing edges are **UNKNOWN**, never
 absent. The graph holds source declarations, not a proven network transport,
 model-agnostic tool permission, process consumption or effect receipt.
 
+An additional **unpublished eight-public-repository smoke corpus** extended
+the four above with exact `main` source from:
+
+- `vera-mono@2cf4c42525998cf298e465f294fb45c4624e1a7c` — root
+  `pyproject.toml` and nested `ingest`/`rezon` package `__init__.py` source;
+- `ingest@5a33541001eb93529439829b0e766e366117e944` — root
+  `pyproject.toml` and `src/ingest/__init__.py`;
+- `rezon@cdd36d0df2a6194dd2738fb29ee8931933bcef7b` — root
+  `pyproject.toml` and `src/rezon/__init__.py`;
+- `roots@e21884602b3c1955d76c5adc09025da7ef508357` — root
+  `pyproject.toml`.
+
+That independent 13-file, 108,869-byte replay also passed: eight public
+nodes, the same one historical source pin, **four** ambiguous public provider
+identities (`project-runner` distribution; `runner`, `ingest`, and `rezon`
+modules), zero asserted runtime connections or static cycles. This is useful
+negative evidence about source ownership ambiguity, not a qualified host graph.
+Its raw corpus was not published. The tracked four-node artifact remains the
+small independently referenced demonstration cut.
+
 ## Trust, privacy and qualification
 
 - The input's `visibility: public` label is supplied, **not authenticated by
