@@ -1,6 +1,6 @@
 # Public Blob Evidence Reproducibility V1
 
-Status: **READ-ONLY LIVE REPRODUCIBILITY GATE + EXPLICIT MANUAL REFRESH TOOL**
+Status: **READ-ONLY LIVE REPRODUCIBILITY GATE + FROZEN HISTORICAL V1**
 
 Parent exact subject:
 
@@ -28,7 +28,9 @@ That meant exact byte-overlap evidence still depended on manually manufactured J
 
 `--check` requires the reconstructed canonical artifacts to match the committed files byte-for-byte.
 
-`--write --observed-date YYYY-MM-DD` is an explicit local refresh mode. It is never invoked by the scheduled workflow.
+`--write --observed-date YYYY-MM-DD` is a historical compatibility switch: it now verifies byte identity and exits without writing when unchanged, or refuses if any frozen V1 byte differs. `--write --accept-set-change` is refused before live collection. Neither replaces V1.
+
+`--proposal --observed-date YYYY-MM-DD --proposal-path /absolute/new/candidate.json` creates an **unreviewed, non-admitted** V2 public-cut candidate at a previously nonexistent local path outside the historical `experiments/` tree. It uses actual GitHub public inventory identities, including Discovery's current self HEAD/tree rather than V1's self-exempt frozen substitute. This identity-only observation does **not** verify snapshot stability, blob equivalence, public-membership transition reasons, or runtime effects. Absent-from-public-inventory is not evidence of deletion. Creation is exclusive and will not overwrite existing files; path checks are not claimed to be race-proof against concurrent directory/symlink mutation.
 
 ## Repository-set changes fail closed
 
@@ -69,7 +71,7 @@ Correct, and that is intentional for `--check`. The canonical artifact includes 
 
 > **HOSTILE REVIEWER:** Your `--write` mode is dangerous if somebody treats generation as approval.
 
-Correct. Generation is mechanical evidence refresh only. It grants no candidate promotion, architecture decision, merge authority, or semantic equivalence.
+The historical V1 `--write` path is now verification/no-op or refusal, and the changed-set override cannot write. A separately created V2 proposal is explicitly unreviewed, with no candidate promotion, architecture decision, merge authority, or semantic equivalence.
 
 > **HOSTILE REVIEWER:** A green blob reproducer still tells you only exact byte identity. It will miss renamed, refactored, or independently implemented equivalent mechanisms.
 
