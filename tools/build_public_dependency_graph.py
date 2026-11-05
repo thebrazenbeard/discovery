@@ -24,6 +24,13 @@ GRAPH_SCHEMA = "DISCOVERY_PUBLIC_SOURCE_GRAPH_V1"
 OID = re.compile(r"[0-9a-f]{40}\Z")
 NAME = re.compile(r"[A-Za-z0-9_.-]+\Z")
 DEPENDENCY_NAME = re.compile(r"^([A-Za-z0-9][A-Za-z0-9._-]*)(?:\[[^\]]+\])?(?=\s|[<>=!~;]|$)")
+# A selector is *not* a registry dependency merely because its JSON key is a
+# package name: npm accepts Git hosts, shorthand owners/repositories, URLs,
+# workspace links, and local paths in exactly the same declaration position.
+# Be intentionally incomplete: unknown tags/selectors yield no graph edge.
+NPM_NAME = re.compile(r"(?:@[a-z0-9][a-z0-9._~-]*/)?[a-z0-9][a-z0-9._~-]*\Z", re.IGNORECASE)
+NPM_VERSION_ATOM = r"(?:0|[1-9][0-9]*|[xX*])(?:\.(?:0|[1-9][0-9]*|[xX*])){0,2}(?:-[a-zA-Z0-9.-]+)?(?:\+[a-zA-Z0-9.-]+)?"
+NPM_COMPARATOR = re.compile(rf"(?:<=|>=|<|>|\^|~|=)?{NPM_VERSION_ATOM}\Z")
 MAX_SUBJECTS = 200
 MAX_FILES = 2000
 MAX_FILE_BYTES = 256 * 1024
@@ -87,6 +94,44 @@ def _dependency_name(spec: Any) -> str | None:
         return None
     match = DEPENDENCY_NAME.match(spec.strip())
     return _distribution(match.group(1)) if match else None
+
+
+def _npm_registry_version(selector: str) -> bool:
+    """Accept only explicit npm registry semver selectors, or the known `latest` tag.
+
+    This checks syntax, not version resolution or registry provenance. Unsupported
+    npm selectors fail closed, and cannot become inferred cross-repo edges.
+    """
+    if selector == "latest":
+        return True
+    alternatives = selector.split("||")
+    return bool(alternatives) and all(
+        bool(part.strip().split()) and all(
+            NPM_COMPARATOR.fullmatch(token) is not None
+            for token in part.strip().split()
+        )
+        for part in alternatives
+    )
+
+
+def _npm_registry_target(name: str, version: str) -> str | None:
+    """Resolve a registry declaration's actual package, or skip ambiguous selectors.
+
+    `beta: npm:other@^1` names `other` as the provider, never the JSON key
+    `beta`. `beta: github:user/other` supplies no registry-provider evidence.
+    """
+    if NPM_NAME.fullmatch(name) is None:
+        return None
+    target = name
+    selector = version
+    if version.startswith("npm:"):
+        alias = version.removeprefix("npm:")
+        if "@" not in alias:
+            return None
+        target, selector = alias.rsplit("@", 1)
+    if NPM_NAME.fullmatch(target) is None or not _npm_registry_version(selector):
+        return None
+    return target.lower()
 
 
 def _provided_modules(manifest: dict[str, Any] | None) -> set[str]:
@@ -159,13 +204,11 @@ def _scan_subject(subject: dict[str, Any]) -> dict[str, Any]:
                 for name, version in entries.items():
                     if not isinstance(name, str) or not isinstance(version, str):
                         raise GraphInputError("package.json dependency must be a string pair")
-                    if version.startswith((
-                        "file:", "link:", "workspace:", "npm:",
-                        "git+", "git:", "http:", "https:"
-                    )):
+                    target = _npm_registry_target(name, version)
+                    if target is None:
                         ignored_dependencies += 1
                     else:
-                        dependencies.append((name.lower(), path, scope, "NPM_DECLARATION"))
+                        dependencies.append((target, path, scope, "NPM_DECLARATION"))
         elif path == "requirements.txt":
             for spec in text.splitlines():
                 spec = spec.strip()

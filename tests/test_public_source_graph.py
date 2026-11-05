@@ -158,6 +158,44 @@ class PublicSourceGraphTests(unittest.TestCase):
         self.assertEqual([], result["edges"])
         self.assertEqual([], result["provider_conflicts"])
 
+    def test_git_hosted_npm_specs_do_not_infer_package_name_provider(self):
+        hosted = (
+            "github:someone/other",
+            "gitlab:someone/other",
+            "bitbucket:someone/other",
+            "someone/other",
+            "git+ssh://git@github.com/someone/other.git",
+            "https://github.com/someone/other.git",
+        )
+        vendor = subject("public-beta", source("package.json", '{"name":"beta"}'))
+        for version in hosted:
+            with self.subTest(spec=version):
+                app = subject("app", source("package.json", json.dumps({
+                    "name": "app", "dependencies": {"beta": version}
+                })))
+                result = graph.build_graph(corpus(app, vendor))
+                self.assertEqual([], result["edges"])
+
+    def test_npm_registry_semver_and_ranges_retain_declaration_edges(self):
+        registry = ("^1.2.3", "~2.0.0", ">=1.0.0 <3.0.0", "1", "1.2", "1.x", "*", "latest", "^1.0.0 || >=2.0.0")
+        vendor = subject("public-beta", source("package.json", '{"name":"beta"}'))
+        for version in registry:
+            with self.subTest(spec=version):
+                app = subject("app", source("package.json", json.dumps({
+                    "name": "app", "dependencies": {"beta": version}
+                })))
+                result = graph.build_graph(corpus(app, vendor))
+                self.assertEqual(1, len(result["edges"]))
+                self.assertEqual(f"{OWNER}/public-beta", result["edges"][0]["to"])
+
+    def test_npm_alias_resolves_explicit_target_not_dependency_key(self):
+        app = subject("app", source("package.json", '{"name":"app","dependencies":{"beta":"npm:other@^1.2.0"}}'))
+        beta = subject("beta", source("package.json", '{"name":"beta"}'))
+        other = subject("other", source("package.json", '{"name":"other"}'))
+        result = graph.build_graph(corpus(app, beta, other))
+        self.assertEqual(1, len(result["edges"]))
+        self.assertEqual(f"{OWNER}/other", result["edges"][0]["to"])
+
     def test_malformed_optional_dependencies_rejected(self):
         a = subject("a", source("pyproject.toml", '[project]\nname="a"\noptional-dependencies=["not-a-table"]\n'))
         with self.assertRaises(graph.GraphInputError):
