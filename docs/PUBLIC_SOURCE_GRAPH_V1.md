@@ -52,7 +52,12 @@ Recognized static evidence:
 - Python `pyproject.toml` distribution names, explicit Setuptools package
   lists, runtime and optional dependencies; `requirements.txt` simple names.
 - npm `package.json` package names and direct runtime, development and optional
-  dependencies. Local paths, aliases, URLs and workspace links are skipped.
+  **registry-semver** dependencies. Explicit `npm:actual-package@range` aliases
+  resolve to their named registry target, not the declaration key. GitHub,
+  GitLab, Bitbucket, Git-host shorthand, URLs, local paths, workspace links,
+  unknown dist-tags and unsupported selectors are skipped rather than treated
+  as same-name registry providers. This limited selector recognition does not
+  authenticate npm publication, resolve a lockfile, or prove an installation.
 - Python `import` and absolute `from ... import` syntax in supplied `.py`
   files are inspected for provider ambiguity, but **never** produce a
   cross-repository edge by themselves. A module with a unique advertised
