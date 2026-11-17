@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -26,6 +27,13 @@ GIT_OID = re.compile(r"^(?:[0-9a-f]{40}|[0-9a-f]{64})$")
 
 class SnapshotError(ValueError):
     pass
+
+
+class _RejectRedirect(urllib.request.HTTPRedirectHandler):
+    """Keep a repository-census bearer on its original request origin."""
+
+    def redirect_request(self, request, response, code, message, headers, newurl):
+        return None
 
 
 def canonical_name_bytes(names: list[str]) -> bytes:
@@ -122,8 +130,8 @@ def build_public_snapshot(
 
     normalized = [normalize_repository_record(record) for record in records]
     names = [record["name"] for record in normalized]
-    if len(names) != len(set(names)):
-        raise SnapshotError("repository names must be unique")
+    if len(names) != len({name.casefold() for name in names}):
+        raise SnapshotError("repository names must be unique (case-insensitive)")
 
     public_records = sorted(
         (record for record in normalized if record["visibility"] == "public"),
@@ -233,8 +241,12 @@ class GitHubInventoryClient:
             },
             method="GET",
         )
-        with urllib.request.urlopen(request, timeout=30) as response:
-            return json.loads(response.read().decode("utf-8"))
+        opener = urllib.request.build_opener(_RejectRedirect())
+        try:
+            with opener.open(request, timeout=30) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            raise SnapshotError(f"GitHub API HTTP status {exc.code}") from None
 
     def list_owned_repositories(self, owner: str) -> list[dict[str, Any]]:
         owner = _nonempty(owner, "owner")
@@ -249,13 +261,19 @@ class GitHubInventoryClient:
                 raise SnapshotError("GitHub repository listing returned non-list payload")
             if not payload:
                 break
-            repositories.extend(
-                repo
-                for repo in payload
-                if isinstance(repo, dict)
-                and isinstance(repo.get("owner"), dict)
-                and repo["owner"].get("login") == owner
-            )
+            for repo in payload:
+                if not isinstance(repo, dict):
+                    raise SnapshotError("GitHub repository listing contains non-object record")
+                repo_owner = repo.get("owner")
+                if (
+                    not isinstance(repo_owner, dict)
+                    or not isinstance(repo_owner.get("login"), str)
+                    or not repo_owner["login"].strip()
+                    or repo_owner["login"] != repo_owner["login"].strip()
+                ):
+                    raise SnapshotError("GitHub repository listing has invalid owner")
+                if repo_owner["login"].casefold() == owner.casefold():
+                    repositories.append(repo)
             if len(payload) < 100:
                 break
             page += 1
@@ -263,6 +281,11 @@ class GitHubInventoryClient:
 
     def public_exact_subject(self, owner: str, repo: dict[str, Any]) -> dict[str, Any]:
         name = _nonempty(repo.get("name"), "GitHub repository name")
+        if repo.get("private") is not False or repo.get("visibility") != "public":
+            raise SnapshotError("GitHub public repository visibility metadata inconsistent")
+        archived = repo.get("archived")
+        if type(archived) is not bool:
+            raise SnapshotError(f"GitHub repository {name} archived must be boolean")
         default_branch = _nonempty(
             repo.get("default_branch"), f"{name} default branch"
         )
@@ -281,7 +304,7 @@ class GitHubInventoryClient:
             "default_branch": default_branch,
             "head_sha": head_sha,
             "tree_sha": tree_sha,
-            "archived": bool(repo.get("archived", False)),
+            "archived": archived,
         }
 
     def inventory(self, owner: str) -> list[dict[str, Any]]:
@@ -290,14 +313,20 @@ class GitHubInventoryClient:
             private = repo.get("private")
             if type(private) is not bool:
                 raise SnapshotError("GitHub repository visibility field invalid")
+            visibility = repo.get("visibility")
+            if visibility not in {"public", "private"} or (visibility == "private") != private:
+                raise SnapshotError("GitHub repository visibility metadata inconsistent")
             name = _nonempty(repo.get("name"), "GitHub repository name")
+            archived = repo.get("archived")
+            if type(archived) is not bool:
+                raise SnapshotError(f"GitHub repository {name} archived must be boolean")
             if private:
                 records.append(
                     {
                         "name": name,
                         "visibility": "private",
                         "default_branch": repo.get("default_branch"),
-                        "archived": bool(repo.get("archived", False)),
+                        "archived": archived,
                     }
                 )
             else:
